@@ -1,0 +1,496 @@
+import { useState, useRef, useEffect } from 'react';
+
+const CONFIG = {
+  dealer: {
+    name: "Prestige Imports",
+    tagline: "Miami Beach's Premier Luxury Dealer",
+    phone: "(305) 555-0100",
+    address: "Miami Beach, FL",
+  },
+  theme: {
+    primaryColor: "#c41e3a",
+    accentColor: "#d4af37",
+  },
+};
+
+const saveToStorage = async (data) => {
+  try {
+    await window.storage.set('dealer-prototype-images', JSON.stringify(data));
+  } catch (e) {
+    console.log('Storage save failed:', e);
+  }
+};
+
+const loadFromStorage = async () => {
+  try {
+    const result = await window.storage.get('dealer-prototype-images');
+    return result ? JSON.parse(result.value) : null;
+  } catch (e) {
+    console.log('Storage load failed:', e);
+    return null;
+  }
+};
+
+const ImageUploader = ({ label, image, onUpload, height = "150px" }) => {
+  const inputRef = useRef(null);
+  const [dragging, setDragging] = useState(false);
+
+  const handleFile = (file) => {
+    if (file && file.type.startsWith('image/')) {
+      const reader = new FileReader();
+      reader.onload = (e) => onUpload(e.target.result);
+      reader.readAsDataURL(file);
+    }
+  };
+
+  return (
+    <div
+      onClick={() => inputRef.current?.click()}
+      onDragOver={(e) => { e.preventDefault(); setDragging(true); }}
+      onDragLeave={() => setDragging(false)}
+      onDrop={(e) => { e.preventDefault(); setDragging(false); handleFile(e.dataTransfer.files[0]); }}
+      style={{
+        height,
+        border: `2px dashed ${dragging ? '#d4af37' : 'rgba(255,255,255,0.3)'}`,
+        borderRadius: '8px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        cursor: 'pointer',
+        backgroundColor: image ? 'transparent' : 'rgba(255,255,255,0.05)',
+        backgroundImage: image ? `url(${image})` : 'none',
+        backgroundSize: 'contain',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        position: 'relative',
+      }}
+    >
+      {!image && (
+        <div style={{ textAlign: 'center', color: '#888' }}>
+          <div style={{ fontSize: '14px', marginBottom: '2px' }}>📷</div>
+          <div style={{ fontSize: '9px' }}>{label}</div>
+        </div>
+      )}
+      <input
+        ref={inputRef}
+        type="file"
+        accept="image/*"
+        onChange={(e) => handleFile(e.target.files[0])}
+        style={{ display: 'none' }}
+      />
+    </div>
+  );
+};
+
+export default function DealerHomepage() {
+  const [editMode, setEditMode] = useState(true);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [activeDropdown, setActiveDropdown] = useState(null);
+  const [loaded, setLoaded] = useState(false);
+  
+  const [images, setImages] = useState({
+    hero: null, logo: null, inventory: null, service: null, finance: null, about: null,
+  });
+  
+  const [brandLogos, setBrandLogos] = useState({
+    pagani: null, lamborghini: null, lotus: null, karma: null, czinger: null,
+  });
+  
+  const [heroPos, setHeroPos] = useState({ x: 50, y: 50 });
+  const [heroZoom, setHeroZoom] = useState(100);
+  const [heroMode, setHeroMode] = useState('image'); // 'image' or 'video'
+  const [videoUrl, setVideoUrl] = useState('https://www.youtube.com/embed/uoxmkT1rbrU?autoplay=1&mute=1&loop=1&playlist=uoxmkT1rbrU&controls=0&showinfo=0&rel=0&modestbranding=1');
+
+  const brands = [
+    { key: 'pagani', name: 'Pagani', subtext: 'Pagani of Miami' },
+    { key: 'lamborghini', name: 'Lamborghini', subtext: 'Lamborghini Miami' },
+    { key: 'lotus', name: 'Lotus', subtext: 'Lotus Miami' },
+    { key: 'karma', name: 'Karma', subtext: 'Karma Miami' },
+    { key: 'czinger', name: 'Czinger', subtext: 'Miami' },
+  ];
+
+  const navItems = [
+    { label: "Home", children: [] },
+    { label: "Inventory", children: ["New Vehicles", "Pre-Owned", "Coming Soon"] },
+    { label: "Consign", children: ["Sell Your Car", "Consignment Process"] },
+    { label: "Service", children: ["Schedule Service", "Parts"] },
+    { label: "Store", children: [] },
+    { label: "Research", children: ["Reviews", "Compare Models"] },
+    { label: "About", children: ["Our Story", "Contact"] },
+  ];
+
+  const features = [
+    { key: "inventory", title: "Inventory", subtitle: "Browse our selection", icon: "🚗" },
+    { key: "service", title: "Service", subtitle: "Schedule maintenance", icon: "🔧" },
+    { key: "finance", title: "Finance", subtitle: "Get pre-approved", icon: "💰" },
+    { key: "about", title: "About Us", subtitle: "Our story", icon: "📍" },
+  ];
+
+  // Load saved images on mount
+  useEffect(() => {
+    const load = async () => {
+      const saved = await loadFromStorage();
+      if (saved) {
+        if (saved.images) setImages(saved.images);
+        if (saved.brandLogos) setBrandLogos(saved.brandLogos);
+        if (saved.heroPos) setHeroPos(saved.heroPos);
+        if (saved.heroZoom) setHeroZoom(saved.heroZoom);
+        if (saved.heroMode) setHeroMode(saved.heroMode);
+      }
+      setLoaded(true);
+    };
+    load();
+  }, []);
+
+  // Save to storage whenever images change
+  useEffect(() => {
+    if (loaded) {
+      saveToStorage({ images, brandLogos, heroPos, heroZoom, heroMode });
+    }
+  }, [images, brandLogos, heroPos, heroZoom, heroMode, loaded]);
+
+  const clearAll = async () => {
+    setImages({ hero: null, logo: null, inventory: null, service: null, finance: null, about: null });
+    setBrandLogos({ pagani: null, lamborghini: null, lotus: null, karma: null, czinger: null });
+    setHeroPos({ x: 50, y: 50 });
+    setHeroZoom(100);
+    setHeroMode('image');
+    try { await window.storage.delete('dealer-prototype-images'); } catch(e) {}
+  };
+
+  if (!loaded) {
+    return (
+      <div style={{ backgroundColor: '#0d0d0d', minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <div style={{ textAlign: 'center', color: '#fff' }}>
+          <div style={{ fontSize: '24px', marginBottom: '12px' }}>⏳</div>
+          <div style={{ color: '#888', fontSize: '14px' }}>Loading saved images...</div>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div style={{ fontFamily: 'system-ui, sans-serif', backgroundColor: '#0d0d0d', minHeight: '100vh', color: '#fff' }}>
+      
+      {/* EDIT TOGGLE */}
+      <button
+        onClick={() => setEditMode(!editMode)}
+        style={{
+          position: 'fixed', top: 20, right: 20, zIndex: 9999,
+          padding: '10px 20px',
+          backgroundColor: editMode ? '#d4af37' : '#c41e3a',
+          color: editMode ? '#000' : '#fff',
+          border: 'none', borderRadius: '20px',
+          fontSize: '12px', fontWeight: 'bold', cursor: 'pointer',
+          textTransform: 'uppercase',
+        }}
+      >
+        {editMode ? '✓ Preview' : '✎ Edit'}
+      </button>
+      
+      {/* CLEAR ALL BUTTON */}
+      {editMode && (
+        <button
+          onClick={clearAll}
+          style={{
+            position: 'fixed', top: 20, right: 130, zIndex: 9999,
+            padding: '10px 16px',
+            backgroundColor: '#333',
+            color: '#fff',
+            border: 'none', borderRadius: '20px',
+            fontSize: '11px', cursor: 'pointer',
+            textTransform: 'uppercase',
+          }}
+        >
+          ✕ Clear All
+        </button>
+      )}
+
+      {/* UPLOAD PANEL */}
+      {editMode && (
+        <div style={{ backgroundColor: '#111', padding: '20px', borderBottom: '1px solid #222' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', marginBottom: '20px' }}>
+            
+            {/* LEFT: Hero Upload + Controls */}
+            <div>
+              <div style={{ fontSize: '11px', color: '#888', marginBottom: '8px', textTransform: 'uppercase' }}>Hero Background</div>
+              
+              {/* Image/Video Toggle */}
+              <div style={{ display: 'flex', gap: '6px', marginBottom: '12px' }}>
+                <button
+                  onClick={() => setHeroMode('image')}
+                  style={{
+                    flex: 1, padding: '8px', fontSize: '11px', border: 'none', borderRadius: '4px', cursor: 'pointer',
+                    backgroundColor: heroMode === 'image' ? '#d4af37' : '#333',
+                    color: heroMode === 'image' ? '#000' : '#fff',
+                  }}
+                >
+                  📷 Image
+                </button>
+                <button
+                  onClick={() => setHeroMode('video')}
+                  style={{
+                    flex: 1, padding: '8px', fontSize: '11px', border: 'none', borderRadius: '4px', cursor: 'pointer',
+                    backgroundColor: heroMode === 'video' ? '#d4af37' : '#333',
+                    color: heroMode === 'video' ? '#000' : '#fff',
+                  }}
+                >
+                  🎬 Video
+                </button>
+              </div>
+              
+              {heroMode === 'image' && (
+                <>
+                  <ImageUploader label="Hero" image={images.hero} onUpload={(img) => setImages(p => ({...p, hero: img}))} height="100px" />
+                  
+                  {images.hero && (
+                    <div style={{ marginTop: '12px', padding: '12px', backgroundColor: '#1a1a1a', borderRadius: '8px' }}>
+                      <div style={{ fontSize: '11px', color: '#d4af37', marginBottom: '12px' }}>↕ Position & Zoom</div>
+                      
+                      <div style={{ marginBottom: '12px' }}>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '10px', color: '#888', marginBottom: '4px' }}>
+                          <span>Vertical</span>
+                          <span>{heroPos.y}%</span>
+                        </div>
+                        <input type="range" min="0" max="100" value={heroPos.y}
+                          onChange={(e) => setHeroPos(p => ({...p, y: +e.target.value}))} style={{ width: '100%' }} />
+                      </div>
+                      
+                      <div style={{ marginBottom: '12px' }}>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '10px', color: '#888', marginBottom: '4px' }}>
+                          <span>Horizontal</span>
+                          <span>{heroPos.x}%</span>
+                        </div>
+                        <input type="range" min="0" max="100" value={heroPos.x}
+                          onChange={(e) => setHeroPos(p => ({...p, x: +e.target.value}))} style={{ width: '100%' }} />
+                      </div>
+                      
+                      <div style={{ marginBottom: '12px' }}>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '10px', color: '#888', marginBottom: '4px' }}>
+                          <span>Zoom</span>
+                          <span>{heroZoom}%</span>
+                        </div>
+                        <input type="range" min="100" max="200" value={heroZoom}
+                          onChange={(e) => setHeroZoom(+e.target.value)} style={{ width: '100%' }} />
+                      </div>
+                      
+                      <div style={{ display: 'flex', gap: '6px' }}>
+                        {['Top', 'Center', 'Bottom'].map((lbl, i) => (
+                          <button key={lbl} onClick={() => setHeroPos({ x: 50, y: i * 50 })}
+                            style={{
+                              flex: 1, padding: '6px', fontSize: '10px', border: 'none', borderRadius: '4px', cursor: 'pointer',
+                              backgroundColor: heroPos.y === i * 50 ? '#d4af37' : '#333',
+                              color: heroPos.y === i * 50 ? '#000' : '#fff',
+                            }}
+                          >{lbl}</button>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </>
+              )}
+              
+              {heroMode === 'video' && (
+                <div style={{ padding: '12px', backgroundColor: '#1a1a1a', borderRadius: '8px' }}>
+                  <div style={{ fontSize: '11px', color: '#d4af37', marginBottom: '8px' }}>YouTube Video Background</div>
+                  <div style={{ fontSize: '10px', color: '#888', marginBottom: '8px' }}>
+                    Video will autoplay muted and loop. Currently using Miami Concours video.
+                  </div>
+                  <div style={{ 
+                    width: '100%', 
+                    height: '80px', 
+                    backgroundColor: '#000', 
+                    borderRadius: '4px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    color: '#d4af37',
+                    fontSize: '12px',
+                  }}>
+                    🎬 Video Active
+                  </div>
+                </div>
+              )}
+            </div>
+            
+            {/* RIGHT: Other Uploads */}
+            <div>
+              <div style={{ fontSize: '11px', color: '#888', marginBottom: '8px', textTransform: 'uppercase' }}>Logo & Cards</div>
+              <ImageUploader label="Logo" image={images.logo} onUpload={(img) => setImages(p => ({...p, logo: img}))} height="60px" />
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px', marginTop: '8px' }}>
+                <ImageUploader label="Inventory" image={images.inventory} onUpload={(img) => setImages(p => ({...p, inventory: img}))} height="50px" />
+                <ImageUploader label="Service" image={images.service} onUpload={(img) => setImages(p => ({...p, service: img}))} height="50px" />
+                <ImageUploader label="Finance" image={images.finance} onUpload={(img) => setImages(p => ({...p, finance: img}))} height="50px" />
+                <ImageUploader label="About" image={images.about} onUpload={(img) => setImages(p => ({...p, about: img}))} height="50px" />
+              </div>
+            </div>
+          </div>
+          
+          {/* BRAND LOGOS */}
+          <div style={{ borderTop: '1px solid #333', paddingTop: '16px' }}>
+            <div style={{ fontSize: '11px', color: '#888', marginBottom: '10px', textTransform: 'uppercase' }}>Brand Logos</div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '10px' }}>
+              {brands.map((brand) => (
+                <ImageUploader
+                  key={brand.key}
+                  label={brand.name}
+                  image={brandLogos[brand.key]}
+                  onUpload={(img) => setBrandLogos(p => ({...p, [brand.key]: img}))}
+                  height="60px"
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* NAV */}
+      <nav style={{ padding: '16px 40px', display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: '#f5f5f5', borderBottom: '2px solid #333' }}>
+        <div style={{ display: 'flex', gap: '40px', alignItems: 'center' }}>
+          {navItems.map((item, i) => (
+            <div key={i} style={{ position: 'relative' }}
+              onMouseEnter={() => item.children.length > 0 && setActiveDropdown(i)}
+              onMouseLeave={() => setActiveDropdown(null)}
+            >
+              <span style={{ fontSize: '13px', textTransform: 'uppercase', letterSpacing: '2px', cursor: 'pointer',
+                color: i === 0 ? '#d4a039' : '#333',
+                borderBottom: activeDropdown === i ? '2px solid #d4a039' : '2px solid transparent', paddingBottom: '4px' }}>
+                {item.label}
+              </span>
+              {activeDropdown === i && item.children.length > 0 && (
+                <div style={{ position: 'absolute', top: '100%', left: -20, backgroundColor: '#1a1a1a', padding: '16px 24px',
+                  minWidth: '180px', boxShadow: '0 10px 40px rgba(0,0,0,0.5)', marginTop: '8px', zIndex: 100 }}>
+                  {item.children.map((c, j) => (
+                    <div key={j} style={{ color: '#888', fontSize: '14px', padding: '8px 0', cursor: 'pointer' }}>{c}</div>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </nav>
+
+      {/* HERO */}
+      <section style={{ height: '80vh', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
+        
+        {/* Video Background */}
+        {heroMode === 'video' && (
+          <div style={{ position: 'absolute', inset: 0, overflow: 'hidden' }}>
+            <iframe
+              src={videoUrl}
+              style={{
+                position: 'absolute',
+                top: '50%',
+                left: '50%',
+                width: '100vw',
+                height: '56.25vw', /* 16:9 aspect ratio */
+                minHeight: '100vh',
+                minWidth: '177.78vh', /* 16:9 aspect ratio */
+                transform: 'translate(-50%, -50%)',
+                border: 'none',
+                pointerEvents: 'none',
+              }}
+              allow="autoplay; encrypted-media"
+              allowFullScreen
+            />
+          </div>
+        )}
+        
+        {/* Image Background */}
+        {heroMode === 'image' && (
+          <div style={{
+            position: 'absolute', inset: 0,
+            backgroundImage: images.hero ? `url(${images.hero})` : 'linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)',
+            backgroundSize: images.hero ? `${heroZoom}%` : 'cover',
+            backgroundPosition: images.hero ? `${heroPos.x}% ${heroPos.y}%` : 'center',
+            backgroundRepeat: 'no-repeat',
+          }} />
+        )}
+        
+        {/* Overlay */}
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7))' }} />
+        
+        <div style={{ position: 'relative', zIndex: 10, textAlign: 'center', maxWidth: '800px', padding: '0 20px' }}>
+          <h1 style={{ fontFamily: 'Georgia, serif', fontSize: '48px', marginBottom: '12px', textShadow: '0 2px 20px rgba(0,0,0,0.5)' }}>
+            {CONFIG.dealer.name}
+          </h1>
+          <p style={{ color: '#888', letterSpacing: '4px', textTransform: 'uppercase', marginBottom: '40px' }}>
+            {CONFIG.dealer.tagline}
+          </p>
+          
+          <div style={{ display: 'flex', maxWidth: '500px', margin: '0 auto 24px', backgroundColor: 'rgba(255,255,255,0.1)',
+            backdropFilter: 'blur(10px)', borderRadius: '4px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.2)' }}>
+            <input type="text" placeholder="Search inventory..." value={searchQuery} onChange={e => setSearchQuery(e.target.value)}
+              style={{ flex: 1, padding: '16px 20px', border: 'none', backgroundColor: 'transparent', color: '#fff', fontSize: '15px', outline: 'none' }} />
+            <button style={{ padding: '16px 28px', backgroundColor: '#c41e3a', color: '#fff', border: 'none', fontSize: '13px',
+              textTransform: 'uppercase', letterSpacing: '2px', cursor: 'pointer' }}>Search</button>
+          </div>
+          
+          <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
+            {['Inventory', 'Consign', 'Service', 'Store'].map((lbl) => (
+              <button key={lbl} style={{ padding: '12px 24px', backgroundColor: 'rgba(0,0,0,0.5)', backdropFilter: 'blur(10px)',
+                color: '#fff', border: '1px solid rgba(255,255,255,0.3)', borderRadius: '4px', fontSize: '11px',
+                textTransform: 'uppercase', letterSpacing: '2px', cursor: 'pointer' }}>{lbl}</button>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* BRAND LOGOS SECTION */}
+      <section style={{ backgroundColor: '#fff', padding: '60px 40px', borderTop: '3px solid #1a1a1a', borderBottom: '3px solid #1a1a1a' }}>
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '80px', maxWidth: '1400px', margin: '0 auto' }}>
+          {brands.map((brand) => (
+            <div key={brand.key} style={{ textAlign: 'center', cursor: 'pointer', minWidth: '140px' }}>
+              {brandLogos[brand.key] ? (
+                <div style={{ height: '220px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+                  <img src={brandLogos[brand.key]} alt={brand.name} style={{ height: '200px', maxWidth: '280px', objectFit: 'contain' }} />
+                </div>
+              ) : (
+                <div style={{ height: '220px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+                  <div style={{ fontSize: '18px', fontWeight: 'bold', color: '#1a1a1a', letterSpacing: '4px', textTransform: 'uppercase' }}>
+                    {brand.name}
+                  </div>
+                  <div style={{ fontSize: '9px', color: '#666', letterSpacing: '2px', marginTop: '8px', textTransform: 'uppercase' }}>
+                    {brand.subtext}
+                  </div>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* FEATURES */}
+      <section style={{ backgroundColor: '#0d0d0d', padding: '60px 40px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '20px', maxWidth: '1200px', margin: '0 auto' }}>
+          {features.map((f) => (
+            <div key={f.key} style={{
+              height: '260px', borderRadius: '4px', padding: '20px', cursor: 'pointer',
+              backgroundImage: images[f.key] ? `url(${images[f.key]})` : 'none',
+              backgroundColor: images[f.key] ? 'transparent' : '#1a1a1a',
+              backgroundSize: 'cover', backgroundPosition: 'center',
+              position: 'relative', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end',
+              border: '1px solid rgba(255,255,255,0.1)',
+            }}>
+              {images[f.key] && <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.9), transparent)', borderRadius: '4px' }} />}
+              {!images[f.key] && <div style={{ position: 'absolute', top: 20, right: 20, fontSize: '24px' }}>{f.icon}</div>}
+              <div style={{ position: 'relative', zIndex: 2 }}>
+                <h3 style={{ fontFamily: 'Georgia, serif', fontSize: '22px', marginBottom: '6px' }}>{f.title}</h3>
+                <p style={{ fontSize: '13px', color: '#888' }}>{f.subtitle}</p>
+                <div style={{ marginTop: '12px', fontSize: '11px', color: '#d4af37', textTransform: 'uppercase', letterSpacing: '2px' }}>Explore →</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer style={{ backgroundColor: '#0d0d0d', padding: '40px', borderTop: '1px solid #1a1a1a', textAlign: 'center' }}>
+        <h3 style={{ fontFamily: 'Georgia, serif', fontSize: '20px', marginBottom: '12px' }}>{CONFIG.dealer.name}</h3>
+        <p style={{ color: '#888', fontSize: '13px', marginBottom: '4px' }}>{CONFIG.dealer.address}</p>
+        <p style={{ color: '#d4af37', fontSize: '14px', marginBottom: '20px' }}>{CONFIG.dealer.phone}</p>
+        <p style={{ color: '#555', fontSize: '11px' }}>© 2025 {CONFIG.dealer.name}. Powered by SavvyDealer.</p>
+      </footer>
+    </div>
+  );
+}

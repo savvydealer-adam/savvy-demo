@@ -1,0 +1,113 @@
+Search Bar Container
+css.search-container {
+  display: flex;
+  max-width: 500px;
+  margin: 0 auto 24px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+Colors:
+
+Background: rgba(255, 255, 255, 0.1) — 10% white transparency
+Border: rgba(255, 255, 255, 0.2) — 20% white transparency
+
+
+Search Input
+css.search-input {
+  flex: 1;
+  padding: 16px 20px;
+  border: none;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 15px;
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+Colors:
+
+Text: #ffffff (white)
+Placeholder: rgba(255, 255, 255, 0.5) — 50% white
+
+
+Search Button
+css.search-button {
+  padding: 16px 28px;
+  background-color: #c41e3a;
+  color: #ffffff;
+  border: none;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: #a8182f;
+}
+Colors:
+
+Background: #c41e3a (crimson red)
+Hover: #a8182f (darker red)
+Text: #ffffff (white)
+
+
+Action Buttons (Inventory, Consign, Service, Store)
+css.action-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.action-button {
+  padding: 12px 24px;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.action-button:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+Colors:
+
+Background: rgba(0, 0, 0, 0.5) — 50% black transparency
+Border: rgba(255, 255, 255, 0.3) — 30% white transparency
+Text: #ffffff (white)
+
+
+Complete HTML
+html<div class="hero-controls">
+  <!-- Search Bar -->
+  <div class="search-container">
+    <input type="text" class="search-input" placeholder="Search inventory...">
+    <button class="search-button">SEARCH</button>
+  </div>
+  
+  <!-- Action Buttons -->
+  <div class="action-buttons">
+    <button class="action-button">Inventory</button>
+    <button class="action-button">Consign</button>
+    <button class="action-button">Service</button>
+    <button class="action-button">Store</button>
+  </div>
+</div>
+
+Summary Table
+ElementPropertyValueSearch containerbackgroundrgba(255,255,255,0.1)Search containerborder1px solid rgba(255,255,255,0.2)Search containerborder-radius4pxSearch inputpadding16px 20pxSearch inputfont-size15pxSearch buttonbackground#c41e3aSearch buttonpadding16px 28pxSearch buttonletter-spacing2pxAction buttonbackgroundrgba(0,0,0,0.5)Action buttonborder1px solid rgba(255,255,255,0.3)Action buttonborder-radius4pxAction buttonpadding12px 24pxAction buttonfont-size11pxAction buttonletter-spacing2px
