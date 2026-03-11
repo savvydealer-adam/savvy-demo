@@ -1,0 +1,20 @@
+<div class="clear: both">&nbsp;</div>
+<div class="row vide-buttons flex">
+<div class="col-md-3">
+        <a class="btn btn-primary notextshadow w-100" href="/new" style="width: 100% !important;background-color: #0071b2; color: #fff; border-color: none;">New</a>
+    </div>
+    <div class="col-md-3">
+        <a class="btn btn-primary notextshadow w-100" href="/used" style="width: 100% !important;background-color: #0071b2; color: #fff; border-color: none;">Used</a>
+    </div>
+    <div class="col-md-3">
+        <a class="btn btn-primary notextshadow w-100" href="/commercial/work-trucks" style="width: 100% !important;background-color: none; color: #fff; border-color: none;">Commercial</a>
+    </div>    
+    <div class="col-md-3">
+        <a class="btn btn-primary notextshadow w-100" href="/vehicle-department-demo-specials/new/demo" style="width: 100% !important;background-color:#0071b2; color: #fff; border-color: none;">Demos</a>
+    </div>
+<div class="col-md-3">
+        <a class="btn notextshadow w-100" href="/content/schedule-service" style="background-color:red; color:white">SCHEDULE SERVICE</a>
+    </div>
+    <!-- Search Box -->
+    <!-- End Search Box -->
+</div>

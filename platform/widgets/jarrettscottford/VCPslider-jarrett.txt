@@ -1,0 +1,127 @@
+<!-- Vehicle Model Slider — v18 FINAL -->
+<section class="shopMain">
+<h2 class="text-center" style="color: #0071b2!important;"><strong>Shop By Model:</strong></h2>
+<div class="container-fluid">
+<div class="shopby">
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane active" id="model">
+<div class="container-fluid">
+<div class="clear"></div>
+<div class="vcp-carousel-wrapper mdl-box-shadow">
+<div class="row">
+<div class="col-sm-12">
+
+<div id="vcpGrid"></div>
+
+<div class="clear"></div>
+<div class="vehicleType-wrapper">
+<ul class="vehicleType">
+  <li><span class="btn btn-primary vcp-button vcp-filter-btn" data-filter="popular">Popular Models</span></li>
+  <li><span class="btn btn-default vcp-button vcp-filter-btn" data-filter="trucks">Trucks/Vans</span></li>
+  <li><span class="btn btn-default vcp-button vcp-filter-btn" data-filter="suvs">SUVs</span></li>
+  <li><span class="btn btn-default vcp-button vcp-filter-btn" data-filter="ev">EV/Hybrid</span></li>
+</ul>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function(){ setTimeout(vcpInit, 100); });
+if(document.readyState !== "loading") setTimeout(vcpInit, 100);
+
+function vcpInit(){
+  var vehicles = [
+    { name:"F-150",            slug:"f-150",             img:"f-150",            cats:["popular","trucks"] },
+    { name:"Explorer",         slug:"explorer",           img:"explorer",         cats:["popular","suvs"] },
+    { name:"Super Duty",       slug:"super-duty",         img:"superduty",        cats:["popular","trucks"] },
+    { name:"Bronco Sport",     slug:"bronco-sport",       img:"bronco_sport",     cats:["popular","suvs"] },
+    { name:"Escape",           slug:"escape",             img:"escape",           cats:["popular","suvs"] },
+    { name:"Bronco",           slug:"bronco",             img:"bronco",           cats:["popular","suvs"] },
+    { name:"Ranger",           slug:"ranger",             img:"ranger",           cats:["trucks"] },
+    { name:"Maverick",         slug:"maverick",           img:"maverick",         cats:["trucks","ev"] },
+    { name:"Transit Cargo Van",slug:"transit-cargo-van",  img:"transit",          cats:["trucks"] },
+    { name:"Expedition",       slug:"expedition",         img:"expedition",       cats:["suvs"] },
+    { name:"Edge",             slug:"edge",               img:"edge",             cats:["suvs"] },
+    { name:"F-150 Lightning",  slug:"f-150-lightning",    img:"f-150-lightning",  cats:["trucks","ev"] },
+    { name:"F-150 Hybrid",     slug:"f-150-hybrid",       img:"f-150",            cats:["ev"] },
+    { name:"Escape Hybrid",    slug:"escape-hybrid",      img:"escape",           cats:["ev"] },
+    { name:"Explorer Hybrid",  slug:"explorer-hybrid",    img:"explorer",         cats:["ev"] },
+    { name:"Mustang Mach-E",   slug:"mustang-mach-e",     img:"mustang-mach-e",   cats:["ev"] }
+  ];
+
+  var baseUrl = "/vcp/new/ford/";
+  var imgBase = "https://storage.googleapis.com/agiledealer/vcp-slider/ford/WEBP/";
+  var grid = document.getElementById("vcpGrid");
+  if(!grid) return;
+
+  grid.className = "";
+  if(window.jQuery){ try{ jQuery(grid).slick('unslick'); }catch(e){} }
+
+  var buttons = document.querySelectorAll(".vcp-filter-btn");
+  var active = "popular";
+
+  function render(){
+    if(window.jQuery){ try{ jQuery(grid).slick('unslick'); }catch(e){} }
+    grid.className = "";
+
+    var filtered = [];
+    for(var i=0;i<vehicles.length;i++){
+      if(vehicles[i].cats.indexOf(active)!==-1) filtered.push(vehicles[i]);
+    }
+
+    // Calculate columns: use item count but cap at 6, and reduce on narrow screens
+    var w = grid.parentElement ? grid.parentElement.offsetWidth : window.innerWidth;
+    var maxCols = Math.min(filtered.length, 6);
+    var cols = maxCols;
+    if(w < 500) cols = Math.min(cols, 2);
+    else if(w < 768) cols = Math.min(cols, 3);
+    else if(w < 992) cols = Math.min(cols, 4);
+
+    grid.setAttribute("style",
+      "display:grid!important;" +
+      "grid-template-columns:repeat("+cols+",1fr)!important;" +
+      "gap:20px!important;" +
+      "padding:20px 0!important;" +
+      "overflow:visible!important;" +
+      "margin:0 auto!important;" +
+      "width:100%!important;"
+    );
+
+    var html = "";
+    for(var i=0;i<filtered.length;i++){
+      var v = filtered[i];
+      html += '<div style="text-align:center!important;display:block!important;opacity:1!important;">'
+        + '<a href="'+baseUrl+v.slug+'" style="display:block!important;text-decoration:none!important;">'
+        + '<div style="width:100%!important;height:0!important;padding-bottom:67%!important;position:relative!important;overflow:hidden!important;">'
+        + '<img src="'+imgBase+v.img+'.webp" alt="New Ford '+v.name+'" loading="lazy" style="position:absolute!important;bottom:0!important;left:50%!important;transform:translateX(-50%)!important;max-width:100%!important;max-height:100%!important;object-fit:contain!important;" />'
+        + '</div>'
+        + '<h4 style="font-size:15px!important;color:#000!important;margin:5px 0 0!important;text-align:center!important;">'+v.name+'</h4>'
+        + '</a></div>';
+    }
+    grid.innerHTML = html;
+  }
+
+  for(var i=0;i<buttons.length;i++){
+    buttons[i].addEventListener("click",function(){
+      for(var j=0;j<buttons.length;j++){
+        buttons[j].className = "btn btn-default vcp-button vcp-filter-btn";
+      }
+      this.className = "btn btn-primary vcp-button vcp-filter-btn";
+      active = this.getAttribute("data-filter");
+      render();
+    });
+  }
+
+  render();
+  window.addEventListener("resize", render);
+  setTimeout(render, 500);
+  setTimeout(render, 1500);
+}
+</script>

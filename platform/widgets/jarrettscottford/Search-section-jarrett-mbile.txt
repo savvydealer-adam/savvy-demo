@@ -1,0 +1,18 @@
+<div style="clear: both">&nbsp;</div>
+<div class="row vide-buttons">
+    <div class="col-md-3 col-sm-6 col-xs-6">
+        <a class="btn btn-primary  notextshadow w-100" href="/new">NEW</a>
+    </div>
+    <div class="col-md-3 col-sm-6 col-xs-6">
+        <a class="btn btn-primary notextshadow w-100" href="/used">USED</a>
+    </div>
+<div class="col-md-3 col-sm-6 col-xs-6">
+        <a class="btn btn-primary  notextshadow w-100" href="/vehicle-department-demo-specials/new/demo">DEMOS</a>
+    </div>
+    <div class="col-md-3 col-sm-6 col-xs-6">
+        <a class="btn btn-primary notextshadow w-100" href="/commercial/work-trucks">COMMERCIAL</a>
+    </div>
+    <div class="col-md-3 col-sm-12">
+        <a class="btn notextshadow w-100" href="/content/schedule-service" style="background-color:red; color:white">SCHEDULE SERVICE</a>
+    </div>
+</div>

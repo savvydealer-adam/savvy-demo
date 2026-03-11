@@ -1,0 +1,350 @@
+<style>
+.btntop {
+    vertical-align: middle;
+    position: relative;
+    
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (max-width: 767px) {
+.logo-div {
+  width: 25%;
+}
+
+.info-div {
+  width: 70%;
+}
+.site-logo {
+width: 30%!important;
+}
+}
+
+@media screen and (min-width: 767px) {
+.vide-buttons .col-md-3 {
+flex: 1;
+    padding: 15px;
+}
+
+.logo-div {
+
+}
+.info-div {
+text-align: right;
+}
+}
+
+.w-100 {
+width: 100%!important;
+}
+
+@media screen and (max-width: 767px) {
+.hdrightInr{margin-top: 50px;}
+.hdrightInr .btntop {
+    top: -15px !important;
+    margin-left: -14px !important;
+}
+ .vide-buttons .col-sm-6 {
+ width: 50%!important;
+}
+.vide-buttons a {
+ box-shadow: 5px 10px 18px #888888;
+    border-radius: 0;
+}
+}
+
+
+@media screen and (max-width: 767px) {
+.bannerSingle {
+  position: initial!important;
+}
+
+.bannerMain img {
+    height: auto!important;
+}
+
+.bnrimg {
+min-height: auto!important;
+}
+
+.bannerMain img {
+  height:auto!important;
+}
+
+#MainContent_HomePageBannerControl_pnlSearch h1 {
+  color: #0071b2!important;
+}
+
+.bannerSingle {
+ background-color: white!important;
+}
+
+#txtSearchHome {
+  border: solid; border-color: #0071b2; border-width: thin;
+}
+
+}
+</style>
+
+
+<style>
+.navmenu ul>li a {
+  font-size: 13px!important;
+}
+
+       .text-right{
+        text-align: right !important;
+}
+.fa.fa-arrow-circle-right,.fa.fa-arrow-circle-left
+{
+font-size: 30px;
+}
+.vide-buttons a {
+    padding: 10px 15px 10px 15px;
+    margin-bottom: 15px;
+}
+.fmid {
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #3e3e3e;
+    margin-top: 50px;
+}
+        .owl_slider {
+            padding: 65px 0;
+            background: #f2f2f2;
+        }
+
+            .owl_slider .head_h2 {
+                margin-bottom: 40px;
+                color: #19183C !important;
+            }
+
+            .owl_slider .columns {
+                width: 100%;
+            }
+
+            .owl_slider .owl-carousel {
+                padding: 0 30px;
+            }
+
+            .owl_slider .owl-item {
+                padding: 0 15px;
+            }
+
+            .owl_slider .item {
+                padding: 25px;
+                position: relative;
+                background: #fff;
+                box-shadow: 0px 1px 4px rgb(0 0 0 / 10%);
+                border-radius: 10px;
+            }
+
+        .profile {
+            display: block;
+            width: 60px;
+            height: 60px;
+            overflow: hidden;
+            border-radius: 100%;
+            margin-right: 15px;
+        }
+
+        .star_div .fa {
+            color: #f9b403 !important;
+          
+            font-size: 20px;
+            margin-right: 10px;
+        }
+
+        .owl_slider .item p {
+            margin: 12px 0 50px;
+            position: relative;
+            line-height: 26px;
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 24px;
+        }
+
+        .owl_slider .item h3 {
+            font-size: 16px;
+            font-weight: 700;
+            margin: 0 0 7px;
+        }
+
+        .owl_slider .item h6 {
+            font-size: 14px;
+            font-weight: 500;
+            color: #C9C9C9;
+        }
+
+        .owl_slider .owl-carousel .owl-dots.disabled, .owl_slider .owl-carousel .owl-nav.disabled {
+            display: block;
+        }
+
+        .owl_slider .owl-dots {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+            .owl_slider .owl-dots .owl-dot {
+                width: 36px;
+                height: 4px;
+                background: #fff;
+                border-radius: 17px;
+                margin: 0 2px;
+            }
+
+                .owl_slider .owl-dots .owl-dot.active {
+                    background: #0678bc;
+                }
+
+        .owl_slider .owl-carousel .owl-nav button {
+            position: absolute;
+            border: 1px solid #0678bc;
+            width: 30px;
+            height: 30px;
+            border-radius: 100%;
+            color: #0678bc;
+            font-size: 22px;
+            top: 40%;
+            left: 0;
+        }
+
+            .owl_slider .owl-carousel .owl-nav button:hover {
+                color: #0678bc;
+                border-color: #0678bc;
+            }
+
+        .owl_slider .owl-carousel .owl-nav .owl-next {
+            left: auto;
+            right: 0;
+        }
+
+        .owl_slider .owl-nav button span {
+            display: block;
+            line-height: 0;
+        }
+
+        .cars_div:hover .review_text {
+            bottom: 0;
+            visibility: visible;
+        }
+
+        .review_text {
+            position: absolute;
+            top: auto;
+            bottom: -100%;
+            right: 0;
+            left: 0;
+            margin: auto;
+            visibility: hidden;
+            width: 100%;
+            color: #fff;
+            font-size: 13px;
+            line-height: 17px;
+            transition: ease-in-out 0.3s;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            display: table;
+            padding: 10px;
+        }
+ .subscribes-box {
+            display: block;
+            margin: 0 auto;
+            background-color: red;
+            width: 100%;
+            height: 145px;
+            border-radius: 10px;
+            position: relative;
+            padding: 20px 15px 0;
+            text-align: center;
+            text-shadow: 0 2px 3px rgba(0, 0, 0, 0.10);
+margin-top: 15px;
+        }
+
+            .subscribes-box::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                background: url(https://storage.googleapis.com/agiledealer/cache/left-bg.png) top left no-repeat;
+                width: 168px;
+                height: 142px;
+            }
+
+            .subscribes-box::after {
+                content: "";
+                position: absolute;
+                right: 0;
+                top: 0;
+                background: url(https://storage.googleapis.com/agiledealer/cache/right-bg.png) top right no-repeat;
+                width: 168px;
+                height: 142px;
+            }
+
+            .subscribes-box h3 {
+                font-size: 38px;
+                font-weight: 800;
+                color: #fff;
+                position: relative;
+                z-index: 1;
+                margin-bottom: 15px;
+            }
+
+            .subscribes-box .inputbox {
+                background-color: #FFF;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.16);
+                border-radius: 13px;
+                position: relative;
+                z-index: 1;
+                margin: 0 5%;
+                padding: 25px;
+            }
+
+                .subscribes-box .inputbox input {
+                    border: 2px solid #bc0600;
+                    border-radius: 10px;
+                    height: 60px;
+                    width: calc(100% - 25px);
+                    padding-right: 40px;
+                }
+
+                .subscribes-box .inputbox .submit {
+                   cursor: pointer;
+                    position: absolute;
+                    top: 25px;
+                    right: 25px;
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 60px;
+                    background-color: red;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+.subscribes-box .inputbox .submit { border: 0; }
+
+.bnrimg
+{
+height: auto !important;
+}
+@media (max-width: 991px) {
+.subscribes-box h3 { font-size: 30px; }
+}
+@media (max-width: 767px) {
+.subscribes-box h3 { font-size: 24px; }
+.bannerMain
+{
+background : #000 !important;
+}
+
+}
+.hdrightInr .btntop {
+    vertical-align: middle;
+    position: absolute;
+    top: 15px;
+    margin-left: 17%;
+    margin-right: auto;
+    display: inherit;
+}
+</style>

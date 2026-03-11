@@ -1,0 +1,27 @@
+<section class="dealerships">
+            <div class="container">
+                <div class="row">
+                    <div class="titlesame">
+                        <h2>Welcome to Jarrett Scott Ford: Your Plant City, FL Ford Dealer for New &amp; Used Ford Sales</h2>
+
+                    </div>
+
+                    <div class="col-sm-12">
+                        <h3 class="card-h3">Jarrett Scott Ford | Ford Dealer in Plant City, FL</h3>
+                        <p>
+                            Welcome to Jarrett Scott Ford, your hometown Ford dealership in Plant City, Florida, proudly serving Tampa, Brandon, Bartow, and Lakeland. We offer a wide selection of new Ford trucks, SUVs, and cars—including popular models like the <a href="/vcp/new/ford/f-150">Ford F-150</a>, <a href="/vcp/new/ford/escape">Escape</a>, <a href="/vcp/new/ford/explorer">Explorer</a>, and <a href="/vcp/new/ford/bronco">Bronco</a>. Looking for a dependable used vehicle? Browse our inventory of <a href="/used">Ford Certified Pre-Owned vehicles</a> and affordable trade-ins today.
+						<br><br>
+							As a locally owned and operated dealership, we’re committed to treating every customer with courtesy, respect, and outstanding service—just like family. Our customers return again and again because of our transparent pricing, friendly team, and strong community roots. Come see why so many buyers call us the best Ford dealer in Plant City.
+                        </p>
+                    </div>
+                    <div class="col-sm-12">
+                        <h3 class="card-h3">Ford Service & Repair in Plant City, FL</h3>
+                        <p>
+                            Whether you need routine maintenance or more complex repairs, <a href="https://www.jarrettscottfordservice.com/" target="_blank"">Jarrett Scott Ford’s certified service center in Plant City</a> has you covered. Our Ford-trained technicians provide oil changes, brake service, tire rotations, battery replacement, and more using genuine OEM parts.
+						<br><br>
+							Serving customers from Tampa to Lakeland, we make it easy to schedule service online or over the phone. Plus, for every vehicle that comes in, our certified technicians use a model-specific multi-point inspection to identify any potential problems.. Let us help keep your Ford running like new.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>

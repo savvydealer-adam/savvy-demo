@@ -1,0 +1,66 @@
+{
+  "dealerName": "Jarrett Scott Ford",
+  "tagline": "Your Plant City, FL Ford Dealer",
+  "phone": "(813) 752-4171",
+  "address": "2000 East Baker St. Plant City, FL 33563",
+  "mapUrl": "https://www.google.com/maps/place/Jarrett+Scott+Ford+of+Plant+City/",
+  "logoUrl": "https://storage.googleapis.com/savvy-images/JarrettScottFord-logo.jpg",
+  "heroImage": "https://storage.googleapis.com/savvy-images/jarrett/Jarrett-RealDeals-HomepageBackground-(1)-W1800.jpeg",
+  "heroText": "Jarrett Scott Ford in Plant City, FL: 1834 New & Used Fords in Stock",
+  "oem": "ford",
+  "theme": {
+    "headerBg": "#ffffff",
+    "navBg": "#0071b2",
+    "primaryColor": "#0071b2",
+    "secondaryColor": "#bc0600",
+    "accentColor": "#30770f",
+    "footerBg": "#282828",
+    "bodyColor": "#19183C",
+    "linkColor": "#0678bc",
+    "fontFamily": "'Ford Antenna Regular', Arial, sans-serif",
+    "headingFont": "'Ford Antenna Bold', Arial, sans-serif"
+  },
+  "socialLinks": {
+    "facebook": "https://www.facebook.com/jarrett.scottford.1/",
+    "instagram": "https://www.instagram.com/jarrettscottford/",
+    "twitter": "https://twitter.com/jsfordplantcity"
+  },
+  "hours": {
+    "sales": [
+      { "days": "Monday - Thursday", "time": "8:30 AM - 7:00 PM" },
+      { "days": "Friday", "time": "8:30 AM - 7:00 PM" },
+      { "days": "Saturday", "time": "8:30 AM - 5:00 PM" },
+      { "days": "Sunday", "time": "Closed" }
+    ],
+    "service": [
+      { "days": "Monday - Friday", "time": "7:00 AM - 6:00 PM" },
+      { "days": "Saturday", "time": "7:00 AM - 4:00 PM" },
+      { "days": "Sunday", "time": "Closed" }
+    ]
+  },
+  "navLinks": [
+    { "label": "Home", "href": "/" },
+    { "label": "New", "href": "/new", "children": [
+      { "label": "New Vehicles", "href": "/new" },
+      { "label": "New Specials", "href": "/new-specials" },
+      { "label": "New Trucks", "href": "/new-trucks" }
+    ]},
+    { "label": "Used", "href": "/used", "children": [
+      { "label": "All Used", "href": "/used" },
+      { "label": "Certified Used", "href": "/certified" }
+    ]},
+    { "label": "Finance", "href": "/finance" },
+    { "label": "Service", "href": "/service", "children": [
+      { "label": "Schedule Service", "href": "/schedule-service" },
+      { "label": "Parts", "href": "/parts" }
+    ]},
+    { "label": "About Us", "href": "/about" }
+  ],
+  "footerLinks": [
+    { "label": "Contact Us", "href": "/contact" },
+    { "label": "Reviews", "href": "/reviews" },
+    { "label": "About Us", "href": "/about" },
+    { "label": "Parts", "href": "/parts" },
+    { "label": "Employment", "href": "/employment" }
+  ]
+}
