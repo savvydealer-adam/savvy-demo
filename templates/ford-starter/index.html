@@ -149,22 +149,25 @@
     .headertop { background-color: var(--header-bg); padding: 15px 0; }
     .hdrLogo a { display: block; }
     .hdrLogo img.site-logo { max-width: 100%; height: auto; max-height: 80px; }
-    .hdrightInr { position: relative; }
+    /* FIX #2: Header right side uses flexbox instead of absolute positioning */
+    .hdrightInr { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 20px; }
     ul.listInfo li { display: inline-block; vertical-align: middle; }
     ul.listInfo li + li { padding-left: 28px; }
     ul.listInfo li a { font-size: 16px; text-decoration: none !important; color: var(--primary-color); }
     #headerFormView_phoneRef { font-size: 20px; text-decoration: none !important; }
-    .paddress { margin: 5px 0 0 0; }
+    .paddress { margin: 0; }
     .paddress a { color: var(--primary-color) !important; font-size: 14px; }
-    .btntop { vertical-align: middle; position: relative; margin-left: auto; margin-right: auto; }
+    .btntop { vertical-align: middle; position: relative; }
     .btntop a { background: var(--accent-color); color: #fff !important; padding: 8px 16px; border-radius: 4px; text-decoration: none !important; font-size: 13px; font-weight: 600; display: inline-block; text-transform: uppercase; letter-spacing: 0.5px; }
     .btntop a:hover { background: #256010; text-decoration: none !important; }
-    .hdrightInr .btntop { vertical-align: middle; position: absolute; top: 15px; margin-left: 17%; margin-right: auto; display: inherit; }
+    /* FIX #2: Remove absolute positioning from header button */
+    .hdrightInr .btntop { position: relative; top: auto; margin-left: 0; margin-right: 0; display: inline-block; }
 
     /* Navigation */
     .navMain { background-color: var(--nav-bg); border-bottom: 2px solid var(--accent-color); }
     .navmenu { text-align: center; }
-    .navmenu ul { display: flex; }
+    /* FIX #5: Center nav menu items */
+    .navmenu ul { display: flex; justify-content: center; }
     .navmenu ul > li { display: inline-block; vertical-align: middle; position: relative; }
     .navmenu ul > li a { color: #fff; display: block; font-size: 13px; text-transform: uppercase; padding: 10px 12px; letter-spacing: 2px; text-decoration: none; }
     .navmenu ul > li a:hover, .navmenu ul > li:hover > a { background: var(--accent-color) !important; color: #fff; text-decoration: none; }
@@ -182,17 +185,24 @@
 
     /* Banner */
     .bannerMain { position: relative; }
-    .bannerSingle { position: relative; z-index: 1; text-align: left; background: rgba(0,0,0,.25); padding: 60px 0; border-bottom: 2px solid var(--accent-color); }
+    /* FIX #6: Stronger overlay gradient for text readability */
+    .bannerSingle { position: relative; z-index: 1; text-align: left; background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)); padding: 60px 0; border-bottom: 2px solid var(--accent-color); }
     .bnrimg { position: absolute; left: 0; top: 0; right: 0; bottom: 0; z-index: 0; }
     .bnrimg img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
     .bnrTxt { display: table; height: 100%; position: relative; width: 100%; }
     .txt-mdle { color: #fff; display: table-cell; vertical-align: middle; }
-    .txt-mdle h1 { margin: 0 0 25px 0; font-size: 40px; line-height: 50px; text-shadow: 2px 2px 4px rgba(0,0,0,0.6); }
+    /* FIX #7: Increased bottom margin on h1 for spacing before search bar */
+    .txt-mdle h1 { margin: 0 0 30px 0; font-size: 40px; line-height: 50px; text-shadow: 2px 2px 4px rgba(0,0,0,0.6); }
     .searchvicle { position: relative; }
     .searchvicle .form-control { padding: 6px 80px 6px 50px; height: 50px; border-radius: 0; border: 1px solid #fff; font-size: 20px; text-transform: uppercase; background-color: #fff; background-image: url(https://storage.googleapis.com/agiledealer/cache/search.png); background-repeat: no-repeat; background-position: center left 12px; }
     .btnAccess { position: absolute; font-size: 14px; background-color: var(--accent-color) !important; border: 1px solid var(--accent-color) !important; color: #fff; text-transform: uppercase; outline: 0; right: 0; top: 0; padding: 10px 35px; height: 50px; border-radius: 0; cursor: pointer; }
 
     /* Category buttons */
+    /* FIX #1: Default desktop/mobile visibility (no inline styles needed) */
+    .d-desktop-only { display: block; }
+    .d-mobile-only { display: none; }
+    /* FIX #8: Category button section padding */
+    .vide-buttons { padding: 15px 0; }
     .vide-buttons a { padding: 10px 15px; margin-bottom: 15px; display: block; text-align: center; font-weight: 600; font-size: 14px; text-decoration: none !important; border-radius: 4px; }
     .vide-buttons .btn-primary { background-color: var(--primary-color) !important; color: #fff !important; border-color: var(--primary-color) !important; }
     .vide-buttons .btn-primary:hover { background-color: #005a8c !important; }
@@ -205,22 +215,26 @@
     .vehicleType-wrapper { margin-top: 20px; }
     .vehicleType { list-style: none; text-align: center; margin: 0; margin-bottom: 10px; padding: 0; }
     .vehicleType li { display: inline-block; float: none; margin: 3px 0 0 0; }
-    .vcp-button { font-size: large; line-height: 1.25; padding: .5rem 2rem; width: 250px; cursor: pointer; }
+    /* FIX #10: VCP filter buttons responsive width */
+    .vcp-button { font-size: large; line-height: 1.25; padding: .5rem 2rem; width: auto; min-width: 120px; cursor: pointer; margin: 3px 5px; }
     .vcp-label { color: #000 !important; font-size: 18px; }
 
     /* Google Reviews */
-    .owl_slider { padding: 65px 0; background: #f2f2f2; }
+    /* FIX #8: Reduced review section padding from 65px to 50px */
+    .owl_slider { padding: 50px 0; background: #f2f2f2; }
     .owl_slider .head_h2 { margin-bottom: 40px; color: var(--body-color) !important; font-size: 36px; font-weight: 700; }
     .owl_slider .columns { width: 100%; }
     .owl_slider .owl-carousel { padding: 0 30px; }
     .owl_slider .owl-item { padding: 0 15px; }
-    .owl_slider .item { padding: 25px; position: relative; background: #fff; box-shadow: 0px 1px 4px rgba(0,0,0,0.1); border-radius: 10px; min-height: 280px; }
-    .owl_slider .item p { margin: 12px 0 50px; position: relative; line-height: 26px; font-size: 15px; font-weight: 500; line-height: 24px; }
+    /* FIX #11: Review cards use flexbox instead of absolute positioning for author */
+    .owl_slider .item { padding: 25px; position: relative; background: #fff; box-shadow: 0px 1px 4px rgba(0,0,0,0.1); border-radius: 10px; min-height: 280px; display: flex; flex-direction: column; justify-content: space-between; }
+    .owl_slider .item p { margin: 12px 0 20px; position: relative; line-height: 26px; font-size: 15px; font-weight: 500; line-height: 24px; flex: 1; }
     .owl_slider .item h3 { font-size: 16px; font-weight: 700; margin: 0 0 7px; }
     .owl_slider .item h6 { font-size: 14px; font-weight: 500; color: #C9C9C9; }
     .profile { display: block; width: 60px; height: 60px; overflow: hidden; border-radius: 100%; margin-right: 15px; background: var(--primary-color); color: #fff; line-height: 60px; text-align: center; font-size: 24px; font-weight: 700; flex-shrink: 0; }
     .star_div .fa { color: #f9b403 !important; font-size: 20px; margin-right: 5px; }
-    .review-author { display: flex; align-items: center; position: absolute; bottom: 25px; left: 25px; right: 25px; }
+    /* FIX #11: Remove absolute positioning from review-author */
+    .review-author { display: flex; align-items: center; margin-top: auto; padding-top: 15px; }
 
     /* Owl nav overrides for reviews */
     .owl_slider .owl-carousel .owl-nav button { position: absolute; border: 1px solid var(--link-color); width: 30px; height: 30px; border-radius: 100%; color: var(--link-color); font-size: 22px; top: 40%; left: 0; background: #fff; }
@@ -234,6 +248,7 @@
     .fa.fa-arrow-circle-right, .fa.fa-arrow-circle-left { font-size: 30px; }
 
     /* Dealership Welcome Content */
+    /* FIX #8: Consistent section padding */
     .dealerships { padding: 50px 0; }
     .titlesame { padding: 0 15px; text-align: center; margin-bottom: 40px; }
     .titlesame > h2 { padding-top: 25px; font-size: 46px; color: var(--primary-color); text-transform: uppercase; padding-bottom: 30px; }
@@ -244,7 +259,8 @@
     .dealerships a:hover { text-decoration: underline; }
 
     /* Get Directions */
-    .subscribes-box { display: block; margin: 0 auto; background-color: var(--secondary-color); width: 100%; height: 145px; border-radius: 10px; position: relative; padding: 20px 15px 0; text-align: center; text-shadow: 0 2px 3px rgba(0,0,0,0.1); margin-top: 15px; }
+    /* FIX #3: Add margin-bottom to account for the hanging input area */
+    .subscribes-box { display: block; margin: 0 auto; background-color: var(--secondary-color); width: 100%; height: 145px; border-radius: 10px; position: relative; padding: 20px 15px 0; text-align: center; text-shadow: 0 2px 3px rgba(0,0,0,0.1); margin-top: 15px; margin-bottom: 80px; }
     .subscribes-box::before { content: ""; position: absolute; left: 0; top: 0; background: url(https://storage.googleapis.com/agiledealer/cache/left-bg.png) top left no-repeat; width: 168px; height: 142px; }
     .subscribes-box::after { content: ""; position: absolute; right: 0; top: 0; background: url(https://storage.googleapis.com/agiledealer/cache/right-bg.png) top right no-repeat; width: 168px; height: 142px; }
     .subscribes-box h3 { font-size: 38px; font-weight: 800; color: #fff; position: relative; z-index: 1; margin-bottom: 15px; }
@@ -253,7 +269,8 @@
     .subscribes-box .inputbox .submit { cursor: pointer; position: absolute; top: 25px; right: 25px; width: 60px; height: 60px; border-radius: 60px; background-color: var(--secondary-color); display: flex; align-items: center; justify-content: center; border: 0; }
 
     /* Hours Widget */
-    .hours-section { padding: 80px 0 50px; }
+    /* FIX #4 & #8: Reduced top padding from 80px to 40px */
+    .hours-section { padding: 40px 0 30px; }
     .hours-card { border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; margin-bottom: 20px; }
     .hours-card-header { background: var(--primary-color); color: #fff; padding: 15px 20px; font-size: 18px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
     .hours-card table { width: 100%; }
@@ -264,7 +281,8 @@
     .hours-card table tr td.closed { color: var(--secondary-color); font-weight: 600; }
 
     /* Footer */
-    footer { background-color: var(--footer-bg); padding-top: 65px; color: #fff; }
+    /* FIX #8: Footer padding-top 50px */
+    footer { background-color: var(--footer-bg); padding-top: 50px; color: #fff; }
     .ftrSingle { margin-bottom: 25px; }
     .ftrSingle h4 { font-size: 16px; font-weight: 700; text-transform: uppercase; margin-bottom: 20px; letter-spacing: 1px; border-bottom: 2px solid var(--accent-color); padding-bottom: 10px; }
     .ftrSingle ul li + li { padding-top: 15px; }
@@ -287,7 +305,8 @@
     .ig { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
 
     /* ADA Compliance */
-    .ADACompliance { margin: 0; padding: 0; width: 100%; border-top: 1px solid rgba(0,0,0,.5); }
+    /* FIX #13: Clean spacing above/below ADA section */
+    .ADACompliance { margin: 0; padding: 15px 0; width: 100%; border-top: 1px solid rgba(0,0,0,.5); }
     .ftrlogo { text-align: center; width: 100%; padding: 15px 0; }
 
     /* Sticky nav */
@@ -305,6 +324,7 @@
         .sticky .menuIcn, .overlay, .closeIcn { display: none; }
         .vide-buttons .col-md-3 { flex: 1; padding: 15px; }
         .info-div { text-align: right; }
+        /* FIX #1: Desktop shows desktop buttons, hides mobile buttons */
         .d-desktop-only { display: block !important; }
         .d-mobile-only { display: none !important; }
     }
@@ -316,6 +336,7 @@
     }
 
     @media screen and (max-width: 767px) {
+        /* FIX #1: Mobile shows mobile buttons, hides desktop buttons */
         .d-desktop-only { display: none !important; }
         .d-mobile-only { display: block !important; }
         header { position: static; }
@@ -324,8 +345,9 @@
         .logo-div { width: 25%; }
         .info-div { width: 70%; }
         .site-logo { width: 30% !important; }
-        .hdrightInr { margin-top: 50px; margin-bottom: 0; }
-        .hdrightInr .btntop { top: -15px !important; margin-left: -14px !important; }
+        /* FIX #12: Remove excessive mobile header margin */
+        .hdrightInr { margin-top: 0; margin-bottom: 0; flex-direction: column; align-items: flex-start; gap: 5px; }
+        .hdrightInr .btntop { top: auto !important; margin-left: 0 !important; margin-top: 5px; }
         .openmenu .navmenu { left: 0; }
         .navmenu, .closeIcn { transition: all 300ms; }
         .navmenu { background: #2a78a6; bottom: 0; left: -250px; margin: 0; max-height: 100%; overflow: auto; position: fixed; text-align: left; top: 0; width: 250px; z-index: 55; }
@@ -348,6 +370,7 @@
         .titlesame { margin-bottom: 10px; }
         .subscribes-box h3 { font-size: 24px; }
         .bannerMain { background: #000 !important; }
+        /* FIX #9: Footer columns - 1 column on mobile */
         .ftrSingle { text-align: center; margin-bottom: 15px; }
         .addftr { display: flex; width: 100%; max-width: 243px; margin: 0 auto 15px auto; text-align: left; }
         .ftrlogo { margin-bottom: 25px; }
@@ -357,6 +380,13 @@
         .navmenu ul li a i.fa-caret-down { display: none; }
         .slick-prev, .slick-next { top: 20% !important; }
         .hours-section { padding: 40px 0 20px; }
+        /* FIX #10: VCP buttons on mobile */
+        .vcp-button { width: auto; min-width: 100px; padding: .5rem 1rem; font-size: medium; }
+    }
+
+    /* FIX #9: Footer columns at tablet breakpoint - 2 per row */
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+        footer .col-lg-3 { flex: 0 0 50%; max-width: 50%; }
     }
 
     @media screen and (max-width: 600px) {
@@ -388,6 +418,7 @@
                 </div>
                 <div class="col-lg-9 col-sm-8 col-xs-12 text-left info-div">
                     <div>
+                        <!-- FIX #2: Header right uses flexbox row, no absolute positioning -->
                         <div class="hdrightInr">
                             <div>
                                 <ul class="listInfo">
@@ -407,7 +438,7 @@
                                     </a>
                                 </p>
                             </div>
-                            <div class="btntop" style="margin-top:0px;">
+                            <div class="btntop">
                                 <a href="/dealership-info/hours-and-directions" title="Hablamos Espanol">Hablamos Espanol</a>
                             </div>
                         </div>
@@ -496,7 +527,8 @@
 </div>
 
 <!-- Category Buttons (Desktop) -->
-<div class="d-desktop-only" style="display:none;">
+<!-- FIX #1: Removed inline style="display:none;" so CSS media queries control visibility -->
+<div class="d-desktop-only">
     <div style="clear: both;">&nbsp;</div>
     <div class="row vide-buttons flex">
         <div class="col-md-3">
@@ -523,7 +555,8 @@
 </div>
 
 <!-- Category Buttons (Mobile) -->
-<div class="d-mobile-only" style="display:none;">
+<!-- FIX #1: Removed inline style="display:none;" so CSS media queries control visibility -->
+<div class="d-mobile-only">
     <div style="clear: both;">&nbsp;</div>
     <div class="row vide-buttons">
         <div class="col-md-3 col-sm-6 col-xs-6">
