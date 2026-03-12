@@ -1,29 +1,30 @@
 {
   "dealerName": "Mullinax Ford of Central Florida",
-  "tagline": "Your No Dealer Fee Ford Dealer in Apopka, FL",
+  "tagline": "The Southeast's Largest Ford Retailer",
   "phone": "(407) 794-7942",
   "address": "1551 E Semoran Blvd, Apopka, FL 32703",
   "mapUrl": "https://www.google.com/maps/place/Mullinax+Ford+of+Central+Florida/",
-  "logoUrl": "https://storage.googleapis.com/savvy-images/mullinax-ford-logo.png",
-  "heroImage": "",
-  "heroText": "Mullinax Ford of Central Florida: No Dealer Fees, Ever.",
+  "logoUrl": "https://images.remorainc.com/uploads/k1o/d/9iTtZntS5mg2dtz2vKuG_Zy8KJCNBSaOLgQX3tVwZ_mullinax-ford-group-logo-new-2000_515.png",
+  "footerLogoUrl": "https://images.remorainc.com/uploads/k1o/d/feF0KgnnTLur3Lv2WFsz_dsklogo.png",
   "oem": "ford",
   "theme": {
-    "headerBg": "#ffffff",
-    "navBg": "#003478",
-    "primaryColor": "#003478",
-    "secondaryColor": "#c8102e",
-    "accentColor": "#003478",
-    "footerBg": "#1a1a2e",
-    "bodyColor": "#19183C",
-    "linkColor": "#003478",
+    "headerBg": "#003478",
+    "navBg": "#ffffff",
+    "primaryColor": "#1f76b3",
+    "secondaryColor": "#dd2334",
+    "accentColor": "#2BA343",
+    "yellowAccent": "#ffd900",
+    "footerBg": "#222222",
+    "bodyColor": "#333333",
+    "linkColor": "#1f76b3",
     "fontFamily": "'Ford Antenna Regular', Arial, sans-serif",
     "headingFont": "'Ford Antenna Bold', Arial, sans-serif"
   },
   "socialLinks": {
-    "facebook": "https://www.facebook.com/mullinaxford/",
+    "facebook": "https://www.facebook.com/mullinaxford",
     "instagram": "https://www.instagram.com/mullinaxford/",
-    "twitter": ""
+    "twitter": "https://twitter.com/Ford_Mullinax",
+    "youtube": "https://www.youtube.com/channel/UC3IPTWed9Cp0VIO8fyeBrhw"
   },
   "hours": {
     "sales": [
@@ -40,26 +41,27 @@
   "navLinks": [
     { "label": "Home", "href": "/" },
     { "label": "New", "href": "/new", "children": [
-      { "label": "New Vehicles", "href": "/new" },
-      { "label": "New Specials", "href": "/new-specials" },
-      { "label": "New Trucks", "href": "/new-trucks" }
+      { "label": "All New Vehicles", "href": "/new" },
+      { "label": "New Vehicle Specials", "href": "/new-specials" },
+      { "label": "Custom Order Your Ford", "href": "/custom-order" },
+      { "label": "Value Your Trade", "href": "/value-trade" }
     ]},
     { "label": "Used", "href": "/used", "children": [
-      { "label": "All Used", "href": "/used" },
-      { "label": "Certified Used", "href": "/certified" }
+      { "label": "All Used Vehicles", "href": "/used" },
+      { "label": "Certified Pre-Owned", "href": "/certified" }
     ]},
-    { "label": "Finance", "href": "/finance" },
+    { "label": "Financing", "href": "/finance" },
     { "label": "Service", "href": "/service", "children": [
       { "label": "Schedule Service", "href": "/schedule-service" },
       { "label": "Parts", "href": "/parts" }
     ]},
-    { "label": "About Us", "href": "/about" }
+    { "label": "Dealer Info", "href": "/about" }
   ],
   "footerLinks": [
-    { "label": "Contact Us", "href": "/contact" },
-    { "label": "Reviews", "href": "/reviews" },
-    { "label": "About Us", "href": "/about" },
-    { "label": "Parts", "href": "/parts" },
-    { "label": "Employment", "href": "/employment" }
+    { "label": "New", "href": "/new" },
+    { "label": "Used", "href": "/used" },
+    { "label": "Financing", "href": "/finance" },
+    { "label": "Service", "href": "/service" },
+    { "label": "Dealer Info", "href": "/about" }
   ]
 }
