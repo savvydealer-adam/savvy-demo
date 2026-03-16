@@ -43,6 +43,35 @@ export async function registerRoutes(
     res.redirect("/demo/ford-starter");
   });
 
+  // GET /demo/prestige-imports - serve the React SPA with path rewrite
+  app.get("/demo/prestige-imports", async (_req, res) => {
+    const spaPath = path.resolve(__dirname, "public", "index.html");
+    if (!fs.existsSync(spaPath)) {
+      return res.status(404).send("Template not found");
+    }
+    let html = fs.readFileSync(spaPath, "utf-8");
+    // Rewrite path so wouter's client-side router sees "/" instead of "/demo/prestige-imports"
+    html = html.replace(
+      '<div id="root">',
+      '<script>history.replaceState(null,"","/")</script><div id="root">'
+    );
+    res.type("html").send(html);
+  });
+
+  // GET /demo/prestige-imports/inventory - serve SPA with inventory path
+  app.get("/demo/prestige-imports/inventory", async (_req, res) => {
+    const spaPath = path.resolve(__dirname, "public", "index.html");
+    if (!fs.existsSync(spaPath)) {
+      return res.status(404).send("Template not found");
+    }
+    let html = fs.readFileSync(spaPath, "utf-8");
+    html = html.replace(
+      '<div id="root">',
+      '<script>history.replaceState(null,"","/inventory")</script><div id="root">'
+    );
+    res.type("html").send(html);
+  });
+
   // GET /demo/:name - serve the template's index.html directly
   app.get("/demo/:name", async (req, res) => {
     const templateName = req.params.name;
