@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sendell Mitsubishi | Greensburg, PA | New Mitsubishi Dealer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet" />
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --red: #ED1C24;
+            --red-dark: #c41820;
+            --black: #000000;
+            --white: #ffffff;
+            --gray-50: #f8f9fa;
+            --gray-100: #f0f0f0;
+            --gray-200: #e0e0e0;
+            --gray-400: #999;
+            --gray-600: #666;
+            --gray-800: #333;
+            --blue: #0678bc;
+        }
+
+        body {
+            font-family: 'Barlow', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--gray-800);
+            background: var(--white);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; display: block; }
+
+        /* ── Top Bar ── */
+        .top-bar {
+            background: var(--black);
+            color: var(--white);
+            font-size: 13px;
+            padding: 8px 0;
+        }
+        .top-bar-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .top-bar a { color: var(--white); transition: color 0.2s; }
+        .top-bar a:hover { color: var(--red); }
+        .top-bar .promo {
+            background: var(--red);
+            padding: 3px 12px;
+            border-radius: 2px;
+            font-weight: 600;
+            font-size: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        /* ── Header ── */
+        header {
+            background: var(--white);
+            border-bottom: 3px solid var(--red);
+            padding: 12px 0;
+        }
+        .header-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo-area { display: flex; align-items: center; gap: 16px; }
+        .logo-area .mitsubishi-mark {
+            width: 48px;
+            height: 48px;
+        }
+        .logo-text h1 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--black);
+            line-height: 1;
+            letter-spacing: -0.5px;
+        }
+        .logo-text span {
+            font-size: 12px;
+            color: var(--gray-600);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        nav { display: flex; gap: 4px; }
+        nav a {
+            padding: 10px 16px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--gray-800);
+            border-radius: 4px;
+            transition: all 0.2s;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        nav a:hover { background: var(--red); color: var(--white); }
+        nav a.active { background: var(--red); color: var(--white); }
+        .nav-phone {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--black);
+        }
+
+        /* ── Hero ── */
+        .hero {
+            position: relative;
+            min-height: 560px;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 80%;
+            height: 200%;
+            background: radial-gradient(ellipse, rgba(237,28,36,0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .hero-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 60px 24px;
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .hero-content h2 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 56px;
+            font-weight: 800;
+            color: var(--white);
+            line-height: 1.05;
+            margin-bottom: 16px;
+        }
+        .hero-content h2 em {
+            font-style: normal;
+            color: var(--red);
+        }
+        .hero-content p {
+            font-size: 18px;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 32px;
+            max-width: 460px;
+        }
+        .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 28px;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .btn-red { background: var(--red); color: var(--white); border-color: var(--red); }
+        .btn-red:hover { background: var(--red-dark); border-color: var(--red-dark); }
+        .btn-outline { background: transparent; color: var(--white); border-color: rgba(255,255,255,0.4); }
+        .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.1); }
+
+        /* Hero Search Card */
+        .hero-search {
+            background: rgba(255,255,255,0.06);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 12px;
+            padding: 32px;
+        }
+        .hero-search h3 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .search-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
+        .search-fields select, .search-fields input {
+            width: 100%;
+            padding: 12px 16px;
+            font-size: 14px;
+            font-family: inherit;
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 6px;
+            background: rgba(255,255,255,0.08);
+            color: var(--white);
+            outline: none;
+            appearance: none;
+            cursor: pointer;
+        }
+        .search-fields select option { background: #333; color: #fff; }
+        .search-btn {
+            width: 100%;
+            padding: 14px;
+            background: var(--red);
+            color: var(--white);
+            font-size: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .search-btn:hover { background: var(--red-dark); }
+
+        /* ── Inventory Count Strip ── */
+        .inv-strip {
+            background: var(--gray-50);
+            border-bottom: 1px solid var(--gray-200);
+            padding: 24px 0;
+        }
+        .inv-strip-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+        .inv-card {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        .inv-card:hover { border-color: var(--red); box-shadow: 0 4px 12px rgba(237,28,36,0.1); }
+        .inv-card .count {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--red);
+        }
+        .inv-card .model {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--gray-800);
+            margin: 4px 0;
+        }
+        .inv-card .from {
+            font-size: 13px;
+            color: var(--gray-600);
+        }
+
+        /* ── Models Section ── */
+        .models {
+            padding: 64px 0;
+            background: var(--white);
+        }
+        .models-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        .section-title h2 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 40px;
+            font-weight: 800;
+            color: var(--black);
+            text-transform: uppercase;
+        }
+        .section-title .bar {
+            width: 60px;
+            height: 4px;
+            background: var(--red);
+            margin: 12px auto 0;
+        }
+
+        .models-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+        .model-card {
+            background: var(--gray-50);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+        .model-card:hover { border-color: var(--red); transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.1); }
+        .model-img {
+            height: 180px;
+            background: linear-gradient(135deg, #e8e8e8, #d0d0d0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .model-img::after {
+            content: attr(data-model);
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: rgba(0,0,0,0.15);
+            text-transform: uppercase;
+        }
+        .model-info { padding: 20px; text-align: center; }
+        .model-info h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+        .model-info .price {
+            font-size: 14px;
+            color: var(--gray-600);
+            margin-bottom: 12px;
+        }
+        .model-info .price strong { color: var(--red); font-weight: 700; }
+        .model-info .view-btn {
+            display: inline-block;
+            padding: 8px 24px;
+            background: var(--black);
+            color: var(--white);
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background 0.3s;
+        }
+        .model-info .view-btn:hover { background: var(--red); }
+
+        /* ── Specials Banner ── */
+        .specials {
+            background: var(--black);
+            padding: 64px 0;
+        }
+        .specials-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 24px;
+        }
+        .special-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 32px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        .special-card:hover { border-color: var(--red); background: rgba(237,28,36,0.05); }
+        .special-card .amount {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 48px;
+            font-weight: 800;
+            color: var(--red);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+        .special-card h3 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .special-card p {
+            font-size: 14px;
+            color: rgba(255,255,255,0.5);
+        }
+
+        /* ── Why Us ── */
+        .why-us {
+            padding: 64px 0;
+            background: var(--gray-50);
+        }
+        .why-us-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-top: 48px;
+        }
+        .why-item { text-align: center; padding: 24px; }
+        .why-item .icon {
+            width: 56px;
+            height: 56px;
+            background: var(--red);
+            border-radius: 50%;
+            margin: 0 auto 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .why-item .icon svg { width: 24px; height: 24px; fill: var(--white); }
+        .why-item h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+        .why-item p { font-size: 14px; color: var(--gray-600); }
+
+        /* ── Footer ── */
+        footer {
+            background: #1a1a1a;
+            color: rgba(255,255,255,0.6);
+            padding: 48px 0 24px;
+        }
+        .footer-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+        }
+        .footer-brand h3 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 12px;
+        }
+        .footer-brand p { font-size: 14px; line-height: 1.7; }
+        footer h4 {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--white);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+        }
+        footer ul { list-style: none; }
+        footer li { margin-bottom: 8px; }
+        footer li a { font-size: 14px; transition: color 0.2s; }
+        footer li a:hover { color: var(--red); }
+        .footer-bottom {
+            max-width: 1280px;
+            margin: 32px auto 0;
+            padding: 24px 24px 0;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            font-size: 12px;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 1024px) {
+            .hero-inner { grid-template-columns: 1fr; }
+            .hero-search { display: none; }
+            .models-grid { grid-template-columns: repeat(2, 1fr); }
+            .specials-inner { grid-template-columns: 1fr; }
+            .why-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-inner { grid-template-columns: 1fr 1fr; }
+            nav { display: none; }
+        }
+        @media (max-width: 640px) {
+            .inv-strip-inner { grid-template-columns: repeat(2, 1fr); }
+            .hero-content h2 { font-size: 38px; }
+            .models-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-inner">
+            <div style="display:flex;gap:24px;align-items:center;">
+                <span>5079 US-30, Greensburg, PA 15601</span>
+                <a href="tel:7246078465">(724) 607-8465</a>
+            </div>
+            <div style="display:flex;gap:16px;align-items:center;">
+                <span class="promo">LESS THAN PERFECT CREDIT ACCEPTED!</span>
+                <a href="#">Service: (724) 607-8276</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-inner">
+            <div class="logo-area">
+                <svg class="mitsubishi-mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="24,2 30,14 24,26" fill="#ED1C24"/>
+                    <polygon points="24,2 18,14 24,26" fill="#cc1820"/>
+                    <polygon points="8,42 14,30 20,42" fill="#ED1C24"/>
+                    <polygon points="8,42 14,30 8,18" fill="#cc1820"/>
+                    <polygon points="40,42 34,30 28,42" fill="#ED1C24"/>
+                    <polygon points="40,42 34,30 40,18" fill="#cc1820"/>
+                </svg>
+                <div class="logo-text">
+                    <h1>SENDELL MITSUBISHI</h1>
+                    <span>Greensburg, PA</span>
+                </div>
+            </div>
+            <nav>
+                <a href="#" class="active">New</a>
+                <a href="#">Used</a>
+                <a href="#">Finance</a>
+                <a href="#">Service</a>
+                <a href="#">Contact</a>
+            </nav>
+            <a href="tel:7246078465" class="nav-phone">(724) 607-8465</a>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="hero-content">
+                <h2>Your Dream Car <em>Awaits</em></h2>
+                <p>Greensburg's premier Mitsubishi dealer with 27 new vehicles in stock. Explore the all-new 2026 lineup with exclusive savings.</p>
+                <div class="hero-actions">
+                    <a href="inventory.html" class="btn btn-red">Browse Inventory</a>
+                    <a href="#" class="btn btn-outline">Get Pre-Qualified</a>
+                </div>
+            </div>
+            <div class="hero-search">
+                <h3>Find Your Vehicle</h3>
+                <div class="search-fields">
+                    <select><option>New</option><option>Used</option><option>CPO</option></select>
+                    <select><option>All Years</option><option>2026</option><option>2025</option></select>
+                    <select><option>Mitsubishi</option></select>
+                    <select><option>All Models</option><option>Outlander</option><option>Outlander PHEV</option><option>Eclipse Cross</option><option>Outlander Sport</option></select>
+                </div>
+                <button class="search-btn">Search Inventory</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inventory Count Strip -->
+    <div class="inv-strip">
+        <div class="inv-strip-inner">
+            <a href="inventory.html" class="inv-card">
+                <div class="count">13</div>
+                <div class="model">Outlander</div>
+                <div class="from">Starting at <strong>$38,045</strong></div>
+            </a>
+            <a href="inventory.html" class="inv-card">
+                <div class="count">7</div>
+                <div class="model">Outlander PHEV</div>
+                <div class="from">Starting at <strong>$34,380</strong></div>
+            </a>
+            <a href="inventory.html" class="inv-card">
+                <div class="count">4</div>
+                <div class="model">Eclipse Cross</div>
+                <div class="from">Starting at <strong>$28,340</strong></div>
+            </a>
+            <a href="inventory.html" class="inv-card">
+                <div class="count">3</div>
+                <div class="model">Outlander Sport</div>
+                <div class="from">Starting at <strong>$24,990</strong></div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Models Section -->
+    <section class="models">
+        <div class="models-inner">
+            <div class="section-title">
+                <h2>Explore the Lineup</h2>
+                <div class="bar"></div>
+            </div>
+            <div class="models-grid">
+                <div class="model-card">
+                    <div class="model-img" data-model="Outlander"></div>
+                    <div class="model-info">
+                        <h3>2026 Outlander</h3>
+                        <p class="price">Starting at <strong>$38,045</strong></p>
+                        <a href="inventory.html" class="view-btn">View Inventory</a>
+                    </div>
+                </div>
+                <div class="model-card">
+                    <div class="model-img" data-model="Outlander PHEV"></div>
+                    <div class="model-info">
+                        <h3>2025 Outlander PHEV</h3>
+                        <p class="price">Starting at <strong>$34,380</strong></p>
+                        <a href="inventory.html" class="view-btn">View Inventory</a>
+                    </div>
+                </div>
+                <div class="model-card">
+                    <div class="model-img" data-model="Eclipse Cross"></div>
+                    <div class="model-info">
+                        <h3>Eclipse Cross</h3>
+                        <p class="price">Starting at <strong>$28,340</strong></p>
+                        <a href="inventory.html" class="view-btn">View Inventory</a>
+                    </div>
+                </div>
+                <div class="model-card">
+                    <div class="model-img" data-model="Outlander Sport"></div>
+                    <div class="model-info">
+                        <h3>Outlander Sport</h3>
+                        <p class="price">Starting at <strong>$24,990</strong></p>
+                        <a href="inventory.html" class="view-btn">View Inventory</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specials -->
+    <section class="specials">
+        <div class="specials-inner">
+            <div class="special-card">
+                <div class="amount">$8,000</div>
+                <h3>Off 2025 Outlander PHEV</h3>
+                <p>Trade discount on all remaining 2025 Plug-In Hybrid models</p>
+            </div>
+            <div class="special-card">
+                <div class="amount">$6,000</div>
+                <h3>Off 2025 Outlander SEL</h3>
+                <p>Trade discount on select 2025 Outlander SEL models</p>
+            </div>
+            <div class="special-card">
+                <div class="amount">$5,000</div>
+                <h3>Off Eclipse Cross</h3>
+                <p>Trade discount on 2025 Eclipse Cross Black Edition</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us -->
+    <section class="why-us">
+        <div class="why-us-inner">
+            <div class="section-title">
+                <h2>Why Sendell Mitsubishi</h2>
+                <div class="bar"></div>
+            </div>
+            <div class="why-grid">
+                <div class="why-item">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                    </div>
+                    <h3>No Hassle Pricing</h3>
+                    <p>Transparent, upfront pricing on every vehicle in our inventory.</p>
+                </div>
+                <div class="why-item">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg>
+                    </div>
+                    <h3>27 Vehicles In Stock</h3>
+                    <p>Large selection of new Mitsubishi models ready for immediate delivery.</p>
+                </div>
+                <div class="why-item">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+                    </div>
+                    <h3>Credit Solutions</h3>
+                    <p>All credit situations welcome. Get pre-qualified in minutes.</p>
+                </div>
+                <div class="why-item">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58a.49.49 0 0 0 .12-.61l-1.92-3.32a.488.488 0 0 0-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54a.484.484 0 0 0-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.07.62-.07.94s.02.64.07.94l-2.03 1.58a.49.49 0 0 0-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>
+                    </div>
+                    <h3>Service Center</h3>
+                    <p>Factory-certified technicians using genuine Mitsubishi parts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <h3>Sendell Mitsubishi</h3>
+                <p>5079 US-30, Greensburg, PA 15601<br />
+                Sales: (724) 607-8465<br />
+                Service: (724) 607-8276</p>
+                <p style="margin-top:12px;">Mon-Fri: 9AM - 7PM<br/>Sat: 9AM - 5PM<br/>Sun: Closed</p>
+            </div>
+            <div>
+                <h4>Inventory</h4>
+                <ul>
+                    <li><a href="inventory.html">New Vehicles</a></li>
+                    <li><a href="#">Used Vehicles</a></li>
+                    <li><a href="#">Certified Pre-Owned</a></li>
+                    <li><a href="#">Specials</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Finance</h4>
+                <ul>
+                    <li><a href="#">Apply Online</a></li>
+                    <li><a href="#">Value Your Trade</a></li>
+                    <li><a href="#">Payment Calculator</a></li>
+                    <li><a href="#">Credit Solutions</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Service</h4>
+                <ul>
+                    <li><a href="#">Schedule Service</a></li>
+                    <li><a href="#">Service Specials</a></li>
+                    <li><a href="#">Parts Department</a></li>
+                    <li><a href="#">Body Shop</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Sendell Mitsubishi. All rights reserved. | Powered by <a href="https://www.savvydealer.com" style="color:var(--red);">SavvyDealer</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>

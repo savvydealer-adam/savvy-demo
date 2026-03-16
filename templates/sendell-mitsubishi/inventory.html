@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Mitsubishi Inventory | Sendell Mitsubishi | Greensburg, PA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet" />
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --red: #bc0600;
+            --red-dark: #a00500;
+            --blue: #0678bc;
+            --blue-dark: #055d94;
+            --green: #30770f;
+            --black: #19183c;
+            --white: #ffffff;
+            --gray-50: #f8f9fa;
+            --gray-100: #f0f1f3;
+            --gray-200: #dee2e6;
+            --gray-300: #ced4da;
+            --gray-400: #999;
+            --gray-600: #666;
+            --gray-800: #333;
+        }
+
+        body {
+            font-family: 'Barlow', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--black);
+            background: var(--gray-50);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a { text-decoration: none; color: inherit; }
+
+        /* ── Header ── */
+        .header-top {
+            background: var(--white);
+            border-bottom: 1px solid var(--gray-200);
+            padding: 12px 0;
+        }
+        .header-top-inner {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo-area { display: flex; align-items: center; gap: 12px; }
+        .logo-area svg { width: 40px; height: 40px; }
+        .logo-text {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--black);
+            line-height: 1.1;
+        }
+        .logo-text small {
+            display: block;
+            font-family: 'Barlow', sans-serif;
+            font-size: 11px;
+            font-weight: 500;
+            color: var(--gray-600);
+            letter-spacing: 0.5px;
+        }
+        .header-contact {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-size: 13px;
+            color: var(--gray-600);
+        }
+        .header-contact a { color: var(--black); font-weight: 600; }
+        .header-contact a:hover { color: var(--red); }
+
+        /* Nav bar */
+        .nav-bar {
+            background: var(--red);
+            padding: 0;
+        }
+        .nav-bar-inner {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 0;
+        }
+        .nav-bar a {
+            display: flex;
+            align-items: center;
+            padding: 12px 18px;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--white);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: background 0.2s;
+        }
+        .nav-bar a:hover, .nav-bar a.active { background: rgba(0,0,0,0.2); }
+        .nav-bar .special-nav {
+            background: var(--white);
+            color: var(--red);
+            margin-left: auto;
+            font-weight: 800;
+        }
+        .nav-bar .special-nav:hover { background: var(--gray-100); }
+
+        /* ── Results Header ── */
+        .results-header {
+            background: var(--white);
+            border-bottom: 1px solid var(--gray-200);
+            padding: 16px 0;
+        }
+        .results-header-inner {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .results-count {
+            font-size: 16px;
+            font-weight: 600;
+        }
+        .results-count strong { color: var(--red); }
+        .results-controls { display: flex; gap: 8px; align-items: center; }
+        .filter-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--red);
+            background: var(--white);
+            border: 1px solid var(--red);
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s;
+        }
+        .filter-btn:hover { background: var(--red); color: var(--white); }
+        .filter-btn svg { width: 16px; height: 16px; }
+        .sort-select {
+            padding: 8px 12px;
+            font-size: 13px;
+            font-family: inherit;
+            border: 1px solid var(--gray-300);
+            color: var(--black);
+            background: var(--white);
+            cursor: pointer;
+        }
+
+        /* ── Vehicle Cards ── */
+        .results-list {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 16px 20px;
+        }
+
+        .vehicle-card {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            margin-bottom: 12px;
+            display: grid;
+            grid-template-columns: 320px 1fr 240px;
+            transition: box-shadow 0.2s, border-color 0.2s;
+            overflow: hidden;
+        }
+        .vehicle-card:hover {
+            border-color: var(--blue);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        }
+
+        /* Image block */
+        .card-image {
+            position: relative;
+            background: var(--gray-100);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 200px;
+            overflow: hidden;
+        }
+        .card-image .img-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 20px;
+            text-align: center;
+        }
+        .card-image .img-placeholder .model-name {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--gray-400);
+            text-transform: uppercase;
+        }
+        .card-image .color-swatch {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: 2px solid var(--white);
+            box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+        }
+        .card-image .img-placeholder .color-name {
+            font-size: 11px;
+            color: var(--gray-400);
+        }
+        .card-image .year-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding: 3px 10px;
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--white);
+            background: var(--red);
+            text-transform: uppercase;
+        }
+        .card-image .fav-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.9);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+        .card-image .fav-btn:hover { background: var(--red); }
+        .card-image .fav-btn:hover svg { fill: var(--white); }
+        .card-image .fav-btn svg { width: 16px; height: 16px; fill: var(--gray-400); }
+
+        /* Details block */
+        .card-details {
+            padding: 20px 24px;
+            display: flex;
+            flex-direction: column;
+        }
+        .card-details .title {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--blue);
+            margin-bottom: 2px;
+            line-height: 1.3;
+        }
+        .card-details .title:hover { color: var(--blue-dark); text-decoration: underline; }
+        .card-details .subtitle {
+            font-size: 13px;
+            color: var(--gray-600);
+            margin-bottom: 14px;
+        }
+        .card-specs {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            flex: 1;
+        }
+        .spec-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            color: var(--gray-800);
+        }
+        .spec-row svg {
+            width: 16px;
+            height: 16px;
+            fill: var(--blue);
+            flex-shrink: 0;
+        }
+        .card-ids {
+            margin-top: 14px;
+            padding-top: 10px;
+            border-top: 1px solid var(--gray-100);
+            font-size: 11px;
+            color: var(--gray-400);
+            display: flex;
+            gap: 16px;
+        }
+
+        /* Price block */
+        .card-price {
+            padding: 20px;
+            background: var(--gray-50);
+            border-left: 1px solid var(--gray-200);
+            display: flex;
+            flex-direction: column;
+        }
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 4px 0;
+            font-size: 14px;
+        }
+        .price-row .label { color: var(--gray-600); }
+        .price-row .value { font-weight: 600; text-align: right; }
+        .price-row.msrp .value {
+            font-size: 15px;
+            color: var(--black);
+        }
+        .price-row.discount .value {
+            color: var(--red);
+            font-weight: 700;
+        }
+        .price-divider {
+            border: none;
+            border-top: 1px solid var(--gray-200);
+            margin: 8px 0;
+        }
+        .price-row.final .label {
+            font-weight: 700;
+            color: var(--black);
+            font-size: 13px;
+            text-transform: uppercase;
+        }
+        .price-row.final .value {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--green);
+            font-family: 'Barlow Condensed', sans-serif;
+        }
+        .price-actions {
+            margin-top: auto;
+            padding-top: 14px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .btn-price {
+            display: block;
+            text-align: center;
+            padding: 10px 12px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 1px solid;
+        }
+        .btn-price.primary { background: var(--red); color: var(--white); border-color: var(--red); }
+        .btn-price.primary:hover { background: var(--red-dark); border-color: var(--red-dark); }
+        .btn-price.secondary { background: var(--white); color: var(--red); border-color: var(--red); }
+        .btn-price.secondary:hover { background: var(--red); color: var(--white); }
+
+        /* ── Pagination ── */
+        .pagination {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .pagination span {
+            display: inline-block;
+            padding: 8px 14px;
+            font-size: 14px;
+            font-weight: 600;
+            border: 1px solid var(--gray-200);
+            color: var(--gray-600);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .pagination span:hover { border-color: var(--red); color: var(--red); }
+        .pagination span.active { background: var(--red); color: var(--white); border-color: var(--red); }
+
+        /* ── Footer ── */
+        .srp-footer {
+            background: #282828;
+            color: rgba(255,255,255,0.6);
+            padding: 32px 0;
+            margin-top: 24px;
+        }
+        .srp-footer-inner {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .srp-footer a { color: rgba(255,255,255,0.8); font-size: 13px; transition: color 0.2s; }
+        .srp-footer a:hover { color: var(--white); }
+        .srp-footer .copyright { font-size: 12px; }
+
+        /* ── Responsive ── */
+        @media (max-width: 1024px) {
+            .vehicle-card {
+                grid-template-columns: 280px 1fr;
+            }
+            .card-price {
+                grid-column: 1 / -1;
+                border-left: none;
+                border-top: 1px solid var(--gray-200);
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 16px;
+            }
+            .price-actions {
+                flex-direction: row;
+                margin-top: 0;
+                padding-top: 0;
+                align-items: center;
+            }
+        }
+        @media (max-width: 768px) {
+            .vehicle-card {
+                grid-template-columns: 1fr;
+            }
+            .card-image { min-height: 220px; }
+            .nav-bar a { padding: 10px 12px; font-size: 12px; }
+            .nav-bar .special-nav { display: none; }
+        }
+        @media (max-width: 480px) {
+            .header-contact { display: none; }
+            .results-header-inner { flex-direction: column; align-items: flex-start; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header-top">
+        <div class="header-top-inner">
+            <a href="index.html" class="logo-area">
+                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="24,2 30,14 24,26" fill="#ED1C24"/>
+                    <polygon points="24,2 18,14 24,26" fill="#cc1820"/>
+                    <polygon points="8,42 14,30 20,42" fill="#ED1C24"/>
+                    <polygon points="8,42 14,30 8,18" fill="#cc1820"/>
+                    <polygon points="40,42 34,30 28,42" fill="#ED1C24"/>
+                    <polygon points="40,42 34,30 40,18" fill="#cc1820"/>
+                </svg>
+                <div class="logo-text">
+                    SENDELL MITSUBISHI
+                    <small>5079 US-30, Greensburg, PA 15601</small>
+                </div>
+            </a>
+            <div class="header-contact">
+                <span>Sales: <a href="tel:7246078465">(724) 607-8465</a></span>
+                <span>Service: <a href="tel:7246078276">(724) 607-8276</a></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Nav -->
+    <nav class="nav-bar">
+        <div class="nav-bar-inner">
+            <a href="index.html">Home</a>
+            <a href="#" class="active">New Vehicles</a>
+            <a href="#">Used</a>
+            <a href="#">Finance</a>
+            <a href="#">Service</a>
+            <a href="#">Specials</a>
+            <a href="#">Contact</a>
+            <a href="#" class="special-nav">$8K OFF PHEV Models!</a>
+        </div>
+    </nav>
+
+    <!-- Results Header -->
+    <div class="results-header">
+        <div class="results-header-inner">
+            <div class="results-count">
+                Showing <strong>27</strong> New Mitsubishi Vehicles
+            </div>
+            <div class="results-controls">
+                <button class="filter-btn">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"/></svg>
+                    Filter
+                </button>
+                <select class="sort-select">
+                    <option>Sort: Price Low to High</option>
+                    <option>Sort: Price High to Low</option>
+                    <option>Sort: Year Newest</option>
+                    <option>Sort: Model A-Z</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vehicle Listings -->
+    <div class="results-list">
+
+        <!-- 2025 Outlander Sport S - $24,990 -->
+        <div class="vehicle-card">
+            <div class="card-image">
+                <div class="img-placeholder">
+                    <div class="color-swatch" style="background:#1a1a1a;"></div>
+                    <span class="model-name">Outlander Sport</span>
+                    <span class="color-name">Labrador Black Pearl</span>
+                </div>
+                <span class="year-badge">New 2025</span>
+                <button class="fav-btn"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></button>
+            </div>
+            <div class="card-details">
+                <a href="#" class="title">New 2025 Mitsubishi Outlander Sport S</a>
+                <div class="subtitle">4WD | I-4 2.0L | Labrador Black Pearl</div>
+                <div class="card-specs">
+                    <div class="spec-row">
+                        <svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg>
+                        Four-Wheel Drive
+                    </div>
+                    <div class="spec-row">
+                        <svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+                        4 Doors
+                    </div>
+                    <div class="spec-row">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm4.2 14.2L11 13V7h1.5v5.2l4.5 2.7-.8 1.3z"/></svg>
+                        25 Miles
+                    </div>
+                </div>
+                <div class="card-ids">
+                    <span>Stock# M501108</span>
+                    <span>VIN: ...U012104</span>
+                </div>
+            </div>
+            <div class="card-price">
+                <div class="price-row msrp">
+                    <span class="label">MSRP</span>
+                    <span class="value">$28,990</span>
+                </div>
+                <div class="price-row discount">
+                    <span class="label">Trade Discount</span>
+                    <span class="value">-$4,000</span>
+                </div>
+                <hr class="price-divider" />
+                <div class="price-row final">
+                    <span class="label">Selling Price</span>
+                    <span class="value">$24,990</span>
+                </div>
+                <div class="price-actions">
+                    <a href="#" class="btn-price primary">Check Availability</a>
+                    <a href="#" class="btn-price secondary">Get E-Price</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2025 Outlander Sport S - $25,480 -->
+        <div class="vehicle-card">
+            <div class="card-image">
+                <div class="img-placeholder">
+                    <div class="color-swatch" style="background:#f0f0f0;border:1px solid #ccc;"></div>
+                    <span class="model-name">Outlander Sport</span>
+                    <span class="color-name">Diamond White</span>
+                </div>
+                <span class="year-badge">New 2025</span>
+                <button class="fav-btn"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></button>
+            </div>
+            <div class="card-details">
+                <a href="#" class="title">New 2025 Mitsubishi Outlander Sport S</a>
+                <div class="subtitle">4WD | I-4 2.0L | Diamond White</div>
+                <div class="card-specs">
+                    <div class="spec-row"><svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg> Four-Wheel Drive</div>
+                    <div class="spec-row"><svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg> 4 Doors</div>
+                    <div class="spec-row"><svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm4.2 14.2L11 13V7h1.5v5.2l4.5 2.7-.8 1.3z"/></svg> 18 Miles</div>
+                </div>
+                <div class="card-ids">
+                    <span>Stock# M501110</span>
+                    <span>VIN: ...U012232</span>
+                </div>
+            </div>
+            <div class="card-price">
+                <div class="price-row msrp"><span class="label">MSRP</span><span class="value">$29,480</span></div>
+                <div class="price-row discount"><span class="label">Trade Discount</span><span class="value">-$4,000</span></div>
+                <hr class="price-divider" />
+                <div class="price-row final"><span class="label">Selling Price</span><span class="value">$25,480</span></div>
+                <div class="price-actions">
+                    <a href="#" class="btn-price primary">Check Availability</a>
+                    <a href="#" class="btn-price secondary">Get E-Price</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2025 Eclipse Cross Black Edition - $28,340 -->
+        <div class="vehicle-card">
+            <div class="card-image">
+                <div class="img-placeholder">
+                    <div class="color-swatch" style="background:#6b6b6b;"></div>
+                    <span class="model-name">Eclipse Cross</span>
+                    <span class="color-name">Gray Metallic</span>
+                </div>
+                <span class="year-badge">New 2025</span>
+                <button class="fav-btn"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></button>
+            </div>
+            <div class="card-details">
+                <a href="#" class="title">New 2025 Mitsubishi Eclipse Cross Black Edition</a>
+                <div class="subtitle">4WD | Turbo I-4 1.5L | Gray Metallic</div>
+                <div class="card-specs">
+                    <div class="spec-row"><svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg> Four-Wheel Drive</div>
+                    <div class="spec-row"><svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg> 4 Doors</div>
+                    <div class="spec-row"><svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm4.2 14.2L11 13V7h1.5v5.2l4.5 2.7-.8 1.3z"/></svg> 12 Miles</div>
+                </div>
+                <div class="card-ids">
+                    <span>Stock# M500840</span>
+                    <span>VIN: ...Z024765</span>
+                </div>
+            </div>
+            <div class="card-price">
+                <div class="price-row msrp"><span class="label">MSRP</span><span class="value">$33,340</span></div>
+                <div class="price-row discount"><span class="label">Trade Discount</span><span class="value">-$5,000</span></div>
+                <hr class="price-divider" />
+                <div class="price-row final"><span class="label">Selling Price</span><span class="value">$28,340</span></div>
+                <div class="price-actions">
+                    <a href="#" class="btn-price primary">Check Availability</a>
+                    <a href="#" class="btn-price secondary">Get E-Price</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2025 Eclipse Cross Black Edition - $29,105 -->
+        <div class="vehicle-card">
+            <div class="card-image">
+                <div class="img-placeholder">
+                    <div class="color-swatch" style="background:#f0f0f0;border:1px solid #ccc;"></div>
+                    <span class="model-name">Eclipse Cross</span>
+                    <span class="color-name">Diamond White</span>
+                </div>
+                <span class="year-badge">New 2025</span>
+                <button class="fav-btn"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></button>
+            </div>
+            <div class="card-details">
+                <a href="#" class="title">New 2025 Mitsubishi Eclipse Cross Black Edition</a>
+                <div class="subtitle">4WD | Turbo I-4 1.5L | Diamond White</div>
+                <div class="card-specs">
+                    <div class="spec-row"><svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg> Four-Wheel Drive</div>
+                    <div class="spec-row"><svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg> 4 Doors</div>
+                    <div class="spec-row"><svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm4.2 14.2L11 13V7h1.5v5.2l4.5 2.7-.8 1.3z"/></svg> 8 Miles</div>
+                </div>
+                <div class="card-ids">
+                    <span>Stock# M501111</span>
+                    <span>VIN: ...Z047747</span>
+                </div>
+            </div>
+            <div class="card-price">
+                <div class="price-row msrp"><span class="label">MSRP</span><span class="value">$34,105</span></div>
+                <div class="price-row discount"><span class="label">Trade Discount</span><span class="value">-$5,000</span></div>
+                <hr class="price-divider" />
+                <div class="price-row final"><span class="label">Selling Price</span><span class="value">$29,105</span></div>
+                <div class="price-actions">
+                    <a href="#" class="btn-price primary">Check Availability</a>
+                    <a href="#" class="btn-price secondary">Get E-Price</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2026 Outlander Sport - $31,580 -->
+        <div class="vehicle-card">
+            <div class="card-image">
+                <div class="img-placeholder">
+                    <div class="color-swatch" style="background:#1a3d6b;"></div>
+                    <span class="model-name">Outlander Sport</span>
+                    <span class="color-name">Octane Blue</span>
+                </div>
+                <span class="year-badge">New 2026</span>
+                <button class="fav-btn"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></button>
+            </div>
+            <div class="card-details">
+                <a href="#" class="title">New 2026 Mitsubishi Outlander Sport</a>
+                <div class="subtitle">4WD | I-4 2.0L | Octane Blue</div>
+                <div class="card-specs">
+                    <div class="spec-row"><svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg> Four-Wheel Drive</div>
+                    <div class="spec-row"><svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg> 4 Doors</div>
+                    <div class="spec-row"><svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm4.2 14.2L11 13V7h1.5v5.2l4.5 2.7-.8 1.3z"/></svg> 5 Miles</div>
+                </div>
+                <div class="card-ids">
+                    <span>Stock# M600309</span>
+                    <span>VIN: ...U014613</span>
+                </div>
+            </div>
+            <div class="card-price">
+                <div class="price-row msrp"><span class="label">MSRP</span><span class="value">$31,580</span></div>
+                <hr class="price-divider" />
+                <div class="price-row final"><span class="label">Selling Price</span><span class="value">$31,580</span></div>
+                <div class="price-actions">
+                    <a href="#" class="btn-price primary">Check Availability</a>
+                    <a href="#" class="btn-price secondary">Get E-Price</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2025 Outlander PHEV ES - $34,380 -->
+        <div class="vehicle-card">
+            <div class="card-image">
+                <div class="img-placeholder">
+                    <div class="color-swatch" style="background:#b0b0b0;"></div>
+                    <span class="model-name">Outlander PHEV</span>
+                    <span class="color-name">Silver Alloy</span>
+                </div>
+                <span class="year-badge">New 2025</span>
+                <button class="fav-btn"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></button>
+            </div>
+            <div class="card-details">
+                <a href="#" class="title">New 2025 Mitsubishi Outlander Plug-In Hybrid ES</a>
+                <div class="subtitle">4WD | Gas/Electric I-4 2.4L | Silver Alloy</div>
+                <div class="card-specs">
+                    <div class="spec-row"><svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg> Four-Wheel Drive</div>
+                    <div class="spec-row"><svg viewBox="0 0 24 24"><path d="M7 2v11h3v9l7-12h-4l4-8z"/></svg> Plug-In Hybrid</div>
+                    <div class="spec-row"><svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm4.2 14.2L11 13V7h1.5v5.2l4.5 2.7-.8 1.3z"/></svg> 15 Miles</div>
+                </div>
+                <div class="card-ids">
+                    <span>Stock# M500587</span>
+                    <span>VIN: ...Z000590</span>
+                </div>
+            </div>
+            <div class="card-price">
+                <div class="price-row msrp"><span class="label">MSRP</span><span class="value">$42,380</span></div>
+                <div class="price-row discount"><span class="label">Trade Discount</span><span class="value">-$8,000</span></div>
+                <hr class="price-divider" />
+                <div class="price-row final"><span class="label">Selling Price</span><span class="value">$34,380</span></div>
+                <div class="price-actions">
+                    <a href="#" class="btn-price primary">Check Availability</a>
+                    <a href="#" class="btn-price secondary">Get E-Price</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2026 Eclipse Cross SEL - $34,615 -->
+        <div class="vehicle-card">
+            <div class="card-image">
+                <div class="img-placeholder">
+                    <div class="color-swatch" style="background:#b0b0b0;"></div>
+                    <span class="model-name">Eclipse Cross</span>
+                    <span class="color-name">Silver Alloy</span>
+                </div>
+                <span class="year-badge">New 2026</span>
+                <button class="fav-btn"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></button>
+            </div>
+            <div class="card-details">
+                <a href="#" class="title">New 2026 Mitsubishi Eclipse Cross SEL</a>
+                <div class="subtitle">4WD | Turbo I-4 1.5L | Silver Alloy</div>
+                <div class="card-specs">
+                    <div class="spec-row"><svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg> Four-Wheel Drive</div>
+                    <div class="spec-row"><svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg> 4 Doors</div>
+                    <div class="spec-row"><svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm4.2 14.2L11 13V7h1.5v5.2l4.5 2.7-.8 1.3z"/></svg> 3 Miles</div>
+                </div>
+                <div class="card-ids">
+                    <span>Stock# M600294</span>
+                    <span>VIN: ...Z017803</span>
+                </div>
+            </div>
+            <div class="card-price">
+                <div class="price-row msrp"><span class="label">MSRP</span><span class="value">$34,615</span></div>
+                <hr class="price-divider" />
+                <div class="price-row final"><span class="label">Selling Price</span><span class="value">$34,615</span></div>
+                <div class="price-actions">
+                    <a href="#" class="btn-price primary">Check Availability</a>
+                    <a href="#" class="btn-price secondary">Get E-Price</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2025 Outlander SEL - $37,495 -->
+        <div class="vehicle-card">
+            <div class="card-image">
+                <div class="img-placeholder">
+                    <div class="color-swatch" style="background:#e8e8e8;border:1px solid #ccc;"></div>
+                    <span class="model-name">Outlander</span>
+                    <span class="color-name">Diamond</span>
+                </div>
+                <span class="year-badge">New 2025</span>
+                <button class="fav-btn"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></button>
+            </div>
+            <div class="card-details">
+                <a href="#" class="title">New 2025 Mitsubishi Outlander SEL</a>
+                <div class="subtitle">4WD | I-4 2.5L | Diamond</div>
+                <div class="card-specs">
+                    <div class="spec-row"><svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg> Four-Wheel Drive</div>
+                    <div class="spec-row"><svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg> 4 Doors</div>
+                    <div class="spec-row"><svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm4.2 14.2L11 13V7h1.5v5.2l4.5 2.7-.8 1.3z"/></svg> 32 Miles</div>
+                </div>
+                <div class="card-ids">
+                    <span>Stock# M500834</span>
+                    <span>VIN: ...A82SZ025393</span>
+                </div>
+            </div>
+            <div class="card-price">
+                <div class="price-row msrp"><span class="label">MSRP</span><span class="value">$43,495</span></div>
+                <div class="price-row discount"><span class="label">Trade Discount</span><span class="value">-$6,000</span></div>
+                <hr class="price-divider" />
+                <div class="price-row final"><span class="label">Selling Price</span><span class="value">$37,495</span></div>
+                <div class="price-actions">
+                    <a href="#" class="btn-price primary">Check Availability</a>
+                    <a href="#" class="btn-price secondary">Get E-Price</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2026 Outlander SE - $38,045 -->
+        <div class="vehicle-card">
+            <div class="card-image">
+                <div class="img-placeholder">
+                    <div class="color-swatch" style="background:#1a1a1a;"></div>
+                    <span class="model-name">Outlander</span>
+                    <span class="color-name">Labrador Black Pearl</span>
+                </div>
+                <span class="year-badge">New 2026</span>
+                <button class="fav-btn"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></button>
+            </div>
+            <div class="card-details">
+                <a href="#" class="title">New 2026 Mitsubishi Outlander SE</a>
+                <div class="subtitle">AWD | Turbo I-4 1.5L | Labrador Black Pearl</div>
+                <div class="card-specs">
+                    <div class="spec-row"><svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg> All-Wheel Drive</div>
+                    <div class="spec-row"><svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg> 4 Doors</div>
+                    <div class="spec-row"><svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm4.2 14.2L11 13V7h1.5v5.2l4.5 2.7-.8 1.3z"/></svg> 6 Miles</div>
+                </div>
+                <div class="card-ids">
+                    <span>Stock# M600291</span>
+                    <span>VIN: ...B5TZ016209</span>
+                </div>
+            </div>
+            <div class="card-price">
+                <div class="price-row msrp"><span class="label">MSRP</span><span class="value">$39,045</span></div>
+                <div class="price-row discount"><span class="label">Customer Cash</span><span class="value">-$1,000</span></div>
+                <hr class="price-divider" />
+                <div class="price-row final"><span class="label">Selling Price</span><span class="value">$38,045</span></div>
+                <div class="price-actions">
+                    <a href="#" class="btn-price primary">Check Availability</a>
+                    <a href="#" class="btn-price secondary">Get E-Price</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2026 Outlander Trail Edition - $42,135 -->
+        <div class="vehicle-card">
+            <div class="card-image">
+                <div class="img-placeholder">
+                    <div class="color-swatch" style="background:#6b6b6b;"></div>
+                    <span class="model-name">Outlander</span>
+                    <span class="color-name">Gray Metallic</span>
+                </div>
+                <span class="year-badge">New 2026</span>
+                <button class="fav-btn"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></button>
+            </div>
+            <div class="card-details">
+                <a href="#" class="title">New 2026 Mitsubishi Outlander Trail Edition</a>
+                <div class="subtitle">AWD | Turbo I-4 1.5L | Gray Metallic</div>
+                <div class="card-specs">
+                    <div class="spec-row"><svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg> All-Wheel Drive</div>
+                    <div class="spec-row"><svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg> 4 Doors</div>
+                    <div class="spec-row"><svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm4.2 14.2L11 13V7h1.5v5.2l4.5 2.7-.8 1.3z"/></svg> 10 Miles</div>
+                </div>
+                <div class="card-ids">
+                    <span>Stock# M600310</span>
+                    <span>VIN: ...B3TZ017486</span>
+                </div>
+            </div>
+            <div class="card-price">
+                <div class="price-row msrp"><span class="label">MSRP</span><span class="value">$44,635</span></div>
+                <div class="price-row discount"><span class="label">Customer Cash</span><span class="value">-$2,500</span></div>
+                <hr class="price-divider" />
+                <div class="price-row final"><span class="label">Selling Price</span><span class="value">$42,135</span></div>
+                <div class="price-actions">
+                    <a href="#" class="btn-price primary">Check Availability</a>
+                    <a href="#" class="btn-price secondary">Get E-Price</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Pagination -->
+    <div class="pagination">
+        <span class="active">1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>Next &raquo;</span>
+    </div>
+
+    <!-- Footer -->
+    <footer class="srp-footer">
+        <div class="srp-footer-inner">
+            <div class="copyright">&copy; 2026 Sendell Mitsubishi | 5079 US-30, Greensburg, PA 15601 | Powered by <a href="https://www.savvydealer.com" style="color:#ED1C24;">SavvyDealer</a></div>
+            <div style="display:flex;gap:16px;">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms</a>
+                <a href="#">Sitemap</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
