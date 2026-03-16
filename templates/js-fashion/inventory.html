@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Browse new Ford vehicles at Jarrett Scott Ford in Plant City, FL. No Hidden Fees. Your Price on every vehicle.">
+<title>New Ford Inventory | Jarrett Scott Ford</title>
+<link rel="shortcut icon" href="https://storage.googleapis.com/savvy-images/JarrettScottFord-logo.jpg" type="image/x-icon">
+
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Font Awesome 4.7 -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Google Fonts for fashion template -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+<!-- ======================================== -->
+<!-- FASHION TEMPLATE STYLES (header/footer)  -->
+<!-- ======================================== -->
+<style>
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  color: #000;
+  background: #fff;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ========================================
+   NAVIGATION
+   ======================================== */
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: #fff;
+  border-bottom: 1px solid #000;
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 40px;
+}
+
+.nav-brand {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 14px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-links a {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ff0033;
+}
+
+.nav-links a.active-nav {
+  color: #ff0033;
+}
+
+.nav-phone {
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+
+.nav-phone:hover {
+  color: #ff0033;
+}
+
+.nav-hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 28px;
+  height: 20px;
+  position: relative;
+}
+
+.nav-hamburger span {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #000;
+  position: absolute;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.nav-hamburger span:nth-child(1) { top: 0; }
+.nav-hamburger span:nth-child(2) { top: 50%; }
+.nav-hamburger span:nth-child(3) { bottom: 0; }
+
+.nav-hamburger.active span:nth-child(1) {
+  top: 50%;
+  transform: rotate(45deg);
+}
+
+.nav-hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-hamburger.active span:nth-child(3) {
+  bottom: 50%;
+  transform: rotate(-45deg);
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  z-index: 999;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.mobile-menu.active {
+  display: flex;
+}
+
+.mobile-menu a {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 36px;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.mobile-menu a:hover {
+  color: #ff0033;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+.footer {
+  background: #000;
+  color: #fff;
+  padding: 100px 40px 60px;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-bottom: 80px;
+  border-bottom: 1px solid #333;
+}
+
+.footer-brand {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 18px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+
+.footer-links {
+  display: flex;
+  gap: 32px;
+}
+
+.footer-links a {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 300;
+  color: #888;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+.footer-social {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-social a {
+  font-size: 16px;
+  color: #888;
+  transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #ff0033;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 40px;
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #555;
+  font-weight: 300;
+}
+
+.footer-bottom a {
+  color: #888;
+  transition: color 0.3s ease;
+}
+
+.footer-bottom a:hover {
+  color: #ff0033;
+}
+
+/* ========================================
+   FASHION TEMPLATE RESPONSIVE
+   ======================================== */
+
+@media (max-width: 768px) {
+  .nav-inner {
+    padding: 16px 24px;
+  }
+
+  .nav-links,
+  .nav-phone {
+    display: none;
+  }
+
+  .nav-hamburger {
+    display: block;
+  }
+
+  .footer {
+    padding: 60px 20px 40px;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    gap: 40px;
+    padding-bottom: 40px;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+}
+</style>
+
+<!-- ======================================== -->
+<!-- SRP STYLES (identical to ford-starter)   -->
+<!-- ======================================== -->
+<style>
+:root {
+    --header-bg: #ffffff;
+    --nav-bg: #0071b2;
+    --primary-color: #0071b2;
+    --secondary-color: #bc0600;
+    --accent-color: #30770f;
+    --footer-bg: #282828;
+    --body-color: #19183C;
+    --link-color: #0678bc;
+    --font-family: 'Ford Antenna Regular', Arial, sans-serif;
+    --heading-font: 'Ford Antenna Bold', Arial, sans-serif;
+    --cta-color: #30770f;
+    --cta-hover: #256010;
+    --savings-color: #30770f;
+    --discount-color: #bc0600;
+}
+</style>
+
+<!-- Base + Bootstrap 4 Grid -->
+<style>
+footer, header, section, main, nav, aside { display: block; }
+h1, h2, h3, h4, h5 { margin-top: 0; margin-bottom: .5rem; font-weight: 500; line-height: 1.2; }
+p { margin-top: 0; margin-bottom: 1rem; font-size: 14px; }
+ul { margin: 0; padding: 0; list-style: none; }
+strong { font-weight: bolder; }
+.container, .container-fluid { width: 100%; padding-right: 15px; padding-left: 15px; margin-right: auto; margin-left: auto; }
+@media (min-width: 576px) { .container { max-width: 540px; } }
+@media (min-width: 768px) { .container { max-width: 720px; } }
+@media (min-width: 992px) { .container { max-width: 960px; } }
+@media (min-width: 1200px) { .container { max-width: 1180px; } }
+.row { display: flex; flex-wrap: wrap; margin-right: -15px; margin-left: -15px; }
+[class*="col-"] { position: relative; width: 100%; padding-right: 15px; padding-left: 15px; }
+@media (min-width: 576px) {
+    .col-sm-3 { flex: 0 0 25%; max-width: 25%; }
+    .col-sm-4 { flex: 0 0 33.333333%; max-width: 33.333333%; }
+    .col-sm-6 { flex: 0 0 50%; max-width: 50%; }
+    .col-sm-8 { flex: 0 0 66.666667%; max-width: 66.666667%; }
+    .col-sm-12 { flex: 0 0 100%; max-width: 100%; }
+}
+@media (min-width: 768px) {
+    .col-md-3 { flex: 0 0 25%; max-width: 25%; }
+    .col-md-4 { flex: 0 0 33.333333%; max-width: 33.333333%; }
+    .col-md-5 { flex: 0 0 41.666667%; max-width: 41.666667%; }
+    .col-md-6 { flex: 0 0 50%; max-width: 50%; }
+    .col-md-8 { flex: 0 0 66.666667%; max-width: 66.666667%; }
+}
+@media (min-width: 992px) {
+    .col-lg-3 { flex: 0 0 25%; max-width: 25%; }
+    .col-lg-9 { flex: 0 0 75%; max-width: 75%; }
+}
+.text-center { text-align: center !important; }
+.text-left { text-align: left !important; }
+.img-responsive { max-width: 100%; height: auto; }
+.form-control { display: block; width: 100%; height: calc(1.5em + .75rem + 2px); padding: .375rem .75rem; font-size: 1rem; font-weight: 400; line-height: 1.5; color: #495057; background-color: #fff; background-clip: padding-box; border: 1px solid #ced4da; border-radius: .25rem; }
+.btn { display: inline-block; font-weight: 400; color: #212529; text-align: center; vertical-align: middle; user-select: none; background-color: transparent; border: 1px solid transparent; padding: .375rem .75rem; font-size: 1rem; line-height: 1.5; border-radius: .25rem; cursor: pointer; text-decoration: none !important; }
+.btn:hover { text-decoration: none; }
+.hide { display: none !important; }
+.flex { display: flex; }
+.row-wrap { flex-wrap: wrap; }
+.align-center { align-items: center; }
+.align-top { align-items: flex-start; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.border-top-dash { border-top: 1px dashed #ccc; margin-top: 4px; padding-top: 4px; }
+</style>
+
+<!-- SRP Page Styles (matches SavvyDealer platform layout) -->
+<style>
+/* ===== SEARCH PAGE MAIN ===== */
+.search-page-main { padding: 0 0 40px; }
+.search-page-main .container { max-width: 1180px; }
+
+/* Toolbar */
+.srp-toolbar { background: #f6f6f6; border-bottom: 2px solid var(--accent-color); padding: 12px 0; }
+.srp-toolbar .container { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.srp-toolbar h1 { font-size: 20px; margin: 0; color: var(--primary-color); }
+.srp-toolbar .count { color: #666; font-weight: 400; font-size: 14px; }
+.srp-toolbar-right { display: flex; align-items: center; gap: 12px; }
+.srp-toolbar select { padding: 6px 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 13px; font-family: var(--font-family); }
+
+/* Filter sidebar */
+.filter-sidebar { background: #fff; }
+.filter-section { border-bottom: 1px solid #e5e5e5; }
+.filter-section-header { padding: 12px 10px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: #333; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: #fafafa; }
+.filter-section-header:hover { background: #f0f0f0; }
+.filter-section-header i { font-size: 11px; color: #999; transition: transform 0.2s; }
+.filter-section-header.collapsed i { transform: rotate(-90deg); }
+.filter-section-body { padding: 8px 10px; max-height: 220px; overflow-y: auto; }
+.filter-section-body.collapsed { display: none; }
+.filter-item { display: flex; align-items: center; justify-content: space-between; padding: 4px 0; font-size: 13px; }
+.filter-item label { display: flex; align-items: center; gap: 6px; cursor: pointer; flex: 1; color: #444; }
+.filter-item label:hover { color: var(--primary-color); }
+.filter-item input[type="checkbox"] { accent-color: var(--primary-color); width: 15px; height: 15px; }
+.filter-count { font-size: 11px; color: #999; }
+.filter-search { width: 100%; padding: 5px 8px; border: 1px solid #ddd; border-radius: 3px; font-size: 12px; margin-bottom: 6px; }
+.filter-btn-mobile { display: none; width: 100%; padding: 10px; background: var(--primary-color); color: #fff; border: none; font-size: 14px; font-weight: 700; text-transform: uppercase; cursor: pointer; border-radius: 4px; margin: 10px 0; }
+.filter-btn-mobile i { margin-right: 6px; }
+
+/* ===== LIST ITEMS (Platform card layout) ===== */
+.list-wrapper { }
+.list-item { background: #fff; border: 1px solid #e5e5e5; margin-bottom: 12px; border-radius: 0; transition: box-shadow 0.2s; }
+.list-item:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+
+.list-item-inner { display: flex; flex-wrap: wrap; align-items: flex-start; }
+
+/* Image block */
+.image-block { flex: 0 0 280px; max-width: 280px; padding: 12px; position: relative; }
+.image-block img { width: 100%; height: auto; display: block; }
+.image-block .badge-label { position: absolute; top: 18px; left: 18px; padding: 3px 10px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: #fff; border-radius: 2px; }
+.badge-new { background: var(--accent-color); }
+.badge-special { background: var(--secondary-color); }
+.badge-arriving { background: var(--primary-color); }
+.image-block .photo-count { position: absolute; bottom: 18px; right: 18px; background: rgba(0,0,0,0.6); color: #fff; font-size: 11px; padding: 2px 7px; border-radius: 2px; }
+
+/* Details block */
+.list-item-detail { flex: 1; min-width: 200px; padding: 12px 15px; }
+.list-item-detail .title { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; }
+.list-item-detail .title h3 { font-size: 16px; margin: 0; line-height: 1.3; }
+.vehicleCardTitle { color: var(--primary-color); text-decoration: none !important; font-weight: 700; }
+.vehicleCardTitle:hover { color: #004062; }
+.vehicleCardTitle .trim-text { display: block; font-size: 13px; color: #666; font-weight: 400; }
+
+.watchlist-icon { cursor: pointer; color: #ccc; font-size: 18px; margin-left: 10px; flex-shrink: 0; }
+.watchlist-icon:hover, .watchlist-icon.active { color: var(--secondary-color); }
+
+/* Details grid */
+.details-wrapper { margin-top: 8px; }
+.details-wrapper .details { display: flex; align-items: center; padding: 3px 0; font-size: 13px; border-bottom: 1px solid #f5f5f5; }
+.details-wrapper .details:last-child { border-bottom: none; }
+.details-wrapper .details .label { font-weight: 700; color: #555; min-width: 90px; }
+.details-wrapper .details .value { color: #333; }
+
+/* MPG row */
+.mpg { display: flex; gap: 20px; padding: 6px 0; margin-bottom: 4px; border-bottom: 1px solid #f0f0f0; }
+.mpg .icon-wrapper { display: flex; align-items: center; gap: 6px; font-size: 13px; color: #555; }
+.mpg .icon-wrapper i { font-size: 14px; color: var(--primary-color); }
+.mpg .icon-wrapper .mpg-num { font-weight: 700; font-size: 16px; color: #333; }
+
+/* Price block */
+.list-item-price { flex: 0 0 240px; max-width: 240px; padding: 12px 15px; border-left: 1px solid #f0f0f0; }
+
+.price-breakup { }
+.price-breakup .price-row { display: flex; justify-content: space-between; align-items: baseline; padding: 3px 0; font-size: 13px; }
+.price-breakup .price-row .pricing-label { color: #555; }
+.price-breakup .price-row .pricing-label strong { font-weight: 700; }
+.price-breakup .price-row .price { color: #333; text-align: right; }
+
+/* MSRP strikethrough */
+.price-breakup .price-row.msrp-row .price { text-decoration: line-through; color: #999; }
+
+/* Dealer discount - red */
+.price-breakup .price-row .price.dealersavingsprice { color: var(--discount-color); font-weight: 700; }
+.price-breakup .price-row .price.openRebate { color: var(--discount-color); }
+
+/* Final price - green */
+.price-breakup .price-row.final-row { border-top: 1px dashed #ccc; margin-top: 4px; padding-top: 6px; }
+.price-breakup .price-row.final-row .pricing-label { font-size: 14px; }
+.price-breakup .price-row.final-row .price.finalprice { font-size: 20px; font-weight: 700; color: var(--savings-color); }
+
+/* Savings line */
+.price-breakup .price-row.savings-row .pricing-label,
+.price-breakup .price-row.savings-row .price { color: var(--savings-color); font-weight: 600; font-size: 12px; }
+
+/* No fees disclaimer */
+.vic-disclaimer { text-align: center; padding: 8px 0 4px; }
+.vic-disclaimer span { font-weight: 700; color: var(--savings-color); font-size: 12px; }
+
+/* CTA buttons on card */
+.list-item-ctas { display: flex; gap: 6px; padding: 0 15px 12px; }
+.list-item-ctas .btn-cta { flex: 1; padding: 8px 12px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; border-radius: 3px; text-align: center; text-decoration: none !important; }
+.btn-cta-primary { background: var(--cta-color); color: #fff !important; border: none; }
+.btn-cta-primary:hover { background: var(--cta-hover); }
+.btn-cta-outline { background: #fff; color: var(--primary-color) !important; border: 1px solid var(--primary-color); }
+.btn-cta-outline:hover { background: var(--primary-color); color: #fff !important; }
+
+/* Pagination */
+.srp-pagination { display: flex; justify-content: center; align-items: center; gap: 4px; padding: 25px 0; }
+.srp-pagination a, .srp-pagination span {
+    display: inline-flex; align-items: center; justify-content: center;
+    min-width: 36px; height: 36px; padding: 0 8px; border-radius: 3px; font-size: 14px; font-weight: 600;
+    text-decoration: none !important; border: 1px solid #ddd; color: #333; background: #fff;
+}
+.srp-pagination span.current { background: var(--primary-color); color: #fff; border-color: var(--primary-color); }
+.srp-pagination a:hover { background: #f0f0f0; }
+</style>
+
+<!-- SRP Responsive -->
+<style>
+@media screen and (max-width: 991px) {
+    .image-block { flex: 0 0 220px; max-width: 220px; }
+    .list-item-price { flex: 0 0 200px; max-width: 200px; }
+    .filter-col { display: none; }
+    .filter-col.show { display: block; position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 1100; background: #fff; overflow-y: auto; padding: 0; }
+    .filter-col.show .filter-close-btn { display: block; }
+    .filter-btn-mobile { display: block; }
+}
+@media screen and (max-width: 767px) {
+    /* Card stacks vertically on mobile */
+    .list-item-inner { flex-direction: column; }
+    .image-block { flex: 0 0 auto; max-width: 100%; width: 100%; }
+    .list-item-detail { width: 100%; }
+    .list-item-price { flex: 0 0 auto; max-width: 100%; width: 100%; border-left: none; border-top: 1px solid #f0f0f0; }
+    .srp-toolbar h1 { font-size: 16px; }
+}
+.filter-close-btn { display: none; position: sticky; top: 0; z-index: 10; background: var(--primary-color); color: #fff; border: none; width: 100%; padding: 12px; font-size: 14px; font-weight: 700; text-transform: uppercase; cursor: pointer; }
+</style>
+
+<!-- SRP area top margin to clear fixed fashion nav -->
+<style>
+.srp-area {
+    margin-top: 64px;
+}
+</style>
+
+</head>
+<body>
+
+<!-- ========== NAVIGATION (fashion template) ========== -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="/demo/js-fashion" class="nav-brand">Jarrett Scott Ford</a>
+    <div class="nav-links">
+      <a href="/demo/js-fashion">Home</a>
+      <a href="/demo/js-fashion/inventory" class="active-nav">New</a>
+      <a href="/used">Used</a>
+      <a href="/finance">Finance</a>
+      <a href="/service">Service</a>
+      <a href="/about">About</a>
+    </div>
+    <a href="tel:8137524171" class="nav-phone">(813) 752-4171</a>
+    <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/demo/js-fashion" onclick="closeMenu()">Home</a>
+  <a href="/demo/js-fashion/inventory" onclick="closeMenu()">New</a>
+  <a href="/used" onclick="closeMenu()">Used</a>
+  <a href="/finance" onclick="closeMenu()">Finance</a>
+  <a href="/service" onclick="closeMenu()">Service</a>
+  <a href="/about" onclick="closeMenu()">About</a>
+  <a href="tel:8137524171" onclick="closeMenu()">(813) 752-4171</a>
+</div>
+
+<!-- ========== SRP AREA (identical to ford-starter) ========== -->
+<div class="srp-area">
+
+<!-- TOOLBAR -->
+<div class="srp-toolbar">
+    <div class="container">
+        <h1>New Ford Inventory <span class="count">(2,109 vehicles)</span></h1>
+        <div class="srp-toolbar-right">
+            <select id="sortSelect">
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="year-new">Year: Newest First</option>
+                <option value="name">Name: A to Z</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+<!-- MAIN CONTENT: filter-result-wrapper -->
+<main class="search-page-main">
+    <div class="container">
+        <div class="row" style="margin-top: 15px;">
+
+            <!-- Mobile filter button -->
+            <div class="col-sm-12" style="padding: 0 15px;">
+                <button class="filter-btn-mobile" id="mobileFilterBtn">
+                    <i class="fa fa-sliders"></i> Filter Vehicles
+                </button>
+            </div>
+
+            <!-- FILTER SIDEBAR -->
+            <div class="col-lg-3 filter-col" id="filterSidebar">
+                <button class="filter-close-btn" id="filterCloseBtn"><i class="fa fa-times" style="margin-right:6px;"></i> Close Filters</button>
+                <div class="filter-sidebar">
+
+                    <!-- Model -->
+                    <div class="filter-section">
+                        <div class="filter-section-header" data-toggle="filter">Model <i class="fa fa-chevron-down"></i></div>
+                        <div class="filter-section-body">
+                            <input type="text" class="filter-search" placeholder="Search models..." />
+                            <div class="filter-item"><label><input type="checkbox" /> F-150</label><span class="filter-count">387</span></div>
+                            <div class="filter-item"><label><input type="checkbox" /> Explorer</label><span class="filter-count">201</span></div>
+                            <div class="filter-item"><label><input type="checkbox" /> Bronco Sport</label><span class="filter-count">178</span></div>
+                            <div class="filter-item"><label><input type="checkbox" /> Escape</label><span class="filter-count">156</span></div>
+                            <div class="filter-item"><label><input type="checkbox" /> Maverick</label><span class="filter-count">142</span></div>
+                            <div class="filter-item"><label><input type="checkbox" /> Bronco</label><span class="filter-count">134</span></div>
+                            <div class="filter-item"><label><input type="checkbox" /> Super Duty</label><span class="filter-count">127</span></div>
+                            <div class="filter-item"><label><input type="checkbox" /> Expedition</label><span class="filter-count">98</span></div>
+                            <div class="filter-item"><label><input type="checkbox" /> Edge</label><span class="filter-count">89</span></div>
+                            <div class="filter-item"><label><input type="checkbox" /> Ranger</label><span class="filter-count">76</span></div>
+                            <div class="filter-item"><label><input type="checkbox" /> Mustang Mach-E</label><span class="filter-count">52</span></div>
+                            <div class="filter-item"><label><input type="checkbox" /> F-150 Lightning</label><span class="filter-count">38</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Year -->
+                    <div class="filter-section">
+                        <div class="filter-section-header" data-toggle="filter">Year <i class="fa fa-chevron-down"></i></div>
+                        <div class="filter-section-body">
+                            <div class="filter-item"><label><input type="checkbox" /> 2026</label><span class="filter-count">843</span></div>
+                            <div class="filter-item"><label><input type="checkbox" /> 2025</label><span class="filter-count">1,266</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Trim -->
+                    <div class="filter-section">
+                        <div class="filter-section-header" data-toggle="filter">Trim <i class="fa fa-chevron-down"></i></div>
+                        <div class="filter-section-body">
+                            <div class="filter-item"><label><input type="checkbox" /> XL</label><span class="filter-count">412</span></div>
+                            <div class="filter-item"><label><input type="checkbox" /> XLT</label><span class="filter-count">387</span></div>
+                            <div class="filter-item"><label><input type="checkbox" /> Lariat</label><span class="filter-count">198</span></div>
+                            <div class="filter-item"><label><input type="checkbox" /> Sport / Big Bend</label><span class="filter-count">156</span></div>
+                            <div class="filter-item"><label><input type="checkbox" /> Limited</label><span class="filter-count">89</span></div>
+                            <div class="filter-item"><label><input type="checkbox" /> Platinum</label><span class="filter-count">67</span></div>
+                            <div class="filter-item"><label><input type="checkbox" /> King Ranch</label><span class="filter-count">54</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Body Style -->
+                    <div class="filter-section">
+                        <div class="filter-section-header collapsed" data-toggle="filter">Body Style <i class="fa fa-chevron-down"></i></div>
+                        <div class="filter-section-body collapsed">
+                            <div class="filter-item"><label><input type="checkbox" /> Truck</label><span class="filter-count">590</span></div>
+                            <div class="filter-item"><label><input type="checkbox" /> SUV</label><span class="filter-count">856</span></div>
+                            <div class="filter-item"><label><input type="checkbox" /> Car</label><span class="filter-count">52</span></div>
+                            <div class="filter-item"><label><input type="checkbox" /> Van</label><span class="filter-count">31</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Price -->
+                    <div class="filter-section">
+                        <div class="filter-section-header collapsed" data-toggle="filter">Price Range <i class="fa fa-chevron-down"></i></div>
+                        <div class="filter-section-body collapsed">
+                            <div class="filter-item"><label><input type="checkbox" /> Under $30,000</label><span class="filter-count">342</span></div>
+                            <div class="filter-item"><label><input type="checkbox" /> $30k - $40k</label><span class="filter-count">587</span></div>
+                            <div class="filter-item"><label><input type="checkbox" /> $40k - $50k</label><span class="filter-count">498</span></div>
+                            <div class="filter-item"><label><input type="checkbox" /> $50k - $60k</label><span class="filter-count">321</span></div>
+                            <div class="filter-item"><label><input type="checkbox" /> $60,000+</label><span class="filter-count">361</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Drivetrain -->
+                    <div class="filter-section">
+                        <div class="filter-section-header collapsed" data-toggle="filter">Drivetrain <i class="fa fa-chevron-down"></i></div>
+                        <div class="filter-section-body collapsed">
+                            <div class="filter-item"><label><input type="checkbox" /> FWD</label><span class="filter-count">634</span></div>
+                            <div class="filter-item"><label><input type="checkbox" /> AWD / 4WD</label><span class="filter-count">1,187</span></div>
+                            <div class="filter-item"><label><input type="checkbox" /> RWD</label><span class="filter-count">288</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Color -->
+                    <div class="filter-section">
+                        <div class="filter-section-header collapsed" data-toggle="filter">Exterior Color <i class="fa fa-chevron-down"></i></div>
+                        <div class="filter-section-body collapsed">
+                            <div class="filter-item"><label><input type="checkbox" /> White</label><span class="filter-count">423</span></div>
+                            <div class="filter-item"><label><input type="checkbox" /> Black</label><span class="filter-count">312</span></div>
+                            <div class="filter-item"><label><input type="checkbox" /> Blue</label><span class="filter-count">198</span></div>
+                            <div class="filter-item"><label><input type="checkbox" /> Gray / Silver</label><span class="filter-count">287</span></div>
+                            <div class="filter-item"><label><input type="checkbox" /> Red</label><span class="filter-count">145</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Fuel -->
+                    <div class="filter-section">
+                        <div class="filter-section-header collapsed" data-toggle="filter">Fuel Type <i class="fa fa-chevron-down"></i></div>
+                        <div class="filter-section-body collapsed">
+                            <div class="filter-item"><label><input type="checkbox" /> Gasoline</label><span class="filter-count">1,456</span></div>
+                            <div class="filter-item"><label><input type="checkbox" /> Hybrid</label><span class="filter-count">312</span></div>
+                            <div class="filter-item"><label><input type="checkbox" /> Electric</label><span class="filter-count">90</span></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- VEHICLE LIST -->
+            <div class="col-lg-9">
+                <div class="list-wrapper" id="vehicleList">
+                    <!-- Cards populated by JS -->
+                </div>
+
+                <div class="srp-pagination">
+                    <span class="current">1</span>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">...</a>
+                    <a href="#">68</a>
+                    <a href="#"><i class="fa fa-chevron-right"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+</div><!-- /.srp-area -->
+
+<!-- ========== FOOTER (fashion template) ========== -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">Jarrett Scott Ford</div>
+      <div class="footer-links">
+        <a href="/demo/js-fashion/inventory">Inventory</a>
+        <a href="/finance">Finance</a>
+        <a href="/service">Service</a>
+        <a href="/about">About</a>
+        <a href="https://www.google.com/maps/place/Jarrett+Scott+Ford+of+Plant+City/" target="_blank" rel="noopener">Directions</a>
+      </div>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/jarrett.scottford.1/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+        <a href="https://www.instagram.com/jarrettscottford/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
+        <a href="https://twitter.com/jsfordplantcity" target="_blank" rel="noopener" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Jarrett Scott Ford. All Rights Reserved.</span>
+      <span>Powered by <a href="https://savvydealer.com" target="_blank" rel="noopener">SavvyDealer</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- ========== SCRIPTS ========== -->
+
+<!-- Fashion template: Mobile menu + Nav scroll -->
+<script>
+(function() {
+  // ---- Mobile Menu ----
+  var hamburger = document.getElementById('hamburger');
+  var mobileMenu = document.getElementById('mobileMenu');
+
+  hamburger.addEventListener('click', function() {
+    hamburger.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
+    document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+  });
+
+  window.closeMenu = function() {
+    hamburger.classList.remove('active');
+    mobileMenu.classList.remove('active');
+    document.body.style.overflow = '';
+  };
+
+  // ---- Nav Background on Scroll ----
+  var nav = document.getElementById('nav');
+
+  window.addEventListener('scroll', function() {
+    var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+    if (scrollY > 100) {
+      nav.style.borderBottomColor = '#e0e0e0';
+    } else {
+      nav.style.borderBottomColor = '#000';
+    }
+  });
+})();
+</script>
+
+<!-- SRP: Filter toggles -->
+<script>
+// Filter toggles
+document.querySelectorAll('.filter-section-header').forEach(function(header) {
+    header.addEventListener('click', function() {
+        this.classList.toggle('collapsed');
+        this.nextElementSibling.classList.toggle('collapsed');
+    });
+});
+
+// Mobile filter panel
+document.getElementById('mobileFilterBtn').addEventListener('click', function() {
+    document.getElementById('filterSidebar').classList.add('show');
+});
+document.getElementById('filterCloseBtn').addEventListener('click', function() {
+    document.getElementById('filterSidebar').classList.remove('show');
+});
+</script>
+
+<!-- SRP: Vehicle data + rendering (identical to ford-starter) -->
+<script>
+// Vehicle data (Jarrett Scott Ford inventory)
+var vehicles = [
+    {
+        year: 2025, model: "Maverick", trim: "XL",
+        img: "https://storage.googleapis.com/agiledealer/vcp-slider/ford/WEBP/maverick.webp",
+        engine: "2.5L Hybrid", trans: "CVT", drive: "FWD",
+        mpgCity: "42", mpgHwy: "33", type: "Truck",
+        color: "Oxford White", stock: "SRB72747",
+        msrp: 28495, discount: 1200, rebate: 1500, price: 25795,
+        badge: "new", photos: 24
+    },
+    {
+        year: 2025, model: "F-150", trim: "XLT SuperCrew",
+        img: "https://storage.googleapis.com/agiledealer/vcp-slider/ford/WEBP/f-150.webp",
+        engine: "2.7L V6 EcoBoost", trans: "10-Spd Auto", drive: "4WD",
+        mpgCity: "20", mpgHwy: "26", type: "Truck",
+        color: "Iconic Silver", stock: "SFA43219",
+        msrp: 52490, discount: 3200, rebate: 2000, price: 47290,
+        badge: "new", photos: 32
+    },
+    {
+        year: 2026, model: "Explorer", trim: "Active",
+        img: "https://storage.googleapis.com/agiledealer/vcp-slider/ford/WEBP/explorer.webp",
+        engine: "2.3L I-4 EcoBoost", trans: "10-Spd Auto", drive: "AWD",
+        mpgCity: "24", mpgHwy: "31", type: "SUV",
+        color: "Star White", stock: "TGA56123",
+        msrp: 41195, discount: 1800, rebate: 1000, price: 38395,
+        badge: "new", photos: 28
+    },
+    {
+        year: 2025, model: "Bronco Sport", trim: "Big Bend",
+        img: "https://storage.googleapis.com/agiledealer/vcp-slider/ford/WEBP/bronco_sport.webp",
+        engine: "1.5L I-3 EcoBoost", trans: "8-Spd Auto", drive: "AWD",
+        mpgCity: "26", mpgHwy: "29", type: "SUV",
+        color: "Area 51 Blue", stock: "SRD78452",
+        msrp: 33995, discount: 2100, rebate: 1000, price: 30895,
+        badge: "special", photos: 26
+    },
+    {
+        year: 2026, model: "Escape", trim: "Active",
+        img: "https://storage.googleapis.com/agiledealer/vcp-slider/ford/WEBP/escape.webp",
+        engine: "1.5L I-3 EcoBoost", trans: "8-Spd Auto", drive: "FWD",
+        mpgCity: "28", mpgHwy: "34", type: "SUV",
+        color: "Vapor Blue", stock: "TUA06211",
+        msrp: 34380, discount: 1500, rebate: 1000, price: 31880,
+        badge: "new", photos: 20
+    },
+    {
+        year: 2025, model: "Bronco", trim: "Outer Banks 4-Door",
+        img: "https://storage.googleapis.com/agiledealer/vcp-slider/ford/WEBP/bronco.webp",
+        engine: "2.7L V6 EcoBoost", trans: "10-Spd Auto", drive: "4WD",
+        mpgCity: "18", mpgHwy: "20", type: "SUV",
+        color: "Eruption Green", stock: "SLA89012",
+        msrp: 48590, discount: 2800, rebate: 1500, price: 44290,
+        badge: "new", photos: 36
+    },
+    {
+        year: 2025, model: "Super Duty", trim: "F-250 Lariat Crew Cab",
+        img: "https://storage.googleapis.com/agiledealer/vcp-slider/ford/WEBP/superduty.webp",
+        engine: "7.3L V8 Gas", trans: "10-Spd Auto", drive: "4WD",
+        mpgCity: null, mpgHwy: null, type: "Truck",
+        color: "Antimatter Blue", stock: "SED56789",
+        msrp: 72850, discount: 4500, rebate: 2000, price: 66350,
+        badge: "new", photos: 30
+    },
+    {
+        year: 2025, model: "Ranger", trim: "Lariat SuperCrew",
+        img: "https://storage.googleapis.com/agiledealer/vcp-slider/ford/WEBP/ranger.webp",
+        engine: "2.7L V6 EcoBoost", trans: "10-Spd Auto", drive: "4WD",
+        mpgCity: "21", mpgHwy: "26", type: "Truck",
+        color: "Cactus Gray", stock: "SLA34567",
+        msrp: 44885, discount: 2600, rebate: 1500, price: 40785,
+        badge: "new", photos: 22
+    },
+    {
+        year: 2025, model: "Expedition", trim: "XLT 4WD",
+        img: "https://storage.googleapis.com/agiledealer/vcp-slider/ford/WEBP/expedition.webp",
+        engine: "3.5L V6 EcoBoost", trans: "10-Spd Auto", drive: "4WD",
+        mpgCity: "17", mpgHwy: "23", type: "SUV",
+        color: "Oxford White", stock: "SEA12345",
+        msrp: 63840, discount: 4200, rebate: 2500, price: 57140,
+        badge: "new", photos: 28
+    },
+    {
+        year: 2025, model: "Mustang Mach-E", trim: "Select AWD",
+        img: "https://storage.googleapis.com/agiledealer/vcp-slider/ford/WEBP/mustang-mach-e.webp",
+        engine: "Electric Motor", trans: "Single-Speed", drive: "AWD",
+        mpgCity: "100", mpgHwy: "MPGe", type: "SUV",
+        color: "Grabber Blue", stock: "SMA67890",
+        msrp: 44990, discount: 3000, rebate: 3750, price: 38240,
+        badge: "special", photos: 18
+    },
+    {
+        year: 2025, model: "F-150 Lightning", trim: "XLT Extended Range",
+        img: "https://storage.googleapis.com/agiledealer/vcp-slider/ford/WEBP/f-150-lightning.webp",
+        engine: "Electric Motor", trans: "Single-Speed", drive: "AWD",
+        mpgCity: "107", mpgHwy: "MPGe", type: "Truck",
+        color: "Iconic Silver", stock: "SWG23456",
+        msrp: 67490, discount: 5000, rebate: 3750, price: 58740,
+        badge: "special", photos: 32
+    },
+    {
+        year: 2026, model: "Maverick", trim: "XLT Hybrid",
+        img: "https://storage.googleapis.com/agiledealer/vcp-slider/ford/WEBP/maverick.webp",
+        engine: "2.5L Hybrid", trans: "CVT", drive: "FWD",
+        mpgCity: "42", mpgHwy: "33", type: "Truck",
+        color: "Carbonized Gray", stock: "TRA15253",
+        msrp: 31270, discount: 800, rebate: 500, price: 29970,
+        badge: "arriving", photos: 8
+    }
+];
+
+function fmt(n) { return '$' + n.toLocaleString(); }
+
+function badgeClass(b) {
+    return b === 'special' ? 'badge-special' : b === 'arriving' ? 'badge-arriving' : 'badge-new';
+}
+function badgeText(b) {
+    return b === 'special' ? 'Special Offer' : b === 'arriving' ? 'In Transit' : 'New';
+}
+
+function renderVehicles() {
+    var list = document.getElementById('vehicleList');
+    var html = '';
+    vehicles.forEach(function(v) {
+        var savings = v.msrp - v.price;
+        var isEV = v.engine.indexOf('Electric') !== -1;
+
+        html += '<div class="list-item sNew">';
+        html += '  <div class="list-item-inner">';
+
+        // Image
+        html += '    <div class="image-block">';
+        html += '      <a href="#"><img src="' + v.img + '" alt="' + v.year + ' Ford ' + v.model + ' ' + v.trim + '" loading="lazy" /></a>';
+        html += '      <span class="badge-label ' + badgeClass(v.badge) + '">' + badgeText(v.badge) + '</span>';
+        html += '      <span class="photo-count"><i class="fa fa-camera"></i> ' + v.photos + '</span>';
+        html += '    </div>';
+
+        // Details
+        html += '    <div class="list-item-detail">';
+        html += '      <div class="title">';
+        html += '        <h3><a class="vehicleCardTitle" href="#">' + v.year + ' Ford ' + v.model + '<span class="trim-text">' + v.trim + '</span></a></h3>';
+        html += '        <span class="watchlist-icon"><i class="fa fa-heart-o"></i></span>';
+        html += '      </div>';
+
+        // MPG
+        if (v.mpgCity && v.mpgHwy !== 'MPGe') {
+            html += '      <div class="mpg">';
+            html += '        <div class="icon-wrapper"><i class="fa fa-road"></i> <span class="mpg-num">' + v.mpgCity + '</span> City</div>';
+            html += '        <div class="icon-wrapper"><i class="fa fa-road"></i> <span class="mpg-num">' + v.mpgHwy + '</span> Hwy</div>';
+            html += '      </div>';
+        } else if (isEV) {
+            html += '      <div class="mpg">';
+            html += '        <div class="icon-wrapper"><i class="fa fa-bolt"></i> <span class="mpg-num">' + v.mpgCity + '</span> MPGe</div>';
+            html += '      </div>';
+        }
+
+        html += '      <div class="details-wrapper">';
+        html += '        <div class="details"><div class="label">Type</div><div class="value">' + v.type + '</div></div>';
+        html += '        <div class="details"><div class="label">Engine</div><div class="value">' + v.engine + '</div></div>';
+        html += '        <div class="details"><div class="label">Transmission</div><div class="value">' + v.trans + '</div></div>';
+        html += '        <div class="details"><div class="label">Drivetrain</div><div class="value">' + v.drive + '</div></div>';
+        html += '        <div class="details"><div class="label">Ext. Color</div><div class="value">' + v.color + '</div></div>';
+        html += '        <div class="details"><div class="label">Stock #</div><div class="value">' + v.stock + '</div></div>';
+        html += '      </div>';
+        html += '    </div>';
+
+        // Price
+        html += '    <div class="list-item-price">';
+        html += '      <div class="price-breakup">';
+        html += '        <div class="price-row msrp-row"><span class="pricing-label"><strong>MSRP</strong></span><span class="price">' + fmt(v.msrp) + '</span></div>';
+        if (v.rebate > 0) {
+            html += '    <div class="price-row"><span class="pricing-label"><strong>Mfr. Rebates</strong></span><span class="price openRebate">-' + fmt(v.rebate) + '</span></div>';
+        }
+        if (v.discount > 0) {
+            html += '    <div class="price-row"><span class="pricing-label"><strong>Jarrett Scott Discount</strong></span><span class="price dealersavingsprice">-' + fmt(v.discount) + '</span></div>';
+        }
+        html += '        <div class="price-row final-row"><span class="pricing-label"><strong>Your Price</strong></span><span class="price finalprice">' + fmt(v.price) + '</span></div>';
+        html += '        <div class="price-row savings-row"><span class="pricing-label">Total Savings</span><span class="price">' + fmt(savings) + '</span></div>';
+        html += '      </div>';
+        html += '      <div class="vic-disclaimer"><span><i class="fa fa-check-circle"></i> No Hidden Fees No Hidden Add-ons</span></div>';
+        html += '    </div>';
+
+        html += '  </div>';
+
+        // CTAs
+        html += '  <div class="list-item-ctas">';
+        html += '    <a class="btn-cta btn-cta-primary" href="#">View Details</a>';
+        html += '    <a class="btn-cta btn-cta-outline" href="#">Get E-Price</a>';
+        html += '    <a class="btn-cta btn-cta-outline" href="#">Schedule Test Drive</a>';
+        html += '  </div>';
+        html += '</div>';
+    });
+    list.innerHTML = html;
+}
+
+// Watchlist toggle
+document.addEventListener('click', function(e) {
+    var icon = e.target.closest('.watchlist-icon');
+    if (icon) {
+        icon.classList.toggle('active');
+        var i = icon.querySelector('i');
+        i.className = icon.classList.contains('active') ? 'fa fa-heart' : 'fa fa-heart-o';
+        e.preventDefault();
+    }
+});
+
+renderVehicles();
+</script>
+
+</body>
+</html>

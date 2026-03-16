@@ -1,0 +1,1580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jarrett Scott Ford | Your Plant City, FL Ford Dealer</title>
+    <meta name="description" content="Jarrett Scott Ford in Plant City, FL. Shop new Ford trucks, SUVs & cars. Friendly service, great deals, and a team that actually cares.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* ============================================
+           RESET & BASE
+           ============================================ */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            font-weight: 400;
+            color: #1e1b4b;
+            background: #fff;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+
+        ul { list-style: none; }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ============================================
+           UTILITY CLASSES
+           ============================================ */
+        .section-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #e0f2fe, #ede9fe);
+            color: #4f46e5;
+            font-weight: 800;
+            font-size: 0.8rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 6px 20px;
+            border-radius: 100px;
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            font-weight: 900;
+            color: #1e1b4b;
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: #6366f1;
+            font-weight: 600;
+            max-width: 600px;
+            margin: 0 auto 48px;
+        }
+
+        .text-center { text-align: center; }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #4f46e5, #f472b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* ============================================
+           BUTTONS
+           ============================================ */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 800;
+            font-size: 1rem;
+            padding: 14px 32px;
+            border-radius: 100px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #4f46e5, #7c3aed, #f472b6);
+            color: #fff;
+            box-shadow: 0 8px 30px rgba(79, 70, 229, 0.35);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px) scale(1.03);
+            box-shadow: 0 14px 40px rgba(79, 70, 229, 0.45);
+        }
+
+        .btn-secondary {
+            background: #fff;
+            color: #4f46e5;
+            border: 2px solid #e0e7ff;
+            box-shadow: 0 4px 16px rgba(79, 70, 229, 0.08);
+        }
+
+        .btn-secondary:hover {
+            background: #eef2ff;
+            border-color: #a5b4fc;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(79, 70, 229, 0.15);
+        }
+
+        .btn-sm {
+            padding: 10px 24px;
+            font-size: 0.9rem;
+        }
+
+        /* ============================================
+           NAVIGATION
+           ============================================ */
+        .nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(79, 70, 229, 0.08);
+            padding: 12px 0;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .nav.scrolled {
+            box-shadow: 0 4px 30px rgba(79, 70, 229, 0.1);
+        }
+
+        .nav .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-shrink: 0;
+        }
+
+        .nav-logo img {
+            height: 48px;
+            width: auto;
+            border-radius: 12px;
+        }
+
+        .nav-logo-text {
+            font-weight: 900;
+            font-size: 1.15rem;
+            color: #1e1b4b;
+            line-height: 1.2;
+        }
+
+        .nav-logo-text small {
+            display: block;
+            font-weight: 600;
+            font-size: 0.7rem;
+            color: #6366f1;
+            letter-spacing: 0.02em;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .nav-links a {
+            padding: 8px 18px;
+            border-radius: 100px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: #4b5563;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            background: linear-gradient(135deg, #eef2ff, #fce7f3);
+            color: #4f46e5;
+        }
+
+        .nav-cta {
+            background: linear-gradient(135deg, #4f46e5, #7c3aed) !important;
+            color: #fff !important;
+            padding: 10px 24px !important;
+            box-shadow: 0 4px 16px rgba(79, 70, 229, 0.25);
+        }
+
+        .nav-cta:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 24px rgba(79, 70, 229, 0.35) !important;
+            background: linear-gradient(135deg, #4338ca, #6d28d9) !important;
+        }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #4f46e5;
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 12px;
+            transition: background 0.3s;
+        }
+
+        .nav-toggle:hover {
+            background: #eef2ff;
+        }
+
+        /* Mobile Nav */
+        @media (max-width: 900px) {
+            .nav-toggle { display: block; }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #fff;
+                flex-direction: column;
+                padding: 16px 24px;
+                gap: 4px;
+                border-bottom: 1px solid #e0e7ff;
+                box-shadow: 0 12px 40px rgba(79, 70, 229, 0.1);
+            }
+
+            .nav-links.open { display: flex; }
+
+            .nav-links a {
+                width: 100%;
+                text-align: center;
+                padding: 12px 18px;
+            }
+        }
+
+        /* ============================================
+           HERO
+           ============================================ */
+        .hero {
+            position: relative;
+            padding: 100px 0 120px;
+            background: #fff;
+            overflow: hidden;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Floating gradient blobs */
+        .hero-blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.5;
+            animation: blobFloat 8s ease-in-out infinite;
+        }
+
+        .hero-blob-1 {
+            width: 500px;
+            height: 500px;
+            background: linear-gradient(135deg, #c7d2fe, #a5b4fc);
+            top: -100px;
+            right: -100px;
+            animation-delay: 0s;
+        }
+
+        .hero-blob-2 {
+            width: 400px;
+            height: 400px;
+            background: linear-gradient(135deg, #fce7f3, #fbcfe8);
+            bottom: -80px;
+            left: -60px;
+            animation-delay: -3s;
+        }
+
+        .hero-blob-3 {
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(135deg, #d9f99d, #a7f3d0);
+            top: 50%;
+            left: 55%;
+            animation-delay: -5s;
+        }
+
+        @keyframes blobFloat {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            25% { transform: translate(20px, -30px) scale(1.05); }
+            50% { transform: translate(-15px, 20px) scale(0.95); }
+            75% { transform: translate(25px, 10px) scale(1.03); }
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #eef2ff, #fce7f3);
+            color: #4f46e5;
+            font-weight: 800;
+            font-size: 0.85rem;
+            padding: 8px 24px;
+            border-radius: 100px;
+            margin-bottom: 28px;
+            border: 1px solid rgba(79, 70, 229, 0.1);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.2rem);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            color: #1e1b4b;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.1rem, 2vw, 1.35rem);
+            color: #6b7280;
+            font-weight: 600;
+            max-width: 580px;
+            margin: 0 auto 40px;
+            line-height: 1.6;
+        }
+
+        .hero-actions {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 48px;
+        }
+
+        .hero-btn-bounce {
+            animation: gentleBounce 2.5s ease-in-out infinite;
+        }
+
+        @keyframes gentleBounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+        }
+
+        .hero-btn-bounce:hover {
+            animation: none;
+            transform: translateY(-3px) scale(1.03);
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            flex-wrap: wrap;
+        }
+
+        .hero-stat {
+            text-align: center;
+        }
+
+        .hero-stat-number {
+            font-size: 2rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #4f46e5, #f472b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-stat-label {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #9ca3af;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* ============================================
+           SHOP BY MODEL
+           ============================================ */
+        .models {
+            padding: 100px 0;
+            background: linear-gradient(180deg, #fff 0%, #f0f0ff 50%, #fff 100%);
+        }
+
+        .models-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .model-card {
+            background: #fff;
+            border-radius: 24px;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            border: 1px solid rgba(79, 70, 229, 0.06);
+        }
+
+        .model-card:nth-child(1) { box-shadow: 0 8px 32px rgba(79, 70, 229, 0.1); }
+        .model-card:nth-child(2) { box-shadow: 0 8px 32px rgba(244, 114, 182, 0.1); }
+        .model-card:nth-child(3) { box-shadow: 0 8px 32px rgba(52, 211, 153, 0.1); }
+        .model-card:nth-child(4) { box-shadow: 0 8px 32px rgba(251, 146, 60, 0.1); }
+        .model-card:nth-child(5) { box-shadow: 0 8px 32px rgba(99, 102, 241, 0.1); }
+        .model-card:nth-child(6) { box-shadow: 0 8px 32px rgba(168, 85, 247, 0.1); }
+
+        .model-card:hover {
+            transform: translateY(-8px) scale(1.02);
+        }
+
+        .model-card:nth-child(1):hover { box-shadow: 0 20px 48px rgba(79, 70, 229, 0.2); }
+        .model-card:nth-child(2):hover { box-shadow: 0 20px 48px rgba(244, 114, 182, 0.2); }
+        .model-card:nth-child(3):hover { box-shadow: 0 20px 48px rgba(52, 211, 153, 0.2); }
+        .model-card:nth-child(4):hover { box-shadow: 0 20px 48px rgba(251, 146, 60, 0.2); }
+        .model-card:nth-child(5):hover { box-shadow: 0 20px 48px rgba(99, 102, 241, 0.2); }
+        .model-card:nth-child(6):hover { box-shadow: 0 20px 48px rgba(168, 85, 247, 0.2); }
+
+        .model-img-wrap {
+            position: relative;
+            padding: 0;
+            background: linear-gradient(135deg, #f8fafc, #eef2ff);
+            overflow: hidden;
+            aspect-ratio: 16 / 10;
+        }
+
+        .model-card:nth-child(2) .model-img-wrap { background: linear-gradient(135deg, #f8fafc, #fce7f3); }
+        .model-card:nth-child(3) .model-img-wrap { background: linear-gradient(135deg, #f8fafc, #d1fae5); }
+        .model-card:nth-child(4) .model-img-wrap { background: linear-gradient(135deg, #f8fafc, #ffedd5); }
+        .model-card:nth-child(5) .model-img-wrap { background: linear-gradient(135deg, #f8fafc, #e0e7ff); }
+        .model-card:nth-child(6) .model-img-wrap { background: linear-gradient(135deg, #f8fafc, #f3e8ff); }
+
+        .model-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .model-card:hover .model-img-wrap img {
+            transform: scale(1.08);
+        }
+
+        .model-info {
+            padding: 24px;
+            text-align: center;
+        }
+
+        .model-name {
+            font-size: 1.3rem;
+            font-weight: 900;
+            color: #1e1b4b;
+            margin-bottom: 4px;
+        }
+
+        .model-type {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #a5b4fc;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 16px;
+        }
+
+        .model-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: 800;
+            font-size: 0.9rem;
+            color: #4f46e5;
+            transition: all 0.3s ease;
+        }
+
+        .model-cta:hover {
+            gap: 10px;
+            color: #7c3aed;
+        }
+
+        @media (max-width: 900px) {
+            .models-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+        }
+
+        @media (max-width: 600px) {
+            .models-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
+        }
+
+        /* ============================================
+           REVIEWS
+           ============================================ */
+        .reviews {
+            padding: 100px 0;
+            background: #fff;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 28px;
+        }
+
+        .review-card {
+            background: #fff;
+            border-radius: 24px;
+            padding: 36px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .review-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            border-radius: 24px 24px 0 0;
+        }
+
+        .review-card:nth-child(1) {
+            box-shadow: 0 8px 32px rgba(79, 70, 229, 0.08);
+            border: 1px solid rgba(79, 70, 229, 0.08);
+        }
+        .review-card:nth-child(1)::before { background: linear-gradient(90deg, #4f46e5, #6366f1); }
+
+        .review-card:nth-child(2) {
+            box-shadow: 0 8px 32px rgba(244, 114, 182, 0.08);
+            border: 1px solid rgba(244, 114, 182, 0.08);
+        }
+        .review-card:nth-child(2)::before { background: linear-gradient(90deg, #f472b6, #fb7185); }
+
+        .review-card:nth-child(3) {
+            box-shadow: 0 8px 32px rgba(52, 211, 153, 0.08);
+            border: 1px solid rgba(52, 211, 153, 0.08);
+        }
+        .review-card:nth-child(3)::before { background: linear-gradient(90deg, #34d399, #6ee7b7); }
+
+        .review-card:nth-child(4) {
+            box-shadow: 0 8px 32px rgba(251, 146, 60, 0.08);
+            border: 1px solid rgba(251, 146, 60, 0.08);
+        }
+        .review-card:nth-child(4)::before { background: linear-gradient(90deg, #fb923c, #fbbf24); }
+
+        .review-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .review-card:nth-child(1):hover { box-shadow: 0 16px 48px rgba(79, 70, 229, 0.15); }
+        .review-card:nth-child(2):hover { box-shadow: 0 16px 48px rgba(244, 114, 182, 0.15); }
+        .review-card:nth-child(3):hover { box-shadow: 0 16px 48px rgba(52, 211, 153, 0.15); }
+        .review-card:nth-child(4):hover { box-shadow: 0 16px 48px rgba(251, 146, 60, 0.15); }
+
+        .review-stars {
+            margin-bottom: 16px;
+            display: flex;
+            gap: 3px;
+        }
+
+        .review-card:nth-child(1) .review-stars { color: #4f46e5; }
+        .review-card:nth-child(2) .review-stars { color: #f472b6; }
+        .review-card:nth-child(3) .review-stars { color: #34d399; }
+        .review-card:nth-child(4) .review-stars { color: #fb923c; }
+
+        .review-text {
+            font-size: 1.05rem;
+            color: #374151;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .review-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .review-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 1rem;
+            color: #fff;
+        }
+
+        .review-card:nth-child(1) .review-avatar { background: linear-gradient(135deg, #4f46e5, #6366f1); }
+        .review-card:nth-child(2) .review-avatar { background: linear-gradient(135deg, #f472b6, #ec4899); }
+        .review-card:nth-child(3) .review-avatar { background: linear-gradient(135deg, #34d399, #10b981); }
+        .review-card:nth-child(4) .review-avatar { background: linear-gradient(135deg, #fb923c, #f59e0b); }
+
+        .review-name {
+            font-weight: 800;
+            color: #1e1b4b;
+            font-size: 0.95rem;
+        }
+
+        .review-role {
+            font-size: 0.8rem;
+            color: #9ca3af;
+            font-weight: 600;
+        }
+
+        @media (max-width: 700px) {
+            .reviews-grid { grid-template-columns: 1fr; }
+        }
+
+        /* ============================================
+           ABOUT
+           ============================================ */
+        .about {
+            padding: 100px 0;
+            background: linear-gradient(180deg, #fff 0%, #f5f3ff 50%, #fff 100%);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            font-weight: 900;
+            color: #1e1b4b;
+            line-height: 1.2;
+            margin-bottom: 24px;
+        }
+
+        .about-text p {
+            font-size: 1.05rem;
+            color: #4b5563;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 36px;
+        }
+
+        .about-feature {
+            background: #fff;
+            border-radius: 20px;
+            padding: 28px;
+            transition: all 0.35s ease;
+            border: 1px solid rgba(79, 70, 229, 0.06);
+        }
+
+        .about-feature:nth-child(1) { box-shadow: 0 4px 20px rgba(79, 70, 229, 0.08); }
+        .about-feature:nth-child(2) { box-shadow: 0 4px 20px rgba(244, 114, 182, 0.08); }
+        .about-feature:nth-child(3) { box-shadow: 0 4px 20px rgba(52, 211, 153, 0.08); }
+        .about-feature:nth-child(4) { box-shadow: 0 4px 20px rgba(251, 146, 60, 0.08); }
+
+        .about-feature:hover {
+            transform: translateY(-4px);
+        }
+
+        .about-feature:nth-child(1):hover { box-shadow: 0 12px 36px rgba(79, 70, 229, 0.15); }
+        .about-feature:nth-child(2):hover { box-shadow: 0 12px 36px rgba(244, 114, 182, 0.15); }
+        .about-feature:nth-child(3):hover { box-shadow: 0 12px 36px rgba(52, 211, 153, 0.15); }
+        .about-feature:nth-child(4):hover { box-shadow: 0 12px 36px rgba(251, 146, 60, 0.15); }
+
+        .about-feature-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            margin-bottom: 14px;
+            color: #fff;
+        }
+
+        .about-feature:nth-child(1) .about-feature-icon { background: linear-gradient(135deg, #4f46e5, #6366f1); }
+        .about-feature:nth-child(2) .about-feature-icon { background: linear-gradient(135deg, #f472b6, #ec4899); }
+        .about-feature:nth-child(3) .about-feature-icon { background: linear-gradient(135deg, #34d399, #10b981); }
+        .about-feature:nth-child(4) .about-feature-icon { background: linear-gradient(135deg, #fb923c, #f59e0b); }
+
+        .about-feature h4 {
+            font-weight: 800;
+            color: #1e1b4b;
+            margin-bottom: 6px;
+            font-size: 1.05rem;
+        }
+
+        .about-feature p {
+            font-size: 0.9rem;
+            color: #6b7280;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        @media (max-width: 900px) {
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .about-features {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ============================================
+           HOURS & CONTACT
+           ============================================ */
+        .contact {
+            padding: 100px 0;
+            background: #fff;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 28px;
+        }
+
+        .contact-card {
+            background: #fff;
+            border-radius: 24px;
+            padding: 40px 32px;
+            text-align: center;
+            border: 1px solid rgba(79, 70, 229, 0.06);
+            transition: all 0.35s ease;
+        }
+
+        .contact-card:nth-child(1) { box-shadow: 0 8px 32px rgba(79, 70, 229, 0.08); }
+        .contact-card:nth-child(2) { box-shadow: 0 8px 32px rgba(244, 114, 182, 0.08); }
+        .contact-card:nth-child(3) { box-shadow: 0 8px 32px rgba(52, 211, 153, 0.08); }
+
+        .contact-card:hover { transform: translateY(-4px); }
+        .contact-card:nth-child(1):hover { box-shadow: 0 16px 48px rgba(79, 70, 229, 0.15); }
+        .contact-card:nth-child(2):hover { box-shadow: 0 16px 48px rgba(244, 114, 182, 0.15); }
+        .contact-card:nth-child(3):hover { box-shadow: 0 16px 48px rgba(52, 211, 153, 0.15); }
+
+        .contact-card-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: #fff;
+            margin: 0 auto 20px;
+        }
+
+        .contact-card:nth-child(1) .contact-card-icon { background: linear-gradient(135deg, #4f46e5, #7c3aed); }
+        .contact-card:nth-child(2) .contact-card-icon { background: linear-gradient(135deg, #f472b6, #ec4899); }
+        .contact-card:nth-child(3) .contact-card-icon { background: linear-gradient(135deg, #34d399, #10b981); }
+
+        .contact-card h3 {
+            font-weight: 900;
+            font-size: 1.3rem;
+            color: #1e1b4b;
+            margin-bottom: 16px;
+        }
+
+        .contact-card p,
+        .contact-card a {
+            font-size: 0.95rem;
+            color: #6b7280;
+            font-weight: 600;
+            line-height: 1.8;
+        }
+
+        .contact-card a:hover {
+            color: #4f46e5;
+        }
+
+        .hours-table {
+            width: 100%;
+            margin-top: 8px;
+        }
+
+        .hours-table tr {
+            display: flex;
+            justify-content: space-between;
+            padding: 6px 0;
+            border-bottom: 1px dashed #e5e7eb;
+        }
+
+        .hours-table tr:last-child {
+            border-bottom: none;
+        }
+
+        .hours-table td {
+            font-size: 0.9rem;
+            color: #6b7280;
+            font-weight: 600;
+        }
+
+        .hours-table td:last-child {
+            color: #1e1b4b;
+            font-weight: 700;
+        }
+
+        .hours-label {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            padding: 4px 14px;
+            border-radius: 100px;
+            margin-bottom: 12px;
+        }
+
+        .hours-label-sales {
+            background: linear-gradient(135deg, #eef2ff, #e0e7ff);
+            color: #4f46e5;
+        }
+
+        .hours-label-service {
+            background: linear-gradient(135deg, #d1fae5, #a7f3d0);
+            color: #059669;
+        }
+
+        @media (max-width: 900px) {
+            .contact-grid { grid-template-columns: 1fr; max-width: 500px; margin: 0 auto; }
+        }
+
+        /* ============================================
+           FOOTER
+           ============================================ */
+        .footer {
+            background: linear-gradient(135deg, #312e81, #4338ca, #5b21b6);
+            color: #fff;
+            padding: 60px 0 0;
+        }
+
+        .footer-top {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            padding-bottom: 48px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .footer-brand p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+            margin-top: 12px;
+            line-height: 1.7;
+            max-width: 300px;
+        }
+
+        .footer-brand-name {
+            font-weight: 900;
+            font-size: 1.3rem;
+        }
+
+        .footer h4 {
+            font-weight: 800;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 20px;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .footer ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer ul li a {
+            color: rgba(255, 255, 255, 0.75);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .footer ul li a:hover {
+            color: #fff;
+            padding-left: 4px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .footer-social a {
+            width: 42px;
+            height: 42px;
+            border-radius: 14px;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.75);
+            transition: all 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 0;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .footer-bottom p {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .footer-bottom a {
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 700;
+        }
+
+        .footer-bottom a:hover {
+            color: #fff;
+        }
+
+        @media (max-width: 900px) {
+            .footer-top {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .footer-top {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* ============================================
+           SCROLL ANIMATIONS
+           ============================================ */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(32px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Stagger children */
+        .stagger-children > * {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .stagger-children.visible > *:nth-child(1) { transition-delay: 0.05s; opacity: 1; transform: translateY(0); }
+        .stagger-children.visible > *:nth-child(2) { transition-delay: 0.1s; opacity: 1; transform: translateY(0); }
+        .stagger-children.visible > *:nth-child(3) { transition-delay: 0.15s; opacity: 1; transform: translateY(0); }
+        .stagger-children.visible > *:nth-child(4) { transition-delay: 0.2s; opacity: 1; transform: translateY(0); }
+        .stagger-children.visible > *:nth-child(5) { transition-delay: 0.25s; opacity: 1; transform: translateY(0); }
+        .stagger-children.visible > *:nth-child(6) { transition-delay: 0.3s; opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body>
+
+    <!-- ==========================================
+         NAVIGATION
+         ========================================== -->
+    <nav class="nav" id="nav">
+        <div class="container">
+            <a href="/demo/js-playful" class="nav-logo">
+                <img src="https://storage.googleapis.com/savvy-images/JarrettScottFord-logo.jpg" alt="Jarrett Scott Ford">
+                <div class="nav-logo-text">
+                    Jarrett Scott Ford
+                    <small>Plant City, FL</small>
+                </div>
+            </a>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+            </button>
+
+            <div class="nav-links" id="navLinks">
+                <a href="/demo/js-playful" class="active">Home</a>
+                <a href="/demo/js-playful/inventory">New</a>
+                <a href="/used">Used</a>
+                <a href="/finance">Finance</a>
+                <a href="/service">Service</a>
+                <a href="/about">About</a>
+                <a href="tel:8137524171" class="nav-cta"><i class="fa fa-phone"></i> (813) 752-4171</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==========================================
+         HERO
+         ========================================== -->
+    <section class="hero" id="hero">
+        <div class="hero-blob hero-blob-1"></div>
+        <div class="hero-blob hero-blob-2"></div>
+        <div class="hero-blob hero-blob-3"></div>
+
+        <div class="container">
+            <div class="hero-badge fade-up">
+                <i class="fa fa-map-marker"></i> Proudly Serving Plant City Since Day One
+            </div>
+
+            <h1 class="fade-up">
+                Hey Plant City!<br>
+                Let's Find Your <span class="gradient-text">Perfect Ford</span>
+            </h1>
+
+            <p class="hero-subtitle fade-up">
+                No pressure, no gimmicks -- just friendly folks helping you drive away happy. Trucks, SUVs, cars -- we've got it all.
+            </p>
+
+            <div class="hero-actions fade-up">
+                <a href="/demo/js-playful/inventory" class="btn btn-primary hero-btn-bounce">
+                    <i class="fa fa-search"></i> Browse Inventory
+                </a>
+                <a href="/finance" class="btn btn-secondary">
+                    <i class="fa fa-calculator"></i> Get Pre-Approved
+                </a>
+            </div>
+
+            <div class="hero-stats fade-up">
+                <div class="hero-stat">
+                    <div class="hero-stat-number" data-count="500">0</div>
+                    <div class="hero-stat-label">Vehicles in Stock</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-number" data-count="4.8">0</div>
+                    <div class="hero-stat-label">Google Rating</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-number" data-count="30">0</div>
+                    <div class="hero-stat-label">Years of Trust</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SHOP BY MODEL
+         ========================================== -->
+    <section class="models" id="models">
+        <div class="container">
+            <div class="text-center fade-up">
+                <span class="section-badge">Shop by Model</span>
+                <h2 class="section-title">Pick Your <span class="gradient-text">Favorite Ford</span></h2>
+                <p class="section-subtitle">From tough trucks to adventure-ready SUVs, there's something for everyone.</p>
+            </div>
+
+            <div class="models-grid stagger-children">
+                <a href="/demo/js-playful/inventory?model=f-150" class="model-card">
+                    <div class="model-img-wrap">
+                        <img src="https://www.ford.com/acslibs/content/dam/na/ford/en_us/images/f-150/2026/general/26_FRD_F15_ModelWalk_backplate.jpg" alt="Ford F-150" loading="lazy">
+                    </div>
+                    <div class="model-info">
+                        <div class="model-name">F-150</div>
+                        <div class="model-type">Pickup Truck</div>
+                        <span class="model-cta">Explore <i class="fa fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <a href="/demo/js-playful/inventory?model=explorer" class="model-card">
+                    <div class="model-img-wrap">
+                        <img src="https://www.assets.ford.com/adobe/assets/urn:aaid:aem:04794b1d-d35b-42d6-9740-7126f92ee8ff/as/26_FRD_EPR_66100_trem_crgr.webp" alt="Ford Explorer" loading="lazy">
+                    </div>
+                    <div class="model-info">
+                        <div class="model-name">Explorer</div>
+                        <div class="model-type">Midsize SUV</div>
+                        <span class="model-cta">Explore <i class="fa fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <a href="/demo/js-playful/inventory?model=bronco" class="model-card">
+                    <div class="model-img-wrap">
+                        <img src="https://www.assets.ford.com/adobe/assets/urn:aaid:aem:82f51afe-6d0d-44d7-b16c-046b6504309f/as/26_frd_bro_badl_68143_grayroof_bluebody.webp" alt="Ford Bronco" loading="lazy">
+                    </div>
+                    <div class="model-info">
+                        <div class="model-name">Bronco</div>
+                        <div class="model-type">Off-Road SUV</div>
+                        <span class="model-cta">Explore <i class="fa fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <a href="/demo/js-playful/inventory?model=bronco-sport" class="model-card">
+                    <div class="model-img-wrap">
+                        <img src="https://www.assets.ford.com/adobe/assets/urn:aaid:aem:c772d86a-cfd0-485b-bd87-06204a2d41ee/as/26_FRD_BRS_64850_outb_sasq_oxwh.webp" alt="Ford Bronco Sport" loading="lazy">
+                    </div>
+                    <div class="model-info">
+                        <div class="model-name">Bronco Sport</div>
+                        <div class="model-type">Compact SUV</div>
+                        <span class="model-cta">Explore <i class="fa fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <a href="/demo/js-playful/inventory?model=escape" class="model-card">
+                    <div class="model-img-wrap">
+                        <img src="https://www.ford.com/acslibs/content/dam/na/ford/en_us/images/escape/2026/jellybeans/26_frd_esp_stln_crgr_dr78.png" alt="Ford Escape" loading="lazy">
+                    </div>
+                    <div class="model-info">
+                        <div class="model-name">Escape</div>
+                        <div class="model-type">Crossover SUV</div>
+                        <span class="model-cta">Explore <i class="fa fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <a href="/demo/js-playful/inventory?model=super-duty" class="model-card">
+                    <div class="model-img-wrap">
+                        <img src="https://www.assets.ford.com/adobe/assets/urn:aaid:aem:00c8c7f5-135b-489f-affb-60d6bed4f1a8/as/25_FRD_FSD_58688_450XL_CrbGray.webp" alt="Ford Super Duty" loading="lazy">
+                    </div>
+                    <div class="model-info">
+                        <div class="model-name">Super Duty</div>
+                        <div class="model-type">Heavy Duty Truck</div>
+                        <span class="model-cta">Explore <i class="fa fa-arrow-right"></i></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         REVIEWS
+         ========================================== -->
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <div class="text-center fade-up">
+                <span class="section-badge">Happy Customers</span>
+                <h2 class="section-title">Don't Take Our Word <span class="gradient-text">For It</span></h2>
+                <p class="section-subtitle">Real stories from real people who drove away smiling.</p>
+            </div>
+
+            <div class="reviews-grid stagger-children">
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p class="review-text">"Hands down the best car buying experience I've ever had. The team at Jarrett Scott Ford made everything so simple and stress-free. I actually enjoyed buying a car -- never thought I'd say that!"</p>
+                    <div class="review-author">
+                        <div class="review-avatar">MT</div>
+                        <div>
+                            <div class="review-name">Michael T.</div>
+                            <div class="review-role">F-150 Owner</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p class="review-text">"From the moment I walked in, everyone was so welcoming. No pushy sales tactics, just genuine help finding the right SUV for my family. We love our new Explorer!"</p>
+                    <div class="review-author">
+                        <div class="review-avatar">SK</div>
+                        <div>
+                            <div class="review-name">Sarah K.</div>
+                            <div class="review-role">Explorer Owner</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p class="review-text">"Service department is top-notch. They got me in quickly, explained everything clearly, and the price was exactly what they quoted. No surprises -- just honest work."</p>
+                    <div class="review-author">
+                        <div class="review-avatar">RJ</div>
+                        <div>
+                            <div class="review-name">Robert J.</div>
+                            <div class="review-role">Loyal Customer</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p class="review-text">"I drove from Tampa because their inventory and prices were unbeatable. The finance team found me a great rate and made paperwork a breeze. Already recommending them to friends!"</p>
+                    <div class="review-author">
+                        <div class="review-avatar">LM</div>
+                        <div>
+                            <div class="review-name">Lisa M.</div>
+                            <div class="review-role">Bronco Sport Owner</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         ABOUT
+         ========================================== -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text fade-up">
+                    <span class="section-badge">About Us</span>
+                    <h2>We're Not Your <span class="gradient-text">Typical Dealership</span></h2>
+                    <p>
+                        At Jarrett Scott Ford, we believe buying a car should feel exciting -- not stressful. We're a family-oriented team right here in Plant City, and we treat every customer like a neighbor, because most of you are!
+                    </p>
+                    <p>
+                        Whether you're picking up your first truck, upgrading to a family SUV, or just need a great service team you can count on, we've got your back. Come say hi -- we'd love to meet you.
+                    </p>
+                    <div style="margin-top: 32px;">
+                        <a href="/about" class="btn btn-primary btn-sm"><i class="fa fa-heart"></i> Learn More About Us</a>
+                    </div>
+                </div>
+
+                <div class="about-features stagger-children">
+                    <div class="about-feature">
+                        <div class="about-feature-icon">
+                            <i class="fa fa-handshake-o"></i>
+                        </div>
+                        <h4>No-Pressure Shopping</h4>
+                        <p>Browse at your own pace. Our team is here when you need us, not hovering.</p>
+                    </div>
+                    <div class="about-feature">
+                        <div class="about-feature-icon">
+                            <i class="fa fa-usd"></i>
+                        </div>
+                        <h4>Transparent Pricing</h4>
+                        <p>Upfront numbers, honest deals. What you see is what you get.</p>
+                    </div>
+                    <div class="about-feature">
+                        <div class="about-feature-icon">
+                            <i class="fa fa-wrench"></i>
+                        </div>
+                        <h4>Expert Service</h4>
+                        <p>Ford-certified techs who know your vehicle inside and out.</p>
+                    </div>
+                    <div class="about-feature">
+                        <div class="about-feature-icon">
+                            <i class="fa fa-users"></i>
+                        </div>
+                        <h4>Community First</h4>
+                        <p>Proudly supporting Plant City events, schools, and families.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         HOURS & CONTACT
+         ========================================== -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="text-center fade-up">
+                <span class="section-badge">Get In Touch</span>
+                <h2 class="section-title">We'd Love to <span class="gradient-text">Hear From You</span></h2>
+                <p class="section-subtitle">Stop by, give us a call, or just wave as you drive past. We're friendly like that.</p>
+            </div>
+
+            <div class="contact-grid stagger-children">
+                <!-- Hours Card -->
+                <div class="contact-card">
+                    <div class="contact-card-icon">
+                        <i class="fa fa-clock-o"></i>
+                    </div>
+                    <h3>Our Hours</h3>
+
+                    <span class="hours-label hours-label-sales">Sales</span>
+                    <table class="hours-table">
+                        <tr><td>Mon - Thu</td><td>8:30 AM - 7 PM</td></tr>
+                        <tr><td>Friday</td><td>8:30 AM - 7 PM</td></tr>
+                        <tr><td>Saturday</td><td>8:30 AM - 5 PM</td></tr>
+                        <tr><td>Sunday</td><td>Closed</td></tr>
+                    </table>
+
+                    <div style="margin-top: 16px;">
+                        <span class="hours-label hours-label-service">Service</span>
+                        <table class="hours-table">
+                            <tr><td>Mon - Fri</td><td>7 AM - 6 PM</td></tr>
+                            <tr><td>Saturday</td><td>7 AM - 4 PM</td></tr>
+                            <tr><td>Sunday</td><td>Closed</td></tr>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Contact Card -->
+                <div class="contact-card">
+                    <div class="contact-card-icon">
+                        <i class="fa fa-phone"></i>
+                    </div>
+                    <h3>Contact Us</h3>
+                    <p style="margin-bottom: 20px;">
+                        <a href="tel:8137524171" style="font-size: 1.4rem; font-weight: 900; color: #4f46e5;">
+                            (813) 752-4171
+                        </a>
+                    </p>
+                    <p style="margin-bottom: 20px; color: #4b5563; line-height: 1.6;">
+                        2000 East Baker St.<br>
+                        Plant City, FL 33563
+                    </p>
+                    <a href="https://www.google.com/maps/place/Jarrett+Scott+Ford+of+Plant+City/" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" style="width: 100%; justify-content: center;">
+                        <i class="fa fa-map-marker"></i> Get Directions
+                    </a>
+                </div>
+
+                <!-- Social / Connect Card -->
+                <div class="contact-card">
+                    <div class="contact-card-icon">
+                        <i class="fa fa-comments"></i>
+                    </div>
+                    <h3>Follow Along</h3>
+                    <p style="margin-bottom: 24px; color: #4b5563;">
+                        Stay in the loop! Follow us for deals, community events, and behind-the-scenes fun.
+                    </p>
+
+                    <div style="display: flex; flex-direction: column; gap: 12px;">
+                        <a href="https://www.facebook.com/jarrett.scottford.1/" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 12px; padding: 12px 16px; background: linear-gradient(135deg, #eef2ff, #f0f0ff); border-radius: 16px; font-weight: 700; color: #4f46e5;">
+                            <i class="fa fa-facebook" style="font-size: 1.2rem;"></i> Facebook
+                        </a>
+                        <a href="https://www.instagram.com/jarrettscottford/" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 12px; padding: 12px 16px; background: linear-gradient(135deg, #fce7f3, #fdf2f8); border-radius: 16px; font-weight: 700; color: #ec4899;">
+                            <i class="fa fa-instagram" style="font-size: 1.2rem;"></i> Instagram
+                        </a>
+                        <a href="https://twitter.com/jsfordplantcity" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 12px; padding: 12px 16px; background: linear-gradient(135deg, #e0f2fe, #f0f9ff); border-radius: 16px; font-weight: 700; color: #0ea5e9;">
+                            <i class="fa fa-twitter" style="font-size: 1.2rem;"></i> Twitter
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         FOOTER
+         ========================================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="footer-brand-name">Jarrett Scott Ford</div>
+                    <p>Your friendly neighborhood Ford dealer in Plant City, FL. Helping families find their perfect vehicles since day one.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/jarrett.scottford.1/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/jarrettscottford/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
+                        <a href="https://twitter.com/jsfordplantcity" target="_blank" rel="noopener" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/demo/js-playful/inventory">New Vehicles</a></li>
+                        <li><a href="/used">Used Vehicles</a></li>
+                        <li><a href="/finance">Finance</a></li>
+                        <li><a href="/service">Service</a></li>
+                        <li><a href="/about">About Us</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="/service">Oil Change</a></li>
+                        <li><a href="/service">Tire Rotation</a></li>
+                        <li><a href="/service">Brake Service</a></li>
+                        <li><a href="/service">Ford Recall Info</a></li>
+                        <li><a href="/service">Schedule Service</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="tel:8137524171"><i class="fa fa-phone"></i> (813) 752-4171</a></li>
+                        <li><a href="https://www.google.com/maps/place/Jarrett+Scott+Ford+of+Plant+City/" target="_blank" rel="noopener"><i class="fa fa-map-marker"></i> 2000 E Baker St</a></li>
+                        <li><span style="color: rgba(255,255,255,0.5);">Plant City, FL 33563</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Jarrett Scott Ford. All rights reserved.</p>
+                <p>Powered by <a href="https://savvydealer.com" target="_blank" rel="noopener">SavvyDealer</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==========================================
+         JAVASCRIPT
+         ========================================== -->
+    <script>
+        (function() {
+            'use strict';
+
+            // Mobile nav toggle
+            var navToggle = document.getElementById('navToggle');
+            var navLinks = document.getElementById('navLinks');
+
+            navToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('open');
+                var icon = navToggle.querySelector('i');
+                if (navLinks.classList.contains('open')) {
+                    icon.className = 'fa fa-times';
+                } else {
+                    icon.className = 'fa fa-bars';
+                }
+            });
+
+            // Close mobile nav on link click
+            var links = navLinks.querySelectorAll('a');
+            for (var i = 0; i < links.length; i++) {
+                links[i].addEventListener('click', function() {
+                    navLinks.classList.remove('open');
+                    navToggle.querySelector('i').className = 'fa fa-bars';
+                });
+            }
+
+            // Nav shadow on scroll
+            var nav = document.getElementById('nav');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 20) {
+                    nav.classList.add('scrolled');
+                } else {
+                    nav.classList.remove('scrolled');
+                }
+            });
+
+            // Scroll animations (IntersectionObserver)
+            var fadeEls = document.querySelectorAll('.fade-up, .stagger-children');
+
+            if ('IntersectionObserver' in window) {
+                var observer = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    threshold: 0.15,
+                    rootMargin: '0px 0px -40px 0px'
+                });
+
+                fadeEls.forEach(function(el) {
+                    observer.observe(el);
+                });
+            } else {
+                // Fallback: show everything
+                fadeEls.forEach(function(el) {
+                    el.classList.add('visible');
+                });
+            }
+
+            // Animated counters
+            function animateCounter(el, target, duration) {
+                var start = 0;
+                var startTime = null;
+                var isDecimal = String(target).indexOf('.') !== -1;
+
+                function step(timestamp) {
+                    if (!startTime) startTime = timestamp;
+                    var progress = Math.min((timestamp - startTime) / duration, 1);
+                    // Ease out cubic
+                    var eased = 1 - Math.pow(1 - progress, 3);
+                    var current = start + (target - start) * eased;
+
+                    if (isDecimal) {
+                        el.textContent = current.toFixed(1);
+                    } else {
+                        el.textContent = Math.floor(current) + '+';
+                    }
+
+                    if (progress < 1) {
+                        requestAnimationFrame(step);
+                    }
+                }
+
+                requestAnimationFrame(step);
+            }
+
+            var statNumbers = document.querySelectorAll('.hero-stat-number');
+            var statsObserved = false;
+
+            if ('IntersectionObserver' in window && statNumbers.length > 0) {
+                var statsObserver = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting && !statsObserved) {
+                            statsObserved = true;
+                            statNumbers.forEach(function(el) {
+                                var target = parseFloat(el.getAttribute('data-count'));
+                                animateCounter(el, target, 2000);
+                            });
+                            statsObserver.disconnect();
+                        }
+                    });
+                }, { threshold: 0.5 });
+
+                statsObserver.observe(statNumbers[0].closest('.hero-stats'));
+            }
+        })();
+    </script>
+
+</body>
+</html>

@@ -34,6 +34,15 @@ export async function registerRoutes(
     }
   });
 
+  // GET / - serve the template gallery landing page
+  app.get("/", async (_req, res) => {
+    const galleryPath = path.join(TEMPLATES_DIR, "..", "gallery.html");
+    if (fs.existsSync(galleryPath)) {
+      return res.sendFile(galleryPath);
+    }
+    res.redirect("/demo/ford-starter");
+  });
+
   // GET /demo/:name - serve the template's index.html directly
   app.get("/demo/:name", async (req, res) => {
     const templateName = req.params.name;
@@ -41,6 +50,19 @@ export async function registerRoutes(
 
     if (!fs.existsSync(htmlPath)) {
       return res.status(404).send("Template not found");
+    }
+
+    res.sendFile(htmlPath);
+  });
+
+  // GET /demo/:name/:page - serve sub-pages (e.g. /demo/mullinax-ford/inventory)
+  app.get("/demo/:name/:page", async (req, res) => {
+    const templateName = req.params.name;
+    const pageName = req.params.page;
+    const htmlPath = path.join(TEMPLATES_DIR, templateName, `${pageName}.html`);
+
+    if (!fs.existsSync(htmlPath)) {
+      return res.status(404).send("Page not found");
     }
 
     res.sendFile(htmlPath);

@@ -1,0 +1,1435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jarrett Scott Ford | Your Plant City, FL Ford Dealer</title>
+<meta name="description" content="Jarrett Scott Ford - Your Plant City, FL Ford Dealer. New &amp; Used Ford vehicles, service, and financing at 2000 East Baker St. Plant City, FL 33563.">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* ===== RESET & BASE ===== */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 400;
+  color: #000;
+  background: #fff;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ===== UTILITIES ===== */
+.mono {
+  font-family: 'Space Mono', monospace;
+}
+
+.accent {
+  color: #ff0000;
+}
+
+.bg-black {
+  background: #000;
+  color: #fff;
+}
+
+.bg-white {
+  background: #fff;
+  color: #000;
+}
+
+/* ===== NAVIGATION ===== */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #000;
+  color: #fff;
+  border-bottom: 4px solid #ff0000;
+  padding: 0 24px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.nav__logo img {
+  height: 48px;
+  width: auto;
+}
+
+.nav__logo-text {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.nav__links a {
+  font-family: 'Space Mono', monospace;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0 20px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  border-left: 1px solid rgba(255,255,255,0.15);
+  transition: background 0.15s, color 0.15s;
+}
+
+.nav__links a:last-child {
+  border-right: 1px solid rgba(255,255,255,0.15);
+}
+
+.nav__links a:hover {
+  background: #fff;
+  color: #000;
+}
+
+.nav__phone {
+  font-family: 'Space Mono', monospace;
+  font-size: 14px;
+  font-weight: 700;
+  color: #ff0000;
+  margin-left: 24px;
+  white-space: nowrap;
+}
+
+.nav__phone a {
+  color: #ff0000;
+  transition: color 0.15s;
+}
+
+.nav__phone a:hover {
+  color: #fff;
+}
+
+.nav__burger {
+  display: none;
+  background: none;
+  border: 2px solid #fff;
+  color: #fff;
+  width: 48px;
+  height: 48px;
+  font-size: 22px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== MOBILE NAV ===== */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 72px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  z-index: 999;
+  flex-direction: column;
+  padding: 0;
+}
+
+.mobile-menu.active {
+  display: flex;
+}
+
+.mobile-menu a {
+  font-family: 'Space Mono', monospace;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  padding: 20px 32px;
+  border-bottom: 2px solid rgba(255,255,255,0.1);
+  transition: background 0.15s, color 0.15s;
+}
+
+.mobile-menu a:hover {
+  background: #fff;
+  color: #000;
+}
+
+.mobile-menu__phone {
+  padding: 24px 32px;
+  font-family: 'Space Mono', monospace;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.mobile-menu__phone a {
+  color: #ff0000;
+  border: none;
+  padding: 0;
+}
+
+/* ===== HERO ===== */
+.hero {
+  margin-top: 72px;
+  min-height: calc(100vh - 72px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 80px 48px;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+}
+
+.hero__title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: clamp(48px, 10vw, 120px);
+  line-height: 0.9;
+  text-transform: uppercase;
+  letter-spacing: -3px;
+  color: #000;
+  width: 100%;
+  max-width: 100%;
+}
+
+.hero__title span {
+  display: block;
+}
+
+.hero__title .hero__name-scott {
+  color: #ff0000;
+}
+
+.hero__accent-line {
+  width: 200px;
+  height: 4px;
+  background: #ff0000;
+  margin: 32px 0;
+}
+
+.hero__tagline {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(14px, 2vw, 20px);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #000;
+  margin-bottom: 48px;
+}
+
+.hero__ctas {
+  display: flex;
+  gap: 0;
+}
+
+.hero__cta {
+  font-family: 'Space Mono', monospace;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 20px 40px;
+  border: 4px solid #000;
+  cursor: pointer;
+  transition: all 0.15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hero__cta--primary {
+  background: #000;
+  color: #fff;
+}
+
+.hero__cta--primary:hover {
+  background: #ff0000;
+  border-color: #ff0000;
+  color: #fff;
+}
+
+.hero__cta--secondary {
+  background: #fff;
+  color: #000;
+  border-left: 0;
+}
+
+.hero__cta--secondary:hover {
+  background: #000;
+  color: #fff;
+}
+
+.hero__scroll-indicator {
+  position: absolute;
+  bottom: 32px;
+  left: 48px;
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+/* ===== SECTION HEADING ===== */
+.section-heading {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: clamp(36px, 6vw, 80px);
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  line-height: 1;
+  margin-bottom: 48px;
+}
+
+.section-heading--white {
+  color: #fff;
+}
+
+.section-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #ff0000;
+  margin-bottom: 16px;
+  display: block;
+}
+
+/* ===== SHOP BY MODEL ===== */
+.models {
+  background: #000;
+  color: #fff;
+  padding: 80px 0 0 0;
+  border-top: 4px solid #000;
+}
+
+.models__header {
+  padding: 0 48px 48px;
+}
+
+.models__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 4px solid #fff;
+}
+
+.model-card {
+  border-right: 4px solid #fff;
+  border-bottom: 4px solid #fff;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.model-card:nth-child(3n) {
+  border-right: none;
+}
+
+.model-card__image-wrap {
+  aspect-ratio: 16/10;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(160deg, #1a1a1a 0%, #111 40%, #0a0a0a 100%);
+  padding: 24px 32px;
+}
+
+.model-card__image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s;
+}
+
+.model-card:hover .model-card__image-wrap img {
+  transform: scale(1.05);
+}
+
+.model-card__info {
+  padding: 24px 28px;
+  border-top: 4px solid #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.model-card__name {
+  font-family: 'Space Mono', monospace;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.model-card__arrow {
+  font-size: 20px;
+  color: #ff0000;
+  transition: transform 0.2s;
+}
+
+.model-card:hover .model-card__arrow {
+  transform: translateX(6px);
+}
+
+.model-card:hover {
+  background: #1a1a1a;
+}
+
+/* ===== REVIEWS ===== */
+.reviews {
+  background: #fff;
+  color: #000;
+  padding: 100px 48px;
+  border-top: 4px solid #000;
+}
+
+.reviews__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  border: 4px solid #000;
+}
+
+.review-card {
+  padding: 48px 40px;
+  border-right: 4px solid #000;
+  border-bottom: 4px solid #000;
+  position: relative;
+  transition: background 0.2s, color 0.2s;
+}
+
+.review-card:nth-child(2n) {
+  border-right: none;
+}
+
+.review-card:nth-child(n+3) {
+  border-bottom: none;
+}
+
+.review-card:hover {
+  background: #000;
+  color: #fff;
+}
+
+.review-card__quote-mark {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 120px;
+  font-weight: 700;
+  line-height: 1;
+  color: #ff0000;
+  position: absolute;
+  top: 16px;
+  left: 28px;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.review-card__text {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.review-card__stars {
+  color: #ff0000;
+  font-size: 14px;
+  margin-bottom: 12px;
+  letter-spacing: 3px;
+}
+
+.review-card__author {
+  font-family: 'Space Mono', monospace;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== ABOUT ===== */
+.about {
+  background: #000;
+  color: #fff;
+  padding: 100px 48px;
+  border-top: 4px solid #000;
+}
+
+.about__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+
+.about__left {
+  padding-right: 64px;
+  border-right: 4px solid #fff;
+}
+
+.about__right {
+  padding-left: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about__text {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.about__text:last-child {
+  margin-bottom: 0;
+}
+
+.about__stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  margin-top: 32px;
+}
+
+.about__stat {
+  padding: 32px 0;
+  border-top: 2px solid rgba(255,255,255,0.2);
+}
+
+.about__stat-number {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: #ff0000;
+  line-height: 1;
+}
+
+.about__stat-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 8px;
+  color: rgba(255,255,255,0.6);
+}
+
+.about__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Space Mono', monospace;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 20px 40px;
+  border: 4px solid #fff;
+  color: #fff;
+  margin-top: 40px;
+  transition: all 0.15s;
+}
+
+.about__cta:hover {
+  background: #ff0000;
+  border-color: #ff0000;
+}
+
+/* ===== HOURS ===== */
+.hours {
+  background: #fff;
+  color: #000;
+  padding: 100px 48px;
+  border-top: 4px solid #000;
+}
+
+.hours__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border: 4px solid #000;
+}
+
+.hours__section {
+  padding: 0;
+}
+
+.hours__section:first-child {
+  border-right: 4px solid #000;
+}
+
+.hours__section-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 28px 32px;
+  border-bottom: 4px solid #000;
+  background: #000;
+  color: #fff;
+}
+
+.hours__row {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 32px;
+  border-bottom: 2px solid rgba(0,0,0,0.1);
+  font-family: 'Space Mono', monospace;
+  font-size: 14px;
+  transition: background 0.15s, color 0.15s;
+}
+
+.hours__row:last-child {
+  border-bottom: none;
+}
+
+.hours__row:hover {
+  background: #000;
+  color: #fff;
+}
+
+.hours__day {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hours__time {
+  font-weight: 400;
+}
+
+.hours__row--closed .hours__time {
+  color: #ff0000;
+  font-weight: 700;
+}
+
+.hours__row:hover .hours__time {
+  color: inherit;
+}
+
+.hours__row--closed:hover .hours__time {
+  color: #ff0000;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: #000;
+  color: #fff;
+  border-top: 4px solid #ff0000;
+  padding: 64px 48px 32px;
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 0;
+  padding-bottom: 48px;
+  border-bottom: 2px solid rgba(255,255,255,0.1);
+}
+
+.footer__col {
+  padding-right: 48px;
+}
+
+.footer__col:last-child {
+  padding-right: 0;
+}
+
+.footer__heading {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 24px;
+  color: #ff0000;
+}
+
+.footer__brand-name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+.footer__address {
+  font-family: 'Space Mono', monospace;
+  font-size: 13px;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.7);
+}
+
+.footer__address a {
+  color: rgba(255,255,255,0.7);
+  transition: color 0.15s;
+}
+
+.footer__address a:hover {
+  color: #ff0000;
+}
+
+.footer__link {
+  font-family: 'Space Mono', monospace;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: block;
+  padding: 8px 0;
+  color: rgba(255,255,255,0.7);
+  transition: color 0.15s;
+}
+
+.footer__link:hover {
+  color: #fff;
+}
+
+.footer__social {
+  display: flex;
+  gap: 0;
+  margin-top: 24px;
+}
+
+.footer__social a {
+  width: 48px;
+  height: 48px;
+  border: 2px solid rgba(255,255,255,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #fff;
+  transition: all 0.15s;
+}
+
+.footer__social a:hover {
+  background: #ff0000;
+  border-color: #ff0000;
+}
+
+.footer__bottom {
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  color: rgba(255,255,255,0.4);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .nav__links {
+    display: none;
+  }
+
+  .nav__phone {
+    display: none;
+  }
+
+  .nav__burger {
+    display: flex;
+  }
+
+  .hero {
+    padding: 60px 32px;
+  }
+
+  .hero__title {
+    letter-spacing: -1px;
+  }
+
+  .models__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .model-card:nth-child(3n) {
+    border-right: 4px solid #fff;
+  }
+
+  .model-card:nth-child(2n) {
+    border-right: none;
+  }
+
+  .reviews {
+    padding: 80px 32px;
+  }
+
+  .reviews__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .review-card {
+    border-right: none;
+    border-bottom: 4px solid #000;
+  }
+
+  .review-card:nth-child(n+3) {
+    border-bottom: 4px solid #000;
+  }
+
+  .review-card:last-child {
+    border-bottom: none;
+  }
+
+  .about {
+    padding: 80px 32px;
+  }
+
+  .about__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about__left {
+    padding-right: 0;
+    border-right: none;
+    padding-bottom: 48px;
+    border-bottom: 4px solid rgba(255,255,255,0.2);
+    margin-bottom: 48px;
+  }
+
+  .about__right {
+    padding-left: 0;
+  }
+
+  .hours {
+    padding: 80px 32px;
+  }
+
+  .hours__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hours__section:first-child {
+    border-right: none;
+    border-bottom: 4px solid #000;
+  }
+
+  .footer__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .nav {
+    padding: 0 16px;
+  }
+
+  .nav__logo-text {
+    display: none;
+  }
+
+  .hero {
+    padding: 48px 20px;
+    min-height: calc(100vh - 72px);
+  }
+
+  .hero__ctas {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero__cta {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero__cta--secondary {
+    border-left: 4px solid #000;
+    border-top: 0;
+  }
+
+  .hero__scroll-indicator {
+    left: 20px;
+  }
+
+  .models__header {
+    padding: 0 20px 32px;
+  }
+
+  .models__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .model-card {
+    border-right: none !important;
+  }
+
+  .reviews {
+    padding: 60px 20px;
+  }
+
+  .review-card {
+    padding: 40px 28px;
+  }
+
+  .review-card__text {
+    font-size: 17px;
+  }
+
+  .about {
+    padding: 60px 20px;
+  }
+
+  .about__stats {
+    grid-template-columns: 1fr;
+  }
+
+  .hours {
+    padding: 60px 20px;
+  }
+
+  .hours__row {
+    padding: 14px 20px;
+    font-size: 12px;
+  }
+
+  .hours__section-title {
+    padding: 20px 20px;
+    font-size: 22px;
+  }
+
+  .footer {
+    padding: 48px 20px 24px;
+  }
+
+  .footer__grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer__col {
+    padding-right: 0;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .section-heading {
+    margin-bottom: 32px;
+  }
+}
+
+/* ===== SCROLL ANIMATION ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+</head>
+<body>
+
+<!-- ===== NAVIGATION ===== -->
+<nav class="nav" id="nav">
+  <a href="/demo/js-brutalist" class="nav__logo">
+    <img src="https://storage.googleapis.com/savvy-images/JarrettScottFord-logo.jpg" alt="Jarrett Scott Ford Logo">
+    <span class="nav__logo-text">Jarrett Scott Ford</span>
+  </a>
+
+  <div class="nav__links">
+    <a href="/demo/js-brutalist">Home</a>
+    <a href="/demo/js-brutalist/inventory">New</a>
+    <a href="/used">Used</a>
+    <a href="/finance">Finance</a>
+    <a href="/service">Service</a>
+    <a href="/about">About</a>
+  </div>
+
+  <span class="nav__phone">
+    <a href="tel:8137524171"><i class="fa fa-phone"></i> (813) 752-4171</a>
+  </span>
+
+  <button class="nav__burger" id="navBurger" aria-label="Toggle menu">
+    <i class="fa fa-bars"></i>
+  </button>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/demo/js-brutalist">Home</a>
+  <a href="/demo/js-brutalist/inventory">New</a>
+  <a href="/used">Used</a>
+  <a href="/finance">Finance</a>
+  <a href="/service">Service</a>
+  <a href="/about">About</a>
+  <div class="mobile-menu__phone">
+    <a href="tel:8137524171"><i class="fa fa-phone"></i> (813) 752-4171</a>
+  </div>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero">
+  <div class="hero__title">
+    <span>Jarrett</span>
+    <span class="hero__name-scott">Scott</span>
+    <span>Ford</span>
+  </div>
+
+  <div class="hero__accent-line"></div>
+
+  <p class="hero__tagline mono">Your Plant City, FL Ford Dealer</p>
+
+  <div class="hero__ctas">
+    <a href="/demo/js-brutalist/inventory" class="hero__cta hero__cta--primary">
+      Browse Inventory <i class="fa fa-arrow-right"></i>
+    </a>
+    <a href="/service" class="hero__cta hero__cta--secondary">
+      Schedule Service <i class="fa fa-wrench"></i>
+    </a>
+  </div>
+
+  <div class="hero__scroll-indicator">
+    <i class="fa fa-arrow-down"></i> Scroll to explore
+  </div>
+</section>
+
+<!-- ===== SHOP BY MODEL ===== -->
+<section class="models bg-black" id="models">
+  <div class="models__header">
+    <span class="section-label">Shop by Model</span>
+    <h2 class="section-heading section-heading--white">Find Your<br>Next Ford</h2>
+  </div>
+
+  <div class="models__grid">
+    <a href="/demo/js-brutalist/inventory?model=f-150" class="model-card reveal">
+      <div class="model-card__image-wrap">
+        <img src="https://storage.googleapis.com/agiledealer/vcp-slider/ford/WEBP/f-150.webp" alt="Ford F-150" loading="lazy">
+      </div>
+      <div class="model-card__info">
+        <span class="model-card__name">F-150</span>
+        <span class="model-card__arrow"><i class="fa fa-arrow-right"></i></span>
+      </div>
+    </a>
+
+    <a href="/demo/js-brutalist/inventory?model=explorer" class="model-card reveal">
+      <div class="model-card__image-wrap">
+        <img src="https://storage.googleapis.com/agiledealer/vcp-slider/ford/WEBP/explorer.webp" alt="Ford Explorer" loading="lazy">
+      </div>
+      <div class="model-card__info">
+        <span class="model-card__name">Explorer</span>
+        <span class="model-card__arrow"><i class="fa fa-arrow-right"></i></span>
+      </div>
+    </a>
+
+    <a href="/demo/js-brutalist/inventory?model=bronco" class="model-card reveal">
+      <div class="model-card__image-wrap">
+        <img src="https://storage.googleapis.com/agiledealer/vcp-slider/ford/WEBP/bronco.webp" alt="Ford Bronco" loading="lazy">
+      </div>
+      <div class="model-card__info">
+        <span class="model-card__name">Bronco</span>
+        <span class="model-card__arrow"><i class="fa fa-arrow-right"></i></span>
+      </div>
+    </a>
+
+    <a href="/demo/js-brutalist/inventory?model=bronco-sport" class="model-card reveal">
+      <div class="model-card__image-wrap">
+        <img src="https://storage.googleapis.com/agiledealer/vcp-slider/ford/WEBP/bronco_sport.webp" alt="Ford Bronco Sport" loading="lazy">
+      </div>
+      <div class="model-card__info">
+        <span class="model-card__name">Bronco Sport</span>
+        <span class="model-card__arrow"><i class="fa fa-arrow-right"></i></span>
+      </div>
+    </a>
+
+    <a href="/demo/js-brutalist/inventory?model=escape" class="model-card reveal">
+      <div class="model-card__image-wrap">
+        <img src="https://storage.googleapis.com/agiledealer/vcp-slider/ford/WEBP/escape.webp" alt="Ford Escape" loading="lazy">
+      </div>
+      <div class="model-card__info">
+        <span class="model-card__name">Escape</span>
+        <span class="model-card__arrow"><i class="fa fa-arrow-right"></i></span>
+      </div>
+    </a>
+
+    <a href="/demo/js-brutalist/inventory?model=super-duty" class="model-card reveal">
+      <div class="model-card__image-wrap">
+        <img src="https://storage.googleapis.com/agiledealer/vcp-slider/ford/WEBP/superduty.webp" alt="Ford Super Duty" loading="lazy">
+      </div>
+      <div class="model-card__info">
+        <span class="model-card__name">Super Duty</span>
+        <span class="model-card__arrow"><i class="fa fa-arrow-right"></i></span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ===== REVIEWS ===== -->
+<section class="reviews" id="reviews">
+  <span class="section-label">What People Say</span>
+  <h2 class="section-heading">Real Reviews,<br>No Filter</h2>
+
+  <div class="reviews__grid">
+    <div class="review-card reveal">
+      <div class="review-card__quote-mark">&ldquo;</div>
+      <div class="review-card__stars">
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+      </div>
+      <p class="review-card__text">Best car buying experience I've ever had. The team at Jarrett Scott Ford made the entire process seamless from start to finish.</p>
+      <span class="review-card__author">&mdash; Michael T.</span>
+    </div>
+
+    <div class="review-card reveal">
+      <div class="review-card__quote-mark">&ldquo;</div>
+      <div class="review-card__stars">
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+      </div>
+      <p class="review-card__text">I drove from Tampa just to work with these guys. Their no-pressure approach and honest pricing set them apart from every other dealer I visited.</p>
+      <span class="review-card__author">&mdash; Sarah K.</span>
+    </div>
+
+    <div class="review-card reveal">
+      <div class="review-card__quote-mark">&ldquo;</div>
+      <div class="review-card__stars">
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+      </div>
+      <p class="review-card__text">Outstanding service department. They got my F-150 in and out in under two hours and the price was exactly what they quoted me.</p>
+      <span class="review-card__author">&mdash; Robert J.</span>
+    </div>
+
+    <div class="review-card reveal">
+      <div class="review-card__quote-mark">&ldquo;</div>
+      <div class="review-card__stars">
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+      </div>
+      <p class="review-card__text">The finance team found me a better rate than my own bank offered. Couldn't believe how easy they made everything.</p>
+      <span class="review-card__author">&mdash; Lisa M.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="about bg-black" id="about">
+  <span class="section-label">About Us</span>
+  <h2 class="section-heading section-heading--white" style="margin-bottom: 64px;">Built on<br>Trust Since<br>Day One</h2>
+
+  <div class="about__grid">
+    <div class="about__left reveal">
+      <p class="about__text">Jarrett Scott Ford is Plant City's premier Ford dealership, serving the greater Tampa Bay area with an unmatched selection of new and pre-owned vehicles. We believe that buying a car should be straightforward, transparent, and even enjoyable.</p>
+      <p class="about__text">Our team is committed to delivering a dealership experience that defies expectations. From our no-haggle pricing philosophy to our award-winning service department, every touchpoint is designed around one thing: earning your trust and keeping it.</p>
+      <a href="/about" class="about__cta">
+        Learn More <i class="fa fa-arrow-right"></i>
+      </a>
+    </div>
+
+    <div class="about__right reveal">
+      <div class="about__stats">
+        <div class="about__stat">
+          <div class="about__stat-number">500+</div>
+          <div class="about__stat-label">Vehicles in Stock</div>
+        </div>
+        <div class="about__stat">
+          <div class="about__stat-number">4.8</div>
+          <div class="about__stat-label">Star Rating</div>
+        </div>
+        <div class="about__stat">
+          <div class="about__stat-number">1000+</div>
+          <div class="about__stat-label">Happy Customers</div>
+        </div>
+        <div class="about__stat">
+          <div class="about__stat-number">A+</div>
+          <div class="about__stat-label">BBB Rating</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOURS ===== -->
+<section class="hours" id="hours">
+  <span class="section-label">Visit Us</span>
+  <h2 class="section-heading">Dealership<br>Hours</h2>
+
+  <div class="hours__grid">
+    <div class="hours__section">
+      <div class="hours__section-title">
+        <i class="fa fa-car"></i> Sales
+      </div>
+      <div class="hours__row">
+        <span class="hours__day">Monday</span>
+        <span class="hours__time">8:30AM - 7:00PM</span>
+      </div>
+      <div class="hours__row">
+        <span class="hours__day">Tuesday</span>
+        <span class="hours__time">8:30AM - 7:00PM</span>
+      </div>
+      <div class="hours__row">
+        <span class="hours__day">Wednesday</span>
+        <span class="hours__time">8:30AM - 7:00PM</span>
+      </div>
+      <div class="hours__row">
+        <span class="hours__day">Thursday</span>
+        <span class="hours__time">8:30AM - 7:00PM</span>
+      </div>
+      <div class="hours__row">
+        <span class="hours__day">Friday</span>
+        <span class="hours__time">8:30AM - 7:00PM</span>
+      </div>
+      <div class="hours__row">
+        <span class="hours__day">Saturday</span>
+        <span class="hours__time">8:30AM - 5:00PM</span>
+      </div>
+      <div class="hours__row hours__row--closed">
+        <span class="hours__day">Sunday</span>
+        <span class="hours__time">Closed</span>
+      </div>
+    </div>
+
+    <div class="hours__section">
+      <div class="hours__section-title">
+        <i class="fa fa-wrench"></i> Service
+      </div>
+      <div class="hours__row">
+        <span class="hours__day">Monday</span>
+        <span class="hours__time">7:00AM - 6:00PM</span>
+      </div>
+      <div class="hours__row">
+        <span class="hours__day">Tuesday</span>
+        <span class="hours__time">7:00AM - 6:00PM</span>
+      </div>
+      <div class="hours__row">
+        <span class="hours__day">Wednesday</span>
+        <span class="hours__time">7:00AM - 6:00PM</span>
+      </div>
+      <div class="hours__row">
+        <span class="hours__day">Thursday</span>
+        <span class="hours__time">7:00AM - 6:00PM</span>
+      </div>
+      <div class="hours__row">
+        <span class="hours__day">Friday</span>
+        <span class="hours__time">7:00AM - 6:00PM</span>
+      </div>
+      <div class="hours__row">
+        <span class="hours__day">Saturday</span>
+        <span class="hours__time">7:00AM - 4:00PM</span>
+      </div>
+      <div class="hours__row hours__row--closed">
+        <span class="hours__day">Sunday</span>
+        <span class="hours__time">Closed</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top: 48px; display: flex; gap: 0; flex-wrap: wrap;">
+    <a href="https://www.google.com/maps/place/Jarrett+Scott+Ford+of+Plant+City/" target="_blank" rel="noopener"
+       style="font-family: 'Space Mono', monospace; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; padding: 20px 40px; border: 4px solid #000; color: #000; transition: all 0.15s; display: inline-flex; align-items: center; gap: 12px;"
+       onmouseover="this.style.background='#000';this.style.color='#fff'" onmouseout="this.style.background='#fff';this.style.color='#000'">
+      <i class="fa fa-map-marker"></i> Get Directions
+    </a>
+    <a href="tel:8137524171"
+       style="font-family: 'Space Mono', monospace; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; padding: 20px 40px; border: 4px solid #000; border-left: 0; background: #000; color: #fff; transition: all 0.15s; display: inline-flex; align-items: center; gap: 12px;"
+       onmouseover="this.style.background='#ff0000';this.style.borderColor='#ff0000'" onmouseout="this.style.background='#000';this.style.borderColor='#000'">
+      <i class="fa fa-phone"></i> Call Now
+    </a>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer" id="footer">
+  <div class="footer__grid">
+    <div class="footer__col">
+      <div class="footer__brand-name">Jarrett Scott Ford</div>
+      <div class="footer__address">
+        <a href="https://www.google.com/maps/place/Jarrett+Scott+Ford+of+Plant+City/" target="_blank" rel="noopener">
+          2000 East Baker St.<br>
+          Plant City, FL 33563
+        </a><br><br>
+        <a href="tel:8137524171">(813) 752-4171</a>
+      </div>
+      <div class="footer__social">
+        <a href="https://www.facebook.com/jarrett.scottford.1/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+        <a href="https://www.instagram.com/jarrettscottford/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
+        <a href="https://twitter.com/jsfordplantcity" target="_blank" rel="noopener" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+      </div>
+    </div>
+
+    <div class="footer__col">
+      <div class="footer__heading">Inventory</div>
+      <a href="/demo/js-brutalist/inventory" class="footer__link">New Vehicles</a>
+      <a href="/used" class="footer__link">Used Vehicles</a>
+      <a href="/demo/js-brutalist/inventory?type=certified" class="footer__link">Certified Pre-Owned</a>
+      <a href="/demo/js-brutalist/inventory?type=special" class="footer__link">Specials</a>
+    </div>
+
+    <div class="footer__col">
+      <div class="footer__heading">Services</div>
+      <a href="/finance" class="footer__link">Finance Center</a>
+      <a href="/service" class="footer__link">Service & Parts</a>
+      <a href="/service#schedule" class="footer__link">Schedule Service</a>
+      <a href="/finance#value" class="footer__link">Value Your Trade</a>
+    </div>
+
+    <div class="footer__col">
+      <div class="footer__heading">Dealership</div>
+      <a href="/about" class="footer__link">About Us</a>
+      <a href="/about#contact" class="footer__link">Contact</a>
+      <a href="https://www.google.com/maps/place/Jarrett+Scott+Ford+of+Plant+City/" target="_blank" rel="noopener" class="footer__link">Directions</a>
+      <a href="/about#careers" class="footer__link">Careers</a>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <span>&copy; 2026 Jarrett Scott Ford. All rights reserved.</span>
+    <span>2000 East Baker St. Plant City, FL 33563</span>
+  </div>
+</footer>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+(function() {
+  'use strict';
+
+  // Mobile menu toggle
+  var burger = document.getElementById('navBurger');
+  var mobileMenu = document.getElementById('mobileMenu');
+  var isMenuOpen = false;
+
+  burger.addEventListener('click', function() {
+    isMenuOpen = !isMenuOpen;
+    if (isMenuOpen) {
+      mobileMenu.classList.add('active');
+      burger.innerHTML = '<i class="fa fa-times"></i>';
+      document.body.style.overflow = 'hidden';
+    } else {
+      mobileMenu.classList.remove('active');
+      burger.innerHTML = '<i class="fa fa-bars"></i>';
+      document.body.style.overflow = '';
+    }
+  });
+
+  // Close mobile menu on link click
+  var mobileLinks = mobileMenu.querySelectorAll('a');
+  for (var i = 0; i < mobileLinks.length; i++) {
+    mobileLinks[i].addEventListener('click', function() {
+      isMenuOpen = false;
+      mobileMenu.classList.remove('active');
+      burger.innerHTML = '<i class="fa fa-bars"></i>';
+      document.body.style.overflow = '';
+    });
+  }
+
+  // Scroll reveal animation
+  var revealElements = document.querySelectorAll('.reveal');
+
+  function checkReveal() {
+    var windowHeight = window.innerHeight;
+    for (var i = 0; i < revealElements.length; i++) {
+      var el = revealElements[i];
+      var rect = el.getBoundingClientRect();
+      if (rect.top < windowHeight - 80) {
+        el.classList.add('visible');
+      }
+    }
+  }
+
+  window.addEventListener('scroll', checkReveal);
+  window.addEventListener('resize', checkReveal);
+
+  // Initial check
+  checkReveal();
+
+  // Nav background on scroll
+  var nav = document.getElementById('nav');
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 10) {
+      nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.3)';
+    } else {
+      nav.style.boxShadow = 'none';
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

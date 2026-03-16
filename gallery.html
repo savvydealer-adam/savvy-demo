@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SavvyDealer | Website Demo Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #0a0a0f;
+            color: #e0e0e0;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Animated background */
+        .bg-gradient {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            background:
+                radial-gradient(ellipse 80% 60% at 20% 10%, rgba(56, 189, 248, 0.08) 0%, transparent 60%),
+                radial-gradient(ellipse 60% 50% at 80% 80%, rgba(168, 85, 247, 0.06) 0%, transparent 60%),
+                radial-gradient(ellipse 50% 40% at 50% 50%, rgba(20, 184, 166, 0.04) 0%, transparent 60%);
+            animation: bgShift 20s ease-in-out infinite alternate;
+        }
+        @keyframes bgShift {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+
+        .content { position: relative; z-index: 1; }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 50px 24px 30px;
+        }
+        .hero-logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 24px;
+        }
+        .hero-logo svg { width: 44px; height: 44px; }
+        .hero-logo span {
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, #38bdf8, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero h1 {
+            font-size: clamp(28px, 5vw, 48px);
+            font-weight: 800;
+            line-height: 1.15;
+            letter-spacing: -1.5px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .hero h1 em {
+            font-style: normal;
+            background: linear-gradient(135deg, #38bdf8, #818cf8, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero p {
+            font-size: 16px;
+            color: #94a3b8;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Section headers */
+        .section-header {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 24px 16px;
+        }
+        .section-header h2 {
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #64748b;
+            margin-bottom: 4px;
+        }
+        .section-header h3 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #fff;
+        }
+        .section-header p {
+            font-size: 15px;
+            color: #64748b;
+            margin-top: 8px;
+        }
+
+        /* Featured templates grid (with iframes) */
+        .featured-gallery {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 12px 24px 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+            gap: 28px;
+        }
+        @media (max-width: 540px) {
+            .featured-gallery { grid-template-columns: 1fr; }
+        }
+
+        .template-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .template-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 40px rgba(56, 189, 248, 0.05);
+        }
+
+        /* Iframe preview */
+        .preview-wrapper {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%;
+            overflow: hidden;
+            background: #111;
+            cursor: pointer;
+            display: block;
+            text-decoration: none;
+        }
+        .preview-wrapper iframe {
+            position: absolute;
+            top: 0; left: 0;
+            width: 200%;
+            height: 200%;
+            transform: scale(0.5);
+            transform-origin: top left;
+            border: none;
+            pointer-events: none;
+        }
+        .preview-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(10, 10, 15, 0.85) 0%, transparent 50%);
+            display: flex;
+            align-items: flex-end;
+            padding: 20px;
+            transition: background 0.3s ease;
+        }
+        .template-card:hover .preview-overlay {
+            background: linear-gradient(to top, rgba(10, 10, 15, 0.65) 0%, transparent 40%);
+        }
+        .preview-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 100px;
+            padding: 5px 12px;
+            font-size: 11px;
+            font-weight: 500;
+            color: #e0e0e0;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        .preview-badge .dot {
+            width: 6px; height: 6px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        /* Card info */
+        .card-info { padding: 24px; }
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 14px;
+        }
+        .dealer-logo {
+            width: 48px; height: 48px;
+            border-radius: 10px;
+            object-fit: contain;
+            background: #fff;
+            padding: 3px;
+            flex-shrink: 0;
+        }
+        .card-header-text h2 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 2px;
+        }
+        .card-header-text .tagline {
+            font-size: 12px;
+            color: #64748b;
+        }
+
+        .color-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+        .swatch {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 10px;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .swatch-dot {
+            width: 12px; height: 12px;
+            border-radius: 3px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 20px;
+        }
+        .feature-tag {
+            font-size: 11px;
+            padding: 3px 10px;
+            border-radius: 100px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            color: #94a3b8;
+        }
+
+        .card-actions {
+            display: flex;
+            gap: 10px;
+        }
+        .btn {
+            flex: 1;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 10px 16px;
+            border-radius: 10px;
+            font-size: 13px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            border: none;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #38bdf8, #818cf8);
+            color: #fff;
+        }
+        .btn-primary:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 8px 24px rgba(56, 189, 248, 0.3);
+        }
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #e0e0e0;
+        }
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* ── Style Showcase Grid ── */
+        .styles-gallery {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 12px 24px 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+            gap: 28px;
+        }
+        @media (max-width: 480px) {
+            .styles-gallery { grid-template-columns: 1fr; }
+        }
+
+        .style-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .style-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(255, 255, 255, 0.18);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 40px rgba(56, 189, 248, 0.05);
+        }
+
+        /* Style card info */
+        .style-info { padding: 20px; }
+        .style-info h3 {
+            font-size: 16px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 6px;
+        }
+        .style-info .style-desc {
+            font-size: 13px;
+            color: #64748b;
+            line-height: 1.5;
+            margin-bottom: 16px;
+        }
+        .style-info .style-meta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+        .style-info .style-colors {
+            display: flex;
+            gap: 6px;
+        }
+        .style-info .color-dot {
+            width: 20px; height: 20px;
+            border-radius: 50%;
+            border: 2px solid rgba(255,255,255,0.1);
+        }
+        .style-info .style-actions {
+            display: flex;
+            gap: 8px;
+        }
+        .style-info .view-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            border-radius: 10px;
+            font-size: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #e0e0e0;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+        .style-info .view-btn:hover {
+            background: linear-gradient(135deg, #38bdf8, #818cf8);
+            border-color: transparent;
+            color: #fff;
+            transform: translateY(-1px);
+            box-shadow: 0 8px 24px rgba(56, 189, 248, 0.25);
+        }
+        .style-info .view-btn-inv {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            border-radius: 10px;
+            font-size: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            color: #94a3b8;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+        .style-info .view-btn-inv:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(255, 255, 255, 0.15);
+            color: #e0e0e0;
+        }
+        .style-number-badge {
+            position: absolute;
+            top: 12px;
+            right: 16px;
+            z-index: 2;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: rgba(255,255,255,0.5);
+            background: rgba(0,0,0,0.4);
+            backdrop-filter: blur(6px);
+            padding: 3px 10px;
+            border-radius: 100px;
+        }
+
+        /* Counter badge */
+        .template-count {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(56, 189, 248, 0.1);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            border-radius: 100px;
+            padding: 4px 12px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #38bdf8;
+            margin-top: 16px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        footer p { font-size: 13px; color: #475569; }
+        footer a { color: #64748b; text-decoration: none; transition: color 0.2s; }
+        footer a:hover { color: #94a3b8; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero { padding: 36px 16px 20px; }
+            .featured-gallery { padding: 8px 16px 20px; gap: 20px; }
+            .styles-gallery { padding: 8px 16px 40px; gap: 16px; }
+            .card-info { padding: 18px; }
+            .card-actions { flex-direction: column; }
+            .section-header { padding: 30px 16px 12px; }
+            .style-preview { height: 150px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-gradient"></div>
+    <div class="content">
+
+        <!-- Hero -->
+        <header class="hero">
+            <div class="hero-logo">
+                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="48" height="48" rx="12" fill="url(#g1)"/>
+                    <path d="M14 32V16h4l6 10 6-10h4v16h-4V22l-6 10-6-10v10h-4z" fill="#fff"/>
+                    <defs>
+                        <linearGradient id="g1" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#38bdf8"/>
+                            <stop offset="1" stop-color="#a78bfa"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span>SavvyDealer</span>
+            </div>
+            <h1>Dealership Website <em>Templates</em></h1>
+            <p>Explore our collection of high-converting dealer website designs. Each template is fully customizable and built on the SavvyDealer platform.</p>
+            <div class="template-count">
+                <i class="fa fa-th-large"></i> 12 Templates Available
+            </div>
+        </header>
+
+        <!-- ── Featured Dealer Templates ── -->
+        <div class="section-header">
+            <h2>Featured Templates</h2>
+            <h3>Dealer Showcases</h3>
+            <p>Complete dealership websites with homepage and inventory pages</p>
+        </div>
+
+        <section class="featured-gallery">
+
+            <!-- Jarrett Scott Ford -->
+            <article class="template-card">
+                <a href="/demo/ford-starter" class="preview-wrapper" title="View Jarrett Scott Ford">
+                    <iframe src="/demo/ford-starter" loading="lazy" tabindex="-1"></iframe>
+                    <div class="preview-overlay">
+                        <span class="preview-badge"><span class="dot" style="background:#0071b2;"></span> Live Preview</span>
+                    </div>
+                </a>
+                <div class="card-info">
+                    <div class="card-header">
+                        <img class="dealer-logo" src="https://storage.googleapis.com/savvy-images/JarrettScottFord-logo.jpg" alt="Jarrett Scott Ford logo" />
+                        <div class="card-header-text">
+                            <h2>Jarrett Scott Ford</h2>
+                            <span class="tagline">Plant City, FL &middot; Platform Starter</span>
+                        </div>
+                    </div>
+                    <div class="color-bar">
+                        <span class="swatch"><span class="swatch-dot" style="background:#0071b2;"></span>Primary</span>
+                        <span class="swatch"><span class="swatch-dot" style="background:#30770f;"></span>Accent</span>
+                        <span class="swatch"><span class="swatch-dot" style="background:#bc0600;"></span>Secondary</span>
+                    </div>
+                    <div class="features">
+                        <span class="feature-tag">Blue Nav</span>
+                        <span class="feature-tag">VCP Grid</span>
+                        <span class="feature-tag">Reviews</span>
+                        <span class="feature-tag">Hours Widget</span>
+                    </div>
+                    <div class="card-actions">
+                        <a href="/demo/ford-starter" class="btn btn-primary"><i class="fa fa-desktop"></i> Homepage</a>
+                        <a href="/demo/ford-starter/inventory" class="btn btn-secondary"><i class="fa fa-search"></i> Inventory</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Mullinax Ford -->
+            <article class="template-card">
+                <a href="/demo/mullinax-ford" class="preview-wrapper" title="View Mullinax Ford">
+                    <iframe src="/demo/mullinax-ford" loading="lazy" tabindex="-1"></iframe>
+                    <div class="preview-overlay">
+                        <span class="preview-badge"><span class="dot" style="background:#ffd900;"></span> Live Preview</span>
+                    </div>
+                </a>
+                <div class="card-info">
+                    <div class="card-header">
+                        <img class="dealer-logo" src="https://images.remorainc.com/uploads/k1o/d/9iTtZntS5mg2dtz2vKuG_Zy8KJCNBSaOLgQX3tVwZ_mullinax-ford-group-logo-new-2000_515.png" alt="Mullinax Ford logo" />
+                        <div class="card-header-text">
+                            <h2>Mullinax Ford</h2>
+                            <span class="tagline">Apopka, FL &middot; Volume Dealer</span>
+                        </div>
+                    </div>
+                    <div class="color-bar">
+                        <span class="swatch"><span class="swatch-dot" style="background:#1f76b3;"></span>Primary</span>
+                        <span class="swatch"><span class="swatch-dot" style="background:#ffd900;"></span>Accent</span>
+                        <span class="swatch"><span class="swatch-dot" style="background:#dd2334;"></span>Secondary</span>
+                    </div>
+                    <div class="features">
+                        <span class="feature-tag">$0 Fees</span>
+                        <span class="feature-tag">Up Front Pricing</span>
+                        <span class="feature-tag">Yellow Accents</span>
+                    </div>
+                    <div class="card-actions">
+                        <a href="/demo/mullinax-ford" class="btn btn-primary"><i class="fa fa-desktop"></i> Homepage</a>
+                        <a href="/demo/mullinax-ford/inventory" class="btn btn-secondary"><i class="fa fa-search"></i> Inventory</a>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+
+        <!-- ── Style Showcase ── -->
+        <div class="section-header">
+            <h2>Style Showcase</h2>
+            <h3>10 Unique Design Styles</h3>
+            <p>Same dealership, completely different visual identity - showing the range of what's possible</p>
+        </div>
+
+        <section class="styles-gallery">
+
+            <!-- 1. Dark Luxury -->
+            <article class="style-card">
+                <a href="/demo/js-dark-luxury" class="preview-wrapper" title="View Dark Luxury Demo">
+                    <iframe src="/demo/js-dark-luxury" loading="lazy" tabindex="-1"></iframe>
+                    <span class="style-number-badge">01</span>
+                    <div class="preview-overlay">
+                        <span class="preview-badge"><span class="dot" style="background:#c9a84c;"></span> Dark Luxury</span>
+                    </div>
+                </a>
+                <div class="style-info">
+                    <h3>Dark Luxury</h3>
+                    <p class="style-desc">Premium dark theme with gold accents. Inspired by Genesis, Porsche, and luxury brands.</p>
+                    <div class="style-meta">
+                        <div class="style-colors">
+                            <span class="color-dot" style="background:#0a0a0a;"></span>
+                            <span class="color-dot" style="background:#c9a84c;"></span>
+                            <span class="color-dot" style="background:#1a1a1a;"></span>
+                        </div>
+                        <div class="style-actions">
+                            <a href="/demo/js-dark-luxury" class="view-btn"><i class="fa fa-desktop"></i> Home</a>
+                            <a href="/demo/js-dark-luxury/inventory" class="view-btn-inv"><i class="fa fa-search"></i> SRP</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 2. Clean Minimal -->
+            <article class="style-card">
+                <a href="/demo/js-minimal" class="preview-wrapper" title="View Clean Minimal Demo">
+                    <iframe src="/demo/js-minimal" loading="lazy" tabindex="-1"></iframe>
+                    <span class="style-number-badge">02</span>
+                    <div class="preview-overlay">
+                        <span class="preview-badge"><span class="dot" style="background:#4361ee;"></span> Clean Minimal</span>
+                    </div>
+                </a>
+                <div class="style-info">
+                    <h3>Clean Minimal</h3>
+                    <p class="style-desc">Ultra-clean design with generous whitespace. Inspired by Apple, Stripe, and Linear.</p>
+                    <div class="style-meta">
+                        <div class="style-colors">
+                            <span class="color-dot" style="background:#ffffff; border-color:rgba(255,255,255,0.3);"></span>
+                            <span class="color-dot" style="background:#1a1a2e;"></span>
+                            <span class="color-dot" style="background:#4361ee;"></span>
+                        </div>
+                        <div class="style-actions">
+                            <a href="/demo/js-minimal" class="view-btn"><i class="fa fa-desktop"></i> Home</a>
+                            <a href="/demo/js-minimal/inventory" class="view-btn-inv"><i class="fa fa-search"></i> SRP</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 3. Bold Brutalist -->
+            <article class="style-card">
+                <a href="/demo/js-brutalist" class="preview-wrapper" title="View Brutalist Demo">
+                    <iframe src="/demo/js-brutalist" loading="lazy" tabindex="-1"></iframe>
+                    <span class="style-number-badge">03</span>
+                    <div class="preview-overlay">
+                        <span class="preview-badge"><span class="dot" style="background:#ff0000;"></span> Brutalist</span>
+                    </div>
+                </a>
+                <div class="style-info">
+                    <h3>Bold Brutalist</h3>
+                    <p class="style-desc">Raw typography, stark contrasts, and industrial grid layouts. Unapologetically bold.</p>
+                    <div class="style-meta">
+                        <div class="style-colors">
+                            <span class="color-dot" style="background:#000;"></span>
+                            <span class="color-dot" style="background:#fff; border-color:rgba(255,255,255,0.3);"></span>
+                            <span class="color-dot" style="background:#ff0000;"></span>
+                        </div>
+                        <div class="style-actions">
+                            <a href="/demo/js-brutalist" class="view-btn"><i class="fa fa-desktop"></i> Home</a>
+                            <a href="/demo/js-brutalist/inventory" class="view-btn-inv"><i class="fa fa-search"></i> SRP</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 4. Editorial -->
+            <article class="style-card">
+                <a href="/demo/js-editorial" class="preview-wrapper" title="View Editorial Demo">
+                    <iframe src="/demo/js-editorial" loading="lazy" tabindex="-1"></iframe>
+                    <span class="style-number-badge">04</span>
+                    <div class="preview-overlay">
+                        <span class="preview-badge"><span class="dot" style="background:#c45d3e;"></span> Editorial</span>
+                    </div>
+                </a>
+                <div class="style-info">
+                    <h3>Editorial</h3>
+                    <p class="style-desc">Magazine-style layout with elegant serif typography. Premium automotive publication feel.</p>
+                    <div class="style-meta">
+                        <div class="style-colors">
+                            <span class="color-dot" style="background:#f5f0eb; border-color:rgba(255,255,255,0.3);"></span>
+                            <span class="color-dot" style="background:#2d2d2d;"></span>
+                            <span class="color-dot" style="background:#c45d3e;"></span>
+                        </div>
+                        <div class="style-actions">
+                            <a href="/demo/js-editorial" class="view-btn"><i class="fa fa-desktop"></i> Home</a>
+                            <a href="/demo/js-editorial/inventory" class="view-btn-inv"><i class="fa fa-search"></i> SRP</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 5. Retro Americana -->
+            <article class="style-card">
+                <a href="/demo/js-retro" class="preview-wrapper" title="View Retro Demo">
+                    <iframe src="/demo/js-retro" loading="lazy" tabindex="-1"></iframe>
+                    <span class="style-number-badge">05</span>
+                    <div class="preview-overlay">
+                        <span class="preview-badge"><span class="dot" style="background:#c41e3a;"></span> Retro Americana</span>
+                    </div>
+                </a>
+                <div class="style-info">
+                    <h3>Retro Americana</h3>
+                    <p class="style-desc">Vintage 1960s car culture aesthetic. Classic American typography and warm nostalgic tones.</p>
+                    <div class="style-meta">
+                        <div class="style-colors">
+                            <span class="color-dot" style="background:#1b2a4a;"></span>
+                            <span class="color-dot" style="background:#c41e3a;"></span>
+                            <span class="color-dot" style="background:#d4a017;"></span>
+                            <span class="color-dot" style="background:#faf3e3; border-color:rgba(255,255,255,0.3);"></span>
+                        </div>
+                        <div class="style-actions">
+                            <a href="/demo/js-retro" class="view-btn"><i class="fa fa-desktop"></i> Home</a>
+                            <a href="/demo/js-retro/inventory" class="view-btn-inv"><i class="fa fa-search"></i> SRP</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 6. Glass Futuristic -->
+            <article class="style-card">
+                <a href="/demo/js-glass" class="preview-wrapper" title="View Glass Futuristic Demo">
+                    <iframe src="/demo/js-glass" loading="lazy" tabindex="-1"></iframe>
+                    <span class="style-number-badge">06</span>
+                    <div class="preview-overlay">
+                        <span class="preview-badge"><span class="dot" style="background:#00d4ff;"></span> Glass Futuristic</span>
+                    </div>
+                </a>
+                <div class="style-info">
+                    <h3>Glass Futuristic</h3>
+                    <p class="style-desc">Glassmorphism with neon accents on dark gradients. Sci-fi interfaces meet concept cars.</p>
+                    <div class="style-meta">
+                        <div class="style-colors">
+                            <span class="color-dot" style="background:#0f0c29;"></span>
+                            <span class="color-dot" style="background:#302b63;"></span>
+                            <span class="color-dot" style="background:#00d4ff;"></span>
+                            <span class="color-dot" style="background:#7c3aed;"></span>
+                        </div>
+                        <div class="style-actions">
+                            <a href="/demo/js-glass" class="view-btn"><i class="fa fa-desktop"></i> Home</a>
+                            <a href="/demo/js-glass/inventory" class="view-btn-inv"><i class="fa fa-search"></i> SRP</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 7. Split Screen -->
+            <article class="style-card">
+                <a href="/demo/js-split" class="preview-wrapper" title="View Split Screen Demo">
+                    <iframe src="/demo/js-split" loading="lazy" tabindex="-1"></iframe>
+                    <span class="style-number-badge">07</span>
+                    <div class="preview-overlay">
+                        <span class="preview-badge"><span class="dot" style="background:#e8732a;"></span> Split Screen</span>
+                    </div>
+                </a>
+                <div class="style-info">
+                    <h3>Split Screen</h3>
+                    <p class="style-desc">Bold asymmetric layouts with split-screen sections. Creative agency meets dealership.</p>
+                    <div class="style-meta">
+                        <div class="style-colors">
+                            <span class="color-dot" style="background:#0a1628;"></span>
+                            <span class="color-dot" style="background:#e8732a;"></span>
+                            <span class="color-dot" style="background:#fff; border-color:rgba(255,255,255,0.3);"></span>
+                        </div>
+                        <div class="style-actions">
+                            <a href="/demo/js-split" class="view-btn"><i class="fa fa-desktop"></i> Home</a>
+                            <a href="/demo/js-split/inventory" class="view-btn-inv"><i class="fa fa-search"></i> SRP</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 8. Cinematic -->
+            <article class="style-card">
+                <a href="/demo/js-cinematic" class="preview-wrapper" title="View Cinematic Demo">
+                    <iframe src="/demo/js-cinematic" loading="lazy" tabindex="-1"></iframe>
+                    <span class="style-number-badge">08</span>
+                    <div class="preview-overlay">
+                        <span class="preview-badge"><span class="dot" style="background:#f59e0b;"></span> Cinematic</span>
+                    </div>
+                </a>
+                <div class="style-info">
+                    <h3>Cinematic</h3>
+                    <p class="style-desc">Dramatic full-screen immersive design. Every section feels like a movie scene.</p>
+                    <div class="style-meta">
+                        <div class="style-colors">
+                            <span class="color-dot" style="background:#000;"></span>
+                            <span class="color-dot" style="background:#0071b2;"></span>
+                            <span class="color-dot" style="background:#f59e0b;"></span>
+                        </div>
+                        <div class="style-actions">
+                            <a href="/demo/js-cinematic" class="view-btn"><i class="fa fa-desktop"></i> Home</a>
+                            <a href="/demo/js-cinematic/inventory" class="view-btn-inv"><i class="fa fa-search"></i> SRP</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 9. Playful Modern -->
+            <article class="style-card">
+                <a href="/demo/js-playful" class="preview-wrapper" title="View Playful Demo">
+                    <iframe src="/demo/js-playful" loading="lazy" tabindex="-1"></iframe>
+                    <span class="style-number-badge">09</span>
+                    <div class="preview-overlay">
+                        <span class="preview-badge"><span class="dot" style="background:#4f46e5;"></span> Playful Modern</span>
+                    </div>
+                </a>
+                <div class="style-info">
+                    <h3>Playful Modern</h3>
+                    <p class="style-desc">Vibrant gradients, rounded shapes, and friendly typography. Startup meets dealership.</p>
+                    <div class="style-meta">
+                        <div class="style-colors">
+                            <span class="color-dot" style="background:#4f46e5;"></span>
+                            <span class="color-dot" style="background:#f472b6;"></span>
+                            <span class="color-dot" style="background:#34d399;"></span>
+                        </div>
+                        <div class="style-actions">
+                            <a href="/demo/js-playful" class="view-btn"><i class="fa fa-desktop"></i> Home</a>
+                            <a href="/demo/js-playful/inventory" class="view-btn-inv"><i class="fa fa-search"></i> SRP</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 10. High Fashion -->
+            <article class="style-card">
+                <a href="/demo/js-fashion" class="preview-wrapper" title="View High Fashion Demo">
+                    <iframe src="/demo/js-fashion" loading="lazy" tabindex="-1"></iframe>
+                    <span class="style-number-badge">10</span>
+                    <div class="preview-overlay">
+                        <span class="preview-badge"><span class="dot" style="background:#ff0033;"></span> High Fashion</span>
+                    </div>
+                </a>
+                <div class="style-info">
+                    <h3>High Fashion</h3>
+                    <p class="style-desc">Ultra-minimal with oversized typography and radical whitespace. Luxury fashion house aesthetic.</p>
+                    <div class="style-meta">
+                        <div class="style-colors">
+                            <span class="color-dot" style="background:#fff; border-color:rgba(255,255,255,0.3);"></span>
+                            <span class="color-dot" style="background:#000;"></span>
+                            <span class="color-dot" style="background:#ff0033;"></span>
+                        </div>
+                        <div class="style-actions">
+                            <a href="/demo/js-fashion" class="view-btn"><i class="fa fa-desktop"></i> Home</a>
+                            <a href="/demo/js-fashion/inventory" class="view-btn-inv"><i class="fa fa-search"></i> SRP</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+
+        <footer>
+            <p>&copy; 2026 SavvyDealer &middot; <a href="https://www.savvydealer.com">savvydealer.com</a></p>
+        </footer>
+
+    </div>
+</body>
+</html>

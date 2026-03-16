@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jarrett Scott Ford | Your Plant City, FL Ford Dealer</title>
+  <meta name="description" content="Jarrett Scott Ford in Plant City, FL. Shop new Ford trucks, SUVs, and cars. Trusted service and financing. Call (813) 752-4171.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --cream: #faf3e3;
+      --cream-dark: #f0e6d0;
+      --red: #c41e3a;
+      --red-dark: #a01830;
+      --navy: #1b2a4a;
+      --navy-light: #2a3d66;
+      --gold: #d4a017;
+      --gold-light: #e8bd4a;
+      --brown-dark: #2c1810;
+      --charcoal: #1a1a1a;
+      --warm-black: #111;
+      --warm-white: #fdf8ef;
+      --border-color: #c9b896;
+      --shadow-warm: 0 4px 20px rgba(44, 24, 16, 0.15);
+      --shadow-heavy: 0 8px 32px rgba(44, 24, 16, 0.2);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Lora', Georgia, serif;
+      color: var(--brown-dark);
+      background-color: var(--cream);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      /* subtle paper grain texture */
+      background-image:
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+    }
+
+    img { max-width: 100%; height: auto; display: block; }
+    a { text-decoration: none; color: inherit; transition: color 0.3s ease, opacity 0.3s ease; }
+    ul { list-style: none; }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ===== TYPOGRAPHY ===== */
+    h1, h2, h3, h4, h5 {
+      font-family: 'Oswald', 'Arial Narrow', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      line-height: 1.15;
+      font-weight: 700;
+    }
+
+    /* ===== DECORATIVE ELEMENTS ===== */
+    .retro-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin: 12px auto 32px;
+      max-width: 320px;
+    }
+    .retro-divider::before,
+    .retro-divider::after {
+      content: '';
+      flex: 1;
+      height: 2px;
+      background: var(--gold);
+    }
+    .retro-divider .star {
+      color: var(--gold);
+      font-size: 14px;
+    }
+
+    .section-badge {
+      display: inline-block;
+      font-family: 'Oswald', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 2px solid var(--gold);
+      padding: 6px 20px;
+      margin-bottom: 16px;
+    }
+
+    .section-badge--light {
+      color: var(--cream);
+      border-color: var(--cream);
+    }
+
+    /* ===== BUTTONS ===== */
+    .btn {
+      display: inline-block;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 600;
+      font-size: 15px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 14px 36px;
+      border: 3px solid transparent;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .btn-primary {
+      background: var(--red);
+      color: var(--cream);
+      border-color: var(--red);
+    }
+    .btn-primary:hover {
+      background: var(--red-dark);
+      border-color: var(--red-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(196, 30, 58, 0.3);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--cream);
+      border-color: var(--cream);
+    }
+    .btn-outline:hover {
+      background: var(--cream);
+      color: var(--navy);
+      transform: translateY(-2px);
+    }
+    .btn-gold {
+      background: var(--gold);
+      color: var(--brown-dark);
+      border-color: var(--gold);
+    }
+    .btn-gold:hover {
+      background: var(--gold-light);
+      border-color: var(--gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(212, 160, 23, 0.3);
+    }
+
+    /* ===== NAVIGATION ===== */
+    .nav {
+      background: var(--navy);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 3px solid var(--gold);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+      height: 72px;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .nav-logo img {
+      height: 48px;
+      width: auto;
+      border-radius: 4px;
+    }
+    .nav-logo-text {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+      color: var(--cream);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      line-height: 1.1;
+    }
+    .nav-logo-text small {
+      display: block;
+      font-size: 10px;
+      font-weight: 500;
+      color: var(--gold);
+      letter-spacing: 0.2em;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .nav-links a {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--cream);
+      padding: 8px 14px;
+      border-bottom: 2px solid transparent;
+      transition: all 0.3s ease;
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--gold);
+      border-bottom-color: var(--gold);
+    }
+    .nav-phone {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      color: var(--gold);
+      letter-spacing: 0.04em;
+    }
+    .nav-phone i { font-size: 14px; }
+    .nav-phone:hover { color: var(--gold-light); }
+
+    /* Mobile menu toggle */
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--cream);
+      font-size: 24px;
+      cursor: pointer;
+      padding: 8px;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      background: var(--charcoal);
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://storage.googleapis.com/savvy-images/slides/Jarrett-Scott-Ford---Plant-City/Jarrett-RealDeals-HomepageBackground-(1)-W1800.jpeg');
+      background-size: cover;
+      background-position: center;
+      filter: brightness(0.35) sepia(0.3);
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(27, 42, 74, 0.6) 0%,
+        rgba(44, 24, 16, 0.7) 50%,
+        rgba(26, 26, 26, 0.85) 100%
+      );
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 60px 24px;
+      max-width: 860px;
+    }
+
+    /* Decorative emblem */
+    .hero-emblem {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100px;
+      height: 100px;
+      border: 3px solid var(--gold);
+      border-radius: 50%;
+      margin-bottom: 28px;
+      position: relative;
+    }
+    .hero-emblem::before {
+      content: '';
+      position: absolute;
+      inset: 6px;
+      border: 1px solid var(--gold);
+      border-radius: 50%;
+      opacity: 0.5;
+    }
+    .hero-emblem span {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      font-size: 12px;
+      color: var(--gold);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      line-height: 1.3;
+      text-align: center;
+    }
+
+    .hero-title {
+      font-size: clamp(42px, 7vw, 84px);
+      color: var(--cream);
+      margin-bottom: 8px;
+      text-shadow: 2px 4px 16px rgba(0,0,0,0.4);
+    }
+    .hero-title .accent {
+      color: var(--gold);
+      display: block;
+      font-size: 0.4em;
+      letter-spacing: 0.3em;
+      margin-bottom: 8px;
+    }
+    .hero-subtitle {
+      font-family: 'Lora', serif;
+      font-size: clamp(16px, 2.2vw, 22px);
+      color: var(--cream-dark);
+      font-weight: 400;
+      font-style: italic;
+      margin-bottom: 40px;
+      opacity: 0.9;
+    }
+    .hero-ctas {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* vintage decorative line under hero */
+    .hero-bottom-border {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: repeating-linear-gradient(
+        90deg,
+        var(--red) 0px,
+        var(--red) 20px,
+        var(--cream) 20px,
+        var(--cream) 24px,
+        var(--navy) 24px,
+        var(--navy) 44px,
+        var(--cream) 44px,
+        var(--cream) 48px
+      );
+      z-index: 3;
+    }
+
+    /* ===== SHOP BY MODEL ===== */
+    .models {
+      padding: 80px 0;
+      background: var(--cream);
+    }
+    .models .section-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+    .models .section-header h2 {
+      font-size: clamp(32px, 4vw, 48px);
+      color: var(--navy);
+    }
+    .models-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .model-card {
+      background: var(--warm-white);
+      border: 3px solid var(--border-color);
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+    }
+    .model-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-heavy);
+    }
+    .model-card-img {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 16/10;
+      background: linear-gradient(180deg, #f5edd8 0%, #e8dcc4 100%);
+    }
+    .model-card-img::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(27, 42, 74, 0.03) 0%, rgba(180, 140, 60, 0.06) 100%);
+      pointer-events: none;
+    }
+    .model-card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .model-card:hover .model-card-img img {
+      transform: scale(1.05);
+    }
+    .model-card-body {
+      padding: 20px 24px 24px;
+      text-align: center;
+      border-top: 2px solid var(--border-color);
+    }
+    .model-card-body h3 {
+      font-size: 22px;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+    .model-card-body p {
+      font-size: 13px;
+      color: #8a7a6a;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .model-card-body .btn {
+      padding: 10px 28px;
+      font-size: 13px;
+    }
+
+    /* badge corner ribbon */
+    .model-card .ribbon {
+      position: absolute;
+      top: 14px;
+      left: -6px;
+      background: var(--red);
+      color: var(--cream);
+      font-family: 'Oswald', sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 5px 14px 5px 18px;
+      z-index: 2;
+    }
+    .model-card .ribbon::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      border-style: solid;
+      border-width: 0 6px 6px 0;
+      border-color: transparent var(--red-dark) transparent transparent;
+    }
+
+    /* ===== REVIEWS ===== */
+    .reviews {
+      padding: 80px 0;
+      background: var(--brown-dark);
+      color: var(--cream);
+      position: relative;
+      overflow: hidden;
+    }
+    .reviews::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+      opacity: 0.5;
+    }
+    .reviews .section-header {
+      text-align: center;
+      margin-bottom: 56px;
+      position: relative;
+      z-index: 1;
+    }
+    .reviews .section-header h2 {
+      font-size: clamp(32px, 4vw, 48px);
+      color: var(--cream);
+    }
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      position: relative;
+      z-index: 1;
+    }
+    .review-card {
+      background: rgba(250, 243, 227, 0.06);
+      border: 2px solid rgba(212, 160, 23, 0.25);
+      border-radius: 8px;
+      padding: 36px 32px;
+      position: relative;
+      transition: border-color 0.3s ease, background 0.3s ease;
+    }
+    .review-card:hover {
+      border-color: var(--gold);
+      background: rgba(250, 243, 227, 0.1);
+    }
+    .review-card .quote-mark {
+      font-family: 'Lora', serif;
+      font-size: 64px;
+      color: var(--gold);
+      opacity: 0.3;
+      position: absolute;
+      top: 12px;
+      left: 24px;
+      line-height: 1;
+    }
+    .review-stars {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 16px;
+    }
+    .review-stars i {
+      color: var(--gold);
+      font-size: 16px;
+    }
+    .review-card blockquote {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--cream-dark);
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+    .review-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .review-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--navy);
+      border: 2px solid var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      color: var(--gold);
+    }
+    .review-author-info strong {
+      display: block;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 600;
+      font-size: 15px;
+      letter-spacing: 0.06em;
+      color: var(--cream);
+    }
+    .review-author-info span {
+      font-size: 13px;
+      color: rgba(250, 243, 227, 0.5);
+    }
+
+    /* ===== ABOUT ===== */
+    .about {
+      padding: 80px 0;
+      background: var(--cream);
+    }
+    .about-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .about-text .section-badge { margin-bottom: 20px; }
+    .about-text h2 {
+      font-size: clamp(32px, 3.5vw, 44px);
+      color: var(--navy);
+      margin-bottom: 24px;
+    }
+    .about-text p {
+      font-size: 16px;
+      color: #5a4a3a;
+      margin-bottom: 18px;
+    }
+    .about-text .btn {
+      margin-top: 12px;
+    }
+    .about-image {
+      position: relative;
+    }
+    .about-image-frame {
+      border: 4px solid var(--border-color);
+      border-radius: 8px;
+      overflow: hidden;
+      position: relative;
+    }
+    .about-image-frame img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      filter: sepia(0.15) brightness(0.95);
+    }
+    .about-image-frame::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(212, 160, 23, 0.05) 0%, rgba(44, 24, 16, 0.1) 100%);
+      pointer-events: none;
+    }
+    /* decorative badge on image */
+    .about-badge {
+      position: absolute;
+      bottom: -20px;
+      right: 30px;
+      width: 110px;
+      height: 110px;
+      background: var(--red);
+      border-radius: 50%;
+      border: 4px solid var(--cream);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-warm);
+    }
+    .about-badge span:first-child {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      font-size: 11px;
+      color: var(--cream);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+    .about-badge span:nth-child(2) {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      font-size: 28px;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .about-badge span:last-child {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      color: var(--cream);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    /* ===== HOURS ===== */
+    .hours {
+      padding: 80px 0;
+      background: var(--navy);
+      color: var(--cream);
+      position: relative;
+    }
+    .hours::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    }
+    .hours .section-header {
+      text-align: center;
+      margin-bottom: 56px;
+      position: relative;
+      z-index: 1;
+    }
+    .hours .section-header h2 {
+      font-size: clamp(32px, 4vw, 48px);
+      color: var(--cream);
+    }
+    .hours-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+      max-width: 880px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    .hours-card {
+      background: rgba(250, 243, 227, 0.05);
+      border: 3px solid var(--gold);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .hours-card-header {
+      background: var(--gold);
+      padding: 16px 24px;
+      text-align: center;
+    }
+    .hours-card-header h3 {
+      font-size: 20px;
+      color: var(--brown-dark);
+      letter-spacing: 0.15em;
+    }
+    .hours-card-header i {
+      margin-right: 8px;
+      font-size: 18px;
+    }
+    .hours-card-body {
+      padding: 24px;
+    }
+    .hours-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(212, 160, 23, 0.15);
+      font-family: 'Lora', serif;
+      font-size: 15px;
+    }
+    .hours-row:last-child { border-bottom: none; }
+    .hours-row .day {
+      font-weight: 600;
+      color: var(--cream);
+    }
+    .hours-row .time {
+      color: var(--gold-light);
+    }
+    .hours-row .time.closed {
+      color: var(--red);
+      font-weight: 600;
+    }
+
+    /* address bar under hours */
+    .hours-address {
+      text-align: center;
+      margin-top: 48px;
+      position: relative;
+      z-index: 1;
+    }
+    .hours-address p {
+      font-family: 'Lora', serif;
+      font-size: 16px;
+      color: var(--cream-dark);
+      margin-bottom: 8px;
+    }
+    .hours-address a {
+      color: var(--gold);
+      font-weight: 600;
+    }
+    .hours-address a:hover {
+      color: var(--gold-light);
+      text-decoration: underline;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: var(--charcoal);
+      color: var(--cream-dark);
+      padding: 56px 0 0;
+      border-top: 4px solid var(--gold);
+    }
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 48px;
+    }
+    .footer-brand h3 {
+      font-size: 24px;
+      color: var(--cream);
+      margin-bottom: 4px;
+    }
+    .footer-brand .tagline {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 14px;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+    .footer-brand p {
+      font-size: 14px;
+      line-height: 1.7;
+      color: rgba(250, 243, 227, 0.6);
+      margin-bottom: 20px;
+    }
+    .footer-social {
+      display: flex;
+      gap: 12px;
+    }
+    .footer-social a {
+      width: 40px;
+      height: 40px;
+      border: 2px solid rgba(212, 160, 23, 0.4);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+    .footer-social a:hover {
+      background: var(--gold);
+      color: var(--charcoal);
+      border-color: var(--gold);
+    }
+    .footer-col h4 {
+      font-size: 15px;
+      color: var(--cream);
+      margin-bottom: 20px;
+      letter-spacing: 0.15em;
+      position: relative;
+      padding-bottom: 12px;
+    }
+    .footer-col h4::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 32px;
+      height: 2px;
+      background: var(--red);
+    }
+    .footer-col ul li {
+      margin-bottom: 10px;
+    }
+    .footer-col ul li a {
+      font-family: 'Lora', serif;
+      font-size: 14px;
+      color: rgba(250, 243, 227, 0.6);
+      transition: color 0.3s ease;
+    }
+    .footer-col ul li a:hover {
+      color: var(--gold);
+    }
+    .footer-col .contact-line {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 14px;
+      font-size: 14px;
+      color: rgba(250, 243, 227, 0.6);
+    }
+    .footer-col .contact-line i {
+      color: var(--gold);
+      font-size: 14px;
+      margin-top: 4px;
+      width: 16px;
+      text-align: center;
+    }
+    .footer-col .contact-line a {
+      color: rgba(250, 243, 227, 0.6);
+    }
+    .footer-col .contact-line a:hover {
+      color: var(--gold);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(250, 243, 227, 0.1);
+      padding: 20px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      color: rgba(250, 243, 227, 0.4);
+    }
+    .footer-bottom a {
+      color: var(--gold);
+      opacity: 0.7;
+    }
+    .footer-bottom a:hover {
+      opacity: 1;
+    }
+
+    /* ===== SCROLL-TO-TOP ===== */
+    .scroll-top {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      width: 48px;
+      height: 48px;
+      background: var(--red);
+      color: var(--cream);
+      border: 2px solid var(--cream);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 900;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    }
+    .scroll-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+    .scroll-top:hover {
+      background: var(--red-dark);
+      transform: translateY(-3px);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .models-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .footer-inner {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-inner { height: 64px; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        background: var(--navy);
+        flex-direction: column;
+        padding: 16px 0;
+        border-top: 2px solid var(--gold);
+        box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a {
+        padding: 12px 24px;
+        width: 100%;
+        text-align: center;
+      }
+      .nav-toggle { display: block; }
+      .nav-phone { display: none; }
+
+      .hero { min-height: 70vh; }
+      .hero-emblem { width: 80px; height: 80px; }
+      .hero-emblem span { font-size: 10px; }
+
+      .models-grid {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+        margin: 0 auto;
+      }
+
+      .reviews-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .about-image { order: -1; }
+      .about-image-frame img { height: 300px; }
+
+      .hours-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .footer-col h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .footer-social { justify-content: center; }
+      .footer-col .contact-line { justify-content: center; }
+      .footer-bottom {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-ctas { flex-direction: column; align-items: center; }
+      .btn { width: 100%; text-align: center; max-width: 300px; }
+      .review-card { padding: 28px 20px; }
+    }
+
+    /* ===== ANIMATIONS ===== */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="/demo/js-retro" class="nav-logo">
+        <img src="https://storage.googleapis.com/savvy-images/JarrettScottFord-logo.jpg" alt="Jarrett Scott Ford Logo">
+        <div class="nav-logo-text">
+          Jarrett Scott Ford
+          <small>Plant City, FL</small>
+        </div>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="/demo/js-retro" class="active">Home</a>
+        <a href="/demo/js-retro/inventory">New</a>
+        <a href="/used">Used</a>
+        <a href="/finance">Finance</a>
+        <a href="/service">Service</a>
+        <a href="/about">About</a>
+      </div>
+      <a href="tel:8137524171" class="nav-phone">
+        <i class="fa fa-phone"></i> (813) 752-4171
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <i class="fa fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-emblem">
+        <span>EST.<br>2000</span>
+      </div>
+      <h1 class="hero-title">
+        <span class="accent">Welcome to</span>
+        Jarrett Scott Ford
+      </h1>
+      <p class="hero-subtitle">Plant City's Trusted Ford Dealer Since Day One</p>
+      <div class="hero-ctas">
+        <a href="/demo/js-retro/inventory" class="btn btn-primary">Browse Inventory</a>
+        <a href="/service" class="btn btn-outline">Schedule Service</a>
+      </div>
+    </div>
+    <div class="hero-bottom-border"></div>
+  </section>
+
+  <!-- ===== SHOP BY MODEL ===== -->
+  <section class="models" id="models">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Explore the Lineup</div>
+        <h2>Shop by Model</h2>
+        <div class="retro-divider">
+          <span class="star"><i class="fa fa-star"></i></span>
+        </div>
+      </div>
+      <div class="models-grid">
+
+        <div class="model-card fade-up">
+          <div class="ribbon">Best Seller</div>
+          <div class="model-card-img">
+            <img src="https://www.ford.com/acslibs/content/dam/na/ford/en_us/images/f-150/2026/general/26_FRD_F15_ModelWalk_backplate.jpg" alt="Ford F-150" loading="lazy">
+          </div>
+          <div class="model-card-body">
+            <h3>F-150</h3>
+            <p>America's Favorite Truck</p>
+            <a href="/demo/js-retro/inventory?model=F-150" class="btn btn-gold">View Inventory</a>
+          </div>
+        </div>
+
+        <div class="model-card fade-up">
+          <div class="model-card-img">
+            <img src="https://www.assets.ford.com/adobe/assets/urn:aaid:aem:04794b1d-d35b-42d6-9740-7126f92ee8ff/as/26_FRD_EPR_66100_trem_crgr.webp" alt="Ford Explorer" loading="lazy">
+          </div>
+          <div class="model-card-body">
+            <h3>Explorer</h3>
+            <p>Adventure Awaits</p>
+            <a href="/demo/js-retro/inventory?model=Explorer" class="btn btn-gold">View Inventory</a>
+          </div>
+        </div>
+
+        <div class="model-card fade-up">
+          <div class="model-card-img">
+            <img src="https://www.assets.ford.com/adobe/assets/urn:aaid:aem:82f51afe-6d0d-44d7-b16c-046b6504309f/as/26_frd_bro_badl_68143_grayroof_bluebody.webp" alt="Ford Bronco" loading="lazy">
+          </div>
+          <div class="model-card-body">
+            <h3>Bronco</h3>
+            <p>Born Wild</p>
+            <a href="/demo/js-retro/inventory?model=Bronco" class="btn btn-gold">View Inventory</a>
+          </div>
+        </div>
+
+        <div class="model-card fade-up">
+          <div class="model-card-img">
+            <img src="https://www.assets.ford.com/adobe/assets/urn:aaid:aem:c772d86a-cfd0-485b-bd87-06204a2d41ee/as/26_FRD_BRS_64850_outb_sasq_oxwh.webp" alt="Ford Bronco Sport" loading="lazy">
+          </div>
+          <div class="model-card-body">
+            <h3>Bronco Sport</h3>
+            <p>Ready for Anything</p>
+            <a href="/demo/js-retro/inventory?model=Bronco+Sport" class="btn btn-gold">View Inventory</a>
+          </div>
+        </div>
+
+        <div class="model-card fade-up">
+          <div class="model-card-img">
+            <img src="https://www.ford.com/acslibs/content/dam/na/ford/en_us/images/escape/2026/jellybeans/26_frd_esp_stln_crgr_dr78.png" alt="Ford Escape" loading="lazy">
+          </div>
+          <div class="model-card-body">
+            <h3>Escape</h3>
+            <p>Versatile & Efficient</p>
+            <a href="/demo/js-retro/inventory?model=Escape" class="btn btn-gold">View Inventory</a>
+          </div>
+        </div>
+
+        <div class="model-card fade-up">
+          <div class="ribbon">Heavy Duty</div>
+          <div class="model-card-img">
+            <img src="https://www.assets.ford.com/adobe/assets/urn:aaid:aem:00c8c7f5-135b-489f-affb-60d6bed4f1a8/as/25_FRD_FSD_58688_450XL_CrbGray.webp" alt="Ford Super Duty" loading="lazy">
+          </div>
+          <div class="model-card-body">
+            <h3>Super Duty</h3>
+            <p>Built Ford Tough</p>
+            <a href="/demo/js-retro/inventory?model=Super+Duty" class="btn btn-gold">View Inventory</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== REVIEWS ===== -->
+  <section class="reviews" id="reviews">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge section-badge--light">What Our Customers Say</div>
+        <h2>Trusted by Plant City</h2>
+        <div class="retro-divider">
+          <span class="star"><i class="fa fa-star"></i></span>
+        </div>
+      </div>
+      <div class="reviews-grid">
+
+        <div class="review-card fade-up">
+          <span class="quote-mark">"</span>
+          <div class="review-stars">
+            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+          </div>
+          <blockquote>Best car-buying experience I've ever had. The sales team treated me like family, not just a transaction. Got a fantastic deal on my new F-150 and they made the whole process smooth and honest.</blockquote>
+          <div class="review-author">
+            <div class="review-avatar">MT</div>
+            <div class="review-author-info">
+              <strong>Michael T.</strong>
+              <span>Verified Buyer</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card fade-up">
+          <span class="quote-mark">"</span>
+          <div class="review-stars">
+            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+          </div>
+          <blockquote>I drove over an hour past other Ford dealers just to buy from Jarrett Scott. The online reviews were right -- they really do treat you differently here. My Explorer was ready exactly as promised.</blockquote>
+          <div class="review-author">
+            <div class="review-avatar">SK</div>
+            <div class="review-author-info">
+              <strong>Sarah K.</strong>
+              <span>Verified Buyer</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card fade-up">
+          <span class="quote-mark">"</span>
+          <div class="review-stars">
+            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+          </div>
+          <blockquote>Their service department is top-notch. Quick turnaround, fair pricing, and they always explain exactly what's needed without the pressure. Been bringing my trucks here for years and won't go anywhere else.</blockquote>
+          <div class="review-author">
+            <div class="review-avatar">RJ</div>
+            <div class="review-author-info">
+              <strong>Robert J.</strong>
+              <span>Loyal Customer</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card fade-up">
+          <span class="quote-mark">"</span>
+          <div class="review-stars">
+            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+          </div>
+          <blockquote>As a first-time buyer, I was nervous about financing. The finance team walked me through every option patiently and got me an incredible rate. Drove off in my Bronco Sport the same day!</blockquote>
+          <div class="review-author">
+            <div class="review-avatar">LM</div>
+            <div class="review-author-info">
+              <strong>Lisa M.</strong>
+              <span>Verified Buyer</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-inner">
+        <div class="about-text">
+          <div class="section-badge">Our Story</div>
+          <h2>A Tradition of Trust in Plant City</h2>
+          <p>
+            For over two decades, Jarrett Scott Ford has been the dealership Plant City calls home. Founded on the simple belief that buying a vehicle should feel good -- not stressful -- we've built our reputation one handshake at a time.
+          </p>
+          <p>
+            From the moment you walk through our doors on East Baker Street, you'll feel the difference. No high-pressure tactics. No runaround. Just honest folks who love Ford trucks and cars as much as you do, backed by a service team that treats every vehicle like their own.
+          </p>
+          <p>
+            Whether you're picking up your first F-150 or bringing in your family's Explorer for its 100,000-mile service, we're here for the long haul. That's not just a tagline -- it's how we've done business since day one.
+          </p>
+          <a href="/about" class="btn btn-primary">Learn More About Us</a>
+        </div>
+        <div class="about-image">
+          <div class="about-image-frame">
+            <img src="https://storage.googleapis.com/savvy-images/slides/Jarrett-Scott-Ford---Plant-City/Jarrett-RealDeals-HomepageBackground-(1)-W1800.jpeg" alt="Jarrett Scott Ford Dealership">
+          </div>
+          <div class="about-badge">
+            <span>Serving</span>
+            <span>25+</span>
+            <span>Years</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOURS ===== -->
+  <section class="hours" id="hours">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge section-badge--light">Visit Us</div>
+        <h2>Hours of Operation</h2>
+        <div class="retro-divider">
+          <span class="star"><i class="fa fa-star"></i></span>
+        </div>
+      </div>
+      <div class="hours-grid">
+
+        <div class="hours-card fade-up">
+          <div class="hours-card-header">
+            <h3><i class="fa fa-car"></i> Sales</h3>
+          </div>
+          <div class="hours-card-body">
+            <div class="hours-row">
+              <span class="day">Monday - Thursday</span>
+              <span class="time">8:30AM - 7:00PM</span>
+            </div>
+            <div class="hours-row">
+              <span class="day">Friday</span>
+              <span class="time">8:30AM - 7:00PM</span>
+            </div>
+            <div class="hours-row">
+              <span class="day">Saturday</span>
+              <span class="time">8:30AM - 5:00PM</span>
+            </div>
+            <div class="hours-row">
+              <span class="day">Sunday</span>
+              <span class="time closed">Closed</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hours-card fade-up">
+          <div class="hours-card-header">
+            <h3><i class="fa fa-wrench"></i> Service</h3>
+          </div>
+          <div class="hours-card-body">
+            <div class="hours-row">
+              <span class="day">Monday - Friday</span>
+              <span class="time">7:00AM - 6:00PM</span>
+            </div>
+            <div class="hours-row">
+              <span class="day">Saturday</span>
+              <span class="time">7:00AM - 4:00PM</span>
+            </div>
+            <div class="hours-row">
+              <span class="day">Sunday</span>
+              <span class="time closed">Closed</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="hours-address">
+        <p><i class="fa fa-map-marker" style="color: var(--gold); margin-right: 6px;"></i> 2000 East Baker St. Plant City, FL 33563</p>
+        <a href="https://www.google.com/maps/place/Jarrett+Scott+Ford+of+Plant+City/" target="_blank" rel="noopener noreferrer">
+          Get Directions <i class="fa fa-external-link" style="font-size: 12px;"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+
+        <div class="footer-brand">
+          <h3>Jarrett Scott Ford</h3>
+          <p class="tagline">Your Plant City, FL Ford Dealer</p>
+          <p>Proudly serving Plant City, Lakeland, Tampa, Brandon, and all of Hillsborough County with new and pre-owned Ford vehicles, expert service, and hassle-free financing.</p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/demo/js-retro/inventory">New Vehicles</a></li>
+            <li><a href="/used">Pre-Owned</a></li>
+            <li><a href="/finance">Financing</a></li>
+            <li><a href="/service">Service Center</a></li>
+            <li><a href="/about">About Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Popular Models</h4>
+          <ul>
+            <li><a href="/demo/js-retro/inventory?model=F-150">Ford F-150</a></li>
+            <li><a href="/demo/js-retro/inventory?model=Explorer">Ford Explorer</a></li>
+            <li><a href="/demo/js-retro/inventory?model=Bronco">Ford Bronco</a></li>
+            <li><a href="/demo/js-retro/inventory?model=Bronco+Sport">Ford Bronco Sport</a></li>
+            <li><a href="/demo/js-retro/inventory?model=Escape">Ford Escape</a></li>
+            <li><a href="/demo/js-retro/inventory?model=Super+Duty">Ford Super Duty</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="contact-line">
+            <i class="fa fa-phone"></i>
+            <a href="tel:8137524171">(813) 752-4171</a>
+          </div>
+          <div class="contact-line">
+            <i class="fa fa-map-marker"></i>
+            <span>2000 East Baker St.<br>Plant City, FL 33563</span>
+          </div>
+          <div class="contact-line">
+            <i class="fa fa-clock-o"></i>
+            <span>Mon-Sat: Open<br>Sun: Closed</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 Jarrett Scott Ford. All rights reserved.</span>
+        <span>Powered by <a href="https://savvydealer.com" target="_blank" rel="noopener noreferrer">SavvyDealer</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+    <i class="fa fa-chevron-up"></i>
+  </button>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script>
+    // Mobile navigation toggle
+    (function() {
+      var toggle = document.getElementById('navToggle');
+      var links = document.getElementById('navLinks');
+      var icon = toggle.querySelector('i');
+
+      toggle.addEventListener('click', function() {
+        links.classList.toggle('open');
+        if (links.classList.contains('open')) {
+          icon.className = 'fa fa-times';
+        } else {
+          icon.className = 'fa fa-bars';
+        }
+      });
+
+      // Close menu when clicking a link
+      var navAnchors = links.querySelectorAll('a');
+      for (var i = 0; i < navAnchors.length; i++) {
+        navAnchors[i].addEventListener('click', function() {
+          links.classList.remove('open');
+          icon.className = 'fa fa-bars';
+        });
+      }
+    })();
+
+    // Scroll-to-top button
+    (function() {
+      var btn = document.getElementById('scrollTop');
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 400) {
+          btn.classList.add('visible');
+        } else {
+          btn.classList.remove('visible');
+        }
+      });
+      btn.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+
+    // Intersection Observer for fade-up animations
+    (function() {
+      var elements = document.querySelectorAll('.fade-up');
+      if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.15,
+          rootMargin: '0px 0px -40px 0px'
+        });
+        elements.forEach(function(el) {
+          observer.observe(el);
+        });
+      } else {
+        // Fallback: just show everything
+        elements.forEach(function(el) {
+          el.classList.add('visible');
+        });
+      }
+    })();
+
+    // Navbar background on scroll (subtle darken)
+    (function() {
+      var nav = document.getElementById('nav');
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 20) {
+          nav.style.boxShadow = '0 4px 20px rgba(0,0,0,0.3)';
+        } else {
+          nav.style.boxShadow = 'none';
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
