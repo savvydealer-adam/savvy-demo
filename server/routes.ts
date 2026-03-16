@@ -36,7 +36,7 @@ export async function registerRoutes(
 
   // GET / - serve the template gallery landing page
   app.get("/", async (_req, res) => {
-    const galleryPath = path.join(TEMPLATES_DIR, "..", "gallery.html");
+    const galleryPath = path.resolve(process.cwd(), "gallery.html");
     if (fs.existsSync(galleryPath)) {
       return res.sendFile(galleryPath);
     }
