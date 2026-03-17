@@ -1,0 +1,17 @@
+{
+  "name": "Carolina Chrysler Dodge Jeep Ram",
+  "slug": "carolina-cdjr",
+  "location": "Elizabeth City, NC",
+  "phone": {
+    "sales": "252-621-5276",
+    "service": "252-562-0483",
+    "parts": "252-254-2866"
+  },
+  "address": "1001 Halstead Blvd, Elizabeth City, NC 27909",
+  "oem": ["Chrysler", "Dodge", "Jeep", "Ram"],
+  "colors": {
+    "primary": "#3363ba",
+    "secondary": "#252525",
+    "accent": "#ED1C24"
+  }
+}

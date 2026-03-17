@@ -9,7 +9,7 @@ Demo dealership website gallery showcasing SavvyDealer website templates. Each t
 - **Domain:** `demo.savvydealer.com`
 - **Direct URL:** `https://savvy-demo-952362582307.us-central1.run.app`
 - **Deploy:** `gcloud builds submit --project=savvydealer-website --config=cloudbuild.yaml --substitutions=COMMIT_SHA=$(git rev-parse --short HEAD)`
-- **No Cloud Build trigger** -- must deploy manually via `gcloud builds submit`
+- **Deploy via:** `gcloud builds submit` (no auto-trigger on push)
 
 ## Brand Guides -- CRITICAL
 
@@ -61,4 +61,5 @@ All internal links in templates MUST use absolute paths:
 | Jarrett Scott Ford | `/demo/ford-starter` | Featured |
 | Mullinax Ford | `/demo/mullinax-ford` | Hidden (not a client) |
 | Sendell Mitsubishi | `/demo/sendell-mitsubishi` | Featured |
+| Carolina CDJR | `/demo/carolina-cdjr` | Featured |
 | 10 JS Style Templates | `/demo/js-*` | Style Showcase |
