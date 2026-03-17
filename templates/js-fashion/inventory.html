@@ -418,8 +418,8 @@ strong { font-weight: bolder; }
 .list-item-inner { display: flex; flex-wrap: wrap; align-items: flex-start; }
 
 /* Image block */
-.image-block { flex: 0 0 280px; max-width: 280px; padding: 12px; position: relative; }
-.image-block img { width: 100%; height: auto; display: block; }
+.image-block { flex: 0 0 280px; max-width: 280px; padding: 12px; position: relative; background: #f4f4f4; }
+.image-block img { width: 100%; height: auto; display: block; object-fit: contain; padding: 12px; }
 .image-block .badge-label { position: absolute; top: 18px; left: 18px; padding: 3px 10px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: #fff; border-radius: 2px; }
 .badge-new { background: var(--accent-color); }
 .badge-special { background: var(--secondary-color); }
@@ -453,7 +453,11 @@ strong { font-weight: bolder; }
 /* Price block */
 .list-item-price { flex: 0 0 240px; max-width: 240px; padding: 12px 15px; border-left: 1px solid #f0f0f0; }
 
-.price-breakup { }
+.price-breakup { display: none; }
+.price-breakup.show { display: block; }
+.price-toggle { cursor: pointer; text-align: center; font-size: 13px; color: #666; padding: 8px 0; font-weight: 600; }
+.price-toggle svg { transition: transform 0.3s; display: inline-block; vertical-align: middle; margin-left: 4px; }
+.price-toggle.open svg { transform: rotate(180deg); }
 .price-breakup .price-row { display: flex; justify-content: space-between; align-items: baseline; padding: 3px 0; font-size: 13px; }
 .price-breakup .price-row .pricing-label { color: #555; }
 .price-breakup .price-row .pricing-label strong { font-weight: 700; }
@@ -971,6 +975,7 @@ function renderVehicles() {
 
         // Price
         html += '    <div class="list-item-price">';
+        html += '      <div class="price-toggle" onclick="this.classList.toggle(\'open\');this.nextElementSibling.classList.toggle(\'show\')">Price Details <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div>';
         html += '      <div class="price-breakup">';
         html += '        <div class="price-row msrp-row"><span class="pricing-label"><strong>MSRP</strong></span><span class="price">' + fmt(v.msrp) + '</span></div>';
         if (v.rebate > 0) {
