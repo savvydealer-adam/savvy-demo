@@ -60,19 +60,19 @@
             display: flex;
             align-items: center;
             gap: 4px;
-            font-size: 24px;
+            font-size: 32px;
             font-weight: 700;
             text-decoration: none;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
         }
         .header-logo .gold { color: var(--primarycolor); }
         .header-logo .dark { color: var(--bodycolor); }
         .header-logo .tagline {
             display: block;
-            font-size: 11px;
+            font-size: 13px;
             font-weight: 500;
             color: var(--greycolor);
-            letter-spacing: 0;
+            letter-spacing: 0.5px;
             margin-top: -2px;
         }
         .header-phone a {
@@ -695,7 +695,7 @@
         var html = '';
 
         // Type filter
-        html += '<div class="filter-item open"><div class="title">Type</div><div class="accordion-content"><ul>';
+        html += '<div class="filter-item"><div class="title">Type</div><div class="accordion-content" style="display:none;"><ul>';
         Object.keys(types).sort().forEach(function(t) {
             var cls = activeFilters.type === t ? ' class="active"' : '';
             html += '<li' + cls + ' data-filter="type" data-value="' + t + '"><span>' + t + '</span><span class="badge">' + types[t] + '</span></li>';
@@ -703,7 +703,7 @@
         html += '</ul></div></div>';
 
         // Make filter
-        html += '<div class="filter-item open"><div class="title">Make</div><div class="accordion-content"><ul>';
+        html += '<div class="filter-item"><div class="title">Make</div><div class="accordion-content" style="display:none;"><ul>';
         Object.keys(makes).sort().forEach(function(m) {
             var cls = activeFilters.make === m ? ' class="active"' : '';
             html += '<li' + cls + ' data-filter="make" data-value="' + m + '"><span>' + m + '</span><span class="badge">' + makes[m] + '</span></li>';
@@ -711,7 +711,7 @@
         html += '</ul></div></div>';
 
         // Year filter
-        html += '<div class="filter-item open"><div class="title">Year</div><div class="accordion-content"><ul>';
+        html += '<div class="filter-item"><div class="title">Year</div><div class="accordion-content" style="display:none;"><ul>';
         Object.keys(years).sort(function(a,b){return b-a;}).forEach(function(y) {
             var cls = activeFilters.year === parseInt(y) ? ' class="active"' : '';
             html += '<li' + cls + ' data-filter="year" data-value="' + y + '"><span>' + y + '</span><span class="badge">' + years[y] + '</span></li>';
@@ -726,7 +726,7 @@
             { key: '25-30', label: '$25K - $30K' },
             { key: '30plus', label: '$30K+' }
         ];
-        html += '<div class="filter-item open"><div class="title">Price</div><div class="accordion-content"><ul>';
+        html += '<div class="filter-item"><div class="title">Price</div><div class="accordion-content" style="display:none;"><ul>';
         priceRanges.forEach(function(r) {
             var count = vehicles.filter(function(v) {
                 if (r.key === 'under15') return v.price < 15000;

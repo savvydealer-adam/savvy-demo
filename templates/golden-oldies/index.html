@@ -66,7 +66,7 @@
       z-index: 1000;
       background: #fff;
       transition: box-shadow 0.3s ease;
-      height: 72px;
+      height: 88px;
     }
 
     .site-header.scrolled {
@@ -77,7 +77,7 @@
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 24px;
-      height: 72px;
+      height: 88px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -90,17 +90,17 @@
     }
 
     .header-logo-name {
-      font-size: 22px;
+      font-size: 32px;
       font-weight: 700;
       color: #C8952E;
-      letter-spacing: 1.5px;
+      letter-spacing: 2px;
     }
 
     .header-logo-sub {
-      font-size: 11px;
+      font-size: 13px;
       font-weight: 500;
       color: #666;
-      letter-spacing: 2px;
+      letter-spacing: 2.5px;
       text-transform: uppercase;
     }
 
@@ -201,7 +201,7 @@
     .main-nav {
       background: #1a1a2e;
       position: fixed;
-      top: 72px;
+      top: 88px;
       left: 0;
       right: 0;
       z-index: 999;
@@ -259,13 +259,13 @@
 
     /* ─── HERO ─── */
     .hero {
-      min-height: 80vh;
+      min-height: auto;
       background: linear-gradient(135deg, #1a1a2e 0%, #16213e 40%, #1a1a2e 70%, #0f3460 100%);
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 160px 24px 80px;
+      padding: 150px 24px 60px;
       position: relative;
       overflow: hidden;
     }
@@ -412,6 +412,111 @@
       width: 18px;
       height: 18px;
       color: #C8952E;
+    }
+
+    /* ─── GOLDEN GUARANTEE BANNER ─── */
+    .guarantee-banner {
+      background: linear-gradient(135deg, #C8952E, #D4A83A);
+      padding: 48px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .guarantee-banner::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -5%;
+      width: 300px;
+      height: 300px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 50%;
+    }
+
+    .guarantee-inner {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .guarantee-badge {
+      flex-shrink: 0;
+      width: 80px;
+      height: 80px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+
+    .guarantee-text {
+      flex: 1;
+    }
+
+    .guarantee-text h2 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+
+    .guarantee-text h2 span {
+      color: #fff;
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 4px;
+    }
+
+    .guarantee-text p {
+      font-size: 15px;
+      color: rgba(255,255,255,0.9);
+      line-height: 1.5;
+      max-width: 600px;
+    }
+
+    .guarantee-stats {
+      display: flex;
+      gap: 24px;
+      flex-shrink: 0;
+    }
+
+    .guarantee-stat {
+      text-align: center;
+      background: rgba(255,255,255,0.15);
+      border-radius: 12px;
+      padding: 16px 20px;
+      min-width: 90px;
+    }
+
+    .guarantee-stat strong {
+      display: block;
+      font-size: 22px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .guarantee-stat span {
+      font-size: 12px;
+      color: rgba(255,255,255,0.85);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    @media (max-width: 768px) {
+      .guarantee-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+      .guarantee-text p {
+        max-width: 100%;
+      }
+      .guarantee-stats {
+        justify-content: center;
+      }
     }
 
     /* ─── SECTION SHARED ─── */
@@ -1252,6 +1357,35 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
           </div>
           Golden Guarantee
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── GOLDEN GUARANTEE BANNER ─── -->
+  <section class="guarantee-banner">
+    <div class="container">
+      <div class="guarantee-inner">
+        <div class="guarantee-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="40" height="40"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+        </div>
+        <div class="guarantee-text">
+          <h2>Home Of The <span>Golden Guarantee</span></h2>
+          <p>Every vehicle backed by our exclusive 30-day warranty, 75-point inspection, and the confidence of a dealer that's been serving your community since 1991.</p>
+        </div>
+        <div class="guarantee-stats">
+          <div class="guarantee-stat">
+            <strong>30-Day</strong>
+            <span>Warranty</span>
+          </div>
+          <div class="guarantee-stat">
+            <strong>75-Point</strong>
+            <span>Inspection</span>
+          </div>
+          <div class="guarantee-stat">
+            <strong>200+</strong>
+            <span>Vehicles</span>
+          </div>
         </div>
       </div>
     </div>
