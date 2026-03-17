@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0" />
+    <title>2025 Mitsubishi Outlander Sport S | Sendell Mitsubishi - Greensburg, PA</title>
+    <link href="https://fonts.cdnfonts.com/css/mmc" rel="stylesheet" />
+    <style>
+        :root {
+            --bodyfont: 'MMC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --headerbg: #bc0600;
+            --footerbg: #282828;
+            --darkgrey: #393436;
+            --bodycolor: #19183C;
+            --secondarycolor: #bc0600;
+            --linktextcolor: #0678bc;
+            --headingcolor: #212529;
+            --blackcolor: #000000;
+            --redcolor: #ED0000;
+            --whitecolor: #fff;
+            --greycolor: #808080;
+            --greencolor: #30770f;
+            --transition: all 0.4s;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; }
+        body { margin: 0; font-family: var(--bodyfont); color: var(--bodycolor); font-size: 16px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+        a { color: var(--linktextcolor); text-decoration: none; }
+        a:hover { color: var(--blackcolor); }
+        img { max-width: 100%; height: auto; }
+        .container { margin: 0 auto; padding: 0 15px; }
+        @media(min-width:768px) { .container { width: 750px; } }
+        @media(min-width:992px) { .container { width: 970px; } }
+        @media(min-width:1200px) { .container { width: 1170px; } }
+        @media(min-width:1430px) { .container { width: 1400px; } }
+        @media(min-width:1630px) { .container { width: 1630px; } }
+
+        /* -- Header -- */
+        header .topbar { padding: 12px 0; background: #fff; }
+        header .topbar .inner { display: flex; align-items: center; gap: 20px; }
+        header .topbar .logo img { max-height: 65px; width: auto; }
+        header .topbar .contact-right { font-size: 14px; text-align: right; display: flex; flex-direction: column; gap: 8px; margin-left: auto; }
+        header .topbar .contact-right a { display: flex; align-items: center; gap: 8px; font-weight: 600; }
+        header .topbar .contact-right svg { width: 14px; height: 14px; fill: var(--linktextcolor); }
+
+        header .header-main { background: var(--footerbg); font-size: 14px; letter-spacing: 1px; }
+        header .header-main .inner { display: flex; align-items: center; }
+        header .header-main .nav-menu { display: flex; align-items: center; width: 100%; }
+        header .header-main .nav-menu ul { display: flex; align-items: center; list-style: none; margin: 0; padding: 0; }
+        header .header-main .nav-menu ul li a { padding: 12px 14px; display: block; color: #fff; font-weight: 600; text-transform: uppercase; transition: var(--transition); }
+        header .header-main .nav-menu ul li a:hover,
+        header .header-main .nav-menu ul li a.active { background: var(--secondarycolor); color: #fff; }
+        .nav-promo { margin-left: auto; }
+        .nav-promo a { background: var(--redcolor) !important; padding: 12px 18px !important; font-weight: 800 !important; letter-spacing: 0.5px; }
+
+        /* -- Breadcrumb -- */
+        .breadcrumb-bar { background: #f8f9fa; border-bottom: 1px solid #eee; padding: 12px 0; }
+        .breadcrumb-bar a { font-size: 14px; font-weight: 600; color: var(--linktextcolor); display: inline-flex; align-items: center; gap: 6px; }
+        .breadcrumb-bar a:hover { color: var(--secondarycolor); }
+        .breadcrumb-bar a svg { width: 14px; height: 14px; fill: currentColor; }
+
+        /* -- VDP Layout -- */
+        .vdp-main { padding: 30px 0 60px; background: rgb(40 40 40 / 5%); min-height: 80vh; }
+        .vdp-layout { display: flex; gap: 30px; align-items: flex-start; }
+        .vdp-content { flex: 0 0 65%; max-width: 65%; }
+        .vdp-sidebar { flex: 0 0 calc(35% - 30px); max-width: calc(35% - 30px); position: sticky; top: 20px; }
+
+        /* -- Photo Gallery -- */
+        .gallery-card { background: #fff; border: 1px solid rgba(36,39,44,.1); box-shadow: 0 6px 10px rgba(0,0,0,.05); border-radius: 12px; overflow: hidden; margin-bottom: 24px; }
+        .gallery-main-image { background: #f4f4f4; display: flex; align-items: center; justify-content: center; padding: 24px; min-height: 400px; }
+        .gallery-main-image img { max-width: 100%; max-height: 420px; object-fit: contain; }
+        .gallery-thumbnails { display: flex; align-items: center; gap: 12px; padding: 12px 16px; border-top: 1px solid #eee; background: #fff; }
+        .gallery-thumb { width: 80px; height: 60px; background: #f4f4f4; border-radius: 6px; overflow: hidden; border: 2px solid var(--secondarycolor); cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 4px; }
+        .gallery-thumb img { max-width: 100%; max-height: 100%; object-fit: contain; }
+        .gallery-photo-count { font-size: 13px; color: var(--greycolor); font-weight: 600; margin-left: auto; }
+
+        /* -- Vehicle Details Card -- */
+        .details-card { background: #fff; border: 1px solid rgba(36,39,44,.1); box-shadow: 0 6px 10px rgba(0,0,0,.05); border-radius: 12px; padding: 24px; margin-bottom: 24px; }
+        .details-card h2 { font-size: 22px; font-weight: 700; color: var(--headingcolor); margin: 0 0 20px; padding-bottom: 12px; border-bottom: 1px solid #eee; }
+        .details-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .detail-item { display: flex; align-items: flex-start; gap: 12px; }
+        .detail-item .detail-icon { width: 36px; height: 36px; min-width: 36px; background: #f0f0f0; border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+        .detail-item .detail-icon svg { width: 18px; height: 18px; fill: var(--secondarycolor); }
+        .detail-item .detail-info { display: flex; flex-direction: column; }
+        .detail-item .detail-label { font-size: 12px; color: var(--greycolor); text-transform: uppercase; font-weight: 600; letter-spacing: 0.5px; }
+        .detail-item .detail-value { font-size: 15px; font-weight: 700; color: var(--bodycolor); }
+
+        /* -- Description -- */
+        .description-card { background: #fff; border: 1px solid rgba(36,39,44,.1); box-shadow: 0 6px 10px rgba(0,0,0,.05); border-radius: 12px; padding: 24px; margin-bottom: 24px; }
+        .description-card h2 { font-size: 22px; font-weight: 700; color: var(--headingcolor); margin: 0 0 16px; padding-bottom: 12px; border-bottom: 1px solid #eee; }
+        .description-card p { font-size: 15px; line-height: 1.7; color: #555; }
+
+        /* -- Features Card -- */
+        .features-card { background: #fff; border: 1px solid rgba(36,39,44,.1); box-shadow: 0 6px 10px rgba(0,0,0,.05); border-radius: 12px; padding: 24px; margin-bottom: 24px; }
+        .features-card h2 { font-size: 22px; font-weight: 700; color: var(--headingcolor); margin: 0; }
+        .features-header { display: flex; align-items: center; justify-content: space-between; cursor: pointer; padding-bottom: 12px; border-bottom: 1px solid #eee; margin-bottom: 16px; }
+        .features-header svg { width: 14px; height: 14px; fill: var(--bodycolor); transition: transform 0.3s; }
+        .features-header.open svg { transform: rotate(180deg); }
+        .features-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px 16px; }
+        .features-grid.hidden { display: none; }
+        .feature-item { display: flex; align-items: center; gap: 8px; font-size: 14px; color: #555; padding: 4px 0; }
+        .feature-item svg { width: 16px; height: 16px; min-width: 16px; fill: var(--greencolor); }
+
+        /* -- Price Sidebar -- */
+        .price-card { background: #fff; border: 1px solid rgba(36,39,44,.1); box-shadow: 0 6px 10px rgba(0,0,0,.05); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+        .price-card .vehicle-title { font-size: 22px; font-weight: 800; color: var(--headingcolor); margin: 0 0 4px; line-height: 1.3; }
+        .price-card .vehicle-subtitle { font-size: 14px; color: var(--greycolor); margin-bottom: 16px; }
+        .price-card .vin-stock { display: flex; gap: 20px; margin-bottom: 16px; font-size: 13px; }
+        .price-card .vin-stock .vin-label { color: var(--greycolor); }
+        .price-card .vin-stock .vin-value { font-weight: 700; }
+
+        .price-breakdown { background: #fafafa; border: 1px solid #eee; border-radius: 10px; padding: 16px; margin-bottom: 20px; }
+        .price-row { display: flex; justify-content: space-between; align-items: center; padding: 6px 0; font-size: 14px; }
+        .price-row .price-label { color: #666; }
+        .price-row .price-value { font-weight: 600; }
+        .price-row .price-value.struck { text-decoration: line-through; color: #999; }
+        .price-row .price-value.discount { color: var(--secondarycolor); font-weight: 700; }
+        .price-divider { border-top: 1px dashed #ddd; margin: 8px 0; }
+        .price-row.final .price-label { font-size: 16px; font-weight: 700; color: var(--bodycolor); }
+        .price-row.final .price-value { font-size: 24px; font-weight: 800; color: var(--greencolor); }
+
+        /* CTA Buttons */
+        .cta-stack { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
+        .cta-btn { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 14px 20px; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; border-radius: 6px; cursor: pointer; transition: var(--transition); font-family: var(--bodyfont); text-align: center; }
+        .cta-btn.primary { background: var(--secondarycolor); color: #fff; border: 2px solid var(--secondarycolor); }
+        .cta-btn.primary:hover { background: transparent; color: var(--secondarycolor); }
+        .cta-btn.outline { background: transparent; color: var(--secondarycolor); border: 2px solid var(--secondarycolor); }
+        .cta-btn.outline:hover { background: var(--secondarycolor); color: #fff; }
+
+        /* Price Drop Alert */
+        .price-alert { background: #f8f9fa; border: 1px solid #eee; border-radius: 10px; padding: 16px; margin-bottom: 16px; }
+        .price-alert .alert-title { font-size: 14px; font-weight: 700; color: var(--headingcolor); margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+        .price-alert .alert-title svg { width: 16px; height: 16px; fill: var(--secondarycolor); }
+        .price-alert .alert-form { display: flex; gap: 8px; }
+        .price-alert input { flex: 1; padding: 10px 12px; border: 1px solid #ddd; border-radius: 6px; font-family: inherit; font-size: 14px; outline: none; }
+        .price-alert input:focus { border-color: var(--secondarycolor); }
+        .price-alert button { padding: 10px 16px; background: var(--secondarycolor); color: #fff; border: none; border-radius: 6px; font-family: inherit; font-size: 13px; font-weight: 700; text-transform: uppercase; cursor: pointer; transition: var(--transition); white-space: nowrap; }
+        .price-alert button:hover { background: #a00500; }
+
+        .otd-link { text-align: center; padding: 8px 0; }
+        .otd-link a { font-size: 14px; font-weight: 600; color: var(--linktextcolor); display: inline-flex; align-items: center; gap: 6px; }
+        .otd-link a:hover { color: var(--secondarycolor); }
+        .otd-link a svg { width: 14px; height: 14px; fill: currentColor; }
+
+        .price-disclaimer { font-size: 11px; color: #999; line-height: 1.5; margin-top: 12px; padding-top: 12px; border-top: 1px solid #eee; }
+
+        /* -- Footer -- */
+        footer { background: var(--footerbg); color: rgba(255,255,255,0.6); padding: 32px 0; }
+        footer .inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+        footer a { color: rgba(255,255,255,0.8); font-size: 13px; }
+        footer a:hover { color: #fff; }
+        footer .copyright { font-size: 12px; }
+
+        /* -- Responsive -- */
+        @media (max-width: 991px) {
+            .vdp-layout { flex-direction: column; }
+            .vdp-content { flex: 0 0 100%; max-width: 100%; }
+            .vdp-sidebar { flex: 0 0 100%; max-width: 100%; position: static; }
+            .features-grid { grid-template-columns: 1fr 1fr; }
+            header .header-main .nav-menu ul { font-size: 12px; flex-wrap: wrap; }
+        }
+        @media (max-width: 767px) {
+            .details-grid { grid-template-columns: 1fr; }
+            .features-grid { grid-template-columns: 1fr; }
+            .gallery-main-image { min-height: 260px; padding: 16px; }
+            .price-row.final .price-value { font-size: 20px; }
+            header .topbar .contact-right { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <div class="topbar">
+        <div class="container">
+            <div class="inner">
+                <div class="logo">
+                    <a href="/demo/sendell-mitsubishi" title="Sendell Mitsubishi">
+                        <svg viewBox="0 0 75 37" fill="none" style="height:50px;width:auto;margin-right:12px;vertical-align:middle;">
+                            <polygon fill="#ED0000" points="37.34,0.19 30.35,12.32 37.34,24.44 44.33,12.32"/>
+                            <polygon fill="#ED0000" points="37.34,24.44 51.31,24.44 58.30,36.56 44.33,36.56"/>
+                            <polygon fill="#ED0000" points="37.34,24.44 23.36,24.44 16.37,36.56 30.35,36.56"/>
+                        </svg>
+                        <span style="font-size:22px;font-weight:800;color:#19183C;vertical-align:middle;">SENDELL MITSUBISHI</span>
+                    </a>
+                </div>
+                <div class="contact-right">
+                    <a href="tel:7246078465">
+                        <svg viewBox="0 0 512 512"><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>
+                        (724) 607-8465
+                    </a>
+                    <span style="font-size:12px;color:#999;">5079 US-30, Greensburg, PA 15601</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-main">
+        <div class="container">
+            <div class="inner">
+                <div class="nav-menu">
+                    <ul>
+                        <li><a href="/demo/sendell-mitsubishi">Home</a></li>
+                        <li><a href="/demo/sendell-mitsubishi/inventory">New</a></li>
+                        <li><a href="#">Used</a></li>
+                        <li><a href="#">Finance</a></li>
+                        <li><a href="#">Service</a></li>
+                        <li><a href="#">Specials</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li class="nav-promo"><a href="#">$8K OFF PHEV!</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Breadcrumb -->
+<div class="breadcrumb-bar">
+    <div class="container">
+        <a href="/demo/sendell-mitsubishi/inventory">
+            <svg viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+            Back to Inventory
+        </a>
+    </div>
+</div>
+
+<!-- VDP -->
+<section class="vdp-main">
+    <div class="container">
+        <div class="vdp-layout">
+
+            <!-- Left Column: Gallery + Details -->
+            <div class="vdp-content">
+
+                <!-- Photo Gallery -->
+                <div class="gallery-card">
+                    <div class="gallery-main-image">
+                        <img src="https://www.mitsubishicars.com/content/dam/mitsubishi-motors-us/images/cars/outlander-sport/2026/primary/hero/W85_0_26OTL-Sport-03-side.png" alt="2025 Mitsubishi Outlander Sport S - Labrador Black Pearl" />
+                    </div>
+                    <div class="gallery-thumbnails">
+                        <div class="gallery-thumb">
+                            <img src="https://www.mitsubishicars.com/content/dam/mitsubishi-motors-us/images/cars/outlander-sport/2026/primary/hero/W85_0_26OTL-Sport-03-side.png" alt="Thumbnail 1" />
+                        </div>
+                        <span class="gallery-photo-count">1 of 1 photo</span>
+                    </div>
+                </div>
+
+                <!-- Vehicle Details -->
+                <div class="details-card">
+                    <h2>Vehicle Details</h2>
+                    <div class="details-grid">
+                        <div class="detail-item">
+                            <div class="detail-icon">
+                                <svg viewBox="0 0 512 512"><path d="M32 64C14.3 64 0 78.3 0 96V256 416c0 17.7 14.3 32 32 32H80c17.7 0 32-14.3 32-32V288H400V416c0 17.7 14.3 32 32 32h48c17.7 0 32-14.3 32-32V256 96c0-17.7-14.3-32-32-32H32zm120 96c0 8.8-7.2 16-16 16s-16-7.2-16-16V128c0-8.8 7.2-16 16-16s16 7.2 16 16v32zm64 0c0 8.8-7.2 16-16 16s-16-7.2-16-16V128c0-8.8 7.2-16 16-16s16 7.2 16 16v32zm64 0c0 8.8-7.2 16-16 16s-16-7.2-16-16V128c0-8.8 7.2-16 16-16s16 7.2 16 16v32z"/></svg>
+                            </div>
+                            <div class="detail-info">
+                                <span class="detail-label">City / Hwy MPG</span>
+                                <span class="detail-value">25 / 28 MPG</span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-icon">
+                                <svg viewBox="0 0 640 512"><path d="M171.3 96H224v96H111.3l30.4-75.9C146.5 104 158.2 96 171.3 96zM272 192V96h81.2c9.7 0 18.9 4.4 25 12l67.2 84H272zm256.2 1L428.2 68c-18.2-22.8-45.8-36-75-36H171.3c-39.3 0-74.6 23.9-89.1 60.3L40.6 196.4C16.8 205.8 0 228.9 0 256V368c0 17.7 14.3 32 32 32H65.3c7.6 36.8 39.8 64 78.7 64s71.1-27.2 78.7-64H418.3c7.6 36.8 39.8 64 78.7 64s71.1-27.2 78.7-64H608c17.7 0 32-14.3 32-32V320c0-65.2-48.8-119-112-126.9zM144 400a48 48 0 1 1 0-96 48 48 0 1 1 0 96zm352 0a48 48 0 1 1 0-96 48 48 0 1 1 0 96z"/></svg>
+                            </div>
+                            <div class="detail-info">
+                                <span class="detail-label">Body Style</span>
+                                <span class="detail-value">SUV</span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-icon">
+                                <svg viewBox="0 0 512 512"><path d="M512 256A256 256 0 1 0 0 256a256 256 0 1 0 512 0zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/></svg>
+                            </div>
+                            <div class="detail-info">
+                                <span class="detail-label">Ext. Color</span>
+                                <span class="detail-value">Labrador Black Pearl</span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-icon">
+                                <svg viewBox="0 0 512 512"><path d="M512 256A256 256 0 1 0 0 256a256 256 0 1 0 512 0zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/></svg>
+                            </div>
+                            <div class="detail-info">
+                                <span class="detail-label">Int. Color</span>
+                                <span class="detail-value">Black</span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-icon">
+                                <svg viewBox="0 0 512 512"><path d="M256 0C114.6 0 0 114.6 0 256S114.6 512 256 512s256-114.6 256-256S397.4 0 256 0zm0 464c-114.7 0-208-93.3-208-208S141.3 48 256 48s208 93.3 208 208-93.3 208-208 208zm-32-112V160l160 96-160 96z"/></svg>
+                            </div>
+                            <div class="detail-info">
+                                <span class="detail-label">Engine</span>
+                                <span class="detail-value">I-4 2.0L</span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-icon">
+                                <svg viewBox="0 0 512 512"><path d="M495.9 166.6c3.2 8.7 .5 18.4-6.4 24.6l-43.3 39.4c1.1 8.3 1.7 16.8 1.7 25.4s-.6 17.1-1.7 25.4l43.3 39.4c6.9 6.2 9.6 15.9 6.4 24.6c-4.4 11.9-9.7 23.3-15.8 34.3l-4.7 8.1c-6.6 11-14 21.4-22.1 31.2c-5.9 7.2-15.7 9.6-24.5 6.8l-55.7-17.7c-13.4 10.3-28.2 18.9-44 25.4l-12.5 57.1c-2 9.1-9 16.3-18.2 17.8c-13.8 2.3-28 3.5-42.5 3.5s-28.7-1.2-42.5-3.5c-9.2-1.5-16.2-8.7-18.2-17.8l-12.5-57.1c-15.8-6.5-30.6-15.1-44-25.4L83.1 425.9c-8.8 2.8-18.6 .3-24.5-6.8c-8.1-9.8-15.5-20.2-22.1-31.2l-4.7-8.1c-6.1-11-11.4-22.4-15.8-34.3c-3.2-8.7-.5-18.4 6.4-24.6l43.3-39.4C64.6 273.1 64 264.6 64 256s.6-17.1 1.7-25.4L22.4 191.2c-6.9-6.2-9.6-15.9-6.4-24.6c4.4-11.9 9.7-23.3 15.8-34.3l4.7-8.1c6.6-11 14-21.4 22.1-31.2c5.9-7.2 15.7-9.6 24.5-6.8l55.7 17.7c13.4-10.3 28.2-18.9 44-25.4l12.5-57.1c2-9.1 9-16.3 18.2-17.8C227.3 1.2 241.5 0 256 0s28.7 1.2 42.5 3.5c9.2 1.5 16.2 8.7 18.2 17.8l12.5 57.1c15.8 6.5 30.6 15.1 44 25.4l55.7-17.7c8.8-2.8 18.6-.3 24.5 6.8c8.1 9.8 15.5 20.2 22.1 31.2l4.7 8.1c6.1 11 11.4 22.4 15.8 34.3zM256 336a80 80 0 1 0 0-160 80 80 0 1 0 0 160z"/></svg>
+                            </div>
+                            <div class="detail-info">
+                                <span class="detail-label">Transmission</span>
+                                <span class="detail-value">CVT</span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-icon">
+                                <svg viewBox="0 0 512 512"><path d="M256 0C114.6 0 0 114.6 0 256S114.6 512 256 512s256-114.6 256-256S397.4 0 256 0zM256 400c-18 0-34.4-6.4-47.7-16.8L137 311.8c-7.5-7.5-7.5-19.6 0-27.1l17-17c7.5-7.5 19.6-7.5 27.1 0l50.5 50.5V152c0-10.6 8.6-19.2 19.2-19.2h24c10.6 0 19.2 8.6 19.2 19.2v166.2l50.5-50.5c7.5-7.5 19.6-7.5 27.1 0l17 17c7.5 7.5 7.5 19.6 0 27.1l-71.3 71.3C303.4 393.6 287 400 269 400h-13z"/></svg>
+                            </div>
+                            <div class="detail-info">
+                                <span class="detail-label">Drive Type</span>
+                                <span class="detail-value">4WD</span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-icon">
+                                <svg viewBox="0 0 512 512"><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg>
+                            </div>
+                            <div class="detail-info">
+                                <span class="detail-label">Mileage</span>
+                                <span class="detail-value">New</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Description -->
+                <div class="description-card">
+                    <h2>Dealer Description</h2>
+                    <p>This 2025 Mitsubishi Outlander Sport S in Labrador Black Pearl is a versatile and capable compact SUV ready for anything. Powered by a responsive 2.0-liter 4-cylinder engine paired with a smooth CVT transmission and standard 4WD, it delivers confident performance in all conditions. The Outlander Sport offers generous cargo space, a comfortable cabin with modern technology, and Mitsubishi's renowned reliability. With available features like Apple CarPlay, Android Auto, and advanced safety systems, it's the perfect daily driver that can handle weekend adventures. Visit Sendell Mitsubishi in Greensburg today for a test drive.</p>
+                </div>
+
+                <!-- Features/Options -->
+                <div class="features-card">
+                    <div class="features-header" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('hidden')">
+                        <h2>Standard Features &amp; Options</h2>
+                        <svg viewBox="0 0 320 512"><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>
+                    </div>
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <svg viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
+                            <span>Apple CarPlay</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
+                            <span>Android Auto</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
+                            <span>Bluetooth Connectivity</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
+                            <span>Backup Camera</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
+                            <span>Forward Collision Mitigation</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
+                            <span>Lane Departure Warning</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
+                            <span>Automatic Headlights</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
+                            <span>Keyless Entry</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
+                            <span>Push-Button Start</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
+                            <span>8" Touchscreen Display</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
+                            <span>USB Charging Ports</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
+                            <span>All-Wheel Control (4WD)</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
+                            <span>Hill Start Assist</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
+                            <span>Active Stability Control</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
+                            <span>Traction Control</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
+                            <span>7 Airbags</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
+                            <span>Cruise Control</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
+                            <span>Air Conditioning</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
+                            <span>Heated Side Mirrors</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
+                            <span>Roof Rails</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
+                            <span>10-Year / 100K Warranty</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right Column: Price Sidebar -->
+            <div class="vdp-sidebar">
+                <div class="price-card">
+                    <h2 class="vehicle-title">2025 Mitsubishi Outlander Sport S</h2>
+                    <p class="vehicle-subtitle">4WD &bull; I-4 2.0L &bull; CVT &bull; Labrador Black Pearl</p>
+
+                    <div class="vin-stock">
+                        <div>
+                            <span class="vin-label">VIN:</span>
+                            <span class="vin-value">JA4ARUAU4SU012847</span>
+                        </div>
+                        <div>
+                            <span class="vin-label">Stock #:</span>
+                            <span class="vin-value">M501108</span>
+                        </div>
+                    </div>
+
+                    <div class="price-breakdown">
+                        <div class="price-row">
+                            <span class="price-label">Suggested Retail (MSRP)</span>
+                            <span class="price-value struck">$28,990</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price-label">Trade Discount</span>
+                            <span class="price-value discount">-$4,000</span>
+                        </div>
+                        <div class="price-divider"></div>
+                        <div class="price-row final">
+                            <span class="price-label">Sendell Price*</span>
+                            <span class="price-value">$24,990</span>
+                        </div>
+                    </div>
+
+                    <div class="cta-stack">
+                        <a href="#" class="cta-btn primary">Check Availability</a>
+                        <a href="#" class="cta-btn outline">Schedule Test Drive</a>
+                        <a href="#" class="cta-btn outline">Get Pre-Qualified</a>
+                    </div>
+
+                    <div class="price-alert">
+                        <div class="alert-title">
+                            <svg viewBox="0 0 448 512"><path d="M224 0c-17.7 0-32 14.3-32 32V49.9C119.5 61.4 64 124.2 64 200v33.4c0 45.4-15.5 89.5-43.8 124.9L5.3 377c-5.8 7.2-6.9 17.1-2.9 25.4S14.8 416 24 416H424c9.2 0 17.6-5.3 21.6-13.6s2.9-18.2-2.9-25.4l-14.9-18.6C399.5 322.9 384 278.8 384 233.4V200c0-75.8-55.5-138.6-128-150.1V32c0-17.7-14.3-32-32-32zm0 96c61.9 0 112 50.1 112 112v33.4c0 29.1 4.7 57.7 13.8 84.6H98.2c9.1-26.9 13.8-55.5 13.8-84.6V208c0-61.9 50.1-112 112-112zm45.3 384c-8.5 14.6-24.3 24-42 24c-17.7 0-33.5-9.5-42-24H269.3z"/></svg>
+                            Price Drop Alert
+                        </div>
+                        <div class="alert-form">
+                            <input type="email" placeholder="Enter your email" />
+                            <button>Notify Me</button>
+                        </div>
+                    </div>
+
+                    <div class="otd-link">
+                        <a href="#">
+                            <svg viewBox="0 0 384 512"><path d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM80 64h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H80c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H80c-8.8 0-16-7.2-16-16s7.2-16 16-16zm16 96H288c17.7 0 32 14.3 32 32v64c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V256c0-17.7 14.3-32 32-32z"/></svg>
+                            Get an Out-the-Door Quote
+                        </a>
+                    </div>
+
+                    <div class="price-disclaimer">
+                        *Sendell Price includes all applicable manufacturer incentives and trade discount. Price does not include tax, title, license, or dealer documentation fee of $179. While great effort is made to ensure accuracy, errors do occur. Please verify all information with a Sendell Mitsubishi sales representative.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="inner">
+            <div class="copyright">&copy; 2026 Sendell Mitsubishi | 5079 US-30, Greensburg, PA 15601 | Powered by <a href="https://www.savvydealer.com" style="color:#ED0000;">SavvyDealer</a></div>
+            <div style="display:flex;gap:16px;">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms</a>
+                <a href="#">Sitemap</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

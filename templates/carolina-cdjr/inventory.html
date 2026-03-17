@@ -711,22 +711,23 @@
     var listWrapper = document.getElementById('vehicleList');
     var html = '';
 
-    vehicles.forEach(function(v) {
+    vehicles.forEach(function(v, i) {
         var sellingPrice = v.msrp - v.discount;
         var titleText = v.year + ' ' + v.make + ' ' + v.model + (v.trim ? ' ' + v.trim : '');
 
         html += '<div class="list-item">';
         html += '<div class="list-item-inner">';
 
-        // Image block
+        // Image block — first vehicle links to VDP
+        var vdpLink = (i === 0) ? '/demo/carolina-cdjr/vdp' : '#';
         html += '<div class="image-block">';
-        html += '<a href="#"><img src="' + v.image + '" alt="' + titleText + '" /></a>';
+        html += '<a href="' + vdpLink + '"><img src="' + v.image + '" alt="' + titleText + '" /></a>';
         html += '<div class="watchlist-icon">' + heartSVG + '</div>';
         html += '</div>';
 
         // Details block (title only)
         html += '<div class="list-item-detail">';
-        html += '<a class="vehicleCardTitle" href="#">' + titleText + '</a>';
+        html += '<a class="vehicleCardTitle" href="' + vdpLink + '">' + titleText + '</a>';
         html += '</div>';
 
         // Price block
