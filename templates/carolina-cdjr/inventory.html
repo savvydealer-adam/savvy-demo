@@ -730,8 +730,6 @@
         html += '<div class="details-wrapper">';
         html += '<div class="details"><div class="label">Ext. Color</div><div class="value">' + v.color + '</div></div>';
         html += '<div class="details"><div class="label">Drivetrain</div><div class="value">' + v.drivetrain + '</div></div>';
-        html += '<div class="details"><div class="label">Engine</div><div class="value">' + v.engine + '</div></div>';
-        html += '<div class="details"><div class="label">Stock #</div><div class="value">' + v.stock + '</div></div>';
         html += '</div>';
         html += '</div>';
 
@@ -747,9 +745,11 @@
         // Price Details toggle
         html += '<div class="price-toggle" onclick="this.classList.toggle(\'open\');this.nextElementSibling.classList.toggle(\'show\')">Price Details ' + chevronSVG + '</div>';
 
-        // Hidden price breakdown
+        // Hidden price breakdown (includes Engine, Stock #, and price details)
         html += '<div class="price-breakup">';
-        html += '<div class="row"><div class="label"><strong>MSRP</strong></div><div class="msrp">' + formatPrice(v.msrp) + '</div></div>';
+        html += '<div class="row"><div class="label">Engine</div><div class="value" style="font-weight:600">' + v.engine + '</div></div>';
+        html += '<div class="row"><div class="label">Stock #</div><div class="value" style="font-weight:600">' + v.stock + '</div></div>';
+        html += '<div class="row border-top-dash" style="margin-top:6px;padding-top:6px;"><div class="label"><strong>MSRP</strong></div><div class="msrp">' + formatPrice(v.msrp) + '</div></div>';
         html += '<div class="row"><div class="label"><strong>Discount</strong></div><div class="dealersavingsprice">-$' + formatPrice(v.discount) + '</div></div>';
         html += '<div class="row border-top-dash"><div class="label"><strong>Carolina Price*</strong></div><div class="finalprice">$' + formatPrice(sellingPrice) + '</div></div>';
         html += '</div>';
