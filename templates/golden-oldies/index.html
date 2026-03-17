@@ -1,0 +1,1622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Golden Oldies Auto Sales | Quality Pre-Owned Vehicles in Hudson, FL</title>
+  <meta name="description" content="Golden Oldies Auto Sales - Your Hometown Dealer Since 1991. Over 200 quality pre-owned vehicles with 75-point inspections, 30-day warranty, and flexible financing. Two locations in Hudson, FL.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: #19183C;
+      line-height: 1.6;
+      background: #fff;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.2s ease;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    button {
+      font-family: 'DM Sans', sans-serif;
+      cursor: pointer;
+      border: none;
+      outline: none;
+    }
+
+    input, select {
+      font-family: 'DM Sans', sans-serif;
+      outline: none;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ─── STICKY HEADER ─── */
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: #fff;
+      transition: box-shadow 0.3s ease;
+      height: 72px;
+    }
+
+    .site-header.scrolled {
+      box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header-logo {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .header-logo-name {
+      font-size: 22px;
+      font-weight: 700;
+      color: #C8952E;
+      letter-spacing: 1.5px;
+    }
+
+    .header-logo-sub {
+      font-size: 11px;
+      font-weight: 500;
+      color: #666;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .header-phone {
+      font-size: 15px;
+      font-weight: 600;
+      color: #19183C;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .header-phone svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .btn-gold {
+      background: #C8952E;
+      color: #fff;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 10px 24px;
+      border-radius: 8px;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-gold:hover {
+      background: #b5842a;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(200,149,46,0.3);
+      color: #fff;
+    }
+
+    .btn-gold-outline {
+      background: transparent;
+      color: #C8952E;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 10px 24px;
+      border-radius: 8px;
+      border: 2px solid #C8952E;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+    }
+
+    .btn-gold-outline:hover {
+      background: #C8952E;
+      color: #fff;
+    }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: #19183C;
+      margin: 5px 0;
+      transition: all 0.3s ease;
+      border-radius: 2px;
+    }
+
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* ─── NAVIGATION ─── */
+    .main-nav {
+      background: #1a1a2e;
+      position: fixed;
+      top: 72px;
+      left: 0;
+      right: 0;
+      z-index: 999;
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 0;
+    }
+
+    .nav-links li a {
+      display: block;
+      padding: 14px 20px;
+      color: rgba(255,255,255,0.8);
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+
+    .nav-links li a:hover,
+    .nav-links li a.active {
+      color: #fff;
+    }
+
+    .nav-links li a.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 20px;
+      right: 20px;
+      height: 2px;
+      background: #C8952E;
+      border-radius: 2px;
+    }
+
+    .nav-links li a:hover::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 20px;
+      right: 20px;
+      height: 2px;
+      background: #C8952E;
+      border-radius: 2px;
+    }
+
+    /* ─── HERO ─── */
+    .hero {
+      min-height: 80vh;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 40%, #1a1a2e 70%, #0f3460 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 160px 24px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(200,149,46,0.12) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      left: -10%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(200,149,46,0.08) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+    }
+
+    .hero h1 {
+      font-size: 52px;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 span {
+      color: #C8952E;
+    }
+
+    .hero-sub {
+      font-size: 18px;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 48px;
+      font-weight: 400;
+    }
+
+    /* Search Bar */
+    .hero-search {
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 40px;
+    }
+
+    .search-form {
+      display: flex;
+      gap: 12px;
+      align-items: flex-end;
+    }
+
+    .search-field {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .search-field label {
+      font-size: 12px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.6);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .search-field select,
+    .search-field input {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.06);
+      color: #fff;
+      font-size: 14px;
+      transition: border-color 0.2s ease;
+    }
+
+    .search-field select option {
+      background: #1a1a2e;
+      color: #fff;
+    }
+
+    .search-field select:focus,
+    .search-field input:focus {
+      border-color: #C8952E;
+    }
+
+    .search-field input::placeholder {
+      color: rgba(255,255,255,0.4);
+    }
+
+    .search-btn {
+      padding: 12px 32px;
+      height: 46px;
+      white-space: nowrap;
+    }
+
+    /* Trust Badges */
+    .trust-badges {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .trust-badge {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: rgba(255,255,255,0.85);
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .trust-badge-icon {
+      width: 36px;
+      height: 36px;
+      background: rgba(200,149,46,0.15);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .trust-badge-icon svg {
+      width: 18px;
+      height: 18px;
+      color: #C8952E;
+    }
+
+    /* ─── SECTION SHARED ─── */
+    .section {
+      padding: 96px 0;
+    }
+
+    .section-alt {
+      background: #f8f7f4;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    .section-heading h2 {
+      font-size: 36px;
+      font-weight: 700;
+      color: #19183C;
+      margin-bottom: 12px;
+    }
+
+    .section-heading p {
+      font-size: 17px;
+      color: #666;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    /* ─── FEATURED VEHICLES ─── */
+    .vehicles-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+
+    .vehicle-card {
+      background: #f8f7f4;
+      border-radius: 16px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .vehicle-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+    }
+
+    .vehicle-img {
+      height: 180px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .vehicle-img-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .vehicle-img-placeholder svg {
+      width: 48px;
+      height: 48px;
+      opacity: 0.3;
+    }
+
+    .vehicle-info {
+      padding: 20px;
+    }
+
+    .vehicle-year-make {
+      font-size: 13px;
+      font-weight: 500;
+      color: #888;
+      margin-bottom: 4px;
+    }
+
+    .vehicle-title {
+      font-size: 17px;
+      font-weight: 700;
+      color: #19183C;
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+
+    .vehicle-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+      font-size: 13px;
+      color: #888;
+    }
+
+    .vehicle-meta span {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .vehicle-price {
+      font-size: 22px;
+      font-weight: 700;
+      color: #C8952E;
+      margin-bottom: 16px;
+    }
+
+    .vehicle-card .btn-gold {
+      width: 100%;
+      justify-content: center;
+      font-size: 13px;
+      padding: 10px 16px;
+    }
+
+    .view-all-link {
+      text-align: center;
+    }
+
+    .view-all-link a {
+      color: #0678bc;
+      font-weight: 600;
+      font-size: 15px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .view-all-link a:hover {
+      color: #045a94;
+      gap: 10px;
+    }
+
+    /* ─── WHY CHOOSE US ─── */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .feature-card {
+      text-align: center;
+      padding: 40px 32px;
+      background: #fff;
+      border-radius: 16px;
+      transition: all 0.3s ease;
+    }
+
+    .section-alt .feature-card {
+      background: #fff;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.06);
+    }
+
+    .feature-icon {
+      width: 64px;
+      height: 64px;
+      background: linear-gradient(135deg, rgba(200,149,46,0.1), rgba(200,149,46,0.05));
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+    }
+
+    .feature-icon svg {
+      width: 28px;
+      height: 28px;
+      color: #C8952E;
+    }
+
+    .feature-card h3 {
+      font-size: 19px;
+      font-weight: 700;
+      color: #19183C;
+      margin-bottom: 10px;
+    }
+
+    .feature-card p {
+      font-size: 15px;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    /* ─── FINANCE SECTION ─── */
+    .finance-section {
+      padding: 96px 0;
+      overflow: hidden;
+    }
+
+    .finance-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .finance-content h2 {
+      font-size: 36px;
+      font-weight: 700;
+      color: #19183C;
+      margin-bottom: 16px;
+    }
+
+    .finance-content > p {
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 32px;
+    }
+
+    .finance-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 36px;
+    }
+
+    .finance-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 15px;
+      color: #444;
+    }
+
+    .finance-list li svg {
+      width: 20px;
+      height: 20px;
+      color: #C8952E;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .finance-visual {
+      border-radius: 24px;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      height: 400px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .finance-visual::before {
+      content: '';
+      position: absolute;
+      top: 20%;
+      right: -10%;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(200,149,46,0.2) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .finance-visual-text {
+      text-align: center;
+      position: relative;
+      z-index: 2;
+      color: #fff;
+    }
+
+    .finance-visual-text .rate {
+      font-size: 56px;
+      font-weight: 700;
+      color: #C8952E;
+      line-height: 1;
+    }
+
+    .finance-visual-text .rate-label {
+      font-size: 16px;
+      color: rgba(255,255,255,0.7);
+      margin-top: 8px;
+    }
+
+    .finance-visual-text .rate-sub {
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+      margin-top: 4px;
+    }
+
+    /* ─── LOCATIONS ─── */
+    .locations-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+
+    .location-card {
+      border: 1px solid #e8e6e1;
+      border-radius: 16px;
+      padding: 36px;
+      transition: all 0.3s ease;
+      background: #fff;
+    }
+
+    .location-card:hover {
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+    }
+
+    .location-name {
+      font-size: 22px;
+      font-weight: 700;
+      color: #19183C;
+      margin-bottom: 4px;
+    }
+
+    .location-badge {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      color: #C8952E;
+      background: rgba(200,149,46,0.1);
+      padding: 4px 10px;
+      border-radius: 6px;
+      margin-bottom: 20px;
+    }
+
+    .location-detail {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 14px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .location-detail svg {
+      width: 16px;
+      height: 16px;
+      color: #C8952E;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .location-hours {
+      margin-top: 20px;
+      margin-bottom: 24px;
+    }
+
+    .location-hours h4 {
+      font-size: 14px;
+      font-weight: 600;
+      color: #19183C;
+      margin-bottom: 10px;
+    }
+
+    .hours-table {
+      width: 100%;
+      font-size: 13px;
+    }
+
+    .hours-table tr td {
+      padding: 4px 0;
+      color: #555;
+    }
+
+    .hours-table tr td:first-child {
+      font-weight: 500;
+      color: #333;
+      width: 100px;
+    }
+
+    .location-card .btn-gold-outline {
+      width: 100%;
+      justify-content: center;
+      font-size: 13px;
+    }
+
+    /* ─── TESTIMONIAL / TRUST ─── */
+    .trust-section {
+      padding: 96px 0;
+      text-align: center;
+    }
+
+    .trust-quote {
+      max-width: 700px;
+      margin: 0 auto 48px;
+      position: relative;
+    }
+
+    .trust-quote .quote-mark {
+      font-size: 72px;
+      color: #C8952E;
+      line-height: 1;
+      font-family: Georgia, serif;
+      opacity: 0.3;
+    }
+
+    .trust-quote blockquote {
+      font-size: 24px;
+      font-weight: 500;
+      color: #19183C;
+      line-height: 1.5;
+      font-style: italic;
+      margin: -20px 0 16px;
+    }
+
+    .trust-quote .quote-attr {
+      font-size: 15px;
+      color: #888;
+      font-style: normal;
+    }
+
+    .cert-badges {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+
+    .cert-badge {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .cert-badge-icon {
+      width: 56px;
+      height: 56px;
+      background: #f8f7f4;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      color: #C8952E;
+      border: 1px solid #e8e6e1;
+    }
+
+    .cert-badge span {
+      font-size: 12px;
+      font-weight: 500;
+      color: #888;
+    }
+
+    /* ─── FOOTER ─── */
+    .site-footer {
+      background: #1a1a2e;
+      color: rgba(255,255,255,0.7);
+      padding: 64px 0 0;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .footer-col h4 {
+      font-size: 15px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-col ul li a {
+      font-size: 14px;
+      color: rgba(255,255,255,0.6);
+      transition: color 0.2s ease;
+    }
+
+    .footer-col ul li a:hover {
+      color: #C8952E;
+    }
+
+    .footer-col p {
+      font-size: 14px;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.6);
+    }
+
+    .footer-col .footer-phone {
+      color: #C8952E;
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 0;
+      font-size: 13px;
+      color: rgba(255,255,255,0.4);
+    }
+
+    .footer-social a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 8px;
+      color: rgba(255,255,255,0.6);
+      transition: all 0.2s ease;
+    }
+
+    .footer-social a:hover {
+      background: #C8952E;
+      color: #fff;
+    }
+
+    .footer-social a svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    /* ─── MOBILE NAV OVERLAY ─── */
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      top: 72px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #1a1a2e;
+      z-index: 998;
+      padding: 24px;
+      overflow-y: auto;
+    }
+
+    .mobile-nav.open {
+      display: block;
+    }
+
+    .mobile-nav a {
+      display: block;
+      padding: 14px 0;
+      color: rgba(255,255,255,0.8);
+      font-size: 17px;
+      font-weight: 500;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      transition: color 0.2s ease;
+    }
+
+    .mobile-nav a:hover,
+    .mobile-nav a.active {
+      color: #C8952E;
+    }
+
+    .mobile-nav .mobile-nav-cta {
+      margin-top: 24px;
+    }
+
+    .mobile-nav .mobile-nav-cta .btn-gold {
+      width: 100%;
+      justify-content: center;
+      margin-bottom: 12px;
+    }
+
+    .mobile-nav .mobile-nav-phone {
+      text-align: center;
+      color: rgba(255,255,255,0.6);
+      font-size: 14px;
+      margin-top: 8px;
+    }
+
+    .mobile-nav .mobile-nav-phone a {
+      color: #C8952E;
+      font-weight: 600;
+      border: none;
+      display: inline;
+      padding: 0;
+      font-size: 14px;
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 1024px) {
+      .vehicles-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero h1 {
+        font-size: 40px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .site-header {
+        height: 64px;
+      }
+
+      .header-inner {
+        height: 64px;
+      }
+
+      .main-nav {
+        display: none;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .header-phone {
+        display: none;
+      }
+
+      .header-actions .btn-gold {
+        display: none;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 120px 24px 64px;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .hero-sub {
+        font-size: 16px;
+        margin-bottom: 32px;
+      }
+
+      .search-form {
+        flex-direction: column;
+      }
+
+      .trust-badges {
+        gap: 20px;
+      }
+
+      .section {
+        padding: 64px 0;
+      }
+
+      .section-heading h2 {
+        font-size: 28px;
+      }
+
+      .vehicles-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .finance-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .finance-visual {
+        height: 260px;
+      }
+
+      .locations-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+      }
+
+      .finance-content h2 {
+        font-size: 28px;
+      }
+
+      .trust-quote blockquote {
+        font-size: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 26px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cert-badges {
+        gap: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ─── STICKY HEADER ─── -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a href="/demo/golden-oldies" class="header-logo">
+        <span class="header-logo-name">GOLDEN OLDIES</span>
+        <span class="header-logo-sub">Auto Sales</span>
+      </a>
+      <div class="header-actions">
+        <a href="tel:8664563939" class="header-phone">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          (866) 456-3939
+        </a>
+        <a href="#locations" class="btn-gold">Visit Us</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ─── NAVIGATION BAR ─── -->
+  <nav class="main-nav" id="mainNav">
+    <div class="nav-inner">
+      <ul class="nav-links">
+        <li><a href="/demo/golden-oldies" class="active">Home</a></li>
+        <li><a href="/demo/golden-oldies/inventory">Inventory</a></li>
+        <li><a href="/demo/golden-oldies/inventory?maxPrice=15000">Under $15K</a></li>
+        <li><a href="/demo/golden-oldies/service">Service</a></li>
+        <li><a href="/demo/golden-oldies/finance">Finance</a></li>
+        <li><a href="/demo/golden-oldies/about">About Us</a></li>
+        <li><a href="/demo/golden-oldies/contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ─── MOBILE NAV ─── -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="/demo/golden-oldies" class="active">Home</a>
+    <a href="/demo/golden-oldies/inventory">Inventory</a>
+    <a href="/demo/golden-oldies/inventory?maxPrice=15000">Under $15K</a>
+    <a href="/demo/golden-oldies/service">Service</a>
+    <a href="/demo/golden-oldies/finance">Finance</a>
+    <a href="/demo/golden-oldies/about">About Us</a>
+    <a href="/demo/golden-oldies/contact">Contact</a>
+    <div class="mobile-nav-cta">
+      <a href="#locations" class="btn-gold">Visit Us</a>
+      <p class="mobile-nav-phone">Call us: <a href="tel:8664563939">(866) 456-3939</a></p>
+    </div>
+  </div>
+
+  <!-- ─── HERO ─── -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <h1>Your Hometown Dealer <span>Since 1991</span></h1>
+      <p class="hero-sub">Over 200 Quality Pre-Owned Vehicles | Two Convenient Locations</p>
+
+      <div class="hero-search">
+        <form class="search-form" action="/demo/golden-oldies/inventory" method="get">
+          <div class="search-field">
+            <label for="search-make">Make</label>
+            <select id="search-make" name="make">
+              <option value="">All Makes</option>
+              <option>Acura</option>
+              <option>Audi</option>
+              <option>BMW</option>
+              <option>Buick</option>
+              <option>Cadillac</option>
+              <option>Chevrolet</option>
+              <option>Chrysler</option>
+              <option>Dodge</option>
+              <option>Ford</option>
+              <option>GMC</option>
+              <option>Honda</option>
+              <option>Hyundai</option>
+              <option>Jeep</option>
+              <option>Kia</option>
+              <option>Lexus</option>
+              <option>Mercedes-Benz</option>
+              <option>Nissan</option>
+              <option>Ram</option>
+              <option>Subaru</option>
+              <option>Tesla</option>
+              <option>Toyota</option>
+              <option>Volkswagen</option>
+            </select>
+          </div>
+          <div class="search-field">
+            <label for="search-model">Model</label>
+            <input type="text" id="search-model" name="model" placeholder="e.g. Camry">
+          </div>
+          <div class="search-field">
+            <label for="search-price">Max Price</label>
+            <select id="search-price" name="maxPrice">
+              <option value="">Any Price</option>
+              <option value="10000">Under $10,000</option>
+              <option value="15000">Under $15,000</option>
+              <option value="20000">Under $20,000</option>
+              <option value="25000">Under $25,000</option>
+              <option value="30000">Under $30,000</option>
+              <option value="40000">Under $40,000</option>
+              <option value="50000">Under $50,000</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-gold search-btn">Search</button>
+        </form>
+      </div>
+
+      <div class="trust-badges">
+        <div class="trust-badge">
+          <div class="trust-badge-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          75-Point Inspection
+        </div>
+        <div class="trust-badge">
+          <div class="trust-badge-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          30-Day Warranty
+        </div>
+        <div class="trust-badge">
+          <div class="trust-badge-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+          </div>
+          Golden Guarantee
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FEATURED VEHICLES ─── -->
+  <section class="section" id="featured">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Featured Vehicles</h2>
+        <p>Hand-picked, inspected, and ready for the road</p>
+      </div>
+
+      <div class="vehicles-grid">
+        <!-- Vehicle 1 -->
+        <div class="vehicle-card">
+          <div class="vehicle-img">
+            <div class="vehicle-img-placeholder" style="background: linear-gradient(135deg, #9ca3af, #6b7280);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><rect x="1" y="6" width="22" height="12" rx="3"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/><path d="M5 6l2-3h10l2 3"/></svg>
+            </div>
+          </div>
+          <div class="vehicle-info">
+            <div class="vehicle-year-make">2024 Chevrolet</div>
+            <div class="vehicle-title">Equinox RS</div>
+            <div class="vehicle-meta">
+              <span>16,225 mi</span>
+              <span>Gray</span>
+            </div>
+            <div class="vehicle-price">$26,489</div>
+            <a href="/demo/golden-oldies/inventory" class="btn-gold">View Details</a>
+          </div>
+        </div>
+
+        <!-- Vehicle 2 -->
+        <div class="vehicle-card">
+          <div class="vehicle-img">
+            <div class="vehicle-img-placeholder" style="background: linear-gradient(135deg, #9ca3af, #6b7280);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><rect x="1" y="6" width="22" height="12" rx="3"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/><path d="M5 6l2-3h10l2 3"/></svg>
+            </div>
+          </div>
+          <div class="vehicle-info">
+            <div class="vehicle-year-make">2024 Buick</div>
+            <div class="vehicle-title">Enclave Premium</div>
+            <div class="vehicle-meta">
+              <span>34,060 mi</span>
+              <span>Gray</span>
+            </div>
+            <div class="vehicle-price">$30,802</div>
+            <a href="/demo/golden-oldies/inventory" class="btn-gold">View Details</a>
+          </div>
+        </div>
+
+        <!-- Vehicle 3 -->
+        <div class="vehicle-card">
+          <div class="vehicle-img">
+            <div class="vehicle-img-placeholder" style="background: linear-gradient(135deg, #60a5fa, #3b82f6);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><rect x="1" y="6" width="22" height="12" rx="3"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/><path d="M5 6l2-3h10l2 3"/></svg>
+            </div>
+          </div>
+          <div class="vehicle-info">
+            <div class="vehicle-year-make">2024 Audi</div>
+            <div class="vehicle-title">A3 Premium</div>
+            <div class="vehicle-meta">
+              <span>29,025 mi</span>
+              <span>Blue</span>
+            </div>
+            <div class="vehicle-price">$24,802</div>
+            <a href="/demo/golden-oldies/inventory" class="btn-gold">View Details</a>
+          </div>
+        </div>
+
+        <!-- Vehicle 4 -->
+        <div class="vehicle-card">
+          <div class="vehicle-img">
+            <div class="vehicle-img-placeholder" style="background: linear-gradient(135deg, #e5e7eb, #d1d5db);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="1.5"><rect x="1" y="6" width="22" height="12" rx="3"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/><path d="M5 6l2-3h10l2 3"/></svg>
+            </div>
+          </div>
+          <div class="vehicle-info">
+            <div class="vehicle-year-make">2019 BMW</div>
+            <div class="vehicle-title">X1 sDrive28i</div>
+            <div class="vehicle-meta">
+              <span>87,667 mi</span>
+              <span>White</span>
+            </div>
+            <div class="vehicle-price">$18,888</div>
+            <a href="/demo/golden-oldies/inventory" class="btn-gold">View Details</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="view-all-link">
+        <a href="/demo/golden-oldies/inventory">View All Inventory &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── WHY CHOOSE US ─── -->
+  <section class="section section-alt" id="why-us">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Why Choose Golden Oldies?</h2>
+        <p>Over 30 years of putting our customers first</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+          </div>
+          <h3>Golden Guarantee</h3>
+          <p>Our exclusive 30-day warranty covers most vehicles, giving you peace of mind with every purchase.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>75-Point Inspection</h3>
+          <p>Every vehicle undergoes a comprehensive 75-point inspection before it ever hits our lot.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3>Flexible Financing</h3>
+          <p>Programs for every credit situation with rates as low as 4.75% and deferred payments up to 90 days.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FINANCE SECTION ─── -->
+  <section class="finance-section" id="finance">
+    <div class="container">
+      <div class="finance-grid">
+        <div class="finance-content">
+          <h2>Financing Made Simple</h2>
+          <p>We work with multiple lenders to find the best rate and terms for your situation, regardless of credit history.</p>
+          <ul class="finance-list">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Capital One pre-qualification available
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Multiple bank and credit union partnerships
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Extended warranty and protection plans
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Deferred payments available up to 90 days
+            </li>
+          </ul>
+          <a href="/demo/golden-oldies/finance" class="btn-gold">Get Pre-Approved</a>
+        </div>
+        <div class="finance-visual">
+          <div class="finance-visual-text">
+            <div class="rate">4.75%</div>
+            <div class="rate-label">Rates As Low As</div>
+            <div class="rate-sub">On approved credit</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── LOCATIONS ─── -->
+  <section class="section section-alt" id="locations">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Two Convenient Locations</h2>
+        <p>Visit us in Hudson and Spring Hill</p>
+      </div>
+
+      <div class="locations-grid">
+        <!-- Hudson / NPR -->
+        <div class="location-card">
+          <div class="location-name">Hudson / NPR</div>
+          <div class="location-badge">Main Location</div>
+
+          <div class="location-detail">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            10535 SR 52, Hudson, FL 34669
+          </div>
+          <div class="location-detail">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>Sales: <a href="tel:7278563939" style="color:#0678bc;">(727) 856-3939</a> &nbsp;|&nbsp; Service: <a href="tel:7278573408" style="color:#0678bc;">(727) 857-3408</a></span>
+          </div>
+
+          <div class="location-hours">
+            <h4>Hours</h4>
+            <table class="hours-table">
+              <tr><td>Mon - Fri</td><td>8:00 AM - 7:00 PM</td></tr>
+              <tr><td>Saturday</td><td>9:00 AM - 6:00 PM</td></tr>
+              <tr><td>Sunday</td><td>10:00 AM - 5:00 PM</td></tr>
+            </table>
+          </div>
+
+          <a href="https://www.google.com/maps/search/?api=1&query=10535+SR+52+Hudson+FL+34669" target="_blank" rel="noopener" class="btn-gold-outline">Get Directions</a>
+        </div>
+
+        <!-- Spring Hill -->
+        <div class="location-card">
+          <div class="location-name">Spring Hill</div>
+          <div class="location-badge">Second Location</div>
+
+          <div class="location-detail">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            18913 US Highway 19, Hudson, FL 34667
+          </div>
+          <div class="location-detail">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>Sales: <a href="tel:7278693030" style="color:#0678bc;">(727) 869-3030</a></span>
+          </div>
+
+          <div class="location-hours">
+            <h4>Hours</h4>
+            <table class="hours-table">
+              <tr><td>Mon - Fri</td><td>8:00 AM - 8:00 PM</td></tr>
+              <tr><td>Saturday</td><td>9:00 AM - 6:00 PM</td></tr>
+              <tr><td>Sunday</td><td>10:00 AM - 5:00 PM</td></tr>
+            </table>
+          </div>
+
+          <a href="https://www.google.com/maps/search/?api=1&query=18913+US+Highway+19+Hudson+FL+34667" target="_blank" rel="noopener" class="btn-gold-outline">Get Directions</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── TESTIMONIAL / TRUST ─── -->
+  <section class="trust-section" id="trust">
+    <div class="container">
+      <div class="trust-quote">
+        <div class="quote-mark">&ldquo;</div>
+        <blockquote>Serving the Tampa Bay area for over 30 years with honesty and integrity.</blockquote>
+        <p class="quote-attr">Home Of The Golden Guarantee &mdash; 250 years combined staff experience</p>
+      </div>
+
+      <div class="cert-badges">
+        <div class="cert-badge">
+          <div class="cert-badge-icon">ASE</div>
+          <span>Certified</span>
+        </div>
+        <div class="cert-badge">
+          <div class="cert-badge-icon">NIADA</div>
+          <span>Member</span>
+        </div>
+        <div class="cert-badge">
+          <div class="cert-badge-icon">FIADA</div>
+          <span>Member</span>
+        </div>
+        <div class="cert-badge">
+          <div class="cert-badge-icon">BBB</div>
+          <span>Accredited</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/demo/golden-oldies">Home</a></li>
+            <li><a href="/demo/golden-oldies/about">About Us</a></li>
+            <li><a href="/demo/golden-oldies/service">Service Center</a></li>
+            <li><a href="/demo/golden-oldies/finance">Financing</a></li>
+            <li><a href="/demo/golden-oldies/contact">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Inventory</h4>
+          <ul>
+            <li><a href="/demo/golden-oldies/inventory">All Vehicles</a></li>
+            <li><a href="/demo/golden-oldies/inventory?maxPrice=15000">Under $15,000</a></li>
+            <li><a href="/demo/golden-oldies/inventory?type=suv">SUVs</a></li>
+            <li><a href="/demo/golden-oldies/inventory?type=truck">Trucks</a></li>
+            <li><a href="/demo/golden-oldies/inventory?type=sedan">Sedans</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <p>
+            <a href="tel:8664563939" class="footer-phone">(866) 456-3939</a><br>
+            <a href="mailto:sales@goldenoldiesauto.com" style="color:#0678bc;">sales@goldenoldiesauto.com</a>
+          </p>
+          <p style="margin-top:12px;">
+            10535 SR 52<br>
+            Hudson, FL 34669
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Hours (Hudson)</h4>
+          <ul style="gap:6px;">
+            <li><span style="color:rgba(255,255,255,0.6);">Mon - Fri: 8am - 7pm</span></li>
+            <li><span style="color:rgba(255,255,255,0.6);">Saturday: 9am - 6pm</span></li>
+            <li><span style="color:rgba(255,255,255,0.6);">Sunday: 10am - 5pm</span></li>
+          </ul>
+          <h4 style="margin-top:20px;">Hours (Spring Hill)</h4>
+          <ul style="gap:6px;">
+            <li><span style="color:rgba(255,255,255,0.6);">Mon - Fri: 8am - 8pm</span></li>
+            <li><span style="color:rgba(255,255,255,0.6);">Saturday: 9am - 6pm</span></li>
+            <li><span style="color:rgba(255,255,255,0.6);">Sunday: 10am - 5pm</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 Golden Oldies Auto Sales. All rights reserved. | Your Hometown Dealer Since 1991</span>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/goldenoldiesauto/" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ─── SCRIPTS ─── -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script>
+    $(function() {
+      // Sticky header shadow on scroll
+      $(window).on('scroll', function() {
+        if ($(this).scrollTop() > 10) {
+          $('#siteHeader').addClass('scrolled');
+        } else {
+          $('#siteHeader').removeClass('scrolled');
+        }
+      });
+
+      // Mobile hamburger toggle
+      $('#hamburger').on('click', function() {
+        $(this).toggleClass('active');
+        $('#mobileNav').toggleClass('open');
+        $('body').toggleClass('nav-open');
+      });
+
+      // Close mobile nav on link click
+      $('#mobileNav a').on('click', function() {
+        $('#hamburger').removeClass('active');
+        $('#mobileNav').removeClass('open');
+        $('body').removeClass('nav-open');
+      });
+
+      // Smooth scroll for anchor links
+      $('a[href^="#"]').on('click', function(e) {
+        var target = $(this.getAttribute('href'));
+        if (target.length) {
+          e.preventDefault();
+          $('html, body').animate({
+            scrollTop: target.offset().top - 120
+          }, 600);
+        }
+      });
+    });
+  </script>
+</body>
+</html>

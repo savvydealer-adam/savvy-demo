@@ -1,0 +1,63 @@
+{
+  "dealerName": "Golden Oldies Auto Sales",
+  "tagline": "Your Hometown Dealer...Since 1991!",
+  "slogan": "Home Of The Golden Guarantee",
+  "phone": "(866) 456-3939",
+  "email": "sales@goldenoldiesauto.com",
+  "locations": [
+    {
+      "name": "Hudson / NPR",
+      "address": "10535 SR 52, Hudson, FL 34669",
+      "phone": "(727) 856-3939",
+      "tollFree": "(866) 456-3939",
+      "hours": {
+        "sales": [
+          { "days": "Monday - Friday", "time": "8:00 AM - 7:00 PM" },
+          { "days": "Saturday", "time": "9:00 AM - 6:00 PM" },
+          { "days": "Sunday", "time": "10:00 AM - 5:00 PM" }
+        ]
+      },
+      "mapUrl": "https://www.google.com/maps/place/10535+SR+52,+Hudson,+FL+34669"
+    },
+    {
+      "name": "Spring Hill",
+      "address": "18913 US Highway 19, Hudson, FL 34667",
+      "phone": "(727) 869-3030",
+      "tollFree": "(800) 817-3892",
+      "hours": {
+        "sales": [
+          { "days": "Monday - Friday", "time": "8:00 AM - 8:00 PM" },
+          { "days": "Saturday", "time": "9:00 AM - 6:00 PM" },
+          { "days": "Sunday", "time": "10:00 AM - 5:00 PM" }
+        ]
+      },
+      "mapUrl": "https://www.google.com/maps/place/18913+US+Hwy+19,+Hudson,+FL+34667"
+    }
+  ],
+  "servicePhone": "(727) 857-3408",
+  "theme": {
+    "headerBg": "#ffffff",
+    "navBg": "#1a1a2e",
+    "primaryColor": "#C8952E",
+    "secondaryColor": "#C8952E",
+    "accentColor": "#D4380D",
+    "footerBg": "#1a1a2e",
+    "bodyColor": "#19183C",
+    "linkColor": "#0678bc",
+    "fontFamily": "'DM Sans', sans-serif",
+    "headingFont": "'DM Sans', sans-serif"
+  },
+  "socialLinks": {
+    "facebook": "https://www.facebook.com/goldenoldiesauto/"
+  },
+  "navLinks": [
+    { "label": "Home", "href": "/demo/golden-oldies" },
+    { "label": "Inventory", "href": "/demo/golden-oldies/inventory" },
+    { "label": "Under $15K", "href": "/demo/golden-oldies/inventory" },
+    { "label": "Service", "href": "#" },
+    { "label": "Finance", "href": "#" },
+    { "label": "About Us", "href": "#" },
+    { "label": "Contact", "href": "#" }
+  ],
+  "certifications": ["ASE", "NIADA", "FIADA", "BBB"]
+}
