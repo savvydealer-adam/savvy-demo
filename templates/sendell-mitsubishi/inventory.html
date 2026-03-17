@@ -119,7 +119,8 @@
 
         /* Image */
         .list-item .image-block { position: relative; overflow: hidden; }
-        .list-item .image-block img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 12px 12px 0 0; transition: transform 0.4s; }
+        .list-item .image-block { background: #f4f4f4; }
+        .list-item .image-block img { width: 100%; aspect-ratio: 4/3; object-fit: contain; border-radius: 12px 12px 0 0; transition: transform 0.4s; padding: 12px; }
         .list-item:hover .image-block img { transform: scale(1.03); }
         .list-item .image-block .year-badge { position: absolute; top: 10px; left: 10px; background: var(--secondarycolor); color: #fff; font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 4px; text-transform: uppercase; }
         .list-item .image-block .savings-badge { position: absolute; top: 10px; right: 10px; background: #30770f; color: #fff; font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 4px; }

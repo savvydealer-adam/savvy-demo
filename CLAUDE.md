@@ -15,9 +15,12 @@ Demo dealership website gallery showcasing SavvyDealer website templates. Each t
 
 **ALWAYS read the relevant brand guide before creating or modifying a dealer template.**
 
-| OEM | Brand Guide |
-|-----|-------------|
-| Mitsubishi | `brand-guides/mitsubishi.md` |
+| Guide | File | Purpose |
+|-------|------|---------|
+| Mitsubishi | `brand-guides/mitsubishi.md` | OEM fonts, colors, logo, compliance rules |
+| SRP Template | `brand-guides/srp-template.md` | Standard SRP/inventory page layout for ALL demos |
+
+**SRP pages MUST follow `srp-template.md`.** This is the approved layout — do not deviate from the card structure, filter panel, or grid layout.
 
 When building a new template for a manufacturer that has a brand guide:
 1. Read the brand guide FIRST
