@@ -81,8 +81,6 @@ Each card uses this exact HTML hierarchy:
     <!-- IMAGE BLOCK -->
     <div class="image-block">
       <a href="#"><img src="..." alt="..." /></a>
-      <span class="year-badge">New 2026</span>
-      <span class="savings-badge">Save $X,XXX</span>  <!-- only if discount -->
       <div class="watchlist-icon"><svg>♡</svg></div>
     </div>
 
@@ -157,9 +155,9 @@ Each card uses this exact HTML hierarchy:
 ### Badges
 | Badge | Position | Color | Usage |
 |-------|----------|-------|-------|
-| Year badge | `top: 10px; left: 10px` | `--secondarycolor` bg, white text | Always show |
-| Savings badge | `top: 10px; right: 10px` | `#30770f` bg, white text | Only when discount exists |
 | Watchlist heart | `bottom: 10px; right: 10px` | White bg circle, gray fill | Always show |
+
+**Do NOT add** year badges or savings badges to cards — they are redundant (year is in the title, savings show in the price section).
 
 ### Vehicle Title
 - Color: `#0678bc` (link blue)
@@ -185,10 +183,13 @@ Each card uses this exact HTML hierarchy:
 | Final price | `color: #30770f; font-weight: 700; font-size: 16px` |
 
 ### Expandable Price Breakdown
-- Toggle trigger: `onclick="this.nextElementSibling.classList.toggle('show')"`
-- Default state: `display: none`
+- Toggle trigger: `onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('show')"`
+- Default state: `display: none` — breakdown is **always hidden** until user clicks
 - Shown state: `.price-breakup.show { display: block; }`
+- Arrow rotates on open: `.price-toggle.open svg { transform: rotate(180deg); }`
 - Separator: `border-top: 1px dashed #ddd`
+
+**CRITICAL:** The price summary (savings + dealer price) is the only pricing visible by default. The MSRP/discount breakdown is HIDDEN behind "Price Details" — this matches the original St. Pete Mitsubishi template exactly.
 
 ### CTA Buttons
 ```css
@@ -312,10 +313,10 @@ border-radius: 12px;
 - [ ] Use `object-fit: contain` (NOT cover) for vehicle images
 - [ ] Include `padding: 12px` on images to prevent edge cropping
 - [ ] Set `background: #f4f4f4` on `.image-block` for clean image backdrop
-- [ ] Include year badge on every card
-- [ ] Include savings badge only when discount exists
+- [ ] Do NOT include year badges or savings badges on cards (redundant)
 - [ ] Include watchlist heart icon on every card
-- [ ] Price toggle expands/collapses price breakdown
+- [ ] Price summary (savings + price) visible by default in summary bar
+- [ ] Price breakdown (MSRP/discounts) HIDDEN behind "Price Details" toggle
 - [ ] MSRP is struck through, discount in red, final price in green (#30770f)
 - [ ] Filter panel has correct accordion structure with badge counts
 - [ ] All internal links use absolute paths (`/demo/dealer-name/inventory`)

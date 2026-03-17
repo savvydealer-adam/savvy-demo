@@ -122,8 +122,6 @@
         .list-item .image-block { background: #f4f4f4; }
         .list-item .image-block img { width: 100%; aspect-ratio: 4/3; object-fit: contain; border-radius: 12px 12px 0 0; transition: transform 0.4s; padding: 12px; }
         .list-item:hover .image-block img { transform: scale(1.03); }
-        .list-item .image-block .year-badge { position: absolute; top: 10px; left: 10px; background: var(--secondarycolor); color: #fff; font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 4px; text-transform: uppercase; }
-        .list-item .image-block .savings-badge { position: absolute; top: 10px; right: 10px; background: #30770f; color: #fff; font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 4px; }
 
         .watchlist-icon { position: absolute; bottom: 10px; right: 10px; width: 32px; height: 32px; background: rgba(255,255,255,0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: var(--transition); }
         .watchlist-icon:hover { background: var(--secondarycolor); }
@@ -150,27 +148,32 @@
         /* Price Block */
         .list-item-price { padding: 0 15px 15px; display: flex; flex-direction: column; flex-grow: 1; }
 
-        .mobile-apr-price-wrapper { padding: 12px 0; border-top: 1px solid #f0f0f0; margin-top: 8px; }
+        /* Price summary bar — savings left, price right */
+        .mobile-apr-price-wrapper { padding: 10px 12px; background: #fafafa; border: 1px solid #eee; border-radius: 8px; margin-top: 10px; }
         .mobile-apr-price-wrapper .price-display { display: flex; align-items: center; justify-content: space-between; }
         .yousave-price { text-align: left; }
-        .yousave-price .amount { font-size: 16px; font-weight: 800; color: var(--secondarycolor); }
-        .yousave-price .save-label { font-size: 11px; color: var(--linktextcolor); text-transform: uppercase; font-weight: 700; display: block; }
+        .yousave-price .amount { font-size: 15px; font-weight: 800; color: var(--secondarycolor); }
+        .yousave-price .save-label { font-size: 10px; color: var(--linktextcolor); text-transform: uppercase; font-weight: 700; display: block; }
         .mobile-price { text-align: right; }
         .mobile-price .price { font-size: 20px; font-weight: 700; color: var(--bodycolor); }
-        .mobile-price .price-label { font-size: 11px; color: var(--linktextcolor); text-transform: uppercase; font-weight: 700; display: block; }
+        .mobile-price .price-label { font-size: 10px; color: var(--linktextcolor); text-transform: uppercase; font-weight: 700; display: block; }
 
-        /* Expandable price details */
-        .price-toggle { padding: 8px 0; cursor: pointer; font-size: 13px; color: var(--linktextcolor); display: flex; align-items: center; gap: 4px; }
-        .price-toggle svg { width: 10px; height: 10px; fill: var(--linktextcolor); transition: transform 0.3s; }
-        .price-breakup { display: none; padding: 8px 0; border-top: 1px dashed #ddd; }
+        /* "Price Details" toggle — styled as clickable link */
+        .price-toggle { padding: 6px 0; margin-top: 6px; cursor: pointer; font-size: 13px; color: var(--linktextcolor); display: flex; align-items: center; gap: 4px; user-select: none; }
+        .price-toggle:hover { color: var(--bodycolor); }
+        .price-toggle svg { width: 10px; height: 10px; fill: currentColor; transition: transform 0.3s; }
+        .price-toggle.open svg { transform: rotate(180deg); }
+
+        /* Hidden price breakdown — revealed by toggle */
+        .price-breakup { display: none; padding: 10px 0 4px; }
         .price-breakup.show { display: block; }
-        .price-breakup .row { display: flex; justify-content: space-between; padding: 4px 0; font-size: 14px; }
+        .price-breakup .row { display: flex; justify-content: space-between; padding: 3px 0; font-size: 13px; }
         .price-breakup .label { color: #999; }
-        .price-breakup .msrp { text-decoration: line-through; }
+        .price-breakup .msrp { text-decoration: line-through; color: #999; }
         .price-breakup .msrp::before { content: "$"; }
         .price-breakup .dealersavingsprice { color: var(--secondarycolor); font-weight: 700; }
-        .price-breakup .finalprice { color: #30770f; font-weight: 700; font-size: 16px; }
-        .price-breakup .border-top-dash { border-top: 1px dashed #ddd; margin-top: 4px; padding-top: 8px; }
+        .price-breakup .finalprice { color: #30770f; font-weight: 700; }
+        .price-breakup .border-top-dash { border-top: 1px dashed #ddd; margin-top: 4px; padding-top: 6px; }
 
         /* CTA Buttons */
         .card-actions { margin-top: auto; display: flex; flex-direction: column; gap: 6px; padding-top: 8px; }
@@ -406,8 +409,6 @@
                         <div class="list-item-inner">
                             <div class="image-block">
                                 <a href="#"><img src="https://www.mitsubishicars.com/content/dam/mitsubishi-motors-us/images/cars/outlander-sport/2026/primary/hero/W85_0_26OTL-Sport-03-side.png" alt="2025 Outlander Sport S" /></a>
-                                <span class="year-badge">New 2025</span>
-                                <span class="savings-badge">Save $4,000</span>
                                 <div class="watchlist-icon"><svg viewBox="0 0 512 512"><path d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9C313.1 47 353.4 37.9 392.8 45.4 462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9z"/></svg></div>
                             </div>
                             <div class="list-item-detail">
@@ -426,7 +427,7 @@
                                         <div class="mobile-price"><span class="price">$24,990</span><span class="price-label">Sendell Price*</span></div>
                                     </div>
                                 </div>
-                                <div class="price-toggle" onclick="this.nextElementSibling.classList.toggle('show')">Price Details <svg viewBox="0 0 320 512"><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg></div>
+                                <div class="price-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('show')">Price Details <svg viewBox="0 0 320 512"><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg></div>
                                 <div class="price-breakup">
                                     <div class="row"><div class="label"><strong>MSRP</strong></div><div class="msrp">28,990</div></div>
                                     <div class="row"><div class="label"><strong>Trade Discount</strong></div><div class="dealersavingsprice">-$4,000</div></div>
@@ -444,8 +445,6 @@
                         <div class="list-item-inner">
                             <div class="image-block">
                                 <a href="#"><img src="https://www.mitsubishicars.com/content/dam/mitsubishi-motors-us/images/cars/outlander-sport/2026/primary/hero/W85_0_26OTL-Sport-03-side.png" alt="2025 Outlander Sport S" /></a>
-                                <span class="year-badge">New 2025</span>
-                                <span class="savings-badge">Save $4,000</span>
                                 <div class="watchlist-icon"><svg viewBox="0 0 512 512"><path d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9C313.1 47 353.4 37.9 392.8 45.4 462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9z"/></svg></div>
                             </div>
                             <div class="list-item-detail">
@@ -464,7 +463,7 @@
                                         <div class="mobile-price"><span class="price">$25,480</span><span class="price-label">Sendell Price*</span></div>
                                     </div>
                                 </div>
-                                <div class="price-toggle" onclick="this.nextElementSibling.classList.toggle('show')">Price Details <svg viewBox="0 0 320 512"><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg></div>
+                                <div class="price-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('show')">Price Details <svg viewBox="0 0 320 512"><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg></div>
                                 <div class="price-breakup">
                                     <div class="row"><div class="label"><strong>MSRP</strong></div><div class="msrp">29,480</div></div>
                                     <div class="row"><div class="label"><strong>Trade Discount</strong></div><div class="dealersavingsprice">-$4,000</div></div>
@@ -480,8 +479,6 @@
                         <div class="list-item-inner">
                             <div class="image-block">
                                 <a href="#"><img src="https://www.mitsubishicars.com/content/dam/mitsubishi-motors-us/images/cars/eclipse-cross/2026/primary/hero/2025-2026-mitsubishi-eclipse-cross-es-red-diamond-side-profile.png" alt="2025 Eclipse Cross" /></a>
-                                <span class="year-badge">New 2025</span>
-                                <span class="savings-badge">Save $5,000</span>
                                 <div class="watchlist-icon"><svg viewBox="0 0 512 512"><path d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9C313.1 47 353.4 37.9 392.8 45.4 462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9z"/></svg></div>
                             </div>
                             <div class="list-item-detail">
@@ -500,7 +497,7 @@
                                         <div class="mobile-price"><span class="price">$28,340</span><span class="price-label">Sendell Price*</span></div>
                                     </div>
                                 </div>
-                                <div class="price-toggle" onclick="this.nextElementSibling.classList.toggle('show')">Price Details <svg viewBox="0 0 320 512"><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg></div>
+                                <div class="price-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('show')">Price Details <svg viewBox="0 0 320 512"><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg></div>
                                 <div class="price-breakup">
                                     <div class="row"><div class="label"><strong>MSRP</strong></div><div class="msrp">33,340</div></div>
                                     <div class="row"><div class="label"><strong>Trade Discount</strong></div><div class="dealersavingsprice">-$5,000</div></div>
@@ -516,8 +513,6 @@
                         <div class="list-item-inner">
                             <div class="image-block">
                                 <a href="#"><img src="https://www.mitsubishicars.com/content/dam/mitsubishi-motors-us/images/cars/eclipse-cross/2026/primary/hero/2025-2026-mitsubishi-eclipse-cross-es-red-diamond-side-profile.png" alt="2025 Eclipse Cross" /></a>
-                                <span class="year-badge">New 2025</span>
-                                <span class="savings-badge">Save $5,000</span>
                                 <div class="watchlist-icon"><svg viewBox="0 0 512 512"><path d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9C313.1 47 353.4 37.9 392.8 45.4 462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9z"/></svg></div>
                             </div>
                             <div class="list-item-detail">
@@ -536,7 +531,7 @@
                                         <div class="mobile-price"><span class="price">$29,105</span><span class="price-label">Sendell Price*</span></div>
                                     </div>
                                 </div>
-                                <div class="price-toggle" onclick="this.nextElementSibling.classList.toggle('show')">Price Details <svg viewBox="0 0 320 512"><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg></div>
+                                <div class="price-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('show')">Price Details <svg viewBox="0 0 320 512"><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg></div>
                                 <div class="price-breakup">
                                     <div class="row"><div class="label"><strong>MSRP</strong></div><div class="msrp">34,105</div></div>
                                     <div class="row"><div class="label"><strong>Trade Discount</strong></div><div class="dealersavingsprice">-$5,000</div></div>
@@ -552,7 +547,6 @@
                         <div class="list-item-inner">
                             <div class="image-block">
                                 <a href="#"><img src="https://www.mitsubishicars.com/content/dam/mitsubishi-motors-us/images/cars/outlander-sport/2026/primary/hero/W85_0_26OTL-Sport-03-side.png" alt="2026 Outlander Sport" /></a>
-                                <span class="year-badge">New 2026</span>
                                 <div class="watchlist-icon"><svg viewBox="0 0 512 512"><path d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9C313.1 47 353.4 37.9 392.8 45.4 462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9z"/></svg></div>
                             </div>
                             <div class="list-item-detail">
@@ -570,7 +564,7 @@
                                         <div class="mobile-price" style="margin-left:auto;"><span class="price">$31,580</span><span class="price-label">Sendell Price*</span></div>
                                     </div>
                                 </div>
-                                <div class="price-toggle" onclick="this.nextElementSibling.classList.toggle('show')">Price Details <svg viewBox="0 0 320 512"><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg></div>
+                                <div class="price-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('show')">Price Details <svg viewBox="0 0 320 512"><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg></div>
                                 <div class="price-breakup">
                                     <div class="row border-top-dash"><div class="label"><strong>MSRP / Sendell Price*</strong></div><div class="finalprice">$31,580</div></div>
                                 </div>
@@ -584,8 +578,6 @@
                         <div class="list-item-inner">
                             <div class="image-block">
                                 <a href="#"><img src="https://www.mitsubishicars.com/content/dam/mitsubishi-motors-us/images/cars/outlander-phev/2025/primary/hero/2025-PHEV-SEL-Premium-graphite.png" alt="2025 Outlander PHEV ES" /></a>
-                                <span class="year-badge">New 2025</span>
-                                <span class="savings-badge">Save $8,000</span>
                                 <div class="watchlist-icon"><svg viewBox="0 0 512 512"><path d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9C313.1 47 353.4 37.9 392.8 45.4 462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9z"/></svg></div>
                             </div>
                             <div class="list-item-detail">
@@ -604,7 +596,7 @@
                                         <div class="mobile-price"><span class="price">$34,380</span><span class="price-label">Sendell Price*</span></div>
                                     </div>
                                 </div>
-                                <div class="price-toggle" onclick="this.nextElementSibling.classList.toggle('show')">Price Details <svg viewBox="0 0 320 512"><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg></div>
+                                <div class="price-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('show')">Price Details <svg viewBox="0 0 320 512"><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg></div>
                                 <div class="price-breakup">
                                     <div class="row"><div class="label"><strong>MSRP</strong></div><div class="msrp">42,380</div></div>
                                     <div class="row"><div class="label"><strong>Trade Discount</strong></div><div class="dealersavingsprice">-$8,000</div></div>
@@ -620,7 +612,6 @@
                         <div class="list-item-inner">
                             <div class="image-block">
                                 <a href="#"><img src="https://www.mitsubishicars.com/content/dam/mitsubishi-motors-us/images/cars/eclipse-cross/2026/primary/hero/2025-2026-mitsubishi-eclipse-cross-es-red-diamond-side-profile.png" alt="2026 Eclipse Cross SEL" /></a>
-                                <span class="year-badge">New 2026</span>
                                 <div class="watchlist-icon"><svg viewBox="0 0 512 512"><path d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9C313.1 47 353.4 37.9 392.8 45.4 462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9z"/></svg></div>
                             </div>
                             <div class="list-item-detail">
@@ -638,7 +629,7 @@
                                         <div class="mobile-price" style="margin-left:auto;"><span class="price">$34,615</span><span class="price-label">Sendell Price*</span></div>
                                     </div>
                                 </div>
-                                <div class="price-toggle" onclick="this.nextElementSibling.classList.toggle('show')">Price Details <svg viewBox="0 0 320 512"><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg></div>
+                                <div class="price-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('show')">Price Details <svg viewBox="0 0 320 512"><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg></div>
                                 <div class="price-breakup">
                                     <div class="row border-top-dash"><div class="label"><strong>MSRP / Sendell Price*</strong></div><div class="finalprice">$34,615</div></div>
                                 </div>
@@ -652,8 +643,6 @@
                         <div class="list-item-inner">
                             <div class="image-block">
                                 <a href="#"><img src="https://www.mitsubishicars.com/content/dam/mitsubishi-motors-us/images/cars/outlander/2026/primary/hero/OTL-SE-white-diamond-jellybean.png" alt="2025 Outlander SEL" /></a>
-                                <span class="year-badge">New 2025</span>
-                                <span class="savings-badge">Save $6,000</span>
                                 <div class="watchlist-icon"><svg viewBox="0 0 512 512"><path d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9C313.1 47 353.4 37.9 392.8 45.4 462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9z"/></svg></div>
                             </div>
                             <div class="list-item-detail">
@@ -672,7 +661,7 @@
                                         <div class="mobile-price"><span class="price">$37,495</span><span class="price-label">Sendell Price*</span></div>
                                     </div>
                                 </div>
-                                <div class="price-toggle" onclick="this.nextElementSibling.classList.toggle('show')">Price Details <svg viewBox="0 0 320 512"><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg></div>
+                                <div class="price-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('show')">Price Details <svg viewBox="0 0 320 512"><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg></div>
                                 <div class="price-breakup">
                                     <div class="row"><div class="label"><strong>MSRP</strong></div><div class="msrp">43,495</div></div>
                                     <div class="row"><div class="label"><strong>Trade Discount</strong></div><div class="dealersavingsprice">-$6,000</div></div>
@@ -688,8 +677,6 @@
                         <div class="list-item-inner">
                             <div class="image-block">
                                 <a href="#"><img src="https://www.mitsubishicars.com/content/dam/mitsubishi-motors-us/images/cars/outlander/2026/primary/hero/OTL-SE-white-diamond-jellybean.png" alt="2026 Outlander SE" /></a>
-                                <span class="year-badge">New 2026</span>
-                                <span class="savings-badge">Save $1,000</span>
                                 <div class="watchlist-icon"><svg viewBox="0 0 512 512"><path d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9C313.1 47 353.4 37.9 392.8 45.4 462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9z"/></svg></div>
                             </div>
                             <div class="list-item-detail">
@@ -708,7 +695,7 @@
                                         <div class="mobile-price"><span class="price">$38,045</span><span class="price-label">Sendell Price*</span></div>
                                     </div>
                                 </div>
-                                <div class="price-toggle" onclick="this.nextElementSibling.classList.toggle('show')">Price Details <svg viewBox="0 0 320 512"><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg></div>
+                                <div class="price-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('show')">Price Details <svg viewBox="0 0 320 512"><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg></div>
                                 <div class="price-breakup">
                                     <div class="row"><div class="label"><strong>MSRP</strong></div><div class="msrp">39,045</div></div>
                                     <div class="row"><div class="label"><strong>Customer Cash</strong></div><div class="dealersavingsprice">-$1,000</div></div>
@@ -724,8 +711,6 @@
                         <div class="list-item-inner">
                             <div class="image-block">
                                 <a href="#"><img src="https://www.mitsubishicars.com/content/dam/mitsubishi-motors-us/images/cars/outlander/2026/primary/hero/OTL-SE-white-diamond-jellybean.png" alt="2026 Outlander SE" /></a>
-                                <span class="year-badge">New 2026</span>
-                                <span class="savings-badge">Save $1,000</span>
                                 <div class="watchlist-icon"><svg viewBox="0 0 512 512"><path d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9C313.1 47 353.4 37.9 392.8 45.4 462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9z"/></svg></div>
                             </div>
                             <div class="list-item-detail">
@@ -744,7 +729,7 @@
                                         <div class="mobile-price"><span class="price">$38,640</span><span class="price-label">Sendell Price*</span></div>
                                     </div>
                                 </div>
-                                <div class="price-toggle" onclick="this.nextElementSibling.classList.toggle('show')">Price Details <svg viewBox="0 0 320 512"><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg></div>
+                                <div class="price-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('show')">Price Details <svg viewBox="0 0 320 512"><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg></div>
                                 <div class="price-breakup">
                                     <div class="row"><div class="label"><strong>MSRP</strong></div><div class="msrp">39,640</div></div>
                                     <div class="row"><div class="label"><strong>Customer Cash</strong></div><div class="dealersavingsprice">-$1,000</div></div>
@@ -760,8 +745,6 @@
                         <div class="list-item-inner">
                             <div class="image-block">
                                 <a href="#"><img src="https://www.mitsubishicars.com/content/dam/mitsubishi-motors-us/images/cars/outlander/2026/primary/hero/OTL-SE-white-diamond-jellybean.png" alt="2026 Outlander SE" /></a>
-                                <span class="year-badge">New 2026</span>
-                                <span class="savings-badge">Save $1,000</span>
                                 <div class="watchlist-icon"><svg viewBox="0 0 512 512"><path d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9C313.1 47 353.4 37.9 392.8 45.4 462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9z"/></svg></div>
                             </div>
                             <div class="list-item-detail">
@@ -780,7 +763,7 @@
                                         <div class="mobile-price"><span class="price">$41,350</span><span class="price-label">Sendell Price*</span></div>
                                     </div>
                                 </div>
-                                <div class="price-toggle" onclick="this.nextElementSibling.classList.toggle('show')">Price Details <svg viewBox="0 0 320 512"><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg></div>
+                                <div class="price-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('show')">Price Details <svg viewBox="0 0 320 512"><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg></div>
                                 <div class="price-breakup">
                                     <div class="row"><div class="label"><strong>MSRP</strong></div><div class="msrp">42,350</div></div>
                                     <div class="row"><div class="label"><strong>Customer Cash</strong></div><div class="dealersavingsprice">-$1,000</div></div>
@@ -796,8 +779,6 @@
                         <div class="list-item-inner">
                             <div class="image-block">
                                 <a href="#"><img src="https://www.mitsubishicars.com/content/dam/mitsubishi-motors-us/images/cars/outlander/2026/primary/hero/OTL-SE-white-diamond-jellybean.png" alt="2026 Outlander Trail Edition" /></a>
-                                <span class="year-badge">New 2026</span>
-                                <span class="savings-badge">Save $2,500</span>
                                 <div class="watchlist-icon"><svg viewBox="0 0 512 512"><path d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9C313.1 47 353.4 37.9 392.8 45.4 462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9z"/></svg></div>
                             </div>
                             <div class="list-item-detail">
@@ -816,7 +797,7 @@
                                         <div class="mobile-price"><span class="price">$42,135</span><span class="price-label">Sendell Price*</span></div>
                                     </div>
                                 </div>
-                                <div class="price-toggle" onclick="this.nextElementSibling.classList.toggle('show')">Price Details <svg viewBox="0 0 320 512"><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg></div>
+                                <div class="price-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('show')">Price Details <svg viewBox="0 0 320 512"><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg></div>
                                 <div class="price-breakup">
                                     <div class="row"><div class="label"><strong>MSRP</strong></div><div class="msrp">44,635</div></div>
                                     <div class="row"><div class="label"><strong>Customer Cash</strong></div><div class="dealersavingsprice">-$2,500</div></div>
