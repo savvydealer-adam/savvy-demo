@@ -217,22 +217,100 @@
         .btn-outline { background: transparent; color: var(--white); border-color: rgba(255,255,255,0.4); }
         .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.1); }
 
-        .hero-quick-links {
-            margin-top: 24px;
+        /* ── Specials Carousel ── */
+        .specials-carousel {
+            background: var(--gray-50);
+            border-bottom: 1px solid var(--gray-200);
+            padding: 40px 0;
+        }
+        .specials-carousel-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        .specials-header {
             display: flex;
-            justify-content: center;
-            gap: 32px;
-            font-size: 13px;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
         }
-        .hero-quick-links a {
-            color: rgba(255,255,255,0.6);
-            transition: color 0.2s;
+        .specials-header h2 {
+            font-family: 'MMC', sans-serif;
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--black);
             text-transform: uppercase;
-            letter-spacing: 0.5px;
-            font-weight: 600;
         }
-        .hero-quick-links a:hover { color: var(--white); }
-        .hero-quick-links a span { color: var(--red); font-weight: 800; margin-right: 4px; }
+        .carousel-nav { display: flex; gap: 8px; }
+        .carousel-nav button {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid var(--gray-200);
+            background: var(--white);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            color: var(--gray-800);
+        }
+        .carousel-nav button:hover { border-color: var(--red); color: var(--red); }
+        .specials-track {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            padding-bottom: 4px;
+        }
+        .specials-track::-webkit-scrollbar { display: none; }
+        .special-vehicle-card {
+            min-width: 280px;
+            max-width: 280px;
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+        }
+        .special-vehicle-card:hover { border-color: var(--red); box-shadow: 0 8px 24px rgba(0,0,0,0.1); transform: translateY(-2px); }
+        .svc-image {
+            background: #f4f4f4;
+            padding: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 170px;
+        }
+        .svc-image img { max-width: 100%; max-height: 100%; object-fit: contain; }
+        .svc-info { padding: 16px; display: flex; flex-direction: column; flex: 1; }
+        .svc-title { font-family: 'MMC', sans-serif; font-size: 15px; font-weight: 700; color: var(--gray-800); margin-bottom: 4px; line-height: 1.3; }
+        .svc-details { font-size: 12px; color: var(--gray-400); margin-bottom: 12px; }
+        .svc-pricing { margin-bottom: 12px; }
+        .svc-save { font-size: 12px; color: var(--red); font-weight: 600; margin-bottom: 2px; }
+        .svc-save span { font-size: 16px; font-weight: 800; }
+        .svc-price { font-size: 18px; font-weight: 700; color: var(--gray-800); }
+        .svc-price small { font-size: 11px; color: var(--gray-400); font-weight: 400; display: block; text-transform: uppercase; letter-spacing: 0.5px; }
+        .svc-cta {
+            background: var(--red);
+            color: var(--white);
+            text-align: center;
+            padding: 10px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 6px;
+            transition: background 0.3s;
+            margin-top: auto;
+        }
+        .special-vehicle-card:hover .svc-cta { background: var(--red-dark); }
 
         .search-btn {
             width: 100%;
@@ -250,46 +328,6 @@
         }
         .search-btn:hover { background: var(--red-dark); }
 
-        /* ── Inventory Count Strip ── */
-        .inv-strip {
-            background: var(--gray-50);
-            border-bottom: 1px solid var(--gray-200);
-            padding: 24px 0;
-        }
-        .inv-strip-inner {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 24px;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 16px;
-        }
-        .inv-card {
-            background: var(--white);
-            border: 1px solid var(--gray-200);
-            border-radius: 8px;
-            padding: 20px;
-            text-align: center;
-            transition: all 0.2s;
-            cursor: pointer;
-        }
-        .inv-card:hover { border-color: var(--red); box-shadow: 0 4px 12px rgba(237,28,36,0.1); }
-        .inv-card .count {
-            font-family: 'MMC', sans-serif;
-            font-size: 36px;
-            font-weight: 800;
-            color: var(--red);
-        }
-        .inv-card .model {
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--gray-800);
-            margin: 4px 0;
-        }
-        .inv-card .from {
-            font-size: 13px;
-            color: var(--gray-600);
-        }
 
         /* ── Models Section ── */
         .models {
@@ -494,7 +532,6 @@
         /* ── Responsive ── */
         @media (max-width: 1024px) {
             .hero-inner { grid-template-columns: 1fr; }
-            .hero-quick-links { gap: 16px; font-size: 12px; }
             .models-grid { grid-template-columns: repeat(2, 1fr); }
             .specials-inner { grid-template-columns: 1fr; }
             .why-grid { grid-template-columns: repeat(2, 1fr); }
@@ -502,7 +539,7 @@
             nav { display: none; }
         }
         @media (max-width: 640px) {
-            .inv-strip-inner { grid-template-columns: repeat(2, 1fr); }
+            .special-vehicle-card { min-width: 240px; max-width: 240px; }
             .hero-content h2 { font-size: 38px; }
             .models-grid { grid-template-columns: 1fr; }
         }
@@ -562,41 +599,89 @@
                     <a href="/demo/sendell-mitsubishi/inventory" class="btn btn-red">Browse New Inventory</a>
                     <a href="#" class="btn btn-outline">Get Pre-Qualified</a>
                 </div>
-                <div class="hero-quick-links">
-                    <a href="/demo/sendell-mitsubishi/inventory"><span>13</span> Outlanders</a>
-                    <a href="/demo/sendell-mitsubishi/inventory"><span>7</span> Outlander PHEVs</a>
-                    <a href="/demo/sendell-mitsubishi/inventory"><span>4</span> Eclipse Cross</a>
-                    <a href="/demo/sendell-mitsubishi/inventory"><span>3</span> Outlander Sports</a>
-                </div>
             </div>
         </div>
     </section>
 
-    <!-- Inventory Count Strip -->
-    <div class="inv-strip">
-        <div class="inv-strip-inner">
-            <a href="/demo/sendell-mitsubishi/inventory" class="inv-card">
-                <div class="count">13</div>
-                <div class="model">Outlander</div>
-                <div class="from">Starting at <strong>$38,045</strong></div>
-            </a>
-            <a href="/demo/sendell-mitsubishi/inventory" class="inv-card">
-                <div class="count">7</div>
-                <div class="model">Outlander PHEV</div>
-                <div class="from">Starting at <strong>$34,380</strong></div>
-            </a>
-            <a href="/demo/sendell-mitsubishi/inventory" class="inv-card">
-                <div class="count">4</div>
-                <div class="model">Eclipse Cross</div>
-                <div class="from">Starting at <strong>$28,340</strong></div>
-            </a>
-            <a href="/demo/sendell-mitsubishi/inventory" class="inv-card">
-                <div class="count">3</div>
-                <div class="model">Outlander Sport</div>
-                <div class="from">Starting at <strong>$24,990</strong></div>
-            </a>
+    <!-- Specials Carousel -->
+    <section class="specials-carousel">
+        <div class="specials-carousel-inner">
+            <div class="specials-header">
+                <h2>Current Specials</h2>
+                <div class="carousel-nav">
+                    <button class="carousel-prev" onclick="scrollCarousel(-1)" aria-label="Previous"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg></button>
+                    <button class="carousel-next" onclick="scrollCarousel(1)" aria-label="Next"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 6 15 12 9 18"/></svg></button>
+                </div>
+            </div>
+            <div class="specials-track" id="specialsTrack">
+                <!-- Card 1 -->
+                <a href="/demo/sendell-mitsubishi/inventory" class="special-vehicle-card">
+                    <div class="svc-image"><img src="https://www.mitsubishicars.com/content/dam/mitsubishi-motors-us/images/cars/outlander-sport/2026/primary/hero/W85_0_26OTL-Sport-03-side.png" alt="2025 Outlander Sport S" /></div>
+                    <div class="svc-info">
+                        <div class="svc-title">2025 Outlander Sport S</div>
+                        <div class="svc-details">4WD &bull; I-4 2.0L &bull; Labrador Black Pearl</div>
+                        <div class="svc-pricing">
+                            <div class="svc-save"><span>$4,000</span> Potential Savings</div>
+                            <div class="svc-price">$24,990 <small>Sendell Price*</small></div>
+                        </div>
+                        <div class="svc-cta">Check Availability</div>
+                    </div>
+                </a>
+                <!-- Card 2 -->
+                <a href="/demo/sendell-mitsubishi/inventory" class="special-vehicle-card">
+                    <div class="svc-image"><img src="https://www.mitsubishicars.com/content/dam/mitsubishi-motors-us/images/cars/eclipse-cross/2026/primary/hero/2025-2026-mitsubishi-eclipse-cross-es-red-diamond-side-profile.png" alt="2025 Eclipse Cross Black Edition" /></div>
+                    <div class="svc-info">
+                        <div class="svc-title">2025 Eclipse Cross Black Edition</div>
+                        <div class="svc-details">4WD &bull; Turbo I-4 1.5L &bull; Gray Metallic</div>
+                        <div class="svc-pricing">
+                            <div class="svc-save"><span>$5,000</span> Potential Savings</div>
+                            <div class="svc-price">$28,340 <small>Sendell Price*</small></div>
+                        </div>
+                        <div class="svc-cta">Check Availability</div>
+                    </div>
+                </a>
+                <!-- Card 3 -->
+                <a href="/demo/sendell-mitsubishi/inventory" class="special-vehicle-card">
+                    <div class="svc-image"><img src="https://www.mitsubishicars.com/content/dam/mitsubishi-motors-us/images/cars/outlander-phev/2025/primary/hero/2025-PHEV-SEL-Premium-graphite.png" alt="2025 Outlander PHEV ES" /></div>
+                    <div class="svc-info">
+                        <div class="svc-title">2025 Outlander PHEV ES</div>
+                        <div class="svc-details">4WD &bull; Gas/Electric I-4 2.4L &bull; Silver Alloy</div>
+                        <div class="svc-pricing">
+                            <div class="svc-save"><span>$8,000</span> Potential Savings</div>
+                            <div class="svc-price">$34,380 <small>Sendell Price*</small></div>
+                        </div>
+                        <div class="svc-cta">Check Availability</div>
+                    </div>
+                </a>
+                <!-- Card 4 -->
+                <a href="/demo/sendell-mitsubishi/inventory" class="special-vehicle-card">
+                    <div class="svc-image"><img src="https://www.mitsubishicars.com/content/dam/mitsubishi-motors-us/images/cars/outlander/2026/primary/hero/OTL-SE-white-diamond-jellybean.png" alt="2026 Outlander SE" /></div>
+                    <div class="svc-info">
+                        <div class="svc-title">2026 Outlander SE</div>
+                        <div class="svc-details">AWD &bull; I-4 2.5L &bull; White Diamond</div>
+                        <div class="svc-pricing">
+                            <div class="svc-save"><span>$3,000</span> Potential Savings</div>
+                            <div class="svc-price">$35,045 <small>Sendell Price*</small></div>
+                        </div>
+                        <div class="svc-cta">Check Availability</div>
+                    </div>
+                </a>
+                <!-- Card 5 -->
+                <a href="/demo/sendell-mitsubishi/inventory" class="special-vehicle-card">
+                    <div class="svc-image"><img src="https://www.mitsubishicars.com/content/dam/mitsubishi-motors-us/images/cars/outlander-phev/2025/primary/hero/2025-PHEV-SEL-Premium-graphite.png" alt="2025 Outlander PHEV SEL" /></div>
+                    <div class="svc-info">
+                        <div class="svc-title">2025 Outlander PHEV SEL Premium</div>
+                        <div class="svc-details">4WD &bull; Gas/Electric I-4 2.4L &bull; Graphite</div>
+                        <div class="svc-pricing">
+                            <div class="svc-save"><span>$8,000</span> Potential Savings</div>
+                            <div class="svc-price">$42,680 <small>Sendell Price*</small></div>
+                        </div>
+                        <div class="svc-cta">Check Availability</div>
+                    </div>
+                </a>
+            </div>
         </div>
-    </div>
+    </section>
 
     <!-- Models Section -->
     <section class="models">
@@ -754,5 +839,11 @@
         </div>
     </footer>
 
+<script>
+function scrollCarousel(dir) {
+    var track = document.getElementById('specialsTrack');
+    track.scrollBy({ left: dir * 300, behavior: 'smooth' });
+}
+</script>
 </body>
 </html>
