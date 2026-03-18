@@ -329,16 +329,125 @@
         .search-btn:hover { background: var(--red-dark); }
 
 
-        /* ── Models Section ── */
-        .models {
+        /* ── Explore Lineup (Dark) ── */
+        .lineup {
+            background: #1a1a1a;
             padding: 64px 0;
-            background: var(--white);
         }
-        .models-inner {
+        .lineup-inner {
             max-width: 1280px;
             margin: 0 auto;
             padding: 0 24px;
         }
+        .lineup-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        .lineup-header h2 {
+            font-family: 'MMC', sans-serif;
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--white);
+        }
+        .lineup-header p {
+            font-size: 16px;
+            color: #999;
+            margin-top: 8px;
+        }
+        .lineup-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .lineup-tile {
+            background: #2a2a2a;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 2px solid transparent;
+            transition: all 0.3s;
+            text-decoration: none;
+            color: inherit;
+        }
+        .lineup-tile:hover { border-color: var(--red); transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+        .lineup-tile-img {
+            height: 140px;
+            background: #222;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px;
+        }
+        .lineup-tile-img img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            transition: transform 0.4s ease;
+        }
+        .lineup-tile:hover .lineup-tile-img img { transform: scale(1.05); }
+        .lineup-tile-info {
+            padding: 16px 20px 20px;
+        }
+        .lineup-tile-info h3 {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 4px;
+        }
+        .lineup-tile-info .price {
+            font-size: 14px;
+            color: #999;
+            margin-bottom: 10px;
+        }
+        .lineup-tile-info .explore-link {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--red);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.2s;
+        }
+        .lineup-tile:hover .explore-link { color: #ff3333; }
+
+        /* ── SEO Content ── */
+        .seo-content {
+            background: var(--white);
+            padding: 64px 24px;
+        }
+        .seo-content-inner {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .seo-content-inner h1 {
+            font-family: 'MMC', sans-serif;
+            font-size: 28px;
+            font-weight: 800;
+            color: #19183C;
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+        .seo-content-inner h2 {
+            font-family: 'MMC', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: #19183C;
+            margin-top: 40px;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+        .seo-content-inner p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 16px;
+        }
+        .seo-content-inner a {
+            color: var(--red);
+            text-decoration: none;
+            transition: text-decoration 0.2s;
+        }
+        .seo-content-inner a:hover { text-decoration: underline; }
+
+        /* ── Section Title (shared) ── */
         .section-title {
             text-align: center;
             margin-bottom: 48px;
@@ -355,104 +464,6 @@
             height: 4px;
             background: var(--red);
             margin: 12px auto 0;
-        }
-
-        .models-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 24px;
-        }
-        .model-card {
-            background: var(--gray-50);
-            border-radius: 12px;
-            overflow: hidden;
-            transition: all 0.3s;
-            border: 2px solid transparent;
-        }
-        .model-card:hover { border-color: var(--red); transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.1); }
-        .model-img {
-            height: 180px;
-            background: #f4f4f4;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-            padding: 16px;
-        }
-        .model-img img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
-            transition: transform 0.4s ease;
-        }
-        .model-card:hover .model-img img { transform: scale(1.05); }
-        .model-info { padding: 20px; text-align: center; }
-        .model-info h3 {
-            font-size: 18px;
-            font-weight: 700;
-            margin-bottom: 4px;
-        }
-        .model-info .price {
-            font-size: 14px;
-            color: var(--gray-600);
-            margin-bottom: 12px;
-        }
-        .model-info .price strong { color: var(--red); font-weight: 700; }
-        .model-info .view-btn {
-            display: inline-block;
-            padding: 8px 24px;
-            background: var(--black);
-            color: var(--white);
-            font-size: 12px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: background 0.3s;
-        }
-        .model-info .view-btn:hover { background: var(--red); }
-
-        /* ── Specials Banner ── */
-        .specials {
-            background: var(--black);
-            padding: 64px 0;
-        }
-        .specials-inner {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 24px;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 24px;
-        }
-        .special-card {
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 12px;
-            padding: 32px;
-            text-align: center;
-            transition: all 0.3s;
-        }
-        .special-card:hover { border-color: var(--red); background: rgba(237,28,36,0.05); }
-        .special-card .amount {
-            font-family: 'MMC', sans-serif;
-            font-size: 48px;
-            font-weight: 800;
-            color: var(--red);
-            line-height: 1;
-            margin-bottom: 8px;
-        }
-        .special-card h3 {
-            font-size: 16px;
-            font-weight: 700;
-            color: var(--white);
-            margin-bottom: 8px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        .special-card p {
-            font-size: 14px;
-            color: rgba(255,255,255,0.5);
         }
 
         /* ── Why Us ── */
@@ -532,8 +543,7 @@
         /* ── Responsive ── */
         @media (max-width: 1024px) {
             .hero-inner { grid-template-columns: 1fr; }
-            .models-grid { grid-template-columns: repeat(2, 1fr); }
-            .specials-inner { grid-template-columns: 1fr; }
+            .lineup-grid { grid-template-columns: repeat(2, 1fr); }
             .why-grid { grid-template-columns: repeat(2, 1fr); }
             .footer-inner { grid-template-columns: 1fr 1fr; }
             nav { display: none; }
@@ -541,7 +551,9 @@
         @media (max-width: 640px) {
             .special-vehicle-card { min-width: 240px; max-width: 240px; }
             .hero-content h2 { font-size: 38px; }
-            .models-grid { grid-template-columns: 1fr; }
+            .lineup-grid { grid-template-columns: 1fr; }
+            .seo-content-inner h1 { font-size: 24px; }
+            .seo-content-inner h2 { font-size: 19px; }
         }
     </style>
 </head>
@@ -683,76 +695,75 @@
         </div>
     </section>
 
-    <!-- Models Section -->
-    <section class="models">
-        <div class="models-inner">
-            <div class="section-title">
-                <h2>Explore the Lineup</h2>
-                <div class="bar"></div>
+    <!-- Explore the Lineup -->
+    <section class="lineup">
+        <div class="lineup-inner">
+            <div class="lineup-header">
+                <h2>Explore the 2026 Mitsubishi Lineup</h2>
+                <p>Built for adventure. Designed for life.</p>
             </div>
-            <div class="models-grid">
-                <div class="model-card">
-                    <div class="model-img">
+            <div class="lineup-grid">
+                <a href="/demo/sendell-mitsubishi/inventory" class="lineup-tile">
+                    <div class="lineup-tile-img">
                         <img src="https://www.mitsubishicars.com/content/dam/mitsubishi-motors-us/images/cars/outlander/2026/primary/hero/OTL-SE-white-diamond-jellybean.png" alt="2026 Mitsubishi Outlander" />
                     </div>
-                    <div class="model-info">
+                    <div class="lineup-tile-info">
                         <h3>2026 Outlander</h3>
-                        <p class="price">Starting at <strong>$38,045</strong></p>
-                        <a href="/demo/sendell-mitsubishi/inventory" class="view-btn">View Inventory</a>
+                        <p class="price">Starting at $38,045</p>
+                        <span class="explore-link">Explore</span>
                     </div>
-                </div>
-                <div class="model-card">
-                    <div class="model-img">
+                </a>
+                <a href="/demo/sendell-mitsubishi/inventory" class="lineup-tile">
+                    <div class="lineup-tile-img">
                         <img src="https://www.mitsubishicars.com/content/dam/mitsubishi-motors-us/images/cars/outlander-phev/2025/primary/hero/2025-PHEV-SEL-Premium-graphite.png" alt="2025 Mitsubishi Outlander PHEV" />
                     </div>
-                    <div class="model-info">
-                        <h3>2025 Outlander PHEV</h3>
-                        <p class="price">Starting at <strong>$34,380</strong></p>
-                        <a href="/demo/sendell-mitsubishi/inventory" class="view-btn">View Inventory</a>
+                    <div class="lineup-tile-info">
+                        <h3>Outlander PHEV</h3>
+                        <p class="price">Starting at $34,380</p>
+                        <span class="explore-link">Explore</span>
                     </div>
-                </div>
-                <div class="model-card">
-                    <div class="model-img">
+                </a>
+                <a href="/demo/sendell-mitsubishi/inventory" class="lineup-tile">
+                    <div class="lineup-tile-img">
                         <img src="https://www.mitsubishicars.com/content/dam/mitsubishi-motors-us/images/cars/eclipse-cross/2026/primary/hero/2025-2026-mitsubishi-eclipse-cross-es-red-diamond-side-profile.png" alt="2026 Mitsubishi Eclipse Cross" />
                     </div>
-                    <div class="model-info">
+                    <div class="lineup-tile-info">
                         <h3>Eclipse Cross</h3>
-                        <p class="price">Starting at <strong>$28,340</strong></p>
-                        <a href="/demo/sendell-mitsubishi/inventory" class="view-btn">View Inventory</a>
+                        <p class="price">Starting at $28,340</p>
+                        <span class="explore-link">Explore</span>
                     </div>
-                </div>
-                <div class="model-card">
-                    <div class="model-img">
+                </a>
+                <a href="/demo/sendell-mitsubishi/inventory" class="lineup-tile">
+                    <div class="lineup-tile-img">
                         <img src="https://www.mitsubishicars.com/content/dam/mitsubishi-motors-us/images/cars/outlander-sport/2026/primary/hero/W85_0_26OTL-Sport-03-side.png" alt="2026 Mitsubishi Outlander Sport" />
                     </div>
-                    <div class="model-info">
+                    <div class="lineup-tile-info">
                         <h3>Outlander Sport</h3>
-                        <p class="price">Starting at <strong>$24,990</strong></p>
-                        <a href="/demo/sendell-mitsubishi/inventory" class="view-btn">View Inventory</a>
+                        <p class="price">Starting at $24,990</p>
+                        <span class="explore-link">Explore</span>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Specials -->
-    <section class="specials">
-        <div class="specials-inner">
-            <div class="special-card">
-                <div class="amount">$8,000</div>
-                <h3>Off 2025 Outlander PHEV</h3>
-                <p>Trade discount on all remaining 2025 Plug-In Hybrid models</p>
-            </div>
-            <div class="special-card">
-                <div class="amount">$6,000</div>
-                <h3>Off 2025 Outlander SEL</h3>
-                <p>Trade discount on select 2025 Outlander SEL models</p>
-            </div>
-            <div class="special-card">
-                <div class="amount">$5,000</div>
-                <h3>Off Eclipse Cross</h3>
-                <p>Trade discount on 2025 Eclipse Cross Black Edition</p>
-            </div>
+    <!-- SEO Content -->
+    <section class="seo-content">
+        <div class="seo-content-inner">
+            <h1>Sendell Mitsubishi -- Your Trusted Mitsubishi Dealer in Greensburg, PA</h1>
+            <p>Welcome to Sendell Mitsubishi, proudly serving Greensburg, Latrobe, Irwin, Jeannette, and the entire Westmoreland County community. As your authorized Mitsubishi dealer, we carry the complete lineup of new Mitsubishi SUVs and crossovers, including the all-new 2026 Outlander, Outlander Sport, Eclipse Cross, and Outlander Plug-In Hybrid. Whether you're looking for a fuel-efficient commuter or a capable all-wheel-drive SUV for Pennsylvania winters, our team is here to help you find the perfect vehicle.</p>
+
+            <h2>New Mitsubishi Vehicles for Sale Near Latrobe and Irwin</h2>
+            <p>Our new vehicle inventory features the latest Mitsubishi models at competitive prices. The 2026 Mitsubishi Outlander delivers three rows of seating, standard all-wheel control, and a bold new design -- starting at just $38,045. Looking for plug-in hybrid efficiency? The Outlander PHEV offers up to 38 miles of electric-only range with available Super All-Wheel Control. Browse our <a href="/demo/sendell-mitsubishi/inventory">full new inventory</a> to see every vehicle in stock with transparent, no-hassle pricing.</p>
+
+            <h2>Affordable Financing and Credit Solutions</h2>
+            <p>At Sendell Mitsubishi, we believe everyone deserves a quality vehicle. Our finance team works with multiple lenders to secure competitive rates for all credit situations -- whether you have excellent credit, are rebuilding, or are a first-time buyer. Apply online in minutes to get pre-qualified with no impact to your credit score. We also offer Mitsubishi Motors Financial Services programs including low APR financing and lease specials on select new models.</p>
+
+            <h2>Certified Mitsubishi Service Center in Greensburg</h2>
+            <p>Keep your Mitsubishi running at its best with our factory-certified service department. Our trained technicians use genuine Mitsubishi parts and the latest diagnostic equipment to handle everything from routine oil changes and tire rotations to complex repairs. We service all makes and models, not just Mitsubishi. Schedule your next appointment online or call our service team at (724) 607-8276.</p>
+
+            <h2>Why Choose Sendell Mitsubishi?</h2>
+            <p>We're not just a dealership -- we're your neighbors. The Sendell family has been serving western Pennsylvania for years with a commitment to honest, transparent car buying. No hidden fees, no pressure, and no games. Every vehicle is priced upfront so you can shop with confidence. Visit us at 5079 US-30 in Greensburg, PA, or browse our inventory online anytime. We look forward to earning your business.</p>
         </div>
     </section>
 
