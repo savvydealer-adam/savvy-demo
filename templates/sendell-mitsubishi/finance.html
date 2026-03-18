@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Financing Made Simple | Sendell Mitsubishi | Greensburg, PA</title>
+    <meta name="description" content="Get pre-qualified for auto financing in minutes at Sendell Mitsubishi in Greensburg, PA. All credit situations welcome. Competitive rates from 20+ lenders." />
+    <link href="https://fonts.cdnfonts.com/css/mmc" rel="stylesheet" />
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --red: #ED0000;
+            --red-dark: #BC0600;
+            --black: #000000;
+            --white: #ffffff;
+            --gray-50: #f8f9fa;
+            --gray-100: #f0f0f0;
+            --gray-200: #E2E5E6;
+            --gray-400: #696D71;
+            --gray-600: #666;
+            --gray-800: #19183C;
+            --blue: #0678bc;
+        }
+
+        body {
+            font-family: 'MMC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--gray-800);
+            background: var(--white);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; display: block; }
+
+        /* ── Top Bar ── */
+        .top-bar {
+            background: var(--black);
+            color: var(--white);
+            font-size: 13px;
+            padding: 8px 0;
+        }
+        .top-bar-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .top-bar a { color: var(--white); transition: color 0.2s; }
+        .top-bar a:hover { color: var(--red); }
+        .top-bar .promo {
+            background: var(--red);
+            padding: 3px 12px;
+            border-radius: 2px;
+            font-weight: 600;
+            font-size: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        /* ── Header ── */
+        header {
+            background: var(--white);
+            border-bottom: 3px solid var(--red);
+            padding: 12px 0;
+        }
+        .header-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo-area { display: flex; align-items: center; gap: 16px; }
+        .logo-area .mitsubishi-mark { width: 48px; height: 48px; }
+        .logo-text h1 {
+            font-family: 'MMC', sans-serif;
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--black);
+            line-height: 1;
+            letter-spacing: -0.5px;
+        }
+        .logo-text span {
+            font-size: 12px;
+            color: var(--gray-600);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        nav { display: flex; gap: 4px; }
+        nav a {
+            padding: 10px 16px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--gray-800);
+            border-radius: 4px;
+            transition: all 0.2s;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        nav a:hover { background: var(--red); color: var(--white); }
+        nav a.active { background: var(--red); color: var(--white); }
+        .nav-phone {
+            font-family: 'MMC', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--black);
+        }
+
+        /* ── Buttons (shared) ── */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 28px;
+            font-size: 14px;
+            font-weight: 700;
+            font-family: inherit;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 2px solid transparent;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .btn-red { background: var(--red); color: var(--white); border-color: var(--red); }
+        .btn-red:hover { background: var(--red-dark); border-color: var(--red-dark); }
+        .btn-outline { background: transparent; color: var(--white); border-color: rgba(255,255,255,0.4); }
+        .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.1); }
+        .btn-outline-dark { background: transparent; color: var(--gray-800); border-color: var(--gray-200); }
+        .btn-outline-dark:hover { border-color: var(--red); color: var(--red); }
+
+        /* ── Hero Banner (compact) ── */
+        .finance-hero {
+            position: relative;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+            overflow: hidden;
+            padding: 72px 0 80px;
+        }
+        .finance-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 80%;
+            height: 200%;
+            background: radial-gradient(ellipse, rgba(237,0,0,0.12) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .finance-hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--red);
+        }
+        .finance-hero-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+        .finance-hero-inner h2 {
+            font-family: 'MMC', sans-serif;
+            font-size: 48px;
+            font-weight: 800;
+            color: var(--white);
+            line-height: 1.1;
+            margin-bottom: 12px;
+        }
+        .finance-hero-inner h2 em {
+            font-style: normal;
+            color: var(--red);
+        }
+        .finance-hero-inner p {
+            font-size: 18px;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 32px;
+            max-width: 540px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .hero-ctas {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* ── Trust Strip ── */
+        .trust-strip {
+            background: var(--gray-50);
+            border-bottom: 1px solid var(--gray-200);
+            padding: 48px 0;
+        }
+        .trust-strip-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+        .trust-card {
+            text-align: center;
+            padding: 32px 24px;
+            background: var(--white);
+            border-radius: 12px;
+            border: 1px solid var(--gray-200);
+            transition: all 0.3s;
+        }
+        .trust-card:hover {
+            border-color: var(--red);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+            transform: translateY(-2px);
+        }
+        .trust-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--red);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .trust-icon svg { width: 28px; height: 28px; fill: var(--white); }
+        .trust-card h3 {
+            font-family: 'MMC', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--gray-800);
+            margin-bottom: 8px;
+        }
+        .trust-card p {
+            font-size: 14px;
+            color: var(--gray-600);
+            line-height: 1.6;
+        }
+
+        /* ── Payment Calculator ── */
+        .calculator-section {
+            padding: 72px 0;
+            background: var(--white);
+        }
+        .calculator-section-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        .section-title h2 {
+            font-family: 'MMC', sans-serif;
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--black);
+        }
+        .section-title p {
+            font-size: 16px;
+            color: var(--gray-600);
+            margin-top: 8px;
+        }
+        .section-title .bar {
+            width: 60px;
+            height: 4px;
+            background: var(--red);
+            margin: 16px auto 0;
+        }
+
+        .calculator-card {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--white);
+            border-radius: 16px;
+            box-shadow: 0 4px 32px rgba(0,0,0,0.08);
+            border: 1px solid var(--gray-200);
+            overflow: hidden;
+        }
+        .calc-body {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+        }
+        .calc-inputs {
+            padding: 40px;
+        }
+        .calc-result-panel {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            padding: 40px 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .calc-result-label {
+            font-size: 13px;
+            color: rgba(255,255,255,0.5);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .calc-result-amount {
+            font-family: 'MMC', sans-serif;
+            font-size: 56px;
+            font-weight: 800;
+            color: var(--red);
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+        .calc-result-amount.pulse {
+            animation: resultPulse 0.3s ease;
+        }
+        @keyframes resultPulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .calc-result-per {
+            font-size: 14px;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 24px;
+        }
+        .calc-breakdown {
+            width: 100%;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            margin-bottom: 28px;
+        }
+        .calc-breakdown-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            color: rgba(255,255,255,0.6);
+            margin-bottom: 8px;
+        }
+        .calc-breakdown-row span:last-child { color: var(--white); font-weight: 600; }
+
+        .slider-group {
+            margin-bottom: 24px;
+        }
+        .slider-group:last-child {
+            margin-bottom: 0;
+        }
+        .slider-label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .slider-label label {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--gray-800);
+        }
+        .slider-value-input {
+            width: 110px;
+            padding: 6px 10px;
+            border: 1px solid var(--gray-200);
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--gray-800);
+            text-align: right;
+            transition: border-color 0.2s;
+            outline: none;
+        }
+        .slider-value-input:focus {
+            border-color: var(--red);
+        }
+
+        /* Range slider styling */
+        input[type="range"] {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 100%;
+            height: 6px;
+            background: var(--gray-200);
+            border-radius: 3px;
+            outline: none;
+            cursor: pointer;
+            position: relative;
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: var(--red);
+            cursor: pointer;
+            border: 3px solid var(--white);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            transition: transform 0.15s, box-shadow 0.15s;
+        }
+        input[type="range"]::-webkit-slider-thumb:hover {
+            transform: scale(1.15);
+            box-shadow: 0 2px 12px rgba(237,0,0,0.3);
+        }
+        input[type="range"]::-moz-range-thumb {
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: var(--red);
+            cursor: pointer;
+            border: 3px solid var(--white);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+        input[type="range"]::-moz-range-track {
+            height: 6px;
+            background: var(--gray-200);
+            border-radius: 3px;
+        }
+
+        /* Loan term button group */
+        .term-group {
+            display: flex;
+            gap: 8px;
+            margin-top: 6px;
+        }
+        .term-btn {
+            flex: 1;
+            padding: 10px 4px;
+            border: 2px solid var(--gray-200);
+            border-radius: 8px;
+            background: var(--white);
+            font-family: inherit;
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--gray-800);
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.2s;
+        }
+        .term-btn:hover {
+            border-color: var(--red);
+            color: var(--red);
+        }
+        .term-btn.active {
+            background: var(--red);
+            border-color: var(--red);
+            color: var(--white);
+        }
+        .term-btn small {
+            display: block;
+            font-size: 10px;
+            font-weight: 400;
+            opacity: 0.7;
+            margin-top: 2px;
+        }
+
+        /* ── Application CTA Section ── */
+        .apply-section {
+            padding: 72px 0;
+            background: var(--white);
+            border-top: 1px solid var(--gray-200);
+        }
+        .apply-section-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+        }
+        .apply-text h2 {
+            font-family: 'MMC', sans-serif;
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--black);
+            line-height: 1.15;
+            margin-bottom: 16px;
+        }
+        .apply-text h2 em { font-style: normal; color: var(--red); }
+        .apply-text > p {
+            font-size: 16px;
+            color: var(--gray-600);
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
+        .checklist {
+            list-style: none;
+            margin-bottom: 32px;
+        }
+        .checklist li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 15px;
+            color: var(--gray-800);
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+        .checklist li svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--red);
+            flex-shrink: 0;
+        }
+
+        .prequal-card {
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: 16px;
+            padding: 40px;
+        }
+        .prequal-card h3 {
+            font-family: 'MMC', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--gray-800);
+            margin-bottom: 6px;
+        }
+        .prequal-card > p {
+            font-size: 14px;
+            color: var(--gray-600);
+            margin-bottom: 24px;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+        .form-field input {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid var(--gray-200);
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 14px;
+            color: var(--gray-800);
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .form-field input::placeholder { color: #aaa; }
+        .form-field input:focus { border-color: var(--red); }
+        .form-submit-btn {
+            width: 100%;
+            padding: 16px;
+            background: var(--red);
+            color: var(--white);
+            font-family: inherit;
+            font-size: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 4px;
+        }
+        .form-submit-btn:hover { background: var(--red-dark); }
+        .form-disclaimer {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 12px;
+            font-size: 12px;
+            color: var(--gray-400);
+        }
+        .form-disclaimer svg { width: 14px; height: 14px; fill: var(--gray-400); flex-shrink: 0; }
+
+        /* ── Trade-In Section ── */
+        .trade-section {
+            padding: 72px 0;
+            background: var(--gray-50);
+            border-top: 1px solid var(--gray-200);
+        }
+        .trade-section-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+        }
+        .trade-text h2 {
+            font-family: 'MMC', sans-serif;
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--black);
+            margin-bottom: 16px;
+        }
+        .trade-text p {
+            font-size: 16px;
+            color: var(--gray-600);
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
+        .trade-visual {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .trade-visual-graphic {
+            width: 320px;
+            height: 320px;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .trade-visual-graphic svg { width: 140px; height: 140px; }
+        .trade-visual-graphic::after {
+            content: '';
+            position: absolute;
+            inset: -8px;
+            border-radius: 50%;
+            border: 2px dashed var(--red);
+            opacity: 0.3;
+        }
+
+        /* ── FAQ Accordion ── */
+        .faq-section {
+            padding: 72px 0;
+            background: var(--white);
+        }
+        .faq-section-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        .faq-item {
+            border-bottom: 1px solid var(--gray-200);
+        }
+        .faq-item:first-child { border-top: 1px solid var(--gray-200); }
+        .faq-question {
+            width: 100%;
+            padding: 20px 0;
+            background: none;
+            border: none;
+            font-family: inherit;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--gray-800);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            text-align: left;
+            transition: color 0.2s;
+        }
+        .faq-question:hover { color: var(--red); }
+        .faq-question svg {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+            transition: transform 0.3s;
+            fill: var(--gray-400);
+        }
+        .faq-item.open .faq-question svg {
+            transform: rotate(180deg);
+            fill: var(--red);
+        }
+        .faq-item.open .faq-question { color: var(--red); }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease, padding 0.35s ease;
+        }
+        .faq-answer-inner {
+            padding: 0 0 20px;
+            font-size: 15px;
+            color: var(--gray-600);
+            line-height: 1.7;
+        }
+
+        /* ── SEO Content ── */
+        .seo-content {
+            background: var(--white);
+            padding: 64px 24px;
+            border-top: 1px solid var(--gray-200);
+        }
+        .seo-content-inner {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .seo-content-inner h2 {
+            font-family: 'MMC', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: #19183C;
+            margin-top: 40px;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+        .seo-content-inner h2:first-child { margin-top: 0; }
+        .seo-content-inner p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 16px;
+        }
+        .seo-content-inner a {
+            color: var(--red);
+            text-decoration: none;
+            transition: text-decoration 0.2s;
+        }
+        .seo-content-inner a:hover { text-decoration: underline; }
+
+        /* ── Footer ── */
+        footer {
+            background: #1a1a1a;
+            color: rgba(255,255,255,0.6);
+            padding: 48px 0 24px;
+        }
+        .footer-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+        }
+        .footer-brand h3 {
+            font-family: 'MMC', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 12px;
+        }
+        .footer-brand p { font-size: 14px; line-height: 1.7; }
+        footer h4 {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--white);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+        }
+        footer ul { list-style: none; }
+        footer li { margin-bottom: 8px; }
+        footer li a { font-size: 14px; transition: color 0.2s; }
+        footer li a:hover { color: var(--red); }
+        .footer-bottom {
+            max-width: 1280px;
+            margin: 32px auto 0;
+            padding: 24px 24px 0;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            font-size: 12px;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 1024px) {
+            nav { display: none; }
+            .footer-inner { grid-template-columns: 1fr 1fr; }
+            .apply-section-inner { grid-template-columns: 1fr; gap: 40px; }
+            .trade-section-inner { grid-template-columns: 1fr; gap: 40px; }
+            .trade-visual { order: -1; }
+            .trade-visual-graphic { width: 240px; height: 240px; }
+            .trade-visual-graphic svg { width: 100px; height: 100px; }
+        }
+
+        @media (max-width: 768px) {
+            .finance-hero-inner h2 { font-size: 34px; }
+            .trust-strip-inner { grid-template-columns: 1fr; gap: 16px; }
+            .trust-card { padding: 24px 20px; }
+            .calc-body { grid-template-columns: 1fr; }
+            .calc-result-panel { padding: 32px 24px; }
+            .calc-result-amount { font-size: 44px; }
+            .calc-inputs { padding: 28px 24px; }
+            .term-group { flex-wrap: wrap; }
+            .term-btn { flex: 0 0 calc(33.33% - 6px); }
+            .form-row { grid-template-columns: 1fr; }
+            .section-title h2 { font-size: 28px; }
+            .apply-text h2, .trade-text h2 { font-size: 28px; }
+            .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+        }
+
+        @media (max-width: 480px) {
+            .finance-hero-inner h2 { font-size: 28px; }
+            .finance-hero-inner p { font-size: 15px; }
+            .hero-ctas { flex-direction: column; align-items: center; }
+            .hero-ctas .btn { width: 100%; justify-content: center; }
+            .term-btn { flex: 0 0 calc(33.33% - 6px); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-inner">
+            <div style="display:flex;gap:24px;align-items:center;">
+                <span>5079 US-30, Greensburg, PA 15601</span>
+            </div>
+            <div style="display:flex;gap:16px;align-items:center;">
+                <span class="promo">LESS THAN PERFECT CREDIT ACCEPTED!</span>
+                <a href="#">Service: (724) 607-8276</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-inner">
+            <div class="logo-area">
+                <a href="/demo/sendell-mitsubishi/" style="display:flex;align-items:center;gap:16px;">
+                    <svg class="mitsubishi-mark" viewBox="0 0 75 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <polygon fill="#ED0000" points="37.34,0.19 30.35,12.32 37.34,24.44 44.33,12.32"/>
+                        <polygon fill="#ED0000" points="37.34,24.44 51.31,24.44 58.30,36.56 44.33,36.56"/>
+                        <polygon fill="#ED0000" points="37.34,24.44 23.36,24.44 16.37,36.56 30.35,36.56"/>
+                    </svg>
+                    <div class="logo-text">
+                        <h1>SENDELL MITSUBISHI</h1>
+                        <span>Greensburg, PA 15601</span>
+                    </div>
+                </a>
+            </div>
+            <nav>
+                <a href="/demo/sendell-mitsubishi/inventory">New</a>
+                <a href="/demo/sendell-mitsubishi/inventory">Used</a>
+                <a href="/demo/sendell-mitsubishi/finance" class="active">Finance</a>
+                <a href="#">Service</a>
+                <a href="#">Contact</a>
+            </nav>
+            <a href="tel:7246078465" class="nav-phone">(724) 607-8465</a>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="finance-hero">
+        <div class="finance-hero-inner">
+            <h2>Financing Made <em>Simple</em></h2>
+            <p>Get pre-qualified in minutes. All credit situations welcome.</p>
+            <div class="hero-ctas">
+                <a href="#apply" class="btn btn-red">Apply Now</a>
+                <a href="#calculator" class="btn btn-outline" id="scrollToCalc">Calculate Payment</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Strip -->
+    <section class="trust-strip">
+        <div class="trust-strip-inner">
+            <div class="trust-card">
+                <div class="trust-icon">
+                    <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                </div>
+                <h3>All Credit Welcome</h3>
+                <p>Bad credit, no credit, first-time buyers -- we work with every situation to get you approved and on the road.</p>
+            </div>
+            <div class="trust-card">
+                <div class="trust-icon">
+                    <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+                </div>
+                <h3>Quick Approval</h3>
+                <p>Get a financing decision in minutes, not days. Our streamlined process gets you behind the wheel faster.</p>
+            </div>
+            <div class="trust-card">
+                <div class="trust-icon">
+                    <svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+                </div>
+                <h3>Competitive Rates</h3>
+                <p>We work with 20+ lenders to find you the best possible rate. Save thousands over the life of your loan.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Calculator -->
+    <section class="calculator-section" id="calculator">
+        <div class="calculator-section-inner">
+            <div class="section-title">
+                <h2>Estimate Your Monthly Payment</h2>
+                <p>Adjust the sliders to see your estimated payment in real time</p>
+                <div class="bar"></div>
+            </div>
+            <div class="calculator-card">
+                <div class="calc-body">
+                    <div class="calc-inputs">
+                        <!-- Vehicle Price -->
+                        <div class="slider-group">
+                            <div class="slider-label">
+                                <label for="priceSlider">Vehicle Price</label>
+                                <input type="text" class="slider-value-input" id="priceInput" value="$35,000" />
+                            </div>
+                            <input type="range" id="priceSlider" min="15000" max="80000" value="35000" step="500" />
+                        </div>
+
+                        <!-- Down Payment -->
+                        <div class="slider-group">
+                            <div class="slider-label">
+                                <label for="downSlider">Down Payment</label>
+                                <input type="text" class="slider-value-input" id="downInput" value="$3,000" />
+                            </div>
+                            <input type="range" id="downSlider" min="0" max="20000" value="3000" step="250" />
+                        </div>
+
+                        <!-- Trade-In Value -->
+                        <div class="slider-group">
+                            <div class="slider-label">
+                                <label for="tradeSlider">Trade-In Value</label>
+                                <input type="text" class="slider-value-input" id="tradeInput" value="$0" />
+                            </div>
+                            <input type="range" id="tradeSlider" min="0" max="30000" value="0" step="250" />
+                        </div>
+
+                        <!-- Interest Rate -->
+                        <div class="slider-group">
+                            <div class="slider-label">
+                                <label for="rateSlider">Interest Rate (APR)</label>
+                                <input type="text" class="slider-value-input" id="rateInput" value="5.9%" />
+                            </div>
+                            <input type="range" id="rateSlider" min="0" max="15" value="5.9" step="0.1" />
+                        </div>
+
+                        <!-- Loan Term -->
+                        <div class="slider-group">
+                            <div class="slider-label">
+                                <label>Loan Term</label>
+                            </div>
+                            <div class="term-group">
+                                <button class="term-btn" data-months="36">36<small>months</small></button>
+                                <button class="term-btn" data-months="48">48<small>months</small></button>
+                                <button class="term-btn active" data-months="60">60<small>months</small></button>
+                                <button class="term-btn" data-months="72">72<small>months</small></button>
+                                <button class="term-btn" data-months="84">84<small>months</small></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="calc-result-panel">
+                        <div class="calc-result-label">Estimated Monthly Payment</div>
+                        <div class="calc-result-amount" id="monthlyPayment">$573</div>
+                        <div class="calc-result-per">per month</div>
+                        <div class="calc-breakdown">
+                            <div class="calc-breakdown-row">
+                                <span>Loan Amount</span>
+                                <span id="loanAmount">$32,000</span>
+                            </div>
+                            <div class="calc-breakdown-row">
+                                <span>Total Interest</span>
+                                <span id="totalInterest">$2,372</span>
+                            </div>
+                            <div class="calc-breakdown-row">
+                                <span>Total Cost</span>
+                                <span id="totalCost">$34,372</span>
+                            </div>
+                        </div>
+                        <a href="#apply" class="btn btn-red" style="width:100%;justify-content:center;font-size:13px;padding:12px 20px;">Apply for This Payment</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Finance Application CTA -->
+    <section class="apply-section" id="apply">
+        <div class="apply-section-inner">
+            <div class="apply-text">
+                <h2>Ready to Get <em>Started?</em></h2>
+                <p>Our online pre-qualification takes just 60 seconds and won't impact your credit score. Get matched with the right lender and see your estimated rate before you even visit the dealership.</p>
+                <ul class="checklist">
+                    <li>
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        Valid driver's license or state ID
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        Proof of income (recent pay stub or tax return)
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        Proof of residence (utility bill or bank statement)
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        References (name and phone number)
+                    </li>
+                </ul>
+                <a href="#apply-form" class="btn btn-red">Apply Online</a>
+            </div>
+
+            <div class="prequal-card" id="apply-form">
+                <h3>Get Pre-Qualified</h3>
+                <p>Quick form -- no impact to your credit score</p>
+                <form onsubmit="return handlePrequal(event)">
+                    <div class="form-row">
+                        <div class="form-field">
+                            <input type="text" placeholder="First Name" required />
+                        </div>
+                        <div class="form-field">
+                            <input type="text" placeholder="Last Name" required />
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-field">
+                            <input type="email" placeholder="Email Address" required />
+                        </div>
+                        <div class="form-field">
+                            <input type="tel" placeholder="Phone Number" required />
+                        </div>
+                    </div>
+                    <button type="submit" class="form-submit-btn">Get Pre-Qualified</button>
+                    <div class="form-disclaimer">
+                        <svg viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+                        No impact to your credit score. Your information is encrypted and secure.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trade-In Section -->
+    <section class="trade-section">
+        <div class="trade-section-inner">
+            <div class="trade-text">
+                <h2>Value Your Trade</h2>
+                <p>Wondering what your current vehicle is worth? Get an instant, no-obligation trade-in estimate online. Apply it as a down payment to lower your monthly payment even further.</p>
+                <p>Our trade-in appraisals are competitive, transparent, and honored for 7 days -- whether you buy from us or not.</p>
+                <a href="#" class="btn btn-red">Get Your Offer</a>
+            </div>
+            <div class="trade-visual">
+                <div class="trade-visual-graphic">
+                    <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Car body -->
+                        <path d="M20 72 L30 52 L50 42 L80 42 L100 56 L105 72 Z" fill="rgba(237,0,0,0.15)" stroke="#ED0000" stroke-width="2"/>
+                        <!-- Wheels -->
+                        <circle cx="38" cy="76" r="10" fill="none" stroke="#ED0000" stroke-width="2"/>
+                        <circle cx="38" cy="76" r="4" fill="#ED0000" opacity="0.3"/>
+                        <circle cx="88" cy="76" r="10" fill="none" stroke="#ED0000" stroke-width="2"/>
+                        <circle cx="88" cy="76" r="4" fill="#ED0000" opacity="0.3"/>
+                        <!-- Ground line -->
+                        <line x1="10" y1="86" x2="110" y2="86" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+                        <!-- Dollar sign -->
+                        <circle cx="63" cy="30" r="16" fill="none" stroke="#ED0000" stroke-width="1.5" opacity="0.5"/>
+                        <text x="63" y="36" text-anchor="middle" fill="#ED0000" font-size="20" font-weight="bold" font-family="MMC, sans-serif">$</text>
+                        <!-- Arrow -->
+                        <path d="M63 48 L63 55" stroke="#ED0000" stroke-width="1.5" opacity="0.5"/>
+                        <polygon points="59,53 63,59 67,53" fill="#ED0000" opacity="0.5"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="faq-section-inner">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <div class="bar"></div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    What credit score do I need to buy a car?
+                    <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">We work with all credit situations -- from excellent to challenged. There is no minimum credit score requirement to apply. Our finance team partners with 20+ lenders who specialize in every credit tier, including first-time buyers with no credit history. The best way to find out your options is to apply online -- it takes just 60 seconds and won't affect your score.</div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    How long does financing approval take?
+                    <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">Most applications are processed within minutes during business hours. Our system instantly submits your application to multiple lenders simultaneously, so you'll often have a decision before you finish browsing our inventory. In some cases, additional documentation may be needed, but our team works quickly to get you approved the same day.</div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    Can I get financing with no money down?
+                    <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">Yes, we offer zero-down payment options for qualified buyers. While a down payment can lower your monthly payment and reduce the total interest paid, we understand it's not always possible. Our finance team will work with you to find a plan that fits your budget, whether that includes a down payment, trade-in, or neither.</div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    What documents do I need to apply?
+                    <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">To complete your financing application, you'll typically need: a valid driver's license or state-issued ID, proof of income (such as recent pay stubs, W-2s, or tax returns), proof of residence (utility bill, lease agreement, or bank statement), and personal references. For the initial pre-qualification, you only need basic contact information -- no documents required upfront.</div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    Should I finance or lease?
+                    <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">It depends on your driving habits and financial goals. Financing means you own the vehicle outright once the loan is paid off, and there are no mileage restrictions. Leasing typically offers lower monthly payments and the ability to drive a new car every few years, but you'll need to stay within mileage limits. Our finance team can walk you through both options to find the best fit for your lifestyle.</div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    Can I refinance my current auto loan?
+                    <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">Yes! If interest rates have dropped since you purchased your vehicle, or if your credit score has improved, refinancing could save you hundreds per month. We can help you explore refinancing options through our lender network. Stop by or give us a call at (724) 607-8465 to discuss your current loan and see if refinancing makes sense for you.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEO Content -->
+    <section class="seo-content">
+        <div class="seo-content-inner">
+            <h2>Auto Financing at Sendell Mitsubishi in Greensburg, PA</h2>
+            <p>Sendell Mitsubishi makes car financing easy for drivers in Greensburg, Latrobe, Irwin, Jeannette, and throughout Westmoreland County. Our experienced finance department works with over 20 banks and credit unions to secure the most competitive rates available, regardless of your credit history. Whether you're purchasing a new Mitsubishi Outlander, Eclipse Cross, or Outlander Sport, or financing a quality pre-owned vehicle, we'll tailor a payment plan that fits your monthly budget. Apply online in minutes for a no-obligation pre-qualification that won't affect your credit score.</p>
+
+            <h2>Mitsubishi Financial Services</h2>
+            <p>As an authorized Mitsubishi dealer, Sendell Mitsubishi offers exclusive financing programs through Mitsubishi Motors Financial Services. Take advantage of low APR financing offers, special lease programs, and first-time buyer incentives available only through the Mitsubishi brand. Current offers include competitive rates on the 2026 Outlander and Eclipse Cross lineups. Visit our <a href="/demo/sendell-mitsubishi/inventory">new vehicle inventory</a> to find the model you love, then let our finance team show you how affordable it can be.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <h3>Sendell Mitsubishi</h3>
+                <p>5079 US-30, Greensburg, PA 15601<br />
+                Sales: (724) 607-8465<br />
+                Service: (724) 607-8276</p>
+                <p style="margin-top:12px;">Mon-Fri: 9AM - 7PM<br/>Sat: 9AM - 5PM<br/>Sun: Closed</p>
+            </div>
+            <div>
+                <h4>Inventory</h4>
+                <ul>
+                    <li><a href="/demo/sendell-mitsubishi/inventory">New Vehicles</a></li>
+                    <li><a href="#">Used Vehicles</a></li>
+                    <li><a href="#">Certified Pre-Owned</a></li>
+                    <li><a href="#">Specials</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Finance</h4>
+                <ul>
+                    <li><a href="/demo/sendell-mitsubishi/finance">Apply Online</a></li>
+                    <li><a href="/demo/sendell-mitsubishi/finance#trade">Value Your Trade</a></li>
+                    <li><a href="/demo/sendell-mitsubishi/finance#calculator">Payment Calculator</a></li>
+                    <li><a href="/demo/sendell-mitsubishi/finance">Credit Solutions</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Service</h4>
+                <ul>
+                    <li><a href="#">Schedule Service</a></li>
+                    <li><a href="#">Service Specials</a></li>
+                    <li><a href="#">Parts Department</a></li>
+                    <li><a href="#">Body Shop</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Sendell Mitsubishi. All rights reserved. | Powered by <a href="https://www.savvydealer.com" style="color:var(--red);">SavvyDealer</a></p>
+        </div>
+    </footer>
+
+<script>
+/* ── Payment Calculator ── */
+var calcState = {
+    price: 35000,
+    down: 3000,
+    trade: 0,
+    rate: 5.9,
+    months: 60
+};
+
+function formatCurrency(n) {
+    return '$' + Math.round(n).toLocaleString('en-US');
+}
+
+function formatCurrencyInput(n) {
+    return '$' + Math.round(n).toLocaleString('en-US');
+}
+
+function parseCurrency(s) {
+    return parseFloat(s.replace(/[^0-9.-]/g, '')) || 0;
+}
+
+function calculatePayment() {
+    var principal = calcState.price - calcState.down - calcState.trade;
+    if (principal < 0) principal = 0;
+
+    var monthly;
+    var totalInterest;
+    if (calcState.rate === 0) {
+        monthly = principal / calcState.months;
+        totalInterest = 0;
+    } else {
+        var r = (calcState.rate / 100) / 12;
+        var n = calcState.months;
+        monthly = principal * (r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+        totalInterest = (monthly * n) - principal;
+    }
+
+    if (isNaN(monthly) || !isFinite(monthly)) {
+        monthly = 0;
+        totalInterest = 0;
+    }
+
+    var totalCost = principal + totalInterest;
+
+    // Update display
+    var paymentEl = document.getElementById('monthlyPayment');
+    paymentEl.textContent = formatCurrency(monthly);
+    paymentEl.classList.remove('pulse');
+    void paymentEl.offsetWidth; // trigger reflow
+    paymentEl.classList.add('pulse');
+
+    document.getElementById('loanAmount').textContent = formatCurrency(principal);
+    document.getElementById('totalInterest').textContent = formatCurrency(totalInterest);
+    document.getElementById('totalCost').textContent = formatCurrency(totalCost);
+}
+
+// Slider + Input sync
+function setupSlider(sliderId, inputId, stateKey, formatter) {
+    var slider = document.getElementById(sliderId);
+    var input = document.getElementById(inputId);
+
+    slider.addEventListener('input', function() {
+        var val = parseFloat(this.value);
+        calcState[stateKey] = val;
+        input.value = formatter(val);
+        updateSliderFill(this);
+        calculatePayment();
+    });
+
+    input.addEventListener('focus', function() {
+        // Select all on focus for easy editing
+        this.select();
+    });
+
+    input.addEventListener('blur', function() {
+        var val = parseCurrency(this.value);
+        var min = parseFloat(slider.min);
+        var max = parseFloat(slider.max);
+        if (val < min) val = min;
+        if (val > max) val = max;
+        calcState[stateKey] = val;
+        slider.value = val;
+        input.value = formatter(val);
+        updateSliderFill(slider);
+        calculatePayment();
+    });
+
+    input.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+            this.blur();
+        }
+    });
+
+    // Initial fill
+    updateSliderFill(slider);
+}
+
+function updateSliderFill(slider) {
+    var min = parseFloat(slider.min);
+    var max = parseFloat(slider.max);
+    var val = parseFloat(slider.value);
+    var pct = ((val - min) / (max - min)) * 100;
+    slider.style.background = 'linear-gradient(to right, #ED0000 0%, #ED0000 ' + pct + '%, #E2E5E6 ' + pct + '%, #E2E5E6 100%)';
+}
+
+setupSlider('priceSlider', 'priceInput', 'price', formatCurrencyInput);
+setupSlider('downSlider', 'downInput', 'down', formatCurrencyInput);
+setupSlider('tradeSlider', 'tradeInput', 'trade', formatCurrencyInput);
+setupSlider('rateSlider', 'rateInput', 'rate', function(v) { return v.toFixed(1) + '%'; });
+
+// Term buttons
+var termBtns = document.querySelectorAll('.term-btn');
+for (var i = 0; i < termBtns.length; i++) {
+    termBtns[i].addEventListener('click', function() {
+        for (var j = 0; j < termBtns.length; j++) {
+            termBtns[j].classList.remove('active');
+        }
+        this.classList.add('active');
+        calcState.months = parseInt(this.getAttribute('data-months'));
+        calculatePayment();
+    });
+}
+
+// Initial calculation
+calculatePayment();
+
+
+/* ── FAQ Accordion ── */
+function toggleFaq(btn) {
+    var item = btn.parentElement;
+    var answer = item.querySelector('.faq-answer');
+    var inner = answer.querySelector('.faq-answer-inner');
+    var isOpen = item.classList.contains('open');
+
+    // Close all others
+    var allItems = document.querySelectorAll('.faq-item');
+    for (var i = 0; i < allItems.length; i++) {
+        if (allItems[i] !== item && allItems[i].classList.contains('open')) {
+            allItems[i].classList.remove('open');
+            allItems[i].querySelector('.faq-answer').style.maxHeight = '0';
+        }
+    }
+
+    if (isOpen) {
+        item.classList.remove('open');
+        answer.style.maxHeight = '0';
+    } else {
+        item.classList.add('open');
+        answer.style.maxHeight = inner.scrollHeight + 20 + 'px';
+    }
+}
+
+
+/* ── Smooth Scroll for Calculate Payment CTA ── */
+document.getElementById('scrollToCalc').addEventListener('click', function(e) {
+    e.preventDefault();
+    var target = document.getElementById('calculator');
+    if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+});
+
+
+/* ── Pre-qual form handler ── */
+function handlePrequal(e) {
+    e.preventDefault();
+    var btn = e.target.querySelector('.form-submit-btn');
+    btn.textContent = 'Submitted!';
+    btn.style.background = '#2d8f3d';
+    setTimeout(function() {
+        btn.textContent = 'Get Pre-Qualified';
+        btn.style.background = '';
+        e.target.reset();
+    }, 3000);
+    return false;
+}
+</script>
+</body>
+</html>
