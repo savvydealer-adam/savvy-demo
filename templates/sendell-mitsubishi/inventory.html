@@ -6,11 +6,23 @@
     <title>New Inventory | Mitsubishi SUVs in Greensburg - Sendell Mitsubishi</title>
     <link href="https://fonts.cdnfonts.com/css/mmc" rel="stylesheet" />
     <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
         :root {
+            --red: #ED0000;
+            --red-dark: #BC0600;
+            --black: #000000;
+            --white: #ffffff;
+            --gray-50: #f8f9fa;
+            --gray-100: #f0f0f0;
+            --gray-200: #E2E5E6;
+            --gray-400: #696D71;
+            --gray-600: #666;
+            --gray-800: #19183C;
+            --blue: #0678bc;
+            /* Legacy aliases used by SRP-specific styles */
             --bodyfont: 'MMC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            --headerbg: #bc0600;
             --footerbg: #282828;
-            --darkgrey: #393436;
             --bodycolor: #19183C;
             --secondarycolor: #bc0600;
             --linktextcolor: #0678bc;
@@ -22,11 +34,16 @@
             --transition: all 0.4s;
         }
 
-        *, *::before, *::after { box-sizing: border-box; }
-        body { margin: 0; font-family: var(--bodyfont); color: var(--bodycolor); font-size: 16px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
-        a { color: var(--linktextcolor); text-decoration: none; }
-        a:hover { color: var(--blackcolor); }
-        img { max-width: 100%; height: auto; }
+        body {
+            font-family: 'MMC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--gray-800);
+            background: var(--white);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; display: block; }
         .flex { display: flex; }
         .align-center { align-items: center; }
         .align-top { align-items: flex-start; }
@@ -41,23 +58,82 @@
         @media(min-width:1430px) { .container { width: 1400px; } }
         @media(min-width:1630px) { .container { width: 1630px; } }
 
-        /* ── Header ── */
-        header .topbar { padding: 12px 0; background: #fff; }
-        header .topbar .inner { display: flex; align-items: center; gap: 20px; }
-        header .topbar .logo img { max-height: 65px; width: auto; }
-        header .topbar .contact-right { font-size: 14px; text-align: right; display: flex; flex-direction: column; gap: 8px; margin-left: auto; }
-        header .topbar .contact-right a { display: flex; align-items: center; gap: 8px; font-weight: 600; }
-        header .topbar .contact-right svg { width: 14px; height: 14px; fill: var(--linktextcolor); }
+        /* ── Top Bar ── */
+        .top-bar {
+            background: var(--black);
+            color: var(--white);
+            font-size: 13px;
+            padding: 8px 0;
+        }
+        .top-bar-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .top-bar a { color: var(--white); transition: color 0.2s; }
+        .top-bar a:hover { color: var(--red); }
+        .top-bar .promo {
+            background: var(--red);
+            padding: 3px 12px;
+            border-radius: 2px;
+            font-weight: 600;
+            font-size: 12px;
+            letter-spacing: 0.5px;
+        }
 
-        header .header-main { background: var(--footerbg); font-size: 14px; letter-spacing: 1px; }
-        header .header-main .inner { display: flex; align-items: center; }
-        header .header-main .nav-menu { display: flex; align-items: center; width: 100%; }
-        header .header-main .nav-menu ul { display: flex; align-items: center; list-style: none; margin: 0; padding: 0; }
-        header .header-main .nav-menu ul li a { padding: 12px 14px; display: block; color: #fff; font-weight: 600; text-transform: uppercase; transition: var(--transition); }
-        header .header-main .nav-menu ul li a:hover,
-        header .header-main .nav-menu ul li a.active { background: var(--secondarycolor); color: #fff; }
-        .nav-promo { margin-left: auto; }
-        .nav-promo a { background: var(--redcolor) !important; padding: 12px 18px !important; font-weight: 800 !important; letter-spacing: 0.5px; }
+        /* ── Header ── */
+        header {
+            background: var(--white);
+            border-bottom: 3px solid var(--red);
+            padding: 12px 0;
+        }
+        .header-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo-area { display: flex; align-items: center; gap: 16px; }
+        .logo-area .mitsubishi-mark { width: 48px; height: 48px; }
+        .logo-text h1 {
+            font-family: 'MMC', sans-serif;
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--black);
+            line-height: 1;
+            letter-spacing: -0.5px;
+        }
+        .logo-text span {
+            font-size: 12px;
+            color: var(--gray-600);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        nav { display: flex; gap: 4px; }
+        nav a {
+            padding: 10px 16px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--gray-800);
+            border-radius: 4px;
+            transition: all 0.2s;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        nav a:hover { background: var(--red); color: var(--white); }
+        nav a.active { background: var(--red); color: var(--white); }
+        .nav-phone {
+            font-family: 'MMC', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--black);
+        }
 
         /* ── SRP Layout ── */
         .search-page-main { padding: 30px 0; background: rgb(40 40 40 / 5%); min-height: 80vh; }
@@ -193,11 +269,47 @@
         .pagination li.disabled:hover span { border-color: #ddd; color: #ccc; }
 
         /* ── Footer ── */
-        footer { background: var(--footerbg); color: rgba(255,255,255,0.6); padding: 32px 0; }
-        footer .inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
-        footer a { color: rgba(255,255,255,0.8); font-size: 13px; }
-        footer a:hover { color: #fff; }
-        footer .copyright { font-size: 12px; }
+        footer {
+            background: #1a1a1a;
+            color: rgba(255,255,255,0.6);
+            padding: 48px 0 24px;
+        }
+        .footer-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+        }
+        .footer-brand h3 {
+            font-family: 'MMC', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 12px;
+        }
+        .footer-brand p { font-size: 14px; line-height: 1.7; }
+        footer h4 {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--white);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+        }
+        footer ul { list-style: none; }
+        footer li { margin-bottom: 8px; }
+        footer li a { font-size: 14px; transition: color 0.2s; }
+        footer li a:hover { color: var(--red); }
+        .footer-bottom {
+            max-width: 1280px;
+            margin: 32px auto 0;
+            padding: 24px 24px 0;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            font-size: 12px;
+        }
 
         /* ── Responsive ── */
         @media (max-width: 1429px) {
@@ -215,59 +327,59 @@
             .list-item { width: calc(50% - 10px); }
             .mobile-filter-btn { display: flex !important; }
         }
+        @media (max-width: 1024px) {
+            nav { display: none; }
+            .footer-inner { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 768px) {
+            .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+        }
         @media (max-width: 767px) {
             .list-item { width: 100%; }
-            header .header-main .nav-menu ul { font-size: 12px; }
-            header .topbar .contact-right { display: none; }
         }
     </style>
 </head>
 <body>
 
-<!-- Header -->
-<header>
-    <div class="topbar">
-        <div class="container">
-            <div class="inner">
-                <div class="logo">
-                    <a href="/demo/sendell-mitsubishi" title="Sendell Mitsubishi">
-                        <svg viewBox="0 0 75 37" fill="none" style="height:50px;width:auto;margin-right:12px;vertical-align:middle;">
-                            <polygon fill="#ED0000" points="37.34,0.19 30.35,12.32 37.34,24.44 44.33,12.32"/>
-                            <polygon fill="#ED0000" points="37.34,24.44 51.31,24.44 58.30,36.56 44.33,36.56"/>
-                            <polygon fill="#ED0000" points="37.34,24.44 23.36,24.44 16.37,36.56 30.35,36.56"/>
-                        </svg>
-                        <span style="font-size:22px;font-weight:800;color:#19183C;vertical-align:middle;">SENDELL MITSUBISHI</span>
-                    </a>
-                </div>
-                <div class="contact-right">
-                    <a href="tel:7246078465">
-                        <svg viewBox="0 0 512 512"><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>
-                        (724) 607-8465
-                    </a>
-                    <span style="font-size:12px;color:#999;">5079 US-30, Greensburg, PA 15601</span>
-                </div>
+<!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-inner">
+            <div style="display:flex;gap:24px;align-items:center;">
+                <span>5079 US-30, Greensburg, PA 15601</span>
+            </div>
+            <div style="display:flex;gap:16px;align-items:center;">
+                <span class="promo">LESS THAN PERFECT CREDIT ACCEPTED!</span>
+                <a href="/demo/sendell-mitsubishi/service">Service: (724) 607-8276</a>
             </div>
         </div>
     </div>
-    <div class="header-main">
-        <div class="container">
-            <div class="inner">
-                <div class="nav-menu">
-                    <ul>
-                        <li><a href="/demo/sendell-mitsubishi">Home</a></li>
-                        <li><a href="/demo/sendell-mitsubishi/inventory" class="active">New</a></li>
-                        <li><a href="#">Used</a></li>
-                        <li><a href="/demo/sendell-mitsubishi/finance">Finance</a></li>
-                        <li><a href="/demo/sendell-mitsubishi/service">Service</a></li>
-                        <li><a href="#">Specials</a></li>
-                        <li><a href="/demo/sendell-mitsubishi/contact">Contact</a></li>
-                        <li class="nav-promo"><a href="#">$8K OFF PHEV!</a></li>
-                    </ul>
-                </div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-inner">
+            <div class="logo-area">
+                <a href="/demo/sendell-mitsubishi/" style="display:flex;align-items:center;gap:16px;">
+                    <svg class="mitsubishi-mark" viewBox="0 0 75 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <polygon fill="#ED0000" points="37.34,0.19 30.35,12.32 37.34,24.44 44.33,12.32"/>
+                        <polygon fill="#ED0000" points="37.34,24.44 51.31,24.44 58.30,36.56 44.33,36.56"/>
+                        <polygon fill="#ED0000" points="37.34,24.44 23.36,24.44 16.37,36.56 30.35,36.56"/>
+                    </svg>
+                    <div class="logo-text">
+                        <h1>SENDELL MITSUBISHI</h1>
+                        <span>Greensburg, PA 15601</span>
+                    </div>
+                </a>
             </div>
+            <nav>
+                <a href="/demo/sendell-mitsubishi/inventory" class="active">New</a>
+                <a href="/demo/sendell-mitsubishi/inventory">Used</a>
+                <a href="/demo/sendell-mitsubishi/finance">Finance</a>
+                <a href="/demo/sendell-mitsubishi/service">Service</a>
+                <a href="/demo/sendell-mitsubishi/contact">Contact</a>
+            </nav>
+            <a href="tel:7246078465" class="nav-phone">(724) 607-8465</a>
         </div>
-    </div>
-</header>
+    </header>
 
 <!-- SRP -->
 <section class="search-page-main">
@@ -827,18 +939,47 @@
 </section>
 
 <!-- Footer -->
-<footer>
-    <div class="container">
-        <div class="inner">
-            <div class="copyright">&copy; 2026 Sendell Mitsubishi | 5079 US-30, Greensburg, PA 15601 | Powered by <a href="https://www.savvydealer.com" style="color:#ED0000;">SavvyDealer</a></div>
-            <div style="display:flex;gap:16px;">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms</a>
-                <a href="#">Sitemap</a>
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <h3>Sendell Mitsubishi</h3>
+                <p>5079 US-30, Greensburg, PA 15601<br />
+                Sales: (724) 607-8465<br />
+                Service: (724) 607-8276</p>
+                <p style="margin-top:12px;">Mon-Fri: 9AM - 7PM<br/>Sat: 9AM - 5PM<br/>Sun: Closed</p>
+            </div>
+            <div>
+                <h4>Inventory</h4>
+                <ul>
+                    <li><a href="/demo/sendell-mitsubishi/inventory">New Vehicles</a></li>
+                    <li><a href="#">Used Vehicles</a></li>
+                    <li><a href="#">Certified Pre-Owned</a></li>
+                    <li><a href="#">Specials</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Finance</h4>
+                <ul>
+                    <li><a href="/demo/sendell-mitsubishi/finance">Apply Online</a></li>
+                    <li><a href="/demo/sendell-mitsubishi/finance#trade">Value Your Trade</a></li>
+                    <li><a href="/demo/sendell-mitsubishi/finance#calculator">Payment Calculator</a></li>
+                    <li><a href="/demo/sendell-mitsubishi/finance">Credit Solutions</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Service</h4>
+                <ul>
+                    <li><a href="/demo/sendell-mitsubishi/service">Schedule Service</a></li>
+                    <li><a href="/demo/sendell-mitsubishi/service">Service Specials</a></li>
+                    <li><a href="#">Parts Department</a></li>
+                    <li><a href="#">Body Shop</a></li>
+                </ul>
             </div>
         </div>
-    </div>
-</footer>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Sendell Mitsubishi. All rights reserved. | Powered by <a href="https://www.savvydealer.com" style="color:var(--red);">SavvyDealer</a></p>
+        </div>
+    </footer>
 
 </body>
 </html>

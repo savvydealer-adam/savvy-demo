@@ -7,6 +7,9 @@
     <meta name="description" content="Browse new Ford vehicles at Jarrett Scott Ford in Plant City, FL. No Hidden Fees. Your Price on every vehicle." />
     <link rel="shortcut icon" href="https://storage.googleapis.com/savvy-images/JarrettScottFord-logo.jpg" type="image/x-icon" />
 
+    <!-- Font Awesome 4.7 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
     <!-- Ford Antenna Fonts -->
     <style>
     @font-face { font-family: 'Ford Antenna Bold'; font-weight: 700; font-style: normal; font-display: swap; src: url(//r.remorainc.com/new/c/f/FordAntenna-Bold.woff) format('woff'), url(//r.remorainc.com/new/c/f/FordAntenna-Bold.ttf) format('truetype'); }
@@ -48,112 +51,83 @@
         @media(min-width:1430px) { .container { width: 1400px; } }
         @media(min-width:1630px) { .container { width: 1630px; } }
 
-        /* ========== HEADER ========== */
-        .site-header {
-            background: #fff;
-            border-bottom: 1px solid #f5f5f5;
-            padding: 12px 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+        /* ── Top Bar ── */
+        .top-bar {
+            background: #000;
+            color: #fff;
+            font-size: 13px;
+            padding: 8px 0;
         }
-        .site-header .sh-inner {
-            max-width: 1630px;
+        .top-bar-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .top-bar a { color: #fff; transition: color 0.2s; }
+        .top-bar a:hover { color: var(--headerbg); }
+        .top-bar .top-bar-phone { font-weight: 600; }
+        .top-bar .top-bar-phone i { margin-right: 4px; }
+
+        /* ── Header ── */
+        .canonical-header {
+            background: #fff;
+            border-bottom: 2px solid var(--savingsgreen);
+            padding: 12px 0;
+        }
+        .header-inner {
+            max-width: 1280px;
             margin: 0 auto;
             padding: 0 24px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 16px;
         }
-        .header-dealer-logo { flex-shrink: 0; }
-        .header-dealer-logo img {
-            max-height: 60px;
-            width: auto;
-            display: block;
-        }
-        .header-contact {
-            display: flex;
-            align-items: center;
-            gap: 24px;
-            font-size: 14px;
-        }
-        .header-contact a {
-            color: var(--headerbg);
-            font-weight: 500;
-            transition: opacity 0.2s;
-        }
-        .header-contact a:hover { opacity: 0.8; }
-        .header-contact .hdr-phone {
-            font-size: 18px;
-            font-family: var(--headingfont);
+        .logo-area { display: flex; align-items: center; gap: 16px; }
+        .logo-area img { height: 56px; width: auto; border-radius: 4px; }
+        .logo-text h1 {
+            font-family: var(--headingfont), Arial, sans-serif;
+            font-size: 26px;
             font-weight: 700;
-        }
-        .header-contact .hdr-address {
-            font-size: 13px;
-            color: #555;
-        }
-        .header-nav {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-        .header-nav a {
-            color: #333;
-            font-size: 14px;
-            font-weight: 500;
-            padding: 6px 12px;
-            border-radius: 4px;
-            transition: background 0.2s, color 0.2s;
-        }
-        .header-nav a:hover {
-            background: #e8f4fc;
             color: var(--headerbg);
+            line-height: 1;
+            letter-spacing: -0.5px;
         }
-        .header-nav a.active {
-            background: #e8f4fc;
-            color: var(--headerbg);
-            font-weight: 700;
+        .logo-text span {
+            font-size: 12px;
+            color: #666;
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
 
-        /* ========== NAV BAR ========== */
-        .nav-bar {
+        /* ── Nav ── */
+        nav.main-nav {
             background: var(--headerbg);
-            border-bottom: 3px solid var(--savingsgreen);
-        }
-        .nav-bar .nb-inner {
-            max-width: 1630px;
-            margin: 0 auto;
-            padding: 0 24px;
+            border-radius: 4px;
             display: flex;
-            align-items: center;
-            justify-content: center;
+            gap: 0;
         }
-        .nav-bar a {
-            color: #fff;
+        nav.main-nav a {
+            padding: 10px 16px;
             font-size: 13px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            padding: 10px 14px;
-            transition: background 0.2s;
-        }
-        .nav-bar a:hover, .nav-bar a.active {
-            background: var(--savingsgreen);
+            font-weight: 600;
             color: #fff;
-        }
-        .nav-bar .hablamos-badge {
-            margin-left: auto;
-            background: var(--savingsgreen);
-            color: #fff;
-            font-size: 12px;
-            font-weight: 700;
-            padding: 4px 12px;
-            border-radius: 3px;
+            border-radius: 4px;
+            transition: all 0.2s;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 1px;
         }
+        nav.main-nav a:hover { background: var(--savingsgreen); color: #fff; }
+        nav.main-nav a.active { background: var(--savingsgreen); color: #fff; }
+        .nav-phone {
+            font-family: var(--headingfont), Arial, sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--headerbg);
+        }
+        .nav-phone i { margin-right: 4px; }
 
         /* ── SRP Layout ── */
         .search-page-main { padding: 30px 0; background: rgb(40 40 40 / 5%); min-height: 80vh; }
@@ -284,47 +258,50 @@
         .pagination li.disabled span { color: #ccc; cursor: default; }
         .pagination li.disabled:hover span { border-color: #ddd; color: #ccc; }
 
-        /* ========== FOOTER ========== */
-        .site-footer {
+        /* ── Footer ── */
+        footer {
             background: var(--footerbg);
-            color: #ccc;
-            padding: 48px 0 0;
+            color: rgba(255,255,255,0.6);
+            padding: 48px 0 24px;
         }
-        .site-footer .ft-inner {
-            max-width: 1630px;
+        .footer-inner {
+            max-width: 1280px;
             margin: 0 auto;
             padding: 0 24px;
-        }
-        .footer-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 32px;
-            padding-bottom: 40px;
-            border-bottom: 1px solid #3a3a3a;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
         }
-        .footer-col h4 {
-            font-size: 14px;
+        .footer-brand h3 {
+            font-family: var(--headingfont), Arial, sans-serif;
+            font-size: 24px;
             font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.8px;
             color: #fff;
-            margin: 0 0 16px;
-            font-family: var(--headingfont);
+            margin-bottom: 12px;
+        }
+        .footer-brand p { font-size: 14px; line-height: 1.7; }
+        footer h4 {
+            font-size: 13px;
+            font-weight: 700;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
             border-bottom: 2px solid var(--savingsgreen);
             padding-bottom: 10px;
         }
-        .footer-col ul { list-style: none; padding: 0; margin: 0; }
-        .footer-col li { margin-bottom: 10px; }
-        .footer-col a { color: #aaa; font-size: 14px; transition: color 0.2s; }
-        .footer-col a:hover { color: #fff; }
+        footer ul { list-style: none; }
+        footer li { margin-bottom: 8px; }
+        footer li a { font-size: 14px; transition: color 0.2s; }
+        footer li a:hover { color: var(--headerbg); }
         .footer-bottom {
-            padding: 20px 24px;
+            max-width: 1280px;
+            margin: 32px auto 0;
+            padding: 24px 24px 0;
+            border-top: 1px solid rgba(255,255,255,0.1);
             text-align: center;
-            font-size: 13px;
-            color: #777;
+            font-size: 12px;
         }
-        .footer-bottom a { color: var(--headerbg); font-weight: 500; }
-        .footer-bottom a:hover { text-decoration: underline; }
 
         /* ── Responsive ── */
         @media (max-width: 1429px) {
@@ -336,8 +313,9 @@
             .list-item { width: calc(50% - 10px); }
             .filter-buttons { display: none; }
         }
-        @media (max-width: 1023px) {
-            .header-nav { display: none; }
+        @media (max-width: 1024px) {
+            nav.main-nav { display: none; }
+            .footer-inner { grid-template-columns: 1fr 1fr; }
         }
         @media (max-width: 991px) {
             .filter-panel { display: none; }
@@ -345,58 +323,55 @@
             .list-item { width: calc(50% - 10px); }
             .mobile-filter-btn { display: flex !important; }
         }
+        @media (max-width: 768px) {
+            .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+            .header-inner { flex-wrap: wrap; gap: 12px; }
+        }
         @media (max-width: 767px) {
             .list-item { width: 100%; }
-            .site-header .sh-inner {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 12px;
-            }
-            .header-contact { display: none; }
-            .nav-bar .nb-inner { flex-wrap: wrap; justify-content: center; }
-            .nav-bar a { font-size: 11px; padding: 8px 8px; letter-spacing: 1px; }
-            .footer-grid {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
+        }
+        @media (max-width: 480px) {
+            .top-bar-inner { flex-direction: column; gap: 4px; text-align: center; }
         }
     </style>
 </head>
 <body>
 
-<!-- ==================== HEADER ==================== -->
-<header class="site-header">
-    <div class="sh-inner">
-        <a href="/demo/ford-starter" class="header-dealer-logo">
-            <img src="https://storage.googleapis.com/savvy-images/JarrettScottFord-logo.jpg" alt="Jarrett Scott Ford">
-        </a>
-        <div class="header-contact">
-            <a href="tel:8137524171" class="hdr-phone">(813) 752-4171</a>
-            <a href="https://www.google.com/maps/place/Jarrett+Scott+Ford+of+Plant+City/" target="_blank" rel="noopener" class="hdr-address">2000 East Baker St. Plant City, FL 33563</a>
+<!-- Top Bar -->
+<div class="top-bar">
+    <div class="top-bar-inner">
+        <div style="display:flex;gap:24px;align-items:center;">
+            <span><i class="fa fa-map-marker" style="margin-right:4px;"></i> 2000 East Baker St. Plant City, FL 33563</span>
         </div>
-        <nav class="header-nav">
-            <a href="/demo/ford-starter">Home</a>
-            <a href="/demo/ford-starter/inventory" class="active">New</a>
-            <a href="#">Used</a>
-            <a href="/demo/ford-starter/finance">Finance</a>
-            <a href="#">Service</a>
-            <a href="/demo/ford-starter/contact">Contact</a>
-        </nav>
-    </div>
-</header>
-
-<!-- ==================== NAV BAR ==================== -->
-<div class="nav-bar">
-    <div class="nb-inner">
-        <a href="/demo/ford-starter">Home</a>
-        <a href="/demo/ford-starter/inventory" class="active">New Vehicles</a>
-        <a href="#">Used</a>
-        <a href="/demo/ford-starter/finance">Finance</a>
-        <a href="#">Service</a>
-        <a href="/demo/ford-starter/contact">Contact</a>
-        <span class="hablamos-badge">Hablamos Espanol</span>
+        <div style="display:flex;gap:16px;align-items:center;">
+            <a href="tel:8137524171" class="top-bar-phone"><i class="fa fa-phone"></i> (813) 752-4171</a>
+        </div>
     </div>
 </div>
+
+<!-- Header -->
+<header class="canonical-header">
+    <div class="header-inner">
+        <div class="logo-area">
+            <a href="/demo/ford-starter/" style="display:flex;align-items:center;gap:16px;">
+                <img src="https://storage.googleapis.com/savvy-images/JarrettScottFord-logo.jpg" alt="Jarrett Scott Ford Logo" />
+                <div class="logo-text">
+                    <h1>JARRETT SCOTT FORD</h1>
+                    <span>Plant City, FL 33563</span>
+                </div>
+            </a>
+        </div>
+        <nav class="main-nav">
+            <a href="/demo/ford-starter/">Home</a>
+            <a href="/demo/ford-starter/inventory" class="active">New</a>
+            <a href="/demo/ford-starter/inventory">Used</a>
+            <a href="/demo/ford-starter/finance">Finance</a>
+            <a href="/demo/ford-starter/service">Service</a>
+            <a href="/demo/ford-starter/contact">Contact</a>
+        </nav>
+        <a href="tel:8137524171" class="nav-phone"><i class="fa fa-phone"></i> (813) 752-4171</a>
+    </div>
+</header>
 
 <!-- ==================== SRP ==================== -->
 <section class="search-page-main">
@@ -552,51 +527,46 @@
     </div>
 </section>
 
-<!-- ==================== FOOTER ==================== -->
-<footer class="site-footer">
-    <div class="ft-inner">
-        <div class="footer-grid">
-            <div class="footer-col">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="/demo/ford-starter/inventory">New Vehicles</a></li>
-                    <li><a href="#">Used Vehicles</a></li>
-                    <li><a href="#">Certified Pre-Owned</a></li>
-                    <li><a href="/demo/ford-starter/finance">Finance Center</a></li>
-                    <li><a href="/demo/ford-starter/contact">Contact Us</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Service</h4>
-                <ul>
-                    <li><a href="#">Schedule Service</a></li>
-                    <li><a href="#">Order Parts</a></li>
-                    <li><a href="#">Service Specials</a></li>
-                    <li><a href="#">Reviews</a></li>
-                    <li><a href="#">Employment</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>About Us</h4>
-                <ul>
-                    <li><a href="/demo/ford-starter/contact">About Jarrett Scott Ford</a></li>
-                    <li><a href="https://www.google.com/maps/place/Jarrett+Scott+Ford+of+Plant+City/" target="_blank" rel="noopener">Hours &amp; Directions</a></li>
-                    <li><a href="/demo/ford-starter/contact">Contact Us</a></li>
-                    <li><a href="tel:8137524171">Call Sales: (813) 752-4171</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Contact</h4>
-                <ul>
-                    <li><a href="tel:8137524171">(813) 752-4171</a></li>
-                    <li><a href="mailto:info@jarrettscottford.com">info@jarrettscottford.com</a></li>
-                    <li><a href="https://www.google.com/maps/place/Jarrett+Scott+Ford+of+Plant+City/" target="_blank" rel="noopener">2000 East Baker St.<br>Plant City, FL 33563</a></li>
-                </ul>
-            </div>
+<!-- Footer -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <h3>Jarrett Scott Ford</h3>
+            <p>2000 East Baker St.<br />
+            Plant City, FL 33563<br />
+            Sales: (813) 752-4171</p>
+            <p style="margin-top:12px;">Mon-Thu: 8:30 AM - 7:00 PM<br/>Fri: 8:30 AM - 7:00 PM<br/>Sat: 8:30 AM - 5:00 PM<br/>Sun: Closed</p>
         </div>
-        <div class="footer-bottom">
-            <p>Jarrett Scott Ford &mdash; 2000 East Baker St., Plant City, FL 33563 &nbsp;&bull;&nbsp; &copy; 2026 All Rights Reserved &nbsp;&bull;&nbsp; Powered by <a href="https://www.savvydealer.com" target="_blank" rel="noopener">SavvyDealer</a></p>
+        <div>
+            <h4>Inventory</h4>
+            <ul>
+                <li><a href="/demo/ford-starter/inventory">New Vehicles</a></li>
+                <li><a href="#">Used Vehicles</a></li>
+                <li><a href="#">Certified Pre-Owned</a></li>
+                <li><a href="#">Specials</a></li>
+            </ul>
         </div>
+        <div>
+            <h4>Finance</h4>
+            <ul>
+                <li><a href="/demo/ford-starter/finance">Apply Online</a></li>
+                <li><a href="/demo/ford-starter/finance#trade">Value Your Trade</a></li>
+                <li><a href="/demo/ford-starter/finance#calculator">Payment Calculator</a></li>
+                <li><a href="/demo/ford-starter/finance">Credit Solutions</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Service</h4>
+            <ul>
+                <li><a href="/demo/ford-starter/service">Schedule Service</a></li>
+                <li><a href="/demo/ford-starter/service#specials">Service Specials</a></li>
+                <li><a href="#">Parts Department</a></li>
+                <li><a href="#">Body Shop</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Jarrett Scott Ford. All rights reserved. | Powered by <a href="https://www.savvydealer.com" style="color:var(--headerbg);">SavvyDealer</a></p>
     </div>
 </footer>
 
