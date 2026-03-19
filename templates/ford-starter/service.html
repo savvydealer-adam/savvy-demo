@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Ford Service Center | Jarrett Scott Ford | Plant City, FL</title>
+    <meta name="description" content="Factory-trained Ford technicians and genuine Ford parts at Jarrett Scott Ford in Plant City, FL. Oil changes, brake service, tire rotation, and more. Serving Tampa, Lakeland, Brandon." />
+    <link rel="shortcut icon" href="https://storage.googleapis.com/savvy-images/JarrettScottFord-logo.jpg" type="image/x-icon" />
+
+    <!-- Font Awesome 4.7 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <style>
+        @font-face { font-family: 'Ford Antenna Bold'; font-weight: 700; font-style: normal; font-display: swap; src: url(//r.remorainc.com/new/c/f/FordAntenna-Bold.woff) format('woff'); }
+        @font-face { font-family: 'Ford Antenna Regular'; font-weight: 400; font-style: normal; font-display: swap; src: url(//r.remorainc.com/new/c/f/FordAntenna-Regular.woff) format('woff'); }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --primary: #0071b2;
+            --primary-dark: #005a8c;
+            --green: #30770f;
+            --green-dark: #256010;
+            --black: #000000;
+            --white: #ffffff;
+            --gray-50: #f8f9fa;
+            --gray-100: #f0f0f0;
+            --gray-200: #E2E5E6;
+            --gray-400: #696D71;
+            --gray-600: #666;
+            --gray-800: #19183C;
+            --footer-bg: #282828;
+        }
+
+        body {
+            font-family: 'Ford Antenna Regular', Arial, sans-serif;
+            color: var(--gray-800);
+            background: var(--white);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; display: block; }
+        ul { list-style: none; }
+
+        /* ── Top Bar ── */
+        .top-bar {
+            background: var(--black);
+            color: var(--white);
+            font-size: 13px;
+            padding: 8px 0;
+        }
+        .top-bar-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .top-bar a { color: var(--white); transition: color 0.2s; }
+        .top-bar a:hover { color: var(--primary); }
+        .top-bar .top-bar-phone { font-weight: 600; }
+        .top-bar .top-bar-phone i { margin-right: 4px; }
+
+        /* ── Header ── */
+        header {
+            background: var(--white);
+            border-bottom: 2px solid var(--green);
+            padding: 12px 0;
+        }
+        .header-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo-area { display: flex; align-items: center; gap: 16px; }
+        .logo-area img { height: 56px; width: auto; border-radius: 4px; }
+        .logo-text h1 {
+            font-family: 'Ford Antenna Bold', Arial, sans-serif;
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1;
+            letter-spacing: -0.5px;
+        }
+        .logo-text span {
+            font-size: 12px;
+            color: var(--gray-600);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* ── Nav ── */
+        nav.main-nav {
+            background: var(--primary);
+            border-radius: 4px;
+            display: flex;
+            gap: 0;
+        }
+        nav.main-nav a {
+            padding: 10px 16px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--white);
+            border-radius: 4px;
+            transition: all 0.2s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        nav.main-nav a:hover { background: var(--green); color: var(--white); }
+        nav.main-nav a.active { background: var(--green); color: var(--white); }
+        .nav-phone {
+            font-family: 'Ford Antenna Bold', Arial, sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        .nav-phone i { margin-right: 4px; }
+
+        /* ── Buttons (shared) ── */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 28px;
+            font-size: 14px;
+            font-weight: 700;
+            font-family: 'Ford Antenna Bold', Arial, sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 2px solid transparent;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .btn-green { background: var(--green); color: var(--white); border-color: var(--green); }
+        .btn-green:hover { background: var(--green-dark); border-color: var(--green-dark); }
+        .btn-primary { background: var(--primary); color: var(--white); border-color: var(--primary); }
+        .btn-primary:hover { background: var(--primary-dark); border-color: var(--primary-dark); }
+        .btn-outline { background: transparent; color: var(--white); border-color: rgba(255,255,255,0.4); }
+        .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.1); }
+        .btn-outline-dark { background: transparent; color: var(--gray-800); border-color: var(--gray-200); }
+        .btn-outline-dark:hover { border-color: var(--primary); color: var(--primary); }
+
+        /* ── Hero Banner (compact) ── */
+        .service-hero {
+            position: relative;
+            background: linear-gradient(135deg, #0a1628 0%, #0d2847 30%, #0071b2 70%, #004d7a 100%);
+            overflow: hidden;
+            padding: 72px 0 80px;
+        }
+        .service-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 80%;
+            height: 200%;
+            background: radial-gradient(ellipse, rgba(0,113,178,0.2) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .service-hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--green);
+        }
+        .service-hero-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+        .service-hero-inner h2 {
+            font-family: 'Ford Antenna Bold', Arial, sans-serif;
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--white);
+            line-height: 1.1;
+            margin-bottom: 12px;
+        }
+        .service-hero-inner h2 em {
+            font-style: normal;
+            color: #4db8ff;
+        }
+        .service-hero-inner p {
+            font-size: 18px;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 32px;
+            max-width: 540px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .hero-ctas {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* ── Trust Strip (Service Features) ── */
+        .trust-strip {
+            background: var(--gray-50);
+            border-bottom: 1px solid var(--gray-200);
+            padding: 48px 0;
+        }
+        .trust-strip-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+        .trust-card {
+            text-align: center;
+            padding: 32px 24px;
+            background: var(--white);
+            border-radius: 12px;
+            border: 1px solid var(--gray-200);
+            transition: all 0.3s;
+        }
+        .trust-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+            transform: translateY(-2px);
+        }
+        .trust-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--primary);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .trust-icon svg { width: 28px; height: 28px; fill: var(--white); }
+        .trust-card h3 {
+            font-family: 'Ford Antenna Bold', Arial, sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--gray-800);
+            margin-bottom: 8px;
+        }
+        .trust-card p {
+            font-size: 14px;
+            color: var(--gray-600);
+            line-height: 1.6;
+        }
+
+        /* ── Section Titles ── */
+        .section-title {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        .section-title h2 {
+            font-family: 'Ford Antenna Bold', Arial, sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--black);
+        }
+        .section-title p {
+            font-size: 16px;
+            color: var(--gray-600);
+            margin-top: 8px;
+        }
+        .section-title .bar {
+            width: 60px;
+            height: 4px;
+            background: var(--primary);
+            margin: 16px auto 0;
+        }
+
+        /* ── Schedule Service Form ── */
+        .schedule-section {
+            padding: 72px 0;
+            background: var(--white);
+        }
+        .schedule-section-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            gap: 48px;
+            align-items: start;
+        }
+        .schedule-form-card {
+            background: var(--white);
+            border-radius: 16px;
+            box-shadow: 0 4px 32px rgba(0,0,0,0.08);
+            border: 1px solid var(--gray-200);
+            overflow: hidden;
+        }
+        .schedule-form-header {
+            background: linear-gradient(135deg, #0a1628 0%, #0d2847 100%);
+            padding: 28px 32px;
+            text-align: center;
+        }
+        .schedule-form-header h3 {
+            font-family: 'Ford Antenna Bold', Arial, sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 4px;
+        }
+        .schedule-form-header p {
+            font-size: 14px;
+            color: rgba(255,255,255,0.6);
+        }
+        .schedule-form-body {
+            padding: 32px;
+        }
+        .form-field {
+            margin-bottom: 16px;
+        }
+        .form-field label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--gray-800);
+            margin-bottom: 6px;
+        }
+        .form-field input,
+        .form-field select,
+        .form-field textarea {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid var(--gray-200);
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 14px;
+            color: var(--gray-800);
+            transition: border-color 0.2s;
+            outline: none;
+            background: var(--white);
+        }
+        .form-field input:focus,
+        .form-field select:focus,
+        .form-field textarea:focus {
+            border-color: var(--primary);
+        }
+        .form-field textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        .form-submit-btn {
+            width: 100%;
+            padding: 14px 28px;
+            font-size: 14px;
+            font-weight: 700;
+            font-family: 'Ford Antenna Bold', Arial, sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            background: var(--green);
+            color: var(--white);
+            transition: background 0.3s;
+            margin-top: 8px;
+        }
+        .form-submit-btn:hover {
+            background: var(--green-dark);
+        }
+        .form-disclaimer {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            margin-top: 12px;
+            font-size: 12px;
+            color: var(--gray-400);
+            line-height: 1.5;
+        }
+        .form-disclaimer svg {
+            width: 16px;
+            height: 16px;
+            fill: var(--gray-400);
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        /* ── Service Info Sidebar ── */
+        .service-info {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        .info-card {
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: 12px;
+            padding: 28px 24px;
+        }
+        .info-card h4 {
+            font-family: 'Ford Antenna Bold', Arial, sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--gray-800);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .info-card h4 i {
+            color: var(--primary);
+            font-size: 18px;
+        }
+        .info-card p, .info-card li {
+            font-size: 14px;
+            color: var(--gray-600);
+            line-height: 1.7;
+        }
+        .info-card a {
+            color: var(--primary);
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+        .info-card a:hover { color: var(--primary-dark); }
+        .hours-grid {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 4px 16px;
+        }
+        .hours-grid .day {
+            font-weight: 600;
+            color: var(--gray-800);
+        }
+        .hours-grid .time {
+            color: var(--gray-600);
+        }
+
+        /* ── Popular Services Grid ── */
+        .services-section {
+            padding: 72px 0;
+            background: var(--gray-50);
+            border-top: 1px solid var(--gray-200);
+            border-bottom: 1px solid var(--gray-200);
+        }
+        .services-section-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .service-card {
+            background: var(--white);
+            border-radius: 12px;
+            border: 1px solid var(--gray-200);
+            padding: 32px 28px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        .service-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+            transform: translateY(-2px);
+        }
+        .service-card-icon {
+            width: 56px;
+            height: 56px;
+            background: rgba(0,113,178,0.08);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .service-card-icon svg {
+            width: 26px;
+            height: 26px;
+            fill: var(--primary);
+        }
+        .service-card h3 {
+            font-family: 'Ford Antenna Bold', Arial, sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--gray-800);
+            margin-bottom: 8px;
+        }
+        .service-card .price {
+            font-family: 'Ford Antenna Bold', Arial, sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--green);
+            margin-bottom: 8px;
+        }
+        .service-card .price-note {
+            font-size: 12px;
+            color: var(--gray-400);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .service-card p {
+            font-size: 14px;
+            color: var(--gray-600);
+            line-height: 1.6;
+            margin-top: 12px;
+        }
+
+        /* ── FAQ Section ── */
+        .faq-section {
+            padding: 72px 0;
+            background: var(--white);
+        }
+        .faq-section-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        .faq-item {
+            border-bottom: 1px solid var(--gray-200);
+        }
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 20px 0;
+            font-family: 'Ford Antenna Bold', Arial, sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--gray-800);
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: color 0.2s;
+        }
+        .faq-question:hover { color: var(--primary); }
+        .faq-question svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--gray-400);
+            transition: transform 0.3s;
+            flex-shrink: 0;
+        }
+        .faq-item.open .faq-question svg {
+            transform: rotate(180deg);
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .faq-answer-inner {
+            padding: 0 0 20px;
+            font-size: 15px;
+            color: var(--gray-600);
+            line-height: 1.7;
+        }
+
+        /* ── SEO Content ── */
+        .seo-content {
+            background: var(--white);
+            padding: 64px 24px;
+            border-top: 1px solid var(--gray-200);
+        }
+        .seo-content-inner {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .seo-content-inner h2 {
+            font-family: 'Ford Antenna Bold', Arial, sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: #19183C;
+            margin-top: 40px;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+        .seo-content-inner h2:first-child { margin-top: 0; }
+        .seo-content-inner p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 16px;
+        }
+        .seo-content-inner a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: text-decoration 0.2s;
+        }
+        .seo-content-inner a:hover { text-decoration: underline; }
+
+        /* ── Footer ── */
+        footer {
+            background: var(--footer-bg);
+            color: rgba(255,255,255,0.6);
+            padding: 48px 0 24px;
+        }
+        .footer-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+        }
+        .footer-brand h3 {
+            font-family: 'Ford Antenna Bold', Arial, sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 12px;
+        }
+        .footer-brand p { font-size: 14px; line-height: 1.7; }
+        footer h4 {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--white);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+            border-bottom: 2px solid var(--green);
+            padding-bottom: 10px;
+        }
+        footer ul { list-style: none; }
+        footer li { margin-bottom: 8px; }
+        footer li a { font-size: 14px; transition: color 0.2s; }
+        footer li a:hover { color: var(--primary); }
+        .footer-bottom {
+            max-width: 1280px;
+            margin: 32px auto 0;
+            padding: 24px 24px 0;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            font-size: 12px;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 1024px) {
+            nav.main-nav { display: none; }
+            .footer-inner { grid-template-columns: 1fr 1fr; }
+            .schedule-section-inner { grid-template-columns: 1fr; gap: 40px; }
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            .service-hero-inner h2 { font-size: 34px; }
+            .trust-strip-inner { grid-template-columns: 1fr; gap: 16px; }
+            .trust-card { padding: 24px 20px; }
+            .services-grid { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+            .section-title h2 { font-size: 28px; }
+            .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+            .header-inner { flex-wrap: wrap; gap: 12px; }
+        }
+
+        @media (max-width: 480px) {
+            .service-hero-inner h2 { font-size: 28px; }
+            .service-hero-inner p { font-size: 15px; }
+            .hero-ctas { flex-direction: column; align-items: center; }
+            .hero-ctas .btn { width: 100%; justify-content: center; }
+            .top-bar-inner { flex-direction: column; gap: 4px; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-inner">
+            <div style="display:flex;gap:24px;align-items:center;">
+                <span><i class="fa fa-map-marker" style="margin-right:4px;"></i> 2000 East Baker St. Plant City, FL 33563</span>
+            </div>
+            <div style="display:flex;gap:16px;align-items:center;">
+                <a href="tel:8137524171" class="top-bar-phone"><i class="fa fa-phone"></i> (813) 752-4171</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-inner">
+            <div class="logo-area">
+                <a href="/demo/ford-starter/" style="display:flex;align-items:center;gap:16px;">
+                    <img src="https://storage.googleapis.com/savvy-images/JarrettScottFord-logo.jpg" alt="Jarrett Scott Ford Logo" />
+                    <div class="logo-text">
+                        <h1>JARRETT SCOTT FORD</h1>
+                        <span>Plant City, FL 33563</span>
+                    </div>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <a href="/demo/ford-starter/">Home</a>
+                <a href="/demo/ford-starter/inventory">New</a>
+                <a href="/demo/ford-starter/inventory">Used</a>
+                <a href="/demo/ford-starter/finance">Finance</a>
+                <a href="/demo/ford-starter/service" class="active">Service</a>
+                <a href="/demo/ford-starter/contact">About</a>
+            </nav>
+            <a href="tel:8137524171" class="nav-phone"><i class="fa fa-phone"></i> (813) 752-4171</a>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="service-hero">
+        <div class="service-hero-inner">
+            <h2>Ford <em>Service Center</em></h2>
+            <p>Factory-trained Ford technicians. Genuine Ford parts.</p>
+            <div class="hero-ctas">
+                <a href="#schedule" class="btn btn-green">Schedule Service</a>
+                <a href="#specials" class="btn btn-outline">Service Specials</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Features Strip -->
+    <section class="trust-strip">
+        <div class="trust-strip-inner">
+            <div class="trust-card">
+                <div class="trust-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+                </div>
+                <h3>Ford-Certified Technicians</h3>
+                <p>Our technicians are factory-trained and certified by Ford Motor Company to service every Ford model with precision and expertise.</p>
+            </div>
+            <div class="trust-card">
+                <div class="trust-icon">
+                    <svg viewBox="0 0 24 24"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/></svg>
+                </div>
+                <h3>Genuine Ford Parts</h3>
+                <p>We use only genuine Ford Motorcraft parts to maintain your vehicle's performance, safety, and warranty coverage.</p>
+            </div>
+            <div class="trust-card">
+                <div class="trust-icon">
+                    <svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+                </div>
+                <h3>Transparent Pricing</h3>
+                <p>No hidden fees or surprise charges. We provide upfront estimates before any work begins, so you know exactly what to expect.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Service Form + Info -->
+    <section class="schedule-section" id="schedule">
+        <div class="schedule-section-inner">
+            <div class="schedule-form-card">
+                <div class="schedule-form-header">
+                    <h3>Schedule Your Service</h3>
+                    <p>Fill out the form below and we'll confirm your appointment</p>
+                </div>
+                <div class="schedule-form-body">
+                    <form onsubmit="return handleSchedule(event)">
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" placeholder="John" required />
+                            </div>
+                            <div class="form-field">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" placeholder="Smith" required />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" placeholder="john@example.com" required />
+                            </div>
+                            <div class="form-field">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" placeholder="(813) 555-0123" required />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="vehicleModel">Vehicle Model</label>
+                                <select id="vehicleModel" required>
+                                    <option value="" disabled selected>Select your Ford model</option>
+                                    <option value="F-150">F-150</option>
+                                    <option value="Explorer">Explorer</option>
+                                    <option value="Escape">Escape</option>
+                                    <option value="Edge">Edge</option>
+                                    <option value="Bronco">Bronco</option>
+                                    <option value="Bronco Sport">Bronco Sport</option>
+                                    <option value="Maverick">Maverick</option>
+                                    <option value="Mustang">Mustang</option>
+                                    <option value="Transit">Transit</option>
+                                    <option value="Ranger">Ranger</option>
+                                    <option value="Expedition">Expedition</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-field">
+                                <label for="vehicleYear">Vehicle Year</label>
+                                <input type="text" id="vehicleYear" placeholder="2024" />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="preferredDate">Preferred Date</label>
+                                <input type="date" id="preferredDate" required />
+                            </div>
+                            <div class="form-field">
+                                <label for="preferredTime">Preferred Time</label>
+                                <select id="preferredTime" required>
+                                    <option value="" disabled selected>Select a time</option>
+                                    <option value="7:00 AM">7:00 AM</option>
+                                    <option value="7:30 AM">7:30 AM</option>
+                                    <option value="8:00 AM">8:00 AM</option>
+                                    <option value="8:30 AM">8:30 AM</option>
+                                    <option value="9:00 AM">9:00 AM</option>
+                                    <option value="9:30 AM">9:30 AM</option>
+                                    <option value="10:00 AM">10:00 AM</option>
+                                    <option value="10:30 AM">10:30 AM</option>
+                                    <option value="11:00 AM">11:00 AM</option>
+                                    <option value="11:30 AM">11:30 AM</option>
+                                    <option value="12:00 PM">12:00 PM</option>
+                                    <option value="12:30 PM">12:30 PM</option>
+                                    <option value="1:00 PM">1:00 PM</option>
+                                    <option value="1:30 PM">1:30 PM</option>
+                                    <option value="2:00 PM">2:00 PM</option>
+                                    <option value="2:30 PM">2:30 PM</option>
+                                    <option value="3:00 PM">3:00 PM</option>
+                                    <option value="3:30 PM">3:30 PM</option>
+                                    <option value="4:00 PM">4:00 PM</option>
+                                    <option value="4:30 PM">4:30 PM</option>
+                                    <option value="5:00 PM">5:00 PM</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-field">
+                            <label for="serviceNotes">Service Needed</label>
+                            <textarea id="serviceNotes" placeholder="Describe the service you need (oil change, brake inspection, warning light, etc.)"></textarea>
+                        </div>
+                        <button type="submit" class="form-submit-btn">Schedule Service</button>
+                        <div class="form-disclaimer">
+                            <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+                            Your information is secure. We'll contact you to confirm your appointment.
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="service-info">
+                <div class="info-card">
+                    <h4><i class="fa fa-phone"></i> Contact Service</h4>
+                    <p style="margin-bottom:8px;">
+                        <a href="tel:8137524171" style="font-size:22px;">(813) 752-4171</a>
+                    </p>
+                    <p>Ask for the Service Department</p>
+                </div>
+                <div class="info-card">
+                    <h4><i class="fa fa-map-marker"></i> Location</h4>
+                    <p>2000 East Baker St.<br />Plant City, FL 33563</p>
+                </div>
+                <div class="info-card">
+                    <h4><i class="fa fa-clock-o"></i> Service Hours</h4>
+                    <div class="hours-grid">
+                        <span class="day">Mon - Fri</span>
+                        <span class="time">7:00 AM - 6:00 PM</span>
+                        <span class="day">Saturday</span>
+                        <span class="time">8:00 AM - 4:00 PM</span>
+                        <span class="day">Sunday</span>
+                        <span class="time">Closed</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Services Grid -->
+    <section class="services-section" id="specials">
+        <div class="services-section-inner">
+            <div class="section-title">
+                <h2>Popular Ford Services</h2>
+                <p>Keep your Ford running like new with our most requested services</p>
+                <div class="bar"></div>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-card-icon">
+                        <svg viewBox="0 0 24 24"><path d="M18.67 3H5.33C4.6 3 4 3.6 4 4.33v1.34C4 6.4 4.6 7 5.33 7h13.34C19.4 7 20 6.4 20 5.67V4.33C20 3.6 19.4 3 18.67 3zM12 18c-1.1 0-2-.9-2-2V9h4v7c0 1.1-.9 2-2 2zm-6.33-4C4.6 14 4 14.6 4 15.33v1.34C4 17.4 4.6 18 5.33 18h2.34c-.44-.58-.67-1.27-.67-2v-2zM16.33 14v2c0 .73-.23 1.42-.67 2h2.34c.73 0 1.33-.6 1.33-1.33v-1.34c0-.73-.6-1.33-1.33-1.33h-1.67z"/></svg>
+                    </div>
+                    <h3>Oil Change</h3>
+                    <div class="price">$49.95</div>
+                    <div class="price-note">Synthetic blend</div>
+                    <p>Full-synthetic and conventional options available. Includes filter replacement and multi-point inspection.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-card-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
+                    </div>
+                    <h3>Tire Rotation</h3>
+                    <div class="price">$29.95</div>
+                    <div class="price-note">All Ford models</div>
+                    <p>Extend the life of your tires with regular rotation. Includes tire pressure check and tread depth inspection.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-card-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L18 8l-9 9z"/></svg>
+                    </div>
+                    <h3>Brake Inspection</h3>
+                    <div class="price">Free</div>
+                    <div class="price-note">No obligation</div>
+                    <p>Comprehensive brake system inspection including pads, rotors, calipers, and brake fluid condition check.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-card-icon">
+                        <svg viewBox="0 0 24 24"><path d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.34C7 21.4 7.6 22 8.33 22h7.34c.73 0 1.33-.6 1.33-1.33V5.33C17 4.6 16.4 4 15.67 4z"/></svg>
+                    </div>
+                    <h3>Battery Test</h3>
+                    <div class="price">Free</div>
+                    <div class="price-note">Free diagnostics</div>
+                    <p>Complete battery health check and charging system test. We'll let you know if a replacement is needed before you're stranded.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-card-icon">
+                        <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6zm3-6c0 1.66-1.34 3-3 3s-3-1.34-3-3 1.34-3 3-3 3 1.34 3 3z"/></svg>
+                    </div>
+                    <h3>Multi-Point Inspection</h3>
+                    <div class="price">Complimentary</div>
+                    <div class="price-note">With any service</div>
+                    <p>Thorough vehicle inspection covering fluids, brakes, tires, belts, hoses, lights, and more. Know your vehicle's health.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-card-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-4h2v-2h2c.55 0 1-.45 1-1v-3c0-.55-.45-1-1-1h-4V9h4V7h-3V5h-2v2H9c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1h4v2H9v2h2v2z"/></svg>
+                    </div>
+                    <h3>Wheel Alignment</h3>
+                    <div class="price">$89.95</div>
+                    <div class="price-note">4-wheel alignment</div>
+                    <p>Precision four-wheel alignment using factory specifications. Prevents uneven tire wear and improves handling.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="faq-section-inner">
+            <div class="section-title">
+                <h2>Service FAQ</h2>
+                <div class="bar"></div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    How often should I get an oil change on my Ford?
+                    <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">Ford recommends oil changes every 7,500 to 10,000 miles for most models when using full-synthetic oil, or as indicated by your Intelligent Oil-Life Monitor. However, if you drive in severe conditions -- frequent short trips, dusty roads, towing, or extreme temperatures -- you may need more frequent changes. Our service team can help you determine the right interval based on your specific Ford model and driving habits.</div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    Do I have to service my Ford at a dealership to keep the warranty valid?
+                    <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">While you're not required to service exclusively at a Ford dealership, there are significant advantages. Our factory-trained technicians know your Ford inside and out, and we use only genuine Ford Motorcraft parts that are designed specifically for your vehicle. We also have the latest Ford diagnostic equipment and access to Technical Service Bulletins (TSBs) and recall information. Any warranty claims are processed faster when your service history is on file with an authorized Ford dealer.</div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    What does the Ford multi-point inspection include?
+                    <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">Our complimentary multi-point inspection covers all major vehicle systems: engine oil and filter condition, brake pad thickness and rotor condition, tire tread depth and pressure, all fluid levels (coolant, transmission, power steering, brake, washer), battery health and terminal condition, belt and hose integrity, exhaust system, suspension components, and all interior and exterior lights. You'll receive a detailed report card showing green (good), yellow (may need attention soon), or red (needs immediate attention) for each item.</div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    How do I know if my Ford has any open recalls?
+                    <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">You can check for open recalls on your Ford by visiting owner.ford.com and entering your VIN (Vehicle Identification Number), or simply call our service department at (813) 752-4171 and we'll look it up for you. Recall repairs are always performed at no charge to you. When you bring your vehicle in for any service, we automatically check for open recalls and can complete them during the same visit to save you an extra trip.</div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    Can I wait at the dealership while my Ford is being serviced?
+                    <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">Absolutely! Our comfortable customer lounge features complimentary Wi-Fi, coffee, snacks, and a TV. For quick services like oil changes, tire rotations, and inspections, most customers prefer to wait -- these are typically completed within an hour. For longer repairs, we can arrange a shuttle service or help you with a rental vehicle. We'll keep you updated on progress via text so you always know when your Ford will be ready.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEO Content -->
+    <section class="seo-content">
+        <div class="seo-content-inner">
+            <h2>Ford Service Center in Plant City, FL</h2>
+            <p>Jarrett Scott Ford's service center in Plant City, FL, is staffed by factory-trained Ford technicians who specialize in maintaining and repairing every Ford model on the road today. From routine oil changes and tire rotations to complex engine diagnostics and transmission repairs, our team has the expertise, tools, and genuine Ford Motorcraft parts to keep your vehicle performing at its best. We proudly serve Ford owners throughout Plant City, Tampa, Lakeland, Brandon, and the greater Hillsborough County area.</p>
+
+            <h2>Why Choose a Certified Ford Dealer for Service?</h2>
+            <p>When you bring your Ford to Jarrett Scott Ford, you're getting more than just a mechanic -- you're getting technicians who are continuously trained on the latest Ford technology, from EcoBoost engines to SYNC infotainment systems and Ford Co-Pilot360 safety features. We use Ford-specific diagnostic equipment that can read every module in your vehicle and identify issues that generic scan tools miss. Combined with our transparent pricing and commitment to honest recommendations, it's the smartest choice for keeping your Ford running strong. <a href="/demo/ford-starter/finance">Explore our financing options</a> or <a href="/demo/ford-starter/inventory">browse our inventory</a> of new Ford vehicles.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <h3>Jarrett Scott Ford</h3>
+                <p>2000 East Baker St.<br />
+                Plant City, FL 33563<br />
+                Sales: (813) 752-4171</p>
+                <p style="margin-top:12px;">Mon-Thu: 8:30 AM - 7:00 PM<br/>Fri: 8:30 AM - 7:00 PM<br/>Sat: 8:30 AM - 5:00 PM<br/>Sun: Closed</p>
+            </div>
+            <div>
+                <h4>Inventory</h4>
+                <ul>
+                    <li><a href="/demo/ford-starter/inventory">New Vehicles</a></li>
+                    <li><a href="#">Used Vehicles</a></li>
+                    <li><a href="#">Certified Pre-Owned</a></li>
+                    <li><a href="#">Specials</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Finance</h4>
+                <ul>
+                    <li><a href="/demo/ford-starter/finance">Apply Online</a></li>
+                    <li><a href="/demo/ford-starter/finance#trade">Value Your Trade</a></li>
+                    <li><a href="/demo/ford-starter/finance#calculator">Payment Calculator</a></li>
+                    <li><a href="/demo/ford-starter/finance">Credit Solutions</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Service</h4>
+                <ul>
+                    <li><a href="/demo/ford-starter/service">Schedule Service</a></li>
+                    <li><a href="/demo/ford-starter/service#specials">Service Specials</a></li>
+                    <li><a href="#">Parts Department</a></li>
+                    <li><a href="#">Body Shop</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Jarrett Scott Ford. All rights reserved. | Powered by <a href="https://www.savvydealer.com" style="color:var(--primary);">SavvyDealer</a></p>
+        </div>
+    </footer>
+
+<script>
+/* ── FAQ Accordion ── */
+function toggleFaq(btn) {
+    var item = btn.parentElement;
+    var answer = item.querySelector('.faq-answer');
+    var inner = answer.querySelector('.faq-answer-inner');
+    var isOpen = item.classList.contains('open');
+
+    // Close all others
+    var allItems = document.querySelectorAll('.faq-item');
+    for (var i = 0; i < allItems.length; i++) {
+        if (allItems[i] !== item && allItems[i].classList.contains('open')) {
+            allItems[i].classList.remove('open');
+            allItems[i].querySelector('.faq-answer').style.maxHeight = '0';
+        }
+    }
+
+    if (isOpen) {
+        item.classList.remove('open');
+        answer.style.maxHeight = '0';
+    } else {
+        item.classList.add('open');
+        answer.style.maxHeight = inner.scrollHeight + 20 + 'px';
+    }
+}
+
+
+/* ── Schedule form handler ── */
+function handleSchedule(e) {
+    e.preventDefault();
+    var btn = e.target.querySelector('.form-submit-btn');
+    btn.textContent = 'Appointment Requested!';
+    btn.style.background = '#2d8f3d';
+    setTimeout(function() {
+        btn.textContent = 'Schedule Service';
+        btn.style.background = '';
+        e.target.reset();
+    }, 3000);
+    return false;
+}
+
+
+/* ── Smooth scroll for hero CTAs ── */
+document.querySelectorAll('.hero-ctas a').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+        var href = this.getAttribute('href');
+        if (href && href.charAt(0) === '#') {
+            e.preventDefault();
+            var target = document.querySelector(href);
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+    });
+});
+</script>
+</body>
+</html>

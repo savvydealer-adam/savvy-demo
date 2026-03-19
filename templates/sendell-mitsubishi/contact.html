@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | Sendell Mitsubishi | Greensburg, PA</title>
+    <meta name="description" content="Contact Sendell Mitsubishi in Greensburg, PA. Reach our Sales, Service, or Parts departments by phone or visit us at 5079 US-30. We're here to help." />
+    <link href="https://fonts.cdnfonts.com/css/mmc" rel="stylesheet" />
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --red: #ED0000;
+            --red-dark: #BC0600;
+            --black: #000000;
+            --white: #ffffff;
+            --gray-50: #f8f9fa;
+            --gray-100: #f0f0f0;
+            --gray-200: #E2E5E6;
+            --gray-400: #696D71;
+            --gray-600: #666;
+            --gray-800: #19183C;
+            --blue: #0678bc;
+        }
+
+        body {
+            font-family: 'MMC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--gray-800);
+            background: var(--white);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; display: block; }
+
+        /* ── Top Bar ── */
+        .top-bar {
+            background: var(--black);
+            color: var(--white);
+            font-size: 13px;
+            padding: 8px 0;
+        }
+        .top-bar-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .top-bar a { color: var(--white); transition: color 0.2s; }
+        .top-bar a:hover { color: var(--red); }
+        .top-bar .promo {
+            background: var(--red);
+            padding: 3px 12px;
+            border-radius: 2px;
+            font-weight: 600;
+            font-size: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        /* ── Header ── */
+        header {
+            background: var(--white);
+            border-bottom: 3px solid var(--red);
+            padding: 12px 0;
+        }
+        .header-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo-area { display: flex; align-items: center; gap: 16px; }
+        .logo-area .mitsubishi-mark { width: 48px; height: 48px; }
+        .logo-text h1 {
+            font-family: 'MMC', sans-serif;
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--black);
+            line-height: 1;
+            letter-spacing: -0.5px;
+        }
+        .logo-text span {
+            font-size: 12px;
+            color: var(--gray-600);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        nav { display: flex; gap: 4px; }
+        nav a {
+            padding: 10px 16px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--gray-800);
+            border-radius: 4px;
+            transition: all 0.2s;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        nav a:hover { background: var(--red); color: var(--white); }
+        nav a.active { background: var(--red); color: var(--white); }
+        .nav-phone {
+            font-family: 'MMC', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--black);
+        }
+
+        /* ── Buttons (shared) ── */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 28px;
+            font-size: 14px;
+            font-weight: 700;
+            font-family: inherit;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 2px solid transparent;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .btn-red { background: var(--red); color: var(--white); border-color: var(--red); }
+        .btn-red:hover { background: var(--red-dark); border-color: var(--red-dark); }
+        .btn-outline { background: transparent; color: var(--white); border-color: rgba(255,255,255,0.4); }
+        .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.1); }
+        .btn-outline-dark { background: transparent; color: var(--gray-800); border-color: var(--gray-200); }
+        .btn-outline-dark:hover { border-color: var(--red); color: var(--red); }
+
+        /* ── Hero Banner (compact ~250px) ── */
+        .contact-hero {
+            position: relative;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+            overflow: hidden;
+            padding: 56px 0 60px;
+        }
+        .contact-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 80%;
+            height: 200%;
+            background: radial-gradient(ellipse, rgba(237,0,0,0.12) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .contact-hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--red);
+        }
+        .contact-hero-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+        .contact-hero-inner h2 {
+            font-family: 'MMC', sans-serif;
+            font-size: 48px;
+            font-weight: 800;
+            color: var(--white);
+            line-height: 1.1;
+            margin-bottom: 12px;
+        }
+        .contact-hero-inner h2 em {
+            font-style: normal;
+            color: var(--red);
+        }
+        .contact-hero-inner p {
+            font-size: 18px;
+            color: rgba(255,255,255,0.7);
+            max-width: 540px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ── Contact Cards (3 columns) ── */
+        .contact-cards-section {
+            background: var(--gray-50);
+            border-bottom: 1px solid var(--gray-200);
+            padding: 56px 0;
+        }
+        .contact-cards-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+        .contact-card {
+            text-align: center;
+            padding: 36px 28px;
+            background: var(--white);
+            border-radius: 12px;
+            border: 1px solid var(--gray-200);
+            transition: all 0.3s;
+        }
+        .contact-card:hover {
+            border-color: var(--red);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+            transform: translateY(-2px);
+        }
+        .contact-card-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--red);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .contact-card-icon svg { width: 28px; height: 28px; fill: var(--white); }
+        .contact-card h3 {
+            font-family: 'MMC', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--gray-800);
+            margin-bottom: 12px;
+        }
+        .contact-card .phone-number {
+            font-family: 'MMC', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 16px;
+            display: block;
+        }
+        .contact-card .hours {
+            font-size: 14px;
+            color: var(--gray-600);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        .contact-card .hours strong {
+            color: var(--gray-800);
+            font-weight: 600;
+        }
+
+        /* ── Section Titles ── */
+        .section-title {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        .section-title h2 {
+            font-family: 'MMC', sans-serif;
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--black);
+        }
+        .section-title p {
+            font-size: 16px;
+            color: var(--gray-600);
+            margin-top: 8px;
+        }
+        .section-title .bar {
+            width: 60px;
+            height: 4px;
+            background: var(--red);
+            margin: 16px auto 0;
+        }
+
+        /* ── Contact Form + Map Section ── */
+        .form-map-section {
+            padding: 72px 0;
+            background: var(--white);
+        }
+        .form-map-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: start;
+        }
+
+        /* Contact Form */
+        .contact-form-card {
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: 16px;
+            padding: 40px;
+        }
+        .contact-form-card h3 {
+            font-family: 'MMC', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--gray-800);
+            margin-bottom: 6px;
+        }
+        .contact-form-card > p {
+            font-size: 14px;
+            color: var(--gray-600);
+            margin-bottom: 28px;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+        .form-field { margin-bottom: 0; }
+        .form-field-full { margin-bottom: 12px; }
+        .form-field input,
+        .form-field-full input,
+        .form-field-full select,
+        .form-field-full textarea {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid var(--gray-200);
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 14px;
+            color: var(--gray-800);
+            outline: none;
+            transition: border-color 0.2s;
+            background: var(--white);
+        }
+        .form-field input::placeholder,
+        .form-field-full input::placeholder,
+        .form-field-full textarea::placeholder { color: #aaa; }
+        .form-field input:focus,
+        .form-field-full input:focus,
+        .form-field-full select:focus,
+        .form-field-full textarea:focus { border-color: var(--red); }
+        .form-field-full select {
+            cursor: pointer;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='%23696D71'%3E%3Cpath d='M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+            padding-right: 40px;
+        }
+        .form-field-full textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        .form-submit-btn {
+            width: 100%;
+            padding: 16px;
+            background: var(--red);
+            color: var(--white);
+            font-family: inherit;
+            font-size: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 4px;
+        }
+        .form-submit-btn:hover { background: var(--red-dark); }
+        .form-disclaimer {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 12px;
+            font-size: 12px;
+            color: var(--gray-400);
+        }
+        .form-disclaimer svg { width: 14px; height: 14px; fill: var(--gray-400); flex-shrink: 0; }
+
+        /* Map Column */
+        .map-column h3 {
+            font-family: 'MMC', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--gray-800);
+            margin-bottom: 6px;
+        }
+        .map-column > p {
+            font-size: 14px;
+            color: var(--gray-600);
+            margin-bottom: 20px;
+        }
+        .map-container {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 */
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--gray-200);
+            background: var(--gray-100);
+        }
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        .map-address {
+            margin-top: 20px;
+            padding: 20px 24px;
+            background: var(--gray-50);
+            border-radius: 12px;
+            border: 1px solid var(--gray-200);
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .map-address-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--red);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .map-address-icon svg { width: 22px; height: 22px; fill: var(--white); }
+        .map-address-text {
+            flex: 1;
+        }
+        .map-address-text strong {
+            font-size: 15px;
+            color: var(--gray-800);
+            display: block;
+            margin-bottom: 2px;
+        }
+        .map-address-text a {
+            font-size: 13px;
+            color: var(--red);
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+        .map-address-text a:hover { color: var(--red-dark); text-decoration: underline; }
+
+        /* ── Dealership Info Section ── */
+        .info-section {
+            padding: 72px 0;
+            background: var(--gray-50);
+            border-top: 1px solid var(--gray-200);
+        }
+        .info-section-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: start;
+        }
+        .about-column h2 {
+            font-family: 'MMC', sans-serif;
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--black);
+            margin-bottom: 16px;
+        }
+        .about-column p {
+            font-size: 16px;
+            color: var(--gray-600);
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+        .quick-links-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        .quick-link-card {
+            padding: 24px 20px;
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+        .quick-link-card:hover {
+            border-color: var(--red);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+            transform: translateY(-2px);
+        }
+        .quick-link-card:hover .quick-link-icon { background: var(--red); }
+        .quick-link-card:hover .quick-link-icon svg { fill: var(--white); }
+        .quick-link-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--gray-100);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+        .quick-link-icon svg { width: 22px; height: 22px; fill: var(--red); transition: fill 0.3s; }
+        .quick-link-card span {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--gray-800);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* ── SEO Content ── */
+        .seo-content {
+            background: var(--white);
+            padding: 64px 24px;
+            border-top: 1px solid var(--gray-200);
+        }
+        .seo-content-inner {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .seo-content-inner h2 {
+            font-family: 'MMC', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: #19183C;
+            margin-top: 40px;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+        .seo-content-inner h2:first-child { margin-top: 0; }
+        .seo-content-inner p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 16px;
+        }
+        .seo-content-inner a {
+            color: var(--red);
+            text-decoration: none;
+            transition: text-decoration 0.2s;
+        }
+        .seo-content-inner a:hover { text-decoration: underline; }
+
+        /* ── Footer ── */
+        footer {
+            background: #1a1a1a;
+            color: rgba(255,255,255,0.6);
+            padding: 48px 0 24px;
+        }
+        .footer-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+        }
+        .footer-brand h3 {
+            font-family: 'MMC', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 12px;
+        }
+        .footer-brand p { font-size: 14px; line-height: 1.7; }
+        footer h4 {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--white);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+        }
+        footer ul { list-style: none; }
+        footer li { margin-bottom: 8px; }
+        footer li a { font-size: 14px; transition: color 0.2s; }
+        footer li a:hover { color: var(--red); }
+        .footer-bottom {
+            max-width: 1280px;
+            margin: 32px auto 0;
+            padding: 24px 24px 0;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            font-size: 12px;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 1024px) {
+            nav { display: none; }
+            .footer-inner { grid-template-columns: 1fr 1fr; }
+            .form-map-inner { grid-template-columns: 1fr; gap: 40px; }
+            .info-section-inner { grid-template-columns: 1fr; gap: 40px; }
+        }
+
+        @media (max-width: 768px) {
+            .contact-hero-inner h2 { font-size: 34px; }
+            .contact-cards-inner { grid-template-columns: 1fr; gap: 16px; }
+            .contact-card { padding: 28px 20px; }
+            .form-row { grid-template-columns: 1fr; }
+            .section-title h2 { font-size: 28px; }
+            .about-column h2 { font-size: 24px; }
+            .quick-links-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+            .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+        }
+
+        @media (max-width: 480px) {
+            .contact-hero-inner h2 { font-size: 28px; }
+            .contact-hero-inner p { font-size: 15px; }
+            .quick-links-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-inner">
+            <div style="display:flex;gap:24px;align-items:center;">
+                <span>5079 US-30, Greensburg, PA 15601</span>
+            </div>
+            <div style="display:flex;gap:16px;align-items:center;">
+                <span class="promo">LESS THAN PERFECT CREDIT ACCEPTED!</span>
+                <a href="/demo/sendell-mitsubishi/service">Service: (724) 607-8276</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-inner">
+            <div class="logo-area">
+                <a href="/demo/sendell-mitsubishi/" style="display:flex;align-items:center;gap:16px;">
+                    <svg class="mitsubishi-mark" viewBox="0 0 75 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <polygon fill="#ED0000" points="37.34,0.19 30.35,12.32 37.34,24.44 44.33,12.32"/>
+                        <polygon fill="#ED0000" points="37.34,24.44 51.31,24.44 58.30,36.56 44.33,36.56"/>
+                        <polygon fill="#ED0000" points="37.34,24.44 23.36,24.44 16.37,36.56 30.35,36.56"/>
+                    </svg>
+                    <div class="logo-text">
+                        <h1>SENDELL MITSUBISHI</h1>
+                        <span>Greensburg, PA 15601</span>
+                    </div>
+                </a>
+            </div>
+            <nav>
+                <a href="/demo/sendell-mitsubishi/inventory">New</a>
+                <a href="/demo/sendell-mitsubishi/inventory">Used</a>
+                <a href="/demo/sendell-mitsubishi/finance">Finance</a>
+                <a href="/demo/sendell-mitsubishi/service">Service</a>
+                <a href="/demo/sendell-mitsubishi/contact" class="active">Contact</a>
+            </nav>
+            <a href="tel:7246078465" class="nav-phone">(724) 607-8465</a>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="contact-hero">
+        <div class="contact-hero-inner">
+            <h2>Get In <em>Touch</em></h2>
+            <p>We're here to help. Reach out anytime.</p>
+        </div>
+    </section>
+
+    <!-- Contact Cards (3 columns) -->
+    <section class="contact-cards-section">
+        <div class="contact-cards-inner">
+            <!-- Sales -->
+            <div class="contact-card">
+                <div class="contact-card-icon">
+                    <svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg>
+                </div>
+                <h3>Sales Department</h3>
+                <a href="tel:7246078465" class="phone-number">(724) 607-8465</a>
+                <div class="hours">
+                    <strong>Hours:</strong><br />
+                    Mon - Fri: 9AM - 7PM<br />
+                    Sat: 9AM - 5PM<br />
+                    Sun: Closed
+                </div>
+                <a href="tel:7246078465" class="btn btn-red">Call Sales</a>
+            </div>
+
+            <!-- Service -->
+            <div class="contact-card">
+                <div class="contact-card-icon">
+                    <svg viewBox="0 0 24 24"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/></svg>
+                </div>
+                <h3>Service Department</h3>
+                <a href="tel:7246078276" class="phone-number">(724) 607-8276</a>
+                <div class="hours">
+                    <strong>Hours:</strong><br />
+                    Mon - Fri: 7:30AM - 6PM<br />
+                    Sat: 8AM - 4PM<br />
+                    Sun: Closed
+                </div>
+                <a href="tel:7246078276" class="btn btn-outline-dark">Call Service</a>
+            </div>
+
+            <!-- Parts -->
+            <div class="contact-card">
+                <div class="contact-card-icon">
+                    <svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+                </div>
+                <h3>Parts Department</h3>
+                <a href="tel:7246078276" class="phone-number">(724) 607-8276</a>
+                <div class="hours">
+                    <strong>Hours:</strong><br />
+                    Mon - Fri: 7:30AM - 6PM<br />
+                    Sat: 8AM - 4PM<br />
+                    Sun: Closed
+                </div>
+                <a href="tel:7246078276" class="btn btn-outline-dark">Call Parts</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form + Map -->
+    <section class="form-map-section">
+        <div class="section-title">
+            <h2>Send Us a Message</h2>
+            <p>Fill out the form below and we'll get back to you promptly</p>
+            <div class="bar"></div>
+        </div>
+        <div class="form-map-inner">
+            <!-- Contact Form -->
+            <div class="contact-form-card">
+                <h3>Contact Form</h3>
+                <p>All fields marked with * are required</p>
+                <form id="contactForm" onsubmit="return handleContactForm(event)">
+                    <div class="form-row">
+                        <div class="form-field">
+                            <input type="text" placeholder="First Name *" required />
+                        </div>
+                        <div class="form-field">
+                            <input type="text" placeholder="Last Name *" required />
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-field">
+                            <input type="email" placeholder="Email Address *" required />
+                        </div>
+                        <div class="form-field">
+                            <input type="tel" placeholder="Phone Number" />
+                        </div>
+                    </div>
+                    <div class="form-field-full">
+                        <select required>
+                            <option value="" disabled selected>Select Department *</option>
+                            <option value="sales">Sales</option>
+                            <option value="service">Service</option>
+                            <option value="parts">Parts</option>
+                            <option value="general">General Inquiry</option>
+                        </select>
+                    </div>
+                    <div class="form-field-full">
+                        <textarea placeholder="Your Message *" required></textarea>
+                    </div>
+                    <button type="submit" class="form-submit-btn">Send Message</button>
+                    <div class="form-disclaimer">
+                        <svg viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+                        Your information is secure and will never be shared with third parties.
+                    </div>
+                </form>
+            </div>
+
+            <!-- Map -->
+            <div class="map-column">
+                <h3>Find Us</h3>
+                <p>Conveniently located on US-30 in Greensburg, PA</p>
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.5!2d-79.536!3d40.316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDE5JzAuMCJOIDc5wrAzMicxMC4wIlc!5e0!3m2!1sen!2sus!4v1"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Sendell Mitsubishi - 5079 US-30, Greensburg, PA 15601">
+                    </iframe>
+                </div>
+                <div class="map-address">
+                    <div class="map-address-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                    </div>
+                    <div class="map-address-text">
+                        <strong>5079 US-30, Greensburg, PA 15601</strong>
+                        <a href="https://www.google.com/maps/dir//5079+US-30,+Greensburg,+PA+15601" target="_blank" rel="noopener noreferrer">Get Directions &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dealership Info Section -->
+    <section class="info-section">
+        <div class="info-section-inner">
+            <!-- About -->
+            <div class="about-column">
+                <h2>About Sendell Mitsubishi</h2>
+                <p>Sendell Mitsubishi is a family-owned and operated dealership proudly serving Greensburg and the greater Westmoreland County area. For years, we've been committed to providing an exceptional car-buying experience built on trust, transparency, and genuine customer care.</p>
+                <p>Whether you're shopping for a new Mitsubishi, a quality pre-owned vehicle, or need expert service and parts, our dedicated team is here to help every step of the way. We believe in building lasting relationships with our customers -- not just selling cars.</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h2 style="font-family:'MMC',sans-serif;font-size:28px;font-weight:800;color:var(--black);margin-bottom:24px;">Quick Links</h2>
+                <div class="quick-links-grid">
+                    <a href="/demo/sendell-mitsubishi/inventory" class="quick-link-card">
+                        <div class="quick-link-icon">
+                            <svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg>
+                        </div>
+                        <span>Browse Inventory</span>
+                    </a>
+                    <a href="/demo/sendell-mitsubishi/finance" class="quick-link-card">
+                        <div class="quick-link-icon">
+                            <svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+                        </div>
+                        <span>Get Pre-Qualified</span>
+                    </a>
+                    <a href="#" class="quick-link-card">
+                        <div class="quick-link-icon">
+                            <svg viewBox="0 0 24 24"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/></svg>
+                        </div>
+                        <span>Schedule Service</span>
+                    </a>
+                    <a href="#" class="quick-link-card">
+                        <div class="quick-link-icon">
+                            <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"/></svg>
+                        </div>
+                        <span>Value Your Trade</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEO Content -->
+    <section class="seo-content">
+        <div class="seo-content-inner">
+            <h2>Visit Sendell Mitsubishi in Greensburg, PA</h2>
+            <p>Sendell Mitsubishi is conveniently located at 5079 US-30 in Greensburg, Pennsylvania, right in the heart of Westmoreland County. We proudly serve drivers from Latrobe, Irwin, Jeannette, Mount Pleasant, Ligonier, and the surrounding communities. Our dealership is easily accessible from Route 30 and just a short drive from the Pennsylvania Turnpike (I-76) and Route 119. Whether you're coming from Pittsburgh, Johnstown, or anywhere in southwestern Pennsylvania, you'll find us easy to reach.</p>
+
+            <h2>Contact Our Team</h2>
+            <p>Our Sales team is available Monday through Friday from 9AM to 7PM and Saturday from 9AM to 5PM to help you find the perfect new Mitsubishi or pre-owned vehicle. For vehicle maintenance and repairs, our Service and Parts departments are open Monday through Friday from 7:30AM to 6PM and Saturday from 8AM to 4PM. Whether you call, email, or fill out our online contact form, you can expect a prompt response -- typically within the same business day. We look forward to hearing from you and helping with all your automotive needs.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <h3>Sendell Mitsubishi</h3>
+                <p>5079 US-30, Greensburg, PA 15601<br />
+                Sales: (724) 607-8465<br />
+                Service: (724) 607-8276</p>
+                <p style="margin-top:12px;">Mon-Fri: 9AM - 7PM<br/>Sat: 9AM - 5PM<br/>Sun: Closed</p>
+            </div>
+            <div>
+                <h4>Inventory</h4>
+                <ul>
+                    <li><a href="/demo/sendell-mitsubishi/inventory">New Vehicles</a></li>
+                    <li><a href="#">Used Vehicles</a></li>
+                    <li><a href="#">Certified Pre-Owned</a></li>
+                    <li><a href="#">Specials</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Finance</h4>
+                <ul>
+                    <li><a href="/demo/sendell-mitsubishi/finance">Apply Online</a></li>
+                    <li><a href="/demo/sendell-mitsubishi/finance#trade">Value Your Trade</a></li>
+                    <li><a href="/demo/sendell-mitsubishi/finance#calculator">Payment Calculator</a></li>
+                    <li><a href="/demo/sendell-mitsubishi/finance">Credit Solutions</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Dealership</h4>
+                <ul>
+                    <li><a href="/demo/sendell-mitsubishi/contact">Contact Us</a></li>
+                    <li><a href="/demo/sendell-mitsubishi/service">Schedule Service</a></li>
+                    <li><a href="#">Parts Department</a></li>
+                    <li><a href="/demo/sendell-mitsubishi/contact">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Sendell Mitsubishi. All rights reserved. | Powered by <a href="https://www.savvydealer.com" style="color:var(--red);">SavvyDealer</a></p>
+        </div>
+    </footer>
+
+<script>
+/* ── Contact Form Handler ── */
+function handleContactForm(e) {
+    e.preventDefault();
+    var btn = e.target.querySelector('.form-submit-btn');
+    btn.textContent = 'Message Sent!';
+    btn.style.background = '#2d8f3d';
+    setTimeout(function() {
+        btn.textContent = 'Send Message';
+        btn.style.background = '';
+        e.target.reset();
+    }, 3000);
+    return false;
+}
+</script>
+</body>
+</html>

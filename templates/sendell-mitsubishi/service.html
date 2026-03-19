@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Service Department | Sendell Mitsubishi | Greensburg, PA</title>
+    <meta name="description" content="Expert Mitsubishi service at Sendell Mitsubishi in Greensburg, PA. Factory-certified technicians, genuine OEM parts, and transparent pricing. Schedule your appointment today." />
+    <link href="https://fonts.cdnfonts.com/css/mmc" rel="stylesheet" />
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --red: #ED0000;
+            --red-dark: #BC0600;
+            --black: #000000;
+            --white: #ffffff;
+            --gray-50: #f8f9fa;
+            --gray-100: #f0f0f0;
+            --gray-200: #E2E5E6;
+            --gray-400: #696D71;
+            --gray-600: #666;
+            --gray-800: #19183C;
+            --blue: #0678bc;
+        }
+
+        body {
+            font-family: 'MMC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--gray-800);
+            background: var(--white);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; display: block; }
+
+        /* ── Top Bar ── */
+        .top-bar {
+            background: var(--black);
+            color: var(--white);
+            font-size: 13px;
+            padding: 8px 0;
+        }
+        .top-bar-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .top-bar a { color: var(--white); transition: color 0.2s; }
+        .top-bar a:hover { color: var(--red); }
+        .top-bar .promo {
+            background: var(--red);
+            padding: 3px 12px;
+            border-radius: 2px;
+            font-weight: 600;
+            font-size: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        /* ── Header ── */
+        header {
+            background: var(--white);
+            border-bottom: 3px solid var(--red);
+            padding: 12px 0;
+        }
+        .header-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo-area { display: flex; align-items: center; gap: 16px; }
+        .logo-area .mitsubishi-mark { width: 48px; height: 48px; }
+        .logo-text h1 {
+            font-family: 'MMC', sans-serif;
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--black);
+            line-height: 1;
+            letter-spacing: -0.5px;
+        }
+        .logo-text span {
+            font-size: 12px;
+            color: var(--gray-600);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        nav { display: flex; gap: 4px; }
+        nav a {
+            padding: 10px 16px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--gray-800);
+            border-radius: 4px;
+            transition: all 0.2s;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        nav a:hover { background: var(--red); color: var(--white); }
+        nav a.active { background: var(--red); color: var(--white); }
+        .nav-phone {
+            font-family: 'MMC', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--black);
+        }
+
+        /* ── Buttons (shared) ── */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 28px;
+            font-size: 14px;
+            font-weight: 700;
+            font-family: inherit;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 2px solid transparent;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .btn-red { background: var(--red); color: var(--white); border-color: var(--red); }
+        .btn-red:hover { background: var(--red-dark); border-color: var(--red-dark); }
+        .btn-outline { background: transparent; color: var(--white); border-color: rgba(255,255,255,0.4); }
+        .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.1); }
+
+        /* ── Hero Banner (compact ~300px) ── */
+        .service-hero {
+            position: relative;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+            overflow: hidden;
+            padding: 64px 0 72px;
+        }
+        .service-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 80%;
+            height: 200%;
+            background: radial-gradient(ellipse, rgba(237,0,0,0.12) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .service-hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--red);
+        }
+        .service-hero-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+        .service-hero-inner h2 {
+            font-family: 'MMC', sans-serif;
+            font-size: 48px;
+            font-weight: 800;
+            color: var(--white);
+            line-height: 1.1;
+            margin-bottom: 12px;
+        }
+        .service-hero-inner h2 em {
+            font-style: normal;
+            color: var(--red);
+        }
+        .service-hero-inner p {
+            font-size: 18px;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 32px;
+            max-width: 540px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .hero-ctas {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* ── Service Features Strip ── */
+        .features-strip {
+            background: var(--gray-50);
+            border-bottom: 1px solid var(--gray-200);
+            padding: 48px 0;
+        }
+        .features-strip-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+        .feature-card {
+            text-align: center;
+            padding: 32px 24px;
+            background: var(--white);
+            border-radius: 12px;
+            border: 1px solid var(--gray-200);
+            transition: all 0.3s;
+        }
+        .feature-card:hover {
+            border-color: var(--red);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+            transform: translateY(-2px);
+        }
+        .feature-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--red);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .feature-icon svg { width: 28px; height: 28px; fill: var(--white); }
+        .feature-card h3 {
+            font-family: 'MMC', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--gray-800);
+            margin-bottom: 8px;
+        }
+        .feature-card p {
+            font-size: 14px;
+            color: var(--gray-600);
+            line-height: 1.6;
+        }
+
+        /* ── Section Title (shared) ── */
+        .section-title {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        .section-title h2 {
+            font-family: 'MMC', sans-serif;
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--black);
+        }
+        .section-title p {
+            font-size: 16px;
+            color: var(--gray-600);
+            margin-top: 8px;
+        }
+        .section-title .bar {
+            width: 60px;
+            height: 4px;
+            background: var(--red);
+            margin: 16px auto 0;
+        }
+
+        /* ── Schedule Service Section ── */
+        .schedule-section {
+            padding: 72px 0;
+            background: var(--white);
+        }
+        .schedule-section-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: grid;
+            grid-template-columns: 1fr 380px;
+            gap: 64px;
+            align-items: start;
+        }
+        .schedule-form {
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: 16px;
+            padding: 40px;
+        }
+        .schedule-form h3 {
+            font-family: 'MMC', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--gray-800);
+            margin-bottom: 6px;
+        }
+        .schedule-form > p {
+            font-size: 14px;
+            color: var(--gray-600);
+            margin-bottom: 24px;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+        .form-field { }
+        .form-field input,
+        .form-field select,
+        .form-field textarea {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid var(--gray-200);
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 14px;
+            color: var(--gray-800);
+            outline: none;
+            transition: border-color 0.2s;
+            background: var(--white);
+        }
+        .form-field input::placeholder,
+        .form-field textarea::placeholder { color: #aaa; }
+        .form-field input:focus,
+        .form-field select:focus,
+        .form-field textarea:focus { border-color: var(--red); }
+        .form-field textarea {
+            resize: vertical;
+            min-height: 90px;
+        }
+        .form-field-full {
+            margin-bottom: 12px;
+        }
+        .form-submit-btn {
+            width: 100%;
+            padding: 16px;
+            background: var(--red);
+            color: var(--white);
+            font-family: inherit;
+            font-size: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 4px;
+        }
+        .form-submit-btn:hover { background: var(--red-dark); }
+
+        /* Service info sidebar */
+        .service-info {
+            position: sticky;
+            top: 24px;
+        }
+        .info-block {
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 20px;
+        }
+        .info-block h4 {
+            font-family: 'MMC', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--gray-800);
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .hours-table {
+            width: 100%;
+            font-size: 14px;
+        }
+        .hours-table tr td {
+            padding: 6px 0;
+            border-bottom: 1px solid var(--gray-200);
+        }
+        .hours-table tr:last-child td { border-bottom: none; }
+        .hours-table tr td:first-child {
+            font-weight: 600;
+            color: var(--gray-800);
+        }
+        .hours-table tr td:last-child {
+            text-align: right;
+            color: var(--gray-600);
+        }
+        .info-contact {
+            font-size: 14px;
+            color: var(--gray-600);
+            line-height: 1.8;
+        }
+        .info-contact a {
+            color: var(--red);
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+        .info-contact a:hover { color: var(--red-dark); }
+        .info-contact .phone {
+            font-family: 'MMC', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--black);
+            display: block;
+            margin-bottom: 8px;
+        }
+        .map-placeholder {
+            width: 100%;
+            height: 160px;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255,255,255,0.4);
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 16px;
+        }
+
+        /* ── Service Menu / Specials Grid ── */
+        .services-section {
+            padding: 72px 0;
+            background: var(--gray-50);
+            border-top: 1px solid var(--gray-200);
+        }
+        .services-section-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .service-card {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: 12px;
+            padding: 32px 28px;
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+        .service-card:hover {
+            border-color: var(--red);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+            transform: translateY(-2px);
+        }
+        .service-card-icon {
+            width: 52px;
+            height: 52px;
+            background: rgba(237,0,0,0.08);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+        }
+        .service-card-icon svg { width: 24px; height: 24px; fill: var(--red); }
+        .service-card h3 {
+            font-family: 'MMC', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--gray-800);
+            margin-bottom: 6px;
+        }
+        .service-card .price-badge {
+            display: inline-block;
+            background: var(--red);
+            color: var(--white);
+            font-size: 13px;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 4px;
+            margin-bottom: 12px;
+        }
+        .service-card .price-badge.free {
+            background: #2d8f3d;
+        }
+        .service-card p {
+            font-size: 14px;
+            color: var(--gray-600);
+            line-height: 1.6;
+            margin-bottom: 16px;
+            flex: 1;
+        }
+        .service-card .schedule-link {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--red);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.2s;
+        }
+        .service-card:hover .schedule-link { color: var(--red-dark); }
+
+        /* ── FAQ Accordion ── */
+        .faq-section {
+            padding: 72px 0;
+            background: var(--white);
+        }
+        .faq-section-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        .faq-item {
+            border-bottom: 1px solid var(--gray-200);
+        }
+        .faq-item:first-child { border-top: 1px solid var(--gray-200); }
+        .faq-question {
+            width: 100%;
+            padding: 20px 0;
+            background: none;
+            border: none;
+            font-family: inherit;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--gray-800);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            text-align: left;
+            transition: color 0.2s;
+        }
+        .faq-question:hover { color: var(--red); }
+        .faq-question svg {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+            transition: transform 0.3s;
+            fill: var(--gray-400);
+        }
+        .faq-item.open .faq-question svg {
+            transform: rotate(180deg);
+            fill: var(--red);
+        }
+        .faq-item.open .faq-question { color: var(--red); }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease, padding 0.35s ease;
+        }
+        .faq-answer-inner {
+            padding: 0 0 20px;
+            font-size: 15px;
+            color: var(--gray-600);
+            line-height: 1.7;
+        }
+
+        /* ── SEO Content ── */
+        .seo-content {
+            background: var(--white);
+            padding: 64px 24px;
+            border-top: 1px solid var(--gray-200);
+        }
+        .seo-content-inner {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .seo-content-inner h2 {
+            font-family: 'MMC', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: #19183C;
+            margin-top: 40px;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+        .seo-content-inner h2:first-child { margin-top: 0; }
+        .seo-content-inner p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 16px;
+        }
+        .seo-content-inner a {
+            color: var(--red);
+            text-decoration: none;
+            transition: text-decoration 0.2s;
+        }
+        .seo-content-inner a:hover { text-decoration: underline; }
+
+        /* ── Footer ── */
+        footer {
+            background: #1a1a1a;
+            color: rgba(255,255,255,0.6);
+            padding: 48px 0 24px;
+        }
+        .footer-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+        }
+        .footer-brand h3 {
+            font-family: 'MMC', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 12px;
+        }
+        .footer-brand p { font-size: 14px; line-height: 1.7; }
+        footer h4 {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--white);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+        }
+        footer ul { list-style: none; }
+        footer li { margin-bottom: 8px; }
+        footer li a { font-size: 14px; transition: color 0.2s; }
+        footer li a:hover { color: var(--red); }
+        .footer-bottom {
+            max-width: 1280px;
+            margin: 32px auto 0;
+            padding: 24px 24px 0;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            font-size: 12px;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 1024px) {
+            nav { display: none; }
+            .footer-inner { grid-template-columns: 1fr 1fr; }
+            .schedule-section-inner { grid-template-columns: 1fr; gap: 40px; }
+            .service-info { position: static; }
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            .service-hero-inner h2 { font-size: 34px; }
+            .features-strip-inner { grid-template-columns: 1fr; gap: 16px; }
+            .feature-card { padding: 24px 20px; }
+            .form-row { grid-template-columns: 1fr; }
+            .services-grid { grid-template-columns: 1fr; }
+            .section-title h2 { font-size: 28px; }
+            .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+        }
+
+        @media (max-width: 480px) {
+            .service-hero-inner h2 { font-size: 28px; }
+            .service-hero-inner p { font-size: 15px; }
+            .hero-ctas { flex-direction: column; align-items: center; }
+            .hero-ctas .btn { width: 100%; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-inner">
+            <div style="display:flex;gap:24px;align-items:center;">
+                <span>5079 US-30, Greensburg, PA 15601</span>
+            </div>
+            <div style="display:flex;gap:16px;align-items:center;">
+                <span class="promo">LESS THAN PERFECT CREDIT ACCEPTED!</span>
+                <a href="tel:7246078276">Service: (724) 607-8276</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-inner">
+            <div class="logo-area">
+                <a href="/demo/sendell-mitsubishi/" style="display:flex;align-items:center;gap:16px;">
+                    <svg class="mitsubishi-mark" viewBox="0 0 75 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <polygon fill="#ED0000" points="37.34,0.19 30.35,12.32 37.34,24.44 44.33,12.32"/>
+                        <polygon fill="#ED0000" points="37.34,24.44 51.31,24.44 58.30,36.56 44.33,36.56"/>
+                        <polygon fill="#ED0000" points="37.34,24.44 23.36,24.44 16.37,36.56 30.35,36.56"/>
+                    </svg>
+                    <div class="logo-text">
+                        <h1>SENDELL MITSUBISHI</h1>
+                        <span>Greensburg, PA 15601</span>
+                    </div>
+                </a>
+            </div>
+            <nav>
+                <a href="/demo/sendell-mitsubishi/inventory">New</a>
+                <a href="/demo/sendell-mitsubishi/inventory">Used</a>
+                <a href="/demo/sendell-mitsubishi/finance">Finance</a>
+                <a href="/demo/sendell-mitsubishi/service" class="active">Service</a>
+                <a href="/demo/sendell-mitsubishi/contact">Contact</a>
+            </nav>
+            <a href="tel:7246078465" class="nav-phone">(724) 607-8465</a>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="service-hero">
+        <div class="service-hero-inner">
+            <h2>Expert Mitsubishi <em>Service</em></h2>
+            <p>Factory-certified technicians. Genuine parts. Honest pricing.</p>
+            <div class="hero-ctas">
+                <a href="#schedule" class="btn btn-red">Schedule Service</a>
+                <a href="#specials" class="btn btn-outline">View Service Specials</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Features Strip -->
+    <section class="features-strip">
+        <div class="features-strip-inner">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                </div>
+                <h3>Factory-Certified Technicians</h3>
+                <p>Our technicians are trained and certified on every Mitsubishi model, ensuring your vehicle receives expert care every time.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58a.49.49 0 0 0 .12-.61l-1.92-3.32a.488.488 0 0 0-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54a.484.484 0 0 0-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.07.62-.07.94s.02.64.07.94l-2.03 1.58a.49.49 0 0 0-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>
+                </div>
+                <h3>Genuine Mitsubishi Parts</h3>
+                <p>We use only OEM Mitsubishi parts designed specifically for your vehicle, protecting your warranty and ensuring long-term reliability.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+                </div>
+                <h3>Transparent Pricing</h3>
+                <p>Get upfront quotes before any work begins. No surprise charges, no hidden fees -- just honest service you can trust.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Service Section -->
+    <section class="schedule-section" id="schedule">
+        <div class="schedule-section-inner">
+            <div class="schedule-form">
+                <h3>Schedule Your Service Appointment</h3>
+                <p>Fill out the form below and our service team will confirm your appointment.</p>
+                <form onsubmit="return handleSchedule(event)">
+                    <div class="form-row">
+                        <div class="form-field">
+                            <input type="text" placeholder="First Name" required />
+                        </div>
+                        <div class="form-field">
+                            <input type="text" placeholder="Last Name" required />
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-field">
+                            <input type="email" placeholder="Email Address" required />
+                        </div>
+                        <div class="form-field">
+                            <input type="tel" placeholder="Phone Number" required />
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-field">
+                            <select required>
+                                <option value="" disabled selected>Vehicle Year</option>
+                                <option value="2026">2026</option>
+                                <option value="2025">2025</option>
+                                <option value="2024">2024</option>
+                                <option value="2023">2023</option>
+                                <option value="2022">2022</option>
+                                <option value="2021">2021</option>
+                                <option value="2020">2020</option>
+                                <option value="2019">2019</option>
+                                <option value="2018">2018</option>
+                                <option value="2017">2017</option>
+                                <option value="2016">2016</option>
+                                <option value="2015">2015</option>
+                            </select>
+                        </div>
+                        <div class="form-field">
+                            <select required>
+                                <option value="" disabled selected>Vehicle Model</option>
+                                <option value="Outlander">Outlander</option>
+                                <option value="Outlander PHEV">Outlander PHEV</option>
+                                <option value="Eclipse Cross">Eclipse Cross</option>
+                                <option value="Outlander Sport">Outlander Sport</option>
+                                <option value="Mirage">Mirage</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-field">
+                            <select required>
+                                <option value="" disabled selected>Service Type</option>
+                                <option value="Oil Change">Oil Change</option>
+                                <option value="Tire Rotation">Tire Rotation</option>
+                                <option value="Brake Service">Brake Service</option>
+                                <option value="Battery">Battery</option>
+                                <option value="Transmission">Transmission</option>
+                                <option value="Multi-Point Inspection">Multi-Point Inspection</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-field">
+                            <input type="date" required />
+                        </div>
+                    </div>
+                    <div class="form-field-full">
+                        <div class="form-field">
+                            <textarea placeholder="Additional Notes (optional)"></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" class="form-submit-btn">Schedule Appointment</button>
+                </form>
+            </div>
+
+            <div class="service-info">
+                <div class="info-block">
+                    <h4>Service Hours</h4>
+                    <table class="hours-table">
+                        <tr><td>Monday</td><td>7:30 AM - 6:00 PM</td></tr>
+                        <tr><td>Tuesday</td><td>7:30 AM - 6:00 PM</td></tr>
+                        <tr><td>Wednesday</td><td>7:30 AM - 6:00 PM</td></tr>
+                        <tr><td>Thursday</td><td>7:30 AM - 6:00 PM</td></tr>
+                        <tr><td>Friday</td><td>7:30 AM - 6:00 PM</td></tr>
+                        <tr><td>Saturday</td><td>8:00 AM - 4:00 PM</td></tr>
+                        <tr><td>Sunday</td><td>Closed</td></tr>
+                    </table>
+                </div>
+                <div class="info-block">
+                    <h4>Contact Service</h4>
+                    <div class="info-contact">
+                        <a href="tel:7246078276" class="phone">(724) 607-8276</a>
+                        <p>5079 US-30<br />Greensburg, PA 15601</p>
+                        <div class="map-placeholder">
+                            <span>Map</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Services Grid -->
+    <section class="services-section" id="specials">
+        <div class="services-section-inner">
+            <div class="section-title">
+                <h2>Popular Services</h2>
+                <p>Quality maintenance at competitive prices</p>
+                <div class="bar"></div>
+            </div>
+            <div class="services-grid">
+                <!-- Oil Change -->
+                <div class="service-card">
+                    <div class="service-card-icon">
+                        <svg viewBox="0 0 24 24"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/></svg>
+                    </div>
+                    <h3>Oil Change</h3>
+                    <span class="price-badge">Starting at $49.95</span>
+                    <p>Synthetic blend oil, new filter, and a complimentary multi-point inspection to keep your Mitsubishi running smooth.</p>
+                    <a href="#schedule" class="schedule-link">Schedule Now &rarr;</a>
+                </div>
+                <!-- Tire Rotation -->
+                <div class="service-card">
+                    <div class="service-card-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm0-14c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm0-6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg>
+                    </div>
+                    <h3>Tire Rotation</h3>
+                    <span class="price-badge">Starting at $29.95</span>
+                    <p>Extend the life of your tires with professional rotation and tire pressure check on all four wheels.</p>
+                    <a href="#schedule" class="schedule-link">Schedule Now &rarr;</a>
+                </div>
+                <!-- Brake Inspection -->
+                <div class="service-card">
+                    <div class="service-card-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                    </div>
+                    <h3>Brake Inspection</h3>
+                    <span class="price-badge free">Free</span>
+                    <p>Comprehensive brake check including pads, rotors, and fluid levels. Your safety is our top priority.</p>
+                    <a href="#schedule" class="schedule-link">Schedule Now &rarr;</a>
+                </div>
+                <!-- Battery Test -->
+                <div class="service-card">
+                    <div class="service-card-icon">
+                        <svg viewBox="0 0 24 24"><path d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.33C7 21.4 7.6 22 8.33 22h7.33c.74 0 1.34-.6 1.34-1.33V5.33C17 4.6 16.4 4 15.67 4z"/></svg>
+                    </div>
+                    <h3>Battery Test & Replace</h3>
+                    <span class="price-badge free">Free Diagnostic</span>
+                    <p>Free battery health test with professional installation if a replacement is needed. Keep your vehicle starting strong.</p>
+                    <a href="#schedule" class="schedule-link">Schedule Now &rarr;</a>
+                </div>
+                <!-- Multi-Point Inspection -->
+                <div class="service-card">
+                    <div class="service-card-icon">
+                        <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+                    </div>
+                    <h3>Multi-Point Inspection</h3>
+                    <span class="price-badge free">Complimentary</span>
+                    <p>Our thorough 30+ point inspection covers brakes, fluids, tires, belts, battery, and more -- at no charge.</p>
+                    <a href="#schedule" class="schedule-link">Schedule Now &rarr;</a>
+                </div>
+                <!-- Alignment -->
+                <div class="service-card">
+                    <div class="service-card-icon">
+                        <svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg>
+                    </div>
+                    <h3>Alignment Check</h3>
+                    <span class="price-badge">Starting at $89.95</span>
+                    <p>Precision 4-wheel alignment to reduce tire wear, improve handling, and keep your vehicle tracking straight.</p>
+                    <a href="#schedule" class="schedule-link">Schedule Now &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="faq-section-inner">
+            <div class="section-title">
+                <h2>Service FAQ</h2>
+                <div class="bar"></div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    How often should I get an oil change?
+                    <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">For most Mitsubishi models, we recommend an oil change every 5,000 to 7,500 miles, or every 6 months -- whichever comes first. If you drive in severe conditions (frequent short trips, extreme temperatures, or heavy towing), more frequent changes may be beneficial. Our technicians will check your vehicle's maintenance schedule and recommend the right interval for your driving habits.</div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    Do I need to service my vehicle at the dealership?
+                    <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">While you can have your vehicle serviced anywhere, there are significant advantages to choosing an authorized Mitsubishi dealership. Our factory-certified technicians have specialized training on your specific vehicle, we use genuine OEM parts that maintain your warranty, and we have access to the latest Mitsubishi technical bulletins and recalls. Plus, we keep detailed service records that can boost your vehicle's resale value.</div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    How long does a typical service appointment take?
+                    <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">Routine services like oil changes and tire rotations typically take 30 to 60 minutes. Brake services and more involved repairs may take 2 to 4 hours depending on the scope of work. When you schedule your appointment, our service advisors will give you an estimated completion time so you can plan your day accordingly.</div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    Do you offer loaner vehicles or shuttle service?
+                    <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">Yes, we offer complimentary shuttle service within the Greensburg area for customers whose vehicles require extended service. Loaner vehicles are available by appointment for qualifying repairs. Please let our service team know when scheduling your appointment so we can make arrangements in advance.</div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    Can I wait while my vehicle is being serviced?
+                    <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">Absolutely. Our comfortable customer lounge features complimentary Wi-Fi, coffee, snacks, and a TV so you can relax or get work done while we service your vehicle. For routine maintenance like oil changes and tire rotations, most customers find the wait very manageable. We'll keep you updated on progress and let you know as soon as your vehicle is ready.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEO Content -->
+    <section class="seo-content">
+        <div class="seo-content-inner">
+            <h2>Mitsubishi Service Center in Greensburg, PA</h2>
+            <p>Sendell Mitsubishi is your trusted destination for expert automotive service in Greensburg, PA. Our factory-certified service center is equipped with the latest diagnostic tools and staffed by technicians who specialize in Mitsubishi vehicles. Whether you drive an Outlander, Eclipse Cross, Outlander Sport, or Mirage, we have the expertise and genuine OEM parts to keep your vehicle performing at its best. We proudly serve drivers from Greensburg, Latrobe, Irwin, Jeannette, and throughout Westmoreland County with reliable, affordable maintenance and repair services.</p>
+
+            <h2>Why Choose Sendell Mitsubishi for Service?</h2>
+            <p>When you bring your vehicle to Sendell Mitsubishi, you get more than just an oil change -- you get peace of mind. Our technicians complete rigorous Mitsubishi-specific training to stay current on every model, every system, and every update. We use only genuine Mitsubishi parts, which means your warranty stays protected and your vehicle maintains its value. From routine maintenance to complex repairs, we provide transparent pricing with upfront estimates so there are never surprises on your bill. Ready to experience the Sendell difference? <a href="#schedule">Schedule your service appointment online</a> or browse our <a href="/demo/sendell-mitsubishi/inventory">new vehicle inventory</a> while you wait.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <h3>Sendell Mitsubishi</h3>
+                <p>5079 US-30, Greensburg, PA 15601<br />
+                Sales: (724) 607-8465<br />
+                Service: (724) 607-8276</p>
+                <p style="margin-top:12px;">Mon-Fri: 9AM - 7PM<br/>Sat: 9AM - 5PM<br/>Sun: Closed</p>
+            </div>
+            <div>
+                <h4>Inventory</h4>
+                <ul>
+                    <li><a href="/demo/sendell-mitsubishi/inventory">New Vehicles</a></li>
+                    <li><a href="#">Used Vehicles</a></li>
+                    <li><a href="#">Certified Pre-Owned</a></li>
+                    <li><a href="#">Specials</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Finance</h4>
+                <ul>
+                    <li><a href="/demo/sendell-mitsubishi/finance">Apply Online</a></li>
+                    <li><a href="/demo/sendell-mitsubishi/finance#trade">Value Your Trade</a></li>
+                    <li><a href="/demo/sendell-mitsubishi/finance#calculator">Payment Calculator</a></li>
+                    <li><a href="/demo/sendell-mitsubishi/finance">Credit Solutions</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Service</h4>
+                <ul>
+                    <li><a href="/demo/sendell-mitsubishi/service#schedule">Schedule Service</a></li>
+                    <li><a href="/demo/sendell-mitsubishi/service#specials">Service Specials</a></li>
+                    <li><a href="/demo/sendell-mitsubishi/service">Parts Department</a></li>
+                    <li><a href="/demo/sendell-mitsubishi/service">Body Shop</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Sendell Mitsubishi. All rights reserved. | Powered by <a href="https://www.savvydealer.com" style="color:var(--red);">SavvyDealer</a></p>
+        </div>
+    </footer>
+
+<script>
+/* ── FAQ Accordion ── */
+function toggleFaq(btn) {
+    var item = btn.parentElement;
+    var answer = item.querySelector('.faq-answer');
+    var inner = answer.querySelector('.faq-answer-inner');
+    var isOpen = item.classList.contains('open');
+
+    // Close all others
+    var allItems = document.querySelectorAll('.faq-item');
+    for (var i = 0; i < allItems.length; i++) {
+        if (allItems[i] !== item && allItems[i].classList.contains('open')) {
+            allItems[i].classList.remove('open');
+            allItems[i].querySelector('.faq-answer').style.maxHeight = '0';
+        }
+    }
+
+    if (isOpen) {
+        item.classList.remove('open');
+        answer.style.maxHeight = '0';
+    } else {
+        item.classList.add('open');
+        answer.style.maxHeight = inner.scrollHeight + 20 + 'px';
+    }
+}
+
+/* ── Smooth Scroll for Hero CTAs ── */
+document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+        var targetId = this.getAttribute('href').substring(1);
+        var target = document.getElementById(targetId);
+        if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    });
+});
+
+/* ── Schedule form handler ── */
+function handleSchedule(e) {
+    e.preventDefault();
+    var btn = e.target.querySelector('.form-submit-btn');
+    btn.textContent = 'Appointment Requested!';
+    btn.style.background = '#2d8f3d';
+    setTimeout(function() {
+        btn.textContent = 'Schedule Appointment';
+        btn.style.background = '';
+        e.target.reset();
+    }, 3000);
+    return false;
+}
+</script>
+</body>
+</html>

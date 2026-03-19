@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full-Service Auto Care | Golden Oldies Auto Sales | Hudson, FL</title>
+  <meta name="description" content="Trusted auto service and repair at Golden Oldies Auto Sales in Hudson, FL. Experienced technicians, quality parts, and honest pricing for all makes and models.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: #19183C;
+      line-height: 1.6;
+      background: #fff;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.2s ease;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    button {
+      font-family: 'DM Sans', sans-serif;
+      cursor: pointer;
+      border: none;
+      outline: none;
+    }
+
+    input, select, textarea {
+      font-family: 'DM Sans', sans-serif;
+      outline: none;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* -- Color Variables -- */
+    :root {
+      --gold: #C8952E;
+      --gold-dark: #b5842a;
+      --navy: #1a1a2e;
+      --navy-light: #16213e;
+      --navy-deep: #0f3460;
+      --black: #000000;
+      --white: #ffffff;
+      --gray-50: #f8f7f4;
+      --gray-100: #f0f0f0;
+      --gray-200: #e8e6e1;
+      --gray-400: #888;
+      --gray-600: #666;
+      --gray-800: #19183C;
+      --blue: #0678bc;
+    }
+
+    /* -- STICKY HEADER -- */
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: #fff;
+      transition: box-shadow 0.3s ease;
+      height: 88px;
+    }
+
+    .site-header.scrolled {
+      box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 88px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header-logo {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .header-logo-name {
+      font-size: 32px;
+      font-weight: 700;
+      color: #C8952E;
+      letter-spacing: 2px;
+    }
+
+    .header-logo-sub {
+      font-size: 13px;
+      font-weight: 500;
+      color: #666;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .header-phone {
+      font-size: 15px;
+      font-weight: 600;
+      color: #19183C;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .header-phone svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .btn-gold {
+      background: #C8952E;
+      color: #fff;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 10px 24px;
+      border-radius: 8px;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-gold:hover {
+      background: #b5842a;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(200,149,46,0.3);
+      color: #fff;
+    }
+
+    .btn-gold-outline {
+      background: transparent;
+      color: #C8952E;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 10px 24px;
+      border-radius: 8px;
+      border: 2px solid #C8952E;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+    }
+
+    .btn-gold-outline:hover {
+      background: #C8952E;
+      color: #fff;
+    }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: #19183C;
+      margin: 5px 0;
+      transition: all 0.3s ease;
+      border-radius: 2px;
+    }
+
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* -- NAVIGATION -- */
+    .main-nav {
+      background: #1a1a2e;
+      position: fixed;
+      top: 88px;
+      left: 0;
+      right: 0;
+      z-index: 999;
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 0;
+    }
+
+    .nav-links li a {
+      display: block;
+      padding: 14px 20px;
+      color: rgba(255,255,255,0.8);
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+
+    .nav-links li a:hover,
+    .nav-links li a.active {
+      color: #fff;
+    }
+
+    .nav-links li a.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 20px;
+      right: 20px;
+      height: 2px;
+      background: #C8952E;
+      border-radius: 2px;
+    }
+
+    .nav-links li a:hover::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 20px;
+      right: 20px;
+      height: 2px;
+      background: #C8952E;
+      border-radius: 2px;
+    }
+
+    /* -- MOBILE NAV OVERLAY -- */
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      top: 72px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #1a1a2e;
+      z-index: 998;
+      padding: 24px;
+      overflow-y: auto;
+    }
+
+    .mobile-nav.open {
+      display: block;
+    }
+
+    .mobile-nav a {
+      display: block;
+      padding: 14px 0;
+      color: rgba(255,255,255,0.8);
+      font-size: 17px;
+      font-weight: 500;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      transition: color 0.2s ease;
+    }
+
+    .mobile-nav a:hover,
+    .mobile-nav a.active {
+      color: #C8952E;
+    }
+
+    .mobile-nav .mobile-nav-cta {
+      margin-top: 24px;
+    }
+
+    .mobile-nav .mobile-nav-cta .btn-gold {
+      width: 100%;
+      justify-content: center;
+      margin-bottom: 12px;
+    }
+
+    .mobile-nav .mobile-nav-phone {
+      text-align: center;
+      color: rgba(255,255,255,0.6);
+      font-size: 14px;
+      margin-top: 8px;
+    }
+
+    .mobile-nav .mobile-nav-phone a {
+      color: #C8952E;
+      font-weight: 600;
+      border: none;
+      display: inline;
+      padding: 0;
+      font-size: 14px;
+    }
+
+    /* -- Buttons (shared) -- */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      font-size: 14px;
+      font-weight: 700;
+      font-family: inherit;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border: 2px solid transparent;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .btn-primary { background: var(--gold); color: var(--white); border-color: var(--gold); }
+    .btn-primary:hover { background: var(--gold-dark); border-color: var(--gold-dark); }
+    .btn-outline { background: transparent; color: var(--white); border-color: rgba(255,255,255,0.4); }
+    .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.1); }
+    .btn-outline-dark { background: transparent; color: var(--gray-800); border-color: var(--gray-200); }
+    .btn-outline-dark:hover { border-color: var(--gold); color: var(--gold); }
+
+    /* -- Hero Banner (compact) -- */
+    .service-hero {
+      position: relative;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #1a1a2e 70%, #0f3460 100%);
+      overflow: hidden;
+      padding: 180px 0 80px;
+    }
+    .service-hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 80%;
+      height: 200%;
+      background: radial-gradient(ellipse, rgba(200,149,46,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .service-hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--gold);
+    }
+    .service-hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+    .service-hero-inner h2 {
+      font-size: 48px;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+    .service-hero-inner h2 em {
+      font-style: normal;
+      color: var(--gold);
+    }
+    .service-hero-inner p {
+      font-size: 18px;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 32px;
+      max-width: 540px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero-ctas {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* -- Service Features Strip -- */
+    .features-strip {
+      background: var(--gray-50);
+      border-bottom: 1px solid var(--gray-200);
+      padding: 48px 0;
+    }
+    .features-strip-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+    .feature-card {
+      text-align: center;
+      padding: 32px 24px;
+      background: var(--white);
+      border-radius: 12px;
+      border: 1px solid var(--gray-200);
+      transition: all 0.3s;
+    }
+    .feature-card:hover {
+      border-color: var(--gold);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      transform: translateY(-2px);
+    }
+    .feature-icon {
+      width: 64px;
+      height: 64px;
+      background: linear-gradient(135deg, rgba(200,149,46,0.15), rgba(200,149,46,0.08));
+      border-radius: 16px;
+      margin: 0 auto 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .feature-icon svg { width: 28px; height: 28px; color: var(--gold); }
+    .feature-card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--gray-800);
+      margin-bottom: 8px;
+    }
+    .feature-card p {
+      font-size: 14px;
+      color: var(--gray-600);
+      line-height: 1.6;
+    }
+
+    /* -- Section Title -- */
+    .section-title {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .section-title h2 {
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--gray-800);
+    }
+    .section-title p {
+      font-size: 16px;
+      color: var(--gray-600);
+      margin-top: 8px;
+    }
+    .section-title .bar {
+      width: 60px;
+      height: 4px;
+      background: var(--gold);
+      margin: 16px auto 0;
+      border-radius: 2px;
+    }
+
+    /* -- Schedule Service Form -- */
+    .schedule-section {
+      padding: 72px 0;
+      background: var(--white);
+    }
+    .schedule-section-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+    .schedule-info h2 {
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--gray-800);
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+    .schedule-info h2 em { font-style: normal; color: var(--gold); }
+    .schedule-info > p {
+      font-size: 16px;
+      color: var(--gray-600);
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+    .info-list {
+      list-style: none;
+      margin-bottom: 32px;
+    }
+    .info-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 15px;
+      color: var(--gray-800);
+      margin-bottom: 16px;
+      font-weight: 500;
+    }
+    .info-list li svg {
+      width: 20px;
+      height: 20px;
+      color: var(--gold);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .info-list li strong {
+      font-weight: 700;
+    }
+    .info-list li span {
+      color: var(--gray-600);
+      font-weight: 400;
+    }
+
+    .schedule-card {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: 16px;
+      padding: 40px;
+    }
+    .schedule-card h3 {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--gray-800);
+      margin-bottom: 6px;
+    }
+    .schedule-card > p {
+      font-size: 14px;
+      color: var(--gray-600);
+      margin-bottom: 24px;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .form-field {
+      margin-bottom: 0;
+    }
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid var(--gray-200);
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 14px;
+      color: var(--gray-800);
+      background: var(--white);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .form-field input::placeholder,
+    .form-field textarea::placeholder { color: #aaa; }
+    .form-field input:focus,
+    .form-field select:focus,
+    .form-field textarea:focus { border-color: var(--gold); }
+    .form-field select {
+      appearance: none;
+      -webkit-appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%23888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+      padding-right: 40px;
+      cursor: pointer;
+    }
+    .form-field-full {
+      margin-bottom: 12px;
+    }
+    .form-field-full input,
+    .form-field-full select,
+    .form-field-full textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid var(--gray-200);
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 14px;
+      color: var(--gray-800);
+      background: var(--white);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .form-field-full textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+    .form-field-full input::placeholder,
+    .form-field-full textarea::placeholder { color: #aaa; }
+    .form-field-full input:focus,
+    .form-field-full select:focus,
+    .form-field-full textarea:focus { border-color: var(--gold); }
+    .form-field-full select {
+      appearance: none;
+      -webkit-appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%23888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+      padding-right: 40px;
+      cursor: pointer;
+    }
+    .form-submit-btn {
+      width: 100%;
+      padding: 16px;
+      background: var(--gold);
+      color: var(--white);
+      font-family: inherit;
+      font-size: 15px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+      margin-top: 4px;
+    }
+    .form-submit-btn:hover { background: var(--gold-dark); }
+    .form-disclaimer {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 12px;
+      font-size: 12px;
+      color: var(--gray-400);
+    }
+    .form-disclaimer svg { width: 14px; height: 14px; fill: var(--gray-400); flex-shrink: 0; }
+
+    /* -- Popular Services Grid -- */
+    .services-grid-section {
+      padding: 72px 0;
+      background: var(--gray-50);
+      border-top: 1px solid var(--gray-200);
+    }
+    .services-grid-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .service-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 16px;
+      padding: 32px 28px;
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--gold);
+      transform: scaleX(0);
+      transition: transform 0.3s;
+    }
+    .service-card:hover::before {
+      transform: scaleX(1);
+    }
+    .service-card:hover {
+      border-color: var(--gold);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+      transform: translateY(-3px);
+    }
+    .service-card-icon {
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(135deg, rgba(200,149,46,0.15), rgba(200,149,46,0.08));
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .service-card-icon svg {
+      width: 26px;
+      height: 26px;
+      color: var(--gold);
+    }
+    .service-card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--gray-800);
+      margin-bottom: 8px;
+    }
+    .service-card p {
+      font-size: 14px;
+      color: var(--gray-600);
+      line-height: 1.6;
+    }
+
+    /* -- FAQ Accordion -- */
+    .faq-section {
+      padding: 72px 0;
+      background: var(--white);
+    }
+    .faq-section-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .faq-item {
+      border-bottom: 1px solid var(--gray-200);
+    }
+    .faq-item:first-child { border-top: 1px solid var(--gray-200); }
+    .faq-question {
+      width: 100%;
+      padding: 20px 0;
+      background: none;
+      border: none;
+      font-family: inherit;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--gray-800);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      text-align: left;
+      transition: color 0.2s;
+    }
+    .faq-question:hover { color: var(--gold); }
+    .faq-question svg {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      transition: transform 0.3s;
+      fill: var(--gray-400);
+    }
+    .faq-item.open .faq-question svg {
+      transform: rotate(180deg);
+      fill: var(--gold);
+    }
+    .faq-item.open .faq-question { color: var(--gold); }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.35s ease;
+    }
+    .faq-answer-inner {
+      padding: 0 0 20px;
+      font-size: 15px;
+      color: var(--gray-600);
+      line-height: 1.7;
+    }
+
+    /* -- SEO Content -- */
+    .seo-content {
+      background: var(--white);
+      padding: 64px 24px;
+      border-top: 1px solid var(--gray-200);
+    }
+    .seo-content-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .seo-content-inner h2 {
+      font-size: 22px;
+      font-weight: 700;
+      color: #19183C;
+      margin-top: 40px;
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+    .seo-content-inner h2:first-child { margin-top: 0; }
+    .seo-content-inner p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 16px;
+    }
+    .seo-content-inner a {
+      color: var(--gold);
+      text-decoration: none;
+      transition: text-decoration 0.2s;
+    }
+    .seo-content-inner a:hover { text-decoration: underline; }
+
+    /* -- Footer -- */
+    .site-footer {
+      background: #1a1a2e;
+      color: rgba(255,255,255,0.7);
+      padding: 64px 0 0;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .footer-col h4 {
+      font-size: 15px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-col ul li a {
+      font-size: 14px;
+      color: rgba(255,255,255,0.6);
+      transition: color 0.2s ease;
+    }
+
+    .footer-col ul li a:hover {
+      color: #C8952E;
+    }
+
+    .footer-col p {
+      font-size: 14px;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.6);
+    }
+
+    .footer-col .footer-phone {
+      color: #C8952E;
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 0;
+      font-size: 13px;
+      color: rgba(255,255,255,0.4);
+    }
+
+    .footer-social a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 8px;
+      color: rgba(255,255,255,0.6);
+      transition: all 0.2s ease;
+    }
+
+    .footer-social a:hover {
+      background: #C8952E;
+      color: #fff;
+    }
+
+    .footer-social a svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    /* -- Responsive -- */
+    @media (max-width: 1024px) {
+      .schedule-section-inner { grid-template-columns: 1fr; gap: 40px; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+    }
+
+    @media (max-width: 768px) {
+      .site-header {
+        height: 64px;
+      }
+
+      .header-inner {
+        height: 64px;
+      }
+
+      .main-nav {
+        display: none;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .header-phone {
+        display: none;
+      }
+
+      .header-actions .btn-gold {
+        display: none;
+      }
+
+      .service-hero {
+        padding: 140px 0 60px;
+      }
+      .service-hero-inner h2 { font-size: 34px; }
+      .features-strip-inner { grid-template-columns: 1fr; gap: 16px; }
+      .feature-card { padding: 24px 20px; }
+      .services-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .section-title h2 { font-size: 28px; }
+      .schedule-info h2 { font-size: 28px; }
+      .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+      .footer-bottom {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .service-hero-inner h2 { font-size: 28px; }
+      .service-hero-inner p { font-size: 15px; }
+      .hero-ctas { flex-direction: column; align-items: center; }
+      .hero-ctas .btn { width: 100%; justify-content: center; }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- -- STICKY HEADER -- -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a href="/demo/golden-oldies" class="header-logo">
+        <span class="header-logo-name">GOLDEN OLDIES</span>
+        <span class="header-logo-sub">Auto Sales</span>
+      </a>
+      <div class="header-actions">
+        <a href="tel:7278573408" class="header-phone">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          (727) 857-3408
+        </a>
+        <a href="#schedule" class="btn-gold">Schedule Service</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- -- NAVIGATION BAR -- -->
+  <nav class="main-nav" id="mainNav">
+    <div class="nav-inner">
+      <ul class="nav-links">
+        <li><a href="/demo/golden-oldies">Home</a></li>
+        <li><a href="/demo/golden-oldies/inventory">Inventory</a></li>
+        <li><a href="/demo/golden-oldies/inventory?maxPrice=15000">Under $15K</a></li>
+        <li><a href="/demo/golden-oldies/service" class="active">Service</a></li>
+        <li><a href="/demo/golden-oldies/finance">Finance</a></li>
+        <li><a href="/demo/golden-oldies/about">About Us</a></li>
+        <li><a href="/demo/golden-oldies/contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- -- MOBILE NAV -- -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="/demo/golden-oldies">Home</a>
+    <a href="/demo/golden-oldies/inventory">Inventory</a>
+    <a href="/demo/golden-oldies/inventory?maxPrice=15000">Under $15K</a>
+    <a href="/demo/golden-oldies/service" class="active">Service</a>
+    <a href="/demo/golden-oldies/finance">Finance</a>
+    <a href="/demo/golden-oldies/about">About Us</a>
+    <a href="/demo/golden-oldies/contact">Contact</a>
+    <div class="mobile-nav-cta">
+      <a href="#schedule" class="btn-gold">Schedule Service</a>
+      <p class="mobile-nav-phone">Service: <a href="tel:7278573408">(727) 857-3408</a></p>
+    </div>
+  </div>
+
+  <!-- -- Hero Banner -- -->
+  <section class="service-hero">
+    <div class="service-hero-inner">
+      <h2>Full-Service <em>Auto Care</em></h2>
+      <p>Trusted mechanics for all makes and models.</p>
+      <div class="hero-ctas">
+        <a href="#schedule" class="btn btn-primary">Schedule Service</a>
+        <a href="tel:7278573408" class="btn btn-outline">Call Service Dept.</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- -- Service Features Strip -- -->
+  <section class="features-strip">
+    <div class="features-strip-inner">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Experienced Technicians</h3>
+        <p>Our ASE-certified mechanics bring decades of combined experience working on every make and model on the road today.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Quality Parts</h3>
+        <p>We use OEM and premium aftermarket parts backed by warranty, so your vehicle gets the components it deserves.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <h3>Honest Pricing</h3>
+        <p>No hidden fees or surprise charges. We provide upfront estimates and always get your approval before starting any work.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- -- Schedule Service Form -- -->
+  <section class="schedule-section" id="schedule">
+    <div class="schedule-section-inner">
+      <div class="schedule-info">
+        <h2>Book Your <em>Service</em> Appointment</h2>
+        <p>Whether it's routine maintenance or a major repair, our service department is ready to help. Fill out the form and we'll confirm your appointment within one business day.</p>
+        <ul class="info-list">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div>
+              <strong>Hudson / NPR Location</strong><br>
+              <span>10535 SR 52, Hudson, FL 34669</span>
+            </div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <div>
+              <strong>Service Department</strong><br>
+              <span><a href="tel:7278573408" style="color:var(--blue);">(727) 857-3408</a></span>
+            </div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <div>
+              <strong>Service Hours</strong><br>
+              <span>Mon - Fri: 8:00 AM - 7:00 PM</span><br>
+              <span>Saturday: 9:00 AM - 6:00 PM</span><br>
+              <span>Sunday: 10:00 AM - 5:00 PM</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="schedule-card" id="schedule-form">
+        <h3>Schedule Service</h3>
+        <p>Complete the form below and we'll get back to you promptly</p>
+        <form onsubmit="return handleSchedule(event)">
+          <div class="form-row">
+            <div class="form-field">
+              <input type="text" placeholder="First Name" required />
+            </div>
+            <div class="form-field">
+              <input type="text" placeholder="Last Name" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <input type="email" placeholder="Email Address" required />
+            </div>
+            <div class="form-field">
+              <input type="tel" placeholder="Phone Number" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <input type="text" placeholder="Vehicle Year" required />
+            </div>
+            <div class="form-field">
+              <input type="text" placeholder="Vehicle Make" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <input type="text" placeholder="Vehicle Model" required />
+            </div>
+            <div class="form-field">
+              <select required>
+                <option value="" disabled selected>Service Type</option>
+                <option value="oil-change">Oil Change</option>
+                <option value="brakes">Brake Service</option>
+                <option value="tires">Tires &amp; Alignment</option>
+                <option value="ac-heat">A/C &amp; Heating</option>
+                <option value="engine">Engine Diagnostics</option>
+                <option value="transmission">Transmission</option>
+                <option value="electrical">Electrical / Battery</option>
+                <option value="inspection">Multi-Point Inspection</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-field-full">
+            <textarea placeholder="Additional details or concerns (optional)" rows="3"></textarea>
+          </div>
+          <button type="submit" class="form-submit-btn">Request Appointment</button>
+          <div class="form-disclaimer">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            We'll confirm your appointment within one business day.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- -- Popular Services Grid -- -->
+  <section class="services-grid-section" id="services">
+    <div class="services-grid-inner">
+      <div class="section-title">
+        <h2>Popular Services</h2>
+        <p>From routine maintenance to major repairs, we do it all</p>
+        <div class="bar"></div>
+      </div>
+      <div class="services-grid">
+        <!-- Oil Change -->
+        <div class="service-card">
+          <div class="service-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+          </div>
+          <h3>Oil Change &amp; Filter</h3>
+          <p>Conventional, synthetic blend, or full synthetic oil changes with premium filters. Keep your engine running smooth and extend its life.</p>
+        </div>
+        <!-- Brakes -->
+        <div class="service-card">
+          <div class="service-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="4.93" y1="4.93" x2="9.17" y2="9.17"/><line x1="14.83" y1="14.83" x2="19.07" y2="19.07"/><line x1="14.83" y1="9.17" x2="19.07" y2="4.93"/><line x1="4.93" y1="19.07" x2="9.17" y2="14.83"/></svg>
+          </div>
+          <h3>Brake Service</h3>
+          <p>Pads, rotors, calipers, and brake fluid -- complete brake inspections and repairs to keep you stopping safely every time.</p>
+        </div>
+        <!-- Tires -->
+        <div class="service-card">
+          <div class="service-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+          </div>
+          <h3>Tires &amp; Alignment</h3>
+          <p>New tires, rotation, balancing, and four-wheel alignment. We carry major brands and help you find the right tire for your budget.</p>
+        </div>
+        <!-- A/C -->
+        <div class="service-card">
+          <div class="service-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M19.07 4.93L4.93 19.07"/></svg>
+          </div>
+          <h3>A/C &amp; Heating</h3>
+          <p>Florida heat demands a reliable A/C. We handle recharges, compressor replacements, and full climate control diagnostics.</p>
+        </div>
+        <!-- Diagnostics -->
+        <div class="service-card">
+          <div class="service-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3>Engine Diagnostics</h3>
+          <p>Check engine light on? Our scan tools and experienced techs pinpoint the problem fast so you get accurate repairs -- not guesswork.</p>
+        </div>
+        <!-- Battery -->
+        <div class="service-card">
+          <div class="service-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="6" width="18" height="12" rx="2"/><line x1="23" y1="10" x2="23" y2="14"/><line x1="7" y1="10" x2="7" y2="14"/><line x1="11" y1="10" x2="11" y2="14"/></svg>
+          </div>
+          <h3>Battery &amp; Electrical</h3>
+          <p>Free battery testing, replacement, alternator checks, and full electrical system diagnostics. Don't get stranded -- stay charged.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- -- FAQ Section -- -->
+  <section class="faq-section">
+    <div class="faq-section-inner">
+      <div class="section-title">
+        <h2>Service FAQ</h2>
+        <div class="bar"></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Do you work on all makes and models?
+          <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Absolutely. Our technicians are trained to service domestic and import vehicles of every make, model, and year. Whether you drive a Ford, Chevy, Toyota, Honda, BMW, or anything in between, we have the tools and expertise to get the job done right.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          How long does a typical service appointment take?
+          <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">It depends on the service. A standard oil change takes about 30 to 45 minutes. Brake inspections and tire services usually take one to two hours. For larger jobs like engine diagnostics or transmission work, we'll give you a time estimate upfront and keep you updated throughout the process.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Do I need an appointment or can I walk in?
+          <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">We accept both appointments and walk-ins. However, scheduling an appointment guarantees your spot and usually means shorter wait times. You can book online using the form above or call our service department directly at (727) 857-3408.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Do you offer any service warranties or guarantees?
+          <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Yes. All parts and labor come with a warranty so you can drive with confidence. The specific warranty terms depend on the service performed and the parts used, but we stand behind every repair we make. If something isn't right, bring it back and we'll make it right -- that's part of the Golden Guarantee.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Can I wait at the dealership while my car is being serviced?
+          <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Of course. Our customer lounge has comfortable seating, complimentary Wi-Fi, coffee, and a TV so you can relax while we take care of your vehicle. For longer repairs, we're happy to help arrange a ride or discuss loaner options so you're not stuck waiting all day.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- -- SEO Content -- -->
+  <section class="seo-content">
+    <div class="seo-content-inner">
+      <h2>Auto Service &amp; Repair at Golden Oldies Auto Sales in Hudson, FL</h2>
+      <p>Golden Oldies Auto Sales has been a trusted name in the Hudson and Pasco County community since 1991. Our full-service auto repair shop, located at 10535 SR 52 in Hudson, FL, is staffed by experienced, ASE-certified technicians who handle everything from routine oil changes and brake jobs to complex engine diagnostics and transmission repairs. Whether you purchased your vehicle from us or somewhere else, our doors are always open. We service all makes and models -- domestic and import -- with the same attention to detail and commitment to honest pricing.</p>
+
+      <h2>Serving Hudson, Spring Hill, New Port Richey &amp; the Surrounding Area</h2>
+      <p>Drivers from across Pasco County and beyond trust Golden Oldies for dependable auto care. We proudly serve customers from Hudson, Spring Hill, New Port Richey, Port Richey, Trinity, Holiday, Tarpon Springs, Land O' Lakes, Wesley Chapel, and Zephyrhills. With two convenient locations in the Hudson area and extended hours six days a week, it's easy to fit quality auto service into your busy schedule. <a href="/demo/golden-oldies/inventory">Browse our inventory</a> while you wait, or take advantage of our <a href="/demo/golden-oldies/finance">flexible financing options</a> if it's time for an upgrade.</p>
+    </div>
+  </section>
+
+  <!-- -- FOOTER -- -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/demo/golden-oldies">Home</a></li>
+            <li><a href="/demo/golden-oldies/about">About Us</a></li>
+            <li><a href="/demo/golden-oldies/service">Service Center</a></li>
+            <li><a href="/demo/golden-oldies/finance">Financing</a></li>
+            <li><a href="/demo/golden-oldies/contact">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Inventory</h4>
+          <ul>
+            <li><a href="/demo/golden-oldies/inventory">All Vehicles</a></li>
+            <li><a href="/demo/golden-oldies/inventory?maxPrice=15000">Under $15,000</a></li>
+            <li><a href="/demo/golden-oldies/inventory?type=suv">SUVs</a></li>
+            <li><a href="/demo/golden-oldies/inventory?type=truck">Trucks</a></li>
+            <li><a href="/demo/golden-oldies/inventory?type=sedan">Sedans</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <p>
+            <a href="tel:8664563939" class="footer-phone">(866) 456-3939</a><br>
+            <a href="mailto:sales@goldenoldiesauto.com" style="color:#0678bc;">sales@goldenoldiesauto.com</a>
+          </p>
+          <p style="margin-top:12px;">
+            10535 SR 52<br>
+            Hudson, FL 34669
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Hours (Hudson)</h4>
+          <ul style="gap:6px;">
+            <li><span style="color:rgba(255,255,255,0.6);">Mon - Fri: 8am - 7pm</span></li>
+            <li><span style="color:rgba(255,255,255,0.6);">Saturday: 9am - 6pm</span></li>
+            <li><span style="color:rgba(255,255,255,0.6);">Sunday: 10am - 5pm</span></li>
+          </ul>
+          <h4 style="margin-top:20px;">Hours (Spring Hill)</h4>
+          <ul style="gap:6px;">
+            <li><span style="color:rgba(255,255,255,0.6);">Mon - Fri: 8am - 8pm</span></li>
+            <li><span style="color:rgba(255,255,255,0.6);">Saturday: 9am - 6pm</span></li>
+            <li><span style="color:rgba(255,255,255,0.6);">Sunday: 10am - 5pm</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 Golden Oldies Auto Sales. All rights reserved. | Your Hometown Dealer Since 1991</span>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/goldenoldiesauto/" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- -- SCRIPTS -- -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script>
+    /* -- Header scroll behavior -- */
+    $(function() {
+      $(window).on('scroll', function() {
+        if ($(this).scrollTop() > 10) {
+          $('#siteHeader').addClass('scrolled');
+        } else {
+          $('#siteHeader').removeClass('scrolled');
+        }
+      });
+
+      $('#hamburger').on('click', function() {
+        $(this).toggleClass('active');
+        $('#mobileNav').toggleClass('open');
+        $('body').toggleClass('nav-open');
+      });
+
+      $('#mobileNav a').on('click', function() {
+        $('#hamburger').removeClass('active');
+        $('#mobileNav').removeClass('open');
+        $('body').removeClass('nav-open');
+      });
+    });
+
+
+    /* -- FAQ Accordion -- */
+    function toggleFaq(btn) {
+      var item = btn.parentElement;
+      var answer = item.querySelector('.faq-answer');
+      var inner = answer.querySelector('.faq-answer-inner');
+      var isOpen = item.classList.contains('open');
+
+      // Close all others
+      var allItems = document.querySelectorAll('.faq-item');
+      for (var i = 0; i < allItems.length; i++) {
+        if (allItems[i] !== item && allItems[i].classList.contains('open')) {
+          allItems[i].classList.remove('open');
+          allItems[i].querySelector('.faq-answer').style.maxHeight = '0';
+        }
+      }
+
+      if (isOpen) {
+        item.classList.remove('open');
+        answer.style.maxHeight = '0';
+      } else {
+        item.classList.add('open');
+        answer.style.maxHeight = inner.scrollHeight + 20 + 'px';
+      }
+    }
+
+
+    /* -- Schedule form handler -- */
+    function handleSchedule(e) {
+      e.preventDefault();
+      var btn = e.target.querySelector('.form-submit-btn');
+      btn.textContent = 'Request Submitted!';
+      btn.style.background = '#2d8f3d';
+      setTimeout(function() {
+        btn.textContent = 'Request Appointment';
+        btn.style.background = '';
+        e.target.reset();
+      }, 3000);
+      return false;
+    }
+  </script>
+</body>
+</html>
