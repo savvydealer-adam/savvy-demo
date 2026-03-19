@@ -652,36 +652,37 @@ jQuery(document).ready(function () {
 <script>
 // Same vehicle data array as inventory page
 var vehicles = [
-    { year: 2025, make: "Ford", model: "Escape", vin: "1FMCU0GN6SUA02958", stock: "36576", msrp: 31560, sellingPrice: 24093, discount: 7467, image: "https://file.kelleybluebookimages.com/kbb/base/evox/CP/57433/2026-Ford-Escape-front_57433_032_1823x872_M7_cropped.png" },
-    { year: 2025, make: "Ford", model: "Escape", vin: "1FMCU0GN8SUA02668", stock: "36589", msrp: 30965, sellingPrice: 25076, discount: 5889, image: "https://file.kelleybluebookimages.com/kbb/base/evox/CP/57433/2026-Ford-Escape-front_57433_032_1823x872_M7_cropped.png" },
-    { year: 2025, make: "Ford", model: "Escape", vin: "1FMCU0GN8SUA23388", stock: "36629", msrp: 31560, sellingPrice: 25635, discount: 5925, image: "https://file.kelleybluebookimages.com/kbb/base/evox/CP/57433/2026-Ford-Escape-front_57433_032_1823x872_M7_cropped.png" },
-    { year: 2025, make: "Ford", model: "Bronco Sport", vin: "3FMCR9BN4SRE30354", stock: "36895", msrp: 32035, sellingPrice: 28369, discount: 3666, image: "https://file.kelleybluebookimages.com/kbb/base/house/2026/2026-Ford-Bronco%20Sport-FrontSide_FORBRONSP2601_640x480.jpg" },
-    { year: 2024, make: "Ford", model: "Bronco Sport", vin: "3FMCR9B65RRF74448", stock: "36677", msrp: 35540, sellingPrice: 28822, discount: 6718, image: "https://file.kelleybluebookimages.com/kbb/base/house/2026/2026-Ford-Bronco%20Sport-FrontSide_FORBRONSP2601_640x480.jpg" },
-    { year: 2024, make: "Ford", model: "Bronco Sport", vin: "3FMCR9B60RRF55709", stock: "36586", msrp: 36230, sellingPrice: 28979, discount: 7251, image: "https://file.kelleybluebookimages.com/kbb/base/house/2026/2026-Ford-Bronco%20Sport-FrontSide_FORBRONSP2601_640x480.jpg" },
-    { year: 2024, make: "Ford", model: "Edge", vin: "2FMPK4G95RBB21943", stock: "35909", msrp: 40400, sellingPrice: 29318, discount: 11082, image: "https://file.kelleybluebookimages.com/kbb/base/evox/CP/54775/2024-Ford-Edge-front_54775_032_1801x834_L9_cropped.png" },
-    { year: 2024, make: "Ford", model: "Bronco Sport", vin: "3FMCR9B66RRF51793", stock: "36505", msrp: 34500, sellingPrice: 29355, discount: 5145, image: "https://file.kelleybluebookimages.com/kbb/base/house/2026/2026-Ford-Bronco%20Sport-FrontSide_FORBRONSP2601_640x480.jpg" },
-    { year: 2025, make: "Ford", model: "Bronco Sport", vin: "3FMCR9BN8SRE07000", stock: "36837", msrp: 33135, sellingPrice: 29403, discount: 3732, image: "https://file.kelleybluebookimages.com/kbb/base/house/2026/2026-Ford-Bronco%20Sport-FrontSide_FORBRONSP2601_640x480.jpg" },
-    { year: 2024, make: "Ford", model: "Bronco Sport", vin: "3FMCR9C69RRF26899", stock: "36283", msrp: 38020, sellingPrice: 30350, discount: 7670, image: "https://file.kelleybluebookimages.com/kbb/base/house/2026/2026-Ford-Bronco%20Sport-FrontSide_FORBRONSP2601_640x480.jpg" },
-    { year: 2025, make: "Ford", model: "Maverick", vin: "3FTTW8BAXSRA27502", stock: "36988", msrp: 30685, sellingPrice: 30685, discount: 0, image: "https://file.kelleybluebookimages.com/kbb/base/evox/CP/57695/2026-Ford-Maverick-front_57695_032_1766x789_M7_cropped.png" },
-    { year: 2025, make: "Ford", model: "Maverick", vin: "3FTTW8BA7SRA28140", stock: "36992", msrp: 30685, sellingPrice: 30685, discount: 0, image: "https://file.kelleybluebookimages.com/kbb/base/evox/CP/57695/2026-Ford-Maverick-front_57695_032_1766x789_M7_cropped.png" },
-    { year: 2024, make: "Ford", model: "Maverick", vin: "3FTTW8J90RRB77846", stock: "36676", msrp: 33100, sellingPrice: 30779, discount: 2321, image: "https://file.kelleybluebookimages.com/kbb/base/evox/CP/57695/2026-Ford-Maverick-front_57695_032_1766x789_M7_cropped.png" },
-    { year: 2024, make: "Ford", model: "Bronco Sport", vin: "3FMCR9B66RRF69792", stock: "36710", msrp: 35510, sellingPrice: 30795, discount: 4715, image: "https://file.kelleybluebookimages.com/kbb/base/house/2026/2026-Ford-Bronco%20Sport-FrontSide_FORBRONSP2601_640x480.jpg" },
-    { year: 2024, make: "Ford", model: "Maverick", vin: "3FTTW8H32RRB48950", stock: "36758", msrp: 32440, sellingPrice: 31108, discount: 1332, image: "https://file.kelleybluebookimages.com/kbb/base/evox/CP/57695/2026-Ford-Maverick-front_57695_032_1766x789_M7_cropped.png" },
-    { year: 2025, make: "Ford", model: "Escape", vin: "1FMCU0GN3SUA68223", stock: "37066", msrp: 35090, sellingPrice: 31194, discount: 3896, image: "https://file.kelleybluebookimages.com/kbb/base/evox/CP/57433/2026-Ford-Escape-front_57433_032_1823x872_M7_cropped.png" },
-    { year: 2024, make: "Ford", model: "Bronco Sport", vin: "3FMCR9D95RRF38928", stock: "36393", msrp: 41490, sellingPrice: 31650, discount: 9840, image: "https://file.kelleybluebookimages.com/kbb/base/house/2026/2026-Ford-Bronco%20Sport-FrontSide_FORBRONSP2601_640x480.jpg" },
-    { year: 2024, make: "Ford", model: "Ranger", vin: "1FTER4BH7RLE69846", stock: "37045", msrp: 34560, sellingPrice: 31883, discount: 2677, image: "https://file.kelleybluebookimages.com/kbb/base/house/2026/2026-Ford-Ranger%20SuperCrew-FrontSide_FORDRANG2601_640x480.jpg" },
-    { year: 2024, make: "Ford", model: "F-150", vin: "1FTMF1KP9RKF08954", stock: "36588", msrp: 38970, sellingPrice: 31944, discount: 7026, image: "https://file.kelleybluebookimages.com/kbb/base/evox/CP/58125/2026-Ford-F150%20SuperCrew%20Cab-front_58125_032_1821x808_B1_cropped.png" },
-    { year: 2024, make: "Ford", model: "Mustang", vin: "1FA6P8TH4R5141665", stock: "36441", msrp: 37425, sellingPrice: 32480, discount: 4945, image: "https://file.kelleybluebookimages.com/kbb/base/evox/CP/57761/2026-Ford-Mustang-front_57761_032_1798x695_DT_cropped.png" },
-    { year: 2025, make: "Ford", model: "Escape", vin: "1FMCU9NAXSUA53707", stock: "36836", msrp: 37145, sellingPrice: 32711, discount: 4434, image: "https://file.kelleybluebookimages.com/kbb/base/evox/CP/57433/2026-Ford-Escape-front_57433_032_1823x872_M7_cropped.png" },
-    { year: 2024, make: "Ford", model: "Bronco Sport", vin: "3FMCR9C69RRF51804", stock: "36536", msrp: 39365, sellingPrice: 32767, discount: 6598, image: "https://file.kelleybluebookimages.com/kbb/base/house/2026/2026-Ford-Bronco%20Sport-FrontSide_FORBRONSP2601_640x480.jpg" },
-    { year: 2024, make: "Ford", model: "Maverick", vin: "3FTTW8H35RRB06952", stock: "36414", msrp: 34475, sellingPrice: 32958, discount: 1517, image: "https://file.kelleybluebookimages.com/kbb/base/evox/CP/57695/2026-Ford-Maverick-front_57695_032_1766x789_M7_cropped.png" },
-    { year: 2025, make: "Ford", model: "Mustang", vin: "1FA6P8TH4S5110700", stock: "37034", msrp: 34410, sellingPrice: 33135, discount: 1275, image: "https://file.kelleybluebookimages.com/kbb/base/evox/CP/57761/2026-Ford-Mustang-front_57761_032_1798x695_DT_cropped.png" }
+    { year: 2026, make: "Ford", model: "Escape", trim: "Active", vin: "1FMCU0GN7TUA43388", stock: "38448", style: "Active FWD", msrp: 31845, finalPrice: 25394, discount: 6451, image: "https://content.homenetiol.com/640x480/79e118f5d4b2453dad5c930a118fb90d.jpg" },
+    { year: 2026, make: "Ford", model: "Escape", trim: "Active", vin: "1FMCU0GN9TUA12675", stock: "38364", style: "Active FWD", msrp: 32685, finalPrice: 25923, discount: 6762, image: "https://content.homenetiol.com/640x480/7b02391aaba145a288dbf784306f37cf.jpg" },
+    { year: 2026, make: "Ford", model: "Escape", trim: "Active", vin: "1FMCU0GN6TUA41423", stock: "38409", style: "Active FWD", msrp: 33680, finalPrice: 26831, discount: 6849, image: "https://content.homenetiol.com/640x480/b63b606b4ebc4465965512e9073d1bfb.jpg" },
+    { year: 2026, make: "Ford", model: "Escape", trim: "Active", vin: "1FMCU0GN4TUA39475", stock: "38574", style: "Active FWD", msrp: 33180, finalPrice: 26871, discount: 6309, image: "https://content.homenetiol.com/640x480/f05d6bee8a55445d92b73f5858d66761.jpg" },
+    { year: 2025, make: "Ford", model: "Bronco Sport", trim: "Big Bend", vin: "3FMCR9BN0SRF78677", stock: "38470", style: "Big Bend 4x4", msrp: 34535, finalPrice: 27411, discount: 7124, image: "https://content.homenetiol.com/640x480/787a7895138549cf85cfbfe0987cb56b.jpg" },
+    { year: 2025, make: "Ford", model: "Bronco Sport", trim: "Big Bend", vin: "3FMCR9BN1SRF17189", stock: "38796", style: "Big Bend 4x4", msrp: 34685, finalPrice: 27679, discount: 7006, image: "https://content.homenetiol.com/640x480/dc69ae690dd14e82b75e7ffb61e59223.jpg" },
+    { year: 2025, make: "Ford", model: "Bronco Sport", trim: "Big Bend", vin: "3FMCR9BN9SRF55883", stock: "38799", style: "Big Bend 4x4", msrp: 34685, finalPrice: 27704, discount: 6981, image: "https://content.homenetiol.com/640x480/0487a99ad3454c3bb2d04433ab704dec.jpg" },
+    { year: 2026, make: "Ford", model: "Maverick", trim: "XL", vin: "3FTTW8A38TRA17863", stock: "38927", style: "XL FWD SuperCrew", msrp: 29990, finalPrice: 27715, discount: 2275, image: "https://content.homenetiol.com/640x480/d7a9d8907eaf46cc9d2ff9d5775ca8bc.jpg" },
+    { year: 2026, make: "Ford", model: "Escape", trim: "ST-Line", vin: "1FMCU0MN7TUA38115", stock: "38408", style: "ST-Line FWD", msrp: 34525, finalPrice: 27905, discount: 6620, image: "https://content.homenetiol.com/640x480/4d6403954e354eaca1c7d4f91e0644fa.jpg" },
+    { year: 2025, make: "Ford", model: "Bronco Sport", trim: "Big Bend", vin: "3FMCR9BN5SRF06065", stock: "38795", style: "Big Bend 4x4", msrp: 35680, finalPrice: 28042, discount: 7638, image: "https://content.homenetiol.com/640x480/01af41d84fcb4e3f81b4f144d53e7c8a.jpg" },
+    { year: 2026, make: "Ford", model: "Escape", trim: "ST-Line", vin: "1FMCU0MN2TUA42492", stock: "38525", style: "ST-Line FWD", msrp: 34525, finalPrice: 28125, discount: 6400, image: "https://content.homenetiol.com/640x480/8e85d44113834b029d6b061387dff71b.jpg" },
+    { year: 2025, make: "Ford", model: "Bronco Sport", trim: "Big Bend", vin: "3FMCR9BN8SRF17111", stock: "38798", style: "Big Bend 4x4", msrp: 35180, finalPrice: 28134, discount: 7046, image: "https://content.homenetiol.com/640x480/4e5e247f0388465182ede75ddb1b7f13.jpg" },
+    { year: 2025, make: "Ford", model: "Maverick", trim: "XL", vin: "3FTTW8B33SRB74911", stock: "38399", style: "XL AWD SuperCrew", msrp: 32955, finalPrice: 28417, discount: 4538, image: "https://content.homenetiol.com/640x480/5278ef379550461a8e732825148f5ae9.jpg" },
+    { year: 2026, make: "Ford", model: "Maverick", trim: "XLT", vin: "3FTTW8HA3TRA15751", stock: "38502", style: "XLT FWD SuperCrew", msrp: 31340, finalPrice: 28437, discount: 2903, image: "https://content.homenetiol.com/640x480/54e793d941be4d62bf3b58abd5c53509.jpg" },
+    { year: 2026, make: "Ford", model: "Escape", trim: "ST-Line", vin: "1FMCU0MN1TUA37414", stock: "38527", style: "ST-Line FWD", msrp: 35020, finalPrice: 28580, discount: 6440, image: "https://content.homenetiol.com/640x480/c212d13d560b483d848fa5e924c9595e.jpg" },
+    { year: 2025, make: "Ford", model: "Bronco Sport", trim: "Big Bend", vin: "3FMCR9BN8SRF56216", stock: "38797", style: "Big Bend 4x4", msrp: 36005, finalPrice: 28918, discount: 7087, image: "https://content.homenetiol.com/640x480/0d1c7351bfb34562848c403e21cbaed8.jpg" },
+    { year: 2025, make: "Ford", model: "Ranger", trim: "XL", vin: "1FTER4BH2SLE72708", stock: "38584", style: "XL 2WD SuperCrew 5' Box", msrp: 35390, finalPrice: 29087, discount: 6303, image: "https://content.homenetiol.com/640x480/222a7253dec84c79bcb57f1ea9580323.jpg" },
+    { year: 2025, make: "Ford", model: "Ranger", trim: "XL", vin: "1FTER4BH3SLE72667", stock: "38582", style: "XL 2WD SuperCrew 5' Box", msrp: 35390, finalPrice: 29087, discount: 6303, image: "https://content.homenetiol.com/640x480/226bb606e6e7418988857313d70d3d7a.jpg" },
+    { year: 2025, make: "Ford", model: "Ranger", trim: "XL", vin: "1FTER4BH2SLE72563", stock: "38581", style: "XL 2WD SuperCrew 5' Box", msrp: 35390, finalPrice: 29087, discount: 6303, image: "https://content.homenetiol.com/640x480/754bdfb6d5fd439594116e7498634720.jpg" },
+    { year: 2025, make: "Ford", model: "Ranger", trim: "XL", vin: "1FTER4BH5SLE65591", stock: "38858", style: "XL 2WD SuperCrew 5' Box", msrp: 35785, finalPrice: 29700, discount: 6085, image: "https://content.homenetiol.com/640x480/a30a057c91e94960baa2aa069768f711.jpg" },
+    { year: 2026, make: "Ford", model: "Escape Hybrid", trim: "ST-Line Select", vin: "1FMCU9NZ7TUA41764", stock: "38526", style: "ST-Line Select AWD", msrp: 36380, finalPrice: 29881, discount: 6499, image: "https://content.homenetiol.com/640x480/9a7d089d631b45a9a97ab4b2e346398b.jpg" },
+    { year: 2026, make: "Ford", model: "Maverick", trim: "XL", vin: "3FTTW8B33TRA03934", stock: "38373", style: "XL AWD SuperCrew", msrp: 33120, finalPrice: 30063, discount: 3057, image: "https://content.homenetiol.com/640x480/5962d869cd8c4a9390aee628aa99812a.jpg" },
+    { year: 2025, make: "Ford", model: "Ranger", trim: "XL", vin: "1FTER4BH9SLE64069", stock: "38884", style: "XL 2WD SuperCrew 5' Box", msrp: 36345, finalPrice: 30221, discount: 6124, image: "https://content.homenetiol.com/640x480/7ab743b0130e4d509dae276b6f939deb.jpg" },
+    { year: 2026, make: "Ford", model: "Maverick", trim: "XL", vin: "3FTTW8B31TRA05259", stock: "38554", style: "XL AWD SuperCrew", msrp: 33120, finalPrice: 30313, discount: 2807, image: "https://content.homenetiol.com/640x480/b2f7e180accb442f83c63b0287cdd4a9.jpg" }
 ];
 
 // Model-based metadata lookup
 function getModelMeta(model) {
     var meta = {
         "Escape":       { body: "SUV", engine: "2.0L EcoBoost I-4", trans: "8-Spd Auto", drive: "FWD" },
+        "Escape Hybrid": { body: "SUV", engine: "2.5L Hybrid I-4", trans: "eCVT", drive: "AWD" },
         "Bronco Sport": { body: "SUV", engine: "1.5L EcoBoost I-3", trans: "8-Spd Auto", drive: "AWD" },
         "Maverick":     { body: "Truck", engine: "2.0L EcoBoost I-4", trans: "8-Spd Auto", drive: "FWD" },
         "F-150":        { body: "Truck", engine: "2.7L V6 EcoBoost", trans: "10-Spd Auto", drive: "4WD" },
@@ -706,7 +707,7 @@ if (isNaN(vehicleId) || vehicleId < 0 || vehicleId >= vehicles.length) {
 
 var v = vehicles[vehicleId];
 var m = getModelMeta(v.model);
-var title = v.year + ' ' + v.make + ' ' + v.model;
+var title = v.year + ' ' + v.make + ' ' + v.model + ' ' + v.trim;
 
 // Update page title
 document.title = title + ' | Jarrett Scott Ford';
@@ -731,6 +732,7 @@ var descriptions = {
     "F-150": "This " + title + " represents the best-selling truck in America for good reason. With its powerful 2.7L V6 EcoBoost engine, advanced 10-speed automatic transmission, and available 4WD, it's ready for any task. The F-150 delivers impressive towing capacity, a spacious and well-appointed cabin, and Ford's latest technology including Pro Power Onboard and SYNC 4. Visit Jarrett Scott Ford in Plant City to experience the legendary F-150.",
     "Mustang": "This " + title + " delivers iconic American performance with modern refinement. The 2.3L EcoBoost engine produces exhilarating power through a precise 10-speed automatic transmission, while the rear-wheel-drive layout ensures pure driving excitement. With its aggressive styling, sport-tuned suspension, and driver-focused cockpit, the Mustang turns every drive into an experience. Test drive yours today at Jarrett Scott Ford in Plant City.",
     "Ranger": "This " + title + " is a mid-size truck that punches above its weight. With its powerful EcoBoost engine, capable 4WD system, and impressive towing and payload ratings, the Ranger is ready for work and play. The comfortable interior features modern technology and connectivity, while the rugged exterior is built to handle tough conditions. See it in person at Jarrett Scott Ford in Plant City.",
+    "Escape Hybrid": "This " + title + " combines the versatility of the Escape with the efficiency of a hybrid powertrain. The 2.5L Atkinson-cycle hybrid engine paired with an eCVT delivers outstanding fuel economy without sacrificing capability. With standard AWD, a spacious interior, and Ford Co-Pilot360 driver assistance, the Escape Hybrid is the perfect choice for eco-conscious drivers who refuse to compromise. Visit Jarrett Scott Ford in Plant City today for a test drive.",
     "Edge": "This " + title + " offers a refined crossover experience with athletic performance. The 2.0L EcoBoost engine provides plenty of power, while the AWD system delivers confident handling in all conditions. With a spacious interior, premium technology features, and a comfortable ride, the Edge is ideal for families and professionals alike. Visit Jarrett Scott Ford in Plant City for a test drive."
 };
 document.getElementById('vdp-description').textContent = descriptions[v.model] || "This " + title + " is a brand new vehicle available at Jarrett Scott Ford in Plant City, FL. Contact us today for more information, schedule a test drive, or get your best out-the-door price. We offer competitive financing, no hidden fees, and transparent pricing on every vehicle.";
@@ -741,7 +743,7 @@ document.getElementById('vdp-subtitle').textContent = m.body + ' | ' + m.engine 
 document.getElementById('vdp-vin').textContent = v.vin;
 document.getElementById('vdp-stock').textContent = v.stock;
 document.getElementById('vdp-msrp').textContent = fmt(v.msrp);
-document.getElementById('vdp-price').textContent = fmt(v.sellingPrice);
+document.getElementById('vdp-price').textContent = fmt(v.finalPrice);
 
 if (v.discount > 0) {
     document.getElementById('vdp-discount-row').style.display = 'flex';
