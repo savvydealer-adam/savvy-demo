@@ -2,16 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="description" content="Browse new Ford vehicles at Jarrett Scott Ford in Plant City, FL. No Hidden Fees. Your Price on every vehicle." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0" />
     <title>New Ford Inventory | Jarrett Scott Ford</title>
+    <meta name="description" content="Browse new Ford vehicles at Jarrett Scott Ford in Plant City, FL. No Hidden Fees. Your Price on every vehicle." />
     <link rel="shortcut icon" href="https://storage.googleapis.com/savvy-images/JarrettScottFord-logo.jpg" type="image/x-icon" />
-
-    <!-- jQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- Font Awesome 4.7 -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 
     <!-- Ford Antenna Fonts -->
     <style>
@@ -19,829 +13,748 @@
     @font-face { font-family: 'Ford Antenna Regular'; font-weight: 400; font-style: normal; font-display: swap; src: url(//r.remorainc.com/new/c/f/FordAntenna-Regular.woff) format('woff'), url(//r.remorainc.com/new/c/f/FordAntenna-Regular.ttf) format('truetype'); }
     </style>
 
-    <!-- CSS Variables - Jarrett Scott Ford theme -->
     <style>
-    :root {
-        --header-bg: #ffffff;
-        --nav-bg: #0071b2;
-        --primary-color: #0071b2;
-        --secondary-color: #bc0600;
-        --accent-color: #30770f;
-        --footer-bg: #282828;
-        --body-color: #19183C;
-        --link-color: #0678bc;
-        --font-family: 'Ford Antenna Regular', Arial, sans-serif;
-        --heading-font: 'Ford Antenna Bold', Arial, sans-serif;
-        --cta-color: #30770f;
-        --cta-hover: #256010;
-        --savings-color: #30770f;
-        --discount-color: #bc0600;
-    }
-    </style>
+        :root {
+            --bodyfont: 'Ford Antenna Regular', Arial, sans-serif;
+            --headingfont: 'Ford Antenna Bold', Arial, sans-serif;
+            --headerbg: #0071b2;
+            --footerbg: #282828;
+            --darkgrey: #393436;
+            --bodycolor: #19183C;
+            --secondarycolor: #0071b2;
+            --linktextcolor: #0678bc;
+            --headingcolor: #212529;
+            --blackcolor: #000000;
+            --whitecolor: #fff;
+            --greycolor: #808080;
+            --savingscolor: #bc0600;
+            --greencolor: #30770f;
+            --accentcolor: #30770f;
+            --transition: all 0.4s;
+        }
 
-    <!-- Base + Bootstrap 4 Grid -->
-    <style>
-    *, ::after, ::before { box-sizing: border-box; }
-    html { font-family: sans-serif; line-height: 1.15; -webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: transparent; }
-    footer, header, section, main, nav, aside { display: block; }
-    body { margin: 0; font-family: var(--font-family); font-size: 1rem; font-weight: 400; line-height: 1.5; color: var(--body-color); text-align: left; background-color: #fff; }
-    h1, h2, h3, h4, h5 { margin-top: 0; margin-bottom: .5rem; font-weight: 500; line-height: 1.2; font-family: var(--heading-font); }
-    p { margin-top: 0; margin-bottom: 1rem; font-size: 14px; }
-    a { color: var(--link-color); text-decoration: none; background-color: transparent; }
-    a:hover { color: #004062; text-decoration: underline; }
-    img { vertical-align: middle; border-style: none; max-width: 100%; }
-    ul { margin: 0; padding: 0; list-style: none; }
-    strong { font-weight: bolder; }
-    .container, .container-fluid { width: 100%; padding-right: 15px; padding-left: 15px; margin-right: auto; margin-left: auto; }
-    @media (min-width: 576px) { .container { max-width: 540px; } }
-    @media (min-width: 768px) { .container { max-width: 720px; } }
-    @media (min-width: 992px) { .container { max-width: 960px; } }
-    @media (min-width: 1200px) { .container { max-width: 1180px; } }
-    .row { display: flex; flex-wrap: wrap; margin-right: -15px; margin-left: -15px; }
-    [class*="col-"] { position: relative; width: 100%; padding-right: 15px; padding-left: 15px; }
-    @media (min-width: 576px) {
-        .col-sm-3 { flex: 0 0 25%; max-width: 25%; }
-        .col-sm-4 { flex: 0 0 33.333333%; max-width: 33.333333%; }
-        .col-sm-6 { flex: 0 0 50%; max-width: 50%; }
-        .col-sm-8 { flex: 0 0 66.666667%; max-width: 66.666667%; }
-        .col-sm-12 { flex: 0 0 100%; max-width: 100%; }
-    }
-    @media (min-width: 768px) {
-        .col-md-3 { flex: 0 0 25%; max-width: 25%; }
-        .col-md-4 { flex: 0 0 33.333333%; max-width: 33.333333%; }
-        .col-md-5 { flex: 0 0 41.666667%; max-width: 41.666667%; }
-        .col-md-6 { flex: 0 0 50%; max-width: 50%; }
-        .col-md-8 { flex: 0 0 66.666667%; max-width: 66.666667%; }
-    }
-    @media (min-width: 992px) {
-        .col-lg-3 { flex: 0 0 25%; max-width: 25%; }
-        .col-lg-9 { flex: 0 0 75%; max-width: 75%; }
-    }
-    .text-center { text-align: center !important; }
-    .text-left { text-align: left !important; }
-    .img-responsive { max-width: 100%; height: auto; }
-    .form-control { display: block; width: 100%; height: calc(1.5em + .75rem + 2px); padding: .375rem .75rem; font-size: 1rem; font-weight: 400; line-height: 1.5; color: #495057; background-color: #fff; background-clip: padding-box; border: 1px solid #ced4da; border-radius: .25rem; }
-    .btn { display: inline-block; font-weight: 400; color: #212529; text-align: center; vertical-align: middle; user-select: none; background-color: transparent; border: 1px solid transparent; padding: .375rem .75rem; font-size: 1rem; line-height: 1.5; border-radius: .25rem; cursor: pointer; text-decoration: none !important; }
-    .btn:hover { text-decoration: none; }
-    .hide { display: none !important; }
-    .flex { display: flex; }
-    .row-wrap { flex-wrap: wrap; }
-    .align-center { align-items: center; }
-    .align-top { align-items: flex-start; }
-    .justify-center { justify-content: center; }
-    .justify-between { justify-content: space-between; }
-    .border-top-dash { border-top: 1px dashed #ccc; margin-top: 4px; padding-top: 4px; }
-    </style>
+        *, *::before, *::after { box-sizing: border-box; }
+        body { margin: 0; font-family: var(--bodyfont); color: var(--bodycolor); font-size: 16px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+        a { color: var(--linktextcolor); text-decoration: none; }
+        a:hover { color: var(--blackcolor); }
+        img { max-width: 100%; height: auto; }
+        .flex { display: flex; }
+        .align-center { align-items: center; }
+        .align-top { align-items: flex-start; }
+        .space-between { justify-content: space-between; }
+        .justify-center { justify-content: center; }
+        .row-wrap { flex-flow: row wrap; }
+        .text-uppercase { text-transform: uppercase; }
+        .container { margin: 0 auto; padding: 0 15px; }
+        @media(min-width:768px) { .container { width: 750px; } }
+        @media(min-width:992px) { .container { width: 970px; } }
+        @media(min-width:1200px) { .container { width: 1170px; } }
+        @media(min-width:1430px) { .container { width: 1400px; } }
+        @media(min-width:1630px) { .container { width: 1630px; } }
 
-    <!-- Platform Styles - Header / Nav / Footer (Jarrett Scott Ford theme) -->
-    <style>
-    * { font-family: var(--font-family); }
+        /* ========== HEADER ========== */
+        .site-header {
+            background: #fff;
+            border-bottom: 1px solid #f5f5f5;
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+        }
+        .site-header .sh-inner {
+            max-width: 1630px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+        .header-dealer-logo { flex-shrink: 0; }
+        .header-dealer-logo img {
+            max-height: 60px;
+            width: auto;
+            display: block;
+        }
+        .header-contact {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            font-size: 14px;
+        }
+        .header-contact a {
+            color: var(--headerbg);
+            font-weight: 500;
+            transition: opacity 0.2s;
+        }
+        .header-contact a:hover { opacity: 0.8; }
+        .header-contact .hdr-phone {
+            font-size: 18px;
+            font-family: var(--headingfont);
+            font-weight: 700;
+        }
+        .header-contact .hdr-address {
+            font-size: 13px;
+            color: #555;
+        }
+        .header-nav {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .header-nav a {
+            color: #333;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 6px 12px;
+            border-radius: 4px;
+            transition: background 0.2s, color 0.2s;
+        }
+        .header-nav a:hover {
+            background: #e8f4fc;
+            color: var(--headerbg);
+        }
+        .header-nav a.active {
+            background: #e8f4fc;
+            color: var(--headerbg);
+            font-weight: 700;
+        }
 
-    /* HEADER - White background, logo left, info right (matches ford-starter/index.html) */
-    .headertop { background-color: var(--header-bg); padding: 15px 0; }
-    .headertop .container .row { display: flex; align-items: center; }
-    .hdrLogo a { display: block; }
-    .hdrLogo img.site-logo { max-width: 100%; height: auto; max-height: 80px; }
-    .hdrightInr { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 20px; }
-    ul.listInfo li { display: inline-block; vertical-align: middle; }
-    ul.listInfo li + li { padding-left: 28px; }
-    ul.listInfo li a { font-size: 16px; text-decoration: none !important; color: var(--primary-color); }
-    #headerFormView_phoneRef { font-size: 20px; text-decoration: none !important; }
-    .paddress { margin: 0; }
-    .paddress a { color: var(--primary-color) !important; font-size: 14px; }
-    .btntop { vertical-align: middle; position: relative; }
-    .btntop a { background: var(--accent-color); color: #fff !important; padding: 8px 16px; border-radius: 4px; text-decoration: none !important; font-size: 13px; font-weight: 600; display: inline-block; text-transform: uppercase; letter-spacing: 0.5px; }
-    .btntop a:hover { background: #256010; text-decoration: none !important; }
-    .hdrightInr .btntop { position: relative; top: auto; margin-left: 0; margin-right: 0; display: inline-block; }
+        /* ========== NAV BAR ========== */
+        .nav-bar {
+            background: var(--headerbg);
+            border-bottom: 3px solid var(--accentcolor);
+        }
+        .nav-bar .nb-inner {
+            max-width: 1630px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .nav-bar a {
+            color: #fff;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 10px 14px;
+            transition: background 0.2s;
+        }
+        .nav-bar a:hover, .nav-bar a.active {
+            background: var(--accentcolor);
+            color: #fff;
+        }
+        .nav-bar .hablamos-badge {
+            margin-left: auto;
+            background: var(--accentcolor);
+            color: #fff;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 3px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
 
-    /* NAV - Blue background with white text, green accent border */
-    .navMain { background-color: var(--nav-bg); border-bottom: 2px solid var(--accent-color); }
-    .navmenu { text-align: center; }
-    .navmenu ul { display: flex; justify-content: center; }
-    .navmenu ul > li { display: inline-block; vertical-align: middle; position: relative; }
-    .navmenu ul > li a { color: #fff; display: block; font-size: 13px; font-weight: 700; text-transform: uppercase; padding: 10px 12px; letter-spacing: 2px; text-decoration: none; }
-    .navmenu ul > li a:hover, .navmenu ul > li:hover > a { background: var(--accent-color) !important; color: #fff; text-decoration: none; }
-    .navmenu ul > li a.active-nav { background: var(--accent-color); color: #fff; }
-    .navmenu ul > li i.fa-caret-down { margin-left: 4px; font-size: 12px; }
-    ul.submenu { flex-flow: column; color: #000; }
-    ul.submenu > li a { padding: 10px 13px; display: block; color: #000; font-size: 13px; text-align: left; text-decoration: none; font-weight: 400; }
-    ul.submenu > li a:hover { background: var(--primary-color); color: #fff; }
+        /* ── SRP Layout ── */
+        .search-page-main { padding: 30px 0; background: rgb(40 40 40 / 5%); min-height: 80vh; }
+        .search-page-main .container { width: 100%; max-width: 1630px; }
+        .search-page-main .inner { display: flex; flex-wrap: wrap; }
 
-    /* Mobile menu */
-    .closeIcn { color: #fff; cursor: pointer; font-size: 33px; font-weight: 300; left: -50px; position: fixed; top: 7px; z-index: 55; }
-    .menuIcn { color: var(--primary-color); font-size: 24px; padding: 0 7px; position: absolute; right: 10px; top: 10px; cursor: pointer; z-index: 10; }
-    .overlay { background: rgba(0,0,0,.85); bottom: 0; left: 0; opacity: 0; position: fixed; right: 0; top: 0; visibility: hidden; z-index: 50; transition: opacity 0.3s; }
-    .arrowbtn { background: #ddd; height: 20px; line-height: 20px; position: absolute; right: 13px; top: 10px; width: 20px; z-index: 5; cursor: pointer; text-align: center; display: none; }
+        /* Filter Panel */
+        .filter-panel { width: 21%; align-self: flex-start; background: #fff; border: 1px solid rgba(36,39,44,.1); box-shadow: 0 6px 10px rgba(0,0,0,.05); border-radius: 12px; padding: 24px 20px; position: sticky; top: 80px; }
+        .filter-panel .card-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid #eee; }
+        .filter-panel .cardtitle { font-size: 22px; font-weight: 700; margin: 0; font-family: var(--headingfont); }
+        .filter-panel .share-link { font-size: 13px; color: var(--linktextcolor); display: flex; align-items: center; gap: 6px; }
+        .filter-panel .share-link svg { width: 14px; height: 14px; fill: var(--linktextcolor); }
 
-    /* FOOTER - Dark (#282828) with 4-column layout (matches ford-starter/index.html) */
-    footer { background-color: var(--footer-bg); padding-top: 50px; color: #fff; }
-    .ftrSingle { margin-bottom: 25px; }
-    .ftrSingle h4 { font-size: 16px; font-weight: 700; text-transform: uppercase; margin-bottom: 20px; letter-spacing: 1px; border-bottom: 2px solid var(--accent-color); padding-bottom: 10px; }
-    .ftrSingle ul li + li { padding-top: 15px; }
-    .ftrSingle ul li a { font-size: 13px; text-transform: uppercase; color: #fff; letter-spacing: 1px; text-decoration: none !important; }
-    .ftrSingle ul li a:hover { color: var(--primary-color); }
-    .addftr { display: flex; width: 100%; margin-bottom: 25px; }
-    .addIocn { margin-right: 15px; width: 25px; flex-shrink: 0; }
-    .addIocn .fa { color: var(--primary-color); font-size: 18px; }
-    .ftr-address { font-size: 13px; line-height: 1.6; color: #ccc; }
-    .ftr-address a { color: #ccc; }
-    .ftr-address a:hover { color: var(--primary-color); }
-    .fmid { padding: 20px 0; text-align: center; border-top: 1px solid #3e3e3e; margin-top: 50px; }
-    .fmid p { color: #999; font-size: 13px; margin-bottom: 5px; }
-    .fmid a { color: var(--primary-color); text-decoration: none; }
-    .fmid a:hover { text-decoration: underline; }
-    .socicon { padding: 5px; margin: 5px; width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; text-align: center; color: #fff; font-size: 16px; transition: opacity 0.2s; }
-    .socicon:hover { opacity: 0.8; }
-    .fb { background: #4064ad; } .tw { background: #1c9deb; }
-    .ig { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+        /* Search within filters */
+        .searchform-main { margin-bottom: 16px; }
+        .searchform-main .form-field { display: flex; border: 1px solid #ddd; border-radius: 6px; overflow: hidden; }
+        .searchform-main input { flex: 1; padding: 10px 12px; border: none; outline: none; font-family: inherit; font-size: 14px; }
+        .searchform-main .search-btn { padding: 10px 14px; background: var(--secondarycolor); display: flex; align-items: center; cursor: pointer; }
+        .searchform-main .search-btn svg { width: 16px; height: 16px; fill: #fff; }
 
-    /* Sticky */
-    .sticky .navMain { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
-    .sticky .headertop { display: none; }
-    </style>
+        /* Reset button */
+        .reset-btn { margin-bottom: 16px; }
+        .reset-btn a { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 10px 16px; background: var(--secondarycolor); color: #fff; border: 1px solid var(--secondarycolor); border-radius: 6px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; transition: var(--transition); }
+        .reset-btn a:hover { background: transparent; color: var(--secondarycolor); }
+        .reset-btn a svg { width: 14px; height: 14px; fill: currentColor; }
 
-    <!-- SRP Page Styles (matches SavvyDealer platform layout) -->
-    <style>
-    /* ===== SEARCH PAGE MAIN ===== */
-    .search-page-main { padding: 0 0 40px; }
-    .search-page-main .container { max-width: 1180px; }
+        /* Filter accordion */
+        .filter-item { border-bottom: 1px solid #eee; padding: 12px 0; }
+        .filter-item .title { font-size: 14px; font-weight: 700; text-transform: uppercase; cursor: pointer; display: flex; align-items: center; justify-content: space-between; font-family: var(--headingfont); }
+        .filter-item .title::after { content: ""; width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 5px solid var(--bodycolor); transition: transform 0.3s; }
+        .filter-item.open .title::after { transform: rotate(180deg); }
+        .filter-item .accordion-content { padding-top: 8px; }
+        .filter-item .accordion-content ul { list-style: none; padding: 0; margin: 0; }
+        .filter-item .accordion-content li { display: flex; align-items: center; justify-content: space-between; padding: 6px 0; font-size: 14px; cursor: pointer; transition: color 0.2s; }
+        .filter-item .accordion-content li:hover { color: var(--secondarycolor); }
+        .filter-item .accordion-content li.active { color: var(--secondarycolor); font-weight: 700; }
+        .filter-item .badge { background: #f0f0f0; color: var(--greycolor); font-size: 12px; padding: 2px 8px; border-radius: 10px; font-weight: 600; }
 
-    /* Toolbar */
-    .srp-toolbar { background: #f6f6f6; border-bottom: 2px solid var(--accent-color); padding: 12px 0; }
-    .srp-toolbar .container { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
-    .srp-toolbar h1 { font-size: 20px; margin: 0; color: var(--primary-color); }
-    .srp-toolbar .count { color: #666; font-weight: 400; font-size: 14px; }
-    .srp-toolbar-right { display: flex; align-items: center; gap: 12px; }
-    .srp-toolbar select { padding: 6px 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 13px; font-family: var(--font-family); }
+        /* ── Results Area ── */
+        .filter-result-wrapper { width: calc(79% - 30px); margin: 0 0 0 30px; }
 
-    /* Filter sidebar */
-    .filter-sidebar { background: #fff; }
-    .filter-section { border-bottom: 1px solid #e5e5e5; }
-    .filter-section-header { padding: 12px 10px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: #333; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: #fafafa; }
-    .filter-section-header:hover { background: #f0f0f0; }
-    .filter-section-header i { font-size: 11px; color: #999; transition: transform 0.2s; }
-    .filter-section-header.collapsed i { transform: rotate(-90deg); }
-    .filter-section-body { padding: 8px 10px; max-height: 220px; overflow-y: auto; }
-    .filter-section-body.collapsed { display: none; }
-    .filter-item { display: flex; align-items: center; justify-content: space-between; padding: 4px 0; font-size: 13px; }
-    .filter-item label { display: flex; align-items: center; gap: 6px; cursor: pointer; flex: 1; color: #444; }
-    .filter-item label:hover { color: var(--primary-color); }
-    .filter-item input[type="checkbox"] { accent-color: var(--primary-color); width: 15px; height: 15px; }
-    .filter-count { font-size: 11px; color: #999; }
-    .filter-search { width: 100%; padding: 5px 8px; border: 1px solid #ddd; border-radius: 3px; font-size: 12px; margin-bottom: 6px; }
-    .filter-btn-mobile { display: none; width: 100%; padding: 10px; background: var(--primary-color); color: #fff; border: none; font-size: 14px; font-weight: 700; text-transform: uppercase; cursor: pointer; border-radius: 4px; margin: 10px 0; }
-    .filter-btn-mobile i { margin-right: 6px; }
+        /* Inventory header bar */
+        .inventory-detail { background: #fff; border: 1px solid rgba(36,39,44,.1); box-shadow: 0 6px 10px rgba(0,0,0,.05); border-radius: 12px; padding: 16px 24px; margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+        .inventory-detail .count { font-size: 20px; font-weight: 700; font-family: var(--headingfont); }
+        .inventory-detail .sort-by { display: flex; align-items: center; gap: 8px; font-size: 14px; }
+        .inventory-detail .sort-by select { padding: 8px 12px; border: 1px solid #ddd; border-radius: 6px; font-family: inherit; font-size: 14px; cursor: pointer; }
+        .filter-buttons { display: flex; gap: 8px; }
+        .filter-buttons div { padding: 8px; cursor: pointer; border-radius: 6px; transition: var(--transition); }
+        .filter-buttons div:hover, .filter-buttons div.active { background: var(--secondarycolor); }
+        .filter-buttons div:hover svg, .filter-buttons div.active svg { fill: #fff; }
+        .filter-buttons svg { width: 18px; height: 18px; fill: #666; display: block; }
 
-    /* ===== LIST ITEMS (Platform card layout) ===== */
-    .list-wrapper { }
-    .list-item { background: #fff; border: 1px solid #e5e5e5; margin-bottom: 12px; border-radius: 0; transition: box-shadow 0.2s; }
-    .list-item:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        /* Mobile filter button (hidden by default) */
+        .mobile-filter-btn { display: none; align-items: center; justify-content: center; gap: 8px; padding: 12px 20px; background: var(--secondarycolor); color: #fff; border: none; border-radius: 8px; font-family: inherit; font-size: 14px; font-weight: 700; cursor: pointer; margin-bottom: 16px; width: 100%; }
+        .mobile-filter-btn svg { width: 16px; height: 16px; fill: #fff; }
 
-    .list-item-inner { display: flex; flex-wrap: wrap; align-items: flex-start; }
+        /* ── Vehicle Cards (Grid View) ── */
+        .list-wrapper { display: flex; flex-wrap: wrap; gap: 20px; }
+        .list-item { width: calc(25% - 15px); background: #fff; border: 1px solid rgba(36,39,44,.1); box-shadow: 0 6px 10px rgba(0,0,0,.05); border-radius: 12px; overflow: hidden; transition: box-shadow 0.3s; }
+        .list-item:hover { box-shadow: 0 8px 24px rgba(0,0,0,.12); }
+        .list-item-inner { display: flex; flex-direction: column; height: 100%; }
+        .list-item-inner > div { width: 100%; }
 
-    /* Image block */
-    .image-block { flex: 0 0 280px; max-width: 280px; padding: 12px; position: relative; background: #f4f4f4; }
-    .image-block img { width: 100%; height: auto; display: block; object-fit: contain; padding: 12px; }
-    .image-block .badge-label { position: absolute; top: 18px; left: 18px; padding: 3px 10px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: #fff; border-radius: 2px; }
-    .badge-new { background: var(--accent-color); }
-    .badge-special { background: var(--secondary-color); }
-    .badge-arriving { background: var(--primary-color); }
-    .image-block .photo-count { position: absolute; bottom: 18px; right: 18px; background: rgba(0,0,0,0.6); color: #fff; font-size: 11px; padding: 2px 7px; border-radius: 2px; }
+        /* Image */
+        .list-item .image-block { position: relative; overflow: hidden; background: #f4f4f4; }
+        .list-item .image-block img { width: 100%; aspect-ratio: 4/3; object-fit: contain; border-radius: 12px 12px 0 0; transition: transform 0.4s; padding: 12px; }
+        .list-item:hover .image-block img { transform: scale(1.03); }
 
-    /* Details block */
-    .list-item-detail { flex: 1; min-width: 200px; padding: 12px 15px; }
-    .list-item-detail .title { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; }
-    .list-item-detail .title h3 { font-size: 16px; margin: 0; line-height: 1.3; }
-    .vehicleCardTitle { color: var(--primary-color); text-decoration: none !important; font-weight: 700; }
-    .vehicleCardTitle:hover { color: #004062; }
-    .vehicleCardTitle .trim-text { display: block; font-size: 13px; color: #666; font-weight: 400; }
+        .watchlist-icon { position: absolute; bottom: 10px; right: 10px; width: 32px; height: 32px; background: rgba(255,255,255,0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: var(--transition); }
+        .watchlist-icon:hover { background: var(--secondarycolor); }
+        .watchlist-icon:hover svg { fill: #fff; }
+        .watchlist-icon svg { width: 16px; height: 16px; fill: #999; }
 
-    .watchlist-icon { cursor: pointer; color: #ccc; font-size: 18px; margin-left: 10px; flex-shrink: 0; }
-    .watchlist-icon:hover, .watchlist-icon.active { color: var(--secondary-color); }
+        /* Details */
+        .list-item-detail { padding: 15px 15px 0; }
+        .list-item-detail .title-row { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 8px; }
+        .vehicleCardTitle { color: #0678bc; font-size: 16px; font-weight: 700; line-height: 1.3; font-family: var(--headingfont); }
+        .vehicleCardTitle:hover { text-decoration: underline; }
+        .details-wrapper { font-size: 13px; }
+        .details-wrapper .details { display: flex; justify-content: space-between; padding: 3px 0; }
+        .details-wrapper .details .label { color: #999; }
+        .details-wrapper .details .value { font-weight: 600; text-align: right; }
 
-    /* Details grid */
-    .details-wrapper { margin-top: 8px; }
-    .details-wrapper .details { display: flex; align-items: center; padding: 3px 0; font-size: 13px; border-bottom: 1px solid #f5f5f5; }
-    .details-wrapper .details:last-child { border-bottom: none; }
-    .details-wrapper .details .label { font-weight: 700; color: #555; min-width: 90px; }
-    .details-wrapper .details .value { color: #333; }
+        /* Price Block */
+        .list-item-price { padding: 0 15px 15px; display: flex; flex-direction: column; flex-grow: 1; }
 
-    /* MPG row */
-    .mpg { display: flex; gap: 20px; padding: 6px 0; margin-bottom: 4px; border-bottom: 1px solid #f0f0f0; }
-    .mpg .icon-wrapper { display: flex; align-items: center; gap: 6px; font-size: 13px; color: #555; }
-    .mpg .icon-wrapper i { font-size: 14px; color: var(--primary-color); }
-    .mpg .icon-wrapper .mpg-num { font-weight: 700; font-size: 16px; color: #333; }
+        /* Price summary bar */
+        .mobile-apr-price-wrapper { padding: 10px 12px; background: #fafafa; border: 1px solid #eee; border-radius: 8px; margin-top: 10px; }
+        .mobile-apr-price-wrapper .price-display { display: flex; align-items: center; justify-content: space-between; }
+        .yousave-price { text-align: left; }
+        .yousave-price .amount { font-size: 15px; font-weight: 800; color: var(--savingscolor); }
+        .yousave-price .save-label { font-size: 10px; color: var(--linktextcolor); text-transform: uppercase; font-weight: 700; display: block; }
+        .mobile-price { text-align: right; }
+        .mobile-price .price { font-size: 20px; font-weight: 700; color: var(--bodycolor); }
+        .mobile-price .price-label { font-size: 10px; color: var(--linktextcolor); text-transform: uppercase; font-weight: 700; display: block; }
 
-    /* Price block */
-    .list-item-price { flex: 0 0 240px; max-width: 240px; padding: 12px 15px; border-left: 1px solid #f0f0f0; }
+        /* "Price Details" toggle */
+        .price-toggle { padding: 6px 0; margin-top: 6px; cursor: pointer; font-size: 13px; color: var(--linktextcolor); display: flex; align-items: center; justify-content: center; gap: 4px; user-select: none; }
+        .price-toggle:hover { color: var(--bodycolor); }
+        .price-toggle svg { width: 10px; height: 10px; fill: currentColor; transition: transform 0.3s; }
+        .price-toggle.open svg { transform: rotate(180deg); }
 
-    .price-breakup { display: none; }
-    .price-breakup.show { display: block; }
-    .price-toggle { cursor: pointer; text-align: center; font-size: 13px; color: #666; padding: 8px 0; font-weight: 600; }
-    .price-toggle svg { transition: transform 0.3s; display: inline-block; vertical-align: middle; margin-left: 4px; }
-    .price-toggle.open svg { transform: rotate(180deg); }
-    .price-breakup .price-row { display: flex; justify-content: space-between; align-items: baseline; padding: 3px 0; font-size: 13px; }
-    .price-breakup .price-row .pricing-label { color: #555; }
-    .price-breakup .price-row .pricing-label strong { font-weight: 700; }
-    .price-breakup .price-row .price { color: #333; text-align: right; }
+        /* Hidden price breakdown */
+        .price-breakup { display: none; padding: 10px 0 4px; }
+        .price-breakup.show { display: block; }
+        .price-breakup .row { display: flex; justify-content: space-between; padding: 3px 0; font-size: 13px; }
+        .price-breakup .label { color: #999; }
+        .price-breakup .msrp { text-decoration: line-through; color: #999; }
+        .price-breakup .msrp::before { content: "$"; }
+        .price-breakup .dealersavingsprice { color: var(--savingscolor); font-weight: 700; }
+        .price-breakup .finalprice { color: #30770f; font-weight: 700; }
+        .price-breakup .border-top-dash { border-top: 1px dashed #ddd; margin-top: 4px; padding-top: 6px; }
 
-    /* MSRP strikethrough */
-    .price-breakup .price-row.msrp-row .price { text-decoration: line-through; color: #999; }
+        /* No-fees disclaimer */
+        .no-fees { text-align: center; padding: 6px 0 2px; font-size: 11px; font-weight: 700; color: var(--greencolor); }
 
-    /* Dealer discount - red */
-    .price-breakup .price-row .price.dealersavingsprice { color: var(--discount-color); font-weight: 700; }
-    .price-breakup .price-row .price.openRebate { color: var(--discount-color); }
+        /* CTA Buttons */
+        .card-actions { margin-top: auto; display: flex; flex-direction: column; gap: 6px; padding-top: 8px; }
+        .btn_3 a { background: var(--secondarycolor); color: #fff; text-transform: uppercase; font-weight: 700; border: 1px solid var(--secondarycolor); display: flex; align-items: center; justify-content: center; border-radius: 6px; font-size: 13px; line-height: 1.5; letter-spacing: 1px; padding: 12px 16px; transition: var(--transition); }
+        .btn_3 a:hover { background: transparent; color: var(--secondarycolor); }
+        .btn_4 a { background: transparent; color: var(--secondarycolor); text-transform: uppercase; font-weight: 700; border: 1px solid var(--secondarycolor); display: flex; align-items: center; justify-content: center; border-radius: 6px; font-size: 13px; line-height: 1.5; letter-spacing: 1px; padding: 12px 16px; transition: var(--transition); }
+        .btn_4 a:hover { background: var(--secondarycolor); color: #fff; }
 
-    /* Final price - green */
-    .price-breakup .price-row.final-row { border-top: 1px dashed #ccc; margin-top: 4px; padding-top: 6px; }
-    .price-breakup .price-row.final-row .pricing-label { font-size: 14px; }
-    .price-breakup .price-row.final-row .price.finalprice { font-size: 20px; font-weight: 700; color: var(--savings-color); }
+        /* ── Pagination ── */
+        .pagination-wrapper { padding: 24px 0; display: flex; justify-content: center; }
+        .pagination { display: flex; list-style: none; padding: 0; margin: 0; gap: 4px; }
+        .pagination li { cursor: pointer; }
+        .pagination li span { display: block; padding: 8px 14px; border: 1px solid #ddd; border-radius: 6px; font-size: 14px; font-weight: 600; color: #666; transition: var(--transition); }
+        .pagination li:hover span { border-color: var(--secondarycolor); color: var(--secondarycolor); }
+        .pagination li.active span { background: var(--secondarycolor); color: #fff; border-color: var(--secondarycolor); }
+        .pagination li.disabled span { color: #ccc; cursor: default; }
+        .pagination li.disabled:hover span { border-color: #ddd; color: #ccc; }
 
-    /* Savings line */
-    .price-breakup .price-row.savings-row .pricing-label,
-    .price-breakup .price-row.savings-row .price { color: var(--savings-color); font-weight: 600; font-size: 12px; }
+        /* ========== FOOTER ========== */
+        .site-footer {
+            background: var(--footerbg);
+            color: #ccc;
+            padding: 48px 0 0;
+        }
+        .site-footer .ft-inner {
+            max-width: 1630px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #3a3a3a;
+        }
+        .footer-col h4 {
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: #fff;
+            margin: 0 0 16px;
+            font-family: var(--headingfont);
+            border-bottom: 2px solid var(--accentcolor);
+            padding-bottom: 10px;
+        }
+        .footer-col ul { list-style: none; padding: 0; margin: 0; }
+        .footer-col li { margin-bottom: 10px; }
+        .footer-col a { color: #aaa; font-size: 14px; transition: color 0.2s; }
+        .footer-col a:hover { color: #fff; }
+        .footer-bottom {
+            padding: 20px 24px;
+            text-align: center;
+            font-size: 13px;
+            color: #777;
+        }
+        .footer-bottom a { color: var(--headerbg); font-weight: 500; }
+        .footer-bottom a:hover { text-decoration: underline; }
 
-    /* No fees disclaimer */
-    .vic-disclaimer { text-align: center; padding: 8px 0 4px; }
-    .vic-disclaimer span { font-weight: 700; color: var(--savings-color); font-size: 12px; }
-
-    /* CTA buttons on card */
-    .list-item-ctas { display: flex; gap: 6px; padding: 0 15px 12px; }
-    .list-item-ctas .btn-cta { flex: 1; padding: 8px 12px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; border-radius: 3px; text-align: center; text-decoration: none !important; }
-    .btn-cta-primary { background: var(--cta-color); color: #fff !important; border: none; }
-    .btn-cta-primary:hover { background: var(--cta-hover); }
-    .btn-cta-outline { background: #fff; color: var(--primary-color) !important; border: 1px solid var(--primary-color); }
-    .btn-cta-outline:hover { background: var(--primary-color); color: #fff !important; }
-
-    /* Pagination */
-    .srp-pagination { display: flex; justify-content: center; align-items: center; gap: 4px; padding: 25px 0; }
-    .srp-pagination a, .srp-pagination span {
-        display: inline-flex; align-items: center; justify-content: center;
-        min-width: 36px; height: 36px; padding: 0 8px; border-radius: 3px; font-size: 14px; font-weight: 600;
-        text-decoration: none !important; border: 1px solid #ddd; color: #333; background: #fff;
-    }
-    .srp-pagination span.current { background: var(--primary-color); color: #fff; border-color: var(--primary-color); }
-    .srp-pagination a:hover { background: #f0f0f0; }
-    </style>
-
-    <!-- Responsive -->
-    <style>
-    @media screen and (min-width: 768px) {
-        .menuIcn { display: none; }
-        ul.submenu { background-color: #fff; top: 100%; padding: 0; position: absolute; opacity: 0; visibility: hidden; z-index: 99999; min-width: 220px; box-shadow: 0 6px 12px rgba(0,0,0,.175); transition: opacity .3s; }
-        .navmenu ul li:hover .submenu { opacity: 1; visibility: visible; }
-        .arrowbtn { display: none; }
-    }
-    @media screen and (max-width: 991px) {
-        .navmenu ul li a { font-size: 12px; padding: 10px 10px; }
-        .image-block { flex: 0 0 220px; max-width: 220px; }
-        .list-item-price { flex: 0 0 200px; max-width: 200px; }
-        .filter-col { display: none; }
-        .filter-col.show { display: block; position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 1100; background: #fff; overflow-y: auto; padding: 0; }
-        .filter-col.show .filter-close-btn { display: block; }
-        .filter-btn-mobile { display: block; }
-        footer .col-lg-3 { flex: 0 0 50%; max-width: 50%; }
-    }
-    @media screen and (max-width: 767px) {
-        header { position: static; }
-        .headertop { padding: 10px 0; }
-        .headertop .container { flex-wrap: wrap; gap: 8px; }
-        .hdrLogo { width: 150px; }
-        .logo-div { width: 25%; }
-        .info-div { width: 70%; }
-        .site-logo { width: 30% !important; }
-        .hdrightInr { margin-top: 0; margin-bottom: 0; flex-direction: column; align-items: flex-start; gap: 5px; }
-        .hdrightInr .btntop { top: auto !important; margin-left: 0 !important; margin-top: 5px; }
-        .openmenu .navmenu { left: 0; }
-        .navmenu, .closeIcn { transition: all 300ms; }
-        .navmenu { background: #2a78a6; bottom: 0; left: -250px; margin: 0; max-height: 100%; overflow: auto; position: fixed; text-align: left; top: 0; width: 250px; z-index: 55; }
-        .navmenu ul { display: block; }
-        .navmenu ul li { display: block; border-bottom: 1px solid rgba(255,255,255,0.15); }
-        .navmenu ul li a { color: #fff; }
-        .openmenu .closeIcn { left: 260px; }
-        .openmenu .overlay { opacity: 1; visibility: visible; }
-        ul.submenu { display: none; background: rgba(0,0,0,0.2); }
-        .arrowbtn { display: block; }
-        .navmenu ul li a i.fa-caret-down { display: none; }
-
-        /* Card stacks vertically on mobile */
-        .list-item-inner { flex-direction: column; }
-        .image-block { flex: 0 0 auto; max-width: 100%; width: 100%; }
-        .list-item-detail { width: 100%; }
-        .list-item-price { flex: 0 0 auto; max-width: 100%; width: 100%; border-left: none; border-top: 1px solid #f0f0f0; }
-        .srp-toolbar h1 { font-size: 16px; }
-        /* Footer mobile */
-        .ftrSingle { text-align: center; margin-bottom: 15px; }
-        .addftr { display: flex; width: 100%; max-width: 243px; margin: 0 auto 15px auto; text-align: left; }
-        .fmid { margin-top: 10px; padding: 10px 0; }
-        footer .col-lg-3 { flex: 0 0 100%; max-width: 100%; }
-    }
-    @media screen and (max-width: 600px) {
-        .hdrLogo img.site-logo { max-height: 40px; }
-        .hdrLogo { width: 115px; }
-    }
-    .filter-close-btn { display: none; position: sticky; top: 0; z-index: 10; background: var(--primary-color); color: #fff; border: none; width: 100%; padding: 12px; font-size: 14px; font-weight: 700; text-transform: uppercase; cursor: pointer; }
+        /* ── Responsive ── */
+        @media (max-width: 1429px) {
+            .filter-panel { width: 25%; }
+            .filter-result-wrapper { width: calc(75% - 30px); }
+            .list-item { width: calc(33.33% - 14px); }
+        }
+        @media (max-width: 1199px) {
+            .list-item { width: calc(50% - 10px); }
+            .filter-buttons { display: none; }
+        }
+        @media (max-width: 1023px) {
+            .header-nav { display: none; }
+        }
+        @media (max-width: 991px) {
+            .filter-panel { display: none; }
+            .filter-result-wrapper { width: 100%; margin: 0; }
+            .list-item { width: calc(50% - 10px); }
+            .mobile-filter-btn { display: flex !important; }
+        }
+        @media (max-width: 767px) {
+            .list-item { width: 100%; }
+            .site-header .sh-inner {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+            }
+            .header-contact { display: none; }
+            .nav-bar .nb-inner { flex-wrap: wrap; justify-content: center; }
+            .nav-bar a { font-size: 11px; padding: 8px 8px; letter-spacing: 1px; }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
     </style>
 </head>
 <body>
 
-<!-- HEADER (matches ford-starter/index.html) -->
-<header>
-    <div class="headertop">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-sm-4 col-xs-12 logo-div">
-                    <div class="hdrLogo">
-                        <a title="Jarrett Scott Ford Logo" href="/demo/ford-starter">
-                            <img src="https://storage.googleapis.com/savvy-images/JarrettScottFord-logo.jpg"
-                                 class="site-logo logo Default img-responsive"
-                                 alt="Jarrett Scott Ford Logo" />
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-9 col-sm-8 col-xs-12 text-left info-div">
-                    <div>
-                        <div class="hdrightInr">
-                            <div>
-                                <ul class="listInfo">
-                                    <li>
-                                        <a href="tel:(813) 752-4171" id="headerFormView_phoneRef" title="Call Us Now">
-                                            <i class="fa fa-phone"></i> (813) 752-4171
-                                        </a>
-                                    </li>
-                                </ul>
-                                <p class="paddress">
-                                    <a rel="noreferrer"
-                                       href="https://www.google.com/maps/place/Jarrett+Scott+Ford+of+Plant+City/"
-                                       title="2000 East Baker St. Plant City, FL 33563"
-                                       style="color: #0071B2;"
-                                       target="_blank">
-                                        2000 East Baker St. Plant City, FL 33563
-                                    </a>
-                                </p>
-                            </div>
-                            <div class="btntop">
-                                <a href="/dealership-info/hours-and-directions" title="Hablamos Espanol">Hablamos Espanol</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<!-- ==================== HEADER ==================== -->
+<header class="site-header">
+    <div class="sh-inner">
+        <a href="/demo/ford-starter" class="header-dealer-logo">
+            <img src="https://storage.googleapis.com/savvy-images/JarrettScottFord-logo.jpg" alt="Jarrett Scott Ford">
+        </a>
+        <div class="header-contact">
+            <a href="tel:8137524171" class="hdr-phone">(813) 752-4171</a>
+            <a href="https://www.google.com/maps/place/Jarrett+Scott+Ford+of+Plant+City/" target="_blank" rel="noopener" class="hdr-address">2000 East Baker St. Plant City, FL 33563</a>
         </div>
+        <nav class="header-nav">
+            <a href="/demo/ford-starter">Home</a>
+            <a href="/demo/ford-starter/inventory" class="active">New</a>
+            <a href="#">Used</a>
+            <a href="/demo/ford-starter/finance">Finance</a>
+            <a href="#">Service</a>
+            <a href="/demo/ford-starter/contact">Contact</a>
+        </nav>
     </div>
-
-    <div class="navMain">
-        <div class="container">
-            <div class="navmenu">
-                <ul class="home-menu">
-                    <li><a href="/demo/ford-starter">Home</a></li>
-                    <li class="parent">
-                        <a href="/demo/ford-starter/inventory" class="active-nav">New <i class="fa fa-caret-down"></i></a>
-                        <span class="arrowbtn"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z'/%3E%3C/svg%3E" alt="toggle" /></span>
-                        <ul class="submenu">
-                            <li><a href="/demo/ford-starter/inventory">All New Vehicles</a></li>
-                            <li><a href="/new-specials">New Specials</a></li>
-                            <li><a href="/new-trucks">New Trucks</a></li>
-                        </ul>
-                    </li>
-                    <li class="parent">
-                        <a href="/used">Used <i class="fa fa-caret-down"></i></a>
-                        <span class="arrowbtn"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z'/%3E%3C/svg%3E" alt="toggle" /></span>
-                        <ul class="submenu">
-                            <li><a href="/used">All Used</a></li>
-                            <li><a href="/certified">Certified Used</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="/demo/ford-starter/finance">Finance</a></li>
-                    <li class="parent">
-                        <a href="/service">Service <i class="fa fa-caret-down"></i></a>
-                        <span class="arrowbtn"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z'/%3E%3C/svg%3E" alt="toggle" /></span>
-                        <ul class="submenu">
-                            <li><a href="/schedule-service">Schedule Service</a></li>
-                            <li><a href="/parts">Parts</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="/demo/ford-starter/contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="closeIcn"><span>x</span></div>
-    <div class="menuIcn"><i aria-hidden="true" class="fa fa-bars"></i></div>
-    <div class="overlay"></div>
 </header>
 
-<!-- TOOLBAR -->
-<div class="srp-toolbar">
-    <div class="container">
-        <h1>New Ford Inventory <span class="count">(24 vehicles)</span></h1>
-        <div class="srp-toolbar-right">
-            <select id="sortSelect">
-                <option value="price-low">Price: Low to High</option>
-                <option value="price-high">Price: High to Low</option>
-                <option value="year-new">Year: Newest First</option>
-                <option value="name">Name: A to Z</option>
-            </select>
-        </div>
+<!-- ==================== NAV BAR ==================== -->
+<div class="nav-bar">
+    <div class="nb-inner">
+        <a href="/demo/ford-starter">Home</a>
+        <a href="/demo/ford-starter/inventory" class="active">New Vehicles</a>
+        <a href="#">Used</a>
+        <a href="/demo/ford-starter/finance">Finance</a>
+        <a href="#">Service</a>
+        <a href="/demo/ford-starter/contact">Contact</a>
+        <span class="hablamos-badge">Hablamos Espanol</span>
     </div>
 </div>
 
-<!-- MAIN CONTENT: filter-result-wrapper -->
-<main class="search-page-main">
+<!-- ==================== SRP ==================== -->
+<section class="search-page-main">
     <div class="container">
-        <div class="row" style="margin-top: 15px;">
+        <div class="inner">
 
-            <!-- Mobile filter button -->
-            <div class="col-sm-12" style="padding: 0 15px;">
-                <button class="filter-btn-mobile" id="mobileFilterBtn">
-                    <i class="fa fa-sliders"></i> Filter Vehicles
+            <!-- Filter Panel -->
+            <div class="filter-panel">
+                <div class="card-header">
+                    <h2 class="cardtitle">Filters</h2>
+                    <a href="#" class="share-link">
+                        <svg viewBox="0 0 640 512"><path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372.1 74 321.1 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.8l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/></svg>
+                        Share
+                    </a>
+                </div>
+
+                <div class="searchform-main">
+                    <div class="form-field">
+                        <input type="text" placeholder="Search..." />
+                        <div class="search-btn">
+                            <svg viewBox="0 0 512 512"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reset-btn">
+                    <a href="#">
+                        <svg viewBox="0 0 512 512"><path d="M463.5 224H472c13.3 0 24-10.7 24-24V72c0-9.7-5.8-18.5-14.8-22.2s-19.3-1.7-26.2 5.2L413.4 96.6c-87.6-86.5-228.7-86.2-315.8 1c-87.5 87.5-87.5 229.3 0 316.8s229.3 87.5 316.8 0c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0c-62.5 62.5-163.8 62.5-226.3 0s-62.5-163.8 0-226.3c62.2-62.2 162.7-62.5 225.3-1L327 183c-6.9 6.9-8.9 17.2-5.2 26.2s12.5 14.8 22.2 14.8H463.5z"/></svg>
+                        Reset All
+                    </a>
+                </div>
+
+                <!-- Type Filter -->
+                <div class="filter-item open">
+                    <div class="title">Type</div>
+                    <div class="accordion-content">
+                        <ul>
+                            <li><span>All Vehicles</span> <span class="badge">24</span></li>
+                            <li class="active"><span>New</span> <span class="badge">24</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Model Filter -->
+                <div class="filter-item open">
+                    <div class="title">Model</div>
+                    <div class="accordion-content">
+                        <ul>
+                            <li><span>Bronco Sport</span> <span class="badge">9</span></li>
+                            <li><span>Escape</span> <span class="badge">5</span></li>
+                            <li><span>Maverick</span> <span class="badge">5</span></li>
+                            <li><span>Mustang</span> <span class="badge">2</span></li>
+                            <li><span>Edge</span> <span class="badge">1</span></li>
+                            <li><span>F-150</span> <span class="badge">1</span></li>
+                            <li><span>Ranger</span> <span class="badge">1</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Year Filter -->
+                <div class="filter-item open">
+                    <div class="title">Year</div>
+                    <div class="accordion-content">
+                        <ul>
+                            <li><span>2025</span> <span class="badge">11</span></li>
+                            <li><span>2024</span> <span class="badge">13</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Price Filter -->
+                <div class="filter-item open">
+                    <div class="title">Price</div>
+                    <div class="accordion-content">
+                        <ul>
+                            <li><span>Under $25K</span> <span class="badge">1</span></li>
+                            <li><span>$25K - $30K</span> <span class="badge">9</span></li>
+                            <li><span>$30K - $35K</span> <span class="badge">14</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Drivetrain Filter -->
+                <div class="filter-item">
+                    <div class="title">Drivetrain</div>
+                    <div class="accordion-content" style="display:none;">
+                        <ul>
+                            <li><span>FWD</span> <span class="badge">10</span></li>
+                            <li><span>AWD</span> <span class="badge">10</span></li>
+                            <li><span>4WD</span> <span class="badge">2</span></li>
+                            <li><span>RWD</span> <span class="badge">2</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Body Style Filter -->
+                <div class="filter-item">
+                    <div class="title">Body Style</div>
+                    <div class="accordion-content" style="display:none;">
+                        <ul>
+                            <li><span>SUV</span> <span class="badge">16</span></li>
+                            <li><span>Truck</span> <span class="badge">6</span></li>
+                            <li><span>Car</span> <span class="badge">2</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results -->
+            <div class="filter-result-wrapper">
+
+                <!-- Mobile Filter Button -->
+                <button class="mobile-filter-btn" style="display:none;">
+                    <svg viewBox="0 0 512 512"><path d="M3.9 54.9C10.5 40.9 24.5 32 40 32H472c15.5 0 29.5 8.9 36.1 22.9s4.6 30.5-5.2 42.5L320 320.9V448c0 12.1-6.8 23.2-17.7 28.6s-23.8 4.3-33.5-3l-64-48C195.8 419.1 192 410 192 400.3V320.9L9.2 97.4C-.6 85.4-2.7 68.9 3.9 54.9z"/></svg>
+                    Filter Vehicles
                 </button>
-            </div>
 
-            <!-- FILTER SIDEBAR -->
-            <div class="col-lg-3 filter-col" id="filterSidebar">
-                <button class="filter-close-btn" id="filterCloseBtn"><i class="fa fa-times" style="margin-right:6px;"></i> Close Filters</button>
-                <div class="filter-sidebar">
-
-                    <!-- Model -->
-                    <div class="filter-section">
-                        <div class="filter-section-header" data-toggle="filter">Model <i class="fa fa-chevron-down"></i></div>
-                        <div class="filter-section-body">
-                            <input type="text" class="filter-search" placeholder="Search models..." />
-                            <div class="filter-item"><label><input type="checkbox" /> F-150</label><span class="filter-count">387</span></div>
-                            <div class="filter-item"><label><input type="checkbox" /> Explorer</label><span class="filter-count">201</span></div>
-                            <div class="filter-item"><label><input type="checkbox" /> Bronco Sport</label><span class="filter-count">178</span></div>
-                            <div class="filter-item"><label><input type="checkbox" /> Escape</label><span class="filter-count">156</span></div>
-                            <div class="filter-item"><label><input type="checkbox" /> Maverick</label><span class="filter-count">142</span></div>
-                            <div class="filter-item"><label><input type="checkbox" /> Bronco</label><span class="filter-count">134</span></div>
-                            <div class="filter-item"><label><input type="checkbox" /> Super Duty</label><span class="filter-count">127</span></div>
-                            <div class="filter-item"><label><input type="checkbox" /> Expedition</label><span class="filter-count">98</span></div>
-                            <div class="filter-item"><label><input type="checkbox" /> Edge</label><span class="filter-count">89</span></div>
-                            <div class="filter-item"><label><input type="checkbox" /> Ranger</label><span class="filter-count">76</span></div>
-                            <div class="filter-item"><label><input type="checkbox" /> Mustang Mach-E</label><span class="filter-count">52</span></div>
-                            <div class="filter-item"><label><input type="checkbox" /> F-150 Lightning</label><span class="filter-count">38</span></div>
+                <!-- Inventory Detail Bar -->
+                <div class="inventory-detail">
+                    <div class="count"><strong>24 Vehicles Found</strong></div>
+                    <div class="sort-by">
+                        <span><strong>Sort Results</strong></span>
+                        <select>
+                            <option selected>Price (low to high)</option>
+                            <option>Price (high to low)</option>
+                            <option>Year (newest)</option>
+                            <option>Year (oldest)</option>
+                            <option>Mileage (low to high)</option>
+                        </select>
+                    </div>
+                    <div class="filter-buttons">
+                        <div title="List View">
+                            <svg viewBox="0 0 512 512"><path d="M40 48C26.7 48 16 58.7 16 72v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V72c0-13.3-10.7-24-24-24H40zM192 64c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zM16 232v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V232c0-13.3-10.7-24-24-24H40c-13.3 0-24 10.7-24 24zM40 368c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V392c0-13.3-10.7-24-24-24H40z"/></svg>
+                        </div>
+                        <div class="active" title="Grid View">
+                            <svg viewBox="0 0 512 512"><path d="M149.333 56v80c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V56c0-13.255 10.745-24 24-24h101.333c13.255 0 24 10.745 24 24zm181.334 240v-80c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.256.001 24.001-10.745 24.001-24zm32-240v80c0 13.255 10.745 24 24 24H488c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24zm-32 0v80c0 13.255-10.745 24-24 24H205.333c-13.255 0-24-10.745-24-24V56c0-13.255 10.745-24 24-24h101.333c13.256 0 24.001 10.745 24.001 24zm-181.334 80V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24zM0 376v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H24c-13.255 0-24 10.745-24 24zm181.333 0v80c0 13.255 10.745 24 24 24h101.333c13.256 0 24.001-10.745 24.001-24v-80c0-13.255-10.745-24-24.001-24H205.333c-13.255 0-24 10.745-24 24zm181.334 0v80c0 13.255 10.745 24 24 24H488c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24zM330.667 216V296c0 13.255 10.745 24 24 24H488c13.255 0 24-10.745 24-24V216c0-13.255-10.745-24-24-24H354.667c-13.255 0-24 10.745-24 24zM0 216v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H24c-13.255 0-24 10.745-24 24z"/></svg>
                         </div>
                     </div>
-
-                    <!-- Year -->
-                    <div class="filter-section">
-                        <div class="filter-section-header" data-toggle="filter">Year <i class="fa fa-chevron-down"></i></div>
-                        <div class="filter-section-body">
-                            <div class="filter-item"><label><input type="checkbox" /> 2026</label><span class="filter-count">843</span></div>
-                            <div class="filter-item"><label><input type="checkbox" /> 2025</label><span class="filter-count">1,266</span></div>
-                        </div>
-                    </div>
-
-                    <!-- Trim -->
-                    <div class="filter-section">
-                        <div class="filter-section-header" data-toggle="filter">Trim <i class="fa fa-chevron-down"></i></div>
-                        <div class="filter-section-body">
-                            <div class="filter-item"><label><input type="checkbox" /> XL</label><span class="filter-count">412</span></div>
-                            <div class="filter-item"><label><input type="checkbox" /> XLT</label><span class="filter-count">387</span></div>
-                            <div class="filter-item"><label><input type="checkbox" /> Lariat</label><span class="filter-count">198</span></div>
-                            <div class="filter-item"><label><input type="checkbox" /> Sport / Big Bend</label><span class="filter-count">156</span></div>
-                            <div class="filter-item"><label><input type="checkbox" /> Limited</label><span class="filter-count">89</span></div>
-                            <div class="filter-item"><label><input type="checkbox" /> Platinum</label><span class="filter-count">67</span></div>
-                            <div class="filter-item"><label><input type="checkbox" /> King Ranch</label><span class="filter-count">54</span></div>
-                        </div>
-                    </div>
-
-                    <!-- Body Style -->
-                    <div class="filter-section">
-                        <div class="filter-section-header collapsed" data-toggle="filter">Body Style <i class="fa fa-chevron-down"></i></div>
-                        <div class="filter-section-body collapsed">
-                            <div class="filter-item"><label><input type="checkbox" /> Truck</label><span class="filter-count">590</span></div>
-                            <div class="filter-item"><label><input type="checkbox" /> SUV</label><span class="filter-count">856</span></div>
-                            <div class="filter-item"><label><input type="checkbox" /> Car</label><span class="filter-count">52</span></div>
-                            <div class="filter-item"><label><input type="checkbox" /> Van</label><span class="filter-count">31</span></div>
-                        </div>
-                    </div>
-
-                    <!-- Price -->
-                    <div class="filter-section">
-                        <div class="filter-section-header collapsed" data-toggle="filter">Price Range <i class="fa fa-chevron-down"></i></div>
-                        <div class="filter-section-body collapsed">
-                            <div class="filter-item"><label><input type="checkbox" /> Under $30,000</label><span class="filter-count">342</span></div>
-                            <div class="filter-item"><label><input type="checkbox" /> $30k - $40k</label><span class="filter-count">587</span></div>
-                            <div class="filter-item"><label><input type="checkbox" /> $40k - $50k</label><span class="filter-count">498</span></div>
-                            <div class="filter-item"><label><input type="checkbox" /> $50k - $60k</label><span class="filter-count">321</span></div>
-                            <div class="filter-item"><label><input type="checkbox" /> $60,000+</label><span class="filter-count">361</span></div>
-                        </div>
-                    </div>
-
-                    <!-- Drivetrain -->
-                    <div class="filter-section">
-                        <div class="filter-section-header collapsed" data-toggle="filter">Drivetrain <i class="fa fa-chevron-down"></i></div>
-                        <div class="filter-section-body collapsed">
-                            <div class="filter-item"><label><input type="checkbox" /> FWD</label><span class="filter-count">634</span></div>
-                            <div class="filter-item"><label><input type="checkbox" /> AWD / 4WD</label><span class="filter-count">1,187</span></div>
-                            <div class="filter-item"><label><input type="checkbox" /> RWD</label><span class="filter-count">288</span></div>
-                        </div>
-                    </div>
-
-                    <!-- Color -->
-                    <div class="filter-section">
-                        <div class="filter-section-header collapsed" data-toggle="filter">Exterior Color <i class="fa fa-chevron-down"></i></div>
-                        <div class="filter-section-body collapsed">
-                            <div class="filter-item"><label><input type="checkbox" /> White</label><span class="filter-count">423</span></div>
-                            <div class="filter-item"><label><input type="checkbox" /> Black</label><span class="filter-count">312</span></div>
-                            <div class="filter-item"><label><input type="checkbox" /> Blue</label><span class="filter-count">198</span></div>
-                            <div class="filter-item"><label><input type="checkbox" /> Gray / Silver</label><span class="filter-count">287</span></div>
-                            <div class="filter-item"><label><input type="checkbox" /> Red</label><span class="filter-count">145</span></div>
-                        </div>
-                    </div>
-
-                    <!-- Fuel -->
-                    <div class="filter-section">
-                        <div class="filter-section-header collapsed" data-toggle="filter">Fuel Type <i class="fa fa-chevron-down"></i></div>
-                        <div class="filter-section-body collapsed">
-                            <div class="filter-item"><label><input type="checkbox" /> Gasoline</label><span class="filter-count">1,456</span></div>
-                            <div class="filter-item"><label><input type="checkbox" /> Hybrid</label><span class="filter-count">312</span></div>
-                            <div class="filter-item"><label><input type="checkbox" /> Electric</label><span class="filter-count">90</span></div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- VEHICLE LIST -->
-            <div class="col-lg-9">
-                <div class="list-wrapper" id="vehicleList">
-                    <!-- Cards populated by JS -->
                 </div>
 
-                <div class="srp-pagination">
-                    <span class="current">1</span>
-                </div>
-            </div>
+                <!-- Vehicle Cards Grid -->
+                <div class="list-wrapper" id="vehicleList"></div>
 
+                <!-- Pagination -->
+                <div class="pagination-wrapper">
+                    <ul class="pagination">
+                        <li class="disabled"><span>Prev</span></li>
+                        <li class="active"><span>1</span></li>
+                        <li><span>2</span></li>
+                        <li><span>3</span></li>
+                        <li><span>Next</span></li>
+                    </ul>
+                </div>
+
+            </div>
         </div>
     </div>
-</main>
+</section>
 
-<!-- FOOTER (matches ford-starter/index.html) -->
-<footer>
-    <div class="container">
-        <div class="row">
-
-            <!-- Column 1: Logo + Address -->
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="ftrSingle">
-                    <div style="margin-bottom: 20px;">
-                        <img src="https://storage.googleapis.com/savvy-images/JarrettScottFord-logo.jpg"
-                             alt="Jarrett Scott Ford"
-                             style="max-width: 200px; height: auto; border-radius: 4px;" />
-                    </div>
-                    <div class="addftr">
-                        <div class="addIocn"><i class="fa fa-map-marker"></i></div>
-                        <div class="ftr-address">
-                            <a href="https://www.google.com/maps/place/Jarrett+Scott+Ford+of+Plant+City/" target="_blank">
-                                2000 East Baker St.<br/>Plant City, FL 33563
-                            </a>
-                        </div>
-                    </div>
-                    <div class="addftr">
-                        <div class="addIocn"><i class="fa fa-phone"></i></div>
-                        <div class="ftr-address">
-                            <a href="tel:(813) 752-4171">(813) 752-4171</a>
-                        </div>
-                    </div>
-                    <div class="addftr">
-                        <div class="addIocn"><i class="fa fa-envelope"></i></div>
-                        <div class="ftr-address">
-                            <a href="mailto:info@jarrettscottford.com">info@jarrettscottford.com</a>
-                        </div>
-                    </div>
-                </div>
+<!-- ==================== FOOTER ==================== -->
+<footer class="site-footer">
+    <div class="ft-inner">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="/demo/ford-starter/inventory">New Vehicles</a></li>
+                    <li><a href="#">Used Vehicles</a></li>
+                    <li><a href="#">Certified Pre-Owned</a></li>
+                    <li><a href="/demo/ford-starter/finance">Finance Center</a></li>
+                    <li><a href="/demo/ford-starter/contact">Contact Us</a></li>
+                </ul>
             </div>
-
-            <!-- Column 2: Quick Links -->
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="ftrSingle">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="/demo/ford-starter/inventory">New Vehicles</a></li>
-                        <li><a href="/used">Used Vehicles</a></li>
-                        <li><a href="/certified">Certified Pre-Owned</a></li>
-                        <li><a href="/demo/ford-starter/finance">Finance Center</a></li>
-                        <li><a href="/contact">Contact Us</a></li>
-                    </ul>
-                </div>
+            <div class="footer-col">
+                <h4>Service</h4>
+                <ul>
+                    <li><a href="#">Schedule Service</a></li>
+                    <li><a href="#">Order Parts</a></li>
+                    <li><a href="#">Service Specials</a></li>
+                    <li><a href="#">Reviews</a></li>
+                    <li><a href="#">Employment</a></li>
+                </ul>
             </div>
-
-            <!-- Column 3: Service Links -->
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="ftrSingle">
-                    <h4>Service</h4>
-                    <ul>
-                        <li><a href="/schedule-service">Schedule Service</a></li>
-                        <li><a href="/parts">Order Parts</a></li>
-                        <li><a href="/reviews">Reviews</a></li>
-                        <li><a href="/demo/ford-starter/contact">Contact Us</a></li>
-                        <li><a href="/employment">Employment</a></li>
-                    </ul>
-                </div>
+            <div class="footer-col">
+                <h4>About Us</h4>
+                <ul>
+                    <li><a href="/demo/ford-starter/contact">About Jarrett Scott Ford</a></li>
+                    <li><a href="https://www.google.com/maps/place/Jarrett+Scott+Ford+of+Plant+City/" target="_blank" rel="noopener">Hours &amp; Directions</a></li>
+                    <li><a href="/demo/ford-starter/contact">Contact Us</a></li>
+                    <li><a href="tel:8137524171">Call Sales: (813) 752-4171</a></li>
+                </ul>
             </div>
-
-            <!-- Column 4: Social + Hours -->
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="ftrSingle">
-                    <h4>Connect With Us</h4>
-                    <div style="margin-bottom: 20px;">
-                        <a href="https://www.facebook.com/jarrett.scottford.1/" target="_blank" title="Facebook" aria-label="Facebook">
-                            <span class="socicon fb"><i class="fa fa-facebook"></i></span>
-                        </a>
-                        <a href="https://www.instagram.com/jarrettscottford/" target="_blank" title="Instagram" aria-label="Instagram">
-                            <span class="socicon ig"><i class="fa fa-instagram"></i></span>
-                        </a>
-                        <a href="https://twitter.com/jsfordplantcity" target="_blank" title="Twitter" aria-label="Twitter">
-                            <span class="socicon tw"><i class="fa fa-twitter"></i></span>
-                        </a>
-                    </div>
-                    <h4>Sales Hours</h4>
-                    <div style="font-size: 13px; color: #ccc; line-height: 1.8;">
-                        Mon-Thu: 8:30 AM - 7:00 PM<br/>
-                        Fri: 8:30 AM - 7:00 PM<br/>
-                        Sat: 8:30 AM - 5:00 PM<br/>
-                        Sun: Closed
-                    </div>
-                </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="tel:8137524171">(813) 752-4171</a></li>
+                    <li><a href="mailto:info@jarrettscottford.com">info@jarrettscottford.com</a></li>
+                    <li><a href="https://www.google.com/maps/place/Jarrett+Scott+Ford+of+Plant+City/" target="_blank" rel="noopener">2000 East Baker St.<br>Plant City, FL 33563</a></li>
+                </ul>
             </div>
-
         </div>
-
-        <!-- Footer Bottom -->
-        <div class="fmid">
-            <p>&copy; 2026 Jarrett Scott Ford. All Rights Reserved.</p>
-            <p>Powered by <a href="https://www.savvydealer.com" target="_blank">SavvyDealer</a></p>
+        <div class="footer-bottom">
+            <p>Jarrett Scott Ford &mdash; 2000 East Baker St., Plant City, FL 33563 &nbsp;&bull;&nbsp; &copy; 2026 All Rights Reserved &nbsp;&bull;&nbsp; Powered by <a href="https://www.savvydealer.com" target="_blank" rel="noopener">SavvyDealer</a></p>
         </div>
     </div>
 </footer>
 
-<!-- SCRIPTS -->
+<!-- ==================== JAVASCRIPT ==================== -->
 <script>
-// Sticky header
-jQuery(window).scroll(function () {
-    var n = jQuery(window).scrollTop();
-    n >= 150 ? jQuery("body").addClass("sticky") : jQuery("body").removeClass("sticky");
-});
-// Mobile menu
-jQuery(document).ready(function () {
-    $(".menuIcn").click(function () { $("body").addClass("openmenu"); });
-    $(".cossIcnInr, .overlay, .closeIcn > span").click(function () { $("body").removeClass("openmenu"); });
-    jQuery(".parent > .arrowbtn").click(function () {
-        jQuery(this).parent(".parent").siblings().removeClass("active");
-        jQuery(this).parent(".parent").toggleClass("active");
-        jQuery(this).parent(".parent").siblings().children(".submenu").slideUp();
-        jQuery(this).parent(".parent").children(".submenu").slideToggle();
-    });
-});
-</script>
+(function() {
+    // Real vehicle data - Jarrett Scott Ford, Plant City inventory
+    var vehicles = [
+        { year: 2025, make: "Ford", model: "Escape", vin: "1FMCU0GN6SUA02958", stock: "36576", msrp: 31560, sellingPrice: 24093, discount: 7467, image: "https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/legacy/nameplate/cars/escape/dm/24_FRD_ESP_44563_C1_200.jpg" },
+        { year: 2025, make: "Ford", model: "Escape", vin: "1FMCU0GN8SUA02668", stock: "36589", msrp: 30965, sellingPrice: 25076, discount: 5889, image: "https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/legacy/nameplate/cars/escape/dm/24_FRD_ESP_44563_C1_200.jpg" },
+        { year: 2025, make: "Ford", model: "Escape", vin: "1FMCU0GN8SUA23388", stock: "36629", msrp: 31560, sellingPrice: 25635, discount: 5925, image: "https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/legacy/nameplate/cars/escape/dm/24_FRD_ESP_44563_C1_200.jpg" },
+        { year: 2025, make: "Ford", model: "Bronco Sport", vin: "3FMCR9BN4SRE30354", stock: "36895", msrp: 32035, sellingPrice: 28369, discount: 3666, image: "https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/legacy/nameplate/suvs-crossovers/bronco-sport/dm/24_FRD_BSP_44563_C1_200.jpg" },
+        { year: 2024, make: "Ford", model: "Bronco Sport", vin: "3FMCR9B65RRF74448", stock: "36677", msrp: 35540, sellingPrice: 28822, discount: 6718, image: "https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/legacy/nameplate/suvs-crossovers/bronco-sport/dm/24_FRD_BSP_44563_C1_200.jpg" },
+        { year: 2024, make: "Ford", model: "Bronco Sport", vin: "3FMCR9B60RRF55709", stock: "36586", msrp: 36230, sellingPrice: 28979, discount: 7251, image: "https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/legacy/nameplate/suvs-crossovers/bronco-sport/dm/24_FRD_BSP_44563_C1_200.jpg" },
+        { year: 2024, make: "Ford", model: "Edge", vin: "2FMPK4G95RBB21943", stock: "35909", msrp: 40400, sellingPrice: 29318, discount: 11082, image: "https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/legacy/nameplate/suvs-crossovers/edge/dm/24_FRD_EDG_44563_C1_200.jpg" },
+        { year: 2024, make: "Ford", model: "Bronco Sport", vin: "3FMCR9B66RRF51793", stock: "36505", msrp: 34500, sellingPrice: 29355, discount: 5145, image: "https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/legacy/nameplate/suvs-crossovers/bronco-sport/dm/24_FRD_BSP_44563_C1_200.jpg" },
+        { year: 2025, make: "Ford", model: "Bronco Sport", vin: "3FMCR9BN8SRE07000", stock: "36837", msrp: 33135, sellingPrice: 29403, discount: 3732, image: "https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/legacy/nameplate/suvs-crossovers/bronco-sport/dm/24_FRD_BSP_44563_C1_200.jpg" },
+        { year: 2024, make: "Ford", model: "Bronco Sport", vin: "3FMCR9C69RRF26899", stock: "36283", msrp: 38020, sellingPrice: 30350, discount: 7670, image: "https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/legacy/nameplate/suvs-crossovers/bronco-sport/dm/24_FRD_BSP_44563_C1_200.jpg" },
+        { year: 2025, make: "Ford", model: "Maverick", vin: "3FTTW8BAXSRA27502", stock: "36988", msrp: 30685, sellingPrice: 30685, discount: 0, image: "https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/legacy/nameplate/trucks/maverick/dm/24_FRD_MAV_44563_C1_200.jpg" },
+        { year: 2025, make: "Ford", model: "Maverick", vin: "3FTTW8BA7SRA28140", stock: "36992", msrp: 30685, sellingPrice: 30685, discount: 0, image: "https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/legacy/nameplate/trucks/maverick/dm/24_FRD_MAV_44563_C1_200.jpg" },
+        { year: 2024, make: "Ford", model: "Maverick", vin: "3FTTW8J90RRB77846", stock: "36676", msrp: 33100, sellingPrice: 30779, discount: 2321, image: "https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/legacy/nameplate/trucks/maverick/dm/24_FRD_MAV_44563_C1_200.jpg" },
+        { year: 2024, make: "Ford", model: "Bronco Sport", vin: "3FMCR9B66RRF69792", stock: "36710", msrp: 35510, sellingPrice: 30795, discount: 4715, image: "https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/legacy/nameplate/suvs-crossovers/bronco-sport/dm/24_FRD_BSP_44563_C1_200.jpg" },
+        { year: 2024, make: "Ford", model: "Maverick", vin: "3FTTW8H32RRB48950", stock: "36758", msrp: 32440, sellingPrice: 31108, discount: 1332, image: "https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/legacy/nameplate/trucks/maverick/dm/24_FRD_MAV_44563_C1_200.jpg" },
+        { year: 2025, make: "Ford", model: "Escape", vin: "1FMCU0GN3SUA68223", stock: "37066", msrp: 35090, sellingPrice: 31194, discount: 3896, image: "https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/legacy/nameplate/cars/escape/dm/24_FRD_ESP_44563_C1_200.jpg" },
+        { year: 2024, make: "Ford", model: "Bronco Sport", vin: "3FMCR9D95RRF38928", stock: "36393", msrp: 41490, sellingPrice: 31650, discount: 9840, image: "https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/legacy/nameplate/suvs-crossovers/bronco-sport/dm/24_FRD_BSP_44563_C1_200.jpg" },
+        { year: 2024, make: "Ford", model: "Ranger", vin: "1FTER4BH7RLE69846", stock: "37045", msrp: 34560, sellingPrice: 31883, discount: 2677, image: "https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/legacy/nameplate/trucks/ranger/dm/24_FRD_RGR_44563_C1_200.jpg" },
+        { year: 2024, make: "Ford", model: "F-150", vin: "1FTMF1KP9RKF08954", stock: "36588", msrp: 38970, sellingPrice: 31944, discount: 7026, image: "https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/legacy/nameplate/trucks/f-150/dm/24_FRD_F15_44563_C1_200.jpg" },
+        { year: 2024, make: "Ford", model: "Mustang", vin: "1FA6P8TH4R5141665", stock: "36441", msrp: 37425, sellingPrice: 32480, discount: 4945, image: "https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/legacy/nameplate/cars/mustang/dm/24_FRD_MST_44563_C1_200.jpg" },
+        { year: 2025, make: "Ford", model: "Escape", vin: "1FMCU9NAXSUA53707", stock: "36836", msrp: 37145, sellingPrice: 32711, discount: 4434, image: "https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/legacy/nameplate/cars/escape/dm/24_FRD_ESP_44563_C1_200.jpg" },
+        { year: 2024, make: "Ford", model: "Bronco Sport", vin: "3FMCR9C69RRF51804", stock: "36536", msrp: 39365, sellingPrice: 32767, discount: 6598, image: "https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/legacy/nameplate/suvs-crossovers/bronco-sport/dm/24_FRD_BSP_44563_C1_200.jpg" },
+        { year: 2024, make: "Ford", model: "Maverick", vin: "3FTTW8H35RRB06952", stock: "36414", msrp: 34475, sellingPrice: 32958, discount: 1517, image: "https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/legacy/nameplate/trucks/maverick/dm/24_FRD_MAV_44563_C1_200.jpg" },
+        { year: 2025, make: "Ford", model: "Mustang", vin: "1FA6P8TH4S5110700", stock: "37034", msrp: 34410, sellingPrice: 33135, discount: 1275, image: "https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/legacy/nameplate/cars/mustang/dm/24_FRD_MST_44563_C1_200.jpg" }
+    ];
 
-<script>
-// Filter toggles
-document.querySelectorAll('.filter-section-header').forEach(function(header) {
-    header.addEventListener('click', function() {
-        this.classList.toggle('collapsed');
-        this.nextElementSibling.classList.toggle('collapsed');
-    });
-});
+    // Model-based metadata lookup
+    function getModelMeta(model) {
+        var meta = {
+            "Escape":       { type: "SUV", engine: "2.0L EcoBoost I-4", trans: "8-Spd Auto", drive: "FWD" },
+            "Bronco Sport": { type: "SUV", engine: "1.5L EcoBoost I-3", trans: "8-Spd Auto", drive: "AWD" },
+            "Maverick":     { type: "Truck", engine: "2.0L EcoBoost I-4", trans: "8-Spd Auto", drive: "FWD" },
+            "F-150":        { type: "Truck", engine: "2.7L V6 EcoBoost", trans: "10-Spd Auto", drive: "4WD" },
+            "Bronco":       { type: "SUV", engine: "2.7L V6 EcoBoost", trans: "10-Spd Auto", drive: "4WD" },
+            "Mustang":      { type: "Car", engine: "2.3L EcoBoost I-4", trans: "10-Spd Auto", drive: "RWD" },
+            "Explorer":     { type: "SUV", engine: "2.3L EcoBoost I-4", trans: "10-Spd Auto", drive: "RWD" },
+            "Ranger":       { type: "Truck", engine: "2.3L EcoBoost I-4", trans: "10-Spd Auto", drive: "4WD" },
+            "Edge":         { type: "SUV", engine: "2.0L EcoBoost I-4", trans: "8-Spd Auto", drive: "AWD" },
+            "Expedition":   { type: "SUV", engine: "3.5L V6 EcoBoost", trans: "10-Spd Auto", drive: "4WD" }
+        };
+        return meta[model] || { type: "Vehicle", engine: "Gas", trans: "Automatic", drive: "RWD" };
+    }
 
-// Mobile filter panel
-document.getElementById('mobileFilterBtn').addEventListener('click', function() {
-    document.getElementById('filterSidebar').classList.add('show');
-});
-document.getElementById('filterCloseBtn').addEventListener('click', function() {
-    document.getElementById('filterSidebar').classList.remove('show');
-});
-</script>
+    function formatPrice(n) {
+        return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
 
-<script>
-// Real vehicle data - Jarrett Scott Ford, Plant City inventory
-var vehicles = [
-    { year: 2025, make: "Ford", model: "Escape", vin: "1FMCU0GN6SUA02958", stock: "36576", msrp: 31560, sellingPrice: 24093, discount: 7467, image: "https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/legacy/nameplate/cars/escape/dm/24_FRD_ESP_44563_C1_200.jpg" },
-    { year: 2025, make: "Ford", model: "Escape", vin: "1FMCU0GN8SUA02668", stock: "36589", msrp: 30965, sellingPrice: 25076, discount: 5889, image: "https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/legacy/nameplate/cars/escape/dm/24_FRD_ESP_44563_C1_200.jpg" },
-    { year: 2025, make: "Ford", model: "Escape", vin: "1FMCU0GN8SUA23388", stock: "36629", msrp: 31560, sellingPrice: 25635, discount: 5925, image: "https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/legacy/nameplate/cars/escape/dm/24_FRD_ESP_44563_C1_200.jpg" },
-    { year: 2025, make: "Ford", model: "Bronco Sport", vin: "3FMCR9BN4SRE30354", stock: "36895", msrp: 32035, sellingPrice: 28369, discount: 3666, image: "https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/legacy/nameplate/suvs-crossovers/bronco-sport/dm/24_FRD_BSP_44563_C1_200.jpg" },
-    { year: 2024, make: "Ford", model: "Bronco Sport", vin: "3FMCR9B65RRF74448", stock: "36677", msrp: 35540, sellingPrice: 28822, discount: 6718, image: "https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/legacy/nameplate/suvs-crossovers/bronco-sport/dm/24_FRD_BSP_44563_C1_200.jpg" },
-    { year: 2024, make: "Ford", model: "Bronco Sport", vin: "3FMCR9B60RRF55709", stock: "36586", msrp: 36230, sellingPrice: 28979, discount: 7251, image: "https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/legacy/nameplate/suvs-crossovers/bronco-sport/dm/24_FRD_BSP_44563_C1_200.jpg" },
-    { year: 2024, make: "Ford", model: "Edge", vin: "2FMPK4G95RBB21943", stock: "35909", msrp: 40400, sellingPrice: 29318, discount: 11082, image: "https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/legacy/nameplate/suvs-crossovers/edge/dm/24_FRD_EDG_44563_C1_200.jpg" },
-    { year: 2024, make: "Ford", model: "Bronco Sport", vin: "3FMCR9B66RRF51793", stock: "36505", msrp: 34500, sellingPrice: 29355, discount: 5145, image: "https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/legacy/nameplate/suvs-crossovers/bronco-sport/dm/24_FRD_BSP_44563_C1_200.jpg" },
-    { year: 2025, make: "Ford", model: "Bronco Sport", vin: "3FMCR9BN8SRE07000", stock: "36837", msrp: 33135, sellingPrice: 29403, discount: 3732, image: "https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/legacy/nameplate/suvs-crossovers/bronco-sport/dm/24_FRD_BSP_44563_C1_200.jpg" },
-    { year: 2024, make: "Ford", model: "Bronco Sport", vin: "3FMCR9C69RRF26899", stock: "36283", msrp: 38020, sellingPrice: 30350, discount: 7670, image: "https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/legacy/nameplate/suvs-crossovers/bronco-sport/dm/24_FRD_BSP_44563_C1_200.jpg" },
-    { year: 2025, make: "Ford", model: "Maverick", vin: "3FTTW8BAXSRA27502", stock: "36988", msrp: 30685, sellingPrice: 30685, discount: 0, image: "https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/legacy/nameplate/trucks/maverick/dm/24_FRD_MAV_44563_C1_200.jpg" },
-    { year: 2025, make: "Ford", model: "Maverick", vin: "3FTTW8BA7SRA28140", stock: "36992", msrp: 30685, sellingPrice: 30685, discount: 0, image: "https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/legacy/nameplate/trucks/maverick/dm/24_FRD_MAV_44563_C1_200.jpg" },
-    { year: 2024, make: "Ford", model: "Maverick", vin: "3FTTW8J90RRB77846", stock: "36676", msrp: 33100, sellingPrice: 30779, discount: 2321, image: "https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/legacy/nameplate/trucks/maverick/dm/24_FRD_MAV_44563_C1_200.jpg" },
-    { year: 2024, make: "Ford", model: "Bronco Sport", vin: "3FMCR9B66RRF69792", stock: "36710", msrp: 35510, sellingPrice: 30795, discount: 4715, image: "https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/legacy/nameplate/suvs-crossovers/bronco-sport/dm/24_FRD_BSP_44563_C1_200.jpg" },
-    { year: 2024, make: "Ford", model: "Maverick", vin: "3FTTW8H32RRB48950", stock: "36758", msrp: 32440, sellingPrice: 31108, discount: 1332, image: "https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/legacy/nameplate/trucks/maverick/dm/24_FRD_MAV_44563_C1_200.jpg" },
-    { year: 2025, make: "Ford", model: "Escape", vin: "1FMCU0GN3SUA68223", stock: "37066", msrp: 35090, sellingPrice: 31194, discount: 3896, image: "https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/legacy/nameplate/cars/escape/dm/24_FRD_ESP_44563_C1_200.jpg" },
-    { year: 2024, make: "Ford", model: "Bronco Sport", vin: "3FMCR9D95RRF38928", stock: "36393", msrp: 41490, sellingPrice: 31650, discount: 9840, image: "https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/legacy/nameplate/suvs-crossovers/bronco-sport/dm/24_FRD_BSP_44563_C1_200.jpg" },
-    { year: 2024, make: "Ford", model: "Ranger", vin: "1FTER4BH7RLE69846", stock: "37045", msrp: 34560, sellingPrice: 31883, discount: 2677, image: "https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/legacy/nameplate/trucks/ranger/dm/24_FRD_RGR_44563_C1_200.jpg" },
-    { year: 2024, make: "Ford", model: "F-150", vin: "1FTMF1KP9RKF08954", stock: "36588", msrp: 38970, sellingPrice: 31944, discount: 7026, image: "https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/legacy/nameplate/trucks/f-150/dm/24_FRD_F15_44563_C1_200.jpg" },
-    { year: 2024, make: "Ford", model: "Mustang", vin: "1FA6P8TH4R5141665", stock: "36441", msrp: 37425, sellingPrice: 32480, discount: 4945, image: "https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/legacy/nameplate/cars/mustang/dm/24_FRD_MST_44563_C1_200.jpg" },
-    { year: 2025, make: "Ford", model: "Escape", vin: "1FMCU9NAXSUA53707", stock: "36836", msrp: 37145, sellingPrice: 32711, discount: 4434, image: "https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/legacy/nameplate/cars/escape/dm/24_FRD_ESP_44563_C1_200.jpg" },
-    { year: 2024, make: "Ford", model: "Bronco Sport", vin: "3FMCR9C69RRF51804", stock: "36536", msrp: 39365, sellingPrice: 32767, discount: 6598, image: "https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/legacy/nameplate/suvs-crossovers/bronco-sport/dm/24_FRD_BSP_44563_C1_200.jpg" },
-    { year: 2024, make: "Ford", model: "Maverick", vin: "3FTTW8H35RRB06952", stock: "36414", msrp: 34475, sellingPrice: 32958, discount: 1517, image: "https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/legacy/nameplate/trucks/maverick/dm/24_FRD_MAV_44563_C1_200.jpg" },
-    { year: 2025, make: "Ford", model: "Mustang", vin: "1FA6P8TH4S5110700", stock: "37034", msrp: 34410, sellingPrice: 33135, discount: 1275, image: "https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/legacy/nameplate/cars/mustang/dm/24_FRD_MST_44563_C1_200.jpg" }
-];
+    var heartSVG = '<svg viewBox="0 0 512 512"><path d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9C313.1 47 353.4 37.9 392.8 45.4 462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9z"/></svg>';
+    var chevronSVG = '<svg viewBox="0 0 320 512"><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>';
 
-// Model-based metadata lookup
-function getModelMeta(model) {
-    var meta = {
-        "Escape":       { type: "SUV", engine: "2.0L EcoBoost I-4", trans: "8-Spd Auto", drive: "FWD" },
-        "Bronco Sport": { type: "SUV", engine: "1.5L EcoBoost I-3", trans: "8-Spd Auto", drive: "AWD" },
-        "Maverick":     { type: "Truck", engine: "2.0L EcoBoost I-4", trans: "8-Spd Auto", drive: "FWD" },
-        "F-150":        { type: "Truck", engine: "2.7L V6 EcoBoost", trans: "10-Spd Auto", drive: "4WD" },
-        "Bronco":       { type: "SUV", engine: "2.7L V6 EcoBoost", trans: "10-Spd Auto", drive: "4WD" },
-        "Mustang":      { type: "Car", engine: "2.3L EcoBoost I-4", trans: "10-Spd Auto", drive: "RWD" },
-        "Explorer":     { type: "SUV", engine: "2.3L EcoBoost I-4", trans: "10-Spd Auto", drive: "RWD" },
-        "Ranger":       { type: "Truck", engine: "2.3L EcoBoost I-4", trans: "10-Spd Auto", drive: "4WD" },
-        "Edge":         { type: "SUV", engine: "2.0L EcoBoost I-4", trans: "8-Spd Auto", drive: "AWD" },
-        "Expedition":   { type: "SUV", engine: "3.5L V6 EcoBoost", trans: "10-Spd Auto", drive: "4WD" }
-    };
-    return meta[model] || { type: "Vehicle", engine: "Gas", trans: "Automatic", drive: "RWD" };
-}
-
-function fmt(n) { return '$' + n.toLocaleString(); }
-
-function renderVehicles() {
-    var list = document.getElementById('vehicleList');
+    var listWrapper = document.getElementById('vehicleList');
     var html = '';
+
     vehicles.forEach(function(v, i) {
         var m = getModelMeta(v.model);
-        var vdpLink = (i < 4) ? '/demo/ford-starter/vdp?id=' + i : '#';
+        var sellingPrice = v.sellingPrice;
+        var titleText = v.year + ' ' + v.make + ' ' + v.model;
+        var vdpLink = '/demo/ford-starter/vdp?id=' + i;
 
-        html += '<div class="list-item sNew">';
-        html += '  <div class="list-item-inner">';
+        html += '<div class="list-item">';
+        html += '<div class="list-item-inner">';
 
-        // Image
-        html += '    <div class="image-block">';
-        html += '      <a href="' + vdpLink + '"><img src="' + v.image + '" alt="' + v.year + ' ' + v.make + ' ' + v.model + '" loading="lazy" /></a>';
-        html += '      <span class="badge-label badge-new">New</span>';
-        html += '    </div>';
-
-        // Details
-        html += '    <div class="list-item-detail">';
-        html += '      <div class="title">';
-        html += '        <h3><a class="vehicleCardTitle" href="' + vdpLink + '">' + v.year + ' ' + v.make + ' ' + v.model + '<span class="trim-text">Stock #' + v.stock + '</span></a></h3>';
-        html += '        <span class="watchlist-icon"><i class="fa fa-heart-o"></i></span>';
-        html += '      </div>';
-
-        html += '      <div class="details-wrapper">';
-        html += '        <div class="details"><div class="label">Type</div><div class="value">' + m.type + '</div></div>';
-        html += '        <div class="details"><div class="label">Engine</div><div class="value">' + m.engine + '</div></div>';
-        html += '        <div class="details"><div class="label">Transmission</div><div class="value">' + m.trans + '</div></div>';
-        html += '        <div class="details"><div class="label">Drivetrain</div><div class="value">' + m.drive + '</div></div>';
-        html += '        <div class="details"><div class="label">VIN</div><div class="value">' + v.vin + '</div></div>';
-        html += '        <div class="details"><div class="label">Stock #</div><div class="value">' + v.stock + '</div></div>';
-        html += '      </div>';
-        html += '    </div>';
-
-        // Price
-        html += '    <div class="list-item-price">';
-        html += '      <div class="price-toggle" onclick="this.classList.toggle(\'open\');this.nextElementSibling.classList.toggle(\'show\')">Price Details <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div>';
-        html += '      <div class="price-breakup">';
-        html += '        <div class="price-row msrp-row"><span class="pricing-label"><strong>MSRP</strong></span><span class="price">' + fmt(v.msrp) + '</span></div>';
-        if (v.discount > 0) {
-            html += '    <div class="price-row"><span class="pricing-label"><strong>Jarrett Scott Discount</strong></span><span class="price dealersavingsprice">-' + fmt(v.discount) + '</span></div>';
-        }
-        html += '        <div class="price-row final-row"><span class="pricing-label"><strong>Your Price</strong></span><span class="price finalprice">' + fmt(v.sellingPrice) + '</span></div>';
-        if (v.discount > 0) {
-            html += '    <div class="price-row savings-row"><span class="pricing-label">Total Savings</span><span class="price">' + fmt(v.discount) + '</span></div>';
-        }
-        html += '      </div>';
-        html += '      <div class="vic-disclaimer"><span><i class="fa fa-check-circle"></i> No Hidden Fees No Hidden Add-ons</span></div>';
-        html += '    </div>';
-
-        html += '  </div>';
-
-        // CTAs
-        html += '  <div class="list-item-ctas">';
-        if (i < 4) {
-            html += '    <a class="btn-cta btn-cta-primary" href="' + vdpLink + '">View Details</a>';
-        } else {
-            html += '    <a class="btn-cta btn-cta-primary" href="#">View Details</a>';
-        }
-        html += '    <a class="btn-cta btn-cta-outline" href="#">Get E-Price</a>';
-        html += '    <a class="btn-cta btn-cta-outline" href="#">Schedule Test Drive</a>';
-        html += '  </div>';
+        // Image block
+        html += '<div class="image-block">';
+        html += '<a href="' + vdpLink + '"><img src="' + v.image + '" alt="' + titleText + '" loading="lazy" /></a>';
+        html += '<div class="watchlist-icon">' + heartSVG + '</div>';
         html += '</div>';
+
+        // Details block (title only)
+        html += '<div class="list-item-detail">';
+        html += '<a class="vehicleCardTitle" href="' + vdpLink + '">' + titleText + '</a>';
+        html += '</div>';
+
+        // Price block
+        html += '<div class="list-item-price">';
+
+        // Visible price summary
+        if (v.discount > 0) {
+            html += '<div class="mobile-apr-price-wrapper">';
+            html += '<div class="price-display">';
+            html += '<div class="yousave-price"><span class="amount">$' + formatPrice(v.discount) + '</span><span class="save-label">Potential Savings</span></div>';
+            html += '<div class="mobile-price"><span class="price">$' + formatPrice(sellingPrice) + '</span><span class="price-label">Your Price*</span></div>';
+            html += '</div>';
+            html += '</div>';
+        } else {
+            html += '<div class="mobile-apr-price-wrapper">';
+            html += '<div class="price-display">';
+            html += '<div class="mobile-price" style="text-align:center;width:100%;"><span class="price">$' + formatPrice(sellingPrice) + '</span><span class="price-label">Your Price*</span></div>';
+            html += '</div>';
+            html += '</div>';
+        }
+
+        // Price Details toggle
+        html += '<div class="price-toggle" onclick="this.classList.toggle(\'open\');this.nextElementSibling.classList.toggle(\'show\')">Price Details ' + chevronSVG + '</div>';
+
+        // Hidden price breakdown (vehicle specs + pricing)
+        html += '<div class="price-breakup">';
+        html += '<div class="row"><div class="label">Drivetrain</div><div class="value" style="font-weight:600">' + m.drive + '</div></div>';
+        html += '<div class="row"><div class="label">Engine</div><div class="value" style="font-weight:600">' + m.engine + '</div></div>';
+        html += '<div class="row"><div class="label">Stock #</div><div class="value" style="font-weight:600">' + v.stock + '</div></div>';
+        html += '<div class="row"><div class="label">VIN</div><div class="value" style="font-weight:600;font-size:11px">' + v.vin + '</div></div>';
+        html += '<div class="row border-top-dash" style="margin-top:6px;padding-top:6px;"><div class="label"><strong>MSRP</strong></div><div class="msrp">' + formatPrice(v.msrp) + '</div></div>';
+        if (v.discount > 0) {
+            html += '<div class="row"><div class="label"><strong>Discount</strong></div><div class="dealersavingsprice">-$' + formatPrice(v.discount) + '</div></div>';
+        }
+        html += '<div class="row border-top-dash"><div class="label"><strong>Your Price*</strong></div><div class="finalprice">$' + formatPrice(sellingPrice) + '</div></div>';
+        html += '</div>';
+
+        // No fees disclaimer
+        html += '<div class="no-fees">No Hidden Fees. No Hidden Add-ons.</div>';
+
+        // CTA
+        html += '<div class="card-actions">';
+        html += '<div class="btn_3"><a href="' + vdpLink + '">Check Availability</a></div>';
+        html += '</div>';
+
+        html += '</div>'; // .list-item-price
+        html += '</div>'; // .list-item-inner
+        html += '</div>'; // .list-item
     });
-    list.innerHTML = html;
-}
 
-// Watchlist toggle
-document.addEventListener('click', function(e) {
-    var icon = e.target.closest('.watchlist-icon');
-    if (icon) {
-        icon.classList.toggle('active');
-        var i = icon.querySelector('i');
-        i.className = icon.classList.contains('active') ? 'fa fa-heart' : 'fa fa-heart-o';
-        e.preventDefault();
-    }
-});
+    listWrapper.innerHTML = html;
 
-renderVehicles();
+    // Filter accordion toggle
+    var filterTitles = document.querySelectorAll('.filter-item .title');
+    filterTitles.forEach(function(t) {
+        t.addEventListener('click', function() {
+            var parent = this.parentElement;
+            var content = parent.querySelector('.accordion-content');
+            if (parent.classList.contains('open')) {
+                parent.classList.remove('open');
+                content.style.display = 'none';
+            } else {
+                parent.classList.add('open');
+                content.style.display = '';
+            }
+        });
+    });
+})();
 </script>
 
 </body>
