@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0" />
-    <title>2025 Mitsubishi Outlander Sport S | Sendell Mitsubishi - Greensburg, PA</title>
+    <title>Vehicle Details | Sendell Mitsubishi - Greensburg, PA</title>
     <link href="https://fonts.cdnfonts.com/css/mmc" rel="stylesheet" />
     <style>
         :root {
@@ -170,6 +170,89 @@
 </head>
 <body>
 
+<script>
+var vehicles = [
+    { year: 2025, make: "Mitsubishi", model: "Outlander Sport", trim: "S", color: "Labrador Black Pearl", intColor: "Black", drivetrain: "4WD", engine: "I-4 2.0L", transmission: "CVT", stock: "M501108", msrp: 28990, discount: 4000, sellingPrice: 24990, image: "https://www.mitsubishicars.com/content/dam/mitsubishi-motors-us/images/cars/outlander-sport/2026/primary/hero/W85_0_26OTL-Sport-03-side.png" },
+    { year: 2025, make: "Mitsubishi", model: "Outlander Sport", trim: "S", color: "Diamond White", intColor: "Black", drivetrain: "4WD", engine: "I-4 2.0L", transmission: "CVT", stock: "M501110", msrp: 29480, discount: 4000, sellingPrice: 25480, image: "https://www.mitsubishicars.com/content/dam/mitsubishi-motors-us/images/cars/outlander-sport/2026/primary/hero/W85_0_26OTL-Sport-03-side.png" },
+    { year: 2025, make: "Mitsubishi", model: "Eclipse Cross", trim: "Black Edition", color: "Gray Metallic", intColor: "Black", drivetrain: "4WD", engine: "Turbo I-4 1.5L", transmission: "CVT", stock: "M500840", msrp: 33340, discount: 5000, sellingPrice: 28340, image: "https://www.mitsubishicars.com/content/dam/mitsubishi-motors-us/images/cars/eclipse-cross/2026/primary/hero/2025-2026-mitsubishi-eclipse-cross-es-red-diamond-side-profile.png" },
+    { year: 2025, make: "Mitsubishi", model: "Eclipse Cross", trim: "Black Edition", color: "Diamond White", intColor: "Black", drivetrain: "4WD", engine: "Turbo I-4 1.5L", transmission: "CVT", stock: "M501111", msrp: 34105, discount: 5000, sellingPrice: 29105, image: "https://www.mitsubishicars.com/content/dam/mitsubishi-motors-us/images/cars/eclipse-cross/2026/primary/hero/2025-2026-mitsubishi-eclipse-cross-es-red-diamond-side-profile.png" },
+    { year: 2026, make: "Mitsubishi", model: "Outlander Sport", trim: "", color: "Octane Blue", intColor: "Black", drivetrain: "4WD", engine: "I-4 2.0L", transmission: "CVT", stock: "M600309", msrp: 31580, discount: 0, sellingPrice: 31580, image: "https://www.mitsubishicars.com/content/dam/mitsubishi-motors-us/images/cars/outlander-sport/2026/primary/hero/W85_0_26OTL-Sport-03-side.png" },
+    { year: 2025, make: "Mitsubishi", model: "Outlander PHEV", trim: "ES", color: "Silver Alloy", intColor: "Black", drivetrain: "4WD", engine: "Gas/Electric I-4 2.4L", transmission: "CVT", stock: "M500587", msrp: 42380, discount: 8000, sellingPrice: 34380, image: "https://www.mitsubishicars.com/content/dam/mitsubishi-motors-us/images/cars/outlander-phev/2025/primary/hero/2025-PHEV-SEL-Premium-graphite.png" },
+    { year: 2026, make: "Mitsubishi", model: "Eclipse Cross", trim: "SEL", color: "Silver Alloy", intColor: "Black", drivetrain: "4WD", engine: "Turbo I-4 1.5L", transmission: "CVT", stock: "M600294", msrp: 34615, discount: 0, sellingPrice: 34615, image: "https://www.mitsubishicars.com/content/dam/mitsubishi-motors-us/images/cars/eclipse-cross/2026/primary/hero/2025-2026-mitsubishi-eclipse-cross-es-red-diamond-side-profile.png" },
+    { year: 2025, make: "Mitsubishi", model: "Outlander", trim: "SEL", color: "Diamond", intColor: "Black", drivetrain: "4WD", engine: "I-4 2.5L", transmission: "CVT", stock: "M500834", msrp: 43495, discount: 6000, sellingPrice: 37495, image: "https://www.mitsubishicars.com/content/dam/mitsubishi-motors-us/images/cars/outlander/2026/primary/hero/OTL-SE-white-diamond-jellybean.png" },
+    { year: 2026, make: "Mitsubishi", model: "Outlander", trim: "SE", color: "Labrador Black Pearl", intColor: "Black", drivetrain: "AWD", engine: "Turbo I-4 1.5L", transmission: "CVT", stock: "M600291", msrp: 39045, discount: 1000, sellingPrice: 38045, image: "https://www.mitsubishicars.com/content/dam/mitsubishi-motors-us/images/cars/outlander/2026/primary/hero/OTL-SE-white-diamond-jellybean.png" },
+    { year: 2026, make: "Mitsubishi", model: "Outlander", trim: "SE", color: "Diamond", intColor: "Black", drivetrain: "AWD", engine: "Turbo I-4 1.5L", transmission: "CVT", stock: "M600252", msrp: 39640, discount: 1000, sellingPrice: 38640, image: "https://www.mitsubishicars.com/content/dam/mitsubishi-motors-us/images/cars/outlander/2026/primary/hero/OTL-SE-white-diamond-jellybean.png" },
+    { year: 2026, make: "Mitsubishi", model: "Outlander", trim: "SE", color: "Gray", intColor: "Black", drivetrain: "AWD", engine: "Turbo I-4 1.5L", transmission: "CVT", stock: "M600308", msrp: 42350, discount: 1000, sellingPrice: 41350, image: "https://www.mitsubishicars.com/content/dam/mitsubishi-motors-us/images/cars/outlander/2026/primary/hero/OTL-SE-white-diamond-jellybean.png" },
+    { year: 2026, make: "Mitsubishi", model: "Outlander", trim: "Trail Edition", color: "Gray Metallic", intColor: "Black", drivetrain: "AWD", engine: "Turbo I-4 1.5L", transmission: "CVT", stock: "M600310", msrp: 44635, discount: 2500, sellingPrice: 42135, image: "https://www.mitsubishicars.com/content/dam/mitsubishi-motors-us/images/cars/outlander/2026/primary/hero/OTL-SE-white-diamond-jellybean.png" },
+    { year: 2025, make: "Mitsubishi", model: "Outlander PHEV", trim: "SE", color: "Labrador Black Pearl", intColor: "Black", drivetrain: "4WD", engine: "Gas/Electric I-4 2.4L", transmission: "CVT", stock: "M500612", msrp: 44380, discount: 8000, sellingPrice: 36380, image: "https://www.mitsubishicars.com/content/dam/mitsubishi-motors-us/images/cars/outlander-phev/2025/primary/hero/2025-PHEV-SEL-Premium-graphite.png" },
+    { year: 2025, make: "Mitsubishi", model: "Outlander PHEV", trim: "SEL", color: "Silver Alloy", intColor: "Gray", drivetrain: "4WD", engine: "Gas/Electric I-4 2.4L", transmission: "CVT", stock: "M500645", msrp: 47680, discount: 8000, sellingPrice: 39680, image: "https://www.mitsubishicars.com/content/dam/mitsubishi-motors-us/images/cars/outlander-phev/2025/primary/hero/2025-PHEV-SEL-Premium-graphite.png" },
+    { year: 2025, make: "Mitsubishi", model: "Outlander PHEV", trim: "SEL Premium", color: "Diamond White", intColor: "Gray", drivetrain: "4WD", engine: "Gas/Electric I-4 2.4L", transmission: "CVT", stock: "M500701", msrp: 52180, discount: 8000, sellingPrice: 44180, image: "https://www.mitsubishicars.com/content/dam/mitsubishi-motors-us/images/cars/outlander-phev/2025/primary/hero/2025-PHEV-SEL-Premium-graphite.png" },
+    { year: 2026, make: "Mitsubishi", model: "Outlander", trim: "SEL", color: "Silver Alloy", intColor: "Black", drivetrain: "AWD", engine: "Turbo I-4 1.5L", transmission: "CVT", stock: "M600315", msrp: 42545, discount: 1000, sellingPrice: 41545, image: "https://www.mitsubishicars.com/content/dam/mitsubishi-motors-us/images/cars/outlander/2026/primary/hero/OTL-SE-white-diamond-jellybean.png" },
+    { year: 2026, make: "Mitsubishi", model: "Outlander", trim: "SEL", color: "Gray Metallic", intColor: "Black", drivetrain: "AWD", engine: "Turbo I-4 1.5L", transmission: "CVT", stock: "M600318", msrp: 43245, discount: 1000, sellingPrice: 42245, image: "https://www.mitsubishicars.com/content/dam/mitsubishi-motors-us/images/cars/outlander/2026/primary/hero/OTL-SE-white-diamond-jellybean.png" },
+    { year: 2025, make: "Mitsubishi", model: "Outlander", trim: "SE", color: "Silver Alloy", intColor: "Black", drivetrain: "4WD", engine: "I-4 2.5L", transmission: "CVT", stock: "M500855", msrp: 38995, discount: 6000, sellingPrice: 32995, image: "https://www.mitsubishicars.com/content/dam/mitsubishi-motors-us/images/cars/outlander/2026/primary/hero/OTL-SE-white-diamond-jellybean.png" },
+    { year: 2025, make: "Mitsubishi", model: "Outlander", trim: "SE", color: "Labrador Black Pearl", intColor: "Black", drivetrain: "4WD", engine: "I-4 2.5L", transmission: "CVT", stock: "M500862", msrp: 39495, discount: 6000, sellingPrice: 33495, image: "https://www.mitsubishicars.com/content/dam/mitsubishi-motors-us/images/cars/outlander/2026/primary/hero/OTL-SE-white-diamond-jellybean.png" },
+    { year: 2025, make: "Mitsubishi", model: "Outlander PHEV", trim: "SE", color: "Gray Metallic", intColor: "Black", drivetrain: "4WD", engine: "Gas/Electric I-4 2.4L", transmission: "CVT", stock: "M500623", msrp: 44880, discount: 8000, sellingPrice: 36880, image: "https://www.mitsubishicars.com/content/dam/mitsubishi-motors-us/images/cars/outlander-phev/2025/primary/hero/2025-PHEV-SEL-Premium-graphite.png" },
+    { year: 2026, make: "Mitsubishi", model: "Outlander", trim: "SE Launch Edition", color: "Diamond White", intColor: "Black", drivetrain: "AWD", engine: "Turbo I-4 1.5L", transmission: "CVT", stock: "M600320", msrp: 41850, discount: 1000, sellingPrice: 40850, image: "https://www.mitsubishicars.com/content/dam/mitsubishi-motors-us/images/cars/outlander/2026/primary/hero/OTL-SE-white-diamond-jellybean.png" },
+    { year: 2025, make: "Mitsubishi", model: "Outlander", trim: "SEL Premium", color: "Gray Metallic", intColor: "Gray", drivetrain: "4WD", engine: "I-4 2.5L", transmission: "CVT", stock: "M500871", msrp: 46495, discount: 6000, sellingPrice: 40495, image: "https://www.mitsubishicars.com/content/dam/mitsubishi-motors-us/images/cars/outlander/2026/primary/hero/OTL-SE-white-diamond-jellybean.png" },
+    { year: 2026, make: "Mitsubishi", model: "Outlander", trim: "SEL Premium", color: "Labrador Black Pearl", intColor: "Gray", drivetrain: "AWD", engine: "Turbo I-4 1.5L", transmission: "CVT", stock: "M600325", msrp: 46135, discount: 1000, sellingPrice: 45135, image: "https://www.mitsubishicars.com/content/dam/mitsubishi-motors-us/images/cars/outlander/2026/primary/hero/OTL-SE-white-diamond-jellybean.png" },
+    { year: 2025, make: "Mitsubishi", model: "Outlander PHEV", trim: "SEL", color: "Diamond", intColor: "Gray", drivetrain: "4WD", engine: "Gas/Electric I-4 2.4L", transmission: "CVT", stock: "M500658", msrp: 48180, discount: 8000, sellingPrice: 40180, image: "https://www.mitsubishicars.com/content/dam/mitsubishi-motors-us/images/cars/outlander-phev/2025/primary/hero/2025-PHEV-SEL-Premium-graphite.png" },
+    { year: 2025, make: "Mitsubishi", model: "Outlander PHEV", trim: "SEL Premium", color: "Labrador Black Pearl", intColor: "Gray", drivetrain: "4WD", engine: "Gas/Electric I-4 2.4L", transmission: "CVT", stock: "M500715", msrp: 52680, discount: 8000, sellingPrice: 44680, image: "https://www.mitsubishicars.com/content/dam/mitsubishi-motors-us/images/cars/outlander-phev/2025/primary/hero/2025-PHEV-SEL-Premium-graphite.png" },
+    { year: 2025, make: "Mitsubishi", model: "Outlander", trim: "SEL Premium", color: "Silver Alloy", intColor: "Gray", drivetrain: "4WD", engine: "I-4 2.5L", transmission: "CVT", stock: "M500878", msrp: 46995, discount: 6000, sellingPrice: 40995, image: "https://www.mitsubishicars.com/content/dam/mitsubishi-motors-us/images/cars/outlander/2026/primary/hero/OTL-SE-white-diamond-jellybean.png" },
+    { year: 2026, make: "Mitsubishi", model: "Eclipse Cross", trim: "SE", color: "Labrador Black Pearl", intColor: "Black", drivetrain: "4WD", engine: "Turbo I-4 1.5L", transmission: "CVT", stock: "M600298", msrp: 32415, discount: 0, sellingPrice: 32415, image: "https://www.mitsubishicars.com/content/dam/mitsubishi-motors-us/images/cars/eclipse-cross/2026/primary/hero/2025-2026-mitsubishi-eclipse-cross-es-red-diamond-side-profile.png" }
+];
+
+// Read vehicle ID from URL
+var params = new URLSearchParams(window.location.search);
+var vehicleId = parseInt(params.get('id')) || 0;
+var vehicle = vehicles[vehicleId] || vehicles[0];
+
+// Generate a plausible fake VIN based on index
+function generateVIN(idx) {
+    var wmis = ['JA4', 'JA7', 'JA4'];
+    var wmi = wmis[idx % wmis.length];
+    var modelCodes = { 'Outlander Sport': 'ARUAU', 'Eclipse Cross': 'APUAU', 'Outlander': 'ARMAU', 'Outlander PHEV': 'ATHAU' };
+    var mc = modelCodes[vehicle.model] || 'ARMAU';
+    var yearCodes = { 2025: 'S', 2026: 'T' };
+    var yc = yearCodes[vehicle.year] || 'S';
+    var serial = String(10000 + idx * 1347 + 2847).slice(-6);
+    return wmi + mc + yc + 'U' + serial;
+}
+
+// Format number as currency
+function fmt(n) {
+    return '$' + n.toLocaleString('en-US');
+}
+
+// Build the full title
+var titleParts = [vehicle.year, vehicle.make, vehicle.model];
+if (vehicle.trim) titleParts.push(vehicle.trim);
+var fullTitle = titleParts.join(' ');
+
+// Set page title
+document.title = fullTitle + ' | Sendell Mitsubishi - Greensburg, PA';
+
+// Build description
+var descModel = vehicle.model + (vehicle.trim ? ' ' + vehicle.trim : '');
+var descDrive = vehicle.drivetrain === 'AWD' ? 'standard AWD' : 'standard 4WD';
+var isPhev = vehicle.model.indexOf('PHEV') !== -1;
+var engineDesc = isPhev
+    ? 'a plug-in hybrid powertrain with a 2.4-liter 4-cylinder engine and electric motors'
+    : 'a responsive ' + vehicle.engine.replace('Turbo ', 'turbocharged ').replace('I-4 ', '') + ' engine paired with a smooth CVT transmission and ' + descDrive;
+var description = 'This ' + vehicle.year + ' ' + vehicle.make + ' ' + descModel + ' in ' + vehicle.color + ' is a versatile and capable SUV ready for anything. Powered by ' + engineDesc + ', it delivers confident performance in all conditions. With available features like Apple CarPlay, Android Auto, and advanced safety systems, it\'s the perfect daily driver that can handle weekend adventures. Visit Sendell Mitsubishi in Greensburg today for a test drive.';
+
+// MPG lookup by model
+var mpgData = {
+    'Outlander Sport': { city: 25, hwy: 28 },
+    'Eclipse Cross': { city: 25, hwy: 27 },
+    'Outlander': { city: 24, hwy: 28 },
+    'Outlander PHEV': { city: 26, hwy: 28 }
+};
+var mpg = mpgData[vehicle.model] || { city: 25, hwy: 28 };
+
+// Body style
+var bodyStyle = 'SUV';
+</script>
+
 <!-- Header -->
 <header>
     <div class="topbar">
@@ -236,11 +319,11 @@
                 <!-- Photo Gallery -->
                 <div class="gallery-card">
                     <div class="gallery-main-image">
-                        <img src="https://www.mitsubishicars.com/content/dam/mitsubishi-motors-us/images/cars/outlander-sport/2026/primary/hero/W85_0_26OTL-Sport-03-side.png" alt="2025 Mitsubishi Outlander Sport S - Labrador Black Pearl" />
+                        <img id="mainImage" src="" alt="" />
                     </div>
                     <div class="gallery-thumbnails">
                         <div class="gallery-thumb">
-                            <img src="https://www.mitsubishicars.com/content/dam/mitsubishi-motors-us/images/cars/outlander-sport/2026/primary/hero/W85_0_26OTL-Sport-03-side.png" alt="Thumbnail 1" />
+                            <img id="thumbImage" src="" alt="Thumbnail 1" />
                         </div>
                         <span class="gallery-photo-count">1 of 1 photo</span>
                     </div>
@@ -256,7 +339,7 @@
                             </div>
                             <div class="detail-info">
                                 <span class="detail-label">City / Hwy MPG</span>
-                                <span class="detail-value">25 / 28 MPG</span>
+                                <span class="detail-value" id="detailMpg"></span>
                             </div>
                         </div>
                         <div class="detail-item">
@@ -265,7 +348,7 @@
                             </div>
                             <div class="detail-info">
                                 <span class="detail-label">Body Style</span>
-                                <span class="detail-value">SUV</span>
+                                <span class="detail-value" id="detailBody">SUV</span>
                             </div>
                         </div>
                         <div class="detail-item">
@@ -274,7 +357,7 @@
                             </div>
                             <div class="detail-info">
                                 <span class="detail-label">Ext. Color</span>
-                                <span class="detail-value">Labrador Black Pearl</span>
+                                <span class="detail-value" id="detailExtColor"></span>
                             </div>
                         </div>
                         <div class="detail-item">
@@ -283,7 +366,7 @@
                             </div>
                             <div class="detail-info">
                                 <span class="detail-label">Int. Color</span>
-                                <span class="detail-value">Black</span>
+                                <span class="detail-value" id="detailIntColor"></span>
                             </div>
                         </div>
                         <div class="detail-item">
@@ -292,7 +375,7 @@
                             </div>
                             <div class="detail-info">
                                 <span class="detail-label">Engine</span>
-                                <span class="detail-value">I-4 2.0L</span>
+                                <span class="detail-value" id="detailEngine"></span>
                             </div>
                         </div>
                         <div class="detail-item">
@@ -301,7 +384,7 @@
                             </div>
                             <div class="detail-info">
                                 <span class="detail-label">Transmission</span>
-                                <span class="detail-value">CVT</span>
+                                <span class="detail-value" id="detailTrans"></span>
                             </div>
                         </div>
                         <div class="detail-item">
@@ -310,7 +393,7 @@
                             </div>
                             <div class="detail-info">
                                 <span class="detail-label">Drive Type</span>
-                                <span class="detail-value">4WD</span>
+                                <span class="detail-value" id="detailDrive"></span>
                             </div>
                         </div>
                         <div class="detail-item">
@@ -328,7 +411,7 @@
                 <!-- Description -->
                 <div class="description-card">
                     <h2>Dealer Description</h2>
-                    <p>This 2025 Mitsubishi Outlander Sport S in Labrador Black Pearl is a versatile and capable compact SUV ready for anything. Powered by a responsive 2.0-liter 4-cylinder engine paired with a smooth CVT transmission and standard 4WD, it delivers confident performance in all conditions. The Outlander Sport offers generous cargo space, a comfortable cabin with modern technology, and Mitsubishi's renowned reliability. With available features like Apple CarPlay, Android Auto, and advanced safety systems, it's the perfect daily driver that can handle weekend adventures. Visit Sendell Mitsubishi in Greensburg today for a test drive.</p>
+                    <p id="descriptionText"></p>
                 </div>
 
                 <!-- Features/Options -->
@@ -337,92 +420,7 @@
                         <h2>Standard Features &amp; Options</h2>
                         <svg viewBox="0 0 320 512"><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>
                     </div>
-                    <div class="features-grid">
-                        <div class="feature-item">
-                            <svg viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
-                            <span>Apple CarPlay</span>
-                        </div>
-                        <div class="feature-item">
-                            <svg viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
-                            <span>Android Auto</span>
-                        </div>
-                        <div class="feature-item">
-                            <svg viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
-                            <span>Bluetooth Connectivity</span>
-                        </div>
-                        <div class="feature-item">
-                            <svg viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
-                            <span>Backup Camera</span>
-                        </div>
-                        <div class="feature-item">
-                            <svg viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
-                            <span>Forward Collision Mitigation</span>
-                        </div>
-                        <div class="feature-item">
-                            <svg viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
-                            <span>Lane Departure Warning</span>
-                        </div>
-                        <div class="feature-item">
-                            <svg viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
-                            <span>Automatic Headlights</span>
-                        </div>
-                        <div class="feature-item">
-                            <svg viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
-                            <span>Keyless Entry</span>
-                        </div>
-                        <div class="feature-item">
-                            <svg viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
-                            <span>Push-Button Start</span>
-                        </div>
-                        <div class="feature-item">
-                            <svg viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
-                            <span>8" Touchscreen Display</span>
-                        </div>
-                        <div class="feature-item">
-                            <svg viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
-                            <span>USB Charging Ports</span>
-                        </div>
-                        <div class="feature-item">
-                            <svg viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
-                            <span>All-Wheel Control (4WD)</span>
-                        </div>
-                        <div class="feature-item">
-                            <svg viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
-                            <span>Hill Start Assist</span>
-                        </div>
-                        <div class="feature-item">
-                            <svg viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
-                            <span>Active Stability Control</span>
-                        </div>
-                        <div class="feature-item">
-                            <svg viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
-                            <span>Traction Control</span>
-                        </div>
-                        <div class="feature-item">
-                            <svg viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
-                            <span>7 Airbags</span>
-                        </div>
-                        <div class="feature-item">
-                            <svg viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
-                            <span>Cruise Control</span>
-                        </div>
-                        <div class="feature-item">
-                            <svg viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
-                            <span>Air Conditioning</span>
-                        </div>
-                        <div class="feature-item">
-                            <svg viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
-                            <span>Heated Side Mirrors</span>
-                        </div>
-                        <div class="feature-item">
-                            <svg viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
-                            <span>Roof Rails</span>
-                        </div>
-                        <div class="feature-item">
-                            <svg viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
-                            <span>10-Year / 100K Warranty</span>
-                        </div>
-                    </div>
+                    <div class="features-grid" id="featuresGrid"></div>
                 </div>
 
             </div>
@@ -430,35 +428,21 @@
             <!-- Right Column: Price Sidebar -->
             <div class="vdp-sidebar">
                 <div class="price-card">
-                    <h2 class="vehicle-title">2025 Mitsubishi Outlander Sport S</h2>
-                    <p class="vehicle-subtitle">4WD &bull; I-4 2.0L &bull; CVT &bull; Labrador Black Pearl</p>
+                    <h2 class="vehicle-title" id="sidebarTitle"></h2>
+                    <p class="vehicle-subtitle" id="sidebarSubtitle"></p>
 
                     <div class="vin-stock">
                         <div>
                             <span class="vin-label">VIN:</span>
-                            <span class="vin-value">JA4ARUAU4SU012847</span>
+                            <span class="vin-value" id="sidebarVin"></span>
                         </div>
                         <div>
                             <span class="vin-label">Stock #:</span>
-                            <span class="vin-value">M501108</span>
+                            <span class="vin-value" id="sidebarStock"></span>
                         </div>
                     </div>
 
-                    <div class="price-breakdown">
-                        <div class="price-row">
-                            <span class="price-label">Suggested Retail (MSRP)</span>
-                            <span class="price-value struck">$28,990</span>
-                        </div>
-                        <div class="price-row">
-                            <span class="price-label">Trade Discount</span>
-                            <span class="price-value discount">-$4,000</span>
-                        </div>
-                        <div class="price-divider"></div>
-                        <div class="price-row final">
-                            <span class="price-label">Sendell Price*</span>
-                            <span class="price-value">$24,990</span>
-                        </div>
-                    </div>
+                    <div class="price-breakdown" id="priceBreakdown"></div>
 
                     <div class="cta-stack">
                         <a href="#" class="cta-btn primary">Check Availability</a>
@@ -507,6 +491,63 @@
         </div>
     </div>
 </footer>
+
+<script>
+// Populate all VDP fields dynamically
+(function() {
+    // Gallery images
+    document.getElementById('mainImage').src = vehicle.image;
+    document.getElementById('mainImage').alt = fullTitle + ' - ' + vehicle.color;
+    document.getElementById('thumbImage').src = vehicle.image;
+
+    // Vehicle details
+    document.getElementById('detailMpg').textContent = mpg.city + ' / ' + mpg.hwy + ' MPG';
+    document.getElementById('detailExtColor').textContent = vehicle.color;
+    document.getElementById('detailIntColor').textContent = vehicle.intColor;
+    document.getElementById('detailEngine').textContent = vehicle.engine;
+    document.getElementById('detailTrans').textContent = vehicle.transmission;
+    document.getElementById('detailDrive').textContent = vehicle.drivetrain;
+
+    // Description
+    document.getElementById('descriptionText').textContent = description;
+
+    // Features grid
+    var features = [
+        'Apple CarPlay', 'Android Auto', 'Bluetooth Connectivity',
+        'Backup Camera', 'Forward Collision Mitigation', 'Lane Departure Warning',
+        'Automatic Headlights', 'Keyless Entry', 'Push-Button Start',
+        '8" Touchscreen Display', 'USB Charging Ports',
+        (vehicle.drivetrain === 'AWD' ? 'S-AWC All-Wheel Control' : 'All-Wheel Control (4WD)'),
+        'Hill Start Assist', 'Active Stability Control', 'Traction Control',
+        '7 Airbags', 'Cruise Control', 'Air Conditioning',
+        'Heated Side Mirrors', 'Roof Rails', '10-Year / 100K Warranty'
+    ];
+    var checkSvg = '<svg viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>';
+    var featuresHtml = '';
+    for (var i = 0; i < features.length; i++) {
+        featuresHtml += '<div class="feature-item">' + checkSvg + '<span>' + features[i] + '</span></div>';
+    }
+    document.getElementById('featuresGrid').innerHTML = featuresHtml;
+
+    // Sidebar
+    document.getElementById('sidebarTitle').textContent = fullTitle;
+    document.getElementById('sidebarSubtitle').innerHTML = vehicle.drivetrain + ' &bull; ' + vehicle.engine + ' &bull; ' + vehicle.transmission + ' &bull; ' + vehicle.color;
+    document.getElementById('sidebarVin').textContent = generateVIN(vehicleId);
+    document.getElementById('sidebarStock').textContent = vehicle.stock;
+
+    // Price breakdown
+    var priceHtml = '';
+    if (vehicle.discount > 0) {
+        priceHtml += '<div class="price-row"><span class="price-label">Suggested Retail (MSRP)</span><span class="price-value struck">' + fmt(vehicle.msrp) + '</span></div>';
+        priceHtml += '<div class="price-row"><span class="price-label">Trade Discount</span><span class="price-value discount">-' + fmt(vehicle.discount) + '</span></div>';
+        priceHtml += '<div class="price-divider"></div>';
+        priceHtml += '<div class="price-row final"><span class="price-label">Sendell Price*</span><span class="price-value">' + fmt(vehicle.sellingPrice) + '</span></div>';
+    } else {
+        priceHtml += '<div class="price-row final"><span class="price-label">MSRP / Sendell Price*</span><span class="price-value">' + fmt(vehicle.sellingPrice) + '</span></div>';
+    }
+    document.getElementById('priceBreakdown').innerHTML = priceHtml;
+})();
+</script>
 
 </body>
 </html>

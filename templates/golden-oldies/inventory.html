@@ -794,18 +794,19 @@
             html += '<div class="list-item-inner">';
 
             // Image block
+            var vdpUrl = '/demo/golden-oldies/vdp?id=' + v.id;
             html += '<div class="image-block">';
             if (v.image) {
-                html += '<a href="#"><img src="' + v.image + '" alt="' + titleText + '" /></a>';
+                html += '<a href="' + vdpUrl + '"><img src="' + v.image + '" alt="' + titleText + '" /></a>';
             } else {
-                html += '<a href="#"><div class="image-placeholder">' + placeholderSVG + '</div></a>';
+                html += '<a href="' + vdpUrl + '"><div class="image-placeholder">' + placeholderSVG + '</div></a>';
             }
             html += '<div class="watchlist-icon' + (isWatched ? ' active' : '') + '" data-id="' + v.id + '">' + heartSVG + '</div>';
             html += '</div>';
 
             // Details block
             html += '<div class="list-item-detail">';
-            html += '<a class="vehicleCardTitle" href="#">' + titleText + '</a>';
+            html += '<a class="vehicleCardTitle" href="' + vdpUrl + '">' + titleText + '</a>';
             html += '<div class="details-wrapper">';
             html += '<div class="details"><div class="label">Ext. Color</div><div class="value">' + v.color + '</div></div>';
             html += '<div class="details"><div class="label">Mileage</div><div class="value">' + formatPrice(v.mileage) + ' mi</div></div>';

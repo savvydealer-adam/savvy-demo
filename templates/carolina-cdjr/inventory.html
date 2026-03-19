@@ -719,7 +719,7 @@
         html += '<div class="list-item-inner">';
 
         // Image block — first vehicle links to VDP
-        var vdpLink = (i === 0) ? '/demo/carolina-cdjr/vdp' : '#';
+        var vdpLink = '/demo/carolina-cdjr/vdp?id=' + i;
         html += '<div class="image-block">';
         html += '<a href="' + vdpLink + '"><img src="' + v.image + '" alt="' + titleText + '" /></a>';
         html += '<div class="watchlist-icon">' + heartSVG + '</div>';
