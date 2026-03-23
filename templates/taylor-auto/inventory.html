@@ -2,18 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Search All Taylor Dealerships | Taylor Automotive Family</title>
-  <meta name="description" content="Search inventory across all 9 Taylor Automotive Family dealerships. Browse Cadillac, Genesis, Hyundai, Kia, and Volkswagen vehicles in Toledo, Perrysburg, Findlay, and Lima OH.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
+  <title>Search Inventory | Taylor Automotive Family | Toledo, Perrysburg, Findlay, Lima OH</title>
+  <meta name="description" content="Browse new and used Cadillac, Genesis, Hyundai, Kia, and Volkswagen vehicles across all 9 Taylor Automotive Family dealerships in Northwest Ohio. Competitive pricing on every vehicle in stock.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
-    *, *::before, *::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
       --navy: #1B2A4A;
@@ -29,384 +25,166 @@
       --gray-400: #9CA3AF;
       --gray-600: #6B7280;
       --gray-800: #1F2937;
+      --bodycolor: #19183C;
+      --linktextcolor: #0678bc;
+      --secondarycolor: #1B2A4A;
+      --savingsgreen: #30770f;
+      --transition: all 0.4s;
     }
 
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      color: #333;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: #333; line-height: 1.6; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
     a { text-decoration: none; color: inherit; }
     img { max-width: 100%; height: auto; }
 
     /* ========== TOP BAR ========== */
-    .top-bar {
-      background: var(--navy-dark);
-      color: #fff;
-      padding: 10px 0;
-      font-size: 13px;
-      border-bottom: 1px solid rgba(200,169,81,0.3);
-    }
-    .top-bar .container {
-      max-width: 1320px;
-      margin: 0 auto;
-      padding: 0 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-    .top-bar-left {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      color: rgba(255,255,255,0.8);
-      font-weight: 500;
-    }
-    .top-bar-left svg {
-      width: 14px;
-      height: 14px;
-      color: var(--gold);
-      flex-shrink: 0;
-    }
-    .top-bar-right {
-      display: flex;
-      gap: 20px;
-      align-items: center;
-    }
-    .top-bar-right a {
-      color: rgba(255,255,255,0.8);
-      transition: color 0.2s;
-      font-weight: 500;
-    }
+    .top-bar { background: var(--navy-dark); color: #fff; padding: 10px 0; font-size: 13px; border-bottom: 1px solid rgba(200, 169, 81, 0.3); }
+    .top-bar .container { max-width: 1630px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+    .top-bar-left { display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,0.8); font-weight: 500; }
+    .top-bar-left svg { width: 14px; height: 14px; color: var(--gold); flex-shrink: 0; }
+    .top-bar-right { display: flex; gap: 20px; align-items: center; }
+    .top-bar-right a { color: rgba(255,255,255,0.8); transition: color 0.2s; font-weight: 500; }
     .top-bar-right a:hover { color: var(--gold); }
 
     /* ========== HEADER ========== */
-    .site-header {
-      background: var(--white);
-      border-bottom: 1px solid var(--gray-200);
-      padding: 14px 0;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    }
-    .site-header .container {
-      max-width: 1320px;
-      margin: 0 auto;
-      padding: 0 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-    .header-logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      flex-shrink: 0;
-    }
-    .header-logo-icon {
-      width: 44px;
-      height: 44px;
-      background: var(--navy);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 20px;
-      font-weight: 900;
-      color: var(--gold);
-      letter-spacing: -1px;
-    }
+    .site-header { background: var(--white); border-bottom: 1px solid var(--gray-200); padding: 14px 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+    .site-header .container { max-width: 1630px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .header-logo { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+    .header-logo-icon { width: 44px; height: 44px; background: var(--navy); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 900; color: var(--gold); letter-spacing: -1px; }
     .header-logo-text { line-height: 1.15; }
-    .header-logo-text .brand-name {
-      font-size: 18px;
-      font-weight: 800;
-      color: var(--navy);
-    }
-    .header-logo-text .brand-sub {
-      font-size: 11px;
-      font-weight: 600;
-      color: var(--gold-dark);
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-    }
-    .header-nav {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-    }
-    .header-nav a {
-      color: var(--gray-800);
-      font-size: 14px;
-      font-weight: 600;
-      padding: 8px 14px;
-      border-radius: 6px;
-      transition: background 0.2s, color 0.2s;
-    }
+    .header-logo-text .brand-name { font-size: 18px; font-weight: 800; color: var(--navy); letter-spacing: -0.3px; }
+    .header-logo-text .brand-sub { font-size: 11px; font-weight: 600; color: var(--gold-dark); text-transform: uppercase; letter-spacing: 1.5px; }
+    .header-nav { display: flex; align-items: center; gap: 4px; }
+    .header-nav a { color: var(--gray-800); font-size: 14px; font-weight: 600; padding: 8px 14px; border-radius: 6px; transition: background 0.2s, color 0.2s; }
     .header-nav a:hover { background: var(--light-gray); color: var(--navy); }
     .header-nav a.active { background: var(--navy); color: var(--white); }
 
-    /* ========== BUTTONS ========== */
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 14px 32px;
-      font-size: 15px;
-      font-weight: 700;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: all 0.25s;
-      font-family: inherit;
-      border: 2px solid transparent;
-      text-align: center;
-    }
-    .btn-gold { background: var(--gold); color: var(--navy-dark); border-color: var(--gold); }
-    .btn-gold:hover { background: var(--gold-dark); border-color: var(--gold-dark); }
-    .btn-navy { background: var(--navy); color: var(--white); border-color: var(--navy); }
-    .btn-navy:hover { background: var(--navy-dark); border-color: var(--navy-dark); }
-    .btn-outline-navy { background: transparent; color: var(--navy); border-color: var(--navy); }
-    .btn-outline-navy:hover { background: var(--navy); color: var(--white); }
-    .btn-sm { padding: 10px 20px; font-size: 13px; }
+    /* ========== SRP LAYOUT ========== */
+    .search-page-main { padding: 30px 0; background: rgb(40 40 40 / 5%); min-height: 80vh; }
+    .search-page-main .container { width: 100%; max-width: 1630px; margin: 0 auto; padding: 0 24px; }
+    .search-page-main .inner { display: flex; flex-wrap: wrap; }
 
-    /* ========== HERO ========== */
-    .page-hero {
-      background: linear-gradient(135deg, #0D1B2E 0%, var(--navy) 40%, var(--navy-light) 100%);
-      padding: 56px 0 64px;
-      text-align: center;
-      color: #fff;
-      position: relative;
-      overflow: hidden;
-    }
-    .page-hero::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: radial-gradient(ellipse at 50% 0%, rgba(200,169,81,0.12) 0%, transparent 65%);
-      pointer-events: none;
-    }
-    .page-hero::after {
-      content: '';
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      height: 4px;
-      background: linear-gradient(90deg, var(--gold), var(--gold-light), var(--gold));
-    }
-    .page-hero .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 0 24px;
-      position: relative;
-      z-index: 1;
-    }
-    .page-hero h1 {
-      font-size: 40px;
-      font-weight: 900;
-      line-height: 1.1;
-      margin-bottom: 12px;
-      letter-spacing: -0.5px;
-    }
-    .page-hero h1 span { color: var(--gold); }
-    .page-hero p {
-      font-size: 17px;
-      color: rgba(255,255,255,0.75);
-      max-width: 560px;
-      margin: 0 auto;
-    }
+    /* ========== FILTER PANEL ========== */
+    .filter-panel { width: 21%; align-self: flex-start; background: #fff; border: 1px solid rgba(36,39,44,.1); box-shadow: 0 6px 10px rgba(0,0,0,.05); border-radius: 12px; padding: 24px 20px; position: sticky; top: 80px; }
+    .filter-panel .card-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid #eee; }
+    .filter-panel .cardtitle { font-size: 22px; font-weight: 700; margin: 0; }
+    .filter-panel .share-link { font-size: 13px; color: var(--linktextcolor); display: flex; align-items: center; gap: 6px; }
+    .filter-panel .share-link svg { width: 14px; height: 14px; fill: var(--linktextcolor); }
 
-    /* ========== BRAND TABS ========== */
-    .inventory-section {
-      padding: 56px 0 80px;
-      background: var(--light-gray);
-    }
-    .inventory-section .container {
-      max-width: 1320px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-    .brand-tabs {
-      display: flex;
-      justify-content: center;
-      gap: 6px;
-      margin-bottom: 40px;
-      flex-wrap: wrap;
-    }
-    .brand-tab {
-      padding: 12px 28px;
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--gray-600);
-      background: var(--white);
-      border: 2px solid var(--gray-200);
-      border-radius: 30px;
-      cursor: pointer;
-      transition: all 0.2s;
-      font-family: inherit;
-      line-height: 1;
-    }
-    .brand-tab:hover {
-      color: var(--navy);
-      border-color: var(--navy);
-    }
-    .brand-tab.active {
-      background: var(--navy);
-      color: var(--white);
-      border-color: var(--navy);
-    }
+    .searchform-main { margin-bottom: 16px; }
+    .searchform-main .form-field { display: flex; border: 1px solid #ddd; border-radius: 6px; overflow: hidden; }
+    .searchform-main input { flex: 1; padding: 10px 12px; border: none; outline: none; font-family: inherit; font-size: 14px; }
+    .searchform-main .search-btn { padding: 10px 14px; background: var(--navy); display: flex; align-items: center; cursor: pointer; border: none; }
+    .searchform-main .search-btn svg { width: 16px; height: 16px; fill: #fff; }
 
-    /* ========== TAB PANELS ========== */
-    .tab-panel { display: none; }
-    .tab-panel.active { display: block; }
+    .reset-btn { margin-bottom: 16px; }
+    .reset-btn a { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 10px 16px; background: var(--navy); color: #fff; border: 1px solid var(--navy); border-radius: 6px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; transition: var(--transition); }
+    .reset-btn a:hover { background: transparent; color: var(--navy); }
+    .reset-btn a svg { width: 14px; height: 14px; fill: currentColor; }
 
-    .tab-panel-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 28px;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-    .tab-panel-header h2 {
-      font-size: 24px;
-      font-weight: 800;
-      color: var(--navy);
-    }
+    .filter-item { border-bottom: 1px solid #eee; padding: 12px 0; }
+    .filter-item .title { font-size: 14px; font-weight: 700; text-transform: uppercase; cursor: pointer; display: flex; align-items: center; justify-content: space-between; }
+    .filter-item .title::after { content: ""; width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 5px solid var(--bodycolor); transition: transform 0.3s; }
+    .filter-item.open .title::after { transform: rotate(180deg); }
+    .filter-item .accordion-content { padding-top: 8px; display: none; }
+    .filter-item.open .accordion-content { display: block; }
+    .filter-item .accordion-content ul { list-style: none; padding: 0; margin: 0; }
+    .filter-item .accordion-content li { display: flex; align-items: center; justify-content: space-between; padding: 6px 0; font-size: 14px; cursor: pointer; transition: color 0.2s; }
+    .filter-item .accordion-content li:hover { color: var(--gold-dark); }
+    .filter-item .accordion-content li.active { color: var(--gold-dark); font-weight: 700; }
+    .filter-item .badge { background: #f0f0f0; color: var(--gray-600); font-size: 12px; padding: 2px 8px; border-radius: 10px; font-weight: 600; }
+    .filter-item .accordion-content li label { display: flex; align-items: center; gap: 8px; cursor: pointer; flex: 1; }
+    .filter-item .accordion-content li input[type="checkbox"] { accent-color: var(--navy); width: 16px; height: 16px; cursor: pointer; }
 
-    /* ========== VEHICLE GRID ========== */
-    .vehicle-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      margin-bottom: 36px;
-    }
-    .vehicle-card {
-      background: var(--white);
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .vehicle-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-    }
-    .vehicle-card-image {
-      background: linear-gradient(135deg, #f0f1f3, #e8e9ec);
-      height: 200px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      overflow: hidden;
-    }
-    .vehicle-card-image-placeholder {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 8px;
-      color: var(--gray-400);
-    }
-    .vehicle-card-image-placeholder svg {
-      width: 48px;
-      height: 48px;
-    }
-    .vehicle-card-image-placeholder span {
-      font-size: 12px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-    .vehicle-card-badge {
-      position: absolute;
-      top: 12px;
-      left: 12px;
-      background: var(--navy);
-      color: var(--white);
-      font-size: 11px;
-      font-weight: 700;
-      padding: 4px 10px;
-      border-radius: 4px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-    .vehicle-card-body { padding: 20px; }
-    .vehicle-card-year-make {
-      font-size: 12px;
-      font-weight: 600;
-      color: var(--gold-dark);
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-bottom: 4px;
-    }
-    .vehicle-card-name {
-      font-size: 18px;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 8px;
-    }
-    .vehicle-card-details {
-      font-size: 13px;
-      color: var(--gray-600);
-      margin-bottom: 12px;
-      line-height: 1.5;
-    }
-    .vehicle-card-price {
-      font-size: 22px;
-      font-weight: 800;
-      color: var(--navy);
-      margin-bottom: 4px;
-    }
-    .vehicle-card-msrp {
-      font-size: 12px;
-      color: var(--gray-400);
-      margin-bottom: 16px;
-    }
-    .vehicle-card-cta {
-      display: block;
-      text-align: center;
-      padding: 12px;
-      background: var(--navy);
-      color: var(--white);
-      font-size: 14px;
-      font-weight: 700;
-      border-radius: 8px;
-      transition: background 0.2s;
-    }
-    .vehicle-card-cta:hover { background: var(--navy-dark); }
+    /* ========== RESULTS AREA ========== */
+    .filter-result-wrapper { width: calc(79% - 30px); margin: 0 0 0 30px; }
+    .inventory-detail { background: #fff; border: 1px solid rgba(36,39,44,.1); box-shadow: 0 6px 10px rgba(0,0,0,.05); border-radius: 12px; padding: 16px 24px; margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    .inventory-detail .count { font-size: 20px; font-weight: 700; }
+    .inventory-detail .sort-by { display: flex; align-items: center; gap: 8px; font-size: 14px; }
+    .inventory-detail .sort-by select { padding: 8px 12px; border: 1px solid #ddd; border-radius: 6px; font-family: inherit; font-size: 14px; cursor: pointer; }
+    .filter-buttons { display: flex; gap: 8px; }
+    .filter-buttons div { padding: 8px; cursor: pointer; border-radius: 6px; transition: var(--transition); }
+    .filter-buttons div:hover, .filter-buttons div.active { background: var(--navy); }
+    .filter-buttons div:hover svg, .filter-buttons div.active svg { fill: #fff; }
+    .filter-buttons svg { width: 18px; height: 18px; fill: #666; display: block; }
 
-    .tab-panel-footer {
-      text-align: center;
-      padding-top: 8px;
-    }
+    .mobile-filter-btn { display: none; align-items: center; justify-content: center; gap: 8px; padding: 12px 20px; background: var(--navy); color: #fff; border: none; border-radius: 8px; font-family: inherit; font-size: 14px; font-weight: 700; cursor: pointer; margin-bottom: 16px; width: 100%; }
+    .mobile-filter-btn svg { width: 16px; height: 16px; fill: #fff; }
+
+    /* ========== VEHICLE CARDS ========== */
+    .list-wrapper { display: flex; flex-wrap: wrap; gap: 20px; }
+    .list-item { width: calc(25% - 15px); background: #fff; border: 1px solid rgba(36,39,44,.1); box-shadow: 0 6px 10px rgba(0,0,0,.05); border-radius: 12px; overflow: hidden; transition: box-shadow 0.3s; }
+    .list-item:hover { box-shadow: 0 8px 24px rgba(0,0,0,.12); }
+    .list-item-inner { display: flex; flex-direction: column; height: 100%; }
+    .list-item-inner > div { width: 100%; }
+
+    .list-item .image-block { position: relative; overflow: hidden; background: #f4f4f4; }
+    .list-item .image-block img { width: 100%; aspect-ratio: 4/3; object-fit: contain; border-radius: 12px 12px 0 0; transition: transform 0.4s; padding: 12px; }
+    .list-item:hover .image-block img { transform: scale(1.03); }
+
+    .watchlist-icon { position: absolute; bottom: 10px; right: 10px; width: 32px; height: 32px; background: rgba(255,255,255,0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: var(--transition); }
+    .watchlist-icon:hover { background: var(--navy); }
+    .watchlist-icon:hover svg { fill: #fff; }
+    .watchlist-icon svg { width: 16px; height: 16px; fill: #999; }
+
+    .store-badge { position: absolute; top: 10px; left: 10px; background: var(--navy); color: #fff; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 4px; letter-spacing: 0.3px; z-index: 2; }
+
+    .list-item-detail { padding: 15px 15px 0; }
+    .vehicleCardTitle { color: #0678bc; font-size: 16px; font-weight: 700; line-height: 1.3; display: block; margin-bottom: 8px; }
+    .vehicleCardTitle:hover { text-decoration: underline; }
+    .details-wrapper { font-size: 13px; }
+    .details-wrapper .details { display: flex; justify-content: space-between; padding: 3px 0; }
+    .details-wrapper .details .label { color: #999; }
+    .details-wrapper .details .value { font-weight: 600; text-align: right; }
+
+    .list-item-price { padding: 0 15px 15px; display: flex; flex-direction: column; flex-grow: 1; }
+    .mobile-apr-price-wrapper { padding: 10px 12px; background: #fafafa; border: 1px solid #eee; border-radius: 8px; margin-top: 10px; }
+    .mobile-apr-price-wrapper .price-display { display: flex; align-items: center; justify-content: space-between; }
+    .yousave-price { text-align: left; }
+    .yousave-price .amount { font-size: 15px; font-weight: 800; color: var(--gold-dark); }
+    .yousave-price .save-label { font-size: 10px; color: var(--linktextcolor); text-transform: uppercase; font-weight: 700; display: block; }
+    .mobile-price { text-align: right; }
+    .mobile-price .price { font-size: 20px; font-weight: 700; color: var(--bodycolor); }
+    .mobile-price .price-label { font-size: 10px; color: var(--linktextcolor); text-transform: uppercase; font-weight: 700; display: block; }
+
+    .price-toggle { padding: 6px 0; margin-top: 6px; cursor: pointer; font-size: 13px; color: var(--linktextcolor); display: flex; align-items: center; justify-content: center; gap: 4px; user-select: none; }
+    .price-toggle:hover { color: var(--bodycolor); }
+    .price-toggle svg { width: 10px; height: 10px; fill: currentColor; transition: transform 0.3s; }
+    .price-toggle.open svg { transform: rotate(180deg); }
+
+    .price-breakup { display: none; padding: 10px 0 4px; }
+    .price-breakup.show { display: block; }
+    .price-breakup .row { display: flex; justify-content: space-between; padding: 3px 0; font-size: 13px; }
+    .price-breakup .label { color: #999; }
+    .price-breakup .msrp { text-decoration: line-through; color: #999; }
+    .price-breakup .msrp::before { content: "$"; }
+    .price-breakup .dealersavingsprice { color: var(--gold-dark); font-weight: 700; }
+    .price-breakup .finalprice { color: #30770f; font-weight: 700; }
+    .price-breakup .border-top-dash { border-top: 1px dashed #ddd; margin-top: 4px; padding-top: 6px; }
+
+    .card-actions { margin-top: auto; display: flex; flex-direction: column; gap: 6px; padding-top: 8px; }
+
+    .btn-glass { background: rgba(27,42,74,0.08); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(27,42,74,0.15); border-radius: 12px; color: var(--navy); padding: 12px 16px; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; transition: all 0.3s; cursor: pointer; display: flex; align-items: center; justify-content: center; font-family: inherit; text-align: center; }
+    .btn-glass:hover { background: rgba(27,42,74,0.16); border-color: rgba(27,42,74,0.3); box-shadow: 0 8px 32px rgba(0,0,0,0.12); transform: translateY(-1px); }
+
+    /* ========== PAGINATION ========== */
+    .pagination-wrapper { padding: 24px 0; display: flex; justify-content: center; }
+    .pagination { display: flex; list-style: none; padding: 0; margin: 0; gap: 4px; }
+    .pagination li { cursor: pointer; }
+    .pagination li span { display: block; padding: 8px 14px; border: 1px solid #ddd; border-radius: 6px; font-size: 14px; font-weight: 600; color: #666; transition: var(--transition); }
+    .pagination li:hover span { border-color: var(--navy); color: var(--navy); }
+    .pagination li.active span { background: var(--navy); color: #fff; border-color: var(--navy); }
+    .pagination li.disabled span { color: #ccc; cursor: default; }
+    .pagination li.disabled:hover span { border-color: #ddd; color: #ccc; }
 
     /* ========== FOOTER ========== */
-    .site-footer {
-      background: #0D1520;
-      color: #ccc;
-      padding: 56px 0 0;
-    }
-    .site-footer .container {
-      max-width: 1320px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
-      gap: 36px;
-      padding-bottom: 40px;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
+    .site-footer { background: #0D1520; color: #ccc; padding: 56px 0 0; }
+    .site-footer .container { max-width: 1630px; margin: 0 auto; padding: 0 24px; }
+    .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr; gap: 36px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.1); }
     .footer-brand { padding-right: 24px; }
     .footer-brand-name { font-size: 20px; font-weight: 800; color: var(--white); margin-bottom: 4px; }
     .footer-brand-sub { font-size: 11px; font-weight: 600; color: var(--gold); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 16px; }
     .footer-brand p { font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1.6; margin-bottom: 16px; }
-    .footer-brand a { color: var(--gold); font-weight: 600; font-size: 14px; }
+    .footer-brand a { color: var(--gold); font-weight: 600; font-size: 14px; transition: color 0.2s; }
     .footer-brand a:hover { color: var(--gold-light); }
     .footer-col h4 { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--white); margin-bottom: 16px; }
     .footer-col ul { list-style: none; }
@@ -418,476 +196,801 @@
     .footer-bottom a:hover { text-decoration: underline; }
 
     /* ========== RESPONSIVE ========== */
+    @media (max-width: 1429px) {
+      .filter-panel { width: 25%; }
+      .filter-result-wrapper { width: calc(75% - 30px); }
+      .list-item { width: calc(33.33% - 14px); }
+    }
+    @media (max-width: 1199px) {
+      .list-item { width: calc(50% - 10px); }
+      .filter-buttons { display: none; }
+    }
     @media (max-width: 1100px) {
       .footer-grid { grid-template-columns: repeat(3, 1fr); }
       .footer-brand { grid-column: 1 / -1; }
     }
-    @media (max-width: 1023px) {
-      .header-nav { display: none; }
-      .page-hero h1 { font-size: 32px; }
-      .vehicle-grid { grid-template-columns: repeat(2, 1fr); }
+    @media (max-width: 1023px) { .header-nav { display: none; } }
+    @media (max-width: 991px) {
+      .filter-panel { display: none; }
+      .filter-result-wrapper { width: 100%; margin: 0; }
+      .list-item { width: calc(50% - 10px); }
+      .mobile-filter-btn { display: flex !important; }
     }
-    @media (max-width: 768px) {
-      .footer-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (max-width: 640px) {
+    @media (max-width: 767px) {
+      .list-item { width: 100%; }
       .top-bar .container { flex-direction: column; text-align: center; gap: 4px; }
       .site-header .container { flex-wrap: wrap; justify-content: center; }
-      .page-hero { padding: 40px 0 48px; }
-      .page-hero h1 { font-size: 26px; }
-      .vehicle-grid { grid-template-columns: 1fr; }
-      .brand-tab { padding: 10px 18px; font-size: 13px; }
       .footer-grid { grid-template-columns: 1fr; text-align: center; }
-      .inventory-section { padding: 40px 0 56px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- ==================== TOP BAR ==================== -->
-  <div class="top-bar">
-    <div class="container">
-      <div class="top-bar-left">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        Serving Toledo, Perrysburg, Findlay &amp; Lima, OH
+<!-- ==================== TOP BAR ==================== -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-left">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      Serving Toledo, Perrysburg, Findlay &amp; Lima, OH
+    </div>
+    <div class="top-bar-right">
+      <a href="tel:4198428811">Main: (419) 842-8811</a>
+      <a href="/demo/taylor-auto/contact">All Locations</a>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== HEADER ==================== -->
+<header class="site-header">
+  <div class="container">
+    <a href="/demo/taylor-auto" class="header-logo">
+      <div class="header-logo-icon">TA</div>
+      <div class="header-logo-text">
+        <div class="brand-name">Taylor Automotive</div>
+        <div class="brand-sub">Family of Dealerships</div>
       </div>
-      <div class="top-bar-right">
-        <a href="tel:4198428811">Main: (419) 842-8811</a>
-        <a href="/demo/taylor-auto/contact">All Locations</a>
+    </a>
+    <nav class="header-nav">
+      <a href="/demo/taylor-auto">Home</a>
+      <a href="/demo/taylor-auto/inventory" class="active">Inventory</a>
+      <a href="/demo/taylor-auto/service">Service</a>
+      <a href="/demo/taylor-auto/about">About</a>
+      <a href="/demo/taylor-auto/contact">Locations</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ==================== SRP MAIN ==================== -->
+<div class="search-page-main">
+  <div class="container">
+    <button class="mobile-filter-btn" style="display:none;" onclick="document.querySelector('.filter-panel').style.display=document.querySelector('.filter-panel').style.display==='block'?'none':'block';">
+      <svg viewBox="0 0 24 24"><path d="M3 17v2h6v-2H3zM3 5v2h10V5H3zm10 16v-2h8v-2h-8v-2h-2v6h2zM7 9v2H3v2h4v2h2V9H7zm14 4v-2H11v2h10zm-6-4h2V7h4V5h-4V3h-2v6z"/></svg>
+      Filter Vehicles
+    </button>
+    <div class="inner">
+
+      <!-- ==================== FILTER PANEL ==================== -->
+      <aside class="filter-panel">
+        <div class="card-header">
+          <h3 class="cardtitle">Filters</h3>
+          <a href="#" class="share-link"><svg viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z"/></svg> Share</a>
+        </div>
+        <div class="searchform-main">
+          <div class="form-field">
+            <input type="text" placeholder="Search inventory...">
+            <button class="search-btn"><svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg></button>
+          </div>
+        </div>
+        <div class="reset-btn">
+          <a href="#"><svg viewBox="0 0 24 24"><path d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/></svg> Reset All Filters</a>
+        </div>
+
+        <!-- STORE Filter -->
+        <div class="filter-item open">
+          <div class="title" onclick="this.parentElement.classList.toggle('open')">Store</div>
+          <div class="accordion-content">
+            <ul>
+              <li><label><input type="checkbox" checked> Taylor Cadillac</label> <span class="badge">2</span></li>
+              <li><label><input type="checkbox" checked> Taylor Genesis</label> <span class="badge">2</span></li>
+              <li><label><input type="checkbox" checked> Taylor Hyundai of Toledo</label> <span class="badge">2</span></li>
+              <li><label><input type="checkbox" checked> Taylor Hyundai of Perrysburg</label> <span class="badge">1</span></li>
+              <li><label><input type="checkbox" checked> Taylor Hyundai of Findlay</label> <span class="badge">1</span></li>
+              <li><label><input type="checkbox" checked> Taylor Kia of Toledo</label> <span class="badge">3</span></li>
+              <li><label><input type="checkbox" checked> Taylor Kia of Findlay</label> <span class="badge">1</span></li>
+              <li><label><input type="checkbox" checked> Taylor Kia of Lima</label> <span class="badge">1</span></li>
+              <li><label><input type="checkbox" checked> Taylor VW of Findlay</label> <span class="badge">3</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Type Filter -->
+        <div class="filter-item open">
+          <div class="title" onclick="this.parentElement.classList.toggle('open')">Type</div>
+          <div class="accordion-content">
+            <ul>
+              <li>New <span class="badge">12</span></li>
+              <li>Used <span class="badge">3</span></li>
+              <li>Certified Pre-Owned <span class="badge">1</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Brand Filter -->
+        <div class="filter-item open">
+          <div class="title" onclick="this.parentElement.classList.toggle('open')">Brand</div>
+          <div class="accordion-content">
+            <ul>
+              <li>Cadillac <span class="badge">2</span></li>
+              <li>Genesis <span class="badge">2</span></li>
+              <li>Hyundai <span class="badge">4</span></li>
+              <li>Kia <span class="badge">5</span></li>
+              <li>Volkswagen <span class="badge">3</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Model Filter -->
+        <div class="filter-item">
+          <div class="title" onclick="this.parentElement.classList.toggle('open')">Model</div>
+          <div class="accordion-content">
+            <ul>
+              <li>Escalade <span class="badge">1</span></li>
+              <li>XT4 <span class="badge">1</span></li>
+              <li>GV70 <span class="badge">1</span></li>
+              <li>G80 <span class="badge">1</span></li>
+              <li>Tucson <span class="badge">2</span></li>
+              <li>Palisade <span class="badge">1</span></li>
+              <li>IONIQ 5 <span class="badge">1</span></li>
+              <li>Telluride <span class="badge">2</span></li>
+              <li>Sportage <span class="badge">1</span></li>
+              <li>EV9 <span class="badge">1</span></li>
+              <li>Forte <span class="badge">1</span></li>
+              <li>Atlas <span class="badge">1</span></li>
+              <li>ID.4 <span class="badge">1</span></li>
+              <li>Taos <span class="badge">1</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Year Filter -->
+        <div class="filter-item">
+          <div class="title" onclick="this.parentElement.classList.toggle('open')">Year</div>
+          <div class="accordion-content">
+            <ul>
+              <li>2025 <span class="badge">11</span></li>
+              <li>2024 <span class="badge">4</span></li>
+              <li>2023 <span class="badge">1</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Price Filter -->
+        <div class="filter-item">
+          <div class="title" onclick="this.parentElement.classList.toggle('open')">Price</div>
+          <div class="accordion-content">
+            <ul>
+              <li>Under $25,000 <span class="badge">2</span></li>
+              <li>$25,000 - $35,000 <span class="badge">4</span></li>
+              <li>$35,000 - $45,000 <span class="badge">4</span></li>
+              <li>$45,000 - $55,000 <span class="badge">3</span></li>
+              <li>$55,000+ <span class="badge">3</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Drivetrain Filter -->
+        <div class="filter-item">
+          <div class="title" onclick="this.parentElement.classList.toggle('open')">Drivetrain</div>
+          <div class="accordion-content">
+            <ul>
+              <li>AWD <span class="badge">9</span></li>
+              <li>FWD <span class="badge">5</span></li>
+              <li>RWD <span class="badge">2</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Color Filter -->
+        <div class="filter-item">
+          <div class="title" onclick="this.parentElement.classList.toggle('open')">Exterior Color</div>
+          <div class="accordion-content">
+            <ul>
+              <li>White <span class="badge">4</span></li>
+              <li>Black <span class="badge">3</span></li>
+              <li>Silver <span class="badge">2</span></li>
+              <li>Blue <span class="badge">2</span></li>
+              <li>Red <span class="badge">2</span></li>
+              <li>Gray <span class="badge">2</span></li>
+              <li>Green <span class="badge">1</span></li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+
+      <!-- ==================== RESULTS ==================== -->
+      <div class="filter-result-wrapper">
+        <div class="inventory-detail">
+          <div class="count"><strong>16 Vehicles Found</strong></div>
+          <div class="sort-by">
+            <span><strong>Sort Results</strong></span>
+            <select>
+              <option>Price (low to high)</option>
+              <option>Price (high to low)</option>
+              <option>Year (newest)</option>
+              <option>Year (oldest)</option>
+              <option>Mileage (low to high)</option>
+            </select>
+          </div>
+          <div class="filter-buttons">
+            <div title="List View"><svg viewBox="0 0 24 24"><path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/></svg></div>
+            <div class="active" title="Grid View"><svg viewBox="0 0 24 24"><path d="M3 3h8v8H3zm0 10h8v8H3zM13 3h8v8h-8zm0 10h8v8h-8z"/></svg></div>
+          </div>
+        </div>
+
+        <div class="list-wrapper">
+
+          <!-- 1: 2025 Kia Telluride SX -->
+          <div class="list-item"><div class="list-item-inner">
+            <div class="image-block">
+              <span class="store-badge">Taylor Kia of Toledo</span>
+              <a href="/demo/taylor-auto/vdp"><img src="https://www.kia.com/content/dam/kwcms/kme/us/en/assets/vehicles/2025/telluride/gallery/exterior/snow-white-pearl/kia-telluride-2025-exterior-snow-white-pearl-side.png" alt="2025 Kia Telluride SX" loading="lazy"></a>
+              <div class="watchlist-icon"><svg viewBox="0 0 24 24"><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"/></svg></div>
+            </div>
+            <div class="list-item-detail">
+              <a class="vehicleCardTitle" href="/demo/taylor-auto/vdp">2025 Kia Telluride SX</a>
+              <div class="details-wrapper">
+                <div class="details"><div class="label">Ext. Color</div><div class="value">Snow White Pearl</div></div>
+                <div class="details"><div class="label">Drivetrain</div><div class="value">AWD</div></div>
+                <div class="details"><div class="label">Engine</div><div class="value">3.8L V6</div></div>
+                <div class="details"><div class="label">Stock #</div><div class="value">TK25-1042</div></div>
+              </div>
+            </div>
+            <div class="list-item-price">
+              <div class="mobile-apr-price-wrapper"><div class="price-display">
+                <div class="yousave-price"><span class="amount">$2,750</span><span class="save-label">Potential Savings</span></div>
+                <div class="mobile-price"><span class="price">$47,240</span><span class="price-label">Dealer Price*</span></div>
+              </div></div>
+              <div class="price-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('show')">Price Details <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg></div>
+              <div class="price-breakup">
+                <div class="row"><div class="label">MSRP</div><div class="msrp">49,990</div></div>
+                <div class="row"><div class="label">Discount</div><div class="dealersavingsprice">-$2,750</div></div>
+                <div class="row border-top-dash"><div class="label">Dealer Price*</div><div class="finalprice">$47,240</div></div>
+              </div>
+              <div class="card-actions"><a href="/demo/taylor-auto/vdp" class="btn-glass">Check Availability</a></div>
+            </div>
+          </div></div>
+
+          <!-- 2: 2025 Hyundai Tucson SEL -->
+          <div class="list-item"><div class="list-item-inner">
+            <div class="image-block">
+              <span class="store-badge">Taylor Hyundai of Toledo</span>
+              <a href="/demo/taylor-auto/vdp"><img src="https://scene7.hyundai.com/is/image/hyundai/2025-tucson-se-atlas-white-702-exterior-0001-front-three-quarter?wid=960&hei=420&fmt=webp-alpha" alt="2025 Hyundai Tucson SEL" loading="lazy"></a>
+              <div class="watchlist-icon"><svg viewBox="0 0 24 24"><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"/></svg></div>
+            </div>
+            <div class="list-item-detail">
+              <a class="vehicleCardTitle" href="/demo/taylor-auto/vdp">2025 Hyundai Tucson SEL</a>
+              <div class="details-wrapper">
+                <div class="details"><div class="label">Ext. Color</div><div class="value">Atlas White</div></div>
+                <div class="details"><div class="label">Drivetrain</div><div class="value">AWD</div></div>
+                <div class="details"><div class="label">Engine</div><div class="value">2.5L 4-Cyl</div></div>
+                <div class="details"><div class="label">Stock #</div><div class="value">TH25-3087</div></div>
+              </div>
+            </div>
+            <div class="list-item-price">
+              <div class="mobile-apr-price-wrapper"><div class="price-display">
+                <div class="yousave-price"><span class="amount">$1,500</span><span class="save-label">Potential Savings</span></div>
+                <div class="mobile-price"><span class="price">$33,385</span><span class="price-label">Dealer Price*</span></div>
+              </div></div>
+              <div class="price-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('show')">Price Details <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg></div>
+              <div class="price-breakup">
+                <div class="row"><div class="label">MSRP</div><div class="msrp">34,885</div></div>
+                <div class="row"><div class="label">Discount</div><div class="dealersavingsprice">-$1,500</div></div>
+                <div class="row border-top-dash"><div class="label">Dealer Price*</div><div class="finalprice">$33,385</div></div>
+              </div>
+              <div class="card-actions"><a href="/demo/taylor-auto/vdp" class="btn-glass">Check Availability</a></div>
+            </div>
+          </div></div>
+
+          <!-- 3: 2025 Cadillac Escalade Sport -->
+          <div class="list-item"><div class="list-item-inner">
+            <div class="image-block">
+              <span class="store-badge">Taylor Cadillac</span>
+              <a href="/demo/taylor-auto/vdp"><img src="https://www.cadillac.com/content/dam/cadillac/na/us/english/index/vehicles/2025/escalade/gallery/exterior/01-images/2025-ESCALADE-GALLERY-EXTERIOR-01.jpg?imwidth=960" alt="2025 Cadillac Escalade Sport" loading="lazy"></a>
+              <div class="watchlist-icon"><svg viewBox="0 0 24 24"><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"/></svg></div>
+            </div>
+            <div class="list-item-detail">
+              <a class="vehicleCardTitle" href="/demo/taylor-auto/vdp">2025 Cadillac Escalade Sport</a>
+              <div class="details-wrapper">
+                <div class="details"><div class="label">Ext. Color</div><div class="value">Black Raven</div></div>
+                <div class="details"><div class="label">Drivetrain</div><div class="value">4WD</div></div>
+                <div class="details"><div class="label">Engine</div><div class="value">6.2L V8</div></div>
+                <div class="details"><div class="label">Stock #</div><div class="value">TC25-0189</div></div>
+              </div>
+            </div>
+            <div class="list-item-price">
+              <div class="mobile-apr-price-wrapper"><div class="price-display">
+                <div class="yousave-price"><span class="amount">$3,500</span><span class="save-label">Potential Savings</span></div>
+                <div class="mobile-price"><span class="price">$83,990</span><span class="price-label">Dealer Price*</span></div>
+              </div></div>
+              <div class="price-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('show')">Price Details <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg></div>
+              <div class="price-breakup">
+                <div class="row"><div class="label">MSRP</div><div class="msrp">87,490</div></div>
+                <div class="row"><div class="label">Discount</div><div class="dealersavingsprice">-$3,500</div></div>
+                <div class="row border-top-dash"><div class="label">Dealer Price*</div><div class="finalprice">$83,990</div></div>
+              </div>
+              <div class="card-actions"><a href="/demo/taylor-auto/vdp" class="btn-glass">Check Availability</a></div>
+            </div>
+          </div></div>
+
+          <!-- 4: 2025 Genesis GV70 2.5T Advanced -->
+          <div class="list-item"><div class="list-item-inner">
+            <div class="image-block">
+              <span class="store-badge">Taylor Genesis</span>
+              <a href="/demo/taylor-auto/vdp"><img src="https://scene7.hyundai.com/is/image/hyundai/2025-genesis-gv70-standard-vik-black-exterior-0001-front-three-quarter?wid=960&hei=420&fmt=webp-alpha" alt="2025 Genesis GV70 2.5T" loading="lazy"></a>
+              <div class="watchlist-icon"><svg viewBox="0 0 24 24"><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"/></svg></div>
+            </div>
+            <div class="list-item-detail">
+              <a class="vehicleCardTitle" href="/demo/taylor-auto/vdp">2025 Genesis GV70 2.5T Advanced</a>
+              <div class="details-wrapper">
+                <div class="details"><div class="label">Ext. Color</div><div class="value">Vik Black</div></div>
+                <div class="details"><div class="label">Drivetrain</div><div class="value">AWD</div></div>
+                <div class="details"><div class="label">Engine</div><div class="value">2.5L Turbo</div></div>
+                <div class="details"><div class="label">Stock #</div><div class="value">TG25-0023</div></div>
+              </div>
+            </div>
+            <div class="list-item-price">
+              <div class="mobile-apr-price-wrapper"><div class="price-display">
+                <div class="yousave-price"><span class="amount">$2,000</span><span class="save-label">Potential Savings</span></div>
+                <div class="mobile-price"><span class="price">$47,500</span><span class="price-label">Dealer Price*</span></div>
+              </div></div>
+              <div class="price-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('show')">Price Details <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg></div>
+              <div class="price-breakup">
+                <div class="row"><div class="label">MSRP</div><div class="msrp">49,500</div></div>
+                <div class="row"><div class="label">Discount</div><div class="dealersavingsprice">-$2,000</div></div>
+                <div class="row border-top-dash"><div class="label">Dealer Price*</div><div class="finalprice">$47,500</div></div>
+              </div>
+              <div class="card-actions"><a href="/demo/taylor-auto/vdp" class="btn-glass">Check Availability</a></div>
+            </div>
+          </div></div>
+
+          <!-- 5: 2025 VW Atlas SE -->
+          <div class="list-item"><div class="list-item-inner">
+            <div class="image-block">
+              <span class="store-badge">Taylor VW of Findlay</span>
+              <a href="/demo/taylor-auto/vdp"><img src="https://www.kbb.com/wp-content/uploads/2024/01/2024-volkswagen-atlas-front-left-3qtr.jpg?w=918" alt="2025 Volkswagen Atlas SE" loading="lazy"></a>
+              <div class="watchlist-icon"><svg viewBox="0 0 24 24"><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"/></svg></div>
+            </div>
+            <div class="list-item-detail">
+              <a class="vehicleCardTitle" href="/demo/taylor-auto/vdp">2025 Volkswagen Atlas SE</a>
+              <div class="details-wrapper">
+                <div class="details"><div class="label">Ext. Color</div><div class="value">Opal White Pearl</div></div>
+                <div class="details"><div class="label">Drivetrain</div><div class="value">AWD</div></div>
+                <div class="details"><div class="label">Engine</div><div class="value">2.0L Turbo</div></div>
+                <div class="details"><div class="label">Stock #</div><div class="value">TV25-0412</div></div>
+              </div>
+            </div>
+            <div class="list-item-price">
+              <div class="mobile-apr-price-wrapper"><div class="price-display">
+                <div class="yousave-price"><span class="amount">$2,200</span><span class="save-label">Potential Savings</span></div>
+                <div class="mobile-price"><span class="price">$39,790</span><span class="price-label">Dealer Price*</span></div>
+              </div></div>
+              <div class="price-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('show')">Price Details <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg></div>
+              <div class="price-breakup">
+                <div class="row"><div class="label">MSRP</div><div class="msrp">41,990</div></div>
+                <div class="row"><div class="label">Discount</div><div class="dealersavingsprice">-$2,200</div></div>
+                <div class="row border-top-dash"><div class="label">Dealer Price*</div><div class="finalprice">$39,790</div></div>
+              </div>
+              <div class="card-actions"><a href="/demo/taylor-auto/vdp" class="btn-glass">Check Availability</a></div>
+            </div>
+          </div></div>
+
+          <!-- 6: 2025 Kia Sportage Hybrid EX -->
+          <div class="list-item"><div class="list-item-inner">
+            <div class="image-block">
+              <span class="store-badge">Taylor Kia of Findlay</span>
+              <a href="/demo/taylor-auto/vdp"><img src="https://www.kia.com/content/dam/kwcms/kme/us/en/assets/vehicles/2025/sportage/gallery/exterior/gravity-grey/kia-sportage-2025-exterior-gravity-grey-side.png" alt="2025 Kia Sportage Hybrid EX" loading="lazy"></a>
+              <div class="watchlist-icon"><svg viewBox="0 0 24 24"><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"/></svg></div>
+            </div>
+            <div class="list-item-detail">
+              <a class="vehicleCardTitle" href="/demo/taylor-auto/vdp">2025 Kia Sportage Hybrid EX</a>
+              <div class="details-wrapper">
+                <div class="details"><div class="label">Ext. Color</div><div class="value">Gravity Gray</div></div>
+                <div class="details"><div class="label">Drivetrain</div><div class="value">AWD</div></div>
+                <div class="details"><div class="label">Engine</div><div class="value">1.6L Turbo HEV</div></div>
+                <div class="details"><div class="label">Stock #</div><div class="value">TKF25-0781</div></div>
+              </div>
+            </div>
+            <div class="list-item-price">
+              <div class="mobile-apr-price-wrapper"><div class="price-display">
+                <div class="yousave-price"><span class="amount">$1,800</span><span class="save-label">Potential Savings</span></div>
+                <div class="mobile-price"><span class="price">$36,690</span><span class="price-label">Dealer Price*</span></div>
+              </div></div>
+              <div class="price-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('show')">Price Details <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg></div>
+              <div class="price-breakup">
+                <div class="row"><div class="label">MSRP</div><div class="msrp">38,490</div></div>
+                <div class="row"><div class="label">Discount</div><div class="dealersavingsprice">-$1,800</div></div>
+                <div class="row border-top-dash"><div class="label">Dealer Price*</div><div class="finalprice">$36,690</div></div>
+              </div>
+              <div class="card-actions"><a href="/demo/taylor-auto/vdp" class="btn-glass">Check Availability</a></div>
+            </div>
+          </div></div>
+
+          <!-- 7: 2025 Hyundai Palisade Calligraphy -->
+          <div class="list-item"><div class="list-item-inner">
+            <div class="image-block">
+              <span class="store-badge">Taylor Hyundai of Perrysburg</span>
+              <a href="/demo/taylor-auto/vdp"><img src="https://scene7.hyundai.com/is/image/hyundai/2025-palisade-calligraphy-hyper-white-exterior-0001-front-three-quarter?wid=960&hei=420&fmt=webp-alpha" alt="2025 Hyundai Palisade Calligraphy" loading="lazy"></a>
+              <div class="watchlist-icon"><svg viewBox="0 0 24 24"><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"/></svg></div>
+            </div>
+            <div class="list-item-detail">
+              <a class="vehicleCardTitle" href="/demo/taylor-auto/vdp">2025 Hyundai Palisade Calligraphy</a>
+              <div class="details-wrapper">
+                <div class="details"><div class="label">Ext. Color</div><div class="value">Hyper White</div></div>
+                <div class="details"><div class="label">Drivetrain</div><div class="value">AWD</div></div>
+                <div class="details"><div class="label">Engine</div><div class="value">3.8L V6</div></div>
+                <div class="details"><div class="label">Stock #</div><div class="value">THP25-0194</div></div>
+              </div>
+            </div>
+            <div class="list-item-price">
+              <div class="mobile-apr-price-wrapper"><div class="price-display">
+                <div class="yousave-price"><span class="amount">$2,500</span><span class="save-label">Potential Savings</span></div>
+                <div class="mobile-price"><span class="price">$51,950</span><span class="price-label">Dealer Price*</span></div>
+              </div></div>
+              <div class="price-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('show')">Price Details <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg></div>
+              <div class="price-breakup">
+                <div class="row"><div class="label">MSRP</div><div class="msrp">54,450</div></div>
+                <div class="row"><div class="label">Discount</div><div class="dealersavingsprice">-$2,500</div></div>
+                <div class="row border-top-dash"><div class="label">Dealer Price*</div><div class="finalprice">$51,950</div></div>
+              </div>
+              <div class="card-actions"><a href="/demo/taylor-auto/vdp" class="btn-glass">Check Availability</a></div>
+            </div>
+          </div></div>
+
+          <!-- 8: 2025 Kia EV9 GT-Line AWD -->
+          <div class="list-item"><div class="list-item-inner">
+            <div class="image-block">
+              <span class="store-badge">Taylor Kia of Toledo</span>
+              <a href="/demo/taylor-auto/vdp"><img src="https://www.kia.com/content/dam/kwcms/kme/us/en/assets/vehicles/2025/ev9/gallery/exterior/aurora-black-pearl/kia-ev9-2025-exterior-aurora-black-pearl-side.png" alt="2025 Kia EV9 GT-Line" loading="lazy"></a>
+              <div class="watchlist-icon"><svg viewBox="0 0 24 24"><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"/></svg></div>
+            </div>
+            <div class="list-item-detail">
+              <a class="vehicleCardTitle" href="/demo/taylor-auto/vdp">2025 Kia EV9 GT-Line AWD</a>
+              <div class="details-wrapper">
+                <div class="details"><div class="label">Ext. Color</div><div class="value">Aurora Black Pearl</div></div>
+                <div class="details"><div class="label">Drivetrain</div><div class="value">AWD</div></div>
+                <div class="details"><div class="label">Engine</div><div class="value">Dual Motor EV</div></div>
+                <div class="details"><div class="label">Stock #</div><div class="value">TK25-0899</div></div>
+              </div>
+            </div>
+            <div class="list-item-price">
+              <div class="mobile-apr-price-wrapper"><div class="price-display">
+                <div class="yousave-price"><span class="amount">$3,000</span><span class="save-label">Potential Savings</span></div>
+                <div class="mobile-price"><span class="price">$56,890</span><span class="price-label">Dealer Price*</span></div>
+              </div></div>
+              <div class="price-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('show')">Price Details <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg></div>
+              <div class="price-breakup">
+                <div class="row"><div class="label">MSRP</div><div class="msrp">59,890</div></div>
+                <div class="row"><div class="label">Discount</div><div class="dealersavingsprice">-$3,000</div></div>
+                <div class="row border-top-dash"><div class="label">Dealer Price*</div><div class="finalprice">$56,890</div></div>
+              </div>
+              <div class="card-actions"><a href="/demo/taylor-auto/vdp" class="btn-glass">Check Availability</a></div>
+            </div>
+          </div></div>
+
+          <!-- 9: 2024 Cadillac XT4 Premium Luxury -->
+          <div class="list-item"><div class="list-item-inner">
+            <div class="image-block">
+              <span class="store-badge">Taylor Cadillac</span>
+              <a href="/demo/taylor-auto/vdp"><img src="https://www.cadillac.com/content/dam/cadillac/na/us/english/index/vehicles/2024/xt4/mov/09-images/2024-XT4-GALLERY-EXTERIOR-09.jpg?imwidth=960" alt="2024 Cadillac XT4 Premium Luxury" loading="lazy"></a>
+              <div class="watchlist-icon"><svg viewBox="0 0 24 24"><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"/></svg></div>
+            </div>
+            <div class="list-item-detail">
+              <a class="vehicleCardTitle" href="/demo/taylor-auto/vdp">2024 Cadillac XT4 Premium Luxury</a>
+              <div class="details-wrapper">
+                <div class="details"><div class="label">Ext. Color</div><div class="value">Argent Silver</div></div>
+                <div class="details"><div class="label">Drivetrain</div><div class="value">AWD</div></div>
+                <div class="details"><div class="label">Engine</div><div class="value">2.0L Turbo</div></div>
+                <div class="details"><div class="label">Stock #</div><div class="value">TC24-0741</div></div>
+              </div>
+            </div>
+            <div class="list-item-price">
+              <div class="mobile-apr-price-wrapper"><div class="price-display">
+                <div class="yousave-price"><span class="amount">$4,200</span><span class="save-label">Potential Savings</span></div>
+                <div class="mobile-price"><span class="price">$41,590</span><span class="price-label">Dealer Price*</span></div>
+              </div></div>
+              <div class="price-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('show')">Price Details <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg></div>
+              <div class="price-breakup">
+                <div class="row"><div class="label">MSRP</div><div class="msrp">45,790</div></div>
+                <div class="row"><div class="label">Discount</div><div class="dealersavingsprice">-$4,200</div></div>
+                <div class="row border-top-dash"><div class="label">Dealer Price*</div><div class="finalprice">$41,590</div></div>
+              </div>
+              <div class="card-actions"><a href="/demo/taylor-auto/vdp" class="btn-glass">Check Availability</a></div>
+            </div>
+          </div></div>
+
+          <!-- 10: 2025 Hyundai Tucson Limited -->
+          <div class="list-item"><div class="list-item-inner">
+            <div class="image-block">
+              <span class="store-badge">Taylor Hyundai of Findlay</span>
+              <a href="/demo/taylor-auto/vdp"><img src="https://scene7.hyundai.com/is/image/hyundai/2025-tucson-limited-amazon-gray-exterior-0001-front-three-quarter?wid=960&hei=420&fmt=webp-alpha" alt="2025 Hyundai Tucson Limited" loading="lazy"></a>
+              <div class="watchlist-icon"><svg viewBox="0 0 24 24"><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"/></svg></div>
+            </div>
+            <div class="list-item-detail">
+              <a class="vehicleCardTitle" href="/demo/taylor-auto/vdp">2025 Hyundai Tucson Limited</a>
+              <div class="details-wrapper">
+                <div class="details"><div class="label">Ext. Color</div><div class="value">Amazon Gray</div></div>
+                <div class="details"><div class="label">Drivetrain</div><div class="value">FWD</div></div>
+                <div class="details"><div class="label">Engine</div><div class="value">2.5L 4-Cyl</div></div>
+                <div class="details"><div class="label">Stock #</div><div class="value">THF25-0315</div></div>
+              </div>
+            </div>
+            <div class="list-item-price">
+              <div class="mobile-apr-price-wrapper"><div class="price-display">
+                <div class="yousave-price"><span class="amount">$1,800</span><span class="save-label">Potential Savings</span></div>
+                <div class="mobile-price"><span class="price">$37,485</span><span class="price-label">Dealer Price*</span></div>
+              </div></div>
+              <div class="price-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('show')">Price Details <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg></div>
+              <div class="price-breakup">
+                <div class="row"><div class="label">MSRP</div><div class="msrp">39,285</div></div>
+                <div class="row"><div class="label">Discount</div><div class="dealersavingsprice">-$1,800</div></div>
+                <div class="row border-top-dash"><div class="label">Dealer Price*</div><div class="finalprice">$37,485</div></div>
+              </div>
+              <div class="card-actions"><a href="/demo/taylor-auto/vdp" class="btn-glass">Check Availability</a></div>
+            </div>
+          </div></div>
+
+          <!-- 11: 2025 Genesis G80 2.5T Sport -->
+          <div class="list-item"><div class="list-item-inner">
+            <div class="image-block">
+              <span class="store-badge">Taylor Genesis</span>
+              <a href="/demo/taylor-auto/vdp"><img src="https://scene7.hyundai.com/is/image/hyundai/2024-genesis-g80-advanced-savile-silver-exterior-0001-front-three-quarter?wid=960&hei=420&fmt=webp-alpha" alt="2025 Genesis G80 Sport" loading="lazy"></a>
+              <div class="watchlist-icon"><svg viewBox="0 0 24 24"><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"/></svg></div>
+            </div>
+            <div class="list-item-detail">
+              <a class="vehicleCardTitle" href="/demo/taylor-auto/vdp">2025 Genesis G80 2.5T Sport</a>
+              <div class="details-wrapper">
+                <div class="details"><div class="label">Ext. Color</div><div class="value">Savile Silver</div></div>
+                <div class="details"><div class="label">Drivetrain</div><div class="value">RWD</div></div>
+                <div class="details"><div class="label">Engine</div><div class="value">2.5L Turbo</div></div>
+                <div class="details"><div class="label">Stock #</div><div class="value">TG25-0041</div></div>
+              </div>
+            </div>
+            <div class="list-item-price">
+              <div class="mobile-apr-price-wrapper"><div class="price-display">
+                <div class="yousave-price"><span class="amount">$3,200</span><span class="save-label">Potential Savings</span></div>
+                <div class="mobile-price"><span class="price">$52,300</span><span class="price-label">Dealer Price*</span></div>
+              </div></div>
+              <div class="price-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('show')">Price Details <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg></div>
+              <div class="price-breakup">
+                <div class="row"><div class="label">MSRP</div><div class="msrp">55,500</div></div>
+                <div class="row"><div class="label">Discount</div><div class="dealersavingsprice">-$3,200</div></div>
+                <div class="row border-top-dash"><div class="label">Dealer Price*</div><div class="finalprice">$52,300</div></div>
+              </div>
+              <div class="card-actions"><a href="/demo/taylor-auto/vdp" class="btn-glass">Check Availability</a></div>
+            </div>
+          </div></div>
+
+          <!-- 12: 2025 Kia Telluride X-Pro -->
+          <div class="list-item"><div class="list-item-inner">
+            <div class="image-block">
+              <span class="store-badge">Taylor Kia of Lima</span>
+              <a href="/demo/taylor-auto/vdp"><img src="https://www.kia.com/content/dam/kwcms/kme/us/en/assets/vehicles/2025/telluride/gallery/exterior/dawning-red/kia-telluride-2025-exterior-dawning-red-side.png" alt="2025 Kia Telluride X-Pro" loading="lazy"></a>
+              <div class="watchlist-icon"><svg viewBox="0 0 24 24"><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"/></svg></div>
+            </div>
+            <div class="list-item-detail">
+              <a class="vehicleCardTitle" href="/demo/taylor-auto/vdp">2025 Kia Telluride X-Pro</a>
+              <div class="details-wrapper">
+                <div class="details"><div class="label">Ext. Color</div><div class="value">Dawning Red</div></div>
+                <div class="details"><div class="label">Drivetrain</div><div class="value">AWD</div></div>
+                <div class="details"><div class="label">Engine</div><div class="value">3.8L V6</div></div>
+                <div class="details"><div class="label">Stock #</div><div class="value">TKL25-0247</div></div>
+              </div>
+            </div>
+            <div class="list-item-price">
+              <div class="mobile-apr-price-wrapper"><div class="price-display">
+                <div class="yousave-price"><span class="amount">$2,900</span><span class="save-label">Potential Savings</span></div>
+                <div class="mobile-price"><span class="price">$49,590</span><span class="price-label">Dealer Price*</span></div>
+              </div></div>
+              <div class="price-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('show')">Price Details <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg></div>
+              <div class="price-breakup">
+                <div class="row"><div class="label">MSRP</div><div class="msrp">52,490</div></div>
+                <div class="row"><div class="label">Discount</div><div class="dealersavingsprice">-$2,900</div></div>
+                <div class="row border-top-dash"><div class="label">Dealer Price*</div><div class="finalprice">$49,590</div></div>
+              </div>
+              <div class="card-actions"><a href="/demo/taylor-auto/vdp" class="btn-glass">Check Availability</a></div>
+            </div>
+          </div></div>
+
+          <!-- 13: 2025 VW ID.4 Pro S Plus -->
+          <div class="list-item"><div class="list-item-inner">
+            <div class="image-block">
+              <span class="store-badge">Taylor VW of Findlay</span>
+              <a href="/demo/taylor-auto/vdp"><img src="https://www.kbb.com/wp-content/uploads/2024/05/2025-volkswagen-id4-front-left-3qtr.jpg?w=918" alt="2025 VW ID.4 Pro S Plus" loading="lazy"></a>
+              <div class="watchlist-icon"><svg viewBox="0 0 24 24"><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"/></svg></div>
+            </div>
+            <div class="list-item-detail">
+              <a class="vehicleCardTitle" href="/demo/taylor-auto/vdp">2025 Volkswagen ID.4 Pro S Plus</a>
+              <div class="details-wrapper">
+                <div class="details"><div class="label">Ext. Color</div><div class="value">Glacier White</div></div>
+                <div class="details"><div class="label">Drivetrain</div><div class="value">RWD</div></div>
+                <div class="details"><div class="label">Engine</div><div class="value">Electric Motor</div></div>
+                <div class="details"><div class="label">Stock #</div><div class="value">TV25-0088</div></div>
+              </div>
+            </div>
+            <div class="list-item-price">
+              <div class="mobile-apr-price-wrapper"><div class="price-display">
+                <div class="yousave-price"><span class="amount">$3,500</span><span class="save-label">Potential Savings</span></div>
+                <div class="mobile-price"><span class="price">$41,395</span><span class="price-label">Dealer Price*</span></div>
+              </div></div>
+              <div class="price-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('show')">Price Details <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg></div>
+              <div class="price-breakup">
+                <div class="row"><div class="label">MSRP</div><div class="msrp">44,895</div></div>
+                <div class="row"><div class="label">Discount</div><div class="dealersavingsprice">-$3,500</div></div>
+                <div class="row border-top-dash"><div class="label">Dealer Price*</div><div class="finalprice">$41,395</div></div>
+              </div>
+              <div class="card-actions"><a href="/demo/taylor-auto/vdp" class="btn-glass">Check Availability</a></div>
+            </div>
+          </div></div>
+
+          <!-- 14: 2025 Hyundai IONIQ 5 Long Range -->
+          <div class="list-item"><div class="list-item-inner">
+            <div class="image-block">
+              <span class="store-badge">Taylor Hyundai of Toledo</span>
+              <a href="/demo/taylor-auto/vdp"><img src="https://scene7.hyundai.com/is/image/hyundai/2025-ioniq5-se-abyss-black-pearl-exterior-0001-front-three-quarter?wid=960&hei=420&fmt=webp-alpha" alt="2025 Hyundai IONIQ 5" loading="lazy"></a>
+              <div class="watchlist-icon"><svg viewBox="0 0 24 24"><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"/></svg></div>
+            </div>
+            <div class="list-item-detail">
+              <a class="vehicleCardTitle" href="/demo/taylor-auto/vdp">2025 Hyundai IONIQ 5 Long Range</a>
+              <div class="details-wrapper">
+                <div class="details"><div class="label">Ext. Color</div><div class="value">Abyss Black Pearl</div></div>
+                <div class="details"><div class="label">Drivetrain</div><div class="value">AWD</div></div>
+                <div class="details"><div class="label">Engine</div><div class="value">Dual Motor EV</div></div>
+                <div class="details"><div class="label">Stock #</div><div class="value">TH25-2201</div></div>
+              </div>
+            </div>
+            <div class="list-item-price">
+              <div class="mobile-apr-price-wrapper"><div class="price-display">
+                <div class="yousave-price"><span class="amount">$2,750</span><span class="save-label">Potential Savings</span></div>
+                <div class="mobile-price"><span class="price">$46,445</span><span class="price-label">Dealer Price*</span></div>
+              </div></div>
+              <div class="price-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('show')">Price Details <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg></div>
+              <div class="price-breakup">
+                <div class="row"><div class="label">MSRP</div><div class="msrp">49,195</div></div>
+                <div class="row"><div class="label">Discount</div><div class="dealersavingsprice">-$2,750</div></div>
+                <div class="row border-top-dash"><div class="label">Dealer Price*</div><div class="finalprice">$46,445</div></div>
+              </div>
+              <div class="card-actions"><a href="/demo/taylor-auto/vdp" class="btn-glass">Check Availability</a></div>
+            </div>
+          </div></div>
+
+          <!-- 15: 2024 Kia Forte LXS (Used) -->
+          <div class="list-item"><div class="list-item-inner">
+            <div class="image-block">
+              <span class="store-badge">Taylor Kia of Toledo</span>
+              <a href="/demo/taylor-auto/vdp"><img src="https://www.kia.com/content/dam/kwcms/kme/us/en/assets/vehicles/2024/forte/gallery/exterior/snow-white-pearl/kia-forte-2024-exterior-snow-white-pearl-side.png" alt="2024 Kia Forte LXS" loading="lazy"></a>
+              <div class="watchlist-icon"><svg viewBox="0 0 24 24"><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"/></svg></div>
+            </div>
+            <div class="list-item-detail">
+              <a class="vehicleCardTitle" href="/demo/taylor-auto/vdp">2024 Kia Forte LXS</a>
+              <div class="details-wrapper">
+                <div class="details"><div class="label">Ext. Color</div><div class="value">Snow White Pearl</div></div>
+                <div class="details"><div class="label">Drivetrain</div><div class="value">FWD</div></div>
+                <div class="details"><div class="label">Engine</div><div class="value">2.0L 4-Cyl</div></div>
+                <div class="details"><div class="label">Stock #</div><div class="value">TK24-U0512</div></div>
+              </div>
+            </div>
+            <div class="list-item-price">
+              <div class="mobile-apr-price-wrapper"><div class="price-display">
+                <div class="yousave-price"><span class="amount">$3,100</span><span class="save-label">Potential Savings</span></div>
+                <div class="mobile-price"><span class="price">$19,495</span><span class="price-label">Dealer Price*</span></div>
+              </div></div>
+              <div class="price-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('show')">Price Details <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg></div>
+              <div class="price-breakup">
+                <div class="row"><div class="label">MSRP</div><div class="msrp">22,595</div></div>
+                <div class="row"><div class="label">Discount</div><div class="dealersavingsprice">-$3,100</div></div>
+                <div class="row border-top-dash"><div class="label">Dealer Price*</div><div class="finalprice">$19,495</div></div>
+              </div>
+              <div class="card-actions"><a href="/demo/taylor-auto/vdp" class="btn-glass">Check Availability</a></div>
+            </div>
+          </div></div>
+
+          <!-- 16: 2025 VW Taos SE -->
+          <div class="list-item"><div class="list-item-inner">
+            <div class="image-block">
+              <span class="store-badge">Taylor VW of Findlay</span>
+              <a href="/demo/taylor-auto/vdp"><img src="https://www.kbb.com/wp-content/uploads/2024/06/2025-volkswagen-taos-front-left-3qtr.jpg?w=918" alt="2025 VW Taos SE" loading="lazy"></a>
+              <div class="watchlist-icon"><svg viewBox="0 0 24 24"><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"/></svg></div>
+            </div>
+            <div class="list-item-detail">
+              <a class="vehicleCardTitle" href="/demo/taylor-auto/vdp">2025 Volkswagen Taos SE</a>
+              <div class="details-wrapper">
+                <div class="details"><div class="label">Ext. Color</div><div class="value">Cornflower Blue</div></div>
+                <div class="details"><div class="label">Drivetrain</div><div class="value">FWD</div></div>
+                <div class="details"><div class="label">Engine</div><div class="value">1.5L Turbo</div></div>
+                <div class="details"><div class="label">Stock #</div><div class="value">TV25-0215</div></div>
+              </div>
+            </div>
+            <div class="list-item-price">
+              <div class="mobile-apr-price-wrapper"><div class="price-display">
+                <div class="yousave-price"><span class="amount">$1,200</span><span class="save-label">Potential Savings</span></div>
+                <div class="mobile-price"><span class="price">$28,690</span><span class="price-label">Dealer Price*</span></div>
+              </div></div>
+              <div class="price-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('show')">Price Details <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg></div>
+              <div class="price-breakup">
+                <div class="row"><div class="label">MSRP</div><div class="msrp">29,890</div></div>
+                <div class="row"><div class="label">Discount</div><div class="dealersavingsprice">-$1,200</div></div>
+                <div class="row border-top-dash"><div class="label">Dealer Price*</div><div class="finalprice">$28,690</div></div>
+              </div>
+              <div class="card-actions"><a href="/demo/taylor-auto/vdp" class="btn-glass">Check Availability</a></div>
+            </div>
+          </div></div>
+
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination-wrapper">
+          <ul class="pagination">
+            <li class="disabled"><span>Prev</span></li>
+            <li class="active"><span>1</span></li>
+            <li><span>2</span></li>
+            <li><span>3</span></li>
+            <li><span>Next</span></li>
+          </ul>
+        </div>
+
       </div>
     </div>
   </div>
+</div>
 
-  <!-- ==================== HEADER ==================== -->
-  <header class="site-header">
-    <div class="container">
-      <a href="/demo/taylor-auto" class="header-logo">
-        <div class="header-logo-icon">TA</div>
-        <div class="header-logo-text">
-          <div class="brand-name">Taylor Automotive</div>
-          <div class="brand-sub">Family of Dealerships</div>
-        </div>
-      </a>
-      <nav class="header-nav">
-        <a href="/demo/taylor-auto">Home</a>
-        <a href="/demo/taylor-auto/inventory" class="active">Inventory</a>
-        <a href="/demo/taylor-auto/about">About</a>
-        <a href="/demo/taylor-auto/contact">Locations</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- ==================== HERO ==================== -->
-  <section class="page-hero">
-    <div class="container">
-      <h1>Search All <span>Taylor</span> Dealerships</h1>
-      <p>Browse featured vehicles across all 9 locations and 5 brands. Find your perfect vehicle at the Taylor dealership nearest you.</p>
-    </div>
-  </section>
-
-  <!-- ==================== INVENTORY ==================== -->
-  <section class="inventory-section">
-    <div class="container">
-      <div class="brand-tabs">
-        <button class="brand-tab active" data-tab="cadillac">Cadillac</button>
-        <button class="brand-tab" data-tab="genesis">Genesis</button>
-        <button class="brand-tab" data-tab="hyundai">Hyundai</button>
-        <button class="brand-tab" data-tab="kia">Kia</button>
-        <button class="brand-tab" data-tab="volkswagen">Volkswagen</button>
+<!-- ==================== FOOTER ==================== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-brand-name">Taylor Automotive Family</div>
+        <div class="footer-brand-sub">Since 1979</div>
+        <p>Northwest Ohio's largest dealer group. Five brands, nine locations, and a family commitment to excellence that spans over four decades.</p>
+        <a href="tel:4198428811">(419) 842-8811</a>
       </div>
-
-      <!-- ===== CADILLAC PANEL ===== -->
-      <div class="tab-panel active" id="tab-cadillac">
-        <div class="tab-panel-header">
-          <h2>Featured Cadillac Vehicles</h2>
-          <a href="/demo/taylor-cadillac/inventory" class="btn btn-outline-navy btn-sm">View Full Cadillac Inventory</a>
-        </div>
-        <div class="vehicle-grid">
-          <div class="vehicle-card">
-            <div class="vehicle-card-image">
-              <span class="vehicle-card-badge">New</span>
-              <div class="vehicle-card-image-placeholder">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
-                <span>Photo Coming Soon</span>
-              </div>
-            </div>
-            <div class="vehicle-card-body">
-              <div class="vehicle-card-year-make">2026 Cadillac</div>
-              <div class="vehicle-card-name">Escalade Sport</div>
-              <div class="vehicle-card-details">6.2L V8 | 4WD | Super Cruise</div>
-              <div class="vehicle-card-price">$98,590</div>
-              <div class="vehicle-card-msrp">MSRP</div>
-              <a href="/demo/taylor-cadillac/inventory" class="vehicle-card-cta">View at Taylor Cadillac</a>
-            </div>
-          </div>
-          <div class="vehicle-card">
-            <div class="vehicle-card-image">
-              <span class="vehicle-card-badge">New</span>
-              <div class="vehicle-card-image-placeholder">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
-                <span>Photo Coming Soon</span>
-              </div>
-            </div>
-            <div class="vehicle-card-body">
-              <div class="vehicle-card-year-make">2026 Cadillac</div>
-              <div class="vehicle-card-name">LYRIQ Luxury</div>
-              <div class="vehicle-card-details">All-Electric | RWD | 314 mi Range</div>
-              <div class="vehicle-card-price">$58,590</div>
-              <div class="vehicle-card-msrp">MSRP</div>
-              <a href="/demo/taylor-cadillac/inventory" class="vehicle-card-cta">View at Taylor Cadillac</a>
-            </div>
-          </div>
-          <div class="vehicle-card">
-            <div class="vehicle-card-image">
-              <span class="vehicle-card-badge">New</span>
-              <div class="vehicle-card-image-placeholder">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
-                <span>Photo Coming Soon</span>
-              </div>
-            </div>
-            <div class="vehicle-card-body">
-              <div class="vehicle-card-year-make">2026 Cadillac</div>
-              <div class="vehicle-card-name">XT5 Premium Luxury</div>
-              <div class="vehicle-card-details">2.0L Turbo | AWD | Ultraview Sunroof</div>
-              <div class="vehicle-card-price">$48,395</div>
-              <div class="vehicle-card-msrp">MSRP</div>
-              <a href="/demo/taylor-cadillac/inventory" class="vehicle-card-cta">View at Taylor Cadillac</a>
-            </div>
-          </div>
-        </div>
-        <div class="tab-panel-footer">
-          <a href="/demo/taylor-cadillac/inventory" class="btn btn-navy">View Full Inventory at Taylor Cadillac</a>
-        </div>
+      <div class="footer-col">
+        <h4>Cadillac &amp; Genesis</h4>
+        <ul>
+          <li><a href="/demo/taylor-cadillac">Taylor Cadillac</a></li>
+          <li><a href="/demo/taylor-genesis">Taylor Genesis</a></li>
+        </ul>
       </div>
-
-      <!-- ===== GENESIS PANEL ===== -->
-      <div class="tab-panel" id="tab-genesis">
-        <div class="tab-panel-header">
-          <h2>Featured Genesis Vehicles</h2>
-          <a href="/demo/taylor-genesis/inventory" class="btn btn-outline-navy btn-sm">View Full Genesis Inventory</a>
-        </div>
-        <div class="vehicle-grid">
-          <div class="vehicle-card">
-            <div class="vehicle-card-image">
-              <span class="vehicle-card-badge">New</span>
-              <div class="vehicle-card-image-placeholder">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
-                <span>Photo Coming Soon</span>
-              </div>
-            </div>
-            <div class="vehicle-card-body">
-              <div class="vehicle-card-year-make">2026 Genesis</div>
-              <div class="vehicle-card-name">GV80 3.5T Prestige</div>
-              <div class="vehicle-card-details">3.5L V6 Turbo | AWD | Ergo Motion Seats</div>
-              <div class="vehicle-card-price">$62,550</div>
-              <div class="vehicle-card-msrp">MSRP</div>
-              <a href="/demo/taylor-genesis/inventory" class="vehicle-card-cta">View at Taylor Genesis</a>
-            </div>
-          </div>
-          <div class="vehicle-card">
-            <div class="vehicle-card-image">
-              <span class="vehicle-card-badge">New</span>
-              <div class="vehicle-card-image-placeholder">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
-                <span>Photo Coming Soon</span>
-              </div>
-            </div>
-            <div class="vehicle-card-body">
-              <div class="vehicle-card-year-make">2026 Genesis</div>
-              <div class="vehicle-card-name">G80 Sport</div>
-              <div class="vehicle-card-details">3.5L V6 Turbo | RWD | 21" Sport Wheels</div>
-              <div class="vehicle-card-price">$56,750</div>
-              <div class="vehicle-card-msrp">MSRP</div>
-              <a href="/demo/taylor-genesis/inventory" class="vehicle-card-cta">View at Taylor Genesis</a>
-            </div>
-          </div>
-          <div class="vehicle-card">
-            <div class="vehicle-card-image">
-              <span class="vehicle-card-badge">New</span>
-              <div class="vehicle-card-image-placeholder">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
-                <span>Photo Coming Soon</span>
-              </div>
-            </div>
-            <div class="vehicle-card-body">
-              <div class="vehicle-card-year-make">2026 Genesis</div>
-              <div class="vehicle-card-name">Electrified GV70</div>
-              <div class="vehicle-card-details">All-Electric | AWD | 236 mi Range</div>
-              <div class="vehicle-card-price">$52,600</div>
-              <div class="vehicle-card-msrp">MSRP</div>
-              <a href="/demo/taylor-genesis/inventory" class="vehicle-card-cta">View at Taylor Genesis</a>
-            </div>
-          </div>
-        </div>
-        <div class="tab-panel-footer">
-          <a href="/demo/taylor-genesis/inventory" class="btn btn-navy">View Full Inventory at Taylor Genesis</a>
-        </div>
+      <div class="footer-col">
+        <h4>Hyundai</h4>
+        <ul>
+          <li><a href="/demo/taylor-hyundai-toledo">Hyundai of Toledo</a></li>
+          <li><a href="/demo/taylor-hyundai-perrysburg">Hyundai of Perrysburg</a></li>
+          <li><a href="/demo/taylor-hyundai-findlay">Hyundai of Findlay</a></li>
+        </ul>
       </div>
-
-      <!-- ===== HYUNDAI PANEL ===== -->
-      <div class="tab-panel" id="tab-hyundai">
-        <div class="tab-panel-header">
-          <h2>Featured Hyundai Vehicles</h2>
-          <a href="/demo/taylor-hyundai-toledo/inventory" class="btn btn-outline-navy btn-sm">View Full Hyundai Inventory</a>
-        </div>
-        <div class="vehicle-grid">
-          <div class="vehicle-card">
-            <div class="vehicle-card-image">
-              <span class="vehicle-card-badge">New</span>
-              <div class="vehicle-card-image-placeholder">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
-                <span>Photo Coming Soon</span>
-              </div>
-            </div>
-            <div class="vehicle-card-body">
-              <div class="vehicle-card-year-make">2026 Hyundai</div>
-              <div class="vehicle-card-name">Tucson Limited</div>
-              <div class="vehicle-card-details">2.5L | AWD | Panoramic Sunroof</div>
-              <div class="vehicle-card-price">$37,350</div>
-              <div class="vehicle-card-msrp">MSRP</div>
-              <a href="/demo/taylor-hyundai-toledo/inventory" class="vehicle-card-cta">View at Taylor Hyundai</a>
-            </div>
-          </div>
-          <div class="vehicle-card">
-            <div class="vehicle-card-image">
-              <span class="vehicle-card-badge">New</span>
-              <div class="vehicle-card-image-placeholder">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
-                <span>Photo Coming Soon</span>
-              </div>
-            </div>
-            <div class="vehicle-card-body">
-              <div class="vehicle-card-year-make">2026 Hyundai</div>
-              <div class="vehicle-card-name">Palisade Calligraphy</div>
-              <div class="vehicle-card-details">3.8L V6 | AWD | Captain's Chairs</div>
-              <div class="vehicle-card-price">$51,350</div>
-              <div class="vehicle-card-msrp">MSRP</div>
-              <a href="/demo/taylor-hyundai-toledo/inventory" class="vehicle-card-cta">View at Taylor Hyundai</a>
-            </div>
-          </div>
-          <div class="vehicle-card">
-            <div class="vehicle-card-image">
-              <span class="vehicle-card-badge">New</span>
-              <div class="vehicle-card-image-placeholder">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
-                <span>Photo Coming Soon</span>
-              </div>
-            </div>
-            <div class="vehicle-card-body">
-              <div class="vehicle-card-year-make">2026 Hyundai</div>
-              <div class="vehicle-card-name">IONIQ 5 Long Range</div>
-              <div class="vehicle-card-details">All-Electric | AWD | 303 mi Range</div>
-              <div class="vehicle-card-price">$44,650</div>
-              <div class="vehicle-card-msrp">MSRP</div>
-              <a href="/demo/taylor-hyundai-toledo/inventory" class="vehicle-card-cta">View at Taylor Hyundai</a>
-            </div>
-          </div>
-        </div>
-        <div class="tab-panel-footer">
-          <p style="font-size: 14px; color: var(--gray-600); margin-bottom: 20px;">Available at 3 locations: <a href="/demo/taylor-hyundai-toledo" style="color: var(--navy); font-weight: 600;">Toledo</a> &bull; <a href="/demo/taylor-hyundai-perrysburg" style="color: var(--navy); font-weight: 600;">Perrysburg</a> &bull; <a href="/demo/taylor-hyundai-findlay" style="color: var(--navy); font-weight: 600;">Findlay</a></p>
-          <a href="/demo/taylor-hyundai-toledo/inventory" class="btn btn-navy">View Full Inventory at Taylor Hyundai</a>
-        </div>
+      <div class="footer-col">
+        <h4>Kia</h4>
+        <ul>
+          <li><a href="/demo/taylor-kia-toledo">Kia of Toledo</a></li>
+          <li><a href="/demo/taylor-kia-findlay">Kia of Findlay</a></li>
+          <li><a href="/demo/taylor-kia-lima">Kia of Lima</a></li>
+        </ul>
       </div>
-
-      <!-- ===== KIA PANEL ===== -->
-      <div class="tab-panel" id="tab-kia">
-        <div class="tab-panel-header">
-          <h2>Featured Kia Vehicles</h2>
-          <a href="/demo/taylor-kia-toledo/inventory" class="btn btn-outline-navy btn-sm">View Full Kia Inventory</a>
-        </div>
-        <div class="vehicle-grid">
-          <div class="vehicle-card">
-            <div class="vehicle-card-image">
-              <span class="vehicle-card-badge">New</span>
-              <div class="vehicle-card-image-placeholder">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
-                <span>Photo Coming Soon</span>
-              </div>
-            </div>
-            <div class="vehicle-card-body">
-              <div class="vehicle-card-year-make">2026 Kia</div>
-              <div class="vehicle-card-name">Telluride SX Prestige</div>
-              <div class="vehicle-card-details">3.8L V6 | AWD | Premium Nappa Leather</div>
-              <div class="vehicle-card-price">$50,490</div>
-              <div class="vehicle-card-msrp">MSRP</div>
-              <a href="/demo/taylor-kia-toledo/inventory" class="vehicle-card-cta">View at Taylor Kia</a>
-            </div>
-          </div>
-          <div class="vehicle-card">
-            <div class="vehicle-card-image">
-              <span class="vehicle-card-badge">New</span>
-              <div class="vehicle-card-image-placeholder">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
-                <span>Photo Coming Soon</span>
-              </div>
-            </div>
-            <div class="vehicle-card-body">
-              <div class="vehicle-card-year-make">2026 Kia</div>
-              <div class="vehicle-card-name">EV9 Land</div>
-              <div class="vehicle-card-details">All-Electric | AWD | 304 mi Range</div>
-              <div class="vehicle-card-price">$56,395</div>
-              <div class="vehicle-card-msrp">MSRP</div>
-              <a href="/demo/taylor-kia-toledo/inventory" class="vehicle-card-cta">View at Taylor Kia</a>
-            </div>
-          </div>
-          <div class="vehicle-card">
-            <div class="vehicle-card-image">
-              <span class="vehicle-card-badge">New</span>
-              <div class="vehicle-card-image-placeholder">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
-                <span>Photo Coming Soon</span>
-              </div>
-            </div>
-            <div class="vehicle-card-body">
-              <div class="vehicle-card-year-make">2026 Kia</div>
-              <div class="vehicle-card-name">Sportage X-Pro</div>
-              <div class="vehicle-card-details">2.5L Turbo | AWD | Off-Road Package</div>
-              <div class="vehicle-card-price">$38,290</div>
-              <div class="vehicle-card-msrp">MSRP</div>
-              <a href="/demo/taylor-kia-toledo/inventory" class="vehicle-card-cta">View at Taylor Kia</a>
-            </div>
-          </div>
-        </div>
-        <div class="tab-panel-footer">
-          <p style="font-size: 14px; color: var(--gray-600); margin-bottom: 20px;">Available at 3 locations: <a href="/demo/taylor-kia-toledo" style="color: var(--navy); font-weight: 600;">Toledo</a> &bull; <a href="/demo/taylor-kia-findlay" style="color: var(--navy); font-weight: 600;">Findlay</a> &bull; <a href="/demo/taylor-kia-lima" style="color: var(--navy); font-weight: 600;">Lima</a></p>
-          <a href="/demo/taylor-kia-toledo/inventory" class="btn btn-navy">View Full Inventory at Taylor Kia</a>
-        </div>
-      </div>
-
-      <!-- ===== VOLKSWAGEN PANEL ===== -->
-      <div class="tab-panel" id="tab-volkswagen">
-        <div class="tab-panel-header">
-          <h2>Featured Volkswagen Vehicles</h2>
-          <a href="/demo/taylor-vw-findlay/inventory" class="btn btn-outline-navy btn-sm">View Full VW Inventory</a>
-        </div>
-        <div class="vehicle-grid">
-          <div class="vehicle-card">
-            <div class="vehicle-card-image">
-              <span class="vehicle-card-badge">New</span>
-              <div class="vehicle-card-image-placeholder">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
-                <span>Photo Coming Soon</span>
-              </div>
-            </div>
-            <div class="vehicle-card-body">
-              <div class="vehicle-card-year-make">2026 Volkswagen</div>
-              <div class="vehicle-card-name">Atlas Cross Sport SEL</div>
-              <div class="vehicle-card-details">2.0L Turbo | AWD | Digital Cockpit Pro</div>
-              <div class="vehicle-card-price">$41,875</div>
-              <div class="vehicle-card-msrp">MSRP</div>
-              <a href="/demo/taylor-vw-findlay/inventory" class="vehicle-card-cta">View at Taylor VW</a>
-            </div>
-          </div>
-          <div class="vehicle-card">
-            <div class="vehicle-card-image">
-              <span class="vehicle-card-badge">New</span>
-              <div class="vehicle-card-image-placeholder">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
-                <span>Photo Coming Soon</span>
-              </div>
-            </div>
-            <div class="vehicle-card-body">
-              <div class="vehicle-card-year-make">2026 Volkswagen</div>
-              <div class="vehicle-card-name">ID.4 Pro S Plus</div>
-              <div class="vehicle-card-details">All-Electric | AWD | 275 mi Range</div>
-              <div class="vehicle-card-price">$44,995</div>
-              <div class="vehicle-card-msrp">MSRP</div>
-              <a href="/demo/taylor-vw-findlay/inventory" class="vehicle-card-cta">View at Taylor VW</a>
-            </div>
-          </div>
-          <div class="vehicle-card">
-            <div class="vehicle-card-image">
-              <span class="vehicle-card-badge">New</span>
-              <div class="vehicle-card-image-placeholder">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
-                <span>Photo Coming Soon</span>
-              </div>
-            </div>
-            <div class="vehicle-card-body">
-              <div class="vehicle-card-year-make">2026 Volkswagen</div>
-              <div class="vehicle-card-name">Tiguan SE R-Line</div>
-              <div class="vehicle-card-details">2.0L Turbo | AWD | Panoramic Sunroof</div>
-              <div class="vehicle-card-price">$35,995</div>
-              <div class="vehicle-card-msrp">MSRP</div>
-              <a href="/demo/taylor-vw-findlay/inventory" class="vehicle-card-cta">View at Taylor VW</a>
-            </div>
-          </div>
-        </div>
-        <div class="tab-panel-footer">
-          <a href="/demo/taylor-vw-findlay/inventory" class="btn btn-navy">View Full Inventory at Taylor Volkswagen</a>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ==================== FOOTER ==================== -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="footer-brand-name">Taylor Automotive Family</div>
-          <div class="footer-brand-sub">Since 1979</div>
-          <p>Northwest Ohio's largest dealer group. Five brands, nine locations, and a family commitment to excellence that spans over four decades.</p>
-          <a href="tel:4198428811">(419) 842-8811</a>
-        </div>
-        <div class="footer-col">
-          <h4>Cadillac &amp; Genesis</h4>
-          <ul>
-            <li><a href="/demo/taylor-cadillac">Taylor Cadillac</a></li>
-            <li><a href="/demo/taylor-genesis">Taylor Genesis</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Hyundai</h4>
-          <ul>
-            <li><a href="/demo/taylor-hyundai-toledo">Hyundai of Toledo</a></li>
-            <li><a href="/demo/taylor-hyundai-perrysburg">Hyundai of Perrysburg</a></li>
-            <li><a href="/demo/taylor-hyundai-findlay">Hyundai of Findlay</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Kia</h4>
-          <ul>
-            <li><a href="/demo/taylor-kia-toledo">Kia of Toledo</a></li>
-            <li><a href="/demo/taylor-kia-findlay">Kia of Findlay</a></li>
-            <li><a href="/demo/taylor-kia-lima">Kia of Lima</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Volkswagen &amp; More</h4>
-          <ul>
-            <li><a href="/demo/taylor-vw-findlay">VW of Findlay</a></li>
-            <li><a href="/demo/taylor-auto/about">About Us</a></li>
-            <li><a href="/demo/taylor-auto/contact">All Locations</a></li>
-            <li><a href="https://taylorcares.org" target="_blank" rel="noopener">Taylor Cares</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>Taylor Automotive Family &mdash; 6300 West Central Ave, Toledo, OH 43615 &nbsp;&bull;&nbsp; &copy; 2026 All Rights Reserved &nbsp;&bull;&nbsp; Powered by <a href="https://www.savvydealer.com" target="_blank" rel="noopener">SavvyDealer</a></p>
+      <div class="footer-col">
+        <h4>Volkswagen &amp; More</h4>
+        <ul>
+          <li><a href="/demo/taylor-vw-findlay">VW of Findlay</a></li>
+          <li><a href="/demo/taylor-auto/service">Service</a></li>
+          <li><a href="/demo/taylor-auto/about">About Us</a></li>
+          <li><a href="/demo/taylor-auto/contact">All Locations</a></li>
+        </ul>
       </div>
     </div>
-  </footer>
-
-  <!-- ==================== JAVASCRIPT ==================== -->
-  <script>
-    (function() {
-      var tabs = document.querySelectorAll('.brand-tab');
-      var panels = document.querySelectorAll('.tab-panel');
-
-      tabs.forEach(function(tab) {
-        tab.addEventListener('click', function() {
-          var target = this.getAttribute('data-tab');
-          tabs.forEach(function(t) { t.classList.remove('active'); });
-          panels.forEach(function(p) { p.classList.remove('active'); });
-          this.classList.add('active');
-          var panel = document.getElementById('tab-' + target);
-          if (panel) { panel.classList.add('active'); }
-        });
-      });
-    })();
-  </script>
+    <div class="footer-bottom">
+      <p>Taylor Automotive Family &mdash; 6300 West Central Ave, Toledo, OH 43615 &nbsp;&bull;&nbsp; &copy; 2026 All Rights Reserved &nbsp;&bull;&nbsp; Powered by <a href="https://www.savvydealer.com" target="_blank" rel="noopener">SavvyDealer</a></p>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>

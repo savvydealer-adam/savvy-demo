@@ -158,8 +158,8 @@
 
         /* Reset button */
         .reset-btn { margin-bottom: 16px; }
-        .reset-btn a { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 10px 16px; background: var(--secondarycolor); color: #fff; border: 1px solid var(--secondarycolor); border-radius: 6px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; transition: var(--transition); }
-        .reset-btn a:hover { background: transparent; color: var(--secondarycolor); }
+        .reset-btn a { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 10px 16px; background: rgba(0,30,80,0.9); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); color: #fff; border: 1px solid rgba(0,30,80,0.3); border-radius: 14px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; transition: all 0.3s ease; }
+        .reset-btn a:hover { background: rgba(0,30,80,1); box-shadow: 0 8px 32px rgba(0,30,80,0.3), inset 0 1px 0 rgba(255,255,255,0.15); transform: translateY(-2px); color: #fff; }
         .reset-btn a svg { width: 14px; height: 14px; fill: currentColor; }
 
         /* Filter accordion */
@@ -247,12 +247,12 @@
         .price-breakup .finalprice { color: #30770f; font-weight: 700; }
         .price-breakup .border-top-dash { border-top: 1px dashed #ddd; margin-top: 4px; padding-top: 6px; }
 
-        /* CTA Buttons */
+        /* CTA Buttons -- Glass Style */
         .card-actions { margin-top: auto; display: flex; flex-direction: column; gap: 6px; padding-top: 8px; }
-        .btn_3 a { background: var(--secondarycolor); color: #fff; text-transform: uppercase; font-weight: 700; border: 1px solid var(--secondarycolor); display: flex; align-items: center; justify-content: center; border-radius: 6px; font-size: 13px; line-height: 1.5; letter-spacing: 1px; padding: 12px 16px; transition: var(--transition); }
-        .btn_3 a:hover { background: transparent; color: var(--secondarycolor); }
-        .btn_4 a { background: transparent; color: var(--secondarycolor); text-transform: uppercase; font-weight: 700; border: 1px solid var(--secondarycolor); display: flex; align-items: center; justify-content: center; border-radius: 6px; font-size: 13px; line-height: 1.5; letter-spacing: 1px; padding: 12px 16px; transition: var(--transition); }
-        .btn_4 a:hover { background: var(--secondarycolor); color: #fff; }
+        .btn_3 a { background: rgba(0,30,80,0.9); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); color: #fff; text-transform: uppercase; font-weight: 700; border: 1px solid rgba(0,30,80,0.3); display: flex; align-items: center; justify-content: center; border-radius: 14px; font-size: 13px; line-height: 1.5; letter-spacing: 1px; padding: 12px 16px; transition: all 0.3s ease; }
+        .btn_3 a:hover { background: rgba(0,30,80,1); box-shadow: 0 8px 32px rgba(0,30,80,0.3), inset 0 1px 0 rgba(255,255,255,0.15); transform: translateY(-2px); color: #fff; }
+        .btn_4 a { background: rgba(0,30,80,0.06); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); color: #001E50; text-transform: uppercase; font-weight: 700; border: 1px solid rgba(0,30,80,0.12); display: flex; align-items: center; justify-content: center; border-radius: 14px; font-size: 13px; line-height: 1.5; letter-spacing: 1px; padding: 12px 16px; transition: all 0.3s ease; }
+        .btn_4 a:hover { background: rgba(0,30,80,0.12); border-color: rgba(0,30,80,0.2); transform: translateY(-2px); color: #001E50; }
 
         /* __ Pagination __ */
         .pagination-wrapper { padding: 24px 0; display: flex; justify-content: center; }
@@ -1096,7 +1096,8 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>Taylor Volkswagen of Findlay &mdash; 11799 County Rd 99, Findlay, OH 45840 &nbsp;&bull;&nbsp; Part of the <a href="/demo/taylor-auto">Taylor Automotive Family</a> &nbsp;&bull;&nbsp; &copy; 2026 All Rights Reserved &nbsp;&bull;&nbsp; Powered by <a href="https://www.savvydealer.com" target="_blank" rel="noopener">SavvyDealer</a></p>
+            <p style="margin-bottom:8px;font-size:12px;color:#888;">Also visit: <a href="/demo/taylor-cadillac" style="color:#00B0F0;">Taylor Cadillac</a> &middot; <a href="/demo/taylor-genesis" style="color:#00B0F0;">Taylor Genesis</a> &middot; <a href="/demo/taylor-hyundai-findlay" style="color:#00B0F0;">Taylor Hyundai</a> &middot; <a href="/demo/taylor-kia-findlay" style="color:#00B0F0;">Taylor Kia</a></p>
+        <p>Taylor Volkswagen of Findlay &mdash; 11799 County Rd 99, Findlay, OH 45840 &nbsp;&bull;&nbsp; Part of the <a href="/demo/taylor-auto">Taylor Automotive Family</a> &nbsp;&bull;&nbsp; &copy; 2026 All Rights Reserved &nbsp;&bull;&nbsp; Powered by <a href="https://www.savvydealer.com" target="_blank" rel="noopener">SavvyDealer</a></p>
         </div>
     </div>
 </footer>

@@ -87,28 +87,46 @@
         .header-nav a:hover { color: var(--gold); background: rgba(196,162,101,0.08); }
         .header-nav a.active { color: var(--gold); background: rgba(196,162,101,0.1); }
 
-        /* ========== BUTTONS ========== */
+        /* ========== GLASS BUTTONS ========== */
         .btn {
             display: inline-flex;
             align-items: center;
             gap: 8px;
             padding: 16px 36px;
-            font-size: 12px;
-            font-weight: 600;
+            font-size: 14px;
+            font-weight: 500;
             font-family: inherit;
-            letter-spacing: 2px;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
             border: 1px solid transparent;
             cursor: pointer;
-            transition: all 0.3s;
+            transition: all 0.4s ease;
             text-align: center;
         }
-        .btn-gold { background: var(--gold); color: var(--black); border-color: var(--gold); }
-        .btn-gold:hover { background: transparent; color: var(--gold); }
-        .btn-dark { background: var(--black); color: var(--gold); border-color: var(--black); }
-        .btn-dark:hover { background: var(--gold); color: var(--black); border-color: var(--gold); }
-        .btn-outline-dark { background: transparent; color: var(--black); border-color: rgba(0,0,0,0.2); }
-        .btn-outline-dark:hover { border-color: var(--gold); color: var(--gold); }
+        .btn-gold, .btn-glass-gold {
+            background: rgba(196,162,101,0.15); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(196,162,101,0.4); border-radius: 14px; color: #C4A265;
+        }
+        .btn-gold:hover, .btn-glass-gold:hover {
+            background: rgba(196,162,101,0.25); color: #fff;
+            box-shadow: 0 12px 40px rgba(196,162,101,0.2); transform: translateY(-2px);
+        }
+        .btn-dark, .btn-glass {
+            background: rgba(255,255,255,0.08); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(196,162,101,0.3); border-radius: 14px; color: #fff;
+        }
+        .btn-dark:hover, .btn-glass:hover {
+            background: rgba(196,162,101,0.15); border-color: rgba(196,162,101,0.5);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.2), inset 0 1px 0 rgba(196,162,101,0.2); transform: translateY(-2px);
+        }
+        .btn-outline-dark {
+            background: rgba(255,255,255,0.08); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(196,162,101,0.3); border-radius: 14px; color: var(--black);
+        }
+        .btn-outline-dark:hover {
+            background: rgba(196,162,101,0.15); border-color: rgba(196,162,101,0.5);
+            color: var(--gold); box-shadow: 0 12px 40px rgba(0,0,0,0.1); transform: translateY(-2px);
+        }
 
         /* ========== BREADCRUMB ========== */
         .breadcrumb {
@@ -598,7 +616,8 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>Taylor Cadillac &mdash; 6100 West Central Ave, Toledo, OH 43615 &nbsp;&bull;&nbsp; &copy; 2026 All Rights Reserved &nbsp;&bull;&nbsp; Powered by <a href="https://www.savvydealer.com" target="_blank" rel="noopener">SavvyDealer</a></p>
+            <p style="margin-bottom:8px;font-size:12px;color:#666;">Also visit: <a href="/demo/taylor-genesis">Taylor Genesis</a> &middot; <a href="/demo/taylor-hyundai-toledo">Taylor Hyundai</a> &middot; <a href="/demo/taylor-kia-toledo">Taylor Kia</a> &middot; <a href="/demo/taylor-vw-findlay">Taylor VW</a></p>
+        <p>Taylor Cadillac &mdash; 6100 West Central Ave, Toledo, OH 43615 &nbsp;&bull;&nbsp; Part of the <a href="/demo/taylor-auto">Taylor Automotive Family</a> &nbsp;&bull;&nbsp; &copy; 2026 All Rights Reserved &nbsp;&bull;&nbsp; Powered by <a href="https://www.savvydealer.com" target="_blank" rel="noopener">SavvyDealer</a></p>
             <p class="footer-family">Part of the <a href="/demo/taylor-auto">Taylor Automotive Family</a></p>
         </div>
     </div>

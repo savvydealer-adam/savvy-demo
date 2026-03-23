@@ -187,7 +187,9 @@
 
     /* ========== HERO ========== */
     .hero {
-      background: var(--genesis-black);
+      background: linear-gradient(rgba(17,17,17,0.78), rgba(17,17,17,0.88)), url('https://s7d1.scene7.com/is/image/hyundai/2026-gv80suv-35t-pst-awd-storrgreenmatte-smokeygreenvanillabeige-profiledrvr-studio-1');
+      background-size: cover;
+      background-position: center;
       padding: 120px 0 140px;
       text-align: center;
       position: relative;
@@ -270,40 +272,73 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* ========== BUTTONS ========== */
-    .btn {
+    /* ========== GLASS BUTTONS ========== */
+    .btn, .btn-glass {
       display: inline-block;
-      padding: 16px 40px;
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid rgba(184,115,51,0.25);
+      border-radius: 0;
+      color: #fff;
+      padding: 18px 40px;
       font-family: var(--font-body);
-      font-size: 11px;
-      font-weight: 500;
+      font-size: 12px;
+      font-weight: 400;
       letter-spacing: 3px;
       text-transform: uppercase;
       cursor: pointer;
-      transition: all 0.4s ease;
-      border: 1px solid transparent;
+      transition: all 0.5s ease;
     }
 
-    .btn-primary {
-      background: var(--genesis-copper);
-      color: var(--genesis-black);
-      border-color: var(--genesis-copper);
+    .btn:hover, .btn-glass:hover {
+      background: rgba(184,115,51,0.12);
+      border-color: rgba(184,115,51,0.45);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.3);
+      transform: translateY(-2px);
     }
 
-    .btn-primary:hover {
-      background: transparent;
-      color: var(--genesis-copper);
+    .btn-primary, .btn-glass-copper {
+      background: rgba(184,115,51,0.12);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid rgba(184,115,51,0.4);
+      border-radius: 0;
+      color: #B87333;
+      padding: 18px 40px;
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      transition: all 0.5s ease;
+    }
+
+    .btn-primary:hover, .btn-glass-copper:hover {
+      background: rgba(184,115,51,0.25);
+      color: #fff;
+      transform: translateY(-2px);
     }
 
     .btn-outline {
-      background: transparent;
-      color: var(--genesis-white);
-      border-color: rgba(255,255,255,0.25);
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid rgba(184,115,51,0.25);
+      border-radius: 0;
+      color: #fff;
+      padding: 18px 40px;
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      transition: all 0.5s ease;
     }
 
     .btn-outline:hover {
-      border-color: var(--genesis-copper);
-      color: var(--genesis-copper);
+      background: rgba(184,115,51,0.12);
+      border-color: rgba(184,115,51,0.45);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.3);
+      transform: translateY(-2px);
     }
 
     /* ========== MODEL SHOWCASE ========== */

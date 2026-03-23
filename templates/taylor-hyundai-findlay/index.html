@@ -130,9 +130,61 @@
       color: var(--accent);
     }
 
+    /* ========== GLASS BUTTONS ========== */
+    .btn-glass {
+      background: rgba(255,255,255,0.12);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 14px;
+      color: #fff;
+      padding: 14px 32px;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: inherit;
+      text-align: center;
+    }
+    .btn-glass:hover {
+      background: rgba(255,255,255,0.22);
+      border-color: rgba(255,255,255,0.35);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.1);
+      transform: translateY(-2px);
+    }
+    .btn-glass-primary {
+      background: rgba(0,40,122,0.9);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(0,40,122,0.3);
+      border-radius: 14px;
+      color: #fff;
+      padding: 14px 32px;
+      font-size: 15px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: inherit;
+      text-align: center;
+    }
+    .btn-glass-primary:hover {
+      background: rgba(0,40,122,1);
+      box-shadow: 0 8px 32px rgba(0,40,122,0.3), inset 0 1px 0 rgba(255,255,255,0.15);
+      transform: translateY(-2px);
+    }
+
     /* ========== HERO ========== */
     .hero {
-      background: linear-gradient(135deg, #00287A 0%, #001d5c 40%, #00143d 100%);
+      background: linear-gradient(rgba(0,40,122,0.82), rgba(0,40,122,0.90)), url('https://www.hyundaicanada.com/-/media/hyundai/showroom/2025/tucson/exterior_gallery/expanded/desktop_xl/img_001.jpg');
+      background-size: cover;
+      background-position: center;
       padding: 80px 0 72px;
       text-align: center;
       color: #fff;
@@ -143,7 +195,7 @@
       content: '';
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: radial-gradient(ellipse at 50% 0%, rgba(0,170,210,0.2) 0%, transparent 70%);
+      background: radial-gradient(ellipse at 50% 0%, rgba(0,170,210,0.15) 0%, transparent 70%);
       pointer-events: none;
     }
     .hero .container {
@@ -548,8 +600,8 @@
         </svg>
       </div>
       <div class="hero-ctas">
-        <a href="/demo/taylor-hyundai-findlay/inventory" class="btn btn-primary">Browse New Inventory</a>
-        <a href="/demo/taylor-hyundai-findlay/financing" class="btn btn-outline">Get Pre-Qualified</a>
+        <a href="/demo/taylor-hyundai-findlay/inventory" class="btn-glass-primary">Browse New Inventory</a>
+        <a href="/demo/taylor-hyundai-findlay/financing" class="btn-glass">Get Pre-Qualified</a>
       </div>
     </div>
   </section>

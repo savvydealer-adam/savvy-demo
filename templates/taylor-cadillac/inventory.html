@@ -407,39 +407,49 @@
         /* CTA Buttons */
         .card-actions { margin-top: auto; display: flex; flex-direction: column; gap: 6px; padding-top: 8px; }
         .btn_3 a {
-            background: #1A1A1A;
+            background: rgba(196,162,101,0.15);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
             color: #C4A265;
             text-transform: uppercase;
-            font-weight: 600;
-            border: 1px solid #1A1A1A;
+            font-weight: 500;
+            border: 1px solid rgba(196,162,101,0.4);
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 2px;
+            border-radius: 14px;
             font-size: 11px;
             line-height: 1.5;
-            letter-spacing: 2px;
+            letter-spacing: 1.5px;
             padding: 12px 16px;
-            transition: var(--transition);
+            transition: all 0.4s ease;
         }
-        .btn_3 a:hover { background: #C4A265; color: #1A1A1A; border-color: #C4A265; }
+        .btn_3 a:hover {
+            background: rgba(196,162,101,0.25); color: #fff;
+            box-shadow: 0 12px 40px rgba(196,162,101,0.2); transform: translateY(-2px);
+        }
         .btn_4 a {
-            background: transparent;
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
             color: #1A1A1A;
             text-transform: uppercase;
-            font-weight: 600;
-            border: 1px solid rgba(0,0,0,0.15);
+            font-weight: 500;
+            border: 1px solid rgba(196,162,101,0.3);
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 2px;
+            border-radius: 14px;
             font-size: 11px;
             line-height: 1.5;
-            letter-spacing: 2px;
+            letter-spacing: 1.5px;
             padding: 12px 16px;
-            transition: var(--transition);
+            transition: all 0.4s ease;
         }
-        .btn_4 a:hover { background: #1A1A1A; color: #C4A265; border-color: #1A1A1A; }
+        .btn_4 a:hover {
+            background: rgba(196,162,101,0.15); border-color: rgba(196,162,101,0.5);
+            color: #C4A265; box-shadow: 0 12px 40px rgba(0,0,0,0.1); transform: translateY(-2px);
+        }
 
         /* Pagination */
         .pagination-wrapper { padding: 24px 0; display: flex; justify-content: center; }
@@ -1201,7 +1211,8 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>Taylor Cadillac &mdash; 6100 West Central Ave, Toledo, OH 43615 &nbsp;&bull;&nbsp; &copy; 2026 All Rights Reserved &nbsp;&bull;&nbsp; Powered by <a href="https://www.savvydealer.com" target="_blank" rel="noopener">SavvyDealer</a></p>
+            <p style="margin-bottom:8px;font-size:12px;color:#666;">Also visit: <a href="/demo/taylor-genesis">Taylor Genesis</a> &middot; <a href="/demo/taylor-hyundai-toledo">Taylor Hyundai</a> &middot; <a href="/demo/taylor-kia-toledo">Taylor Kia</a> &middot; <a href="/demo/taylor-vw-findlay">Taylor VW</a></p>
+        <p>Taylor Cadillac &mdash; 6100 West Central Ave, Toledo, OH 43615 &nbsp;&bull;&nbsp; Part of the <a href="/demo/taylor-auto">Taylor Automotive Family</a> &nbsp;&bull;&nbsp; &copy; 2026 All Rights Reserved &nbsp;&bull;&nbsp; Powered by <a href="https://www.savvydealer.com" target="_blank" rel="noopener">SavvyDealer</a></p>
             <p class="footer-family">Part of the <a href="/demo/taylor-auto">Taylor Automotive Family</a></p>
         </div>
     </div>

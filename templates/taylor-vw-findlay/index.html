@@ -154,25 +154,91 @@
       color: #001E50;
     }
 
+    /* ========== GLASS BUTTONS ========== */
+    .btn-glass {
+      background: rgba(255,255,255,0.12);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 14px;
+      color: #fff;
+      padding: 14px 32px;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: inherit;
+      text-align: center;
+    }
+    .btn-glass:hover {
+      background: rgba(255,255,255,0.22);
+      border-color: rgba(255,255,255,0.35);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.1);
+      transform: translateY(-2px);
+    }
+
+    .btn-glass-primary {
+      background: rgba(0,30,80,0.9);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(0,30,80,0.3);
+      border-radius: 14px;
+      color: #fff;
+      padding: 14px 32px;
+      font-size: 15px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: inherit;
+      text-align: center;
+    }
+    .btn-glass-primary:hover {
+      background: rgba(0,30,80,1);
+      box-shadow: 0 8px 32px rgba(0,30,80,0.3), inset 0 1px 0 rgba(255,255,255,0.15);
+      transform: translateY(-2px);
+    }
+
+    .btn-glass-secondary {
+      background: rgba(0,30,80,0.06);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(0,30,80,0.12);
+      border-radius: 14px;
+      color: #001E50;
+      padding: 14px 32px;
+      font-size: 15px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: inherit;
+      text-align: center;
+    }
+    .btn-glass-secondary:hover {
+      background: rgba(0,30,80,0.12);
+      border-color: rgba(0,30,80,0.2);
+      transform: translateY(-2px);
+    }
+
     /* ========== HERO ========== */
     .hero {
-      background: #fff;
+      background: linear-gradient(rgba(0,30,80,0.75), rgba(0,30,80,0.85)), url('https://file.kelleybluebookimages.com/kbb/base/house/2026/2026-Volkswagen-Atlas-FrontSide_VWATLASSL2601_1280x960.jpg');
+      background-size: cover;
+      background-position: center;
       padding: 80px 0 72px;
       text-align: center;
       position: relative;
       overflow: hidden;
       border-bottom: 4px solid #00B0F0;
-    }
-
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: linear-gradient(180deg, #f8fbff 0%, #ffffff 100%);
-      pointer-events: none;
     }
 
     .hero .container {
@@ -185,7 +251,10 @@
 
     .hero-badge {
       display: inline-block;
-      background: #001E50;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.2);
       color: #fff;
       font-size: 12px;
       font-weight: 700;
@@ -202,7 +271,7 @@
       line-height: 1.15;
       margin-bottom: 16px;
       letter-spacing: -0.5px;
-      color: #001E50;
+      color: #fff;
     }
 
     .hero h1 em {
@@ -212,7 +281,7 @@
 
     .hero p {
       font-size: 17px;
-      color: #555;
+      color: rgba(255,255,255,0.8);
       max-width: 600px;
       margin: 0 auto 32px;
       line-height: 1.6;
@@ -228,21 +297,24 @@
       width: 100%;
       padding: 16px 52px 16px 20px;
       font-size: 16px;
-      border: 2px solid #e0e0e0;
-      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 14px;
       outline: none;
-      background: #fff;
-      color: #333;
+      background: rgba(255,255,255,0.12);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      color: #fff;
       font-family: inherit;
-      transition: border-color 0.2s;
+      transition: all 0.3s ease;
     }
 
     .hero-search input:focus {
-      border-color: #001E50;
+      border-color: rgba(255,255,255,0.5);
+      background: rgba(255,255,255,0.18);
     }
 
     .hero-search input::placeholder {
-      color: #999;
+      color: rgba(255,255,255,0.5);
     }
 
     .hero-search-icon {
@@ -273,28 +345,6 @@
       font-family: inherit;
       border: 2px solid transparent;
       text-align: center;
-    }
-
-    .btn-primary {
-      background: #001E50;
-      color: #fff;
-      border-color: #001E50;
-    }
-
-    .btn-primary:hover {
-      background: #002d7a;
-      border-color: #002d7a;
-    }
-
-    .btn-outline {
-      background: transparent;
-      color: #001E50;
-      border-color: #001E50;
-    }
-
-    .btn-outline:hover {
-      background: #001E50;
-      color: #fff;
     }
 
     /* ========== MODEL LINEUP ========== */
@@ -491,22 +541,28 @@
     }
 
     .btn-ev {
-      display: inline-block;
-      padding: 13px 28px;
+      background: rgba(255,255,255,0.12);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 14px;
+      color: #fff;
+      padding: 14px 32px;
       font-size: 15px;
       font-weight: 600;
-      border-radius: 6px;
+      letter-spacing: 0.3px;
+      transition: all 0.3s ease;
       cursor: pointer;
-      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
       font-family: inherit;
-      background: #00B0F0;
-      color: #fff;
-      border: 2px solid #00B0F0;
     }
-
     .btn-ev:hover {
-      background: #009dd6;
-      border-color: #009dd6;
+      background: rgba(255,255,255,0.22);
+      border-color: rgba(255,255,255,0.35);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.1);
+      transform: translateY(-2px);
     }
 
     .ev-image {
@@ -845,14 +901,14 @@
       <p>Explore the full Volkswagen lineup at Taylor VW of Findlay. Serving Fostoria, Carey, Upper Sandusky, Tiffin, Bluffton, and Lima, OH.</p>
       <div class="hero-search">
         <input type="text" placeholder="Search inventory by model, year, or keyword...">
-        <svg class="hero-search-icon" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg class="hero-search-icon" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="11" cy="11" r="8"></circle>
           <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
         </svg>
       </div>
       <div class="hero-ctas">
-        <a href="/demo/taylor-vw-findlay/inventory" class="btn btn-primary">Browse Inventory</a>
-        <a href="/demo/taylor-vw-findlay/financing" class="btn btn-outline">Get Pre-Qualified</a>
+        <a href="/demo/taylor-vw-findlay/inventory" class="btn-glass">Browse Inventory</a>
+        <a href="/demo/taylor-vw-findlay/financing" class="btn-glass">Get Pre-Qualified</a>
       </div>
     </div>
   </section>
@@ -1146,6 +1202,7 @@
         </div>
       </div>
       <div class="footer-bottom">
+        <p style="margin-bottom:8px;font-size:12px;color:#888;">Also visit: <a href="/demo/taylor-cadillac" style="color:#00B0F0;">Taylor Cadillac</a> &middot; <a href="/demo/taylor-genesis" style="color:#00B0F0;">Taylor Genesis</a> &middot; <a href="/demo/taylor-hyundai-findlay" style="color:#00B0F0;">Taylor Hyundai</a> &middot; <a href="/demo/taylor-kia-findlay" style="color:#00B0F0;">Taylor Kia</a></p>
         <p>Taylor Volkswagen of Findlay &mdash; 11799 County Rd 99, Findlay, OH 45840 &nbsp;&bull;&nbsp; Part of the <a href="/demo/taylor-auto">Taylor Automotive Family</a> &nbsp;&bull;&nbsp; &copy; 2026 All Rights Reserved &nbsp;&bull;&nbsp; Powered by <a href="https://www.savvydealer.com" target="_blank" rel="noopener">SavvyDealer</a></p>
       </div>
     </div>

@@ -168,8 +168,14 @@
         .price-breakup .border-top-dash { border-top: 1px dashed #ddd; margin-top: 4px; padding-top: 6px; }
 
         .card-actions { margin-top: auto; display: flex; flex-direction: column; gap: 6px; padding-top: 8px; }
-        .btn_3 a { background: var(--accent); color: #fff; text-transform: uppercase; font-weight: 700; border: 1px solid var(--accent); display: flex; align-items: center; justify-content: center; border-radius: 6px; font-size: 13px; line-height: 1.5; letter-spacing: 1px; padding: 12px 16px; transition: var(--transition); }
-        .btn_3 a:hover { background: transparent; color: var(--accent); }
+        /* ========== GLASS BUTTONS ========== */
+        .btn-glass { background: rgba(255,255,255,0.12); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.2); border-radius: 14px; color: #fff; padding: 14px 32px; font-size: 15px; font-weight: 600; letter-spacing: 0.3px; transition: all 0.3s ease; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; font-family: inherit; text-align: center; }
+        .btn-glass:hover { background: rgba(255,255,255,0.22); border-color: rgba(255,255,255,0.35); box-shadow: 0 8px 32px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.1); transform: translateY(-2px); }
+        .btn-glass-primary { background: rgba(0,40,122,0.9); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(0,40,122,0.3); border-radius: 14px; color: #fff; padding: 14px 32px; font-size: 15px; font-weight: 600; transition: all 0.3s ease; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; font-family: inherit; text-align: center; }
+        .btn-glass-primary:hover { background: rgba(0,40,122,1); box-shadow: 0 8px 32px rgba(0,40,122,0.3), inset 0 1px 0 rgba(255,255,255,0.15); transform: translateY(-2px); }
+
+        .btn_3 a { background: rgba(0,40,122,0.9); color: #fff; text-transform: uppercase; font-weight: 700; border: 1px solid rgba(0,40,122,0.3); display: flex; align-items: center; justify-content: center; border-radius: 14px; font-size: 13px; line-height: 1.5; letter-spacing: 1px; padding: 12px 16px; transition: all 0.3s ease; backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
+        .btn_3 a:hover { background: rgba(0,40,122,1); color: #fff; box-shadow: 0 8px 32px rgba(0,40,122,0.3), inset 0 1px 0 rgba(255,255,255,0.15); transform: translateY(-2px); }
 
         /* ── Pagination ── */
         .pagination-wrapper { padding: 24px 0; display: flex; justify-content: center; }

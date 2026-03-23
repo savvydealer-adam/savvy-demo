@@ -126,7 +126,9 @@
     .page-hero {
       padding: 60px 0;
       text-align: center;
-      background: var(--genesis-black);
+      background: linear-gradient(rgba(17,17,17,0.78), rgba(17,17,17,0.88)), url('https://s7d1.scene7.com/is/image/hyundai/2026-gv80suv-35t-pst-awd-storrgreenmatte-smokeygreenvanillabeige-profiledrvr-studio-1');
+      background-size: cover;
+      background-position: center;
       position: relative;
     }
 
@@ -247,22 +249,26 @@
     .filter-btn {
       width: 100%;
       padding: 14px;
-      background: var(--genesis-copper);
-      color: var(--genesis-black);
-      border: 1px solid var(--genesis-copper);
+      background: rgba(184,115,51,0.12);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      color: #B87333;
+      border: 1px solid rgba(184,115,51,0.4);
+      border-radius: 0;
       font-family: var(--font-body);
-      font-size: 11px;
-      font-weight: 500;
+      font-size: 12px;
+      font-weight: 400;
       letter-spacing: 3px;
       text-transform: uppercase;
       cursor: pointer;
-      transition: all 0.3s;
+      transition: all 0.5s ease;
       margin-top: 8px;
     }
 
     .filter-btn:hover {
-      background: transparent;
-      color: var(--genesis-copper);
+      background: rgba(184,115,51,0.25);
+      color: #fff;
+      transform: translateY(-2px);
     }
 
     /* ========== RESULTS HEADER ========== */

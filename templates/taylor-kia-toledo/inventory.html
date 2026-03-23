@@ -144,7 +144,7 @@
         .filter-buttons div:hover svg, .filter-buttons div.active svg { fill: #fff; }
         .filter-buttons svg { width: 18px; height: 18px; fill: #666; display: block; }
 
-        .mobile-filter-btn { display: none; align-items: center; justify-content: center; gap: 8px; padding: 12px 20px; background: var(--secondarycolor); color: #fff; border: none; border-radius: 8px; font-family: inherit; font-size: 14px; font-weight: 700; cursor: pointer; margin-bottom: 16px; width: 100%; }
+        .mobile-filter-btn { display: none; align-items: center; justify-content: center; gap: 8px; padding: 12px 20px; background: rgba(187,22,44,0.9); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); color: #fff; border: 1px solid rgba(187,22,44,0.3); border-radius: 14px; font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer; margin-bottom: 16px; width: 100%; transition: all 0.3s ease; }
         .mobile-filter-btn svg { width: 16px; height: 16px; fill: #fff; }
 
         /* ── Vehicle Cards ── */
@@ -193,8 +193,8 @@
         .price-breakup .border-top-dash { border-top: 1px dashed #ddd; margin-top: 4px; padding-top: 6px; }
 
         .card-actions { margin-top: auto; display: flex; flex-direction: column; gap: 6px; padding-top: 8px; }
-        .btn_3 a { background: var(--secondarycolor); color: #fff; text-transform: uppercase; font-weight: 700; border: 1px solid var(--secondarycolor); display: flex; align-items: center; justify-content: center; border-radius: 6px; font-size: 13px; line-height: 1.5; letter-spacing: 1px; padding: 12px 16px; transition: var(--transition); }
-        .btn_3 a:hover { background: transparent; color: var(--secondarycolor); }
+        .btn_3 a { background: rgba(187,22,44,0.9); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); color: #fff; text-transform: uppercase; font-weight: 600; border: 1px solid rgba(187,22,44,0.3); display: flex; align-items: center; justify-content: center; border-radius: 14px; font-size: 13px; line-height: 1.5; letter-spacing: 0.3px; padding: 12px 16px; transition: all 0.3s ease; }
+        .btn_3 a:hover { background: rgba(187,22,44,1); color: #fff; box-shadow: 0 8px 32px rgba(187,22,44,0.3), inset 0 1px 0 rgba(255,255,255,0.15); transform: translateY(-2px); }
 
         /* ── Pagination ── */
         .pagination-wrapper { padding: 24px 0; display: flex; justify-content: center; }

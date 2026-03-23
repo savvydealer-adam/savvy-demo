@@ -166,7 +166,9 @@
 
     /* ========== HERO ========== */
     .hero {
-      background: linear-gradient(165deg, #0D0D0D 0%, #1A1A1A 40%, #252525 100%);
+      background: linear-gradient(rgba(26,26,26,0.80), rgba(26,26,26,0.88)), url('https://www.cadillac.com/content/dam/cadillac/na/us/english/index/vehicles/2026/suvs/escalade-mcm/gallery/my25-escalade-gallery-exterior-grid-front.jpg?imwidth=1920');
+      background-size: cover;
+      background-position: center;
       padding: 120px 0 100px;
       text-align: center;
       color: #fff;
@@ -257,26 +259,49 @@
       text-transform: uppercase;
     }
 
-    .btn-gold {
-      background: #C4A265;
-      color: #1A1A1A;
-      border-color: #C4A265;
-    }
-
-    .btn-gold:hover {
-      background: transparent;
+    .btn-gold, .btn-glass-gold {
+      background: rgba(196,162,101,0.15);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(196,162,101,0.4);
+      border-radius: 14px;
       color: #C4A265;
+      padding: 16px 36px;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      transition: all 0.4s ease;
     }
 
-    .btn-outline {
-      background: transparent;
-      color: rgba(255,255,255,0.8);
-      border-color: rgba(255,255,255,0.3);
+    .btn-gold:hover, .btn-glass-gold:hover {
+      background: rgba(196,162,101,0.25);
+      color: #fff;
+      box-shadow: 0 12px 40px rgba(196,162,101,0.2);
+      transform: translateY(-2px);
     }
 
-    .btn-outline:hover {
-      border-color: #C4A265;
-      color: #C4A265;
+    .btn-outline, .btn-glass {
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(196,162,101,0.3);
+      border-radius: 14px;
+      color: #fff;
+      padding: 16px 36px;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      transition: all 0.4s ease;
+      cursor: pointer;
+    }
+
+    .btn-outline:hover, .btn-glass:hover {
+      background: rgba(196,162,101,0.15);
+      border-color: rgba(196,162,101,0.5);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.2), inset 0 1px 0 rgba(196,162,101,0.2);
+      transform: translateY(-2px);
     }
 
     /* ========== MODEL LINEUP ========== */
@@ -1070,7 +1095,8 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>Taylor Cadillac &mdash; 6100 West Central Ave, Toledo, OH 43615 &nbsp;&bull;&nbsp; &copy; 2026 All Rights Reserved &nbsp;&bull;&nbsp; Powered by <a href="https://www.savvydealer.com" target="_blank" rel="noopener">SavvyDealer</a></p>
+        <p style="margin-bottom:8px;font-size:12px;color:#666;">Also visit: <a href="/demo/taylor-genesis">Taylor Genesis</a> &middot; <a href="/demo/taylor-hyundai-toledo">Taylor Hyundai</a> &middot; <a href="/demo/taylor-kia-toledo">Taylor Kia</a> &middot; <a href="/demo/taylor-vw-findlay">Taylor Volkswagen</a></p>
+        <p>Taylor Cadillac &mdash; 6100 West Central Ave, Toledo, OH 43615 &nbsp;&bull;&nbsp; Part of the <a href="/demo/taylor-auto">Taylor Automotive Family</a> &nbsp;&bull;&nbsp; &copy; 2026 All Rights Reserved &nbsp;&bull;&nbsp; Powered by <a href="https://www.savvydealer.com" target="_blank" rel="noopener">SavvyDealer</a></p>
         <p class="footer-family">Part of the <a href="/demo/taylor-auto">Taylor Automotive Family</a></p>
       </div>
     </div>
