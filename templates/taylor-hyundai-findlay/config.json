@@ -1,0 +1,19 @@
+{
+  "name": "Taylor Hyundai of Findlay",
+  "slug": "taylor-hyundai-findlay",
+  "location": "Findlay, OH",
+  "phone": {
+    "sales": "567-336-0525",
+    "service": "567-336-0525",
+    "parts": "567-336-0525"
+  },
+  "address": "15199 E US Route 224, Findlay, OH 45840",
+  "oem": ["Hyundai"],
+  "colors": {
+    "primary": "#00287A",
+    "secondary": "#00AAD2",
+    "accent": "#FFFFFF"
+  },
+  "group": "Taylor Automotive Family",
+  "groupUrl": "/demo/taylor-auto"
+}

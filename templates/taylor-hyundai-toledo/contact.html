@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | Taylor Hyundai of Toledo | Toledo, OH</title>
+    <meta name="description" content="Contact Taylor Hyundai of Toledo. Sales, Service, and Parts: (567) 455-5230. Located at 6200 W Central Ave, Toledo, OH 43615. Serving Maumee, Perrysburg, Sylvania, Oregon, Bowling Green." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root { --primary: #00287A; --primary-dark: #001d5c; --accent: #00AAD2; --white: #ffffff; --gray-50: #f8f9fa; --gray-100: #f0f0f0; --gray-200: #E2E5E6; --gray-400: #696D71; --gray-600: #666; --gray-800: #1a1a1a; --green: #30770f; }
+        body { font-family: 'Hyundai Sans Text', 'Inter', sans-serif; color: #333; background: var(--white); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; display: block; }
+
+        .top-bar { background: var(--primary); color: #fff; padding: 8px 0; font-size: 13px; }
+        .top-bar .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+        .top-bar-phones { display: flex; gap: 20px; flex-wrap: wrap; }
+        .top-bar-phones a { color: #fff; font-weight: 500; transition: opacity 0.2s; }
+        .top-bar-phones a:hover { opacity: 0.85; }
+        .top-bar-phones span { color: rgba(255,255,255,0.7); margin-right: 4px; font-weight: 400; }
+        .top-bar-address { color: rgba(255,255,255,0.9); }
+        .top-bar-address a { color: #fff; }
+        .top-bar-address a:hover { text-decoration: underline; }
+
+        .site-header { background: #fff; border-bottom: 1px solid #f5f5f5; padding: 12px 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+        .site-header .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+        .header-logo { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+        .header-logo svg { height: 36px; width: auto; }
+        .header-logo-text { font-size: 16px; font-weight: 700; color: var(--primary); line-height: 1.2; }
+        .header-logo-text small { font-size: 11px; font-weight: 500; color: var(--gray-600); display: block; }
+        .header-nav { display: flex; align-items: center; gap: 6px; }
+        .header-nav a { color: #333; font-size: 14px; font-weight: 500; padding: 6px 12px; border-radius: 4px; transition: background 0.2s, color 0.2s; }
+        .header-nav a:hover { background: #e8f4f8; color: var(--accent); }
+        .header-nav a.active { background: var(--accent); color: #fff; }
+
+        .breadcrumb-bar { background: #f8f9fb; border-bottom: 1px solid #eee; padding: 12px 0; }
+        .breadcrumb-bar .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; font-size: 14px; color: #666; }
+        .breadcrumb-bar a { color: var(--primary); font-weight: 500; }
+        .breadcrumb-bar span { color: #999; margin: 0 6px; }
+
+        .btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; font-size: 14px; font-weight: 700; font-family: inherit; border: 2px solid transparent; border-radius: 6px; cursor: pointer; transition: all 0.3s; text-align: center; }
+        .btn-primary { background: var(--accent); color: var(--white); border-color: var(--accent); }
+        .btn-primary:hover { background: #0095b8; border-color: #0095b8; }
+
+        /* ========== HERO ========== */
+        .contact-hero { position: relative; background: linear-gradient(135deg, #00287A 0%, #001d5c 50%, #00143d 100%); overflow: hidden; padding: 56px 0 64px; }
+        .contact-hero::before { content: ''; position: absolute; top: -50%; right: -20%; width: 80%; height: 200%; background: radial-gradient(ellipse, rgba(0,170,210,0.2) 0%, transparent 70%); pointer-events: none; }
+        .contact-hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: var(--accent); }
+        .contact-hero-inner { max-width: 1280px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; text-align: center; }
+        .contact-hero-inner h1 { font-size: 44px; font-weight: 700; color: var(--white); line-height: 1.1; margin-bottom: 12px; }
+        .contact-hero-inner p { font-size: 18px; color: rgba(255,255,255,0.75); max-width: 520px; margin: 0 auto; }
+
+        /* ========== DEPARTMENT CARDS ========== */
+        .dept-cards { padding: 60px 0; background: var(--gray-50); }
+        .dept-cards .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+        .dept-cards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .dept-card { background: var(--white); border-radius: 12px; padding: 36px 28px; text-align: center; box-shadow: 0 2px 12px rgba(0,0,0,0.06); transition: transform 0.2s, box-shadow 0.2s; }
+        .dept-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
+        .dept-card-icon { width: 56px; height: 56px; background: #e8f4f8; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; }
+        .dept-card-icon svg { width: 26px; height: 26px; fill: var(--accent); }
+        .dept-card h3 { font-size: 20px; font-weight: 700; color: var(--gray-800); margin-bottom: 8px; }
+        .dept-card-phone { font-size: 22px; font-weight: 700; color: var(--accent); display: block; margin-bottom: 16px; }
+        .dept-card-phone:hover { text-decoration: underline; }
+        .dept-card-hours { font-size: 14px; color: var(--gray-600); line-height: 1.7; }
+        .dept-card-hours strong { color: var(--gray-800); font-weight: 600; }
+
+        /* ========== FORM + MAP ========== */
+        .contact-main { padding: 64px 0; }
+        .contact-main .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+        .contact-main-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+        .contact-form-wrap { background: var(--white); border: 1px solid var(--gray-200); border-radius: 12px; padding: 40px 36px; }
+        .contact-form-wrap h2 { font-size: 24px; font-weight: 700; color: var(--gray-800); margin-bottom: 6px; }
+        .contact-form-wrap > p { font-size: 15px; color: var(--gray-600); margin-bottom: 28px; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+        .form-group { display: flex; flex-direction: column; }
+        .form-group.full { grid-column: 1 / -1; }
+        .form-group label { font-size: 13px; font-weight: 600; color: var(--gray-800); margin-bottom: 6px; }
+        .form-group input, .form-group select, .form-group textarea { font-family: inherit; font-size: 15px; padding: 12px 14px; border: 1px solid var(--gray-200); border-radius: 6px; background: var(--white); color: var(--gray-800); transition: border-color 0.2s; outline: none; }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(0,170,210,0.1); }
+        .form-group textarea { resize: vertical; min-height: 120px; }
+        .form-group select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='%23696D71'%3E%3Cpath d='M6 8L0 0h12z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; }
+        .form-submit { margin-top: 24px; }
+        .form-submit .btn { width: 100%; justify-content: center; padding: 16px 28px; font-size: 15px; }
+
+        .contact-map-wrap h2 { font-size: 24px; font-weight: 700; color: var(--gray-800); margin-bottom: 6px; }
+        .contact-map-wrap > p { font-size: 15px; color: var(--gray-600); margin-bottom: 20px; }
+        .contact-map-embed { border-radius: 12px; overflow: hidden; border: 1px solid var(--gray-200); margin-bottom: 24px; }
+        .contact-map-embed iframe { display: block; width: 100%; height: 360px; border: 0; }
+        .contact-address-card { background: var(--gray-50); border-radius: 10px; padding: 24px; }
+        .contact-address-card h4 { font-size: 15px; font-weight: 700; color: var(--gray-800); margin-bottom: 10px; }
+        .contact-address-card p { font-size: 14px; color: var(--gray-600); line-height: 1.7; margin-bottom: 12px; }
+        .contact-address-card a { color: var(--accent); font-weight: 600; }
+        .contact-address-card a:hover { text-decoration: underline; }
+
+        /* ========== DEALERSHIP INFO ========== */
+        .dealer-info { padding: 64px 0; background: var(--gray-50); }
+        .dealer-info .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+        .dealer-info-inner { max-width: 900px; margin: 0 auto; text-align: center; }
+        .dealer-info-inner h2 { font-size: 28px; font-weight: 700; color: var(--gray-800); margin-bottom: 16px; }
+        .dealer-info-inner > p { font-size: 16px; line-height: 1.8; color: #555; margin-bottom: 36px; }
+        .quick-links-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+        .quick-link-card { background: var(--white); border-radius: 10px; padding: 24px 16px; text-align: center; border: 1px solid var(--gray-200); transition: border-color 0.2s, box-shadow 0.2s; }
+        .quick-link-card:hover { border-color: var(--accent); box-shadow: 0 4px 16px rgba(0,170,210,0.1); }
+        .quick-link-card svg { width: 28px; height: 28px; fill: var(--accent); margin-bottom: 10px; }
+        .quick-link-card h4 { font-size: 14px; font-weight: 700; color: var(--gray-800); margin-bottom: 4px; }
+        .quick-link-card p { font-size: 13px; color: var(--gray-600); }
+
+        /* ========== SEO ========== */
+        .seo-content { padding: 56px 0; border-top: 1px solid var(--gray-200); }
+        .seo-content-inner { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+        .seo-content-inner h2 { font-size: 22px; font-weight: 700; color: var(--gray-800); margin-top: 40px; margin-bottom: 12px; }
+        .seo-content-inner h2:first-child { margin-top: 0; }
+        .seo-content-inner p { font-size: 16px; line-height: 1.8; color: #555; margin-bottom: 16px; }
+        .seo-content-inner a { color: var(--accent); }
+        .seo-content-inner a:hover { text-decoration: underline; }
+
+        /* ========== FOOTER ========== */
+        .site-footer { background: #1a1a1a; color: #ccc; padding: 48px 0 0; }
+        .site-footer .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+        .footer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; padding-bottom: 40px; border-bottom: 1px solid #333; }
+        .footer-col h4 { font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: #fff; margin-bottom: 16px; }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 10px; }
+        .footer-col a { color: #aaa; font-size: 14px; transition: color 0.2s; }
+        .footer-col a:hover { color: #fff; }
+        .footer-cross-links { padding: 20px 0; border-bottom: 1px solid #333; text-align: center; font-size: 13px; color: #888; }
+        .footer-cross-links a { color: #00AAD2; font-weight: 500; }
+        .footer-cross-links a:hover { text-decoration: underline; }
+        .footer-bottom { padding: 20px 0; text-align: center; font-size: 13px; color: #777; }
+        .footer-bottom a { color: #00AAD2; font-weight: 500; }
+        .footer-bottom a:hover { text-decoration: underline; }
+
+        @media (max-width: 1023px) { .header-nav { display: none; } .contact-main-grid { grid-template-columns: 1fr; gap: 40px; } .footer-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 768px) { .contact-hero-inner h1 { font-size: 34px; } .dept-cards-grid { grid-template-columns: 1fr; gap: 16px; } .form-row { grid-template-columns: 1fr; } .quick-links-grid { grid-template-columns: repeat(2, 1fr); } .footer-grid { grid-template-columns: 1fr; text-align: center; } }
+        @media (max-width: 640px) { .top-bar .container { flex-direction: column; text-align: center; gap: 4px; } .top-bar-phones { justify-content: center; } .site-header .container { flex-wrap: wrap; justify-content: center; gap: 12px; } }
+        @media (max-width: 480px) { .contact-hero-inner h1 { font-size: 28px; } .quick-links-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar"><div class="container"><div class="top-bar-phones"><a href="tel:5674555230"><span>Sales:</span> (567) 455-5230</a><a href="tel:5674555230"><span>Service:</span> (567) 455-5230</a><a href="tel:5674555230"><span>Parts:</span> (567) 455-5230</a></div><div class="top-bar-address"><a href="https://maps.google.com/?q=6200+W+Central+Ave+Toledo+OH+43615" target="_blank" rel="noopener">6200 W Central Ave, Toledo, OH 43615</a></div></div></div>
+
+    <header class="site-header"><div class="container">
+        <a href="/demo/taylor-hyundai-toledo" class="header-logo"><svg viewBox="0 0 200 40" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="20" cy="20" rx="18" ry="16" stroke="#00287A" stroke-width="2.5" fill="none"/><path d="M10 16 C10 16 14 24 20 24 C26 24 30 16 30 16" stroke="#00287A" stroke-width="2.2" fill="none"/><path d="M10 16 C10 16 14 8 20 8 C26 8 30 16 30 16" stroke="#00287A" stroke-width="2.2" fill="none"/><text x="46" y="27" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#00287A">HYUNDAI</text></svg><div class="header-logo-text">Taylor Hyundai<small>of Toledo</small></div></a>
+        <nav class="header-nav"><a href="/demo/taylor-hyundai-toledo/inventory">New Vehicles</a><a href="/demo/taylor-hyundai-toledo/inventory">Pre-Owned</a><a href="/demo/taylor-hyundai-toledo/service">Service</a><a href="/demo/taylor-hyundai-toledo/financing">Financing</a><a href="/demo/taylor-hyundai-toledo/contact" class="active">Contact</a></nav>
+    </div></header>
+
+    <div class="breadcrumb-bar"><div class="container"><a href="/demo/taylor-hyundai-toledo">Home</a> <span>/</span> Contact Us</div></div>
+
+    <section class="contact-hero"><div class="contact-hero-inner"><h1>Get In Touch</h1><p>Taylor Hyundai of Toledo is here to help with all your automotive needs.</p></div></section>
+
+    <section class="dept-cards" id="hours"><div class="container"><div class="dept-cards-grid">
+        <div class="dept-card"><div class="dept-card-icon"><svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg></div><h3>Sales</h3><a href="tel:5674555230" class="dept-card-phone">(567) 455-5230</a><div class="dept-card-hours"><strong>Mon &ndash; Fri:</strong> 9:00 AM &ndash; 7:00 PM<br><strong>Saturday:</strong> 9:00 AM &ndash; 5:00 PM<br><strong>Sunday:</strong> Closed</div></div>
+        <div class="dept-card"><div class="dept-card-icon"><svg viewBox="0 0 24 24"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/></svg></div><h3>Service</h3><a href="tel:5674555230" class="dept-card-phone">(567) 455-5230</a><div class="dept-card-hours"><strong>Mon &ndash; Fri:</strong> 7:30 AM &ndash; 6:00 PM<br><strong>Saturday:</strong> 8:00 AM &ndash; 2:00 PM<br><strong>Sunday:</strong> Closed</div></div>
+        <div class="dept-card"><div class="dept-card-icon"><svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg></div><h3>Parts</h3><a href="tel:5674555230" class="dept-card-phone">(567) 455-5230</a><div class="dept-card-hours"><strong>Mon &ndash; Fri:</strong> 7:30 AM &ndash; 6:00 PM<br><strong>Saturday:</strong> 8:00 AM &ndash; 2:00 PM<br><strong>Sunday:</strong> Closed</div></div>
+    </div></div></section>
+
+    <section class="contact-main" id="contact"><div class="container"><div class="contact-main-grid">
+        <div class="contact-form-wrap">
+            <h2>Send Us a Message</h2>
+            <p>Fill out the form below and our team will get back to you promptly.</p>
+            <form onsubmit="event.preventDefault(); alert('Thank you! We will be in touch soon.');">
+                <div class="form-row"><div class="form-group"><label for="firstName">First Name</label><input type="text" id="firstName" placeholder="John" required></div><div class="form-group"><label for="lastName">Last Name</label><input type="text" id="lastName" placeholder="Smith" required></div></div>
+                <div class="form-row"><div class="form-group"><label for="email">Email Address</label><input type="email" id="email" placeholder="john@example.com" required></div><div class="form-group"><label for="phone">Phone Number</label><input type="tel" id="phone" placeholder="(567) 555-0100"></div></div>
+                <div class="form-row"><div class="form-group full"><label for="department">Department</label><select id="department"><option value="">Select a Department</option><option value="sales">Sales</option><option value="service">Service</option><option value="parts">Parts</option><option value="financing">Financing</option><option value="general">General Inquiry</option></select></div></div>
+                <div class="form-row"><div class="form-group full"><label for="message">Message</label><textarea id="message" placeholder="How can we help you?" required></textarea></div></div>
+                <div class="form-submit"><button type="submit" class="btn btn-primary">Send Message</button></div>
+            </form>
+        </div>
+        <div class="contact-map-wrap" id="map">
+            <h2>Find Us</h2>
+            <p>6200 W Central Ave, Toledo, OH 43615</p>
+            <div class="contact-map-embed"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2990.5!2d-83.6482!3d41.6650!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s6200+W+Central+Ave%2C+Toledo%2C+OH+43615!5e0!3m2!1sen!2sus!4v1700000000000" width="100%" height="360" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Taylor Hyundai of Toledo location map"></iframe></div>
+            <div class="contact-address-card"><h4>Taylor Hyundai of Toledo</h4><p>6200 W Central Ave<br>Toledo, OH 43615</p><p><a href="https://maps.google.com/?q=6200+W+Central+Ave+Toledo+OH+43615" target="_blank" rel="noopener">Get Directions &rarr;</a></p></div>
+        </div>
+    </div></div></section>
+
+    <section class="dealer-info"><div class="container"><div class="dealer-info-inner">
+        <h2>About Taylor Hyundai of Toledo</h2>
+        <p>Taylor Hyundai of Toledo has proudly served Toledo and the surrounding communities of northwest Ohio. As your local authorized Hyundai dealer, we offer the full lineup of new Hyundai vehicles, quality pre-owned options, Hyundai-certified technicians, genuine OEM parts, and flexible financing solutions tailored to every budget. Our commitment is simple: deliver an exceptional ownership experience from your first visit through every mile ahead.</p>
+        <div class="quick-links-grid">
+            <a href="/demo/taylor-hyundai-toledo/inventory" class="quick-link-card"><svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg><h4>New Vehicles</h4><p>Browse our inventory</p></a>
+            <a href="/demo/taylor-hyundai-toledo/service" class="quick-link-card"><svg viewBox="0 0 24 24"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/></svg><h4>Schedule Service</h4><p>Book an appointment</p></a>
+            <a href="/demo/taylor-hyundai-toledo/financing" class="quick-link-card"><svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg><h4>Apply for Financing</h4><p>Get pre-qualified today</p></a>
+            <a href="/demo/taylor-hyundai-toledo/service#parts" class="quick-link-card"><svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg><h4>Order Parts</h4><p>Genuine Hyundai parts</p></a>
+        </div>
+    </div></div></section>
+
+    <section class="seo-content"><div class="seo-content-inner">
+        <h2>Visit Taylor Hyundai of Toledo</h2>
+        <p>Located at 6200 W Central Ave in Toledo, Taylor Hyundai is your trusted source for new and pre-owned Hyundai vehicles in northwest Ohio. We're easily accessible from Maumee, Perrysburg, Sylvania, Oregon, and Bowling Green. Stop by for a test drive or <a href="tel:5674555230">call (567) 455-5230</a> to speak with our team.</p>
+        <h2>Directions from Nearby Cities</h2>
+        <p>From Maumee, take US-20 West to W Central Ave. From Perrysburg, head north on I-75 and exit onto US-20 West. From Sylvania, take W Central Ave east directly to our dealership. We're just minutes from downtown Toledo.</p>
+    </div></section>
+
+    <footer class="site-footer"><div class="container">
+        <div class="footer-grid">
+            <div class="footer-col"><h4>Inventory</h4><ul><li><a href="/demo/taylor-hyundai-toledo/inventory">New Vehicles</a></li><li><a href="/demo/taylor-hyundai-toledo/inventory?type=used">Pre-Owned</a></li><li><a href="/demo/taylor-hyundai-toledo/inventory?type=certified">Certified Pre-Owned</a></li><li><a href="/demo/taylor-hyundai-toledo/inventory?special=true">Specials</a></li></ul></div>
+            <div class="footer-col"><h4>Service</h4><ul><li><a href="/demo/taylor-hyundai-toledo/service">Schedule Service</a></li><li><a href="/demo/taylor-hyundai-toledo/service#specials">Service Specials</a></li><li><a href="/demo/taylor-hyundai-toledo/service#parts">Order Parts</a></li><li><a href="tel:5674555230">Call Service: (567) 455-5230</a></li></ul></div>
+            <div class="footer-col"><h4>Financing</h4><ul><li><a href="/demo/taylor-hyundai-toledo/financing">Apply for Financing</a></li><li><a href="/demo/taylor-hyundai-toledo/financing#calculator">Payment Calculator</a></li><li><a href="/demo/taylor-hyundai-toledo/financing#trade">Value Your Trade</a></li><li><a href="/demo/taylor-hyundai-toledo/financing#credit">Credit Solutions</a></li></ul></div>
+            <div class="footer-col"><h4>About Us</h4><ul><li><a href="/demo/taylor-hyundai-toledo/contact">Contact Us</a></li><li><a href="/demo/taylor-hyundai-toledo/contact#hours">Hours &amp; Directions</a></li><li><a href="/demo/taylor-hyundai-toledo/contact#map">Find Us</a></li><li><a href="tel:5674555230">Call Sales: (567) 455-5230</a></li></ul></div>
+        </div>
+        <div class="footer-cross-links">Also visit: <a href="/demo/taylor-hyundai-perrysburg">Taylor Hyundai of Perrysburg</a> &nbsp;|&nbsp; <a href="/demo/taylor-hyundai-findlay">Taylor Hyundai of Findlay</a> &nbsp;|&nbsp; <a href="/demo/taylor-auto">Part of the Taylor Automotive Family</a></div>
+        <div class="footer-bottom"><p>Taylor Hyundai of Toledo &mdash; 6200 W Central Ave, Toledo, OH 43615 &nbsp;&bull;&nbsp; &copy; 2026 All Rights Reserved &nbsp;&bull;&nbsp; Powered by <a href="https://www.savvydealer.com" target="_blank" rel="noopener">SavvyDealer</a></p></div>
+    </div></footer>
+
+</body>
+</html>

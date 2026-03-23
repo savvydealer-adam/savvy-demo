@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0" />
+    <title>New Inventory | Taylor Volkswagen of Findlay | VW Dealer Findlay, OH</title>
+    <meta name="description" content="Browse new and pre-owned Volkswagen vehicles at Taylor Volkswagen of Findlay, OH. Competitive pricing on Atlas, Tiguan, Taos, Jetta, ID.4, GTI, and more." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bodyfont: 'Inter', sans-serif;
+            --headerbg: #001E50;
+            --footerbg: #001E50;
+            --darkgrey: #393436;
+            --bodycolor: #19183C;
+            --secondarycolor: #001E50;
+            --accentcolor: #00B0F0;
+            --linktextcolor: #001E50;
+            --headingcolor: #212529;
+            --blackcolor: #000000;
+            --whitecolor: #fff;
+            --greycolor: #808080;
+            --savingsgreen: #30770f;
+            --transition: all 0.4s;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; }
+        body { margin: 0; font-family: var(--bodyfont); color: var(--bodycolor); font-size: 16px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+        a { color: var(--linktextcolor); text-decoration: none; }
+        a:hover { color: var(--blackcolor); }
+        img { max-width: 100%; height: auto; }
+        .container { margin: 0 auto; padding: 0 15px; }
+        @media(min-width:768px) { .container { width: 750px; } }
+        @media(min-width:992px) { .container { width: 970px; } }
+        @media(min-width:1200px) { .container { width: 1170px; } }
+        @media(min-width:1430px) { .container { width: 1400px; } }
+        @media(min-width:1630px) { .container { width: 1630px; } }
+
+        /* ========== TOP BAR ========== */
+        .top-bar {
+            background: var(--headerbg);
+            color: #fff;
+            padding: 8px 0;
+            font-size: 13px;
+        }
+        .top-bar .tb-inner {
+            max-width: 1630px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .top-bar-phones {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .top-bar-phones a {
+            color: #fff;
+            font-weight: 500;
+            transition: opacity 0.2s;
+        }
+        .top-bar-phones a:hover { opacity: 0.85; }
+        .top-bar-phones span {
+            color: rgba(255,255,255,0.7);
+            margin-right: 4px;
+            font-weight: 400;
+        }
+        .top-bar-address { color: rgba(255,255,255,0.9); }
+        .top-bar-address a { color: #fff; }
+        .top-bar-address a:hover { text-decoration: underline; }
+
+        /* ========== HEADER ========== */
+        .site-header {
+            background: #fff;
+            border-bottom: 1px solid #f0f0f0;
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+        }
+        .site-header .sh-inner {
+            max-width: 1630px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+        .header-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-shrink: 0;
+        }
+        .vw-logo { width: 40px; height: 40px; }
+        .header-brand-text {
+            font-size: 15px;
+            font-weight: 700;
+            color: #001E50;
+            line-height: 1.2;
+        }
+        .header-brand-text small {
+            display: block;
+            font-size: 11px;
+            font-weight: 500;
+            color: #666;
+        }
+        .header-nav {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .header-nav a {
+            color: #001E50;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 6px 12px;
+            border-radius: 4px;
+            transition: background 0.2s, color 0.2s;
+        }
+        .header-nav a:hover {
+            background: #f0f4fb;
+            color: var(--headerbg);
+        }
+        .header-nav a.active {
+            background: #f0f4fb;
+            color: var(--headerbg);
+            font-weight: 700;
+        }
+
+        /* __ SRP Layout __ */
+        .search-page-main { padding: 30px 0; background: rgb(40 40 40 / 5%); min-height: 80vh; }
+        .search-page-main .container { width: 100%; max-width: 1630px; }
+        .search-page-main .inner { display: flex; flex-wrap: wrap; }
+
+        /* Filter Panel */
+        .filter-panel { width: 21%; align-self: flex-start; background: #fff; border: 1px solid rgba(36,39,44,.1); box-shadow: 0 6px 10px rgba(0,0,0,.05); border-radius: 12px; padding: 24px 20px; position: sticky; top: 80px; }
+        .filter-panel .card-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid #eee; }
+        .filter-panel .cardtitle { font-size: 22px; font-weight: 700; margin: 0; color: var(--headerbg); }
+        .filter-panel .share-link { font-size: 13px; color: var(--accentcolor); display: flex; align-items: center; gap: 6px; }
+        .filter-panel .share-link svg { width: 14px; height: 14px; fill: var(--accentcolor); }
+
+        /* Search within filters */
+        .searchform-main { margin-bottom: 16px; }
+        .searchform-main .form-field { display: flex; border: 1px solid #ddd; border-radius: 6px; overflow: hidden; }
+        .searchform-main input { flex: 1; padding: 10px 12px; border: none; outline: none; font-family: inherit; font-size: 14px; }
+        .searchform-main .search-btn { padding: 10px 14px; background: var(--secondarycolor); display: flex; align-items: center; cursor: pointer; }
+        .searchform-main .search-btn svg { width: 16px; height: 16px; fill: #fff; }
+
+        /* Reset button */
+        .reset-btn { margin-bottom: 16px; }
+        .reset-btn a { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 10px 16px; background: var(--secondarycolor); color: #fff; border: 1px solid var(--secondarycolor); border-radius: 6px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; transition: var(--transition); }
+        .reset-btn a:hover { background: transparent; color: var(--secondarycolor); }
+        .reset-btn a svg { width: 14px; height: 14px; fill: currentColor; }
+
+        /* Filter accordion */
+        .filter-item { border-bottom: 1px solid #eee; padding: 12px 0; }
+        .filter-item .title { font-size: 14px; font-weight: 700; text-transform: uppercase; cursor: pointer; display: flex; align-items: center; justify-content: space-between; }
+        .filter-item .title::after { content: ""; width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 5px solid var(--bodycolor); transition: transform 0.3s; }
+        .filter-item.open .title::after { transform: rotate(180deg); }
+        .filter-item .accordion-content { padding-top: 8px; }
+        .filter-item .accordion-content ul { list-style: none; padding: 0; margin: 0; }
+        .filter-item .accordion-content li { display: flex; align-items: center; justify-content: space-between; padding: 6px 0; font-size: 14px; cursor: pointer; transition: color 0.2s; }
+        .filter-item .accordion-content li:hover { color: var(--secondarycolor); }
+        .filter-item .accordion-content li.active { color: var(--secondarycolor); font-weight: 700; }
+        .filter-item .badge { background: #f0f0f0; color: var(--greycolor); font-size: 12px; padding: 2px 8px; border-radius: 10px; font-weight: 600; }
+
+        /* __ Results Area __ */
+        .filter-result-wrapper { width: calc(79% - 30px); margin: 0 0 0 30px; }
+
+        /* Inventory header bar */
+        .inventory-detail { background: #fff; border: 1px solid rgba(36,39,44,.1); box-shadow: 0 6px 10px rgba(0,0,0,.05); border-radius: 12px; padding: 16px 24px; margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+        .inventory-detail .count { font-size: 20px; font-weight: 700; color: var(--headerbg); }
+        .inventory-detail .sort-by { display: flex; align-items: center; gap: 8px; font-size: 14px; }
+        .inventory-detail .sort-by select { padding: 8px 12px; border: 1px solid #ddd; border-radius: 6px; font-family: inherit; font-size: 14px; cursor: pointer; }
+        .filter-buttons { display: flex; gap: 8px; }
+        .filter-buttons div { padding: 8px; cursor: pointer; border-radius: 6px; transition: var(--transition); }
+        .filter-buttons div:hover, .filter-buttons div.active { background: var(--secondarycolor); }
+        .filter-buttons div:hover svg, .filter-buttons div.active svg { fill: #fff; }
+        .filter-buttons svg { width: 18px; height: 18px; fill: #666; display: block; }
+
+        /* Mobile filter button */
+        .mobile-filter-btn { display: none; align-items: center; justify-content: center; gap: 8px; padding: 12px 20px; background: var(--secondarycolor); color: #fff; border: none; border-radius: 8px; font-family: inherit; font-size: 14px; font-weight: 700; cursor: pointer; margin-bottom: 16px; width: 100%; }
+        .mobile-filter-btn svg { width: 16px; height: 16px; fill: #fff; }
+
+        /* __ Vehicle Cards (Grid View) __ */
+        .list-wrapper { display: flex; flex-wrap: wrap; gap: 20px; }
+        .list-item { width: calc(25% - 15px); background: #fff; border: 1px solid rgba(36,39,44,.1); box-shadow: 0 6px 10px rgba(0,0,0,.05); border-radius: 12px; overflow: hidden; transition: box-shadow 0.3s; }
+        .list-item:hover { box-shadow: 0 8px 24px rgba(0,0,0,.12); }
+        .list-item-inner { display: flex; flex-direction: column; height: 100%; }
+        .list-item-inner > div { width: 100%; }
+
+        /* Image */
+        .list-item .image-block { position: relative; overflow: hidden; background: #f4f4f4; }
+        .list-item .image-block img { width: 100%; aspect-ratio: 4/3; object-fit: contain; border-radius: 12px 12px 0 0; transition: transform 0.4s; padding: 12px; }
+        .list-item:hover .image-block img { transform: scale(1.03); }
+
+        .watchlist-icon { position: absolute; bottom: 10px; right: 10px; width: 32px; height: 32px; background: rgba(255,255,255,0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: var(--transition); }
+        .watchlist-icon:hover { background: var(--secondarycolor); }
+        .watchlist-icon:hover svg { fill: #fff; }
+        .watchlist-icon svg { width: 16px; height: 16px; fill: #999; }
+
+        /* Details */
+        .list-item-detail { padding: 15px 15px 0; }
+        .vehicleCardTitle { color: var(--headerbg); font-size: 16px; font-weight: 700; line-height: 1.3; }
+        .vehicleCardTitle:hover { text-decoration: underline; }
+        .details-wrapper { font-size: 13px; }
+        .details-wrapper .details { display: flex; justify-content: space-between; padding: 3px 0; }
+        .details-wrapper .details .label { color: #999; }
+        .details-wrapper .details .value { font-weight: 600; text-align: right; }
+
+        /* Price Block */
+        .list-item-price { padding: 0 15px 15px; display: flex; flex-direction: column; flex-grow: 1; }
+
+        .mobile-apr-price-wrapper { padding: 10px 12px; background: #fafafa; border: 1px solid #eee; border-radius: 8px; margin-top: 10px; }
+        .mobile-apr-price-wrapper .price-display { display: flex; align-items: center; justify-content: space-between; }
+        .yousave-price { text-align: left; }
+        .yousave-price .amount { font-size: 15px; font-weight: 800; color: var(--secondarycolor); }
+        .yousave-price .save-label { font-size: 10px; color: var(--accentcolor); text-transform: uppercase; font-weight: 700; display: block; }
+        .mobile-price { text-align: right; }
+        .mobile-price .price { font-size: 20px; font-weight: 700; color: var(--bodycolor); }
+        .mobile-price .price-label { font-size: 10px; color: var(--accentcolor); text-transform: uppercase; font-weight: 700; display: block; }
+
+        /* Price Details toggle */
+        .price-toggle { padding: 6px 0; margin-top: 6px; cursor: pointer; font-size: 13px; color: var(--accentcolor); display: flex; align-items: center; justify-content: center; gap: 4px; user-select: none; }
+        .price-toggle:hover { color: var(--bodycolor); }
+        .price-toggle svg { width: 10px; height: 10px; fill: currentColor; transition: transform 0.3s; }
+        .price-toggle.open svg { transform: rotate(180deg); }
+
+        /* Hidden price breakdown */
+        .price-breakup { display: none; padding: 10px 0 4px; }
+        .price-breakup.show { display: block; }
+        .price-breakup .row { display: flex; justify-content: space-between; padding: 3px 0; font-size: 13px; }
+        .price-breakup .label { color: #999; }
+        .price-breakup .msrp { text-decoration: line-through; color: #999; }
+        .price-breakup .msrp::before { content: "$"; }
+        .price-breakup .dealersavingsprice { color: var(--secondarycolor); font-weight: 700; }
+        .price-breakup .finalprice { color: #30770f; font-weight: 700; }
+        .price-breakup .border-top-dash { border-top: 1px dashed #ddd; margin-top: 4px; padding-top: 6px; }
+
+        /* CTA Buttons */
+        .card-actions { margin-top: auto; display: flex; flex-direction: column; gap: 6px; padding-top: 8px; }
+        .btn_3 a { background: var(--secondarycolor); color: #fff; text-transform: uppercase; font-weight: 700; border: 1px solid var(--secondarycolor); display: flex; align-items: center; justify-content: center; border-radius: 6px; font-size: 13px; line-height: 1.5; letter-spacing: 1px; padding: 12px 16px; transition: var(--transition); }
+        .btn_3 a:hover { background: transparent; color: var(--secondarycolor); }
+        .btn_4 a { background: transparent; color: var(--secondarycolor); text-transform: uppercase; font-weight: 700; border: 1px solid var(--secondarycolor); display: flex; align-items: center; justify-content: center; border-radius: 6px; font-size: 13px; line-height: 1.5; letter-spacing: 1px; padding: 12px 16px; transition: var(--transition); }
+        .btn_4 a:hover { background: var(--secondarycolor); color: #fff; }
+
+        /* __ Pagination __ */
+        .pagination-wrapper { padding: 24px 0; display: flex; justify-content: center; }
+        .pagination { display: flex; list-style: none; padding: 0; margin: 0; gap: 4px; }
+        .pagination li { cursor: pointer; }
+        .pagination li span { display: block; padding: 8px 14px; border: 1px solid #ddd; border-radius: 6px; font-size: 14px; font-weight: 600; color: #666; transition: var(--transition); }
+        .pagination li:hover span { border-color: var(--secondarycolor); color: var(--secondarycolor); }
+        .pagination li.active span { background: var(--secondarycolor); color: #fff; border-color: var(--secondarycolor); }
+        .pagination li.disabled span { color: #ccc; cursor: default; }
+        .pagination li.disabled:hover span { border-color: #ddd; color: #ccc; }
+
+        /* ========== FOOTER ========== */
+        .site-footer {
+            background: var(--footerbg);
+            color: #ccc;
+            padding: 48px 0 0;
+        }
+        .site-footer .ft-inner {
+            max-width: 1630px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .footer-col h4 {
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: #fff;
+            margin: 0 0 16px;
+        }
+        .footer-col ul { list-style: none; padding: 0; margin: 0; }
+        .footer-col li { margin-bottom: 10px; }
+        .footer-col a { color: rgba(255,255,255,0.6); font-size: 14px; transition: color 0.2s; }
+        .footer-col a:hover { color: #fff; }
+        .footer-bottom {
+            padding: 20px 24px;
+            text-align: center;
+            font-size: 13px;
+            color: rgba(255,255,255,0.4);
+        }
+        .footer-bottom a { color: #00B0F0; font-weight: 500; }
+        .footer-bottom a:hover { text-decoration: underline; }
+
+        /* __ Responsive __ */
+        @media (max-width: 1429px) {
+            .filter-panel { width: 25%; }
+            .filter-result-wrapper { width: calc(75% - 30px); }
+            .list-item { width: calc(33.33% - 14px); }
+        }
+        @media (max-width: 1199px) {
+            .list-item { width: calc(50% - 10px); }
+            .filter-buttons { display: none; }
+        }
+        @media (max-width: 1023px) {
+            .header-nav { display: none; }
+        }
+        @media (max-width: 991px) {
+            .filter-panel { display: none; }
+            .filter-result-wrapper { width: 100%; margin: 0; }
+            .list-item { width: calc(50% - 10px); }
+            .mobile-filter-btn { display: flex !important; }
+        }
+        @media (max-width: 767px) {
+            .list-item { width: 100%; }
+            .top-bar .tb-inner {
+                flex-direction: column;
+                text-align: center;
+                gap: 4px;
+            }
+            .top-bar-phones { justify-content: center; }
+            .site-header .sh-inner {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ==================== TOP BAR ==================== -->
+<div class="top-bar">
+    <div class="tb-inner">
+        <div class="top-bar-phones">
+            <a href="tel:5672509813"><span>Sales:</span> (567) 250-9813</a>
+            <a href="tel:5672509813"><span>Service:</span> (567) 250-9813</a>
+            <a href="tel:5672509813"><span>Parts:</span> (567) 250-9813</a>
+        </div>
+        <div class="top-bar-address">
+            <a href="https://maps.google.com/?q=11799+County+Rd+99+Findlay+OH+45840" target="_blank" rel="noopener">
+                11799 County Rd 99, Findlay, OH 45840
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- ==================== HEADER ==================== -->
+<header class="site-header">
+    <div class="sh-inner">
+        <a href="/demo/taylor-vw-findlay" class="header-brand">
+            <svg class="vw-logo" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" r="96" stroke="#001E50" stroke-width="8"/>
+                <path d="M100 28 L135 130 L100 90 L65 130 Z" fill="#001E50"/>
+                <path d="M58 50 L80 110 L100 60 L120 110 L142 50" stroke="#001E50" stroke-width="8" fill="none" stroke-linejoin="round"/>
+            </svg>
+            <div class="header-brand-text">
+                Taylor Volkswagen
+                <small>of Findlay</small>
+            </div>
+        </a>
+        <nav class="header-nav">
+            <a href="/demo/taylor-vw-findlay/inventory" class="active">Inventory</a>
+            <a href="/demo/taylor-vw-findlay/service">Service</a>
+            <a href="/demo/taylor-vw-findlay/financing">Financing</a>
+            <a href="/demo/taylor-vw-findlay/contact">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<!-- ==================== SRP CONTENT ==================== -->
+<section class="search-page-main">
+    <div class="container">
+
+        <!-- Mobile Filter Button -->
+        <button class="mobile-filter-btn" style="display:none;">
+            <svg viewBox="0 0 24 24"><path d="M3 4h18v2H3V4zm3 7h12v2H6v-2zm4 7h4v2h-4v-2z"/></svg>
+            Filter Vehicles
+        </button>
+
+        <div class="inner">
+
+            <!-- ==================== FILTER PANEL ==================== -->
+            <aside class="filter-panel">
+                <div class="card-header">
+                    <h2 class="cardtitle">Filters</h2>
+                    <a href="#" class="share-link">
+                        <svg viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"/></svg>
+                        Share
+                    </a>
+                </div>
+
+                <!-- Search -->
+                <div class="searchform-main">
+                    <div class="form-field">
+                        <input type="text" placeholder="Search inventory...">
+                        <div class="search-btn">
+                            <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reset -->
+                <div class="reset-btn">
+                    <a href="/demo/taylor-vw-findlay/inventory">
+                        <svg viewBox="0 0 24 24"><path d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/></svg>
+                        Reset All
+                    </a>
+                </div>
+
+                <!-- Type -->
+                <div class="filter-item open">
+                    <div class="title">Type</div>
+                    <div class="accordion-content">
+                        <ul>
+                            <li class="active"><span>New</span> <span class="badge">12</span></li>
+                            <li><span>Pre-Owned</span> <span class="badge">8</span></li>
+                            <li><span>Certified Pre-Owned</span> <span class="badge">3</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Model -->
+                <div class="filter-item open">
+                    <div class="title">Model</div>
+                    <div class="accordion-content">
+                        <ul>
+                            <li><span>Atlas</span> <span class="badge">2</span></li>
+                            <li><span>Atlas Cross Sport</span> <span class="badge">1</span></li>
+                            <li><span>Tiguan</span> <span class="badge">3</span></li>
+                            <li><span>Taos</span> <span class="badge">2</span></li>
+                            <li><span>Jetta</span> <span class="badge">2</span></li>
+                            <li><span>ID.4</span> <span class="badge">1</span></li>
+                            <li><span>GTI</span> <span class="badge">1</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Year -->
+                <div class="filter-item">
+                    <div class="title">Year</div>
+                    <div class="accordion-content">
+                        <ul>
+                            <li><span>2025</span> <span class="badge">9</span></li>
+                            <li><span>2024</span> <span class="badge">3</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Price -->
+                <div class="filter-item">
+                    <div class="title">Price</div>
+                    <div class="accordion-content">
+                        <ul>
+                            <li><span>Under $25,000</span> <span class="badge">2</span></li>
+                            <li><span>$25,000 - $35,000</span> <span class="badge">5</span></li>
+                            <li><span>$35,000 - $45,000</span> <span class="badge">3</span></li>
+                            <li><span>$45,000+</span> <span class="badge">2</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Drivetrain -->
+                <div class="filter-item">
+                    <div class="title">Drivetrain</div>
+                    <div class="accordion-content">
+                        <ul>
+                            <li><span>FWD</span> <span class="badge">5</span></li>
+                            <li><span>AWD</span> <span class="badge">6</span></li>
+                            <li><span>RWD (Electric)</span> <span class="badge">1</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Color -->
+                <div class="filter-item">
+                    <div class="title">Exterior Color</div>
+                    <div class="accordion-content">
+                        <ul>
+                            <li><span>Pure White</span> <span class="badge">3</span></li>
+                            <li><span>Deep Black Pearl</span> <span class="badge">2</span></li>
+                            <li><span>Platinum Gray</span> <span class="badge">2</span></li>
+                            <li><span>Kings Red Metallic</span> <span class="badge">2</span></li>
+                            <li><span>Opal White Pearl</span> <span class="badge">1</span></li>
+                            <li><span>Atlantic Blue</span> <span class="badge">1</span></li>
+                            <li><span>Pomelo Yellow</span> <span class="badge">1</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- ==================== RESULTS ==================== -->
+            <div class="filter-result-wrapper">
+                <!-- Inventory Detail Bar -->
+                <div class="inventory-detail">
+                    <div class="count"><strong>12 Vehicles Found</strong></div>
+                    <div class="sort-by">
+                        <span><strong>Sort Results</strong></span>
+                        <select>
+                            <option>Price (low to high)</option>
+                            <option>Price (high to low)</option>
+                            <option>Year (newest)</option>
+                            <option>Year (oldest)</option>
+                            <option>Mileage (low to high)</option>
+                        </select>
+                    </div>
+                    <div class="filter-buttons">
+                        <div title="List view">
+                            <svg viewBox="0 0 24 24"><path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/></svg>
+                        </div>
+                        <div class="active" title="Grid view">
+                            <svg viewBox="0 0 24 24"><path d="M3 3h8v8H3V3zm0 10h8v8H3v-8zM13 3h8v8h-8V3zm0 10h8v8h-8v-8z"/></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vehicle Grid -->
+                <div class="list-wrapper">
+
+                    <!-- Vehicle 1 -->
+                    <div class="list-item">
+                        <div class="list-item-inner">
+                            <div class="image-block">
+                                <a href="/demo/taylor-vw-findlay/vdp"><img src="https://placehold.co/960x540/f4f4f4/001E50?text=2025+VW+Tiguan+SE" alt="2025 Volkswagen Tiguan SE" loading="lazy"></a>
+                                <div class="watchlist-icon"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
+                            </div>
+                            <div class="list-item-detail">
+                                <a class="vehicleCardTitle" href="/demo/taylor-vw-findlay/vdp">2025 Volkswagen Tiguan SE</a>
+                                <div class="details-wrapper">
+                                    <div class="details"><div class="label">Ext. Color</div><div class="value">Pure White</div></div>
+                                    <div class="details"><div class="label">Drivetrain</div><div class="value">AWD</div></div>
+                                    <div class="details"><div class="label">Engine</div><div class="value">2.0L Turbo</div></div>
+                                    <div class="details"><div class="label">Stock #</div><div class="value">VW25-1001</div></div>
+                                </div>
+                            </div>
+                            <div class="list-item-price">
+                                <div class="mobile-apr-price-wrapper">
+                                    <div class="price-display">
+                                        <div class="yousave-price">
+                                            <span class="amount">$1,500</span>
+                                            <span class="save-label">Potential Savings</span>
+                                        </div>
+                                        <div class="mobile-price">
+                                            <span class="price">$34,850</span>
+                                            <span class="price-label">Dealer Price*</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="price-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('show')">Price Details <svg viewBox="0 0 10 6"><path d="M0 0l5 6 5-6z"/></svg></div>
+                                <div class="price-breakup">
+                                    <div class="row"><div class="label">MSRP</div><div class="msrp">36,350</div></div>
+                                    <div class="row"><div class="label">Discount</div><div class="dealersavingsprice">-$1,500</div></div>
+                                    <div class="row border-top-dash"><div class="label">Dealer Price*</div><div class="finalprice">$34,850</div></div>
+                                </div>
+                                <div class="card-actions">
+                                    <div class="btn_3"><a href="/demo/taylor-vw-findlay/vdp">Check Availability</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vehicle 2 -->
+                    <div class="list-item">
+                        <div class="list-item-inner">
+                            <div class="image-block">
+                                <a href="/demo/taylor-vw-findlay/vdp"><img src="https://placehold.co/960x540/f4f4f4/001E50?text=2025+VW+Atlas+SE" alt="2025 Volkswagen Atlas SE" loading="lazy"></a>
+                                <div class="watchlist-icon"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
+                            </div>
+                            <div class="list-item-detail">
+                                <a class="vehicleCardTitle" href="/demo/taylor-vw-findlay/vdp">2025 Volkswagen Atlas SE</a>
+                                <div class="details-wrapper">
+                                    <div class="details"><div class="label">Ext. Color</div><div class="value">Deep Black Pearl</div></div>
+                                    <div class="details"><div class="label">Drivetrain</div><div class="value">AWD</div></div>
+                                    <div class="details"><div class="label">Engine</div><div class="value">2.0L Turbo</div></div>
+                                    <div class="details"><div class="label">Stock #</div><div class="value">VW25-1002</div></div>
+                                </div>
+                            </div>
+                            <div class="list-item-price">
+                                <div class="mobile-apr-price-wrapper">
+                                    <div class="price-display">
+                                        <div class="yousave-price">
+                                            <span class="amount">$2,000</span>
+                                            <span class="save-label">Potential Savings</span>
+                                        </div>
+                                        <div class="mobile-price">
+                                            <span class="price">$40,575</span>
+                                            <span class="price-label">Dealer Price*</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="price-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('show')">Price Details <svg viewBox="0 0 10 6"><path d="M0 0l5 6 5-6z"/></svg></div>
+                                <div class="price-breakup">
+                                    <div class="row"><div class="label">MSRP</div><div class="msrp">42,575</div></div>
+                                    <div class="row"><div class="label">Discount</div><div class="dealersavingsprice">-$2,000</div></div>
+                                    <div class="row border-top-dash"><div class="label">Dealer Price*</div><div class="finalprice">$40,575</div></div>
+                                </div>
+                                <div class="card-actions">
+                                    <div class="btn_3"><a href="/demo/taylor-vw-findlay/vdp">Check Availability</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vehicle 3 -->
+                    <div class="list-item">
+                        <div class="list-item-inner">
+                            <div class="image-block">
+                                <a href="/demo/taylor-vw-findlay/vdp"><img src="https://placehold.co/960x540/f4f4f4/001E50?text=2025+VW+Jetta+S" alt="2025 Volkswagen Jetta S" loading="lazy"></a>
+                                <div class="watchlist-icon"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
+                            </div>
+                            <div class="list-item-detail">
+                                <a class="vehicleCardTitle" href="/demo/taylor-vw-findlay/vdp">2025 Volkswagen Jetta S</a>
+                                <div class="details-wrapper">
+                                    <div class="details"><div class="label">Ext. Color</div><div class="value">Platinum Gray</div></div>
+                                    <div class="details"><div class="label">Drivetrain</div><div class="value">FWD</div></div>
+                                    <div class="details"><div class="label">Engine</div><div class="value">1.5L Turbo</div></div>
+                                    <div class="details"><div class="label">Stock #</div><div class="value">VW25-1003</div></div>
+                                </div>
+                            </div>
+                            <div class="list-item-price">
+                                <div class="mobile-apr-price-wrapper">
+                                    <div class="price-display">
+                                        <div class="yousave-price">
+                                            <span class="amount">$750</span>
+                                            <span class="save-label">Potential Savings</span>
+                                        </div>
+                                        <div class="mobile-price">
+                                            <span class="price">$22,240</span>
+                                            <span class="price-label">Dealer Price*</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="price-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('show')">Price Details <svg viewBox="0 0 10 6"><path d="M0 0l5 6 5-6z"/></svg></div>
+                                <div class="price-breakup">
+                                    <div class="row"><div class="label">MSRP</div><div class="msrp">22,990</div></div>
+                                    <div class="row"><div class="label">Discount</div><div class="dealersavingsprice">-$750</div></div>
+                                    <div class="row border-top-dash"><div class="label">Dealer Price*</div><div class="finalprice">$22,240</div></div>
+                                </div>
+                                <div class="card-actions">
+                                    <div class="btn_3"><a href="/demo/taylor-vw-findlay/vdp">Check Availability</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vehicle 4 -->
+                    <div class="list-item">
+                        <div class="list-item-inner">
+                            <div class="image-block">
+                                <a href="/demo/taylor-vw-findlay/vdp"><img src="https://placehold.co/960x540/f4f4f4/001E50?text=2025+VW+Taos+SE" alt="2025 Volkswagen Taos SE" loading="lazy"></a>
+                                <div class="watchlist-icon"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
+                            </div>
+                            <div class="list-item-detail">
+                                <a class="vehicleCardTitle" href="/demo/taylor-vw-findlay/vdp">2025 Volkswagen Taos SE</a>
+                                <div class="details-wrapper">
+                                    <div class="details"><div class="label">Ext. Color</div><div class="value">Kings Red Metallic</div></div>
+                                    <div class="details"><div class="label">Drivetrain</div><div class="value">FWD</div></div>
+                                    <div class="details"><div class="label">Engine</div><div class="value">1.5L Turbo</div></div>
+                                    <div class="details"><div class="label">Stock #</div><div class="value">VW25-1004</div></div>
+                                </div>
+                            </div>
+                            <div class="list-item-price">
+                                <div class="mobile-apr-price-wrapper">
+                                    <div class="price-display">
+                                        <div class="yousave-price">
+                                            <span class="amount">$1,000</span>
+                                            <span class="save-label">Potential Savings</span>
+                                        </div>
+                                        <div class="mobile-price">
+                                            <span class="price">$27,495</span>
+                                            <span class="price-label">Dealer Price*</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="price-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('show')">Price Details <svg viewBox="0 0 10 6"><path d="M0 0l5 6 5-6z"/></svg></div>
+                                <div class="price-breakup">
+                                    <div class="row"><div class="label">MSRP</div><div class="msrp">28,495</div></div>
+                                    <div class="row"><div class="label">Discount</div><div class="dealersavingsprice">-$1,000</div></div>
+                                    <div class="row border-top-dash"><div class="label">Dealer Price*</div><div class="finalprice">$27,495</div></div>
+                                </div>
+                                <div class="card-actions">
+                                    <div class="btn_3"><a href="/demo/taylor-vw-findlay/vdp">Check Availability</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vehicle 5 -->
+                    <div class="list-item">
+                        <div class="list-item-inner">
+                            <div class="image-block">
+                                <a href="/demo/taylor-vw-findlay/vdp"><img src="https://placehold.co/960x540/f4f4f4/001E50?text=2025+VW+Tiguan+SEL" alt="2025 Volkswagen Tiguan SEL" loading="lazy"></a>
+                                <div class="watchlist-icon"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
+                            </div>
+                            <div class="list-item-detail">
+                                <a class="vehicleCardTitle" href="/demo/taylor-vw-findlay/vdp">2025 Volkswagen Tiguan SEL</a>
+                                <div class="details-wrapper">
+                                    <div class="details"><div class="label">Ext. Color</div><div class="value">Opal White Pearl</div></div>
+                                    <div class="details"><div class="label">Drivetrain</div><div class="value">AWD</div></div>
+                                    <div class="details"><div class="label">Engine</div><div class="value">2.0L Turbo</div></div>
+                                    <div class="details"><div class="label">Stock #</div><div class="value">VW25-1005</div></div>
+                                </div>
+                            </div>
+                            <div class="list-item-price">
+                                <div class="mobile-apr-price-wrapper">
+                                    <div class="price-display">
+                                        <div class="yousave-price">
+                                            <span class="amount">$1,750</span>
+                                            <span class="save-label">Potential Savings</span>
+                                        </div>
+                                        <div class="mobile-price">
+                                            <span class="price">$38,600</span>
+                                            <span class="price-label">Dealer Price*</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="price-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('show')">Price Details <svg viewBox="0 0 10 6"><path d="M0 0l5 6 5-6z"/></svg></div>
+                                <div class="price-breakup">
+                                    <div class="row"><div class="label">MSRP</div><div class="msrp">40,350</div></div>
+                                    <div class="row"><div class="label">Discount</div><div class="dealersavingsprice">-$1,750</div></div>
+                                    <div class="row border-top-dash"><div class="label">Dealer Price*</div><div class="finalprice">$38,600</div></div>
+                                </div>
+                                <div class="card-actions">
+                                    <div class="btn_3"><a href="/demo/taylor-vw-findlay/vdp">Check Availability</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vehicle 6 -->
+                    <div class="list-item">
+                        <div class="list-item-inner">
+                            <div class="image-block">
+                                <a href="/demo/taylor-vw-findlay/vdp"><img src="https://placehold.co/960x540/f4f4f4/001E50?text=2025+VW+ID.4+Pro+S" alt="2025 Volkswagen ID.4 Pro S" loading="lazy"></a>
+                                <div class="watchlist-icon"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
+                            </div>
+                            <div class="list-item-detail">
+                                <a class="vehicleCardTitle" href="/demo/taylor-vw-findlay/vdp">2025 Volkswagen ID.4 Pro S</a>
+                                <div class="details-wrapper">
+                                    <div class="details"><div class="label">Ext. Color</div><div class="value">Atlantic Blue</div></div>
+                                    <div class="details"><div class="label">Drivetrain</div><div class="value">AWD</div></div>
+                                    <div class="details"><div class="label">Engine</div><div class="value">Dual Motor Electric</div></div>
+                                    <div class="details"><div class="label">Stock #</div><div class="value">VW25-1006</div></div>
+                                </div>
+                            </div>
+                            <div class="list-item-price">
+                                <div class="mobile-apr-price-wrapper">
+                                    <div class="price-display">
+                                        <div class="yousave-price">
+                                            <span class="amount">$2,500</span>
+                                            <span class="save-label">Potential Savings</span>
+                                        </div>
+                                        <div class="mobile-price">
+                                            <span class="price">$46,735</span>
+                                            <span class="price-label">Dealer Price*</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="price-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('show')">Price Details <svg viewBox="0 0 10 6"><path d="M0 0l5 6 5-6z"/></svg></div>
+                                <div class="price-breakup">
+                                    <div class="row"><div class="label">MSRP</div><div class="msrp">49,235</div></div>
+                                    <div class="row"><div class="label">Discount</div><div class="dealersavingsprice">-$2,500</div></div>
+                                    <div class="row border-top-dash"><div class="label">Dealer Price*</div><div class="finalprice">$46,735</div></div>
+                                </div>
+                                <div class="card-actions">
+                                    <div class="btn_3"><a href="/demo/taylor-vw-findlay/vdp">Check Availability</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vehicle 7 -->
+                    <div class="list-item">
+                        <div class="list-item-inner">
+                            <div class="image-block">
+                                <a href="/demo/taylor-vw-findlay/vdp"><img src="https://placehold.co/960x540/f4f4f4/001E50?text=2025+VW+GTI+SE" alt="2025 Volkswagen GTI SE" loading="lazy"></a>
+                                <div class="watchlist-icon"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
+                            </div>
+                            <div class="list-item-detail">
+                                <a class="vehicleCardTitle" href="/demo/taylor-vw-findlay/vdp">2025 Volkswagen GTI SE</a>
+                                <div class="details-wrapper">
+                                    <div class="details"><div class="label">Ext. Color</div><div class="value">Kings Red Metallic</div></div>
+                                    <div class="details"><div class="label">Drivetrain</div><div class="value">FWD</div></div>
+                                    <div class="details"><div class="label">Engine</div><div class="value">2.0L Turbo</div></div>
+                                    <div class="details"><div class="label">Stock #</div><div class="value">VW25-1007</div></div>
+                                </div>
+                            </div>
+                            <div class="list-item-price">
+                                <div class="mobile-apr-price-wrapper">
+                                    <div class="price-display">
+                                        <div class="yousave-price">
+                                            <span class="amount">$1,250</span>
+                                            <span class="save-label">Potential Savings</span>
+                                        </div>
+                                        <div class="mobile-price">
+                                            <span class="price">$33,375</span>
+                                            <span class="price-label">Dealer Price*</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="price-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('show')">Price Details <svg viewBox="0 0 10 6"><path d="M0 0l5 6 5-6z"/></svg></div>
+                                <div class="price-breakup">
+                                    <div class="row"><div class="label">MSRP</div><div class="msrp">34,625</div></div>
+                                    <div class="row"><div class="label">Discount</div><div class="dealersavingsprice">-$1,250</div></div>
+                                    <div class="row border-top-dash"><div class="label">Dealer Price*</div><div class="finalprice">$33,375</div></div>
+                                </div>
+                                <div class="card-actions">
+                                    <div class="btn_3"><a href="/demo/taylor-vw-findlay/vdp">Check Availability</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vehicle 8 -->
+                    <div class="list-item">
+                        <div class="list-item-inner">
+                            <div class="image-block">
+                                <a href="/demo/taylor-vw-findlay/vdp"><img src="https://placehold.co/960x540/f4f4f4/001E50?text=2025+VW+Atlas+Cross+Sport" alt="2025 Volkswagen Atlas Cross Sport SE" loading="lazy"></a>
+                                <div class="watchlist-icon"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
+                            </div>
+                            <div class="list-item-detail">
+                                <a class="vehicleCardTitle" href="/demo/taylor-vw-findlay/vdp">2025 Volkswagen Atlas Cross Sport SE</a>
+                                <div class="details-wrapper">
+                                    <div class="details"><div class="label">Ext. Color</div><div class="value">Platinum Gray</div></div>
+                                    <div class="details"><div class="label">Drivetrain</div><div class="value">AWD</div></div>
+                                    <div class="details"><div class="label">Engine</div><div class="value">2.0L Turbo</div></div>
+                                    <div class="details"><div class="label">Stock #</div><div class="value">VW25-1008</div></div>
+                                </div>
+                            </div>
+                            <div class="list-item-price">
+                                <div class="mobile-apr-price-wrapper">
+                                    <div class="price-display">
+                                        <div class="yousave-price">
+                                            <span class="amount">$1,500</span>
+                                            <span class="save-label">Potential Savings</span>
+                                        </div>
+                                        <div class="mobile-price">
+                                            <span class="price">$38,175</span>
+                                            <span class="price-label">Dealer Price*</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="price-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('show')">Price Details <svg viewBox="0 0 10 6"><path d="M0 0l5 6 5-6z"/></svg></div>
+                                <div class="price-breakup">
+                                    <div class="row"><div class="label">MSRP</div><div class="msrp">39,675</div></div>
+                                    <div class="row"><div class="label">Discount</div><div class="dealersavingsprice">-$1,500</div></div>
+                                    <div class="row border-top-dash"><div class="label">Dealer Price*</div><div class="finalprice">$38,175</div></div>
+                                </div>
+                                <div class="card-actions">
+                                    <div class="btn_3"><a href="/demo/taylor-vw-findlay/vdp">Check Availability</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vehicle 9 -->
+                    <div class="list-item">
+                        <div class="list-item-inner">
+                            <div class="image-block">
+                                <a href="/demo/taylor-vw-findlay/vdp"><img src="https://placehold.co/960x540/f4f4f4/001E50?text=2025+VW+Tiguan+S" alt="2025 Volkswagen Tiguan S" loading="lazy"></a>
+                                <div class="watchlist-icon"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
+                            </div>
+                            <div class="list-item-detail">
+                                <a class="vehicleCardTitle" href="/demo/taylor-vw-findlay/vdp">2025 Volkswagen Tiguan S</a>
+                                <div class="details-wrapper">
+                                    <div class="details"><div class="label">Ext. Color</div><div class="value">Pure White</div></div>
+                                    <div class="details"><div class="label">Drivetrain</div><div class="value">FWD</div></div>
+                                    <div class="details"><div class="label">Engine</div><div class="value">2.0L Turbo</div></div>
+                                    <div class="details"><div class="label">Stock #</div><div class="value">VW25-1009</div></div>
+                                </div>
+                            </div>
+                            <div class="list-item-price">
+                                <div class="mobile-apr-price-wrapper">
+                                    <div class="price-display">
+                                        <div class="yousave-price">
+                                            <span class="amount">$1,200</span>
+                                            <span class="save-label">Potential Savings</span>
+                                        </div>
+                                        <div class="mobile-price">
+                                            <span class="price">$31,150</span>
+                                            <span class="price-label">Dealer Price*</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="price-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('show')">Price Details <svg viewBox="0 0 10 6"><path d="M0 0l5 6 5-6z"/></svg></div>
+                                <div class="price-breakup">
+                                    <div class="row"><div class="label">MSRP</div><div class="msrp">32,350</div></div>
+                                    <div class="row"><div class="label">Discount</div><div class="dealersavingsprice">-$1,200</div></div>
+                                    <div class="row border-top-dash"><div class="label">Dealer Price*</div><div class="finalprice">$31,150</div></div>
+                                </div>
+                                <div class="card-actions">
+                                    <div class="btn_3"><a href="/demo/taylor-vw-findlay/vdp">Check Availability</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vehicle 10 -->
+                    <div class="list-item">
+                        <div class="list-item-inner">
+                            <div class="image-block">
+                                <a href="/demo/taylor-vw-findlay/vdp"><img src="https://placehold.co/960x540/f4f4f4/001E50?text=2025+VW+Jetta+SEL" alt="2025 Volkswagen Jetta SEL" loading="lazy"></a>
+                                <div class="watchlist-icon"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
+                            </div>
+                            <div class="list-item-detail">
+                                <a class="vehicleCardTitle" href="/demo/taylor-vw-findlay/vdp">2025 Volkswagen Jetta SEL</a>
+                                <div class="details-wrapper">
+                                    <div class="details"><div class="label">Ext. Color</div><div class="value">Deep Black Pearl</div></div>
+                                    <div class="details"><div class="label">Drivetrain</div><div class="value">FWD</div></div>
+                                    <div class="details"><div class="label">Engine</div><div class="value">1.5L Turbo</div></div>
+                                    <div class="details"><div class="label">Stock #</div><div class="value">VW25-1010</div></div>
+                                </div>
+                            </div>
+                            <div class="list-item-price">
+                                <div class="mobile-apr-price-wrapper">
+                                    <div class="price-display">
+                                        <div class="yousave-price">
+                                            <span class="amount">$1,000</span>
+                                            <span class="save-label">Potential Savings</span>
+                                        </div>
+                                        <div class="mobile-price">
+                                            <span class="price">$26,990</span>
+                                            <span class="price-label">Dealer Price*</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="price-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('show')">Price Details <svg viewBox="0 0 10 6"><path d="M0 0l5 6 5-6z"/></svg></div>
+                                <div class="price-breakup">
+                                    <div class="row"><div class="label">MSRP</div><div class="msrp">27,990</div></div>
+                                    <div class="row"><div class="label">Discount</div><div class="dealersavingsprice">-$1,000</div></div>
+                                    <div class="row border-top-dash"><div class="label">Dealer Price*</div><div class="finalprice">$26,990</div></div>
+                                </div>
+                                <div class="card-actions">
+                                    <div class="btn_3"><a href="/demo/taylor-vw-findlay/vdp">Check Availability</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vehicle 11 -->
+                    <div class="list-item">
+                        <div class="list-item-inner">
+                            <div class="image-block">
+                                <a href="/demo/taylor-vw-findlay/vdp"><img src="https://placehold.co/960x540/f4f4f4/001E50?text=2025+VW+Taos+S" alt="2025 Volkswagen Taos S" loading="lazy"></a>
+                                <div class="watchlist-icon"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
+                            </div>
+                            <div class="list-item-detail">
+                                <a class="vehicleCardTitle" href="/demo/taylor-vw-findlay/vdp">2025 Volkswagen Taos S</a>
+                                <div class="details-wrapper">
+                                    <div class="details"><div class="label">Ext. Color</div><div class="value">Pure White</div></div>
+                                    <div class="details"><div class="label">Drivetrain</div><div class="value">FWD</div></div>
+                                    <div class="details"><div class="label">Engine</div><div class="value">1.5L Turbo</div></div>
+                                    <div class="details"><div class="label">Stock #</div><div class="value">VW25-1011</div></div>
+                                </div>
+                            </div>
+                            <div class="list-item-price">
+                                <div class="mobile-apr-price-wrapper">
+                                    <div class="price-display">
+                                        <div class="yousave-price">
+                                            <span class="amount">$750</span>
+                                            <span class="save-label">Potential Savings</span>
+                                        </div>
+                                        <div class="mobile-price">
+                                            <span class="price">$24,245</span>
+                                            <span class="price-label">Dealer Price*</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="price-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('show')">Price Details <svg viewBox="0 0 10 6"><path d="M0 0l5 6 5-6z"/></svg></div>
+                                <div class="price-breakup">
+                                    <div class="row"><div class="label">MSRP</div><div class="msrp">24,995</div></div>
+                                    <div class="row"><div class="label">Discount</div><div class="dealersavingsprice">-$750</div></div>
+                                    <div class="row border-top-dash"><div class="label">Dealer Price*</div><div class="finalprice">$24,245</div></div>
+                                </div>
+                                <div class="card-actions">
+                                    <div class="btn_3"><a href="/demo/taylor-vw-findlay/vdp">Check Availability</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vehicle 12 -->
+                    <div class="list-item">
+                        <div class="list-item-inner">
+                            <div class="image-block">
+                                <a href="/demo/taylor-vw-findlay/vdp"><img src="https://placehold.co/960x540/f4f4f4/001E50?text=2024+VW+Atlas+SEL+Premium" alt="2024 Volkswagen Atlas SEL Premium" loading="lazy"></a>
+                                <div class="watchlist-icon"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
+                            </div>
+                            <div class="list-item-detail">
+                                <a class="vehicleCardTitle" href="/demo/taylor-vw-findlay/vdp">2024 Volkswagen Atlas SEL Premium</a>
+                                <div class="details-wrapper">
+                                    <div class="details"><div class="label">Ext. Color</div><div class="value">Pomelo Yellow</div></div>
+                                    <div class="details"><div class="label">Drivetrain</div><div class="value">AWD</div></div>
+                                    <div class="details"><div class="label">Engine</div><div class="value">2.0L Turbo</div></div>
+                                    <div class="details"><div class="label">Stock #</div><div class="value">VW24-0912</div></div>
+                                </div>
+                            </div>
+                            <div class="list-item-price">
+                                <div class="mobile-apr-price-wrapper">
+                                    <div class="price-display">
+                                        <div class="yousave-price">
+                                            <span class="amount">$4,500</span>
+                                            <span class="save-label">Potential Savings</span>
+                                        </div>
+                                        <div class="mobile-price">
+                                            <span class="price">$50,075</span>
+                                            <span class="price-label">Dealer Price*</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="price-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('show')">Price Details <svg viewBox="0 0 10 6"><path d="M0 0l5 6 5-6z"/></svg></div>
+                                <div class="price-breakup">
+                                    <div class="row"><div class="label">MSRP</div><div class="msrp">54,575</div></div>
+                                    <div class="row"><div class="label">Discount</div><div class="dealersavingsprice">-$4,500</div></div>
+                                    <div class="row border-top-dash"><div class="label">Dealer Price*</div><div class="finalprice">$50,075</div></div>
+                                </div>
+                                <div class="card-actions">
+                                    <div class="btn_3"><a href="/demo/taylor-vw-findlay/vdp">Check Availability</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination-wrapper">
+                    <ul class="pagination">
+                        <li class="disabled"><span>Prev</span></li>
+                        <li class="active"><span>1</span></li>
+                        <li><span>2</span></li>
+                        <li><span>3</span></li>
+                        <li><span>Next</span></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="site-footer">
+    <div class="ft-inner">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Inventory</h4>
+                <ul>
+                    <li><a href="/demo/taylor-vw-findlay/inventory?type=new">New Volkswagen</a></li>
+                    <li><a href="/demo/taylor-vw-findlay/inventory?type=used">Pre-Owned Vehicles</a></li>
+                    <li><a href="/demo/taylor-vw-findlay/inventory?type=certified">Certified Pre-Owned</a></li>
+                    <li><a href="/demo/taylor-vw-findlay/inventory?special=true">Current Specials</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Service</h4>
+                <ul>
+                    <li><a href="/demo/taylor-vw-findlay/service">Schedule Service</a></li>
+                    <li><a href="/demo/taylor-vw-findlay/service#specials">Service Specials</a></li>
+                    <li><a href="/demo/taylor-vw-findlay/service#parts">Order Parts</a></li>
+                    <li><a href="tel:5672509813">Call Service: (567) 250-9813</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Financing</h4>
+                <ul>
+                    <li><a href="/demo/taylor-vw-findlay/financing">Apply for Financing</a></li>
+                    <li><a href="/demo/taylor-vw-findlay/financing#calculator">Payment Calculator</a></li>
+                    <li><a href="/demo/taylor-vw-findlay/financing#trade">Value Your Trade</a></li>
+                    <li><a href="/demo/taylor-vw-findlay/financing#credit">VW Credit</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>About Us</h4>
+                <ul>
+                    <li><a href="/demo/taylor-vw-findlay/contact">Contact Us</a></li>
+                    <li><a href="/demo/taylor-vw-findlay/contact#hours">Hours &amp; Directions</a></li>
+                    <li><a href="/demo/taylor-auto">Taylor Automotive Family</a></li>
+                    <li><a href="tel:5672509813">Call Sales: (567) 250-9813</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Taylor Volkswagen of Findlay &mdash; 11799 County Rd 99, Findlay, OH 45840 &nbsp;&bull;&nbsp; Part of the <a href="/demo/taylor-auto">Taylor Automotive Family</a> &nbsp;&bull;&nbsp; &copy; 2026 All Rights Reserved &nbsp;&bull;&nbsp; Powered by <a href="https://www.savvydealer.com" target="_blank" rel="noopener">SavvyDealer</a></p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

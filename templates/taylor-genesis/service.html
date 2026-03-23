@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Genesis Concierge Service | Taylor Genesis of Perrysburg | Luxury Genesis Dealer OH</title>
+  <meta name="description" content="Experience Genesis Concierge Service at Taylor Genesis of Perrysburg. Complimentary valet pickup and delivery, scheduled maintenance, and certified Genesis technicians. Serving Toledo, Maumee, and Northwest Ohio.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --genesis-black: #111111;
+      --genesis-copper: #B87333;
+      --genesis-white: #FFFFFF;
+      --genesis-warmgray: #8A8A8A;
+      --genesis-dark2: #1A1A1A;
+      --genesis-dark3: #0D0D0D;
+      --font-display: 'Cormorant Garamond', 'Georgia', serif;
+      --font-body: 'DM Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); color: var(--genesis-white); background: var(--genesis-black); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; height: auto; display: block; }
+
+    .container { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+
+    /* ========== TOP BAR ========== */
+    .top-bar { background: var(--genesis-dark3); border-bottom: 1px solid rgba(255,255,255,0.06); padding: 10px 0; font-size: 12px; letter-spacing: 1px; }
+    .top-bar .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+    .top-bar-phones { display: flex; gap: 28px; flex-wrap: wrap; }
+    .top-bar-phones a { color: rgba(255,255,255,0.7); font-weight: 400; transition: color 0.3s; font-size: 12px; }
+    .top-bar-phones a:hover { color: var(--genesis-copper); }
+    .top-bar-phones span { color: rgba(255,255,255,0.4); text-transform: uppercase; font-size: 10px; letter-spacing: 2px; margin-right: 6px; }
+    .top-bar-address { color: rgba(255,255,255,0.5); font-size: 12px; }
+    .top-bar-address a { color: rgba(255,255,255,0.5); transition: color 0.3s; }
+    .top-bar-address a:hover { color: var(--genesis-copper); }
+
+    /* ========== HEADER ========== */
+    .site-header { background: var(--genesis-black); padding: 20px 0; position: sticky; top: 0; z-index: 100; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .site-header .container { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .header-logo { flex-shrink: 0; display: flex; align-items: center; gap: 16px; }
+    .header-logo-wings { width: 44px; height: 44px; }
+    .header-logo-text { font-family: var(--font-body); font-size: 16px; font-weight: 500; letter-spacing: 10px; text-transform: uppercase; color: var(--genesis-white); }
+    .header-nav { display: flex; align-items: center; gap: 4px; }
+    .header-nav a { color: rgba(255,255,255,0.7); font-size: 12px; font-weight: 400; padding: 8px 16px; letter-spacing: 2px; text-transform: uppercase; transition: color 0.3s; }
+    .header-nav a:hover { color: var(--genesis-copper); }
+    .header-nav a.active { color: var(--genesis-copper); }
+
+    /* ========== PAGE HERO ========== */
+    .page-hero {
+      padding: 100px 0 80px;
+      text-align: center;
+      background: var(--genesis-black);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(ellipse at 50% 80%, rgba(184,115,51,0.05) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .page-hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(184,115,51,0.3), transparent);
+    }
+
+    .page-hero-label {
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 6px;
+      color: var(--genesis-copper);
+      margin-bottom: 16px;
+    }
+
+    .page-hero h1 {
+      font-family: var(--font-display);
+      font-size: 56px;
+      font-weight: 300;
+      letter-spacing: 5px;
+      color: var(--genesis-white);
+      margin-bottom: 20px;
+    }
+
+    .page-hero p {
+      font-size: 15px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.45);
+      max-width: 580px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+
+    /* ========== VALET SERVICE ========== */
+    .valet-section {
+      padding: 100px 0;
+      background: var(--genesis-dark2);
+      position: relative;
+    }
+
+    .valet-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .valet-content .section-label {
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 6px;
+      color: var(--genesis-copper);
+      margin-bottom: 16px;
+    }
+
+    .valet-content h2 {
+      font-family: var(--font-display);
+      font-size: 40px;
+      font-weight: 300;
+      letter-spacing: 3px;
+      color: var(--genesis-white);
+      margin-bottom: 12px;
+    }
+
+    .divider {
+      width: 60px;
+      height: 1px;
+      background: var(--genesis-copper);
+      margin: 24px 0;
+    }
+
+    .valet-content p {
+      font-size: 15px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+
+    .valet-steps {
+      margin-top: 40px;
+      list-style: none;
+      counter-reset: steps;
+    }
+
+    .valet-steps li {
+      counter-increment: steps;
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .valet-steps li::before {
+      content: counter(steps, decimal-leading-zero);
+      font-family: var(--font-display);
+      font-size: 32px;
+      font-weight: 300;
+      color: var(--genesis-copper);
+      line-height: 1;
+      flex-shrink: 0;
+      min-width: 40px;
+    }
+
+    .valet-step-text h4 {
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--genesis-white);
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+
+    .valet-step-text p {
+      font-size: 13px;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 0;
+    }
+
+    .valet-image {
+      aspect-ratio: 4/5;
+      background: var(--genesis-black);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .valet-image img { width: 100%; height: 100%; object-fit: cover; }
+
+    .valet-image::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border: 1px solid rgba(184,115,51,0.12);
+    }
+
+    /* ========== SERVICE TYPES ========== */
+    .service-types {
+      padding: 100px 0;
+      background: var(--genesis-black);
+    }
+
+    .service-types .section-header {
+      text-align: center;
+      margin-bottom: 72px;
+    }
+
+    .section-label-centered {
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 6px;
+      color: var(--genesis-copper);
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: 48px;
+      font-weight: 300;
+      letter-spacing: 4px;
+      color: var(--genesis-white);
+    }
+
+    .divider-center {
+      width: 60px;
+      height: 1px;
+      background: var(--genesis-copper);
+      margin: 24px auto;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: rgba(255,255,255,0.06);
+    }
+
+    .service-card {
+      background: var(--genesis-black);
+      padding: 56px 40px;
+      transition: background 0.4s;
+    }
+
+    .service-card:hover { background: var(--genesis-dark2); }
+
+    .service-card-icon {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 24px;
+    }
+
+    .service-card-icon svg {
+      width: 100%;
+      height: 100%;
+      stroke: var(--genesis-copper);
+      fill: none;
+      stroke-width: 1;
+    }
+
+    .service-card h3 {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 400;
+      letter-spacing: 2px;
+      color: var(--genesis-white);
+      margin-bottom: 12px;
+    }
+
+    .service-card p {
+      font-size: 13px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.4);
+      line-height: 1.7;
+    }
+
+    /* ========== SCHEDULE FORM ========== */
+    .schedule-section {
+      padding: 100px 0;
+      background: var(--genesis-dark2);
+    }
+
+    .schedule-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .schedule-inner .section-label-centered { margin-bottom: 16px; }
+
+    .schedule-inner h2 {
+      font-family: var(--font-display);
+      font-size: 40px;
+      font-weight: 300;
+      letter-spacing: 3px;
+      color: var(--genesis-white);
+      margin-bottom: 12px;
+    }
+
+    .schedule-inner > p {
+      font-size: 15px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.8;
+      margin-bottom: 48px;
+    }
+
+    .schedule-form {
+      text-align: left;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .form-group { margin-bottom: 0; }
+
+    .form-group label {
+      display: block;
+      font-size: 10px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 8px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 14px 16px;
+      background: var(--genesis-black);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: var(--genesis-white);
+      font-family: var(--font-body);
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.3s;
+      -webkit-appearance: none;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--genesis-copper);
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: rgba(255,255,255,0.25);
+    }
+
+    .form-group select option {
+      background: var(--genesis-black);
+      color: var(--genesis-white);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .form-full {
+      margin-bottom: 16px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 16px 48px;
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      border: 1px solid transparent;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: var(--genesis-copper);
+      color: var(--genesis-black);
+      border-color: var(--genesis-copper);
+    }
+
+    .btn-primary:hover {
+      background: transparent;
+      color: var(--genesis-copper);
+    }
+
+    .form-submit {
+      text-align: center;
+      margin-top: 32px;
+    }
+
+    /* ========== SERVICE HOURS ========== */
+    .hours-section {
+      padding: 80px 0;
+      background: var(--genesis-black);
+    }
+
+    .hours-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: rgba(255,255,255,0.06);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .hours-block {
+      background: var(--genesis-black);
+      padding: 48px 40px;
+      text-align: center;
+    }
+
+    .hours-block h3 {
+      font-family: var(--font-body);
+      font-size: 10px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      color: var(--genesis-copper);
+      margin-bottom: 24px;
+    }
+
+    .hours-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      font-size: 13px;
+    }
+
+    .hours-day { color: rgba(255,255,255,0.4); font-weight: 300; }
+    .hours-time { color: var(--genesis-white); font-weight: 400; }
+
+    .hours-phone {
+      margin-top: 24px;
+      text-align: center;
+    }
+
+    .hours-phone a {
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 2px;
+      color: var(--genesis-copper);
+      transition: opacity 0.3s;
+    }
+
+    .hours-phone a:hover { opacity: 0.7; }
+
+    /* ========== FOOTER ========== */
+    .site-footer { background: var(--genesis-dark3); color: rgba(255,255,255,0.5); padding: 80px 0 0; border-top: 1px solid rgba(255,255,255,0.06); }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; padding-bottom: 60px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .footer-brand .footer-logo-text { font-family: var(--font-body); font-size: 14px; font-weight: 500; letter-spacing: 8px; text-transform: uppercase; color: var(--genesis-white); margin-bottom: 20px; }
+    .footer-brand p { font-size: 14px; line-height: 1.8; color: rgba(255,255,255,0.4); margin-bottom: 24px; }
+    .footer-brand .footer-group { font-size: 12px; letter-spacing: 1px; color: rgba(255,255,255,0.3); }
+    .footer-brand .footer-group a { color: var(--genesis-copper); transition: opacity 0.3s; }
+    .footer-brand .footer-group a:hover { opacity: 0.7; }
+    .footer-col h4 { font-family: var(--font-body); font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: 4px; color: var(--genesis-copper); margin-bottom: 24px; }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 14px; }
+    .footer-col a { color: rgba(255,255,255,0.4); font-size: 13px; font-weight: 300; letter-spacing: 0.5px; transition: color 0.3s; }
+    .footer-col a:hover { color: var(--genesis-white); }
+    .footer-bottom { padding: 28px 0; text-align: center; font-size: 12px; color: rgba(255,255,255,0.25); }
+    .footer-bottom a { color: var(--genesis-copper); font-weight: 400; transition: opacity 0.3s; }
+    .footer-bottom a:hover { opacity: 0.7; }
+    .footer-cities { margin-top: 8px; font-size: 11px; color: rgba(255,255,255,0.2); }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 1023px) {
+      .header-nav { display: none; }
+      .page-hero h1 { font-size: 40px; }
+      .valet-inner { grid-template-columns: 1fr; gap: 40px; }
+      .valet-image { aspect-ratio: 16/9; }
+      .service-grid { grid-template-columns: repeat(2, 1fr); }
+      .hours-inner { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: repeat(2, 1fr); }
+      .section-title { font-size: 36px; }
+    }
+
+    @media (max-width: 640px) {
+      .top-bar .container { flex-direction: column; text-align: center; }
+      .top-bar-phones { justify-content: center; }
+      .site-header .container { flex-wrap: wrap; justify-content: center; }
+      .header-logo-text { font-size: 13px; letter-spacing: 6px; }
+      .page-hero { padding: 60px 0; }
+      .page-hero h1 { font-size: 28px; letter-spacing: 2px; }
+      .valet-section, .service-types, .schedule-section { padding: 60px 0; }
+      .service-grid { grid-template-columns: 1fr; }
+      .service-card { padding: 40px 24px; }
+      .form-row { grid-template-columns: 1fr; }
+      .valet-content h2 { font-size: 28px; }
+      .schedule-inner h2 { font-size: 28px; }
+      .section-title { font-size: 28px; letter-spacing: 2px; }
+      .footer-grid { grid-template-columns: 1fr; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== TOP BAR ==================== -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-phones">
+        <a href="tel:4199318000"><span>Sales</span> (419) 931-8000</a>
+        <a href="tel:8882737118"><span>Service</span> (888) 273-7118</a>
+        <a href="tel:8669461385"><span>Parts</span> (866) 946-1385</a>
+      </div>
+      <div class="top-bar-address">
+        <a href="https://maps.google.com/?q=12681+Eckel+Junction+Rd+Perrysburg+OH+43551" target="_blank" rel="noopener">12681 Eckel Junction Rd, Perrysburg, OH 43551</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="site-header">
+    <div class="container">
+      <a href="/demo/taylor-genesis" class="header-logo">
+        <svg class="header-logo-wings" viewBox="0 0 80 80" fill="none"><path d="M40 16 C28 24, 8 32, 4 40 C8 40, 28 38, 40 34" stroke="#B87333" stroke-width="1.2" fill="none"/><path d="M40 16 C52 24, 72 32, 76 40 C72 40, 52 38, 40 34" stroke="#B87333" stroke-width="1.2" fill="none"/><path d="M40 22 C30 28, 14 34, 10 40 C14 39, 30 37, 40 34" stroke="#B87333" stroke-width="0.8" fill="none" opacity="0.6"/><path d="M40 22 C50 28, 66 34, 70 40 C66 39, 50 37, 40 34" stroke="#B87333" stroke-width="0.8" fill="none" opacity="0.6"/><line x1="40" y1="34" x2="40" y2="64" stroke="#B87333" stroke-width="1"/><circle cx="40" cy="34" r="3" stroke="#B87333" stroke-width="1" fill="none"/></svg>
+        <span class="header-logo-text">Genesis</span>
+      </a>
+      <nav class="header-nav">
+        <a href="/demo/taylor-genesis/inventory">Inventory</a>
+        <a href="/demo/taylor-genesis/service" class="active">Service</a>
+        <a href="/demo/taylor-genesis/financing">Finance</a>
+        <a href="/demo/taylor-genesis/contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==================== PAGE HERO ==================== -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero-label">Genesis Concierge Service</div>
+      <h1>Service Without Compromise</h1>
+      <p>Your Genesis deserves extraordinary care. Our certified technicians, complimentary valet service, and personal concierge ensure every visit exceeds your expectations.</p>
+    </div>
+  </section>
+
+  <!-- ==================== VALET SERVICE ==================== -->
+  <section class="valet-section" id="valet">
+    <div class="container">
+      <div class="valet-inner">
+        <div class="valet-content">
+          <div class="section-label">Complimentary</div>
+          <h2>Valet Service</h2>
+          <div class="divider"></div>
+          <p>When your Genesis needs attention, you should not have to rearrange your day. Our complimentary valet service picks up your vehicle at your home or office, provides a Genesis loaner, and returns your vehicle when service is complete.</p>
+          <p>This is not a perk. It is the Genesis standard.</p>
+
+          <ol class="valet-steps">
+            <li>
+              <div class="valet-step-text">
+                <h4>Schedule Your Service</h4>
+                <p>Call your concierge or book online. We work around your schedule.</p>
+              </div>
+            </li>
+            <li>
+              <div class="valet-step-text">
+                <h4>We Come to You</h4>
+                <p>A Genesis valet picks up your vehicle and leaves a loaner for your use.</p>
+              </div>
+            </li>
+            <li>
+              <div class="valet-step-text">
+                <h4>Expert Care</h4>
+                <p>Certified Genesis technicians service your vehicle with genuine parts.</p>
+              </div>
+            </li>
+            <li>
+              <div class="valet-step-text">
+                <h4>Returned to You</h4>
+                <p>Your Genesis is returned cleaned, serviced, and ready for the road.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+        <div class="valet-image">
+          <img src="https://placehold.co/640x800/111111/B87333?text=Genesis+Valet+Service" alt="Genesis Valet Service" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SERVICE TYPES ==================== -->
+  <section class="service-types">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label-centered">What We Offer</div>
+        <h2 class="section-title">Service Excellence</h2>
+        <div class="divider-center"></div>
+      </div>
+
+      <div class="service-grid">
+        <div class="service-card">
+          <div class="service-card-icon">
+            <svg viewBox="0 0 48 48" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="24" cy="24" r="20"/>
+              <path d="M24 14v10l7 7"/>
+            </svg>
+          </div>
+          <h3>Complimentary Maintenance</h3>
+          <p>3 years or 36,000 miles of scheduled maintenance at no cost. Oil changes, tire rotations, multi-point inspections -- all included with your Genesis ownership.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card-icon">
+            <svg viewBox="0 0 48 48" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="6" y="20" width="36" height="20" rx="2"/>
+              <circle cx="16" cy="40" r="4"/>
+              <circle cx="36" cy="40" r="4"/>
+              <path d="M6 28h36"/>
+              <path d="M10 20l4-10h12l4 10"/>
+            </svg>
+          </div>
+          <h3>Brake Service</h3>
+          <p>Precision brake inspections, pad replacements, and rotor resurfacing. We use only genuine Genesis parts to maintain your vehicle's performance standards.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card-icon">
+            <svg viewBox="0 0 48 48" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="24" cy="24" r="16"/>
+              <circle cx="24" cy="24" r="6"/>
+              <line x1="24" y1="4" x2="24" y2="8"/>
+              <line x1="24" y1="40" x2="24" y2="44"/>
+              <line x1="4" y1="24" x2="8" y2="24"/>
+              <line x1="40" y1="24" x2="44" y2="24"/>
+            </svg>
+          </div>
+          <h3>Tire Center</h3>
+          <p>Tire rotation, balancing, alignment, and replacement. We carry a full selection of premium tires matched to your Genesis model specifications.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card-icon">
+            <svg viewBox="0 0 48 48" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 40V16l16-8 16 8v24"/>
+              <path d="M20 40v-12h8v12"/>
+              <line x1="24" y1="8" x2="24" y2="16"/>
+            </svg>
+          </div>
+          <h3>Multi-Point Inspection</h3>
+          <p>Comprehensive vehicle health check covering all major systems. Fluid levels, filters, belts, battery, and a complete digital report delivered to your phone.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card-icon">
+            <svg viewBox="0 0 48 48" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 38l8-12 8 8 8-16 10 14"/>
+              <rect x="6" y="8" width="36" height="30" rx="2"/>
+            </svg>
+          </div>
+          <h3>EV & Hybrid Service</h3>
+          <p>Specialized service for Electrified G80, Electrified GV70, and GV60 models. Battery diagnostics, charging system checks, and electric drivetrain maintenance.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card-icon">
+            <svg viewBox="0 0 48 48" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M24 4l6 12h14l-11 8 4 14-13-9-13 9 4-14L4 16h14z"/>
+            </svg>
+          </div>
+          <h3>Collision Center</h3>
+          <p>Genesis-certified collision repair restoring your vehicle to factory specifications. We work directly with your insurance for a seamless experience.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SCHEDULE SERVICE ==================== -->
+  <section class="schedule-section">
+    <div class="container">
+      <div class="schedule-inner">
+        <div class="section-label-centered">Book Now</div>
+        <h2>Schedule Service</h2>
+        <div class="divider-center"></div>
+        <p>Request a service appointment and your Genesis concierge will confirm the details. Valet pickup available for all service appointments.</p>
+
+        <form class="schedule-form" onsubmit="return false;">
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" placeholder="First name">
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" placeholder="Last name">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" placeholder="email@example.com">
+            </div>
+            <div class="form-group">
+              <label>Phone</label>
+              <input type="tel" placeholder="(419) 000-0000">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Vehicle Model</label>
+              <select>
+                <option>Select Model</option>
+                <option>G70</option>
+                <option>G80</option>
+                <option>G90</option>
+                <option>GV60</option>
+                <option>GV70</option>
+                <option>GV80</option>
+                <option>GV80 Coupe</option>
+                <option>Electrified GV70</option>
+                <option>Electrified G80</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Preferred Date</label>
+              <input type="date">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Service Type</label>
+              <select>
+                <option>Select Service</option>
+                <option>Scheduled Maintenance</option>
+                <option>Oil Change</option>
+                <option>Tire Service</option>
+                <option>Brake Service</option>
+                <option>EV/Hybrid Service</option>
+                <option>Collision Repair</option>
+                <option>Recall/Campaign</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Valet Service</label>
+              <select>
+                <option>Yes -- Pick up my vehicle</option>
+                <option>No -- I will bring it in</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-full">
+            <div class="form-group">
+              <label>Additional Details</label>
+              <textarea placeholder="Describe any symptoms, concerns, or special requests..."></textarea>
+            </div>
+          </div>
+          <div class="form-submit">
+            <button type="submit" class="btn btn-primary">Request Appointment</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SERVICE HOURS ==================== -->
+  <section class="hours-section">
+    <div class="container">
+      <div class="hours-inner">
+        <div class="hours-block">
+          <h3>Service Hours</h3>
+          <div class="hours-row">
+            <span class="hours-day">Monday - Friday</span>
+            <span class="hours-time">7:30am - 6:00pm</span>
+          </div>
+          <div class="hours-row">
+            <span class="hours-day">Saturday</span>
+            <span class="hours-time">8:00am - 4:00pm</span>
+          </div>
+          <div class="hours-row">
+            <span class="hours-day">Sunday</span>
+            <span class="hours-time">Closed</span>
+          </div>
+          <div class="hours-phone">
+            <a href="tel:8882737118">Call Service: (888) 273-7118</a>
+          </div>
+        </div>
+        <div class="hours-block">
+          <h3>Parts Hours</h3>
+          <div class="hours-row">
+            <span class="hours-day">Monday - Friday</span>
+            <span class="hours-time">7:30am - 6:00pm</span>
+          </div>
+          <div class="hours-row">
+            <span class="hours-day">Saturday</span>
+            <span class="hours-time">8:00am - 4:00pm</span>
+          </div>
+          <div class="hours-row">
+            <span class="hours-day">Sunday</span>
+            <span class="hours-time">Closed</span>
+          </div>
+          <div class="hours-phone">
+            <a href="tel:8669461385">Call Parts: (866) 946-1385</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo-text">Genesis</div>
+          <p>Taylor Genesis of Perrysburg<br>12681 Eckel Junction Rd<br>Perrysburg, OH 43551</p>
+          <div class="footer-group">Part of the <a href="/demo/taylor-auto">Taylor Automotive Family</a></div>
+        </div>
+        <div class="footer-col">
+          <h4>Inventory</h4>
+          <ul>
+            <li><a href="/demo/taylor-genesis/inventory">New Vehicles</a></li>
+            <li><a href="/demo/taylor-genesis/inventory?type=certified">Certified Pre-Owned</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Ownership</h4>
+          <ul>
+            <li><a href="/demo/taylor-genesis/service">Schedule Service</a></li>
+            <li><a href="/demo/taylor-genesis/financing">Genesis Finance</a></li>
+            <li><a href="/demo/taylor-genesis/contact">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Sister Stores</h4>
+          <ul>
+            <li><a href="/demo/taylor-hyundai-perrysburg">Taylor Hyundai Perrysburg</a></li>
+            <li><a href="/demo/taylor-hyundai-toledo">Taylor Hyundai Toledo</a></li>
+            <li><a href="/demo/taylor-kia-toledo">Taylor Kia Toledo</a></li>
+            <li><a href="/demo/taylor-kia-findlay">Taylor Kia Findlay</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Taylor Genesis of Perrysburg &mdash; 12681 Eckel Junction Rd, Perrysburg, OH 43551 &nbsp;&bull;&nbsp; &copy; 2026 All Rights Reserved &nbsp;&bull;&nbsp; Powered by <a href="https://www.savvydealer.com" target="_blank" rel="noopener">SavvyDealer</a></p>
+        <div class="footer-cities">Proudly serving Toledo, Maumee, Bowling Green, Sylvania, Findlay, and all of Northwest Ohio</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

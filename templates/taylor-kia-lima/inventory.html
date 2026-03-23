@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0" />
+    <title>New Kia Inventory | Taylor Kia of Lima | Lima, OH</title>
+    <meta name="description" content="Browse new Kia vehicles at Taylor Kia of Lima. Shop Telluride, Sportage, EV6, EV9, Sorento, Forte, K5, Seltos, Soul, and Carnival. Competitive pricing in Lima, OH." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bodyfont: 'Inter', 'Kia Signature Fixed', sans-serif;
+            --headerbg: #05141F;
+            --footerbg: #1a1d24;
+            --darkgrey: #393436;
+            --bodycolor: #19183C;
+            --secondarycolor: #BB162C;
+            --linktextcolor: #0678bc;
+            --headingcolor: #212529;
+            --blackcolor: #000000;
+            --whitecolor: #fff;
+            --greycolor: #808080;
+            --savingsgreen: #30770f;
+            --transition: all 0.4s;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; }
+        body { margin: 0; font-family: var(--bodyfont); color: var(--bodycolor); font-size: 16px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+        a { color: var(--linktextcolor); text-decoration: none; }
+        a:hover { color: var(--blackcolor); }
+        img { max-width: 100%; height: auto; }
+        .container { margin: 0 auto; padding: 0 15px; }
+        @media(min-width:768px) { .container { width: 750px; } }
+        @media(min-width:992px) { .container { width: 970px; } }
+        @media(min-width:1200px) { .container { width: 1170px; } }
+        @media(min-width:1430px) { .container { width: 1400px; } }
+        @media(min-width:1630px) { .container { width: 1630px; } }
+
+        /* ========== TOP BAR ========== */
+        .top-bar {
+            background: var(--headerbg);
+            color: #fff;
+            padding: 8px 0;
+            font-size: 13px;
+        }
+        .top-bar .tb-inner {
+            max-width: 1630px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .top-bar-phones { display: flex; gap: 20px; flex-wrap: wrap; }
+        .top-bar-phones a { color: #fff; font-weight: 500; transition: opacity 0.2s; }
+        .top-bar-phones a:hover { opacity: 0.85; }
+        .top-bar-phones span { color: rgba(255,255,255,0.6); margin-right: 4px; font-weight: 400; }
+        .top-bar-address { color: rgba(255,255,255,0.85); }
+        .top-bar-address a { color: #fff; }
+        .top-bar-address a:hover { text-decoration: underline; }
+
+        /* ========== HEADER ========== */
+        .site-header {
+            background: #fff;
+            border-bottom: 1px solid #f0f0f0;
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+        }
+        .site-header .sh-inner {
+            max-width: 1630px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+        .header-logo { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+        .kia-logo-svg { height: 32px; width: auto; }
+        .dealer-name { font-size: 14px; font-weight: 700; color: #05141F; line-height: 1.2; white-space: nowrap; }
+        .dealer-name small { display: block; font-size: 11px; font-weight: 500; color: #8b919a; text-transform: uppercase; letter-spacing: 0.5px; }
+        .header-nav { display: flex; align-items: center; gap: 4px; }
+        .header-nav a { color: #05141F; font-size: 14px; font-weight: 600; padding: 8px 14px; border-radius: 6px; transition: background 0.2s, color 0.2s; }
+        .header-nav a:hover { background: rgba(187,22,44,0.06); color: var(--secondarycolor); }
+        .header-nav a.active { background: rgba(187,22,44,0.08); color: var(--secondarycolor); font-weight: 700; }
+
+        /* ========== BREADCRUMBS ========== */
+        .breadcrumbs { background: #f7f8fa; padding: 12px 0; border-bottom: 1px solid #eef0f3; font-size: 13px; }
+        .breadcrumbs .bc-inner { max-width: 1630px; margin: 0 auto; padding: 0 24px; }
+        .breadcrumbs a { color: var(--secondarycolor); font-weight: 500; }
+        .breadcrumbs a:hover { text-decoration: underline; }
+        .breadcrumbs span { color: #999; margin: 0 6px; }
+
+        /* ── SRP Layout ── */
+        .search-page-main { padding: 30px 0; background: rgb(40 40 40 / 5%); min-height: 80vh; }
+        .search-page-main .container { width: 100%; max-width: 1630px; }
+        .search-page-main .inner { display: flex; flex-wrap: wrap; }
+
+        /* Filter Panel */
+        .filter-panel { width: 21%; align-self: flex-start; background: #fff; border: 1px solid rgba(36,39,44,.1); box-shadow: 0 6px 10px rgba(0,0,0,.05); border-radius: 12px; padding: 24px 20px; position: sticky; top: 80px; }
+        .filter-panel .card-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid #eee; }
+        .filter-panel .cardtitle { font-size: 22px; font-weight: 700; margin: 0; }
+        .filter-panel .share-link { font-size: 13px; color: var(--linktextcolor); display: flex; align-items: center; gap: 6px; }
+        .filter-panel .share-link svg { width: 14px; height: 14px; fill: var(--linktextcolor); }
+
+        .searchform-main { margin-bottom: 16px; }
+        .searchform-main .form-field { display: flex; border: 1px solid #ddd; border-radius: 6px; overflow: hidden; }
+        .searchform-main input { flex: 1; padding: 10px 12px; border: none; outline: none; font-family: inherit; font-size: 14px; }
+        .searchform-main .search-btn { padding: 10px 14px; background: var(--secondarycolor); display: flex; align-items: center; cursor: pointer; }
+        .searchform-main .search-btn svg { width: 16px; height: 16px; fill: #fff; }
+
+        .reset-btn { margin-bottom: 16px; }
+        .reset-btn a { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 10px 16px; background: var(--secondarycolor); color: #fff; border: 1px solid var(--secondarycolor); border-radius: 6px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; transition: var(--transition); }
+        .reset-btn a:hover { background: transparent; color: var(--secondarycolor); }
+        .reset-btn a svg { width: 14px; height: 14px; fill: currentColor; }
+
+        .filter-item { border-bottom: 1px solid #eee; padding: 12px 0; }
+        .filter-item .title { font-size: 14px; font-weight: 700; text-transform: uppercase; cursor: pointer; display: flex; align-items: center; justify-content: space-between; }
+        .filter-item .title::after { content: ""; width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 5px solid var(--bodycolor); transition: transform 0.3s; }
+        .filter-item.open .title::after { transform: rotate(180deg); }
+        .filter-item .accordion-content { padding-top: 8px; }
+        .filter-item .accordion-content ul { list-style: none; padding: 0; margin: 0; }
+        .filter-item .accordion-content li { display: flex; align-items: center; justify-content: space-between; padding: 6px 0; font-size: 14px; cursor: pointer; transition: color 0.2s; }
+        .filter-item .accordion-content li:hover { color: var(--secondarycolor); }
+        .filter-item .accordion-content li.active { color: var(--secondarycolor); font-weight: 700; }
+        .filter-item .badge { background: #f0f0f0; color: var(--greycolor); font-size: 12px; padding: 2px 8px; border-radius: 10px; font-weight: 600; }
+
+        /* ── Results Area ── */
+        .filter-result-wrapper { width: calc(79% - 30px); margin: 0 0 0 30px; }
+
+        .inventory-detail { background: #fff; border: 1px solid rgba(36,39,44,.1); box-shadow: 0 6px 10px rgba(0,0,0,.05); border-radius: 12px; padding: 16px 24px; margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+        .inventory-detail .count { font-size: 20px; font-weight: 700; }
+        .inventory-detail .sort-by { display: flex; align-items: center; gap: 8px; font-size: 14px; }
+        .inventory-detail .sort-by select { padding: 8px 12px; border: 1px solid #ddd; border-radius: 6px; font-family: inherit; font-size: 14px; cursor: pointer; }
+        .filter-buttons { display: flex; gap: 8px; }
+        .filter-buttons div { padding: 8px; cursor: pointer; border-radius: 6px; transition: var(--transition); }
+        .filter-buttons div:hover, .filter-buttons div.active { background: var(--secondarycolor); }
+        .filter-buttons div:hover svg, .filter-buttons div.active svg { fill: #fff; }
+        .filter-buttons svg { width: 18px; height: 18px; fill: #666; display: block; }
+
+        .mobile-filter-btn { display: none; align-items: center; justify-content: center; gap: 8px; padding: 12px 20px; background: var(--secondarycolor); color: #fff; border: none; border-radius: 8px; font-family: inherit; font-size: 14px; font-weight: 700; cursor: pointer; margin-bottom: 16px; width: 100%; }
+        .mobile-filter-btn svg { width: 16px; height: 16px; fill: #fff; }
+
+        /* ── Vehicle Cards ── */
+        .list-wrapper { display: flex; flex-wrap: wrap; gap: 20px; }
+        .list-item { width: calc(25% - 15px); background: #fff; border: 1px solid rgba(36,39,44,.1); box-shadow: 0 6px 10px rgba(0,0,0,.05); border-radius: 12px; overflow: hidden; transition: box-shadow 0.3s; }
+        .list-item:hover { box-shadow: 0 8px 24px rgba(0,0,0,.12); }
+        .list-item-inner { display: flex; flex-direction: column; height: 100%; }
+        .list-item-inner > div { width: 100%; }
+
+        .list-item .image-block { position: relative; overflow: hidden; background: #f4f4f4; }
+        .list-item .image-block img { width: 100%; aspect-ratio: 4/3; object-fit: contain; border-radius: 12px 12px 0 0; transition: transform 0.4s; padding: 12px; }
+        .list-item:hover .image-block img { transform: scale(1.03); }
+
+        .watchlist-icon { position: absolute; bottom: 10px; right: 10px; width: 32px; height: 32px; background: rgba(255,255,255,0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: var(--transition); }
+        .watchlist-icon:hover { background: var(--secondarycolor); }
+        .watchlist-icon:hover svg { fill: #fff; }
+        .watchlist-icon svg { width: 16px; height: 16px; fill: #999; }
+
+        .list-item-detail { padding: 15px 15px 0; }
+        .vehicleCardTitle { color: #0678bc; font-size: 16px; font-weight: 700; line-height: 1.3; }
+        .vehicleCardTitle:hover { text-decoration: underline; }
+
+        .list-item-price { padding: 0 15px 15px; display: flex; flex-direction: column; flex-grow: 1; }
+        .mobile-apr-price-wrapper { padding: 10px 12px; background: #fafafa; border: 1px solid #eee; border-radius: 8px; margin-top: 10px; }
+        .mobile-apr-price-wrapper .price-display { display: flex; align-items: center; justify-content: space-between; }
+        .yousave-price { text-align: left; }
+        .yousave-price .amount { font-size: 15px; font-weight: 800; color: var(--secondarycolor); }
+        .yousave-price .save-label { font-size: 10px; color: var(--linktextcolor); text-transform: uppercase; font-weight: 700; display: block; }
+        .mobile-price { text-align: right; }
+        .mobile-price .price { font-size: 20px; font-weight: 700; color: var(--bodycolor); }
+        .mobile-price .price-label { font-size: 10px; color: var(--linktextcolor); text-transform: uppercase; font-weight: 700; display: block; }
+
+        .price-toggle { padding: 6px 0; margin-top: 6px; cursor: pointer; font-size: 13px; color: var(--linktextcolor); display: flex; align-items: center; justify-content: center; gap: 4px; user-select: none; }
+        .price-toggle:hover { color: var(--bodycolor); }
+        .price-toggle svg { width: 10px; height: 10px; fill: currentColor; transition: transform 0.3s; }
+        .price-toggle.open svg { transform: rotate(180deg); }
+
+        .price-breakup { display: none; padding: 10px 0 4px; }
+        .price-breakup.show { display: block; }
+        .price-breakup .row { display: flex; justify-content: space-between; padding: 3px 0; font-size: 13px; }
+        .price-breakup .label { color: #999; }
+        .price-breakup .msrp { text-decoration: line-through; color: #999; }
+        .price-breakup .msrp::before { content: "$"; }
+        .price-breakup .dealersavingsprice { color: var(--secondarycolor); font-weight: 700; }
+        .price-breakup .finalprice { color: #30770f; font-weight: 700; }
+        .price-breakup .border-top-dash { border-top: 1px dashed #ddd; margin-top: 4px; padding-top: 6px; }
+
+        .card-actions { margin-top: auto; display: flex; flex-direction: column; gap: 6px; padding-top: 8px; }
+        .btn_3 a { background: var(--secondarycolor); color: #fff; text-transform: uppercase; font-weight: 700; border: 1px solid var(--secondarycolor); display: flex; align-items: center; justify-content: center; border-radius: 6px; font-size: 13px; line-height: 1.5; letter-spacing: 1px; padding: 12px 16px; transition: var(--transition); }
+        .btn_3 a:hover { background: transparent; color: var(--secondarycolor); }
+
+        /* ── Pagination ── */
+        .pagination-wrapper { padding: 24px 0; display: flex; justify-content: center; }
+        .pagination { display: flex; list-style: none; padding: 0; margin: 0; gap: 4px; }
+        .pagination li { cursor: pointer; }
+        .pagination li span { display: block; padding: 8px 14px; border: 1px solid #ddd; border-radius: 6px; font-size: 14px; font-weight: 600; color: #666; transition: var(--transition); }
+        .pagination li:hover span { border-color: var(--secondarycolor); color: var(--secondarycolor); }
+        .pagination li.active span { background: var(--secondarycolor); color: #fff; border-color: var(--secondarycolor); }
+        .pagination li.disabled span { color: #ccc; cursor: default; }
+        .pagination li.disabled:hover span { border-color: #ddd; color: #ccc; }
+
+        /* ========== FOOTER ========== */
+        .site-footer { background: var(--footerbg); color: #ccc; padding: 48px 0 0; }
+        .site-footer .ft-inner { max-width: 1630px; margin: 0 auto; padding: 0 24px; }
+        .footer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; padding-bottom: 40px; border-bottom: 1px solid #2e3138; }
+        .footer-col h4 { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #fff; margin: 0 0 16px; }
+        .footer-col ul { list-style: none; padding: 0; margin: 0; }
+        .footer-col li { margin-bottom: 10px; }
+        .footer-col a { color: #999; font-size: 14px; transition: color 0.2s; }
+        .footer-col a:hover { color: #fff; }
+        .footer-family { text-align: center; padding: 20px 24px; border-bottom: 1px solid #2e3138; font-size: 14px; color: #888; }
+        .footer-family a { color: var(--secondarycolor); font-weight: 600; }
+        .footer-family a:hover { text-decoration: underline; }
+        .footer-locations { text-align: center; padding: 16px 24px; border-bottom: 1px solid #2e3138; font-size: 13px; color: #777; }
+        .footer-locations a { color: #aaa; font-weight: 500; margin: 0 8px; }
+        .footer-locations a:hover { color: #fff; }
+        .footer-bottom { padding: 20px 24px; text-align: center; font-size: 13px; color: #666; }
+        .footer-bottom a { color: var(--secondarycolor); font-weight: 500; }
+        .footer-bottom a:hover { text-decoration: underline; }
+
+        /* ── Responsive ── */
+        @media (max-width: 1429px) { .filter-panel { width: 25%; } .filter-result-wrapper { width: calc(75% - 30px); } .list-item { width: calc(33.33% - 14px); } }
+        @media (max-width: 1199px) { .list-item { width: calc(50% - 10px); } .filter-buttons { display: none; } }
+        @media (max-width: 1023px) { .header-nav { display: none; } }
+        @media (max-width: 991px) { .filter-panel { display: none; } .filter-result-wrapper { width: 100%; margin: 0; } .list-item { width: calc(50% - 10px); } .mobile-filter-btn { display: flex !important; } }
+        @media (max-width: 767px) {
+            .list-item { width: 100%; }
+            .top-bar .tb-inner { flex-direction: column; text-align: center; gap: 4px; }
+            .top-bar-phones { justify-content: center; }
+            .site-header .sh-inner { flex-wrap: wrap; justify-content: center; gap: 12px; }
+            .footer-grid { grid-template-columns: 1fr; text-align: center; }
+        }
+        @media (max-width: 640px) { .footer-grid { grid-template-columns: 1fr; text-align: center; } }
+    </style>
+</head>
+<body>
+
+<!-- ==================== TOP BAR ==================== -->
+<div class="top-bar">
+    <div class="tb-inner">
+        <div class="top-bar-phones">
+            <a href="tel:5677126604"><span>Sales:</span> (567) 712-6604</a>
+            <a href="tel:5677081279"><span>Service:</span> (567) 708-1279</a>
+            <a href="tel:5677081328"><span>Parts:</span> (567) 708-1328</a>
+        </div>
+        <div class="top-bar-address">
+            <a href="https://maps.google.com/?q=2100+N+Cable+Rd+Lima+OH+45805" target="_blank" rel="noopener">
+                2100 N Cable Rd, Lima, OH 45805
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- ==================== HEADER ==================== -->
+<header class="site-header">
+    <div class="sh-inner">
+        <a href="/demo/taylor-kia-lima" class="header-logo">
+            <svg class="kia-logo-svg" viewBox="0 0 120 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M26.2 4L14.5 21l11.7 17h-9.8L7.1 24.3V38H0V4h7.1v13.5L16.4 4h9.8z" fill="#05141F"/>
+                <path d="M32.5 4h7.1v34h-7.1V4z" fill="#05141F"/>
+                <path d="M68.3 4L54.7 38h-7.6L33.5 4h8l9.4 25.5L60.3 4h8z" fill="#05141F"/>
+                <text x="78" y="30" font-family="Inter,sans-serif" font-size="14" font-weight="800" fill="#05141F">KIA</text>
+            </svg>
+            <div class="dealer-name">Taylor Kia<small>Lima</small></div>
+        </a>
+        <nav class="header-nav">
+            <a href="/demo/taylor-kia-lima/inventory" class="active">Inventory</a>
+            <a href="/demo/taylor-kia-lima/service">Service</a>
+            <a href="/demo/taylor-kia-lima/financing">Financing</a>
+            <a href="/demo/taylor-kia-lima/contact">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<!-- ==================== BREADCRUMBS ==================== -->
+<div class="breadcrumbs">
+    <div class="bc-inner">
+        <a href="/demo/taylor-kia-lima">Home</a> <span>/</span> <strong>New Inventory</strong>
+    </div>
+</div>
+
+<!-- ==================== SRP ==================== -->
+<section class="search-page-main">
+    <div class="container">
+        <div class="inner">
+
+            <!-- Filter Panel -->
+            <div class="filter-panel">
+                <div class="card-header">
+                    <h2 class="cardtitle">Filters</h2>
+                    <a href="#" class="share-link">
+                        <svg viewBox="0 0 640 512"><path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372.1 74 321.1 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.8l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/></svg>
+                        Share
+                    </a>
+                </div>
+
+                <div class="searchform-main">
+                    <div class="form-field">
+                        <input type="text" placeholder="Search..." />
+                        <div class="search-btn">
+                            <svg viewBox="0 0 512 512"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reset-btn">
+                    <a href="#">
+                        <svg viewBox="0 0 512 512"><path d="M463.5 224H472c13.3 0 24-10.7 24-24V72c0-9.7-5.8-18.5-14.8-22.2s-19.3-1.7-26.2 5.2L413.4 96.6c-87.6-86.5-228.7-86.2-315.8 1c-87.5 87.5-87.5 229.3 0 316.8s229.3 87.5 316.8 0c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0c-62.5 62.5-163.8 62.5-226.3 0s-62.5-163.8 0-226.3c62.2-62.2 162.7-62.5 225.3-1L327 183c-6.9 6.9-8.9 17.2-5.2 26.2s12.5 14.8 22.2 14.8H463.5z"/></svg>
+                        Reset All
+                    </a>
+                </div>
+
+                <div class="filter-item open">
+                    <div class="title">Type</div>
+                    <div class="accordion-content">
+                        <ul>
+                            <li><span>All Vehicles</span> <span class="badge">12</span></li>
+                            <li class="active"><span>New</span> <span class="badge">12</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="filter-item open">
+                    <div class="title">Model</div>
+                    <div class="accordion-content">
+                        <ul>
+                            <li><span>Telluride</span> <span class="badge">2</span></li>
+                            <li><span>Sportage</span> <span class="badge">2</span></li>
+                            <li><span>EV6</span> <span class="badge">1</span></li>
+                            <li><span>EV9</span> <span class="badge">1</span></li>
+                            <li><span>Sorento</span> <span class="badge">1</span></li>
+                            <li><span>Forte</span> <span class="badge">1</span></li>
+                            <li><span>K5</span> <span class="badge">1</span></li>
+                            <li><span>Seltos</span> <span class="badge">1</span></li>
+                            <li><span>Soul</span> <span class="badge">1</span></li>
+                            <li><span>Carnival</span> <span class="badge">1</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="filter-item open">
+                    <div class="title">Year</div>
+                    <div class="accordion-content">
+                        <ul>
+                            <li><span>2026</span> <span class="badge">4</span></li>
+                            <li><span>2025</span> <span class="badge">8</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="filter-item open">
+                    <div class="title">Price</div>
+                    <div class="accordion-content">
+                        <ul>
+                            <li><span>Under $25K</span> <span class="badge">2</span></li>
+                            <li><span>$25K - $35K</span> <span class="badge">4</span></li>
+                            <li><span>$35K - $45K</span> <span class="badge">3</span></li>
+                            <li><span>$45K+</span> <span class="badge">3</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="filter-item">
+                    <div class="title">Drivetrain</div>
+                    <div class="accordion-content" style="display:none;">
+                        <ul>
+                            <li><span>AWD</span> <span class="badge">6</span></li>
+                            <li><span>FWD</span> <span class="badge">4</span></li>
+                            <li><span>RWD</span> <span class="badge">2</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="filter-item">
+                    <div class="title">Exterior Color</div>
+                    <div class="accordion-content" style="display:none;">
+                        <ul>
+                            <li><span>Snow White Pearl</span> <span class="badge">3</span></li>
+                            <li><span>Gravity Gray</span> <span class="badge">2</span></li>
+                            <li><span>Aurora Black Pearl</span> <span class="badge">2</span></li>
+                            <li><span>Wolf Gray</span> <span class="badge">2</span></li>
+                            <li><span>Runway Red</span> <span class="badge">1</span></li>
+                            <li><span>Yacht Blue</span> <span class="badge">1</span></li>
+                            <li><span>Dawning Red</span> <span class="badge">1</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results -->
+            <div class="filter-result-wrapper">
+
+                <button class="mobile-filter-btn" style="display:none;">
+                    <svg viewBox="0 0 512 512"><path d="M3.9 54.9C10.5 40.9 24.5 32 40 32H472c15.5 0 29.5 8.9 36.1 22.9s4.6 30.5-5.2 42.5L320 320.9V448c0 12.1-6.8 23.2-17.7 28.6s-23.8 4.3-33.5-3l-64-48C195.8 419.1 192 410 192 400.3V320.9L9.2 97.4C-.6 85.4-2.7 68.9 3.9 54.9z"/></svg>
+                    Filter Vehicles
+                </button>
+
+                <div class="inventory-detail">
+                    <div class="count"><strong>12 Vehicles Found</strong></div>
+                    <div class="sort-by">
+                        <span><strong>Sort Results</strong></span>
+                        <select>
+                            <option selected>Price (low to high)</option>
+                            <option>Price (high to low)</option>
+                            <option>Year (newest)</option>
+                            <option>Year (oldest)</option>
+                            <option>Mileage (low to high)</option>
+                        </select>
+                    </div>
+                    <div class="filter-buttons">
+                        <div title="List View">
+                            <svg viewBox="0 0 512 512"><path d="M40 48C26.7 48 16 58.7 16 72v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V72c0-13.3-10.7-24-24-24H40zM192 64c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zM16 232v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V232c0-13.3-10.7-24-24-24H40c-13.3 0-24 10.7-24 24zM40 368c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V392c0-13.3-10.7-24-24-24H40z"/></svg>
+                        </div>
+                        <div class="active" title="Grid View">
+                            <svg viewBox="0 0 512 512"><path d="M149.333 56v80c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V56c0-13.255 10.745-24 24-24h101.333c13.255 0 24 10.745 24 24zm181.334 240v-80c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.256.001 24.001-10.745 24.001-24zm32-240v80c0 13.255 10.745 24 24 24H488c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24zm-32 0v80c0 13.255-10.745 24-24 24H205.333c-13.255 0-24-10.745-24-24V56c0-13.255 10.745-24 24-24h101.333c13.256 0 24.001 10.745 24.001 24zm-181.334 80V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24zM0 376v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H24c-13.255 0-24 10.745-24 24zm181.333 0v80c0 13.255 10.745 24 24 24h101.333c13.256 0 24.001-10.745 24.001-24v-80c0-13.255-10.745-24-24.001-24H205.333c-13.255 0-24 10.745-24 24zm181.334 0v80c0 13.255 10.745 24 24 24H488c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24zM330.667 216V296c0 13.255 10.745 24 24 24H488c13.255 0 24-10.745 24-24V216c0-13.255-10.745-24-24-24H354.667c-13.255 0-24 10.745-24 24zM0 216v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H24c-13.255 0-24 10.745-24 24z"/></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="list-wrapper" id="vehicleList"></div>
+
+                <div class="pagination-wrapper">
+                    <ul class="pagination">
+                        <li class="disabled"><span>Prev</span></li>
+                        <li class="active"><span>1</span></li>
+                        <li><span>2</span></li>
+                        <li><span>Next</span></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="site-footer">
+    <div class="ft-inner">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Inventory</h4>
+                <ul>
+                    <li><a href="/demo/taylor-kia-lima/inventory">New Kia Vehicles</a></li>
+                    <li><a href="/demo/taylor-kia-lima/inventory?type=used">Pre-Owned Vehicles</a></li>
+                    <li><a href="/demo/taylor-kia-lima/inventory?type=certified">Certified Pre-Owned</a></li>
+                    <li><a href="/demo/taylor-kia-lima/inventory?special=true">Current Specials</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Service</h4>
+                <ul>
+                    <li><a href="/demo/taylor-kia-lima/service">Schedule Service</a></li>
+                    <li><a href="/demo/taylor-kia-lima/service#specials">Service Specials</a></li>
+                    <li><a href="/demo/taylor-kia-lima/service#parts">Order Parts</a></li>
+                    <li><a href="tel:5677081279">Call Service: (567) 708-1279</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Financing</h4>
+                <ul>
+                    <li><a href="/demo/taylor-kia-lima/financing">Apply for Financing</a></li>
+                    <li><a href="/demo/taylor-kia-lima/financing#calculator">Payment Calculator</a></li>
+                    <li><a href="/demo/taylor-kia-lima/financing#trade">Value Your Trade</a></li>
+                    <li><a href="/demo/taylor-kia-lima/financing#credit">Credit Solutions</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>About Us</h4>
+                <ul>
+                    <li><a href="/demo/taylor-kia-lima/contact">Contact Us</a></li>
+                    <li><a href="/demo/taylor-kia-lima/contact#hours">Hours &amp; Directions</a></li>
+                    <li><a href="/demo/taylor-kia-lima/vdp">Vehicle Details</a></li>
+                    <li><a href="tel:5677126604">Call Sales: (567) 712-6604</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-family">Part of the <a href="/demo/taylor-auto">Taylor Automotive Family</a></div>
+        <div class="footer-locations">Also visit: <a href="/demo/taylor-kia-toledo">Taylor Kia of Toledo</a> | <a href="/demo/taylor-kia-findlay">Taylor Kia of Findlay</a></div>
+        <div class="footer-bottom">
+            <p>Taylor Kia of Lima &mdash; 2100 N Cable Rd, Lima, OH 45805 &bull; &copy; 2026 All Rights Reserved &bull; Powered by <a href="https://www.savvydealer.com" target="_blank" rel="noopener">SavvyDealer</a></p>
+        </div>
+    </div>
+</footer>
+
+<!-- ==================== JAVASCRIPT ==================== -->
+<script>
+(function() {
+    var vehicles = [
+        { year: 2025, make: "Kia", model: "Telluride", trim: "SX", color: "Snow White Pearl", drivetrain: "AWD", engine: "3.8L V6", stock: "TKL1001", msrp: 49090, discount: 3000, image: "https://placehold.co/960x540/f4f4f4/333333?text=2025+Kia+Telluride+SX" },
+        { year: 2025, make: "Kia", model: "Sportage", trim: "X-Line", color: "Gravity Gray", drivetrain: "AWD", engine: "2.5L Turbo", stock: "TKL1002", msrp: 36490, discount: 2500, image: "https://placehold.co/960x540/f4f4f4/333333?text=2025+Kia+Sportage+X-Line" },
+        { year: 2025, make: "Kia", model: "EV6", trim: "Wind AWD", color: "Yacht Blue", drivetrain: "AWD", engine: "Electric", stock: "TKL1003", msrp: 52600, discount: 4000, image: "https://placehold.co/960x540/f4f4f4/333333?text=2025+Kia+EV6+Wind" },
+        { year: 2026, make: "Kia", model: "EV9", trim: "Land AWD", color: "Snow White Pearl", drivetrain: "AWD", engine: "Electric", stock: "TKL1004", msrp: 54900, discount: 3500, image: "https://placehold.co/960x540/f4f4f4/333333?text=2026+Kia+EV9+Land" },
+        { year: 2025, make: "Kia", model: "Sorento", trim: "SX Prestige", color: "Aurora Black Pearl", drivetrain: "AWD", engine: "2.5L Turbo", stock: "TKL1005", msrp: 44590, discount: 3000, image: "https://placehold.co/960x540/f4f4f4/333333?text=2025+Kia+Sorento+SX" },
+        { year: 2025, make: "Kia", model: "Forte", trim: "GT-Line", color: "Runway Red", drivetrain: "FWD", engine: "2.0L 4-Cyl", stock: "TKL1006", msrp: 24190, discount: 1500, image: "https://placehold.co/960x540/f4f4f4/333333?text=2025+Kia+Forte+GT-Line" },
+        { year: 2025, make: "Kia", model: "K5", trim: "GT-Line AWD", color: "Wolf Gray", drivetrain: "AWD", engine: "1.6L Turbo", stock: "TKL1007", msrp: 32390, discount: 2000, image: "https://placehold.co/960x540/f4f4f4/333333?text=2025+Kia+K5+GT-Line" },
+        { year: 2025, make: "Kia", model: "Seltos", trim: "SX Turbo", color: "Gravity Gray", drivetrain: "AWD", engine: "1.6L Turbo", stock: "TKL1008", msrp: 30490, discount: 2000, image: "https://placehold.co/960x540/f4f4f4/333333?text=2025+Kia+Seltos+SX+Turbo" },
+        { year: 2025, make: "Kia", model: "Soul", trim: "GT-Line", color: "Snow White Pearl", drivetrain: "FWD", engine: "2.0L 4-Cyl", stock: "TKL1009", msrp: 23515, discount: 1500, image: "https://placehold.co/960x540/f4f4f4/333333?text=2025+Kia+Soul+GT-Line" },
+        { year: 2025, make: "Kia", model: "Carnival", trim: "SX Prestige", color: "Aurora Black Pearl", drivetrain: "FWD", engine: "3.5L V6", stock: "TKL1010", msrp: 46590, discount: 3500, image: "https://placehold.co/960x540/f4f4f4/333333?text=2025+Kia+Carnival+SX" },
+        { year: 2026, make: "Kia", model: "Telluride", trim: "X-Pro", color: "Wolf Gray", drivetrain: "AWD", engine: "3.8L V6", stock: "TKL1011", msrp: 51290, discount: 2500, image: "https://placehold.co/960x540/f4f4f4/333333?text=2026+Kia+Telluride+X-Pro" },
+        { year: 2026, make: "Kia", model: "Sportage", trim: "HEV SX", color: "Dawning Red", drivetrain: "AWD", engine: "1.6L Turbo HEV", stock: "TKL1012", msrp: 39490, discount: 2500, image: "https://placehold.co/960x540/f4f4f4/333333?text=2026+Kia+Sportage+HEV" }
+    ];
+
+    function formatPrice(n) { return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","); }
+
+    var heartSVG = '<svg viewBox="0 0 512 512"><path d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9C313.1 47 353.4 37.9 392.8 45.4 462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9z"/></svg>';
+    var chevronSVG = '<svg viewBox="0 0 320 512"><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>';
+
+    var listWrapper = document.getElementById('vehicleList');
+    var html = '';
+
+    vehicles.forEach(function(v, i) {
+        var sellingPrice = v.msrp - v.discount;
+        var titleText = v.year + ' ' + v.make + ' ' + v.model + (v.trim ? ' ' + v.trim : '');
+        var vdpLink = '/demo/taylor-kia-lima/vdp?id=' + i;
+
+        html += '<div class="list-item"><div class="list-item-inner">';
+        html += '<div class="image-block"><a href="' + vdpLink + '"><img src="' + v.image + '" alt="' + titleText + '" /></a><div class="watchlist-icon">' + heartSVG + '</div></div>';
+        html += '<div class="list-item-detail"><a class="vehicleCardTitle" href="' + vdpLink + '">' + titleText + '</a></div>';
+        html += '<div class="list-item-price"><div class="mobile-apr-price-wrapper"><div class="price-display">';
+        html += '<div class="yousave-price"><span class="amount">$' + formatPrice(v.discount) + '</span><span class="save-label">Potential Savings</span></div>';
+        html += '<div class="mobile-price"><span class="price">$' + formatPrice(sellingPrice) + '</span><span class="price-label">Taylor Price*</span></div>';
+        html += '</div></div>';
+        html += '<div class="price-toggle" onclick="this.classList.toggle(\'open\');this.nextElementSibling.classList.toggle(\'show\')">Price Details ' + chevronSVG + '</div>';
+        html += '<div class="price-breakup">';
+        html += '<div class="row"><div class="label">Ext. Color</div><div class="value" style="font-weight:600">' + v.color + '</div></div>';
+        html += '<div class="row"><div class="label">Drivetrain</div><div class="value" style="font-weight:600">' + v.drivetrain + '</div></div>';
+        html += '<div class="row"><div class="label">Engine</div><div class="value" style="font-weight:600">' + v.engine + '</div></div>';
+        html += '<div class="row"><div class="label">Stock #</div><div class="value" style="font-weight:600">' + v.stock + '</div></div>';
+        html += '<div class="row border-top-dash" style="margin-top:6px;padding-top:6px;"><div class="label"><strong>MSRP</strong></div><div class="msrp">' + formatPrice(v.msrp) + '</div></div>';
+        html += '<div class="row"><div class="label"><strong>Discount</strong></div><div class="dealersavingsprice">-$' + formatPrice(v.discount) + '</div></div>';
+        html += '<div class="row border-top-dash"><div class="label"><strong>Taylor Price*</strong></div><div class="finalprice">$' + formatPrice(sellingPrice) + '</div></div>';
+        html += '</div>';
+        html += '<div class="card-actions"><div class="btn_3"><a href="#">Check Availability</a></div></div>';
+        html += '</div></div></div>';
+    });
+
+    listWrapper.innerHTML = html;
+
+    var filterTitles = document.querySelectorAll('.filter-item .title');
+    filterTitles.forEach(function(t) {
+        t.addEventListener('click', function() {
+            var parent = this.parentElement;
+            var content = parent.querySelector('.accordion-content');
+            if (parent.classList.contains('open')) { parent.classList.remove('open'); content.style.display = 'none'; }
+            else { parent.classList.add('open'); content.style.display = ''; }
+        });
+    });
+})();
+</script>
+
+</body>
+</html>

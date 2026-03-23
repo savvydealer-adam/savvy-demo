@@ -1,0 +1,20 @@
+{
+  "name": "Taylor Kia of Toledo",
+  "slug": "taylor-kia-toledo",
+  "brand": "Kia",
+  "address": "6300 West Central Ave, Toledo, OH 43615",
+  "phones": {
+    "sales": "(419) 842-8811",
+    "service": "(419) 871-9218",
+    "parts": "(419) 871-9200"
+  },
+  "colors": {
+    "primary": "#05141F",
+    "accent": "#BB162C",
+    "white": "#FFFFFF"
+  },
+  "pages": ["index", "inventory", "vdp", "service", "financing", "contact"],
+  "featured": true,
+  "group": "Taylor Automotive Family",
+  "siblings": ["taylor-kia-findlay", "taylor-kia-lima"]
+}

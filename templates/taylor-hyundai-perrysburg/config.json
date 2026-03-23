@@ -1,0 +1,19 @@
+{
+  "name": "Taylor Hyundai of Perrysburg",
+  "slug": "taylor-hyundai-perrysburg",
+  "location": "Perrysburg, OH",
+  "phone": {
+    "sales": "419-931-8000",
+    "service": "419-931-8000",
+    "parts": "419-931-8000"
+  },
+  "address": "12681 Eckel Junction Rd, Perrysburg, OH 43551",
+  "oem": ["Hyundai"],
+  "colors": {
+    "primary": "#00287A",
+    "secondary": "#00AAD2",
+    "accent": "#FFFFFF"
+  },
+  "group": "Taylor Automotive Family",
+  "groupUrl": "/demo/taylor-auto"
+}

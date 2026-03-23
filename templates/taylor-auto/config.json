@@ -1,0 +1,26 @@
+{
+  "name": "Taylor Automotive Family",
+  "slug": "taylor-auto",
+  "location": "Northwest Ohio",
+  "phone": {
+    "main": "419-842-8811"
+  },
+  "address": "6300 West Central Ave, Toledo, OH 43615",
+  "oem": ["Cadillac", "Genesis", "Hyundai", "Kia", "Volkswagen"],
+  "colors": {
+    "primary": "#1B2A4A",
+    "secondary": "#C8A951",
+    "accent": "#FFFFFF"
+  },
+  "dealerships": [
+    {"name": "Taylor Cadillac", "slug": "taylor-cadillac", "brand": "Cadillac", "city": "Toledo"},
+    {"name": "Taylor Genesis of Perrysburg", "slug": "taylor-genesis", "brand": "Genesis", "city": "Perrysburg"},
+    {"name": "Taylor Hyundai of Toledo", "slug": "taylor-hyundai-toledo", "brand": "Hyundai", "city": "Toledo"},
+    {"name": "Taylor Hyundai of Perrysburg", "slug": "taylor-hyundai-perrysburg", "brand": "Hyundai", "city": "Perrysburg"},
+    {"name": "Taylor Hyundai of Findlay", "slug": "taylor-hyundai-findlay", "brand": "Hyundai", "city": "Findlay"},
+    {"name": "Taylor Kia of Toledo", "slug": "taylor-kia-toledo", "brand": "Kia", "city": "Toledo"},
+    {"name": "Taylor Kia of Findlay", "slug": "taylor-kia-findlay", "brand": "Kia", "city": "Findlay"},
+    {"name": "Taylor Kia of Lima", "slug": "taylor-kia-lima", "brand": "Kia", "city": "Lima"},
+    {"name": "Taylor Volkswagen of Findlay", "slug": "taylor-vw-findlay", "brand": "Volkswagen", "city": "Findlay"}
+  ]
+}

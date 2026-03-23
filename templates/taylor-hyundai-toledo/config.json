@@ -1,0 +1,19 @@
+{
+  "name": "Taylor Hyundai of Toledo",
+  "slug": "taylor-hyundai-toledo",
+  "location": "Toledo, OH",
+  "phone": {
+    "sales": "567-455-5230",
+    "service": "567-455-5230",
+    "parts": "567-455-5230"
+  },
+  "address": "6200 W Central Ave, Toledo, OH 43615",
+  "oem": ["Hyundai"],
+  "colors": {
+    "primary": "#00287A",
+    "secondary": "#00AAD2",
+    "accent": "#FFFFFF"
+  },
+  "group": "Taylor Automotive Family",
+  "groupUrl": "/demo/taylor-auto"
+}

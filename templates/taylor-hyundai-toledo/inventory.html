@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0" />
+    <title>New Inventory | Taylor Hyundai of Toledo | Toledo, OH</title>
+    <meta name="description" content="Browse new Hyundai vehicles at Taylor Hyundai of Toledo. Shop Tucson, Santa Fe, IONIQ 5, Palisade, Elantra and more. Competitive pricing in Toledo, OH." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bodyfont: 'Hyundai Sans Text', 'Inter', sans-serif;
+            --headerbg: #00287A;
+            --footerbg: #1a1a1a;
+            --darkgrey: #393436;
+            --bodycolor: #19183C;
+            --secondarycolor: #00287A;
+            --accent: #00AAD2;
+            --linktextcolor: #00287A;
+            --headingcolor: #212529;
+            --blackcolor: #000000;
+            --whitecolor: #fff;
+            --greycolor: #808080;
+            --savingsgreen: #30770f;
+            --transition: all 0.4s;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; }
+        body { margin: 0; font-family: var(--bodyfont); color: var(--bodycolor); font-size: 16px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+        a { color: var(--linktextcolor); text-decoration: none; }
+        a:hover { color: var(--blackcolor); }
+        img { max-width: 100%; height: auto; }
+        .container { margin: 0 auto; padding: 0 15px; }
+        @media(min-width:768px) { .container { width: 750px; } }
+        @media(min-width:992px) { .container { width: 970px; } }
+        @media(min-width:1200px) { .container { width: 1170px; } }
+        @media(min-width:1430px) { .container { width: 1400px; } }
+        @media(min-width:1630px) { .container { width: 1630px; } }
+
+        /* ========== TOP BAR ========== */
+        .top-bar { background: var(--headerbg); color: #fff; padding: 8px 0; font-size: 13px; }
+        .top-bar .tb-inner { max-width: 1630px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+        .top-bar-phones { display: flex; gap: 20px; flex-wrap: wrap; }
+        .top-bar-phones a { color: #fff; font-weight: 500; transition: opacity 0.2s; }
+        .top-bar-phones a:hover { opacity: 0.85; }
+        .top-bar-phones span { color: rgba(255,255,255,0.7); margin-right: 4px; font-weight: 400; }
+        .top-bar-address { color: rgba(255,255,255,0.9); }
+        .top-bar-address a { color: #fff; }
+        .top-bar-address a:hover { text-decoration: underline; }
+
+        /* ========== HEADER ========== */
+        .site-header { background: #fff; border-bottom: 1px solid #f5f5f5; padding: 12px 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+        .site-header .sh-inner { max-width: 1630px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+        .header-logo { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+        .header-logo svg { height: 36px; width: auto; }
+        .header-logo-text { font-size: 16px; font-weight: 700; color: var(--headerbg); line-height: 1.2; }
+        .header-logo-text small { font-size: 11px; font-weight: 500; color: #666; display: block; }
+        .header-nav { display: flex; align-items: center; gap: 6px; }
+        .header-nav a { color: #333; font-size: 14px; font-weight: 500; padding: 6px 12px; border-radius: 4px; transition: background 0.2s, color 0.2s; }
+        .header-nav a:hover { background: #e8f4f8; color: var(--accent); }
+        .header-nav a.active { background: #e8f4f8; color: var(--accent); font-weight: 700; }
+
+        /* ========== BREADCRUMB ========== */
+        .breadcrumb-bar { background: #f8f9fb; border-bottom: 1px solid #eee; padding: 12px 0; }
+        .breadcrumb-bar .bc-inner { max-width: 1630px; margin: 0 auto; padding: 0 24px; font-size: 14px; color: #666; }
+        .breadcrumb-bar a { color: var(--linktextcolor); font-weight: 500; }
+        .breadcrumb-bar a:hover { color: var(--accent); }
+        .breadcrumb-bar span { color: #999; margin: 0 6px; }
+
+        /* ── SRP Layout ── */
+        .search-page-main { padding: 30px 0; background: rgb(40 40 40 / 5%); min-height: 80vh; }
+        .search-page-main .container { width: 100%; max-width: 1630px; }
+        .search-page-main .inner { display: flex; flex-wrap: wrap; }
+
+        /* Filter Panel */
+        .filter-panel { width: 21%; align-self: flex-start; background: #fff; border: 1px solid rgba(36,39,44,.1); box-shadow: 0 6px 10px rgba(0,0,0,.05); border-radius: 12px; padding: 24px 20px; position: sticky; top: 80px; }
+        .filter-panel .card-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid #eee; }
+        .filter-panel .cardtitle { font-size: 22px; font-weight: 700; margin: 0; }
+        .filter-panel .share-link { font-size: 13px; color: var(--linktextcolor); display: flex; align-items: center; gap: 6px; }
+        .filter-panel .share-link svg { width: 14px; height: 14px; fill: var(--linktextcolor); }
+
+        .searchform-main { margin-bottom: 16px; }
+        .searchform-main .form-field { display: flex; border: 1px solid #ddd; border-radius: 6px; overflow: hidden; }
+        .searchform-main input { flex: 1; padding: 10px 12px; border: none; outline: none; font-family: inherit; font-size: 14px; }
+        .searchform-main .search-btn { padding: 10px 14px; background: var(--accent); display: flex; align-items: center; cursor: pointer; }
+        .searchform-main .search-btn svg { width: 16px; height: 16px; fill: #fff; }
+
+        .reset-btn { margin-bottom: 16px; }
+        .reset-btn a { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 10px 16px; background: var(--secondarycolor); color: #fff; border: 1px solid var(--secondarycolor); border-radius: 6px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; transition: var(--transition); }
+        .reset-btn a:hover { background: transparent; color: var(--secondarycolor); }
+        .reset-btn a svg { width: 14px; height: 14px; fill: currentColor; }
+
+        .filter-item { border-bottom: 1px solid #eee; padding: 12px 0; }
+        .filter-item .title { font-size: 14px; font-weight: 700; text-transform: uppercase; cursor: pointer; display: flex; align-items: center; justify-content: space-between; }
+        .filter-item .title::after { content: ""; width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 5px solid var(--bodycolor); transition: transform 0.3s; }
+        .filter-item.open .title::after { transform: rotate(180deg); }
+        .filter-item .accordion-content { padding-top: 8px; }
+        .filter-item .accordion-content ul { list-style: none; padding: 0; margin: 0; }
+        .filter-item .accordion-content li { display: flex; align-items: center; justify-content: space-between; padding: 6px 0; font-size: 14px; cursor: pointer; transition: color 0.2s; }
+        .filter-item .accordion-content li:hover { color: var(--accent); }
+        .filter-item .accordion-content li.active { color: var(--accent); font-weight: 700; }
+        .filter-item .badge { background: #f0f0f0; color: var(--greycolor); font-size: 12px; padding: 2px 8px; border-radius: 10px; font-weight: 600; }
+
+        /* ── Results Area ── */
+        .filter-result-wrapper { width: calc(79% - 30px); margin: 0 0 0 30px; }
+
+        .inventory-detail { background: #fff; border: 1px solid rgba(36,39,44,.1); box-shadow: 0 6px 10px rgba(0,0,0,.05); border-radius: 12px; padding: 16px 24px; margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+        .inventory-detail .count { font-size: 20px; font-weight: 700; }
+        .inventory-detail .sort-by { display: flex; align-items: center; gap: 8px; font-size: 14px; }
+        .inventory-detail .sort-by select { padding: 8px 12px; border: 1px solid #ddd; border-radius: 6px; font-family: inherit; font-size: 14px; cursor: pointer; }
+        .filter-buttons { display: flex; gap: 8px; }
+        .filter-buttons div { padding: 8px; cursor: pointer; border-radius: 6px; transition: var(--transition); }
+        .filter-buttons div:hover, .filter-buttons div.active { background: var(--accent); }
+        .filter-buttons div:hover svg, .filter-buttons div.active svg { fill: #fff; }
+        .filter-buttons svg { width: 18px; height: 18px; fill: #666; display: block; }
+
+        .mobile-filter-btn { display: none; align-items: center; justify-content: center; gap: 8px; padding: 12px 20px; background: var(--accent); color: #fff; border: none; border-radius: 8px; font-family: inherit; font-size: 14px; font-weight: 700; cursor: pointer; margin-bottom: 16px; width: 100%; }
+        .mobile-filter-btn svg { width: 16px; height: 16px; fill: #fff; }
+
+        /* ── Vehicle Cards ── */
+        .list-wrapper { display: flex; flex-wrap: wrap; gap: 20px; }
+        .list-item { width: calc(25% - 15px); background: #fff; border: 1px solid rgba(36,39,44,.1); box-shadow: 0 6px 10px rgba(0,0,0,.05); border-radius: 12px; overflow: hidden; transition: box-shadow 0.3s; }
+        .list-item:hover { box-shadow: 0 8px 24px rgba(0,0,0,.12); }
+        .list-item-inner { display: flex; flex-direction: column; height: 100%; }
+        .list-item-inner > div { width: 100%; }
+
+        .list-item .image-block { position: relative; overflow: hidden; background: #f4f4f4; }
+        .list-item .image-block img { width: 100%; aspect-ratio: 4/3; object-fit: contain; border-radius: 12px 12px 0 0; transition: transform 0.4s; padding: 12px; }
+        .list-item:hover .image-block img { transform: scale(1.03); }
+
+        .watchlist-icon { position: absolute; bottom: 10px; right: 10px; width: 32px; height: 32px; background: rgba(255,255,255,0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: var(--transition); }
+        .watchlist-icon:hover { background: var(--accent); }
+        .watchlist-icon:hover svg { fill: #fff; }
+        .watchlist-icon svg { width: 16px; height: 16px; fill: #999; }
+
+        .list-item-detail { padding: 15px 15px 0; }
+        .vehicleCardTitle { color: var(--linktextcolor); font-size: 16px; font-weight: 700; line-height: 1.3; }
+        .vehicleCardTitle:hover { text-decoration: underline; }
+        .details-wrapper { font-size: 13px; }
+        .details-wrapper .details { display: flex; justify-content: space-between; padding: 3px 0; }
+        .details-wrapper .details .label { color: #999; }
+        .details-wrapper .details .value { font-weight: 600; text-align: right; }
+
+        .list-item-price { padding: 0 15px 15px; display: flex; flex-direction: column; flex-grow: 1; }
+
+        .mobile-apr-price-wrapper { padding: 10px 12px; background: #fafafa; border: 1px solid #eee; border-radius: 8px; margin-top: 10px; }
+        .mobile-apr-price-wrapper .price-display { display: flex; align-items: center; justify-content: space-between; }
+        .yousave-price { text-align: left; }
+        .yousave-price .amount { font-size: 15px; font-weight: 800; color: var(--accent); }
+        .yousave-price .save-label { font-size: 10px; color: var(--linktextcolor); text-transform: uppercase; font-weight: 700; display: block; }
+        .mobile-price { text-align: right; }
+        .mobile-price .price { font-size: 20px; font-weight: 700; color: var(--bodycolor); }
+        .mobile-price .price-label { font-size: 10px; color: var(--linktextcolor); text-transform: uppercase; font-weight: 700; display: block; }
+
+        .price-toggle { padding: 6px 0; margin-top: 6px; cursor: pointer; font-size: 13px; color: var(--linktextcolor); display: flex; align-items: center; justify-content: center; gap: 4px; user-select: none; }
+        .price-toggle:hover { color: var(--bodycolor); }
+        .price-toggle svg { width: 10px; height: 10px; fill: currentColor; transition: transform 0.3s; }
+        .price-toggle.open svg { transform: rotate(180deg); }
+
+        .price-breakup { display: none; padding: 10px 0 4px; }
+        .price-breakup.show { display: block; }
+        .price-breakup .row { display: flex; justify-content: space-between; padding: 3px 0; font-size: 13px; }
+        .price-breakup .label { color: #999; }
+        .price-breakup .msrp { text-decoration: line-through; color: #999; }
+        .price-breakup .msrp::before { content: "$"; }
+        .price-breakup .dealersavingsprice { color: var(--accent); font-weight: 700; }
+        .price-breakup .finalprice { color: #30770f; font-weight: 700; }
+        .price-breakup .border-top-dash { border-top: 1px dashed #ddd; margin-top: 4px; padding-top: 6px; }
+
+        .card-actions { margin-top: auto; display: flex; flex-direction: column; gap: 6px; padding-top: 8px; }
+        .btn_3 a { background: var(--accent); color: #fff; text-transform: uppercase; font-weight: 700; border: 1px solid var(--accent); display: flex; align-items: center; justify-content: center; border-radius: 6px; font-size: 13px; line-height: 1.5; letter-spacing: 1px; padding: 12px 16px; transition: var(--transition); }
+        .btn_3 a:hover { background: transparent; color: var(--accent); }
+
+        /* ── Pagination ── */
+        .pagination-wrapper { padding: 24px 0; display: flex; justify-content: center; }
+        .pagination { display: flex; list-style: none; padding: 0; margin: 0; gap: 4px; }
+        .pagination li { cursor: pointer; }
+        .pagination li span { display: block; padding: 8px 14px; border: 1px solid #ddd; border-radius: 6px; font-size: 14px; font-weight: 600; color: #666; transition: var(--transition); }
+        .pagination li:hover span { border-color: var(--accent); color: var(--accent); }
+        .pagination li.active span { background: var(--accent); color: #fff; border-color: var(--accent); }
+        .pagination li.disabled span { color: #ccc; cursor: default; }
+        .pagination li.disabled:hover span { border-color: #ddd; color: #ccc; }
+
+        /* ========== FOOTER ========== */
+        .site-footer { background: var(--footerbg); color: #ccc; padding: 48px 0 0; }
+        .site-footer .ft-inner { max-width: 1630px; margin: 0 auto; padding: 0 24px; }
+        .footer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; padding-bottom: 40px; border-bottom: 1px solid #333; }
+        .footer-col h4 { font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: #fff; margin: 0 0 16px; }
+        .footer-col ul { list-style: none; padding: 0; margin: 0; }
+        .footer-col li { margin-bottom: 10px; }
+        .footer-col a { color: #aaa; font-size: 14px; transition: color 0.2s; }
+        .footer-col a:hover { color: #fff; }
+        .footer-cross-links { padding: 20px 0; border-bottom: 1px solid #333; text-align: center; font-size: 13px; color: #888; }
+        .footer-cross-links a { color: #00AAD2; font-weight: 500; }
+        .footer-cross-links a:hover { text-decoration: underline; }
+        .footer-bottom { padding: 20px 24px; text-align: center; font-size: 13px; color: #777; }
+        .footer-bottom a { color: #00AAD2; font-weight: 500; }
+        .footer-bottom a:hover { text-decoration: underline; }
+
+        /* ── Responsive ── */
+        @media (max-width: 1429px) {
+            .filter-panel { width: 25%; }
+            .filter-result-wrapper { width: calc(75% - 30px); }
+            .list-item { width: calc(33.33% - 14px); }
+        }
+        @media (max-width: 1199px) {
+            .list-item { width: calc(50% - 10px); }
+            .filter-buttons { display: none; }
+        }
+        @media (max-width: 1023px) {
+            .header-nav { display: none; }
+        }
+        @media (max-width: 991px) {
+            .filter-panel { display: none; }
+            .filter-result-wrapper { width: 100%; margin: 0; }
+            .list-item { width: calc(50% - 10px); }
+            .mobile-filter-btn { display: flex !important; }
+        }
+        @media (max-width: 767px) {
+            .list-item { width: 100%; }
+            .top-bar .tb-inner { flex-direction: column; text-align: center; gap: 4px; }
+            .top-bar-phones { justify-content: center; }
+            .site-header .sh-inner { flex-wrap: wrap; justify-content: center; gap: 12px; }
+            .footer-grid { grid-template-columns: 1fr; text-align: center; }
+        }
+        @media (max-width: 640px) {
+            .footer-grid { grid-template-columns: 1fr; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ==================== TOP BAR ==================== -->
+<div class="top-bar">
+    <div class="tb-inner">
+        <div class="top-bar-phones">
+            <a href="tel:5674555230"><span>Sales:</span> (567) 455-5230</a>
+            <a href="tel:5674555230"><span>Service:</span> (567) 455-5230</a>
+            <a href="tel:5674555230"><span>Parts:</span> (567) 455-5230</a>
+        </div>
+        <div class="top-bar-address">
+            <a href="https://maps.google.com/?q=6200+W+Central+Ave+Toledo+OH+43615" target="_blank" rel="noopener">6200 W Central Ave, Toledo, OH 43615</a>
+        </div>
+    </div>
+</div>
+
+<!-- ==================== HEADER ==================== -->
+<header class="site-header">
+    <div class="sh-inner">
+        <a href="/demo/taylor-hyundai-toledo" class="header-logo">
+            <svg viewBox="0 0 200 40" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="20" cy="20" rx="18" ry="16" stroke="#00287A" stroke-width="2.5" fill="none"/><path d="M10 16 C10 16 14 24 20 24 C26 24 30 16 30 16" stroke="#00287A" stroke-width="2.2" fill="none"/><path d="M10 16 C10 16 14 8 20 8 C26 8 30 16 30 16" stroke="#00287A" stroke-width="2.2" fill="none"/><text x="46" y="27" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#00287A">HYUNDAI</text></svg>
+            <div class="header-logo-text">Taylor Hyundai<small>of Toledo</small></div>
+        </a>
+        <nav class="header-nav">
+            <a href="/demo/taylor-hyundai-toledo/inventory" class="active">New Vehicles</a>
+            <a href="/demo/taylor-hyundai-toledo/inventory">Pre-Owned</a>
+            <a href="/demo/taylor-hyundai-toledo/service">Service</a>
+            <a href="/demo/taylor-hyundai-toledo/financing">Financing</a>
+            <a href="/demo/taylor-hyundai-toledo/contact">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<!-- ==================== BREADCRUMB ==================== -->
+<div class="breadcrumb-bar">
+    <div class="bc-inner">
+        <a href="/demo/taylor-hyundai-toledo">Home</a> <span>/</span> Inventory
+    </div>
+</div>
+
+<!-- ==================== SRP ==================== -->
+<section class="search-page-main">
+    <div class="container">
+        <div class="inner">
+
+            <!-- Filter Panel -->
+            <div class="filter-panel">
+                <div class="card-header">
+                    <h2 class="cardtitle">Filters</h2>
+                    <a href="#" class="share-link">
+                        <svg viewBox="0 0 640 512"><path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372.1 74 321.1 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.8l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/></svg>
+                        Share
+                    </a>
+                </div>
+
+                <div class="searchform-main">
+                    <div class="form-field">
+                        <input type="text" placeholder="Search..." />
+                        <div class="search-btn">
+                            <svg viewBox="0 0 512 512"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reset-btn">
+                    <a href="#">
+                        <svg viewBox="0 0 512 512"><path d="M463.5 224H472c13.3 0 24-10.7 24-24V72c0-9.7-5.8-18.5-14.8-22.2s-19.3-1.7-26.2 5.2L413.4 96.6c-87.6-86.5-228.7-86.2-315.8 1c-87.5 87.5-87.5 229.3 0 316.8s229.3 87.5 316.8 0c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0c-62.5 62.5-163.8 62.5-226.3 0s-62.5-163.8 0-226.3c62.2-62.2 162.7-62.5 225.3-1L327 183c-6.9 6.9-8.9 17.2-5.2 26.2s12.5 14.8 22.2 14.8H463.5z"/></svg>
+                        Reset All
+                    </a>
+                </div>
+
+                <div class="filter-item open">
+                    <div class="title">Type</div>
+                    <div class="accordion-content">
+                        <ul>
+                            <li><span>All Vehicles</span> <span class="badge">12</span></li>
+                            <li class="active"><span>New</span> <span class="badge">12</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="filter-item open">
+                    <div class="title">Model</div>
+                    <div class="accordion-content">
+                        <ul>
+                            <li><span>Tucson</span> <span class="badge">2</span></li>
+                            <li><span>Santa Fe</span> <span class="badge">2</span></li>
+                            <li><span>Palisade</span> <span class="badge">1</span></li>
+                            <li><span>IONIQ 5</span> <span class="badge">1</span></li>
+                            <li><span>IONIQ 6</span> <span class="badge">1</span></li>
+                            <li><span>Elantra</span> <span class="badge">1</span></li>
+                            <li><span>Kona</span> <span class="badge">1</span></li>
+                            <li><span>Sonata</span> <span class="badge">1</span></li>
+                            <li><span>Santa Cruz</span> <span class="badge">1</span></li>
+                            <li><span>Venue</span> <span class="badge">1</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="filter-item open">
+                    <div class="title">Year</div>
+                    <div class="accordion-content">
+                        <ul>
+                            <li><span>2025</span> <span class="badge">8</span></li>
+                            <li><span>2026</span> <span class="badge">4</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="filter-item open">
+                    <div class="title">Price</div>
+                    <div class="accordion-content">
+                        <ul>
+                            <li><span>Under $30K</span> <span class="badge">3</span></li>
+                            <li><span>$30K - $40K</span> <span class="badge">4</span></li>
+                            <li><span>$40K - $50K</span> <span class="badge">3</span></li>
+                            <li><span>$50K+</span> <span class="badge">2</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="filter-item">
+                    <div class="title">Drivetrain</div>
+                    <div class="accordion-content" style="display:none;">
+                        <ul>
+                            <li><span>AWD</span> <span class="badge">6</span></li>
+                            <li><span>FWD</span> <span class="badge">4</span></li>
+                            <li><span>RWD</span> <span class="badge">2</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="filter-item">
+                    <div class="title">Exterior Color</div>
+                    <div class="accordion-content" style="display:none;">
+                        <ul>
+                            <li><span>White</span> <span class="badge">3</span></li>
+                            <li><span>Black</span> <span class="badge">2</span></li>
+                            <li><span>Blue</span> <span class="badge">2</span></li>
+                            <li><span>Gray</span> <span class="badge">2</span></li>
+                            <li><span>Red</span> <span class="badge">2</span></li>
+                            <li><span>Silver</span> <span class="badge">1</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results -->
+            <div class="filter-result-wrapper">
+
+                <button class="mobile-filter-btn" style="display:none;">
+                    <svg viewBox="0 0 512 512"><path d="M3.9 54.9C10.5 40.9 24.5 32 40 32H472c15.5 0 29.5 8.9 36.1 22.9s4.6 30.5-5.2 42.5L320 320.9V448c0 12.1-6.8 23.2-17.7 28.6s-23.8 4.3-33.5-3l-64-48C195.8 419.1 192 410 192 400.3V320.9L9.2 97.4C-.6 85.4-2.7 68.9 3.9 54.9z"/></svg>
+                    Filter Vehicles
+                </button>
+
+                <div class="inventory-detail">
+                    <div class="count"><strong>12 Vehicles Found</strong></div>
+                    <div class="sort-by">
+                        <span><strong>Sort Results</strong></span>
+                        <select>
+                            <option selected>Price (low to high)</option>
+                            <option>Price (high to low)</option>
+                            <option>Year (newest)</option>
+                            <option>Year (oldest)</option>
+                            <option>Mileage (low to high)</option>
+                        </select>
+                    </div>
+                    <div class="filter-buttons">
+                        <div title="List View">
+                            <svg viewBox="0 0 512 512"><path d="M40 48C26.7 48 16 58.7 16 72v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V72c0-13.3-10.7-24-24-24H40zM192 64c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zM16 232v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V232c0-13.3-10.7-24-24-24H40c-13.3 0-24 10.7-24 24zM40 368c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V392c0-13.3-10.7-24-24-24H40z"/></svg>
+                        </div>
+                        <div class="active" title="Grid View">
+                            <svg viewBox="0 0 512 512"><path d="M149.333 56v80c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V56c0-13.255 10.745-24 24-24h101.333c13.255 0 24 10.745 24 24zm181.334 240v-80c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.256.001 24.001-10.745 24.001-24zm32-240v80c0 13.255 10.745 24 24 24H488c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24zm-32 0v80c0 13.255-10.745 24-24 24H205.333c-13.255 0-24-10.745-24-24V56c0-13.255 10.745-24 24-24h101.333c13.256 0 24.001 10.745 24.001 24zm-181.334 80V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24zM0 376v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H24c-13.255 0-24 10.745-24 24zm181.333 0v80c0 13.255 10.745 24 24 24h101.333c13.256 0 24.001-10.745 24.001-24v-80c0-13.255-10.745-24-24.001-24H205.333c-13.255 0-24 10.745-24 24zm181.334 0v80c0 13.255 10.745 24 24 24H488c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24zM330.667 216V296c0 13.255 10.745 24 24 24H488c13.255 0 24-10.745 24-24V216c0-13.255-10.745-24-24-24H354.667c-13.255 0-24 10.745-24 24zM0 216v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H24c-13.255 0-24 10.745-24 24z"/></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vehicle Cards -->
+                <div class="list-wrapper" id="vehicleList"></div>
+
+                <div class="pagination-wrapper">
+                    <ul class="pagination">
+                        <li class="disabled"><span>Prev</span></li>
+                        <li class="active"><span>1</span></li>
+                        <li><span>2</span></li>
+                        <li><span>Next</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="site-footer">
+    <div class="ft-inner">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Inventory</h4>
+                <ul>
+                    <li><a href="/demo/taylor-hyundai-toledo/inventory">New Vehicles</a></li>
+                    <li><a href="/demo/taylor-hyundai-toledo/inventory?type=used">Pre-Owned Vehicles</a></li>
+                    <li><a href="/demo/taylor-hyundai-toledo/inventory?type=certified">Certified Pre-Owned</a></li>
+                    <li><a href="/demo/taylor-hyundai-toledo/inventory?special=true">Current Specials</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Service</h4>
+                <ul>
+                    <li><a href="/demo/taylor-hyundai-toledo/service">Schedule Service</a></li>
+                    <li><a href="/demo/taylor-hyundai-toledo/service#specials">Service Specials</a></li>
+                    <li><a href="/demo/taylor-hyundai-toledo/service#parts">Order Parts</a></li>
+                    <li><a href="tel:5674555230">Call Service: (567) 455-5230</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Financing</h4>
+                <ul>
+                    <li><a href="/demo/taylor-hyundai-toledo/financing">Apply for Financing</a></li>
+                    <li><a href="/demo/taylor-hyundai-toledo/financing#calculator">Payment Calculator</a></li>
+                    <li><a href="/demo/taylor-hyundai-toledo/financing#trade">Value Your Trade</a></li>
+                    <li><a href="/demo/taylor-hyundai-toledo/financing#credit">Credit Solutions</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>About Us</h4>
+                <ul>
+                    <li><a href="/demo/taylor-hyundai-toledo/contact">Contact Us</a></li>
+                    <li><a href="/demo/taylor-hyundai-toledo/contact#hours">Hours &amp; Directions</a></li>
+                    <li><a href="/demo/taylor-hyundai-toledo/contact#map">Find Us</a></li>
+                    <li><a href="tel:5674555230">Call Sales: (567) 455-5230</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-cross-links">
+            Also visit: <a href="/demo/taylor-hyundai-perrysburg">Taylor Hyundai of Perrysburg</a> &nbsp;|&nbsp; <a href="/demo/taylor-hyundai-findlay">Taylor Hyundai of Findlay</a> &nbsp;|&nbsp; <a href="/demo/taylor-auto">Part of the Taylor Automotive Family</a>
+        </div>
+        <div class="footer-bottom">
+            <p>Taylor Hyundai of Toledo &mdash; 6200 W Central Ave, Toledo, OH 43615 &nbsp;&bull;&nbsp; &copy; 2026 All Rights Reserved &nbsp;&bull;&nbsp; Powered by <a href="https://www.savvydealer.com" target="_blank" rel="noopener">SavvyDealer</a></p>
+        </div>
+    </div>
+</footer>
+
+<script>
+(function() {
+    var vehicles = [
+        { year: "2025", model: "Tucson", trim: "SEL", color: "Quartz White", drivetrain: "AWD", engine: "2.5L 4-Cyl", stock: "TH5001", msrp: "34,250", discount: "1,250", price: "33,000", savings: "$1,250" },
+        { year: "2025", model: "Tucson", trim: "Limited", color: "Amazon Gray", drivetrain: "AWD", engine: "2.5L Hybrid", stock: "TH5002", msrp: "40,850", discount: "1,500", price: "39,350", savings: "$1,500" },
+        { year: "2025", model: "Santa Fe", trim: "SEL", color: "Serenity White", drivetrain: "AWD", engine: "2.5L Turbo", stock: "TH5003", msrp: "39,550", discount: "1,300", price: "38,250", savings: "$1,300" },
+        { year: "2026", model: "Santa Fe", trim: "Calligraphy", color: "Abyss Black", drivetrain: "AWD", engine: "2.5L Turbo", stock: "TH6001", msrp: "46,250", discount: "0", price: "46,250", savings: "" },
+        { year: "2025", model: "Palisade", trim: "Limited", color: "Steel Graphite", drivetrain: "AWD", engine: "3.8L V6", stock: "TH5004", msrp: "51,900", discount: "2,000", price: "49,900", savings: "$2,000" },
+        { year: "2025", model: "IONIQ 5", trim: "Long Range", color: "Lucid Blue", drivetrain: "RWD", engine: "Electric", stock: "TH5005", msrp: "47,450", discount: "1,750", price: "45,700", savings: "$1,750" },
+        { year: "2026", model: "IONIQ 6", trim: "SE Long Range", color: "Gravity Gold", drivetrain: "RWD", engine: "Electric", stock: "TH6002", msrp: "42,950", discount: "500", price: "42,450", savings: "$500" },
+        { year: "2025", model: "Elantra", trim: "SEL", color: "Phantom Black", drivetrain: "FWD", engine: "2.0L 4-Cyl", stock: "TH5006", msrp: "25,150", discount: "800", price: "24,350", savings: "$800" },
+        { year: "2025", model: "Kona", trim: "Limited", color: "Pulse Red", drivetrain: "AWD", engine: "2.0L 4-Cyl", stock: "TH5007", msrp: "32,400", discount: "1,000", price: "31,400", savings: "$1,000" },
+        { year: "2026", model: "Sonata", trim: "SEL Plus", color: "Shimmering Silver", drivetrain: "FWD", engine: "1.6L Turbo", stock: "TH6003", msrp: "33,500", discount: "750", price: "32,750", savings: "$750" },
+        { year: "2025", model: "Santa Cruz", trim: "SEL Premium", color: "Sage Gray", drivetrain: "AWD", engine: "2.5L Turbo", stock: "TH5008", msrp: "42,200", discount: "1,500", price: "40,700", savings: "$1,500" },
+        { year: "2026", model: "Venue", trim: "SEL", color: "Intense Blue", drivetrain: "FWD", engine: "1.6L 4-Cyl", stock: "TH6004", msrp: "24,200", discount: "600", price: "23,600", savings: "$600" }
+    ];
+
+    var html = '';
+    vehicles.forEach(function(v) {
+        var imgText = v.year + '+Hyundai+' + v.model + '+' + v.trim;
+        var savingsHtml = v.savings ? '<div class="yousave-price"><span class="amount">' + v.savings + '</span><span class="save-label">Potential Savings</span></div>' : '';
+        html += '<div class="list-item"><div class="list-item-inner">'
+            + '<div class="image-block"><a href="/demo/taylor-hyundai-toledo/vdp"><img src="https://placehold.co/960x540/f4f4f4/333333?text=' + encodeURIComponent(imgText) + '" alt="' + v.year + ' Hyundai ' + v.model + ' ' + v.trim + '" loading="lazy" /></a>'
+            + '<div class="watchlist-icon"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div></div>'
+            + '<div class="list-item-detail"><a class="vehicleCardTitle" href="/demo/taylor-hyundai-toledo/vdp">' + v.year + ' Hyundai ' + v.model + ' ' + v.trim + '</a>'
+            + '<div class="details-wrapper">'
+            + '<div class="details"><div class="label">Ext. Color</div><div class="value">' + v.color + '</div></div>'
+            + '<div class="details"><div class="label">Drivetrain</div><div class="value">' + v.drivetrain + '</div></div>'
+            + '<div class="details"><div class="label">Engine</div><div class="value">' + v.engine + '</div></div>'
+            + '<div class="details"><div class="label">Stock #</div><div class="value">' + v.stock + '</div></div>'
+            + '</div></div>'
+            + '<div class="list-item-price"><div class="mobile-apr-price-wrapper"><div class="price-display">' + savingsHtml
+            + '<div class="mobile-price"><span class="price">$' + v.price + '</span><span class="price-label">Dealer Price*</span></div></div></div>'
+            + '<div class="price-toggle" onclick="this.classList.toggle(\'open\');this.nextElementSibling.classList.toggle(\'show\')">Price Details <svg viewBox="0 0 320 512"><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8H32c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg></div>'
+            + '<div class="price-breakup"><div class="row"><div class="label">MSRP</div><div class="msrp">' + v.msrp + '</div></div>'
+            + (v.discount !== "0" ? '<div class="row"><div class="label">Discount</div><div class="dealersavingsprice">-$' + v.discount + '</div></div>' : '')
+            + '<div class="row border-top-dash"><div class="label">Dealer Price*</div><div class="finalprice">$' + v.price + '</div></div></div>'
+            + '<div class="card-actions"><div class="btn_3"><a href="/demo/taylor-hyundai-toledo/vdp">Check Availability</a></div></div></div>'
+            + '</div></div>';
+    });
+    document.getElementById('vehicleList').innerHTML = html;
+})();
+</script>
+
+</body>
+</html>

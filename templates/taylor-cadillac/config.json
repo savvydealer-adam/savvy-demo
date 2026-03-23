@@ -1,0 +1,20 @@
+{
+  "name": "Taylor Cadillac",
+  "slug": "taylor-cadillac",
+  "location": "Toledo, OH",
+  "phone": {
+    "sales": "419-842-8800",
+    "service": "419-842-8800",
+    "parts": "419-842-8800"
+  },
+  "address": "6100 West Central Ave, Toledo, OH 43615",
+  "oem": ["Cadillac"],
+  "colors": {
+    "primary": "#1A1A1A",
+    "secondary": "#C4A265",
+    "accent": "#C4A265"
+  },
+  "tier": "luxury",
+  "group": "Taylor Automotive Family",
+  "groupUrl": "/demo/taylor-auto"
+}

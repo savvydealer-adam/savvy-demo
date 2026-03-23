@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0" />
+    <title>2025 Hyundai Tucson SEL AWD | Taylor Hyundai of Toledo | Toledo, OH</title>
+    <meta name="description" content="View details on the 2025 Hyundai Tucson SEL AWD at Taylor Hyundai of Toledo. Stock #TH5001. Competitive pricing in Toledo, OH. Serving Maumee, Perrysburg, Sylvania." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bodyfont: 'Hyundai Sans Text', 'Inter', sans-serif;
+            --headerbg: #00287A;
+            --footerbg: #1a1a1a;
+            --bodycolor: #19183C;
+            --secondarycolor: #00287A;
+            --accent: #00AAD2;
+            --linktextcolor: #00287A;
+            --blackcolor: #000000;
+            --whitecolor: #fff;
+            --greycolor: #808080;
+            --savingsgreen: #30770f;
+            --transition: all 0.4s;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; }
+        body { margin: 0; font-family: var(--bodyfont); color: var(--bodycolor); font-size: 16px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+        a { color: var(--linktextcolor); text-decoration: none; }
+        a:hover { color: var(--blackcolor); }
+        img { max-width: 100%; height: auto; }
+
+        /* ========== TOP BAR ========== */
+        .top-bar { background: var(--headerbg); color: #fff; padding: 8px 0; font-size: 13px; }
+        .top-bar .tb-inner { max-width: 1630px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+        .top-bar-phones { display: flex; gap: 20px; flex-wrap: wrap; }
+        .top-bar-phones a { color: #fff; font-weight: 500; transition: opacity 0.2s; }
+        .top-bar-phones a:hover { opacity: 0.85; }
+        .top-bar-phones span { color: rgba(255,255,255,0.7); margin-right: 4px; font-weight: 400; }
+        .top-bar-address { color: rgba(255,255,255,0.9); }
+        .top-bar-address a { color: #fff; }
+        .top-bar-address a:hover { text-decoration: underline; }
+
+        /* ========== HEADER ========== */
+        .site-header { background: #fff; border-bottom: 1px solid #f5f5f5; padding: 12px 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+        .site-header .sh-inner { max-width: 1630px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+        .header-logo { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+        .header-logo svg { height: 36px; width: auto; }
+        .header-logo-text { font-size: 16px; font-weight: 700; color: var(--headerbg); line-height: 1.2; }
+        .header-logo-text small { font-size: 11px; font-weight: 500; color: #666; display: block; }
+        .header-nav { display: flex; align-items: center; gap: 6px; }
+        .header-nav a { color: #333; font-size: 14px; font-weight: 500; padding: 6px 12px; border-radius: 4px; transition: background 0.2s, color 0.2s; }
+        .header-nav a:hover { background: #e8f4f8; color: var(--accent); }
+
+        /* ========== BREADCRUMB ========== */
+        .breadcrumb-bar { background: #f8f9fb; border-bottom: 1px solid #eee; padding: 12px 0; }
+        .breadcrumb-bar .bc-inner { max-width: 1630px; margin: 0 auto; padding: 0 24px; font-size: 14px; color: #666; }
+        .breadcrumb-bar a { color: var(--linktextcolor); font-weight: 500; }
+        .breadcrumb-bar a:hover { color: var(--accent); }
+        .breadcrumb-bar span { color: #999; margin: 0 6px; }
+
+        /* ========== VDP LAYOUT ========== */
+        .vdp-main { padding: 30px 0 60px; background: rgb(40 40 40 / 5%); min-height: 80vh; }
+        .vdp-main .vdp-container { max-width: 1400px; margin: 0 auto; padding: 0 24px; }
+        .vdp-layout { display: flex; gap: 30px; align-items: flex-start; }
+        .vdp-left { width: 65%; min-width: 0; }
+        .vdp-right { width: 35%; position: sticky; top: 90px; }
+
+        /* ========== GALLERY ========== */
+        .gallery-card { background: #fff; border: 1px solid rgba(36,39,44,.1); box-shadow: 0 6px 10px rgba(0,0,0,.05); border-radius: 12px; overflow: hidden; margin-bottom: 24px; }
+        .gallery-main { background: #f4f4f4; position: relative; display: flex; align-items: center; justify-content: center; min-height: 400px; padding: 40px; }
+        .gallery-main img { max-width: 100%; max-height: 360px; object-fit: contain; }
+        .gallery-counter { position: absolute; bottom: 16px; right: 16px; background: rgba(0,0,0,0.6); color: #fff; padding: 4px 12px; border-radius: 20px; font-size: 13px; font-weight: 600; }
+        .gallery-thumbs { display: flex; gap: 8px; padding: 16px; overflow-x: auto; }
+        .gallery-thumb { width: 80px; height: 60px; border-radius: 6px; overflow: hidden; cursor: pointer; border: 2px solid transparent; flex-shrink: 0; background: #f4f4f4; display: flex; align-items: center; justify-content: center; }
+        .gallery-thumb.active { border-color: var(--accent); }
+        .gallery-thumb img { width: 100%; height: 100%; object-fit: contain; padding: 4px; }
+
+        /* ========== SPECS CARD ========== */
+        .specs-card { background: #fff; border: 1px solid rgba(36,39,44,.1); box-shadow: 0 6px 10px rgba(0,0,0,.05); border-radius: 12px; padding: 28px; }
+        .specs-card h2 { font-size: 20px; font-weight: 700; margin-bottom: 20px; color: #1a1a1a; }
+        .specs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+        .spec-row { display: flex; justify-content: space-between; padding: 10px 12px; border-bottom: 1px solid #f0f0f0; font-size: 14px; }
+        .spec-row:nth-child(odd) { background: #fafafa; }
+        .spec-label { color: #999; }
+        .spec-value { font-weight: 600; color: #1a1a1a; text-align: right; }
+
+        /* ========== PRICING CARD ========== */
+        .pricing-card { background: #fff; border: 1px solid rgba(36,39,44,.1); box-shadow: 0 6px 10px rgba(0,0,0,.05); border-radius: 12px; padding: 28px; margin-bottom: 24px; }
+        .pricing-card h1 { font-size: 24px; font-weight: 700; color: #1a1a1a; margin-bottom: 4px; line-height: 1.3; }
+        .pricing-card .subtitle { font-size: 14px; color: #999; margin-bottom: 20px; }
+        .price-row { display: flex; justify-content: space-between; padding: 8px 0; font-size: 15px; border-bottom: 1px solid #f0f0f0; }
+        .price-row .label { color: #666; }
+        .price-row .val { font-weight: 700; }
+        .price-row .val.msrp { text-decoration: line-through; color: #999; }
+        .price-row .val.discount { color: var(--accent); }
+        .price-row .val.final { color: var(--savingsgreen); font-size: 22px; }
+        .savings-banner { background: linear-gradient(135deg, var(--secondarycolor), var(--accent)); color: #fff; text-align: center; padding: 14px; border-radius: 8px; margin: 16px 0; font-size: 15px; font-weight: 700; }
+
+        /* ========== CTA BUTTONS ========== */
+        .cta-stack { display: flex; flex-direction: column; gap: 10px; margin-top: 20px; }
+        .cta-btn { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 16px; font-size: 15px; font-weight: 700; border-radius: 8px; border: 2px solid transparent; cursor: pointer; transition: all 0.3s; font-family: inherit; text-transform: uppercase; letter-spacing: 0.5px; }
+        .cta-btn-primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+        .cta-btn-primary:hover { background: #0095b8; border-color: #0095b8; }
+        .cta-btn-secondary { background: transparent; color: var(--secondarycolor); border-color: var(--secondarycolor); }
+        .cta-btn-secondary:hover { background: var(--secondarycolor); color: #fff; }
+        .cta-btn svg { width: 18px; height: 18px; fill: currentColor; }
+
+        /* ========== DEALER INFO ========== */
+        .dealer-card { background: #fff; border: 1px solid rgba(36,39,44,.1); box-shadow: 0 6px 10px rgba(0,0,0,.05); border-radius: 12px; padding: 24px; }
+        .dealer-card h3 { font-size: 16px; font-weight: 700; color: #1a1a1a; margin-bottom: 12px; }
+        .dealer-card p { font-size: 14px; color: #666; line-height: 1.6; margin-bottom: 8px; }
+        .dealer-card a { color: var(--accent); font-weight: 600; }
+        .dealer-card a:hover { text-decoration: underline; }
+
+        /* ========== FOOTER ========== */
+        .site-footer { background: var(--footerbg); color: #ccc; padding: 48px 0 0; }
+        .site-footer .ft-inner { max-width: 1630px; margin: 0 auto; padding: 0 24px; }
+        .footer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; padding-bottom: 40px; border-bottom: 1px solid #333; }
+        .footer-col h4 { font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: #fff; margin: 0 0 16px; }
+        .footer-col ul { list-style: none; padding: 0; margin: 0; }
+        .footer-col li { margin-bottom: 10px; }
+        .footer-col a { color: #aaa; font-size: 14px; transition: color 0.2s; }
+        .footer-col a:hover { color: #fff; }
+        .footer-cross-links { padding: 20px 0; border-bottom: 1px solid #333; text-align: center; font-size: 13px; color: #888; }
+        .footer-cross-links a { color: #00AAD2; font-weight: 500; }
+        .footer-cross-links a:hover { text-decoration: underline; }
+        .footer-bottom { padding: 20px 24px; text-align: center; font-size: 13px; color: #777; }
+        .footer-bottom a { color: #00AAD2; font-weight: 500; }
+        .footer-bottom a:hover { text-decoration: underline; }
+
+        /* ── Responsive ── */
+        @media (max-width: 1023px) {
+            .header-nav { display: none; }
+            .vdp-layout { flex-direction: column; }
+            .vdp-left, .vdp-right { width: 100%; }
+            .vdp-right { position: static; }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 767px) {
+            .top-bar .tb-inner { flex-direction: column; text-align: center; gap: 4px; }
+            .top-bar-phones { justify-content: center; }
+            .site-header .sh-inner { flex-wrap: wrap; justify-content: center; gap: 12px; }
+            .gallery-main { min-height: 260px; padding: 20px; }
+            .specs-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ==================== TOP BAR ==================== -->
+<div class="top-bar">
+    <div class="tb-inner">
+        <div class="top-bar-phones">
+            <a href="tel:5674555230"><span>Sales:</span> (567) 455-5230</a>
+            <a href="tel:5674555230"><span>Service:</span> (567) 455-5230</a>
+            <a href="tel:5674555230"><span>Parts:</span> (567) 455-5230</a>
+        </div>
+        <div class="top-bar-address">
+            <a href="https://maps.google.com/?q=6200+W+Central+Ave+Toledo+OH+43615" target="_blank" rel="noopener">6200 W Central Ave, Toledo, OH 43615</a>
+        </div>
+    </div>
+</div>
+
+<!-- ==================== HEADER ==================== -->
+<header class="site-header">
+    <div class="sh-inner">
+        <a href="/demo/taylor-hyundai-toledo" class="header-logo">
+            <svg viewBox="0 0 200 40" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="20" cy="20" rx="18" ry="16" stroke="#00287A" stroke-width="2.5" fill="none"/><path d="M10 16 C10 16 14 24 20 24 C26 24 30 16 30 16" stroke="#00287A" stroke-width="2.2" fill="none"/><path d="M10 16 C10 16 14 8 20 8 C26 8 30 16 30 16" stroke="#00287A" stroke-width="2.2" fill="none"/><text x="46" y="27" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#00287A">HYUNDAI</text></svg>
+            <div class="header-logo-text">Taylor Hyundai<small>of Toledo</small></div>
+        </a>
+        <nav class="header-nav">
+            <a href="/demo/taylor-hyundai-toledo/inventory">New Vehicles</a>
+            <a href="/demo/taylor-hyundai-toledo/inventory">Pre-Owned</a>
+            <a href="/demo/taylor-hyundai-toledo/service">Service</a>
+            <a href="/demo/taylor-hyundai-toledo/financing">Financing</a>
+            <a href="/demo/taylor-hyundai-toledo/contact">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<!-- ==================== BREADCRUMB ==================== -->
+<div class="breadcrumb-bar">
+    <div class="bc-inner">
+        <a href="/demo/taylor-hyundai-toledo">Home</a> <span>/</span> <a href="/demo/taylor-hyundai-toledo/inventory">Inventory</a> <span>/</span> 2025 Hyundai Tucson SEL
+    </div>
+</div>
+
+<!-- ==================== VDP ==================== -->
+<section class="vdp-main">
+    <div class="vdp-container">
+        <div class="vdp-layout">
+
+            <!-- Left Column -->
+            <div class="vdp-left">
+                <div class="gallery-card">
+                    <div class="gallery-main">
+                        <img src="https://placehold.co/960x540/f4f4f4/333333?text=2025+Hyundai+Tucson+SEL+AWD" alt="2025 Hyundai Tucson SEL AWD" />
+                        <div class="gallery-counter">1 / 6</div>
+                    </div>
+                    <div class="gallery-thumbs">
+                        <div class="gallery-thumb active"><img src="https://placehold.co/160x120/f4f4f4/333333?text=Front" alt="Front view" /></div>
+                        <div class="gallery-thumb"><img src="https://placehold.co/160x120/f4f4f4/333333?text=Side" alt="Side view" /></div>
+                        <div class="gallery-thumb"><img src="https://placehold.co/160x120/f4f4f4/333333?text=Rear" alt="Rear view" /></div>
+                        <div class="gallery-thumb"><img src="https://placehold.co/160x120/f4f4f4/333333?text=Interior" alt="Interior" /></div>
+                        <div class="gallery-thumb"><img src="https://placehold.co/160x120/f4f4f4/333333?text=Dash" alt="Dashboard" /></div>
+                        <div class="gallery-thumb"><img src="https://placehold.co/160x120/f4f4f4/333333?text=Detail" alt="Detail" /></div>
+                    </div>
+                </div>
+
+                <div class="specs-card">
+                    <h2>Vehicle Specifications</h2>
+                    <div class="specs-grid">
+                        <div class="spec-row"><span class="spec-label">Body Style</span><span class="spec-value">SUV</span></div>
+                        <div class="spec-row"><span class="spec-label">Engine</span><span class="spec-value">2.5L 4-Cylinder</span></div>
+                        <div class="spec-row"><span class="spec-label">Transmission</span><span class="spec-value">8-Speed Automatic</span></div>
+                        <div class="spec-row"><span class="spec-label">Drivetrain</span><span class="spec-value">All-Wheel Drive</span></div>
+                        <div class="spec-row"><span class="spec-label">Exterior Color</span><span class="spec-value">Quartz White</span></div>
+                        <div class="spec-row"><span class="spec-label">Interior Color</span><span class="spec-value">Gray</span></div>
+                        <div class="spec-row"><span class="spec-label">Mileage</span><span class="spec-value">12 mi</span></div>
+                        <div class="spec-row"><span class="spec-label">Stock #</span><span class="spec-value">TH5001</span></div>
+                        <div class="spec-row"><span class="spec-label">VIN</span><span class="spec-value">KM8J3CA...4567</span></div>
+                        <div class="spec-row"><span class="spec-label">MPG (City/Hwy)</span><span class="spec-value">26 / 33</span></div>
+                        <div class="spec-row"><span class="spec-label">Horsepower</span><span class="spec-value">187 hp</span></div>
+                        <div class="spec-row"><span class="spec-label">Torque</span><span class="spec-value">178 lb-ft</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="vdp-right">
+                <div class="pricing-card">
+                    <h1>2025 Hyundai Tucson SEL AWD</h1>
+                    <div class="subtitle">Stock #TH5001 &bull; Quartz White &bull; 12 miles</div>
+
+                    <div class="price-row"><span class="label">MSRP</span><span class="val msrp">$34,250</span></div>
+                    <div class="price-row"><span class="label">Taylor Discount</span><span class="val discount">-$1,250</span></div>
+                    <div class="price-row"><span class="label">Dealer Price</span><span class="val final">$33,000</span></div>
+
+                    <div class="savings-banner">You Save $1,250 off MSRP</div>
+
+                    <div class="cta-stack">
+                        <a href="#" class="cta-btn cta-btn-primary">
+                            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            Call (567) 455-5230
+                        </a>
+                        <a href="#" class="cta-btn cta-btn-primary" style="background: var(--secondarycolor); border-color: var(--secondarycolor);">Check Availability</a>
+                        <a href="/demo/taylor-hyundai-toledo/financing" class="cta-btn cta-btn-secondary">Get Pre-Qualified</a>
+                        <a href="#" class="cta-btn cta-btn-secondary">Schedule Test Drive</a>
+                    </div>
+                </div>
+
+                <div class="dealer-card">
+                    <h3>Taylor Hyundai of Toledo</h3>
+                    <p>6200 W Central Ave, Toledo, OH 43615</p>
+                    <p><a href="tel:5674555230">(567) 455-5230</a></p>
+                    <p>Mon-Fri: 9AM-7PM &bull; Sat: 9AM-5PM &bull; Sun: Closed</p>
+                    <p><a href="https://maps.google.com/?q=6200+W+Central+Ave+Toledo+OH+43615" target="_blank" rel="noopener">Get Directions &rarr;</a></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="site-footer">
+    <div class="ft-inner">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Inventory</h4>
+                <ul>
+                    <li><a href="/demo/taylor-hyundai-toledo/inventory">New Vehicles</a></li>
+                    <li><a href="/demo/taylor-hyundai-toledo/inventory?type=used">Pre-Owned Vehicles</a></li>
+                    <li><a href="/demo/taylor-hyundai-toledo/inventory?type=certified">Certified Pre-Owned</a></li>
+                    <li><a href="/demo/taylor-hyundai-toledo/inventory?special=true">Current Specials</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Service</h4>
+                <ul>
+                    <li><a href="/demo/taylor-hyundai-toledo/service">Schedule Service</a></li>
+                    <li><a href="/demo/taylor-hyundai-toledo/service#specials">Service Specials</a></li>
+                    <li><a href="/demo/taylor-hyundai-toledo/service#parts">Order Parts</a></li>
+                    <li><a href="tel:5674555230">Call Service: (567) 455-5230</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Financing</h4>
+                <ul>
+                    <li><a href="/demo/taylor-hyundai-toledo/financing">Apply for Financing</a></li>
+                    <li><a href="/demo/taylor-hyundai-toledo/financing#calculator">Payment Calculator</a></li>
+                    <li><a href="/demo/taylor-hyundai-toledo/financing#trade">Value Your Trade</a></li>
+                    <li><a href="/demo/taylor-hyundai-toledo/financing#credit">Credit Solutions</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>About Us</h4>
+                <ul>
+                    <li><a href="/demo/taylor-hyundai-toledo/contact">Contact Us</a></li>
+                    <li><a href="/demo/taylor-hyundai-toledo/contact#hours">Hours &amp; Directions</a></li>
+                    <li><a href="/demo/taylor-hyundai-toledo/contact#map">Find Us</a></li>
+                    <li><a href="tel:5674555230">Call Sales: (567) 455-5230</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-cross-links">
+            Also visit: <a href="/demo/taylor-hyundai-perrysburg">Taylor Hyundai of Perrysburg</a> &nbsp;|&nbsp; <a href="/demo/taylor-hyundai-findlay">Taylor Hyundai of Findlay</a> &nbsp;|&nbsp; <a href="/demo/taylor-auto">Part of the Taylor Automotive Family</a>
+        </div>
+        <div class="footer-bottom">
+            <p>Taylor Hyundai of Toledo &mdash; 6200 W Central Ave, Toledo, OH 43615 &nbsp;&bull;&nbsp; &copy; 2026 All Rights Reserved &nbsp;&bull;&nbsp; Powered by <a href="https://www.savvydealer.com" target="_blank" rel="noopener">SavvyDealer</a></p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

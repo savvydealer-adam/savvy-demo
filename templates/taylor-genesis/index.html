@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taylor Genesis of Perrysburg | Luxury Genesis Dealer OH</title>
+  <meta name="description" content="Experience the Genesis luxury lineup at Taylor Genesis of Perrysburg. Shop G70, G80, G90, GV60, GV70, GV80 and electrified models. Serving Toledo, Maumee, Bowling Green, Sylvania, and Findlay.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --genesis-black: #111111;
+      --genesis-copper: #B87333;
+      --genesis-white: #FFFFFF;
+      --genesis-warmgray: #8A8A8A;
+      --genesis-dark2: #1A1A1A;
+      --genesis-dark3: #0D0D0D;
+      --font-display: 'Cormorant Garamond', 'Georgia', serif;
+      --font-body: 'DM Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--genesis-white);
+      background: var(--genesis-black);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; height: auto; display: block; }
+
+    /* ========== UTILITY ========== */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    .section-label {
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 6px;
+      color: var(--genesis-copper);
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: 48px;
+      font-weight: 300;
+      letter-spacing: 4px;
+      line-height: 1.15;
+      color: var(--genesis-white);
+    }
+
+    .divider {
+      width: 60px;
+      height: 1px;
+      background: var(--genesis-copper);
+      margin: 24px 0;
+    }
+
+    .divider-center {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ========== TOP BAR ========== */
+    .top-bar {
+      background: var(--genesis-dark3);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      padding: 10px 0;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+
+    .top-bar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .top-bar-phones {
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+
+    .top-bar-phones a {
+      color: rgba(255,255,255,0.7);
+      font-weight: 400;
+      transition: color 0.3s;
+      font-size: 12px;
+    }
+
+    .top-bar-phones a:hover { color: var(--genesis-copper); }
+
+    .top-bar-phones span {
+      color: rgba(255,255,255,0.4);
+      text-transform: uppercase;
+      font-size: 10px;
+      letter-spacing: 2px;
+      margin-right: 6px;
+    }
+
+    .top-bar-address {
+      color: rgba(255,255,255,0.5);
+      font-size: 12px;
+    }
+
+    .top-bar-address a {
+      color: rgba(255,255,255,0.5);
+      transition: color 0.3s;
+    }
+
+    .top-bar-address a:hover { color: var(--genesis-copper); }
+
+    /* ========== HEADER ========== */
+    .site-header {
+      background: var(--genesis-black);
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      transition: background 0.3s;
+    }
+
+    .site-header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .header-logo {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .header-logo-wings {
+      width: 44px;
+      height: 44px;
+    }
+
+    .header-logo-text {
+      font-family: var(--font-body);
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: 10px;
+      text-transform: uppercase;
+      color: var(--genesis-white);
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .header-nav a {
+      color: rgba(255,255,255,0.7);
+      font-size: 12px;
+      font-weight: 400;
+      padding: 8px 16px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transition: color 0.3s;
+    }
+
+    .header-nav a:hover {
+      color: var(--genesis-copper);
+    }
+
+    /* ========== HERO ========== */
+    .hero {
+      background: var(--genesis-black);
+      padding: 120px 0 140px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(ellipse at 50% 30%, rgba(184,115,51,0.06) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(184,115,51,0.3), transparent);
+    }
+
+    .hero .container {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+    }
+
+    .hero-label {
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 8px;
+      color: var(--genesis-copper);
+      margin-bottom: 32px;
+      opacity: 0;
+      animation: fadeUp 1s 0.2s forwards;
+    }
+
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: 72px;
+      font-weight: 300;
+      letter-spacing: 6px;
+      line-height: 1.1;
+      color: var(--genesis-white);
+      margin-bottom: 24px;
+      opacity: 0;
+      animation: fadeUp 1s 0.4s forwards;
+    }
+
+    .hero p {
+      font-family: var(--font-body);
+      font-size: 16px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.5);
+      max-width: 560px;
+      margin: 0 auto 48px;
+      line-height: 1.8;
+      letter-spacing: 0.5px;
+      opacity: 0;
+      animation: fadeUp 1s 0.6s forwards;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: fadeUp 1s 0.8s forwards;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ========== BUTTONS ========== */
+    .btn {
+      display: inline-block;
+      padding: 16px 40px;
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      background: var(--genesis-copper);
+      color: var(--genesis-black);
+      border-color: var(--genesis-copper);
+    }
+
+    .btn-primary:hover {
+      background: transparent;
+      color: var(--genesis-copper);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--genesis-white);
+      border-color: rgba(255,255,255,0.25);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--genesis-copper);
+      color: var(--genesis-copper);
+    }
+
+    /* ========== MODEL SHOWCASE ========== */
+    .model-showcase {
+      padding: 120px 0;
+      background: var(--genesis-dark2);
+      position: relative;
+    }
+
+    .model-showcase::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
+    }
+
+    .model-showcase .section-header {
+      text-align: center;
+      margin-bottom: 72px;
+    }
+
+    .model-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
+
+    .model-card {
+      position: relative;
+      overflow: hidden;
+      background: var(--genesis-black);
+      display: block;
+      aspect-ratio: 3/2;
+      cursor: pointer;
+    }
+
+    .model-card-image {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px;
+      transition: transform 0.6s ease;
+    }
+
+    .model-card:hover .model-card-image {
+      transform: scale(1.03);
+    }
+
+    .model-card-image img {
+      max-width: 85%;
+      max-height: 80%;
+      object-fit: contain;
+    }
+
+    .model-card-overlay {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 32px;
+      background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
+      transition: opacity 0.4s;
+    }
+
+    .model-card-name {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 400;
+      letter-spacing: 3px;
+      color: var(--genesis-white);
+      margin-bottom: 4px;
+    }
+
+    .model-card-type {
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--genesis-copper);
+    }
+
+    .model-card-arrow {
+      position: absolute;
+      bottom: 32px;
+      right: 32px;
+      width: 32px;
+      height: 32px;
+      opacity: 0;
+      transform: translateX(-10px);
+      transition: all 0.4s ease;
+    }
+
+    .model-card:hover .model-card-arrow {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    /* ========== EXPERIENCE SECTION ========== */
+    .experience {
+      padding: 120px 0;
+      background: var(--genesis-black);
+      position: relative;
+    }
+
+    .experience .section-header {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+
+    .experience .section-title {
+      margin-bottom: 20px;
+    }
+
+    .experience-desc {
+      font-family: var(--font-body);
+      font-size: 15px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.5);
+      max-width: 640px;
+      margin: 0 auto;
+      line-height: 1.8;
+      text-align: center;
+    }
+
+    .experience-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: rgba(255,255,255,0.06);
+    }
+
+    .experience-card {
+      background: var(--genesis-black);
+      padding: 56px 40px;
+      text-align: center;
+      transition: background 0.4s;
+    }
+
+    .experience-card:hover {
+      background: var(--genesis-dark2);
+    }
+
+    .experience-icon {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto 24px;
+      opacity: 0.9;
+    }
+
+    .experience-icon svg {
+      width: 100%;
+      height: 100%;
+      stroke: var(--genesis-copper);
+      fill: none;
+      stroke-width: 1;
+    }
+
+    .experience-card h3 {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 400;
+      letter-spacing: 2px;
+      color: var(--genesis-white);
+      margin-bottom: 12px;
+    }
+
+    .experience-card p {
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.7;
+    }
+
+    /* ========== GENESIS AT YOUR DOOR ========== */
+    .at-your-door {
+      padding: 100px 0;
+      background: var(--genesis-dark2);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .at-your-door::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(184,115,51,0.2), transparent);
+    }
+
+    .ayd-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .ayd-content .section-label { margin-bottom: 12px; }
+
+    .ayd-content .section-title {
+      font-size: 40px;
+      margin-bottom: 24px;
+    }
+
+    .ayd-content p {
+      font-family: var(--font-body);
+      font-size: 15px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.8;
+      margin-bottom: 40px;
+    }
+
+    .ayd-image {
+      aspect-ratio: 4/3;
+      background: var(--genesis-black);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .ayd-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .ayd-image::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border: 1px solid rgba(184,115,51,0.15);
+    }
+
+    /* ========== FOOTER ========== */
+    .site-footer {
+      background: var(--genesis-dark3);
+      color: rgba(255,255,255,0.5);
+      padding: 80px 0 0;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 60px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .footer-brand .footer-logo-text {
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 8px;
+      text-transform: uppercase;
+      color: var(--genesis-white);
+      margin-bottom: 20px;
+    }
+
+    .footer-brand p {
+      font-size: 14px;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 24px;
+    }
+
+    .footer-brand .footer-group {
+      font-size: 12px;
+      letter-spacing: 1px;
+      color: rgba(255,255,255,0.3);
+    }
+
+    .footer-brand .footer-group a {
+      color: var(--genesis-copper);
+      transition: opacity 0.3s;
+    }
+
+    .footer-brand .footer-group a:hover { opacity: 0.7; }
+
+    .footer-col h4 {
+      font-family: var(--font-body);
+      font-size: 10px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      color: var(--genesis-copper);
+      margin-bottom: 24px;
+    }
+
+    .footer-col ul { list-style: none; }
+
+    .footer-col li { margin-bottom: 14px; }
+
+    .footer-col a {
+      color: rgba(255,255,255,0.4);
+      font-size: 13px;
+      font-weight: 300;
+      letter-spacing: 0.5px;
+      transition: color 0.3s;
+    }
+
+    .footer-col a:hover { color: var(--genesis-white); }
+
+    .footer-bottom {
+      padding: 28px 0;
+      text-align: center;
+      font-size: 12px;
+      color: rgba(255,255,255,0.25);
+      letter-spacing: 0.5px;
+    }
+
+    .footer-bottom a {
+      color: var(--genesis-copper);
+      font-weight: 400;
+      transition: opacity 0.3s;
+    }
+
+    .footer-bottom a:hover { opacity: 0.7; }
+
+    .footer-cities {
+      margin-top: 8px;
+      font-size: 11px;
+      color: rgba(255,255,255,0.2);
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 1023px) {
+      .header-nav { display: none; }
+
+      .hero { min-height: 70vh; padding: 80px 0 100px; }
+
+      .hero h1 { font-size: 48px; letter-spacing: 3px; }
+
+      .section-title { font-size: 36px; }
+
+      .model-grid { grid-template-columns: repeat(2, 1fr); }
+
+      .experience-grid { grid-template-columns: repeat(2, 1fr); }
+
+      .ayd-inner { grid-template-columns: 1fr; gap: 40px; }
+
+      .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 36px; }
+    }
+
+    @media (max-width: 640px) {
+      .top-bar .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 4px;
+      }
+
+      .top-bar-phones { justify-content: center; }
+
+      .site-header .container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+      }
+
+      .header-logo-text { font-size: 13px; letter-spacing: 6px; }
+
+      .hero { min-height: auto; padding: 64px 0 80px; }
+
+      .hero h1 { font-size: 32px; letter-spacing: 2px; }
+
+      .hero-label { font-size: 10px; letter-spacing: 5px; }
+
+      .hero p { font-size: 14px; }
+
+      .model-grid { grid-template-columns: 1fr; }
+
+      .model-showcase, .experience, .at-your-door { padding: 80px 0; }
+
+      .experience-grid { grid-template-columns: 1fr; }
+
+      .experience-card { padding: 40px 24px; }
+
+      .section-title { font-size: 28px; letter-spacing: 2px; }
+
+      .footer-grid { grid-template-columns: 1fr; text-align: center; }
+
+      .divider-center, .divider { margin-left: auto; margin-right: auto; }
+    }
+  </style>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoDealer",
+    "name": "Taylor Genesis of Perrysburg",
+    "description": "Authorized Genesis luxury vehicle dealer in Perrysburg, Ohio. New and certified pre-owned Genesis vehicles, service, and parts.",
+    "url": "https://demo.savvydealer.com/demo/taylor-genesis",
+    "telephone": "+14199318000",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "12681 Eckel Junction Rd",
+      "addressLocality": "Perrysburg",
+      "addressRegion": "OH",
+      "postalCode": "43551",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "41.5409",
+      "longitude": "-83.6541"
+    },
+    "brand": {
+      "@type": "Brand",
+      "name": "Genesis"
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "Taylor Automotive Family"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "09:00",
+        "closes": "19:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "09:00",
+        "closes": "17:00"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ==================== TOP BAR ==================== -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-phones">
+        <a href="tel:4199318000"><span>Sales</span> (419) 931-8000</a>
+        <a href="tel:8882737118"><span>Service</span> (888) 273-7118</a>
+        <a href="tel:8669461385"><span>Parts</span> (866) 946-1385</a>
+      </div>
+      <div class="top-bar-address">
+        <a href="https://maps.google.com/?q=12681+Eckel+Junction+Rd+Perrysburg+OH+43551" target="_blank" rel="noopener">
+          12681 Eckel Junction Rd, Perrysburg, OH 43551
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="site-header">
+    <div class="container">
+      <a href="/demo/taylor-genesis" class="header-logo">
+        <!-- Genesis Wing Emblem (SVG) -->
+        <svg class="header-logo-wings" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M40 16 C28 24, 8 32, 4 40 C8 40, 28 38, 40 34" stroke="#B87333" stroke-width="1.2" fill="none"/>
+          <path d="M40 16 C52 24, 72 32, 76 40 C72 40, 52 38, 40 34" stroke="#B87333" stroke-width="1.2" fill="none"/>
+          <path d="M40 22 C30 28, 14 34, 10 40 C14 39, 30 37, 40 34" stroke="#B87333" stroke-width="0.8" fill="none" opacity="0.6"/>
+          <path d="M40 22 C50 28, 66 34, 70 40 C66 39, 50 37, 40 34" stroke="#B87333" stroke-width="0.8" fill="none" opacity="0.6"/>
+          <line x1="40" y1="34" x2="40" y2="64" stroke="#B87333" stroke-width="1"/>
+          <circle cx="40" cy="34" r="3" stroke="#B87333" stroke-width="1" fill="none"/>
+        </svg>
+        <span class="header-logo-text">Genesis</span>
+      </a>
+      <nav class="header-nav">
+        <a href="/demo/taylor-genesis/inventory">Inventory</a>
+        <a href="/demo/taylor-genesis/service">Service</a>
+        <a href="/demo/taylor-genesis/financing">Finance</a>
+        <a href="/demo/taylor-genesis/contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-label">Taylor Genesis of Perrysburg</div>
+      <h1>Athletic Elegance<br>Redefined</h1>
+      <p>Discover a new standard of luxury. Every Genesis is designed to move you -- in body and spirit. Experience it at Taylor Genesis.</p>
+      <div class="hero-ctas">
+        <a href="/demo/taylor-genesis/inventory" class="btn btn-primary">Explore Inventory</a>
+        <a href="/demo/taylor-genesis/service" class="btn btn-outline">Genesis Concierge</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== MODEL SHOWCASE ==================== -->
+  <section class="model-showcase">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">The Lineup</div>
+        <h2 class="section-title">Every Model, One Vision</h2>
+        <div class="divider divider-center"></div>
+      </div>
+
+      <div class="model-grid">
+        <a href="/demo/taylor-genesis/inventory?model=G70" class="model-card">
+          <div class="model-card-image">
+            <img src="https://placehold.co/600x400/111111/B87333?text=2025+Genesis+G70" alt="2025 Genesis G70" loading="lazy">
+          </div>
+          <div class="model-card-overlay">
+            <div class="model-card-name">G70</div>
+            <div class="model-card-type">Sport Sedan</div>
+          </div>
+          <svg class="model-card-arrow" viewBox="0 0 24 24" fill="none" stroke="#B87333" stroke-width="1"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+
+        <a href="/demo/taylor-genesis/inventory?model=G80" class="model-card">
+          <div class="model-card-image">
+            <img src="https://placehold.co/600x400/111111/B87333?text=2025+Genesis+G80" alt="2025 Genesis G80" loading="lazy">
+          </div>
+          <div class="model-card-overlay">
+            <div class="model-card-name">G80</div>
+            <div class="model-card-type">Luxury Sedan</div>
+          </div>
+          <svg class="model-card-arrow" viewBox="0 0 24 24" fill="none" stroke="#B87333" stroke-width="1"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+
+        <a href="/demo/taylor-genesis/inventory?model=G90" class="model-card">
+          <div class="model-card-image">
+            <img src="https://placehold.co/600x400/111111/B87333?text=2025+Genesis+G90" alt="2025 Genesis G90" loading="lazy">
+          </div>
+          <div class="model-card-overlay">
+            <div class="model-card-name">G90</div>
+            <div class="model-card-type">Flagship Sedan</div>
+          </div>
+          <svg class="model-card-arrow" viewBox="0 0 24 24" fill="none" stroke="#B87333" stroke-width="1"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+
+        <a href="/demo/taylor-genesis/inventory?model=GV60" class="model-card">
+          <div class="model-card-image">
+            <img src="https://placehold.co/600x400/111111/B87333?text=2025+Genesis+GV60" alt="2025 Genesis GV60" loading="lazy">
+          </div>
+          <div class="model-card-overlay">
+            <div class="model-card-name">GV60</div>
+            <div class="model-card-type">Electric Crossover</div>
+          </div>
+          <svg class="model-card-arrow" viewBox="0 0 24 24" fill="none" stroke="#B87333" stroke-width="1"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+
+        <a href="/demo/taylor-genesis/inventory?model=GV70" class="model-card">
+          <div class="model-card-image">
+            <img src="https://placehold.co/600x400/111111/B87333?text=2025+Genesis+GV70" alt="2025 Genesis GV70" loading="lazy">
+          </div>
+          <div class="model-card-overlay">
+            <div class="model-card-name">GV70</div>
+            <div class="model-card-type">Luxury SUV</div>
+          </div>
+          <svg class="model-card-arrow" viewBox="0 0 24 24" fill="none" stroke="#B87333" stroke-width="1"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+
+        <a href="/demo/taylor-genesis/inventory?model=GV80" class="model-card">
+          <div class="model-card-image">
+            <img src="https://placehold.co/600x400/111111/B87333?text=2025+Genesis+GV80" alt="2025 Genesis GV80" loading="lazy">
+          </div>
+          <div class="model-card-overlay">
+            <div class="model-card-name">GV80</div>
+            <div class="model-card-type">Flagship SUV</div>
+          </div>
+          <svg class="model-card-arrow" viewBox="0 0 24 24" fill="none" stroke="#B87333" stroke-width="1"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+
+        <a href="/demo/taylor-genesis/inventory?model=GV80+Coupe" class="model-card">
+          <div class="model-card-image">
+            <img src="https://placehold.co/600x400/111111/B87333?text=2025+Genesis+GV80+Coupe" alt="2025 Genesis GV80 Coupe" loading="lazy">
+          </div>
+          <div class="model-card-overlay">
+            <div class="model-card-name">GV80 Coupe</div>
+            <div class="model-card-type">Luxury Coupe SUV</div>
+          </div>
+          <svg class="model-card-arrow" viewBox="0 0 24 24" fill="none" stroke="#B87333" stroke-width="1"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+
+        <a href="/demo/taylor-genesis/inventory?model=Electrified+GV70" class="model-card">
+          <div class="model-card-image">
+            <img src="https://placehold.co/600x400/111111/B87333?text=Electrified+GV70" alt="Genesis Electrified GV70" loading="lazy">
+          </div>
+          <div class="model-card-overlay">
+            <div class="model-card-name">Electrified GV70</div>
+            <div class="model-card-type">Electric SUV</div>
+          </div>
+          <svg class="model-card-arrow" viewBox="0 0 24 24" fill="none" stroke="#B87333" stroke-width="1"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+
+        <a href="/demo/taylor-genesis/inventory?model=Electrified+G80" class="model-card">
+          <div class="model-card-image">
+            <img src="https://placehold.co/600x400/111111/B87333?text=Electrified+G80" alt="Genesis Electrified G80" loading="lazy">
+          </div>
+          <div class="model-card-overlay">
+            <div class="model-card-name">Electrified G80</div>
+            <div class="model-card-type">Electric Sedan</div>
+          </div>
+          <svg class="model-card-arrow" viewBox="0 0 24 24" fill="none" stroke="#B87333" stroke-width="1"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== THE GENESIS EXPERIENCE ==================== -->
+  <section class="experience">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">The Difference</div>
+        <h2 class="section-title">The Genesis Experience</h2>
+        <div class="divider divider-center"></div>
+        <p class="experience-desc">Genesis ownership transcends the vehicle itself. From the moment of first contact, every interaction is crafted to exceed the expectations of discerning drivers.</p>
+      </div>
+
+      <div class="experience-grid">
+        <div class="experience-card">
+          <div class="experience-icon">
+            <svg viewBox="0 0 48 48" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="24" cy="24" r="20"/>
+              <path d="M24 14v10l7 7"/>
+            </svg>
+          </div>
+          <h3>Complimentary Maintenance</h3>
+          <p>Three years or 36,000 miles of scheduled maintenance at no cost. Because caring for your Genesis should be effortless.</p>
+        </div>
+        <div class="experience-card">
+          <div class="experience-icon">
+            <svg viewBox="0 0 48 48" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="8" y="12" width="32" height="24" rx="2"/>
+              <path d="M8 20h32"/>
+              <path d="M16 30h8"/>
+            </svg>
+          </div>
+          <h3>Genesis at Your Door</h3>
+          <p>We bring the showroom to you. Schedule a test drive at your home or office -- on your terms, at your convenience.</p>
+        </div>
+        <div class="experience-card">
+          <div class="experience-icon">
+            <svg viewBox="0 0 48 48" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 36V18l12-8 12 8v18"/>
+              <path d="M20 36v-10h8v10"/>
+            </svg>
+          </div>
+          <h3>Valet Service</h3>
+          <p>When your Genesis needs service, we pick it up and return it. A loaner vehicle is provided while yours is in our care.</p>
+        </div>
+        <div class="experience-card">
+          <div class="experience-icon">
+            <svg viewBox="0 0 48 48" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 24h40"/>
+              <circle cx="24" cy="24" r="4"/>
+              <path d="M24 4v8M24 36v8M40 8l-6 6M14 30l-6 6M8 8l6 6M34 30l6 6"/>
+            </svg>
+          </div>
+          <h3>Connected Services</h3>
+          <p>Remote start, vehicle diagnostics, and navigation updates -- all seamlessly integrated through the Genesis Connected app.</p>
+        </div>
+        <div class="experience-card">
+          <div class="experience-icon">
+            <svg viewBox="0 0 48 48" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 8h8v8h-8z"/>
+              <path d="M8 24h8v8H8z"/>
+              <path d="M32 24h8v8h-8z"/>
+              <path d="M24 16v8M16 28H12M36 28h-4"/>
+            </svg>
+          </div>
+          <h3>Personal Concierge</h3>
+          <p>A dedicated Genesis concierge handles every detail -- from scheduling service to curating your ownership experience.</p>
+        </div>
+        <div class="experience-card">
+          <div class="experience-icon">
+            <svg viewBox="0 0 48 48" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M24 4l6 12h14l-11 8 4 14-13-9-13 9 4-14L4 16h14z"/>
+            </svg>
+          </div>
+          <h3>Award-Winning Quality</h3>
+          <p>Industry-leading warranty. Top marks in safety. Genesis consistently ranks among the world's most reliable luxury brands.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== GENESIS AT YOUR DOOR ==================== -->
+  <section class="at-your-door">
+    <div class="container">
+      <div class="ayd-inner">
+        <div class="ayd-content">
+          <div class="section-label">Signature Service</div>
+          <h2 class="section-title">Genesis at Your Door</h2>
+          <div class="divider"></div>
+          <p>The luxury experience should never require compromise. With Genesis at Your Door, we bring the entire purchase experience to you -- from test drives to final delivery. No showroom visit required.</p>
+          <a href="/demo/taylor-genesis/contact" class="btn btn-primary">Schedule Your Experience</a>
+        </div>
+        <div class="ayd-image">
+          <img src="https://placehold.co/800x600/111111/B87333?text=Genesis+At+Your+Door" alt="Genesis At Your Door Service" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo-text">Genesis</div>
+          <p>Taylor Genesis of Perrysburg<br>12681 Eckel Junction Rd<br>Perrysburg, OH 43551</p>
+          <div class="footer-group">Part of the <a href="/demo/taylor-auto">Taylor Automotive Family</a></div>
+        </div>
+        <div class="footer-col">
+          <h4>Inventory</h4>
+          <ul>
+            <li><a href="/demo/taylor-genesis/inventory">New Vehicles</a></li>
+            <li><a href="/demo/taylor-genesis/inventory?type=certified">Certified Pre-Owned</a></li>
+            <li><a href="/demo/taylor-genesis/inventory?type=special">Current Offers</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Ownership</h4>
+          <ul>
+            <li><a href="/demo/taylor-genesis/service">Schedule Service</a></li>
+            <li><a href="/demo/taylor-genesis/service#valet">Valet Service</a></li>
+            <li><a href="/demo/taylor-genesis/financing">Genesis Finance</a></li>
+            <li><a href="/demo/taylor-genesis/contact">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Sister Stores</h4>
+          <ul>
+            <li><a href="/demo/taylor-hyundai-perrysburg">Taylor Hyundai Perrysburg</a></li>
+            <li><a href="/demo/taylor-hyundai-toledo">Taylor Hyundai Toledo</a></li>
+            <li><a href="/demo/taylor-hyundai-findlay">Taylor Hyundai Findlay</a></li>
+            <li><a href="/demo/taylor-kia-toledo">Taylor Kia Toledo</a></li>
+            <li><a href="/demo/taylor-kia-findlay">Taylor Kia Findlay</a></li>
+            <li><a href="/demo/taylor-kia-lima">Taylor Kia Lima</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Taylor Genesis of Perrysburg &mdash; 12681 Eckel Junction Rd, Perrysburg, OH 43551 &nbsp;&bull;&nbsp; &copy; 2026 All Rights Reserved &nbsp;&bull;&nbsp; Powered by <a href="https://www.savvydealer.com" target="_blank" rel="noopener">SavvyDealer</a></p>
+        <div class="footer-cities">Proudly serving Toledo, Maumee, Bowling Green, Sylvania, Findlay, and all of Northwest Ohio</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

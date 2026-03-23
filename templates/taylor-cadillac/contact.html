@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | Taylor Cadillac | Luxury Dealer Toledo, OH</title>
+    <meta name="description" content="Contact Taylor Cadillac in Toledo, OH. Sales, Service, and Parts: (419) 842-8800. 6100 West Central Ave, Toledo, OH 43615. Serving Maumee, Perrysburg, Sylvania, Oregon, Bowling Green, and Findlay." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --gold: #C4A265;
+            --black: #1A1A1A;
+            --dark: #0D0D0D;
+            --white: #FFFFFF;
+            --gray-50: #F5F5F5;
+            --gray-100: #EEEEEE;
+            --gray-400: #999;
+            --gray-600: #666;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            color: #333;
+            background: var(--white);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; display: block; }
+
+        /* ========== TOP BAR ========== */
+        .top-bar {
+            background: #111111; color: #fff; padding: 10px 0; font-size: 13px;
+            border-bottom: 1px solid rgba(196,162,101,0.2);
+        }
+        .top-bar .container {
+            max-width: 1280px; margin: 0 auto; padding: 0 24px;
+            display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;
+        }
+        .top-bar-phones { display: flex; gap: 24px; flex-wrap: wrap; }
+        .top-bar-phones a { color: #fff; font-weight: 500; transition: color 0.3s; letter-spacing: 0.5px; }
+        .top-bar-phones a:hover { color: var(--gold); }
+        .top-bar-phones span { color: var(--gold); margin-right: 6px; font-weight: 400; text-transform: uppercase; font-size: 10px; letter-spacing: 1.5px; }
+        .top-bar-address { color: rgba(255,255,255,0.7); letter-spacing: 0.5px; }
+        .top-bar-address a { color: rgba(255,255,255,0.7); transition: color 0.3s; }
+        .top-bar-address a:hover { color: var(--gold); }
+
+        /* ========== HEADER ========== */
+        .site-header {
+            background: var(--black); padding: 18px 0; position: sticky; top: 0; z-index: 100;
+            border-bottom: 1px solid rgba(196,162,101,0.15);
+        }
+        .site-header .container {
+            max-width: 1280px; margin: 0 auto; padding: 0 24px;
+            display: flex; align-items: center; justify-content: space-between; gap: 20px;
+        }
+        .header-brand { display: flex; align-items: center; gap: 14px; flex-shrink: 0; color: #fff; }
+        .header-crest { width: 36px; height: 36px; }
+        .header-dealer-name { font-size: 18px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: #fff; }
+        .header-dealer-name small { display: block; font-size: 10px; font-weight: 400; letter-spacing: 2px; color: var(--gold); margin-top: 2px; }
+        .header-nav { display: flex; align-items: center; gap: 4px; }
+        .header-nav a { color: rgba(255,255,255,0.75); font-size: 13px; font-weight: 500; padding: 10px 16px; letter-spacing: 1.5px; text-transform: uppercase; transition: color 0.3s, background 0.3s; border-radius: 2px; }
+        .header-nav a:hover { color: var(--gold); background: rgba(196,162,101,0.08); }
+        .header-nav a.active { color: var(--gold); background: rgba(196,162,101,0.1); }
+
+        /* ========== BUTTONS ========== */
+        .btn {
+            display: inline-flex; align-items: center; gap: 8px; padding: 16px 36px; font-size: 12px; font-weight: 600;
+            font-family: inherit; letter-spacing: 2px; text-transform: uppercase; border: 1px solid transparent;
+            cursor: pointer; transition: all 0.3s; text-align: center;
+        }
+        .btn-gold { background: var(--gold); color: var(--black); border-color: var(--gold); }
+        .btn-gold:hover { background: transparent; color: var(--gold); }
+        .btn-outline { background: transparent; color: rgba(255,255,255,0.8); border-color: rgba(255,255,255,0.3); }
+        .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+        /* ========== HERO ========== */
+        .contact-hero {
+            position: relative;
+            background: linear-gradient(165deg, #0D0D0D 0%, #1A1A1A 40%, #252525 100%);
+            overflow: hidden;
+            padding: 80px 0;
+        }
+        .contact-hero::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(ellipse at 50% 30%, rgba(196,162,101,0.06) 0%, transparent 70%); pointer-events: none;
+        }
+        .contact-hero::after {
+            content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+            width: 200px; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+        .contact-hero-inner {
+            max-width: 800px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; text-align: center;
+        }
+        .contact-hero-inner .eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
+        .contact-hero-inner h1 { font-size: 44px; font-weight: 300; color: var(--white); line-height: 1.15; margin-bottom: 12px; letter-spacing: 2px; text-transform: uppercase; }
+        .contact-hero-inner h1 strong { font-weight: 700; }
+        .contact-hero-inner p { font-size: 17px; color: rgba(255,255,255,0.5); max-width: 520px; margin: 0 auto; }
+
+        /* ========== DEPARTMENT CARDS ========== */
+        .dept-cards {
+            padding: 80px 0;
+            background: var(--gray-50);
+        }
+        .dept-cards .container {
+            max-width: 1280px; margin: 0 auto; padding: 0 24px;
+        }
+        .dept-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+        .dept-card {
+            background: var(--white);
+            border: 1px solid rgba(0,0,0,0.06);
+            padding: 40px 32px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .dept-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 36px rgba(0,0,0,0.08);
+        }
+        .dept-card-icon {
+            width: 56px; height: 56px; border: 1px solid rgba(196,162,101,0.3); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;
+        }
+        .dept-card-icon svg { width: 24px; height: 24px; stroke: var(--gold); fill: none; }
+        .dept-card h3 {
+            font-size: 14px; font-weight: 600; color: var(--black); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px;
+        }
+        .dept-card-phone {
+            font-size: 24px; font-weight: 700; color: var(--gold); display: block; margin-bottom: 16px; letter-spacing: 1px;
+        }
+        .dept-card-phone:hover { color: var(--black); }
+        .dept-card-hours { font-size: 14px; color: var(--gray-600); line-height: 1.8; }
+        .dept-card-hours strong { color: var(--black); font-weight: 600; }
+
+        /* ========== CONTACT MAIN ========== */
+        .contact-main { padding: 80px 0; }
+        .contact-main .container {
+            max-width: 1280px; margin: 0 auto; padding: 0 24px;
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: start;
+        }
+
+        /* Form */
+        .contact-form-wrap {
+            background: var(--white);
+            border: 1px solid rgba(0,0,0,0.06);
+            padding: 44px 36px;
+        }
+        .contact-form-wrap h2 {
+            font-size: 22px; font-weight: 300; color: var(--black); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px;
+        }
+        .contact-form-wrap > p {
+            font-size: 14px; color: var(--gray-600); margin-bottom: 28px; letter-spacing: 0.3px;
+        }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+        .form-group { display: flex; flex-direction: column; }
+        .form-group.full { grid-column: 1 / -1; }
+        .form-group label { font-size: 11px; font-weight: 600; color: var(--black); margin-bottom: 8px; letter-spacing: 1.5px; text-transform: uppercase; }
+        .form-group input, .form-group select, .form-group textarea {
+            font-family: inherit; font-size: 15px; padding: 14px 16px;
+            border: 1px solid var(--gray-100); background: var(--white); color: var(--black);
+            transition: border-color 0.2s; outline: none;
+        }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--gold); }
+        .form-group textarea { resize: vertical; min-height: 120px; }
+        .form-group select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='%23999'%3E%3Cpath d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 14px center;
+            padding-right: 36px;
+        }
+        .form-submit { margin-top: 24px; }
+        .form-submit .btn { width: 100%; justify-content: center; padding: 16px 28px; }
+
+        /* Map */
+        .contact-map-wrap h2 {
+            font-size: 22px; font-weight: 300; color: var(--black); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px;
+        }
+        .contact-map-wrap > p { font-size: 14px; color: var(--gray-600); margin-bottom: 20px; letter-spacing: 0.3px; }
+        .contact-map-embed {
+            overflow: hidden; border: 1px solid rgba(0,0,0,0.06); margin-bottom: 24px;
+        }
+        .contact-map-embed iframe { display: block; width: 100%; height: 360px; border: 0; }
+        .contact-address-card {
+            background: var(--black); padding: 28px; color: var(--white);
+        }
+        .contact-address-card h4 {
+            font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 12px;
+        }
+        .contact-address-card p { font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1.8; margin-bottom: 12px; }
+        .contact-address-card a { color: var(--gold); font-weight: 600; transition: color 0.3s; }
+        .contact-address-card a:hover { color: #fff; }
+
+        /* ========== HOURS SECTION ========== */
+        .hours-section {
+            padding: 80px 0;
+            background: var(--black);
+            position: relative;
+        }
+        .hours-section::before {
+            content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+            width: 200px; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+        .hours-section .container {
+            max-width: 1280px; margin: 0 auto; padding: 0 24px;
+        }
+        .section-header { text-align: center; margin-bottom: 48px; }
+        .section-header .eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+        .section-header h2 { font-size: 36px; font-weight: 300; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px; }
+        .section-divider { width: 60px; height: 1px; background: var(--gold); margin: 16px auto 0; }
+
+        .hours-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+        .hours-card {
+            border: 1px solid rgba(196,162,101,0.15);
+            padding: 36px 28px;
+            text-align: center;
+        }
+        .hours-card h3 {
+            font-size: 13px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 20px;
+        }
+        .hours-card table { width: 100%; border-collapse: collapse; }
+        .hours-card td { padding: 8px 0; font-size: 14px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+        .hours-card td:first-child { text-align: left; color: rgba(255,255,255,0.5); }
+        .hours-card td:last-child { text-align: right; color: var(--white); font-weight: 500; }
+        .hours-card tr:last-child td { border-bottom: none; }
+
+        /* ========== AREAS SERVED ========== */
+        .areas-section {
+            padding: 80px 0;
+            background: var(--gray-50);
+        }
+        .areas-section .container {
+            max-width: 1280px; margin: 0 auto; padding: 0 24px;
+        }
+        .areas-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 40px;
+        }
+        .area-tag {
+            padding: 12px 28px;
+            border: 1px solid rgba(0,0,0,0.1);
+            background: var(--white);
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--black);
+            letter-spacing: 1px;
+            transition: all 0.3s;
+        }
+        .area-tag:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        /* ========== FOOTER ========== */
+        .site-footer {
+            background: var(--dark); color: #aaa; padding: 64px 0 0;
+            border-top: 1px solid rgba(196,162,101,0.15);
+        }
+        .site-footer .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+        .footer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+        .footer-col h4 { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--gold); margin-bottom: 20px; }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 12px; }
+        .footer-col a { color: rgba(255,255,255,0.45); font-size: 14px; transition: color 0.3s; letter-spacing: 0.3px; }
+        .footer-col a:hover { color: var(--gold); }
+        .footer-bottom { padding: 24px 0; text-align: center; font-size: 12px; color: rgba(255,255,255,0.3); letter-spacing: 0.5px; }
+        .footer-bottom a { color: var(--gold); font-weight: 500; }
+        .footer-bottom a:hover { text-decoration: underline; }
+        .footer-family { margin-top: 8px; font-size: 11px; color: rgba(255,255,255,0.2); letter-spacing: 1px; }
+        .footer-family a { color: rgba(255,255,255,0.35); }
+        .footer-family a:hover { color: var(--gold); }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 1023px) {
+            .header-nav { display: none; }
+            .dept-cards-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .hours-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
+        }
+        @media (max-width: 640px) {
+            .top-bar .container { flex-direction: column; text-align: center; gap: 6px; }
+            .top-bar-phones { justify-content: center; }
+            .site-header .container { flex-wrap: wrap; justify-content: center; gap: 12px; }
+            .contact-hero { padding: 56px 0; }
+            .contact-hero-inner h1 { font-size: 30px; }
+            .dept-cards, .contact-main, .hours-section, .areas-section { padding: 56px 0; }
+            .contact-form-wrap { padding: 32px 24px; }
+            .form-row { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ==================== TOP BAR ==================== -->
+<div class="top-bar">
+    <div class="container">
+        <div class="top-bar-phones">
+            <a href="tel:4198428800"><span>Sales</span> (419) 842-8800</a>
+            <a href="tel:4198428800"><span>Service</span> (419) 842-8800</a>
+            <a href="tel:4198428800"><span>Parts</span> (419) 842-8800</a>
+        </div>
+        <div class="top-bar-address">
+            <a href="https://maps.google.com/?q=6100+West+Central+Ave+Toledo+OH+43615" target="_blank" rel="noopener">6100 West Central Ave, Toledo, OH 43615</a>
+        </div>
+    </div>
+</div>
+
+<!-- ==================== HEADER ==================== -->
+<header class="site-header">
+    <div class="container">
+        <a href="/demo/taylor-cadillac" class="header-brand">
+            <svg class="header-crest" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="1" y="1" width="38" height="38" rx="4" stroke="#C4A265" stroke-width="1.5" fill="none"/>
+                <path d="M20 6L26 14H14L20 6Z" fill="#C4A265"/>
+                <rect x="17" y="14" width="6" height="14" fill="#C4A265" opacity="0.7"/>
+                <path d="M12 20H28" stroke="#C4A265" stroke-width="1"/>
+                <path d="M14 24H26" stroke="#C4A265" stroke-width="1"/>
+                <path d="M20 28L26 34H14L20 28Z" fill="#C4A265" opacity="0.5"/>
+            </svg>
+            <div class="header-dealer-name">Taylor Cadillac<small>Toledo, Ohio</small></div>
+        </a>
+        <nav class="header-nav">
+            <a href="/demo/taylor-cadillac/inventory">Inventory</a>
+            <a href="/demo/taylor-cadillac/service">Service</a>
+            <a href="/demo/taylor-cadillac/financing">Financing</a>
+            <a href="/demo/taylor-cadillac/contact" class="active">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<!-- ==================== HERO ==================== -->
+<section class="contact-hero">
+    <div class="contact-hero-inner">
+        <div class="eyebrow">Get In Touch</div>
+        <h1>Contact <strong>Taylor Cadillac</strong></h1>
+        <p>We're here to help. Reach out to our team for sales, service, or any questions about the Cadillac experience.</p>
+    </div>
+</section>
+
+<!-- ==================== DEPARTMENT CARDS ==================== -->
+<section class="dept-cards">
+    <div class="container">
+        <div class="dept-cards-grid">
+            <div class="dept-card">
+                <div class="dept-card-icon">
+                    <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                    </svg>
+                </div>
+                <h3>Sales</h3>
+                <a href="tel:4198428800" class="dept-card-phone">(419) 842-8800</a>
+                <div class="dept-card-hours">
+                    <strong>Mon - Thu:</strong> 9:00 AM - 8:00 PM<br>
+                    <strong>Fri:</strong> 9:00 AM - 6:00 PM<br>
+                    <strong>Sat:</strong> 9:00 AM - 5:00 PM<br>
+                    <strong>Sun:</strong> Closed
+                </div>
+            </div>
+            <div class="dept-card">
+                <div class="dept-card-icon">
+                    <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                    </svg>
+                </div>
+                <h3>Service</h3>
+                <a href="tel:4198428800" class="dept-card-phone">(419) 842-8800</a>
+                <div class="dept-card-hours">
+                    <strong>Mon - Fri:</strong> 7:30 AM - 6:00 PM<br>
+                    <strong>Sat:</strong> 8:00 AM - 2:00 PM<br>
+                    <strong>Sun:</strong> Closed
+                </div>
+            </div>
+            <div class="dept-card">
+                <div class="dept-card-icon">
+                    <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                    </svg>
+                </div>
+                <h3>Parts</h3>
+                <a href="tel:4198428800" class="dept-card-phone">(419) 842-8800</a>
+                <div class="dept-card-hours">
+                    <strong>Mon - Fri:</strong> 7:30 AM - 6:00 PM<br>
+                    <strong>Sat:</strong> 8:00 AM - 2:00 PM<br>
+                    <strong>Sun:</strong> Closed
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== CONTACT FORM + MAP ==================== -->
+<section class="contact-main">
+    <div class="container">
+        <div class="contact-grid">
+            <div class="contact-form-wrap">
+                <h2>Send Us a Message</h2>
+                <p>Fill out the form below and a Taylor Cadillac specialist will respond within one business day.</p>
+                <form>
+                    <div class="form-row">
+                        <div class="form-group"><label>First Name</label><input type="text" placeholder="John"></div>
+                        <div class="form-group"><label>Last Name</label><input type="text" placeholder="Smith"></div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group"><label>Email</label><input type="email" placeholder="john@example.com"></div>
+                        <div class="form-group"><label>Phone</label><input type="tel" placeholder="(419) 555-0100"></div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group full">
+                            <label>Department</label>
+                            <select>
+                                <option value="">Select Department</option>
+                                <option>Sales - New Vehicles</option>
+                                <option>Sales - Pre-Owned</option>
+                                <option>Service</option>
+                                <option>Parts</option>
+                                <option>Financing</option>
+                                <option>General Inquiry</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group full"><label>Message</label><textarea placeholder="How can we assist you?"></textarea></div>
+                    </div>
+                    <div class="form-submit">
+                        <button type="submit" class="btn btn-gold">Send Message</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="contact-map-wrap">
+                <h2>Visit Our Showroom</h2>
+                <p>Experience the Cadillac collection in person at our Toledo showroom.</p>
+                <div class="contact-map-embed">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2997.4!2d-83.6275!3d41.6528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDM5JzEwLjEiTiA4M8KwMzcnMzkuMCJX!5e0!3m2!1sen!2sus!4v1" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Taylor Cadillac Map"></iframe>
+                </div>
+                <div class="contact-address-card">
+                    <h4>Taylor Cadillac</h4>
+                    <p>6100 West Central Ave<br>Toledo, OH 43615</p>
+                    <p><a href="https://maps.google.com/?q=6100+West+Central+Ave+Toledo+OH+43615" target="_blank" rel="noopener">Get Directions</a></p>
+                    <p><a href="tel:4198428800">(419) 842-8800</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== HOURS ==================== -->
+<section class="hours-section" id="hours">
+    <div class="container">
+        <div class="section-header">
+            <div class="eyebrow" style="color:var(--gold);">Plan Your Visit</div>
+            <h2 style="color:#fff;">Business Hours</h2>
+            <div class="section-divider"></div>
+        </div>
+        <div class="hours-grid">
+            <div class="hours-card">
+                <h3>Sales</h3>
+                <table>
+                    <tr><td>Monday - Thursday</td><td>9:00 AM - 8:00 PM</td></tr>
+                    <tr><td>Friday</td><td>9:00 AM - 6:00 PM</td></tr>
+                    <tr><td>Saturday</td><td>9:00 AM - 5:00 PM</td></tr>
+                    <tr><td>Sunday</td><td>Closed</td></tr>
+                </table>
+            </div>
+            <div class="hours-card">
+                <h3>Service</h3>
+                <table>
+                    <tr><td>Monday - Friday</td><td>7:30 AM - 6:00 PM</td></tr>
+                    <tr><td>Saturday</td><td>8:00 AM - 2:00 PM</td></tr>
+                    <tr><td>Sunday</td><td>Closed</td></tr>
+                </table>
+            </div>
+            <div class="hours-card">
+                <h3>Parts</h3>
+                <table>
+                    <tr><td>Monday - Friday</td><td>7:30 AM - 6:00 PM</td></tr>
+                    <tr><td>Saturday</td><td>8:00 AM - 2:00 PM</td></tr>
+                    <tr><td>Sunday</td><td>Closed</td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== AREAS SERVED ==================== -->
+<section class="areas-section">
+    <div class="container">
+        <div class="section-header">
+            <div class="eyebrow">Proudly Serving</div>
+            <h2>Our Community</h2>
+            <div class="section-divider"></div>
+        </div>
+        <div class="areas-grid">
+            <div class="area-tag">Toledo</div>
+            <div class="area-tag">Maumee</div>
+            <div class="area-tag">Perrysburg</div>
+            <div class="area-tag">Sylvania</div>
+            <div class="area-tag">Oregon</div>
+            <div class="area-tag">Bowling Green</div>
+            <div class="area-tag">Findlay</div>
+            <div class="area-tag">Holland</div>
+            <div class="area-tag">Rossford</div>
+            <div class="area-tag">Waterville</div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Inventory</h4>
+                <ul>
+                    <li><a href="/demo/taylor-cadillac/inventory">New Cadillac Vehicles</a></li>
+                    <li><a href="/demo/taylor-cadillac/inventory?type=used">Pre-Owned Vehicles</a></li>
+                    <li><a href="/demo/taylor-cadillac/inventory?type=certified">Certified Pre-Owned</a></li>
+                    <li><a href="/demo/taylor-cadillac/inventory?special=true">Current Offers</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Service</h4>
+                <ul>
+                    <li><a href="/demo/taylor-cadillac/service">Schedule Service</a></li>
+                    <li><a href="/demo/taylor-cadillac/service#specials">Service Offers</a></li>
+                    <li><a href="/demo/taylor-cadillac/service#parts">Order Parts</a></li>
+                    <li><a href="tel:4198428800">Call Service: (419) 842-8800</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Financing</h4>
+                <ul>
+                    <li><a href="/demo/taylor-cadillac/financing">Apply for Financing</a></li>
+                    <li><a href="/demo/taylor-cadillac/financing#calculator">Payment Calculator</a></li>
+                    <li><a href="/demo/taylor-cadillac/financing#trade">Value Your Trade</a></li>
+                    <li><a href="/demo/taylor-cadillac/financing#lease">Lease Programs</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Dealership</h4>
+                <ul>
+                    <li><a href="/demo/taylor-cadillac/contact">Contact Us</a></li>
+                    <li><a href="/demo/taylor-cadillac/contact#hours">Hours &amp; Directions</a></li>
+                    <li><a href="tel:4198428800">Call: (419) 842-8800</a></li>
+                    <li><a href="https://maps.google.com/?q=6100+West+Central+Ave+Toledo+OH+43615" target="_blank" rel="noopener">Get Directions</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Taylor Cadillac &mdash; 6100 West Central Ave, Toledo, OH 43615 &nbsp;&bull;&nbsp; &copy; 2026 All Rights Reserved &nbsp;&bull;&nbsp; Powered by <a href="https://www.savvydealer.com" target="_blank" rel="noopener">SavvyDealer</a></p>
+            <p class="footer-family">Part of the <a href="/demo/taylor-auto">Taylor Automotive Family</a></p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

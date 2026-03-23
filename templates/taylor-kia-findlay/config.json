@@ -1,0 +1,20 @@
+{
+  "name": "Taylor Kia of Findlay",
+  "slug": "taylor-kia-findlay",
+  "brand": "Kia",
+  "address": "12002 County Rd 99, Findlay, OH 45840",
+  "phones": {
+    "sales": "(567) 907-9251",
+    "service": "(567) 212-8778",
+    "parts": "(567) 351-8063"
+  },
+  "colors": {
+    "primary": "#05141F",
+    "accent": "#BB162C",
+    "white": "#FFFFFF"
+  },
+  "pages": ["index", "inventory", "vdp", "service", "financing", "contact"],
+  "featured": true,
+  "group": "Taylor Automotive Family",
+  "siblings": ["taylor-kia-toledo", "taylor-kia-lima"]
+}

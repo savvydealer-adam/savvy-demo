@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Financing Made Simple | Taylor Hyundai of Perrysburg | Perrysburg, OH</title>
+    <meta name="description" content="Get pre-qualified for auto financing in minutes at Taylor Hyundai of Perrysburg. All credit situations welcome. Competitive rates from 20+ lenders. Serving Maumee, Toledo, Rossford, OH." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root { --primary: #00287A; --primary-dark: #001d5c; --accent: #00AAD2; --white: #ffffff; --gray-50: #f8f9fa; --gray-100: #f0f0f0; --gray-200: #E2E5E6; --gray-400: #696D71; --gray-600: #666; --gray-800: #1a1a1a; --green: #30770f; }
+        body { font-family: 'Hyundai Sans Text', 'Inter', sans-serif; color: #333; background: var(--white); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; display: block; }
+
+        .top-bar { background: var(--primary); color: #fff; padding: 8px 0; font-size: 13px; }
+        .top-bar .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+        .top-bar-phones { display: flex; gap: 20px; flex-wrap: wrap; }
+        .top-bar-phones a { color: #fff; font-weight: 500; transition: opacity 0.2s; }
+        .top-bar-phones a:hover { opacity: 0.85; }
+        .top-bar-phones span { color: rgba(255,255,255,0.7); margin-right: 4px; font-weight: 400; }
+        .top-bar-address { color: rgba(255,255,255,0.9); }
+        .top-bar-address a { color: #fff; }
+        .top-bar-address a:hover { text-decoration: underline; }
+
+        .site-header { background: #fff; border-bottom: 1px solid #f5f5f5; padding: 12px 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+        .site-header .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+        .header-logo { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+        .header-logo svg { height: 36px; width: auto; }
+        .header-logo-text { font-size: 16px; font-weight: 700; color: var(--primary); line-height: 1.2; }
+        .header-logo-text small { font-size: 11px; font-weight: 500; color: var(--gray-600); display: block; }
+        .header-nav { display: flex; align-items: center; gap: 6px; }
+        .header-nav a { color: #333; font-size: 14px; font-weight: 500; padding: 6px 12px; border-radius: 4px; transition: background 0.2s, color 0.2s; }
+        .header-nav a:hover { background: #e8f4f8; color: var(--accent); }
+        .header-nav a.active { background: var(--accent); color: #fff; }
+
+        .breadcrumb-bar { background: #f8f9fb; border-bottom: 1px solid #eee; padding: 12px 0; }
+        .breadcrumb-bar .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; font-size: 14px; color: #666; }
+        .breadcrumb-bar a { color: var(--primary); font-weight: 500; }
+        .breadcrumb-bar a:hover { color: var(--accent); }
+        .breadcrumb-bar span { color: #999; margin: 0 6px; }
+
+        .btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; font-size: 14px; font-weight: 700; font-family: inherit; border: 2px solid transparent; border-radius: 6px; cursor: pointer; transition: all 0.3s; text-align: center; }
+        .btn-primary { background: var(--accent); color: var(--white); border-color: var(--accent); }
+        .btn-primary:hover { background: #0095b8; border-color: #0095b8; }
+        .btn-outline { background: transparent; color: var(--white); border-color: rgba(255,255,255,0.4); }
+        .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.1); }
+
+        /* ========== HERO ========== */
+        .finance-hero { position: relative; background: linear-gradient(135deg, #00287A 0%, #001d5c 50%, #00143d 100%); overflow: hidden; padding: 72px 0 80px; }
+        .finance-hero::before { content: ''; position: absolute; top: -50%; right: -20%; width: 80%; height: 200%; background: radial-gradient(ellipse, rgba(0,170,210,0.2) 0%, transparent 70%); pointer-events: none; }
+        .finance-hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: var(--accent); }
+        .finance-hero-inner { max-width: 1280px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; text-align: center; }
+        .finance-hero-inner h2 { font-size: 48px; font-weight: 700; color: var(--white); line-height: 1.1; margin-bottom: 12px; }
+        .finance-hero-inner h2 em { font-style: normal; color: var(--accent); }
+        .finance-hero-inner p { font-size: 18px; color: rgba(255,255,255,0.7); margin-bottom: 32px; max-width: 540px; margin-left: auto; margin-right: auto; }
+        .hero-ctas { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+        /* ========== TRUST STRIP ========== */
+        .trust-strip { background: var(--gray-50); border-bottom: 1px solid var(--gray-200); padding: 48px 0; }
+        .trust-strip-inner { max-width: 1280px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+        .trust-card { text-align: center; padding: 32px 24px; background: var(--white); border-radius: 12px; border: 1px solid var(--gray-200); transition: all 0.3s; }
+        .trust-card:hover { border-color: var(--accent); box-shadow: 0 8px 24px rgba(0,0,0,0.08); transform: translateY(-2px); }
+        .trust-icon { width: 64px; height: 64px; background: var(--accent); border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; }
+        .trust-icon svg { width: 28px; height: 28px; fill: var(--white); }
+        .trust-card h3 { font-size: 18px; font-weight: 700; color: var(--gray-800); margin-bottom: 8px; }
+        .trust-card p { font-size: 14px; color: var(--gray-600); line-height: 1.6; }
+
+        /* ========== CALCULATOR ========== */
+        .calculator-section { padding: 72px 0; background: var(--white); }
+        .calculator-section-inner { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+        .section-title { text-align: center; margin-bottom: 48px; }
+        .section-title h2 { font-size: 36px; font-weight: 700; color: var(--gray-800); }
+        .section-title p { font-size: 16px; color: var(--gray-600); margin-top: 8px; }
+        .section-title .bar { width: 60px; height: 4px; background: var(--accent); margin: 16px auto 0; }
+
+        .calculator-card { max-width: 900px; margin: 0 auto; background: var(--white); border-radius: 16px; box-shadow: 0 4px 32px rgba(0,0,0,0.08); border: 1px solid var(--gray-200); overflow: hidden; }
+        .calc-body { display: grid; grid-template-columns: 1fr 320px; }
+        .calc-inputs { padding: 40px; }
+        .calc-result-panel { background: linear-gradient(135deg, #00287A 0%, #001d5c 100%); padding: 40px 32px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+        .calc-result-label { font-size: 13px; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600; margin-bottom: 8px; }
+        .calc-result-amount { font-size: 56px; font-weight: 700; color: var(--accent); line-height: 1; margin-bottom: 4px; }
+        .calc-result-per { font-size: 14px; color: rgba(255,255,255,0.5); margin-bottom: 24px; }
+        .calc-breakdown { width: 100%; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; margin-bottom: 28px; }
+        .calc-breakdown-row { display: flex; justify-content: space-between; font-size: 13px; color: rgba(255,255,255,0.6); margin-bottom: 8px; }
+        .calc-breakdown-row span:last-child { color: var(--white); font-weight: 600; }
+
+        .slider-group { margin-bottom: 24px; }
+        .slider-label { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+        .slider-label label { font-size: 14px; font-weight: 600; color: var(--gray-800); }
+        .slider-value-input { width: 110px; padding: 6px 10px; border: 1px solid var(--gray-200); border-radius: 6px; font-family: inherit; font-size: 14px; font-weight: 700; color: var(--gray-800); text-align: right; outline: none; }
+        .slider-value-input:focus { border-color: var(--accent); }
+        input[type="range"] { -webkit-appearance: none; appearance: none; width: 100%; height: 6px; background: var(--gray-200); border-radius: 3px; outline: none; cursor: pointer; }
+        input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 22px; height: 22px; border-radius: 50%; background: var(--accent); cursor: pointer; border: 3px solid var(--white); box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+        input[type="range"]::-moz-range-thumb { width: 22px; height: 22px; border-radius: 50%; background: var(--accent); cursor: pointer; border: 3px solid var(--white); box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+
+        .term-group { display: flex; gap: 8px; margin-top: 6px; }
+        .term-btn { flex: 1; padding: 10px 4px; border: 2px solid var(--gray-200); border-radius: 8px; background: var(--white); font-family: inherit; font-size: 14px; font-weight: 700; color: var(--gray-800); cursor: pointer; text-align: center; transition: all 0.2s; }
+        .term-btn:hover { border-color: var(--accent); color: var(--accent); }
+        .term-btn.active { background: var(--accent); border-color: var(--accent); color: var(--white); }
+        .term-btn small { display: block; font-size: 10px; font-weight: 400; opacity: 0.7; margin-top: 2px; }
+
+        /* ========== PRE-QUAL ========== */
+        .apply-section { padding: 72px 0; background: var(--white); border-top: 1px solid var(--gray-200); }
+        .apply-section-inner { max-width: 1280px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+        .apply-text h2 { font-size: 36px; font-weight: 700; color: var(--gray-800); line-height: 1.15; margin-bottom: 16px; }
+        .apply-text h2 em { font-style: normal; color: var(--accent); }
+        .apply-text > p { font-size: 16px; color: var(--gray-600); line-height: 1.7; margin-bottom: 24px; }
+        .checklist { list-style: none; margin-bottom: 32px; }
+        .checklist li { display: flex; align-items: center; gap: 12px; font-size: 15px; color: var(--gray-800); margin-bottom: 12px; font-weight: 500; }
+        .checklist li svg { width: 20px; height: 20px; fill: var(--accent); flex-shrink: 0; }
+
+        .prequal-card { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: 16px; padding: 40px; }
+        .prequal-card h3 { font-size: 22px; font-weight: 700; color: var(--gray-800); margin-bottom: 6px; }
+        .prequal-card > p { font-size: 14px; color: var(--gray-600); margin-bottom: 24px; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+        .form-field input { width: 100%; padding: 14px 16px; border: 1px solid var(--gray-200); border-radius: 8px; font-family: inherit; font-size: 14px; color: var(--gray-800); outline: none; transition: border-color 0.2s; }
+        .form-field input::placeholder { color: #aaa; }
+        .form-field input:focus { border-color: var(--accent); }
+        .form-submit-btn { width: 100%; padding: 16px; background: var(--accent); color: var(--white); font-family: inherit; font-size: 15px; font-weight: 700; border: none; border-radius: 8px; cursor: pointer; transition: background 0.3s; margin-top: 4px; }
+        .form-submit-btn:hover { background: #0095b8; }
+        .form-disclaimer { display: flex; align-items: center; gap: 6px; margin-top: 12px; font-size: 12px; color: var(--gray-400); }
+        .form-disclaimer svg { width: 14px; height: 14px; fill: var(--gray-400); flex-shrink: 0; }
+
+        /* ========== TRADE-IN ========== */
+        .trade-section { padding: 72px 0; background: var(--gray-50); border-top: 1px solid var(--gray-200); }
+        .trade-section-inner { max-width: 1280px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+        .trade-text h2 { font-size: 36px; font-weight: 700; color: var(--gray-800); margin-bottom: 16px; }
+        .trade-text p { font-size: 16px; color: var(--gray-600); line-height: 1.7; margin-bottom: 24px; }
+        .trade-visual { display: flex; align-items: center; justify-content: center; }
+        .trade-visual-graphic { width: 320px; height: 320px; background: linear-gradient(135deg, #00287A 0%, #001d5c 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; position: relative; }
+        .trade-visual-graphic svg { width: 140px; height: 140px; }
+        .trade-visual-graphic::after { content: ''; position: absolute; inset: -8px; border-radius: 50%; border: 2px dashed var(--accent); opacity: 0.3; }
+
+        /* ========== SEO ========== */
+        .seo-content { background: var(--white); padding: 64px 24px; border-top: 1px solid var(--gray-200); }
+        .seo-content-inner { max-width: 900px; margin: 0 auto; }
+        .seo-content-inner h2 { font-size: 22px; font-weight: 700; color: var(--gray-800); margin-top: 40px; margin-bottom: 12px; }
+        .seo-content-inner h2:first-child { margin-top: 0; }
+        .seo-content-inner p { font-size: 16px; line-height: 1.8; color: #555; margin-bottom: 16px; }
+        .seo-content-inner a { color: var(--accent); }
+        .seo-content-inner a:hover { text-decoration: underline; }
+
+        /* ========== FOOTER ========== */
+        .site-footer { background: #1a1a1a; color: #ccc; padding: 48px 0 0; }
+        .site-footer .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+        .footer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; padding-bottom: 40px; border-bottom: 1px solid #333; }
+        .footer-col h4 { font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: #fff; margin-bottom: 16px; }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 10px; }
+        .footer-col a { color: #aaa; font-size: 14px; transition: color 0.2s; }
+        .footer-col a:hover { color: #fff; }
+        .footer-cross-links { padding: 20px 0; border-bottom: 1px solid #333; text-align: center; font-size: 13px; color: #888; }
+        .footer-cross-links a { color: #00AAD2; font-weight: 500; }
+        .footer-cross-links a:hover { text-decoration: underline; }
+        .footer-bottom { padding: 20px 0; text-align: center; font-size: 13px; color: #777; }
+        .footer-bottom a { color: #00AAD2; font-weight: 500; }
+        .footer-bottom a:hover { text-decoration: underline; }
+
+        @media (max-width: 1023px) { .header-nav { display: none; } .apply-section-inner, .trade-section-inner { grid-template-columns: 1fr; gap: 40px; } .trade-visual { order: -1; } .trade-visual-graphic { width: 240px; height: 240px; } .trade-visual-graphic svg { width: 100px; height: 100px; } .footer-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 768px) { .finance-hero-inner h2 { font-size: 34px; } .trust-strip-inner { grid-template-columns: 1fr; gap: 16px; } .calc-body { grid-template-columns: 1fr; } .calc-result-panel { padding: 32px 24px; } .calc-result-amount { font-size: 44px; } .form-row { grid-template-columns: 1fr; } .section-title h2 { font-size: 28px; } .footer-grid { grid-template-columns: 1fr; text-align: center; } .term-group { flex-wrap: wrap; } .term-btn { flex: 0 0 calc(33.33% - 6px); } }
+        @media (max-width: 640px) { .top-bar .container { flex-direction: column; text-align: center; gap: 4px; } .top-bar-phones { justify-content: center; } .site-header .container { flex-wrap: wrap; justify-content: center; gap: 12px; } }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar"><div class="container"><div class="top-bar-phones"><a href="tel:4199318000"><span>Sales:</span> (419) 931-8000</a><a href="tel:4199318000"><span>Service:</span> (419) 931-8000</a><a href="tel:4199318000"><span>Parts:</span> (419) 931-8000</a></div><div class="top-bar-address"><a href="https://maps.google.com/?q=12681+Eckel+Junction+Rd+Perrysburg+OH+43551" target="_blank" rel="noopener">12681 Eckel Junction Rd, Perrysburg, OH 43551</a></div></div></div>
+
+    <header class="site-header"><div class="container">
+        <a href="/demo/taylor-hyundai-perrysburg" class="header-logo"><svg viewBox="0 0 200 40" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="20" cy="20" rx="18" ry="16" stroke="#00287A" stroke-width="2.5" fill="none"/><path d="M10 16 C10 16 14 24 20 24 C26 24 30 16 30 16" stroke="#00287A" stroke-width="2.2" fill="none"/><path d="M10 16 C10 16 14 8 20 8 C26 8 30 16 30 16" stroke="#00287A" stroke-width="2.2" fill="none"/><text x="46" y="27" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#00287A">HYUNDAI</text></svg><div class="header-logo-text">Taylor Hyundai<small>of Perrysburg</small></div></a>
+        <nav class="header-nav"><a href="/demo/taylor-hyundai-perrysburg/inventory">New Vehicles</a><a href="/demo/taylor-hyundai-perrysburg/inventory">Pre-Owned</a><a href="/demo/taylor-hyundai-perrysburg/service">Service</a><a href="/demo/taylor-hyundai-perrysburg/financing" class="active">Financing</a><a href="/demo/taylor-hyundai-perrysburg/contact">Contact</a></nav>
+    </div></header>
+
+    <div class="breadcrumb-bar"><div class="container"><a href="/demo/taylor-hyundai-perrysburg">Home</a> <span>/</span> Financing</div></div>
+
+    <section class="finance-hero"><div class="finance-hero-inner"><h2>Financing <em>Made Simple</em></h2><p>Get pre-qualified in minutes. All credit situations welcome. Competitive rates from 20+ lenders.</p><div class="hero-ctas"><a href="#apply" class="btn btn-primary">Get Pre-Qualified</a><a href="#calculator" class="btn btn-outline">Payment Calculator</a></div></div></section>
+
+    <section class="trust-strip"><div class="trust-strip-inner">
+        <div class="trust-card"><div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg></div><h3>No Credit? No Problem</h3><p>Every credit situation is welcome. First-time buyers, rebuilding credit, or excellent -- we have solutions for everyone.</p></div>
+        <div class="trust-card"><div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg></div><h3>Competitive Rates</h3><p>We work with 20+ lenders to find you the best possible rate. Pre-qualification does not affect your credit score.</p></div>
+        <div class="trust-card"><div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"/></svg></div><h3>Easy Online Application</h3><p>Apply from the comfort of your home. Our secure application takes just minutes and you'll receive a response quickly.</p></div>
+    </div></section>
+
+    <!-- ==================== CALCULATOR ==================== -->
+    <section class="calculator-section" id="calculator"><div class="calculator-section-inner">
+        <div class="section-title"><h2>Payment Calculator</h2><p>Estimate your monthly payment</p><div class="bar"></div></div>
+        <div class="calculator-card"><div class="calc-body">
+            <div class="calc-inputs">
+                <div class="slider-group"><div class="slider-label"><label>Vehicle Price</label><input type="text" class="slider-value-input" id="priceDisplay" value="$35,000" /></div><input type="range" id="priceSlider" min="15000" max="70000" step="500" value="35000" /></div>
+                <div class="slider-group"><div class="slider-label"><label>Down Payment</label><input type="text" class="slider-value-input" id="downDisplay" value="$3,000" /></div><input type="range" id="downSlider" min="0" max="20000" step="500" value="3000" /></div>
+                <div class="slider-group"><div class="slider-label"><label>Interest Rate (APR)</label><input type="text" class="slider-value-input" id="aprDisplay" value="5.9%" /></div><input type="range" id="aprSlider" min="0" max="15" step="0.1" value="5.9" /></div>
+                <div class="slider-group"><div class="slider-label"><label>Loan Term</label></div>
+                    <div class="term-group">
+                        <button class="term-btn" data-months="36">36<small>months</small></button>
+                        <button class="term-btn" data-months="48">48<small>months</small></button>
+                        <button class="term-btn active" data-months="60">60<small>months</small></button>
+                        <button class="term-btn" data-months="72">72<small>months</small></button>
+                        <button class="term-btn" data-months="84">84<small>months</small></button>
+                    </div>
+                </div>
+            </div>
+            <div class="calc-result-panel">
+                <div class="calc-result-label">Estimated Monthly Payment</div>
+                <div class="calc-result-amount" id="monthlyPayment">$620</div>
+                <div class="calc-result-per">per month</div>
+                <div class="calc-breakdown">
+                    <div class="calc-breakdown-row"><span>Vehicle Price</span><span id="summaryPrice">$35,000</span></div>
+                    <div class="calc-breakdown-row"><span>Down Payment</span><span id="summaryDown">-$3,000</span></div>
+                    <div class="calc-breakdown-row"><span>Loan Amount</span><span id="summaryLoan">$32,000</span></div>
+                    <div class="calc-breakdown-row"><span>Total Interest</span><span id="summaryInterest">$5,200</span></div>
+                </div>
+                <a href="#apply" class="btn btn-primary" style="width:100%; justify-content:center;">Get Pre-Qualified Now</a>
+            </div>
+        </div></div>
+    </div></section>
+
+    <!-- ==================== PRE-QUAL FORM ==================== -->
+    <section class="apply-section" id="apply"><div class="apply-section-inner">
+        <div class="apply-text">
+            <h2>Get <em>Pre-Qualified</em> Today</h2>
+            <p>Complete our quick pre-qualification form and our finance team will work to find you the best rate and terms. No obligation, no impact on your credit score.</p>
+            <ul class="checklist">
+                <li><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg> Takes only 60 seconds</li>
+                <li><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg> No SSN required for pre-qualification</li>
+                <li><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg> All credit types welcome</li>
+                <li><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg> 20+ lending partners</li>
+            </ul>
+        </div>
+        <div class="prequal-card">
+            <h3>Quick Pre-Qualification</h3>
+            <p>Fill out the basics and we'll be in touch</p>
+            <form onsubmit="event.preventDefault(); alert('Thank you! Our finance team will contact you shortly.');">
+                <div class="form-row"><div class="form-field"><input type="text" placeholder="First Name" required /></div><div class="form-field"><input type="text" placeholder="Last Name" required /></div></div>
+                <div class="form-row"><div class="form-field"><input type="email" placeholder="Email Address" required /></div><div class="form-field"><input type="tel" placeholder="Phone Number" /></div></div>
+                <div class="form-row"><div class="form-field"><input type="text" placeholder="Estimated Credit Score" /></div><div class="form-field"><input type="text" placeholder="Desired Monthly Payment" /></div></div>
+                <button type="submit" class="form-submit-btn">Get Pre-Qualified</button>
+                <div class="form-disclaimer"><svg viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1s3.1 1.39 3.1 3.1v2z"/></svg> Your information is secure and encrypted</div>
+            </form>
+        </div>
+    </div></section>
+
+    <!-- ==================== TRADE-IN ==================== -->
+    <section class="trade-section" id="trade"><div class="trade-section-inner">
+        <div class="trade-text">
+            <h2>Value Your Trade-In</h2>
+            <p>Get an instant estimate on your current vehicle. Our trade-in values are competitive and transparent, making it easy to put equity toward your next Hyundai.</p>
+            <a href="#" class="btn btn-primary">Get Trade Value</a>
+        </div>
+        <div class="trade-visual">
+            <div class="trade-visual-graphic">
+                <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg>
+            </div>
+        </div>
+    </div></section>
+
+    <!-- ==================== SEO ==================== -->
+    <section class="seo-content"><div class="seo-content-inner">
+        <h2>Auto Financing in Perrysburg, OH</h2>
+        <p>Taylor Hyundai of Perrysburg makes financing your next vehicle easy. Whether you're buying new, pre-owned, or certified, our finance team works with over 20 lending partners to secure competitive rates for every credit situation. <a href="/demo/taylor-hyundai-perrysburg/financing">Apply online</a> in minutes or visit us at 12681 Eckel Junction Rd, Perrysburg, OH 43551.</p>
+        <h2>Serving Maumee, Toledo &amp; Bowling Green</h2>
+        <p>Customers from Maumee, Toledo, Bowling Green, Rossford, and Northwood trust Taylor Hyundai for straightforward, honest financing. Call <a href="tel:4199318000">(419) 931-8000</a> to speak with our finance team today.</p>
+    </div></section>
+
+    <footer class="site-footer"><div class="container">
+        <div class="footer-grid">
+            <div class="footer-col"><h4>Inventory</h4><ul><li><a href="/demo/taylor-hyundai-perrysburg/inventory">New Vehicles</a></li><li><a href="/demo/taylor-hyundai-perrysburg/inventory?type=used">Pre-Owned</a></li><li><a href="/demo/taylor-hyundai-perrysburg/inventory?type=certified">Certified Pre-Owned</a></li><li><a href="/demo/taylor-hyundai-perrysburg/inventory?special=true">Specials</a></li></ul></div>
+            <div class="footer-col"><h4>Service</h4><ul><li><a href="/demo/taylor-hyundai-perrysburg/service">Schedule Service</a></li><li><a href="/demo/taylor-hyundai-perrysburg/service#specials">Service Specials</a></li><li><a href="/demo/taylor-hyundai-perrysburg/service#parts">Order Parts</a></li><li><a href="tel:4199318000">Call Service: (419) 931-8000</a></li></ul></div>
+            <div class="footer-col"><h4>Financing</h4><ul><li><a href="/demo/taylor-hyundai-perrysburg/financing">Apply for Financing</a></li><li><a href="/demo/taylor-hyundai-perrysburg/financing#calculator">Payment Calculator</a></li><li><a href="/demo/taylor-hyundai-perrysburg/financing#trade">Value Your Trade</a></li><li><a href="/demo/taylor-hyundai-perrysburg/financing#credit">Credit Solutions</a></li></ul></div>
+            <div class="footer-col"><h4>About Us</h4><ul><li><a href="/demo/taylor-hyundai-perrysburg/contact">Contact Us</a></li><li><a href="/demo/taylor-hyundai-perrysburg/contact#hours">Hours &amp; Directions</a></li><li><a href="/demo/taylor-hyundai-perrysburg/contact#map">Find Us</a></li><li><a href="tel:4199318000">Call Sales: (419) 931-8000</a></li></ul></div>
+        </div>
+        <div class="footer-cross-links">Also visit: <a href="/demo/taylor-hyundai-toledo">Taylor Hyundai of Toledo</a> &nbsp;|&nbsp; <a href="/demo/taylor-hyundai-findlay">Taylor Hyundai of Findlay</a> &nbsp;|&nbsp; <a href="/demo/taylor-auto">Part of the Taylor Automotive Family</a></div>
+        <div class="footer-bottom"><p>Taylor Hyundai of Perrysburg &mdash; 12681 Eckel Junction Rd, Perrysburg, OH 43551 &nbsp;&bull;&nbsp; &copy; 2026 All Rights Reserved &nbsp;&bull;&nbsp; Powered by <a href="https://www.savvydealer.com" target="_blank" rel="noopener">SavvyDealer</a></p></div>
+    </div></footer>
+
+    <script>
+    (function(){
+        var price=document.getElementById('priceSlider'), down=document.getElementById('downSlider'), apr=document.getElementById('aprSlider');
+        var pD=document.getElementById('priceDisplay'), dD=document.getElementById('downDisplay'), aD=document.getElementById('aprDisplay');
+        var months=60;
+        function fmt(n){return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g,',');}
+        function calc(){
+            var p=+price.value, d=+down.value, r=(+apr.value)/100/12, loan=p-d;
+            if(loan<0)loan=0;
+            var mp=r>0?loan*(r*Math.pow(1+r,months))/(Math.pow(1+r,months)-1):loan/months;
+            var ti=mp*months-loan;
+            pD.value='$'+fmt(p); dD.value='$'+fmt(d); aD.value=apr.value+'%';
+            document.getElementById('monthlyPayment').textContent='$'+fmt(Math.round(mp));
+            document.getElementById('summaryPrice').textContent='$'+fmt(p);
+            document.getElementById('summaryDown').textContent='-$'+fmt(d);
+            document.getElementById('summaryLoan').textContent='$'+fmt(loan);
+            document.getElementById('summaryInterest').textContent='$'+fmt(Math.round(ti));
+        }
+        price.oninput=calc; down.oninput=calc; apr.oninput=calc;
+        document.querySelectorAll('.term-btn').forEach(function(b){
+            b.addEventListener('click',function(){
+                document.querySelectorAll('.term-btn').forEach(function(t){t.classList.remove('active');});
+                this.classList.add('active');
+                months=+this.getAttribute('data-months');
+                calc();
+            });
+        });
+        calc();
+    })();
+    </script>
+
+</body>
+</html>

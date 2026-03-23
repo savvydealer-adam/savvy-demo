@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Financing &amp; Pre-Qualification | Taylor Kia of Findlay | Findlay, OH</title>
+    <meta name="description" content="Apply for Kia financing at Taylor Kia of Findlay. Easy pre-qualification, competitive rates, payment calculator, and trade-in valuations. All credit welcome. Serving Toledo, Fostoria, Carey, Upper Sandusky, OH." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --kia-dark: #05141F; --kia-red: #BB162C; --kia-red-hover: #9a1224; --kia-white: #FFFFFF; --kia-gray-50: #f7f8fa; --kia-gray-100: #eef0f3; --kia-gray-200: #dde0e6; --kia-gray-400: #8b919a; --kia-gray-600: #555b66; --kia-gray-800: #1a1d24; --kia-green: #30770f; }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', 'Kia Signature Fixed', sans-serif; color: #333; background: var(--kia-white); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; display: block; }
+
+        /* ========== TOP BAR ========== */
+        .top-bar { background: var(--kia-dark); color: #fff; padding: 8px 0; font-size: 13px; }
+        .top-bar .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+        .top-bar-phones { display: flex; gap: 20px; flex-wrap: wrap; }
+        .top-bar-phones a { color: #fff; font-weight: 500; transition: opacity 0.2s; }
+        .top-bar-phones a:hover { opacity: 0.85; }
+        .top-bar-phones span { color: rgba(255,255,255,0.6); margin-right: 4px; font-weight: 400; }
+        .top-bar-address { color: rgba(255,255,255,0.85); }
+        .top-bar-address a { color: #fff; }
+        .top-bar-address a:hover { text-decoration: underline; }
+
+        /* ========== HEADER ========== */
+        .site-header { background: #fff; border-bottom: 1px solid #f0f0f0; padding: 12px 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+        .site-header .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+        .header-logo { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+        .kia-logo-svg { height: 32px; width: auto; }
+        .dealer-name { font-size: 14px; font-weight: 700; color: var(--kia-dark); line-height: 1.2; white-space: nowrap; }
+        .dealer-name small { display: block; font-size: 11px; font-weight: 500; color: var(--kia-gray-400); text-transform: uppercase; letter-spacing: 0.5px; }
+        .header-nav { display: flex; align-items: center; gap: 4px; }
+        .header-nav a { color: var(--kia-dark); font-size: 14px; font-weight: 600; padding: 8px 14px; border-radius: 6px; transition: background 0.2s, color 0.2s; }
+        .header-nav a:hover { background: rgba(187,22,44,0.06); color: var(--kia-red); }
+        .header-nav a.active { background: rgba(187,22,44,0.08); color: var(--kia-red); }
+
+        /* ========== BREADCRUMBS ========== */
+        .breadcrumbs { background: var(--kia-gray-50); padding: 12px 0; border-bottom: 1px solid var(--kia-gray-100); font-size: 13px; }
+        .breadcrumbs .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+        .breadcrumbs a { color: var(--kia-red); font-weight: 500; }
+        .breadcrumbs a:hover { text-decoration: underline; }
+        .breadcrumbs span { color: #999; margin: 0 6px; }
+
+        /* ========== BUTTONS ========== */
+        .btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; font-size: 14px; font-weight: 700; font-family: inherit; border: 2px solid transparent; border-radius: 6px; cursor: pointer; transition: all 0.3s; text-align: center; letter-spacing: 0.3px; }
+        .btn-primary { background: var(--kia-red); color: var(--kia-white); border-color: var(--kia-red); }
+        .btn-primary:hover { background: var(--kia-red-hover); border-color: var(--kia-red-hover); }
+        .btn-outline { background: transparent; color: var(--kia-white); border-color: rgba(255,255,255,0.4); }
+        .btn-outline:hover { border-color: var(--kia-white); background: rgba(255,255,255,0.1); }
+
+        /* ========== HERO ========== */
+        .finance-hero { position: relative; background: linear-gradient(135deg, var(--kia-dark) 0%, #0a2a3f 50%, #0d3652 100%); overflow: hidden; padding: 72px 0 80px; }
+        .finance-hero::before { content: ''; position: absolute; top: -50%; right: -20%; width: 80%; height: 200%; background: radial-gradient(ellipse, rgba(187,22,44,0.15) 0%, transparent 60%); pointer-events: none; }
+        .finance-hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: var(--kia-red); }
+        .finance-hero-inner { max-width: 1280px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; text-align: center; }
+        .finance-hero-inner h1 { font-size: 44px; font-weight: 800; color: var(--kia-white); line-height: 1.15; margin-bottom: 12px; }
+        .finance-hero-inner h1 em { font-style: normal; color: var(--kia-red); }
+        .finance-hero-inner p { font-size: 17px; color: rgba(255,255,255,0.7); margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto; }
+        .hero-ctas { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+        /* ========== ADVANTAGES STRIP ========== */
+        .advantages { background: var(--kia-gray-50); border-bottom: 1px solid var(--kia-gray-200); padding: 48px 0; }
+        .advantages-inner { max-width: 1280px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+        .advantage-card { text-align: center; padding: 24px 16px; background: var(--kia-white); border-radius: 12px; border: 1px solid var(--kia-gray-200); transition: all 0.3s; }
+        .advantage-card:hover { border-color: var(--kia-red); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
+        .advantage-icon { width: 56px; height: 56px; background: rgba(187,22,44,0.08); border-radius: 50%; margin: 0 auto 14px; display: flex; align-items: center; justify-content: center; }
+        .advantage-icon svg { width: 24px; height: 24px; fill: var(--kia-red); }
+        .advantage-card h3 { font-size: 16px; font-weight: 700; color: var(--kia-gray-800); margin-bottom: 6px; }
+        .advantage-card p { font-size: 13px; color: var(--kia-gray-600); line-height: 1.5; }
+
+        /* ========== PRE-QUAL FORM ========== */
+        .prequal-section { padding: 72px 0; background: var(--kia-white); }
+        .prequal-section-inner { max-width: 1280px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+        .prequal-info h2 { font-size: 36px; font-weight: 800; color: var(--kia-gray-800); line-height: 1.15; margin-bottom: 16px; }
+        .prequal-info h2 em { font-style: normal; color: var(--kia-red); }
+        .prequal-info > p { font-size: 16px; color: var(--kia-gray-600); line-height: 1.7; margin-bottom: 28px; }
+        .prequal-steps { list-style: none; counter-reset: step; }
+        .prequal-steps li { counter-increment: step; display: flex; align-items: flex-start; gap: 16px; margin-bottom: 20px; }
+        .prequal-steps li::before { content: counter(step); width: 36px; height: 36px; background: var(--kia-red); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 800; flex-shrink: 0; }
+        .step-text h4 { font-size: 15px; font-weight: 700; color: var(--kia-gray-800); margin-bottom: 2px; }
+        .step-text p { font-size: 14px; color: var(--kia-gray-600); }
+
+        .prequal-form-card { background: var(--kia-gray-50); border: 1px solid var(--kia-gray-200); border-radius: 16px; padding: 40px; }
+        .prequal-form-card h3 { font-size: 22px; font-weight: 700; color: var(--kia-gray-800); margin-bottom: 6px; }
+        .prequal-form-card > p { font-size: 14px; color: var(--kia-gray-600); margin-bottom: 24px; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+        .form-field input, .form-field select, .form-field textarea { width: 100%; padding: 14px 16px; border: 1px solid var(--kia-gray-200); border-radius: 8px; font-family: inherit; font-size: 14px; color: var(--kia-gray-800); outline: none; transition: border-color 0.2s; background: var(--kia-white); }
+        .form-field input::placeholder, .form-field textarea::placeholder { color: #aaa; }
+        .form-field input:focus, .form-field select:focus { border-color: var(--kia-red); }
+        .form-field select { cursor: pointer; }
+        .form-field-full { margin-bottom: 12px; }
+        .form-submit-btn { width: 100%; padding: 16px; background: var(--kia-red); color: var(--kia-white); font-family: inherit; font-size: 15px; font-weight: 700; border: none; border-radius: 8px; cursor: pointer; transition: background 0.3s; margin-top: 4px; }
+        .form-submit-btn:hover { background: var(--kia-red-hover); }
+        .form-disclaimer { display: flex; align-items: center; gap: 6px; margin-top: 12px; font-size: 12px; color: var(--kia-gray-400); }
+        .form-disclaimer svg { width: 14px; height: 14px; fill: var(--kia-gray-400); flex-shrink: 0; }
+
+        /* ========== PAYMENT CALCULATOR ========== */
+        .calculator-section { padding: 72px 0; background: var(--kia-gray-50); border-top: 1px solid var(--kia-gray-200); }
+        .calculator-section-inner { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+        .section-title { text-align: center; margin-bottom: 40px; }
+        .section-title h2 { font-size: 36px; font-weight: 800; color: var(--kia-gray-800); }
+        .section-title p { font-size: 16px; color: var(--kia-gray-600); margin-top: 8px; }
+        .section-title .bar { width: 60px; height: 4px; background: var(--kia-red); margin: 16px auto 0; border-radius: 2px; }
+        .calc-card { background: var(--kia-white); border: 1px solid var(--kia-gray-200); border-radius: 16px; padding: 40px; }
+        .calc-field { margin-bottom: 20px; }
+        .calc-field label { display: block; font-size: 14px; font-weight: 600; color: var(--kia-gray-800); margin-bottom: 6px; }
+        .calc-field input, .calc-field select { width: 100%; padding: 14px 16px; border: 1px solid var(--kia-gray-200); border-radius: 8px; font-family: inherit; font-size: 16px; color: var(--kia-gray-800); outline: none; transition: border-color 0.2s; }
+        .calc-field input:focus, .calc-field select:focus { border-color: var(--kia-red); }
+        .calc-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .calc-result { background: var(--kia-dark); border-radius: 12px; padding: 32px; text-align: center; margin-top: 24px; }
+        .calc-result .label { font-size: 14px; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 1px; font-weight: 600; margin-bottom: 4px; }
+        .calc-result .amount { font-size: 48px; font-weight: 800; color: var(--kia-white); }
+        .calc-result .per-month { font-size: 16px; color: rgba(255,255,255,0.5); }
+        .calc-result .disclaimer { font-size: 12px; color: rgba(255,255,255,0.4); margin-top: 12px; }
+
+        /* ========== TRADE-IN SECTION ========== */
+        .trade-section { padding: 72px 0; background: var(--kia-white); border-top: 1px solid var(--kia-gray-200); }
+        .trade-section-inner { max-width: 1280px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+        .trade-content h2 { font-size: 36px; font-weight: 800; color: var(--kia-gray-800); margin-bottom: 16px; }
+        .trade-content h2 em { font-style: normal; color: var(--kia-red); }
+        .trade-content p { font-size: 16px; color: var(--kia-gray-600); line-height: 1.7; margin-bottom: 24px; }
+        .trade-benefits { list-style: none; }
+        .trade-benefits li { display: flex; align-items: center; gap: 12px; padding: 10px 0; font-size: 15px; color: var(--kia-gray-800); font-weight: 500; }
+        .trade-benefits li svg { width: 20px; height: 20px; fill: var(--kia-green); flex-shrink: 0; }
+        .trade-image { background: var(--kia-gray-50); border-radius: 16px; padding: 48px; display: flex; align-items: center; justify-content: center; border: 1px solid var(--kia-gray-100); min-height: 300px; }
+        .trade-image img { max-width: 100%; border-radius: 8px; }
+
+        /* ========== FOOTER ========== */
+        .site-footer { background: #1a1d24; color: #ccc; padding: 48px 0 0; }
+        .site-footer .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+        .footer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; padding-bottom: 40px; border-bottom: 1px solid #2e3138; }
+        .footer-col h4 { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #fff; margin-bottom: 16px; }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 10px; }
+        .footer-col a { color: #999; font-size: 14px; transition: color 0.2s; }
+        .footer-col a:hover { color: #fff; }
+        .footer-family { text-align: center; padding: 20px 0; border-bottom: 1px solid #2e3138; font-size: 14px; color: #888; }
+        .footer-family a { color: var(--kia-red); font-weight: 600; }
+        .footer-family a:hover { text-decoration: underline; }
+        .footer-locations { text-align: center; padding: 16px 0; border-bottom: 1px solid #2e3138; font-size: 13px; color: #777; }
+        .footer-locations a { color: #aaa; font-weight: 500; margin: 0 8px; }
+        .footer-locations a:hover { color: #fff; }
+        .footer-bottom { padding: 20px 0; text-align: center; font-size: 13px; color: #666; }
+        .footer-bottom a { color: var(--kia-red); font-weight: 500; }
+        .footer-bottom a:hover { text-decoration: underline; }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 1023px) { .header-nav { display: none; } .prequal-section-inner { grid-template-columns: 1fr; gap: 40px; } .advantages-inner { grid-template-columns: repeat(2, 1fr); } .trade-section-inner { grid-template-columns: 1fr; gap: 40px; } .footer-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 768px) { .finance-hero-inner h1 { font-size: 34px; } .advantages-inner { grid-template-columns: 1fr; } .form-row { grid-template-columns: 1fr; } .calc-row { grid-template-columns: 1fr; } .section-title h2 { font-size: 28px; } .footer-grid { grid-template-columns: 1fr; text-align: center; } }
+        @media (max-width: 640px) { .top-bar .container { flex-direction: column; text-align: center; gap: 4px; } .top-bar-phones { justify-content: center; } .site-header .container { flex-wrap: wrap; justify-content: center; gap: 12px; } .finance-hero-inner h1 { font-size: 28px; } .hero-ctas { flex-direction: column; align-items: center; } .hero-ctas .btn { width: 100%; justify-content: center; } }
+    </style>
+</head>
+<body>
+
+    <!-- ==================== TOP BAR ==================== -->
+    <div class="top-bar"><div class="container"><div class="top-bar-phones"><a href="tel:5679079251"><span>Sales:</span> (567) 907-9251</a><a href="tel:5672128778"><span>Service:</span> (567) 212-8778</a><a href="tel:5673518063"><span>Parts:</span> (567) 351-8063</a></div><div class="top-bar-address"><a href="https://maps.google.com/?q=12002+County+Rd+99+Findlay+OH+45840" target="_blank" rel="noopener">12002 County Rd 99, Findlay, OH 45840</a></div></div></div>
+
+    <!-- ==================== HEADER ==================== -->
+    <header class="site-header"><div class="container">
+        <a href="/demo/taylor-kia-findlay" class="header-logo"><svg class="kia-logo-svg" viewBox="0 0 120 42" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M26.2 4L14.5 21l11.7 17h-9.8L7.1 24.3V38H0V4h7.1v13.5L16.4 4h9.8z" fill="#05141F"/><path d="M32.5 4h7.1v34h-7.1V4z" fill="#05141F"/><path d="M68.3 4L54.7 38h-7.6L33.5 4h8l9.4 25.5L60.3 4h8z" fill="#05141F"/><text x="78" y="30" font-family="Inter,sans-serif" font-size="14" font-weight="800" fill="#05141F">KIA</text></svg><div class="dealer-name">Taylor Kia<small>Findlay</small></div></a>
+        <nav class="header-nav"><a href="/demo/taylor-kia-findlay/inventory">Inventory</a><a href="/demo/taylor-kia-findlay/service">Service</a><a href="/demo/taylor-kia-findlay/financing" class="active">Financing</a><a href="/demo/taylor-kia-findlay/contact">Contact</a></nav>
+    </div></header>
+
+    <!-- ==================== BREADCRUMBS ==================== -->
+    <div class="breadcrumbs"><div class="container"><a href="/demo/taylor-kia-findlay">Home</a> <span>/</span> <strong>Financing</strong></div></div>
+
+    <!-- ==================== HERO ==================== -->
+    <section class="finance-hero">
+        <div class="finance-hero-inner">
+            <h1>Drive Today, <em>Finance Smart</em></h1>
+            <p>Flexible financing options for every budget. Get pre-qualified in minutes with no impact on your credit score.</p>
+            <div class="hero-ctas">
+                <a href="#apply" class="btn btn-primary">Get Pre-Qualified</a>
+                <a href="#calculator" class="btn btn-outline">Payment Calculator</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ADVANTAGES ========== -->
+    <section class="advantages">
+        <div class="advantages-inner">
+            <div class="advantage-card">
+                <div class="advantage-icon"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" fill="none" stroke="#BB162C" stroke-width="2"/><polyline points="22 4 12 14.01 9 11.01" fill="none" stroke="#BB162C" stroke-width="2"/></svg></div>
+                <h3>All Credit Welcome</h3>
+                <p>First-time buyers, rebuilding credit, or excellent credit -- we work with everyone.</p>
+            </div>
+            <div class="advantage-card">
+                <div class="advantage-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1.41 16.09V20h-2.67v-1.93c-1.71-.36-3.16-1.46-3.27-3.4h1.96c.1 1.05.82 1.87 2.65 1.87 1.96 0 2.4-.98 2.4-1.59 0-.83-.44-1.61-2.67-2.14-2.48-.6-4.18-1.62-4.18-3.67 0-1.72 1.39-2.84 3.11-3.21V4h2.67v1.95c1.86.45 2.79 1.86 2.85 3.39H14.3c-.05-1.11-.64-1.87-2.22-1.87-1.5 0-2.4.68-2.4 1.64 0 .84.65 1.39 2.67 1.94s4.18 1.36 4.18 3.85c0 1.89-1.44 2.97-3.12 3.19z"/></svg></div>
+                <h3>Competitive Rates</h3>
+                <p>We partner with 30+ lenders to secure the lowest rates and best terms available.</p>
+            </div>
+            <div class="advantage-card">
+                <div class="advantage-icon"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg></div>
+                <h3>No Credit Impact</h3>
+                <p>Our pre-qualification process uses a soft pull that will not affect your credit score.</p>
+            </div>
+            <div class="advantage-card">
+                <div class="advantage-icon"><svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg></div>
+                <h3>Quick Decisions</h3>
+                <p>Get a financing decision in minutes, not days. Drive home in your new Kia today.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PRE-QUAL FORM ==================== -->
+    <section class="prequal-section" id="apply">
+        <div class="prequal-section-inner">
+            <div class="prequal-info">
+                <h2>Get <em>Pre-Qualified</em> in Minutes</h2>
+                <p>Our secure online application makes it easy to start the financing process before you even visit the dealership. No SSN required for pre-qualification.</p>
+                <ol class="prequal-steps">
+                    <li><div class="step-text"><h4>Fill Out the Application</h4><p>Basic information -- no SSN needed for pre-qualification.</p></div></li>
+                    <li><div class="step-text"><h4>Get Matched with Lenders</h4><p>We shop your application across 30+ banks and credit unions.</p></div></li>
+                    <li><div class="step-text"><h4>Review Your Options</h4><p>Compare rates, terms, and monthly payments side by side.</p></div></li>
+                    <li><div class="step-text"><h4>Drive Home Happy</h4><p>Choose your favorite Kia and drive off the lot with confidence.</p></div></li>
+                </ol>
+            </div>
+
+            <div class="prequal-form-card">
+                <h3>Finance Application</h3>
+                <p>All fields marked with * are required</p>
+                <form>
+                    <div class="form-row">
+                        <div class="form-field"><input type="text" placeholder="First Name *" required></div>
+                        <div class="form-field"><input type="text" placeholder="Last Name *" required></div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-field"><input type="email" placeholder="Email Address *" required></div>
+                        <div class="form-field"><input type="tel" placeholder="Phone Number *" required></div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-field"><input type="text" placeholder="Street Address"></div>
+                        <div class="form-field"><input type="text" placeholder="City, State, ZIP"></div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-field">
+                            <select><option value="">Employment Status</option><option>Employed Full-Time</option><option>Employed Part-Time</option><option>Self-Employed</option><option>Retired</option><option>Student</option><option>Other</option></select>
+                        </div>
+                        <div class="form-field"><input type="text" placeholder="Monthly Income"></div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-field">
+                            <select><option value="">Estimated Credit Score</option><option>Excellent (750+)</option><option>Good (700-749)</option><option>Fair (650-699)</option><option>Rebuilding (Below 650)</option><option>Not Sure</option></select>
+                        </div>
+                        <div class="form-field">
+                            <select><option value="">Vehicle of Interest</option><option>2025 Kia Telluride</option><option>2025 Kia Sportage</option><option>2025 Kia EV6</option><option>2025 Kia EV9</option><option>2025 Kia Sorento</option><option>2025 Kia Forte</option><option>2025 Kia K5</option><option>2025 Kia Seltos</option><option>2025 Kia Soul</option><option>2025 Kia Carnival</option><option>Pre-Owned Vehicle</option></select>
+                        </div>
+                    </div>
+                    <button type="submit" class="form-submit-btn">Submit Pre-Qualification</button>
+                    <div class="form-disclaimer"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg> Your information is encrypted and secure. Pre-qualification does not affect your credit score.</div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PAYMENT CALCULATOR ==================== -->
+    <section class="calculator-section" id="calculator">
+        <div class="calculator-section-inner">
+            <div class="section-title">
+                <h2>Payment Calculator</h2>
+                <p>Estimate your monthly payment to find the Kia that fits your budget</p>
+                <div class="bar"></div>
+            </div>
+            <div class="calc-card">
+                <div class="calc-row">
+                    <div class="calc-field"><label>Vehicle Price ($)</label><input type="number" id="calcPrice" value="35000" min="0" step="500"></div>
+                    <div class="calc-field"><label>Down Payment ($)</label><input type="number" id="calcDown" value="3000" min="0" step="500"></div>
+                </div>
+                <div class="calc-row">
+                    <div class="calc-field"><label>Trade-In Value ($)</label><input type="number" id="calcTrade" value="0" min="0" step="500"></div>
+                    <div class="calc-field"><label>Interest Rate (%)</label><input type="number" id="calcRate" value="5.9" min="0" max="30" step="0.1"></div>
+                </div>
+                <div class="calc-field">
+                    <label>Loan Term</label>
+                    <select id="calcTerm">
+                        <option value="36">36 Months</option>
+                        <option value="48">48 Months</option>
+                        <option value="60" selected>60 Months</option>
+                        <option value="72">72 Months</option>
+                        <option value="84">84 Months</option>
+                    </select>
+                </div>
+                <div class="calc-result">
+                    <div class="label">Estimated Monthly Payment</div>
+                    <div class="amount" id="calcPayment">$617</div>
+                    <div class="per-month">per month</div>
+                    <div class="disclaimer">*Estimate only. Actual payment may vary based on credit approval and terms. Does not include tax, title, or fees.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== TRADE-IN ==================== -->
+    <section class="trade-section" id="trade">
+        <div class="trade-section-inner">
+            <div class="trade-content">
+                <h2>Value Your <em>Trade-In</em></h2>
+                <p>Get a competitive offer for your current vehicle and apply it toward your new Kia. Our appraisal process is fast, fair, and transparent.</p>
+                <ul class="trade-benefits">
+                    <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Instant online estimate in minutes</li>
+                    <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Competitive offers based on real market data</li>
+                    <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Apply trade value directly to your new Kia</li>
+                    <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Tax savings when you trade vs. sell privately</li>
+                    <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> No obligation -- get your value with no pressure</li>
+                </ul>
+                <a href="#" class="btn btn-primary" style="margin-top:16px;">Get Trade-In Value</a>
+            </div>
+            <div class="trade-image">
+                <img src="https://placehold.co/500x350/f7f8fa/BB162C?text=Trade-In+Valuation" alt="Trade in your vehicle at Taylor Kia of Findlay">
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="site-footer"><div class="container">
+        <div class="footer-grid">
+            <div class="footer-col"><h4>Inventory</h4><ul><li><a href="/demo/taylor-kia-findlay/inventory">New Kia Vehicles</a></li><li><a href="/demo/taylor-kia-findlay/inventory?type=used">Pre-Owned Vehicles</a></li><li><a href="/demo/taylor-kia-findlay/inventory?type=certified">Certified Pre-Owned</a></li><li><a href="/demo/taylor-kia-findlay/inventory?special=true">Current Specials</a></li></ul></div>
+            <div class="footer-col"><h4>Service</h4><ul><li><a href="/demo/taylor-kia-findlay/service">Schedule Service</a></li><li><a href="/demo/taylor-kia-findlay/service#specials">Service Specials</a></li><li><a href="/demo/taylor-kia-findlay/service#parts">Order Parts</a></li><li><a href="tel:5672128778">Call Service: (567) 212-8778</a></li></ul></div>
+            <div class="footer-col"><h4>Financing</h4><ul><li><a href="/demo/taylor-kia-findlay/financing">Apply for Financing</a></li><li><a href="/demo/taylor-kia-findlay/financing#calculator">Payment Calculator</a></li><li><a href="/demo/taylor-kia-findlay/financing#trade">Value Your Trade</a></li><li><a href="/demo/taylor-kia-findlay/financing#credit">Credit Solutions</a></li></ul></div>
+            <div class="footer-col"><h4>About Us</h4><ul><li><a href="/demo/taylor-kia-findlay/contact">Contact Us</a></li><li><a href="/demo/taylor-kia-findlay/contact#hours">Hours &amp; Directions</a></li><li><a href="tel:5679079251">Call Sales: (567) 907-9251</a></li></ul></div>
+        </div>
+        <div class="footer-family">Part of the <a href="/demo/taylor-auto">Taylor Automotive Family</a></div>
+        <div class="footer-locations">Also visit: <a href="/demo/taylor-kia-toledo">Taylor Kia of Toledo</a> | <a href="/demo/taylor-kia-lima">Taylor Kia of Lima</a></div>
+        <div class="footer-bottom"><p>Taylor Kia of Findlay &mdash; 12002 County Rd 99, Findlay, OH 45840 &bull; &copy; 2026 All Rights Reserved &bull; Powered by <a href="https://www.savvydealer.com" target="_blank" rel="noopener">SavvyDealer</a></p></div>
+    </div></footer>
+
+    <script>
+    (function() {
+        function calculate() {
+            var price = parseFloat(document.getElementById('calcPrice').value) || 0;
+            var down = parseFloat(document.getElementById('calcDown').value) || 0;
+            var trade = parseFloat(document.getElementById('calcTrade').value) || 0;
+            var rate = parseFloat(document.getElementById('calcRate').value) || 0;
+            var term = parseInt(document.getElementById('calcTerm').value) || 60;
+            var principal = price - down - trade;
+            if (principal <= 0) { document.getElementById('calcPayment').textContent = '$0'; return; }
+            var monthly;
+            if (rate === 0) { monthly = principal / term; }
+            else { var r = (rate / 100) / 12; monthly = principal * (r * Math.pow(1 + r, term)) / (Math.pow(1 + r, term) - 1); }
+            document.getElementById('calcPayment').textContent = '$' + Math.round(monthly).toLocaleString();
+        }
+        ['calcPrice','calcDown','calcTrade','calcRate','calcTerm'].forEach(function(id) {
+            document.getElementById(id).addEventListener('input', calculate);
+        });
+        calculate();
+    })();
+    </script>
+
+</body>
+</html>

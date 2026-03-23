@@ -1,0 +1,20 @@
+{
+  "name": "Taylor Kia of Lima",
+  "slug": "taylor-kia-lima",
+  "brand": "Kia",
+  "address": "2100 N Cable Rd, Lima, OH 45805",
+  "phones": {
+    "sales": "(567) 712-6604",
+    "service": "(567) 708-1279",
+    "parts": "(567) 708-1328"
+  },
+  "colors": {
+    "primary": "#05141F",
+    "accent": "#BB162C",
+    "white": "#FFFFFF"
+  },
+  "pages": ["index", "inventory", "vdp", "service", "financing", "contact"],
+  "featured": true,
+  "group": "Taylor Automotive Family",
+  "siblings": ["taylor-kia-toledo", "taylor-kia-findlay"]
+}

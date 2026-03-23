@@ -1,0 +1,19 @@
+{
+  "name": "Taylor Volkswagen of Findlay",
+  "slug": "taylor-vw-findlay",
+  "location": "Findlay, OH",
+  "phone": {
+    "sales": "567-250-9813",
+    "service": "567-250-9813",
+    "parts": "567-250-9813"
+  },
+  "address": "11799 County Rd 99, Findlay, OH 45840",
+  "oem": ["Volkswagen"],
+  "colors": {
+    "primary": "#001E50",
+    "secondary": "#FFFFFF",
+    "accent": "#00B0F0"
+  },
+  "group": "Taylor Automotive Family",
+  "groupUrl": "/demo/taylor-auto"
+}

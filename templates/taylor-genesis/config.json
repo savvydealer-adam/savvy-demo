@@ -1,0 +1,19 @@
+{
+  "name": "Taylor Genesis of Perrysburg",
+  "slug": "taylor-genesis",
+  "location": "Perrysburg, OH",
+  "phone": {
+    "sales": "419-931-8000",
+    "service": "888-273-7118",
+    "parts": "866-946-1385"
+  },
+  "address": "12681 Eckel Junction Rd, Perrysburg, OH 43551",
+  "oem": ["Genesis"],
+  "colors": {
+    "primary": "#111111",
+    "secondary": "#B87333",
+    "accent": "#FFFFFF"
+  },
+  "group": "Taylor Automotive Family",
+  "groupUrl": "/demo/taylor-auto"
+}
