@@ -262,12 +262,7 @@
 <header class="site-header">
     <div class="sh-inner">
         <a href="/demo/taylor-kia-findlay" class="header-logo">
-            <svg class="kia-logo-svg" viewBox="0 0 120 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M26.2 4L14.5 21l11.7 17h-9.8L7.1 24.3V38H0V4h7.1v13.5L16.4 4h9.8z" fill="#05141F"/>
-                <path d="M32.5 4h7.1v34h-7.1V4z" fill="#05141F"/>
-                <path d="M68.3 4L54.7 38h-7.6L33.5 4h8l9.4 25.5L60.3 4h8z" fill="#05141F"/>
-                <text x="78" y="30" font-family="Inter,sans-serif" font-size="14" font-weight="800" fill="#05141F">KIA</text>
-            </svg>
+            <img class="kia-logo-svg" src="https://www.kia.com/us/content/dam/kia/us/common/kia_logo_black.svg" alt="Kia" style="height:32px;width:auto;">
             <div class="dealer-name">Taylor Kia<small>Findlay</small></div>
         </a>
         <nav class="header-nav">
@@ -493,18 +488,18 @@
 <script>
 (function() {
     var vehicles = [
-        { year: 2025, make: "Kia", model: "Telluride", trim: "SX", color: "Snow White Pearl", drivetrain: "AWD", engine: "3.8L V6", stock: "TKF1001", msrp: 49090, discount: 3000, image: "https://placehold.co/960x540/f4f4f4/333333?text=2025+Kia+Telluride+SX" },
-        { year: 2025, make: "Kia", model: "Sportage", trim: "X-Line", color: "Gravity Gray", drivetrain: "AWD", engine: "2.5L Turbo", stock: "TKF1002", msrp: 36490, discount: 2500, image: "https://placehold.co/960x540/f4f4f4/333333?text=2025+Kia+Sportage+X-Line" },
-        { year: 2025, make: "Kia", model: "EV6", trim: "Wind AWD", color: "Yacht Blue", drivetrain: "AWD", engine: "Electric", stock: "TKF1003", msrp: 52600, discount: 4000, image: "https://placehold.co/960x540/f4f4f4/333333?text=2025+Kia+EV6+Wind" },
-        { year: 2026, make: "Kia", model: "EV9", trim: "Land AWD", color: "Snow White Pearl", drivetrain: "AWD", engine: "Electric", stock: "TKF1004", msrp: 54900, discount: 3500, image: "https://placehold.co/960x540/f4f4f4/333333?text=2026+Kia+EV9+Land" },
-        { year: 2025, make: "Kia", model: "Sorento", trim: "SX Prestige", color: "Aurora Black Pearl", drivetrain: "AWD", engine: "2.5L Turbo", stock: "TKF1005", msrp: 44590, discount: 3000, image: "https://placehold.co/960x540/f4f4f4/333333?text=2025+Kia+Sorento+SX" },
-        { year: 2025, make: "Kia", model: "Forte", trim: "GT-Line", color: "Runway Red", drivetrain: "FWD", engine: "2.0L 4-Cyl", stock: "TKF1006", msrp: 24190, discount: 1500, image: "https://placehold.co/960x540/f4f4f4/333333?text=2025+Kia+Forte+GT-Line" },
-        { year: 2025, make: "Kia", model: "K5", trim: "GT-Line AWD", color: "Wolf Gray", drivetrain: "AWD", engine: "1.6L Turbo", stock: "TKF1007", msrp: 32390, discount: 2000, image: "https://placehold.co/960x540/f4f4f4/333333?text=2025+Kia+K5+GT-Line" },
-        { year: 2025, make: "Kia", model: "Seltos", trim: "SX Turbo", color: "Gravity Gray", drivetrain: "AWD", engine: "1.6L Turbo", stock: "TKF1008", msrp: 30490, discount: 2000, image: "https://placehold.co/960x540/f4f4f4/333333?text=2025+Kia+Seltos+SX+Turbo" },
-        { year: 2025, make: "Kia", model: "Soul", trim: "GT-Line", color: "Snow White Pearl", drivetrain: "FWD", engine: "2.0L 4-Cyl", stock: "TKF1009", msrp: 23515, discount: 1500, image: "https://placehold.co/960x540/f4f4f4/333333?text=2025+Kia+Soul+GT-Line" },
-        { year: 2025, make: "Kia", model: "Carnival", trim: "SX Prestige", color: "Aurora Black Pearl", drivetrain: "FWD", engine: "3.5L V6", stock: "TKF1010", msrp: 46590, discount: 3500, image: "https://placehold.co/960x540/f4f4f4/333333?text=2025+Kia+Carnival+SX" },
-        { year: 2026, make: "Kia", model: "Telluride", trim: "X-Pro", color: "Wolf Gray", drivetrain: "AWD", engine: "3.8L V6", stock: "TKF1011", msrp: 51290, discount: 2500, image: "https://placehold.co/960x540/f4f4f4/333333?text=2026+Kia+Telluride+X-Pro" },
-        { year: 2026, make: "Kia", model: "Sportage", trim: "HEV SX", color: "Dawning Red", drivetrain: "AWD", engine: "1.6L Turbo HEV", stock: "TKF1012", msrp: 39490, discount: 2500, image: "https://placehold.co/960x540/f4f4f4/333333?text=2026+Kia+Sportage+HEV" }
+        { year: 2025, make: "Kia", model: "Telluride", trim: "SX", color: "Snow White Pearl", drivetrain: "AWD", engine: "3.8L V6", stock: "TKF1001", msrp: 49090, discount: 3000, image: "https://www.kia.com/content/dam/kia/us/en/vehicles/telluride/2027/mep/gallery/l2q-telluride-ice-gallery-carousel-1.jpg" },
+        { year: 2025, make: "Kia", model: "Sportage", trim: "X-Line", color: "Gravity Gray", drivetrain: "AWD", engine: "2.5L Turbo", stock: "TKF1002", msrp: 36490, discount: 2500, image: "https://www.kia.com/content/dam/kia/us/en/vehicles/sportage/2026/mep/in-page-gallery/my26-sportage-ice-mep-gallery-1.jpg" },
+        { year: 2025, make: "Kia", model: "EV6", trim: "Wind AWD", color: "Yacht Blue", drivetrain: "AWD", engine: "Electric", stock: "TKF1003", msrp: 52600, discount: 4000, image: "https://www.kiamedia.com/image/low/22772/1/2?v=3" },
+        { year: 2026, make: "Kia", model: "EV9", trim: "Land AWD", color: "Snow White Pearl", drivetrain: "AWD", engine: "Electric", stock: "TKF1004", msrp: 54900, discount: 3500, image: "https://www.kia.com/content/dam/kia/us/en/vehicles/ev9/2026/in-page-gallery/my26-ev9-mep-gallery-01.jpg" },
+        { year: 2025, make: "Kia", model: "Sorento", trim: "SX Prestige", color: "Aurora Black Pearl", drivetrain: "AWD", engine: "2.5L Turbo", stock: "TKF1005", msrp: 44590, discount: 3000, image: "https://www.kia.com/content/dam/kia/us/en/vehicles/sorento/2026/mep/in-page-gallery/exterior/my26-sorento-ice-gallery-ext3.jpg" },
+        { year: 2025, make: "Kia", model: "Forte", trim: "GT-Line", color: "Runway Red", drivetrain: "FWD", engine: "2.0L 4-Cyl", stock: "TKF1006", msrp: 24190, discount: 1500, image: "https://www.kiamedia.com/image/low/21229/1/2?v=3" },
+        { year: 2025, make: "Kia", model: "K5", trim: "GT-Line AWD", color: "Wolf Gray", drivetrain: "AWD", engine: "1.6L Turbo", stock: "TKF1007", msrp: 32390, discount: 2000, image: "https://www.kia.com/content/dam/kia/us/en/vehicles/k5/2026/mep/in-page-gallery-v2/my26_k5-mep-gallery-ext2.jpg" },
+        { year: 2025, make: "Kia", model: "Seltos", trim: "SX Turbo", color: "Gravity Gray", drivetrain: "AWD", engine: "1.6L Turbo", stock: "TKF1008", msrp: 30490, discount: 2000, image: "https://www.kia.com/content/dam/kia/us/en/vehicles/seltos/2026/mep/in-page-gallery/my26-seltos-mep-gallery-ext1.jpg" },
+        { year: 2025, make: "Kia", model: "Soul", trim: "GT-Line", color: "Snow White Pearl", drivetrain: "FWD", engine: "2.0L 4-Cyl", stock: "TKF1009", msrp: 23515, discount: 1500, image: "https://www.kia.com/content/dam/kia/us/en/vehicles/soul/2025/mep/inpage-gallery/my25-soul-mep-gallery-carousel-1.jpg" },
+        { year: 2025, make: "Kia", model: "Carnival", trim: "SX Prestige", color: "Aurora Black Pearl", drivetrain: "FWD", engine: "3.5L V6", stock: "TKF1010", msrp: 46590, discount: 3500, image: "https://www.kiamedia.com/image/low/22586/1/2?v=3" },
+        { year: 2026, make: "Kia", model: "Telluride", trim: "X-Pro", color: "Wolf Gray", drivetrain: "AWD", engine: "3.8L V6", stock: "TKF1011", msrp: 51290, discount: 2500, image: "https://www.kiamedia.com/image/low/23362/1/2?v=3" },
+        { year: 2026, make: "Kia", model: "Sportage", trim: "HEV SX", color: "Dawning Red", drivetrain: "AWD", engine: "1.6L Turbo HEV", stock: "TKF1012", msrp: 39490, discount: 2500, image: "https://www.kiamedia.com/image/low/22857/1/2?v=3" }
     ];
 
     function formatPrice(n) { return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","); }

@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/vw-head" rel="stylesheet">
   <style>
     *, *::before, *::after {
       margin: 0;
@@ -16,7 +17,7 @@
     }
 
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'VW Head', 'Inter', sans-serif;
       color: #333;
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
@@ -517,6 +518,147 @@
       border-radius: 12px;
     }
 
+    /* ========== GOOGLE REVIEWS ========== */
+    .reviews-section {
+      padding: 64px 0;
+      background: #f5f5f5;
+    }
+
+    .reviews-section .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .reviews-header {
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .reviews-header h2 {
+      font-size: 30px;
+      font-weight: 800;
+      color: #001E50;
+      margin-bottom: 8px;
+    }
+
+    .reviews-stars-summary {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    .reviews-stars-summary .stars {
+      color: #F4B400;
+      font-size: 22px;
+      letter-spacing: 2px;
+    }
+
+    .reviews-stars-summary .rating-text {
+      font-size: 16px;
+      font-weight: 700;
+      color: #333;
+    }
+
+    .reviews-subtitle {
+      font-size: 14px;
+      color: #888;
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .review-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+    }
+
+    .review-card-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .review-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #001E50;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .review-meta {
+      flex: 1;
+    }
+
+    .review-meta .review-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: #333;
+    }
+
+    .review-meta .review-date {
+      font-size: 12px;
+      color: #999;
+    }
+
+    .review-card .review-stars {
+      color: #F4B400;
+      font-size: 14px;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+
+    .review-card p {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .google-badge {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 32px;
+      font-size: 13px;
+      color: #888;
+    }
+
+    .google-badge svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    @media (max-width: 1023px) {
+      .reviews-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .reviews-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
     /* ========== FOOTER ========== */
     .site-footer {
       background: #001E50;
@@ -676,10 +818,10 @@
   <header class="site-header">
     <div class="container">
       <a href="/demo/taylor-vw-findlay" class="header-brand">
-        <svg class="vw-logo" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="100" cy="100" r="96" stroke="#001E50" stroke-width="8"/>
-          <path d="M100 28 L135 130 L100 90 L65 130 Z" fill="#001E50"/>
-          <path d="M58 50 L80 110 L100 60 L120 110 L142 50" stroke="#001E50" stroke-width="8" fill="none" stroke-linejoin="round"/>
+        <svg class="vw-logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="100" cy="100" r="96" fill="none" stroke="#001E50" stroke-width="8"/>
+          <path d="M66 56 L84 100 L100 62 L116 100 L134 56" fill="none" stroke="#001E50" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M78 84 L100 140 L122 84" fill="none" stroke="#001E50" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
         <div class="header-brand-text">
           Taylor Volkswagen
@@ -727,7 +869,7 @@
       <div class="model-grid">
         <a href="/demo/taylor-vw-findlay/inventory?model=Atlas" class="model-card">
           <div class="model-card-image">
-            <img src="https://placehold.co/600x400/001E50/FFFFFF?text=2025+VW+Atlas" alt="2025 Volkswagen Atlas" loading="lazy">
+            <img src="https://file.kelleybluebookimages.com/kbb/base/evox/CP/57204/2026-Volkswagen-Atlas-front_57204_032_2400x1800_R3R3.png" alt="2025 Volkswagen Atlas" loading="lazy">
           </div>
           <div class="model-card-info">
             <div class="model-card-brand">Volkswagen</div>
@@ -737,7 +879,7 @@
         </a>
         <a href="/demo/taylor-vw-findlay/inventory?model=Atlas+Cross+Sport" class="model-card">
           <div class="model-card-image">
-            <img src="https://placehold.co/600x400/001E50/FFFFFF?text=2025+VW+Atlas+Cross+Sport" alt="2025 Volkswagen Atlas Cross Sport" loading="lazy">
+            <img src="https://file.kelleybluebookimages.com/kbb/base/evox/CP/55681/2026-Volkswagen-Atlas%20Cross%20Sport-front_55681_032_1811x851_0P0P_cropped.png" alt="2025 Volkswagen Atlas Cross Sport" loading="lazy">
           </div>
           <div class="model-card-info">
             <div class="model-card-brand">Volkswagen</div>
@@ -747,7 +889,7 @@
         </a>
         <a href="/demo/taylor-vw-findlay/inventory?model=Tiguan" class="model-card">
           <div class="model-card-image">
-            <img src="https://placehold.co/600x400/001E50/FFFFFF?text=2025+VW+Tiguan" alt="2025 Volkswagen Tiguan" loading="lazy">
+            <img src="https://file.kelleybluebookimages.com/kbb/base/evox/CP/57513/2026-Volkswagen-Tiguan-front_57513_032_1821x837_X52T_cropped.png" alt="2025 Volkswagen Tiguan" loading="lazy">
           </div>
           <div class="model-card-info">
             <div class="model-card-brand">Volkswagen</div>
@@ -757,7 +899,7 @@
         </a>
         <a href="/demo/taylor-vw-findlay/inventory?model=Taos" class="model-card">
           <div class="model-card-image">
-            <img src="https://placehold.co/600x400/001E50/FFFFFF?text=2025+VW+Taos" alt="2025 Volkswagen Taos" loading="lazy">
+            <img src="https://file.kelleybluebookimages.com/kbb/base/evox/CP/56542/2026-Volkswagen-Taos-front_56542_032_1816x858_Y9Y9_cropped.png" alt="2025 Volkswagen Taos" loading="lazy">
           </div>
           <div class="model-card-info">
             <div class="model-card-brand">Volkswagen</div>
@@ -767,7 +909,7 @@
         </a>
         <a href="/demo/taylor-vw-findlay/inventory?model=Jetta" class="model-card">
           <div class="model-card-image">
-            <img src="https://placehold.co/600x400/001E50/FFFFFF?text=2025+VW+Jetta" alt="2025 Volkswagen Jetta" loading="lazy">
+            <img src="https://file.kelleybluebookimages.com/kbb/base/evox/CP/55647/2026-Volkswagen-Jetta-front_55647_032_1764x748_K2K2_cropped.png" alt="2025 Volkswagen Jetta" loading="lazy">
           </div>
           <div class="model-card-info">
             <div class="model-card-brand">Volkswagen</div>
@@ -777,7 +919,7 @@
         </a>
         <a href="/demo/taylor-vw-findlay/inventory?model=ID.4" class="model-card">
           <div class="model-card-image">
-            <img src="https://placehold.co/600x400/001E50/FFFFFF?text=2025+VW+ID.4" alt="2025 Volkswagen ID.4" loading="lazy">
+            <img src="https://file.kelleybluebookimages.com/kbb/base/evox/CP/57976/2026-Volkswagen-ID.4-front_57976_032_1823x858_J2J2_cropped.png" alt="2025 Volkswagen ID.4" loading="lazy">
           </div>
           <div class="model-card-info">
             <div class="model-card-brand">Volkswagen</div>
@@ -787,7 +929,7 @@
         </a>
         <a href="/demo/taylor-vw-findlay/inventory?model=ID.+Buzz" class="model-card">
           <div class="model-card-image">
-            <img src="https://placehold.co/600x400/001E50/FFFFFF?text=2025+VW+ID.+Buzz" alt="2025 Volkswagen ID. Buzz" loading="lazy">
+            <img src="https://file.kelleybluebookimages.com/kbb/base/evox/CP/55834/2025-Volkswagen-ID.Buzz-front_55834_032_2400x1800_9987.png" alt="2025 Volkswagen ID. Buzz" loading="lazy">
           </div>
           <div class="model-card-info">
             <div class="model-card-brand">Volkswagen</div>
@@ -797,7 +939,7 @@
         </a>
         <a href="/demo/taylor-vw-findlay/inventory?model=GTI" class="model-card">
           <div class="model-card-image">
-            <img src="https://placehold.co/600x400/001E50/FFFFFF?text=2025+VW+GTI" alt="2025 Volkswagen GTI" loading="lazy">
+            <img src="https://file.kelleybluebookimages.com/kbb/base/evox/CP/55014/2026-Volkswagen-Golf%20GTI-front_55014_032_1824x805_P8P8_cropped.png" alt="2025 Volkswagen GTI" loading="lazy">
           </div>
           <div class="model-card-info">
             <div class="model-card-brand">Volkswagen</div>
@@ -819,7 +961,7 @@
           <a href="/demo/taylor-vw-findlay/inventory?fuel=Electric" class="btn-ev">Explore Electric VWs</a>
         </div>
         <div class="ev-image">
-          <img src="https://placehold.co/600x400/00B0F0/FFFFFF?text=VW+Electric+Lineup" alt="Volkswagen Electric Vehicles" loading="lazy">
+          <img src="https://file.kelleybluebookimages.com/kbb/base/house/2025/2025-Volkswagen-ID.Buzz-FrontSide_VWIDBUZZ2501_640x480.jpg" alt="Volkswagen Electric Vehicles - ID. Buzz" loading="lazy">
         </div>
       </div>
     </div>
@@ -872,6 +1014,92 @@
           <h3>Certified VW Service</h3>
           <p>Factory-trained Volkswagen technicians and genuine VW parts keep your vehicle performing at its best.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== GOOGLE REVIEWS ==================== -->
+  <section class="reviews-section">
+    <div class="container">
+      <div class="reviews-header">
+        <h2>What Our Customers Say</h2>
+      </div>
+      <div class="reviews-stars-summary">
+        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="rating-text">4.8 out of 5</span>
+      </div>
+      <p class="reviews-subtitle">Based on 247 Google Reviews</p>
+
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-card-header">
+            <div class="review-avatar">M</div>
+            <div class="review-meta">
+              <div class="review-name">Mike R.</div>
+              <div class="review-date">2 weeks ago</div>
+            </div>
+          </div>
+          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>Bought a 2025 Atlas from Taylor VW and the whole experience was smooth. No pressure, fair pricing, and they found us exactly the trim we wanted. The third-row space is incredible for our family.</p>
+        </div>
+
+        <div class="review-card">
+          <div class="review-card-header">
+            <div class="review-avatar">S</div>
+            <div class="review-meta">
+              <div class="review-name">Sarah T.</div>
+              <div class="review-date">1 month ago</div>
+            </div>
+          </div>
+          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>Just leased a new Tiguan SE and I absolutely love it. The team at Taylor VW made everything easy -- financing was straightforward and they walked me through every feature before I drove off the lot.</p>
+        </div>
+
+        <div class="review-card">
+          <div class="review-card-header">
+            <div class="review-avatar">J</div>
+            <div class="review-meta">
+              <div class="review-name">Jason K.</div>
+              <div class="review-date">3 weeks ago</div>
+            </div>
+          </div>
+          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>Took the plunge on an ID.4 and couldn't be happier. The range is better than I expected and Taylor VW helped me understand all the EV tax credits. Charging at home has been a game changer.</p>
+        </div>
+
+        <div class="review-card">
+          <div class="review-card-header">
+            <div class="review-avatar">L</div>
+            <div class="review-meta">
+              <div class="review-name">Linda P.</div>
+              <div class="review-date">1 month ago</div>
+            </div>
+          </div>
+          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+          <p>Had my Jetta serviced here and it was quick and affordable. They even washed it before I picked it up. Service team is knowledgeable and honest about what actually needs to be done.</p>
+        </div>
+
+        <div class="review-card">
+          <div class="review-card-header">
+            <div class="review-avatar">D</div>
+            <div class="review-meta">
+              <div class="review-name">Derek W.</div>
+              <div class="review-date">2 months ago</div>
+            </div>
+          </div>
+          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>Best dealership experience I've had in Ohio. Drove from Lima to buy my GTI here because their price beat everyone else. Staff was friendly and the whole deal took less than 2 hours.</p>
+        </div>
+      </div>
+
+      <div class="google-badge">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/>
+          <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+          <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+          <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+        </svg>
+        Reviews from Google
       </div>
     </div>
   </section>
@@ -929,7 +1157,7 @@
     "@context": "https://schema.org",
     "@type": "AutoDealer",
     "name": "Taylor Volkswagen of Findlay",
-    "image": "https://placehold.co/1200x630/001E50/FFFFFF?text=Taylor+Volkswagen+of+Findlay",
+    "image": "https://file.kelleybluebookimages.com/kbb/base/evox/CP/57204/2026-Volkswagen-Atlas-front_57204_032_2400x1800_R3R3.png",
     "url": "https://demo.savvydealer.com/demo/taylor-vw-findlay",
     "telephone": "(567) 250-9813",
     "address": {
