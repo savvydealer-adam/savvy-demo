@@ -18,6 +18,11 @@ Demo dealership website gallery showcasing SavvyDealer website templates. Each t
 | Guide | File | Purpose |
 |-------|------|---------|
 | Mitsubishi | `brand-guides/mitsubishi.md` | OEM fonts, colors, logo, compliance rules |
+| Kia | `brand-guides/kia.md` | Kia brand identity, colors, logo, fonts |
+| Hyundai | `brand-guides/hyundai.md` | Hyundai brand identity, colors, logo, fonts |
+| Cadillac | `brand-guides/cadillac.md` | Cadillac luxury brand identity, colors, logo |
+| Genesis | `brand-guides/genesis.md` | Genesis ultra-luxury brand identity, colors, logo |
+| Volkswagen | `brand-guides/volkswagen.md` | VW brand identity, colors, logo, fonts |
 | SRP Template | `brand-guides/srp-template.md` | Standard SRP/inventory page layout for ALL demos |
 
 **SRP pages MUST follow `srp-template.md`.** This is the approved layout — do not deviate from the card structure, filter panel, or grid layout.
@@ -27,6 +32,22 @@ When building a new template for a manufacturer that has a brand guide:
 2. Use the specified fonts, colors, logo SVGs, and image URLs
 3. Follow the compliance checklist at the bottom of the guide
 4. Do NOT substitute fonts (e.g., don't use Barlow/Inter/Arial for Mitsubishi -- use MMC)
+
+## OEM Logos -- NEVER FABRICATE -- CRITICAL
+
+**NEVER create, draw, or approximate an OEM logo.** This includes:
+- Hand-drawn SVG logos that "look like" the real thing
+- Text-based approximations (e.g., typing "KIA" in bold is NOT the Kia logo)
+- Simplified/stylized versions of official marks
+
+**ALWAYS use the official logo file from the manufacturer's CDN or an authorized source.** The correct logo URLs are documented in each brand guide file. If you cannot find an official logo URL, ASK -- do not guess or fabricate.
+
+This rule applies to:
+- Dealership page headers
+- Gallery cards
+- Group hub brand selector
+- Footer logos
+- Anywhere a brand mark appears
 
 ## Template Structure
 
