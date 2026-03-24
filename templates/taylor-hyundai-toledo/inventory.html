@@ -495,20 +495,20 @@
     ];
 
     var modelImages = {
-        'Tucson': 'https://www.hyundaicanada.com/-/media/hyundai/showroom/2025/tucson/exterior_gallery/expanded/desktop_xl/img_001.jpg',
-        'Santa Fe': 'https://www.hyundaicanada.com/-/media/hyundai/showroom/2024/santa-fe/exterior_gallery/expanded/desktop_xl/img_001.jpg',
-        'Palisade': 'https://www.hyundaicanada.com/-/media/hyundai/showroom/2024/palisade/exterior_feature_gallery/desktop_xl/my23_palisade_exterior_f1.jpg',
-        'IONIQ 5': 'https://www.hyundaicanada.com/-/media/hyundai/showroom/2025/ioniq-5/exterior_gallery/expanded/desktop_xl/img_001.jpg',
-        'IONIQ 6': 'https://www.hyundaicanada.com/-/media/hyundai/showroom/2023/ioniq-6/exterior_feature_gallery/expanded/desktop_xl/ioniq_6_exterior_f1.jpg',
-        'Elantra': 'https://www.hyundaicanada.com/-/media/hyundai/showroom/2025/elantra/exterior_gallery/expanded/desktop_xl/img_006.jpg',
-        'Kona': 'https://www.hyundaicanada.com/-/media/hyundai/showroom/2025/kona/exterior_gallery/expanded/desktop_xl/kona_exterior_f1.jpg',
-        'Sonata': 'https://www.hyundaicanada.com/-/media/hyundai/showroom/2024/sonata/exterior_galley/expanded/desktop_xl/img_001_new.jpg',
-        'Venue': 'https://www.hyundaicanada.com/-/media/hyundai/showroom/2026/venue/exterior_gallery/expanded/desktop_xl/venue_exterior_f1.jpg',
-        'Santa Cruz': 'https://www.hyundaicanada.com/-/media/hyundai/showroom/2025/santa-cruz/exterior_gallery/expanded/desktop_xl/img_001.jpg'
+        'Tucson': '/assets/vehicles/hyundai/hyundai-01.jpg',
+        'Santa Fe': '/assets/vehicles/hyundai/hyundai-02.jpg',
+        'Palisade': '/assets/vehicles/hyundai/hyundai-03.jpg',
+        'IONIQ 5': '/assets/vehicles/hyundai/hyundai-04.jpg',
+        'IONIQ 6': '/assets/vehicles/hyundai/hyundai-05.jpg',
+        'Elantra': '/assets/vehicles/hyundai/hyundai-06.jpg',
+        'Kona': '/assets/vehicles/hyundai/hyundai-07.jpg',
+        'Sonata': '/assets/vehicles/hyundai/hyundai-08.jpg',
+        'Venue': '/assets/vehicles/hyundai/hyundai-09.jpg',
+        'Santa Cruz': '/assets/vehicles/hyundai/hyundai-10.jpg'
     };
     var html = '';
     vehicles.forEach(function(v) {
-        var imgUrl = modelImages[v.model] || 'https://www.hyundaicanada.com/-/media/hyundai/showroom/2025/tucson/exterior_gallery/expanded/desktop_xl/img_001.jpg';
+        var imgUrl = modelImages[v.model] || '/assets/vehicles/hyundai/hyundai-01.jpg';
         var savingsHtml = v.savings ? '<div class="yousave-price"><span class="amount">' + v.savings + '</span><span class="save-label">Potential Savings</span></div>' : '';
         html += '<div class="list-item"><div class="list-item-inner">'
             + '<div class="image-block"><a href="/demo/taylor-hyundai-toledo/vdp"><img src="' + imgUrl + '" alt="' + v.year + ' Hyundai ' + v.model + ' ' + v.trim + '" loading="lazy" /></a>'

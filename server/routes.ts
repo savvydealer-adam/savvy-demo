@@ -12,8 +12,8 @@ export async function registerRoutes(
   app: Express
 ): Promise<Server> {
 
-  // Serve logo and shared assets from templates/assets/
-  app.use("/assets/logos", express.static(path.join(TEMPLATES_DIR, "assets", "logos")));
+  // Serve shared assets from templates/assets/
+  app.use("/assets", express.static(path.join(TEMPLATES_DIR, "assets")));
 
   // GET /api/templates - list available templates
   app.get("/api/templates", async (_req, res) => {
