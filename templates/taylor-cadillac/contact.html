@@ -75,27 +75,75 @@
             font-family: inherit; letter-spacing: 1.5px; text-transform: uppercase; border: 1px solid transparent;
             cursor: pointer; transition: all 0.4s ease; text-align: center;
         }
-        .btn-gold, .btn-glass-gold {
-            background: transparent; border: 1px solid #0D0D0D; border-radius: 0; color: #0D0D0D;
-            border: 1px solid rgba(255,255,255,0.3); border-radius: 0; color: #FFFFFF;
+        .cta-button-outline {
+            background: transparent;
+            border: 1px solid #FFFFFF;
+            border-radius: 0;
+            color: #FFFFFF;
+            padding: 12px 28px;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 500;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            cursor: pointer;
+            transition: all 0.2s ease;
         }
-        .btn-gold:hover, .btn-glass-gold:hover {
-            background: #0D0D0D; color: #fff; border-color: #0D0D0D;
-            box-shadow: 0 12px 40px rgba(255,255,255,0.08); transform: translateY(-2px);
+        .cta-button-outline:hover {
+            background: #FFFFFF;
+            color: #000000;
         }
-        .btn-outline, .btn-glass {
-            background: transparent; border: 1px solid #FFFFFF; border-radius: 0; color: #fff;
-            border: 1px solid rgba(255,255,255,0.2); border-radius: 0; color: #fff;
+        .cta-button-outline-dark {
+            background: transparent;
+            border: 1px solid #000000;
+            border-radius: 0;
+            color: #000000;
+            padding: 12px 28px;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 500;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            cursor: pointer;
+            transition: all 0.2s ease;
         }
-        .btn-outline:hover, .btn-glass:hover {
-            background: #FFFFFF; color: #000; border-color: #FFFFFF;
-            box-shadow: 0 12px 40px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.08); transform: translateY(-2px);
+        .cta-button-outline-dark:hover {
+            background: #000000;
+            color: #FFFFFF;
         }
+        /* CTA: text link with arrow */
+        .cta-link {
+            color: #FFFFFF;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 500;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: none;
+            background: none;
+            padding: 12px 0;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+        .cta-link:hover { opacity: 0.8; }
+        .cta-link .arrow {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            transition: transform 0.2s ease;
+        }
+        .cta-link:hover .arrow { transform: translateX(4px); }
+        .cta-link-dark { color: var(--accent); }
+        .cta-link-dark:hover { opacity: 0.7; }
 
         /* ========== HERO ========== */
         .contact-hero {
             position: relative;
-            background: linear-gradient(rgba(26,26,26,0.80), rgba(26,26,26,0.88)), url('https://www.cadillac.com/content/dam/cadillac/na/us/english/index/vehicles/2026/suvs/escalade-mcm/gallery/my25-escalade-gallery-exterior-grid-front.jpg?imwidth=1920');
+            background: linear-gradient(rgba(0,0,0,0.80), rgba(0,0,0,0.88)), url('https://www.cadillac.com/content/dam/cadillac/na/us/english/index/vehicles/2026/suvs/escalade-mcm/gallery/my25-escalade-gallery-exterior-grid-front.jpg?imwidth=1920');
             background-size: cover;
             background-position: center;
             overflow: hidden;
@@ -106,8 +154,8 @@
             background: radial-gradient(ellipse at 50% 30%, transparent 0%, transparent 70%); pointer-events: none;
         }
         .contact-hero::after {
-            content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
-            width: 200px; height: 1px; background: linear-gradient(90deg, transparent, var(--accent-on-dark), transparent);
+            content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+            height: 1px; background: rgba(255,255,255,0.1);
         }
         .contact-hero-inner {
             max-width: 800px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; text-align: center;
@@ -227,8 +275,8 @@
             position: relative;
         }
         .hours-section::before {
-            content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
-            width: 200px; height: 1px; background: linear-gradient(90deg, transparent, var(--accent-on-dark), transparent);
+            content: ''; position: absolute; top: 0; left: 0; right: 0;
+            height: 1px; background: rgba(255,255,255,0.1);
         }
         .hours-section .container {
             max-width: 1280px; margin: 0 auto; padding: 0 24px;
@@ -453,7 +501,7 @@
                         <div class="form-group full"><label>Message</label><textarea placeholder="How can we assist you?"></textarea></div>
                     </div>
                     <div class="form-submit">
-                        <button type="submit" class="btn btn-gold">Send Message</button>
+                        <button type="submit" class="btn cta-button-outline-dark">Send Message</button>
                     </div>
                 </form>
             </div>

@@ -75,35 +75,75 @@
             font-family: inherit; letter-spacing: 1.5px; text-transform: uppercase; border: 1px solid transparent;
             cursor: pointer; transition: all 0.4s ease; text-align: center;
         }
-        .btn-gold, .btn-glass-gold {
-            background: transparent; border: 1px solid #0D0D0D; border-radius: 0; color: #0D0D0D;
-            border: 1px solid rgba(255,255,255,0.3); border-radius: 0; color: #FFFFFF;
+        .cta-button-outline {
+            background: transparent;
+            border: 1px solid #FFFFFF;
+            border-radius: 0;
+            color: #FFFFFF;
+            padding: 12px 28px;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 500;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            cursor: pointer;
+            transition: all 0.2s ease;
         }
-        .btn-gold:hover, .btn-glass-gold:hover {
-            background: #0D0D0D; color: #fff; border-color: #0D0D0D;
-            box-shadow: 0 12px 40px rgba(255,255,255,0.08); transform: translateY(-2px);
+        .cta-button-outline:hover {
+            background: #FFFFFF;
+            color: #000000;
         }
-        .btn-outline, .btn-glass {
-            background: transparent; border: 1px solid #FFFFFF; border-radius: 0; color: #fff;
-            border: 1px solid rgba(255,255,255,0.2); border-radius: 0; color: #fff;
+        .cta-button-outline-dark {
+            background: transparent;
+            border: 1px solid #000000;
+            border-radius: 0;
+            color: #000000;
+            padding: 12px 28px;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 500;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            cursor: pointer;
+            transition: all 0.2s ease;
         }
-        .btn-outline:hover, .btn-glass:hover {
-            background: #FFFFFF; color: #000; border-color: #FFFFFF;
-            box-shadow: 0 12px 40px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.08); transform: translateY(-2px);
+        .cta-button-outline-dark:hover {
+            background: #000000;
+            color: #FFFFFF;
         }
-        .btn-outline-dark {
-            background: transparent; border: 1px solid #0D0D0D; border-radius: 0; color: #0D0D0D;
-            border: 1px solid rgba(255,255,255,0.2); border-radius: 0; color: var(--black);
+        /* CTA: text link with arrow */
+        .cta-link {
+            color: #FFFFFF;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 500;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: none;
+            background: none;
+            padding: 12px 0;
+            cursor: pointer;
+            transition: opacity 0.2s;
         }
-        .btn-outline-dark:hover {
-            background: #0D0D0D; color: #fff; border-color: #0D0D0D;
-            color: var(--accent-on-dark); box-shadow: 0 12px 40px rgba(0,0,0,0.1); transform: translateY(-2px);
+        .cta-link:hover { opacity: 0.8; }
+        .cta-link .arrow {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            transition: transform 0.2s ease;
         }
+        .cta-link:hover .arrow { transform: translateX(4px); }
+        .cta-link-dark { color: var(--accent); }
+        .cta-link-dark:hover { opacity: 0.7; }
 
         /* ========== HERO ========== */
         .finance-hero {
             position: relative;
-            background: linear-gradient(rgba(26,26,26,0.80), rgba(26,26,26,0.88)), url('https://www.cadillac.com/content/dam/cadillac/na/us/english/index/vehicles/2026/suvs/escalade-mcm/gallery/my25-escalade-gallery-exterior-grid-front.jpg?imwidth=1920');
+            background: linear-gradient(rgba(0,0,0,0.80), rgba(0,0,0,0.88)), url('https://www.cadillac.com/content/dam/cadillac/na/us/english/index/vehicles/2026/suvs/escalade-mcm/gallery/my25-escalade-gallery-exterior-grid-front.jpg?imwidth=1920');
             background-size: cover;
             background-position: center;
             overflow: hidden;
@@ -114,8 +154,8 @@
             background: radial-gradient(ellipse at 50% 30%, transparent 0%, transparent 70%); pointer-events: none;
         }
         .finance-hero::after {
-            content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
-            width: 200px; height: 1px; background: linear-gradient(90deg, transparent, var(--accent-on-dark), transparent);
+            content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+            height: 1px; background: rgba(255,255,255,0.1);
         }
         .finance-hero-inner {
             max-width: 800px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; text-align: center;
@@ -208,8 +248,8 @@
             position: relative;
         }
         .calculator-section::before {
-            content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
-            width: 200px; height: 1px; background: linear-gradient(90deg, transparent, var(--accent-on-dark), transparent);
+            content: ''; position: absolute; top: 0; left: 0; right: 0;
+            height: 1px; background: rgba(255,255,255,0.1);
         }
         .calculator-section .container {
             max-width: 640px; margin: 0 auto; padding: 0 24px;
@@ -419,8 +459,8 @@
         <h1>Luxury Made <strong>Attainable</strong></h1>
         <p>Tailored financing and lease programs designed for the discerning Cadillac owner. Competitive rates. Seamless process.</p>
         <div class="hero-ctas">
-            <a href="#apply" class="btn btn-outline">Apply Now</a>
-            <a href="#calculator" class="btn btn-outline">Calculate Payment</a>
+            <a href="#apply" class="cta-link">Apply Now <svg class="arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="10" x2="16" y2="10"/><polyline points="11 5 16 10 11 15"/></svg></a>
+            <a href="#calculator" class="cta-button-outline">Calculate Payment</a>
         </div>
     </div>
 </section>
@@ -452,7 +492,7 @@
                     <li>Build equity in your vehicle</li>
                     <li>Customize freely</li>
                 </ul>
-                <a href="#apply" class="btn btn-outline-dark">Get Started</a>
+                <a href="#apply" class="btn cta-button-outline-dark">Get Started</a>
             </div>
             <div class="option-card featured">
                 <div class="option-card-icon" style="margin-top:16px;">
@@ -469,7 +509,7 @@
                     <li>Multiple mileage options</li>
                     <li>GAP protection included</li>
                 </ul>
-                <a href="#apply" class="btn btn-gold">Get Started</a>
+                <a href="#apply" class="btn cta-button-outline-dark">Get Started</a>
             </div>
             <div class="option-card">
                 <div class="option-card-icon">
@@ -487,7 +527,7 @@
                     <li>Roadside assistance included</li>
                     <li>Vehicle history report</li>
                 </ul>
-                <a href="#apply" class="btn btn-outline-dark">Get Started</a>
+                <a href="#apply" class="btn cta-button-outline-dark">Get Started</a>
             </div>
         </div>
     </div>
@@ -530,7 +570,7 @@
                 <div class="amount" id="calcResult">$1,132 <small>/mo</small></div>
             </div>
             <div class="calc-submit">
-                <button type="button" class="btn btn-gold" onclick="calculatePayment()">Calculate</button>
+                <button type="button" class="btn cta-button-outline" onclick="calculatePayment()">Calculate</button>
             </div>
         </div>
     </div>
@@ -563,7 +603,7 @@
                         <div class="step-text"><strong>Apply to Your Purchase</strong>Use your trade-in value toward your new Cadillac, reducing your out-of-pocket cost and monthly payment.</div>
                     </li>
                 </ol>
-                <a href="/demo/taylor-cadillac/contact" class="btn btn-gold">Get Your Appraisal</a>
+                <a href="/demo/taylor-cadillac/contact" class="btn cta-button-outline-dark">Get Your Appraisal</a>
             </div>
             <div class="trade-image">
                 <img src="https://www.cadillac.com/content/dam/cadillac/na/us/english/index/vehicles/2026/suvs/escalade-mcm/overview/my25-escalade-mov-feature-block-display-s.jpg?imwidth=600" alt="Trade-In Your Vehicle at Taylor Cadillac" loading="lazy">
@@ -627,7 +667,7 @@
                     </div>
                 </div>
                 <div class="form-submit">
-                    <button type="submit" class="btn btn-gold">Submit Application</button>
+                    <button type="submit" class="btn cta-button-outline-dark">Submit Application</button>
                 </div>
                 <p class="form-disclaimer">Your information is secure and encrypted. Submitting this form does not affect your credit score. A finance specialist will contact you within one business day.</p>
             </form>

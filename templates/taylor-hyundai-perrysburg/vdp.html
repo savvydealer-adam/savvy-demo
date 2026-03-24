@@ -12,7 +12,7 @@
             --bodyfont: 'Hyundai Sans Text', 'Inter', sans-serif;
             --headerbg: #002C5F;
             --footerbg: #002C5F;
-            --bodycolor: #19183C;
+            --bodycolor: #000000;
             --secondarycolor: #002C5F;
             --accent: #00AAD2;
             --linktextcolor: #002C5F;
@@ -20,7 +20,7 @@
             --whitecolor: #fff;
             --greycolor: #808080;
             --savingsgreen: #30770f;
-            --transition: all 0.4s;
+            --transition: all 0.3s ease;
         }
 
         *, *::before, *::after { box-sizing: border-box; }
@@ -31,7 +31,7 @@
 
         /* ========== TOP BAR ========== */
         .top-bar { background: var(--headerbg); color: #fff; padding: 8px 0; font-size: 13px; }
-        .top-bar .tb-inner { max-width: 1630px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+        .top-bar .tb-inner { max-width: 1440px; margin: 0 auto; padding: 0 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
         .top-bar-phones { display: flex; gap: 20px; flex-wrap: wrap; }
         .top-bar-phones a { color: #fff; font-weight: 500; transition: opacity 0.2s; }
         .top-bar-phones a:hover { opacity: 0.85; }
@@ -42,7 +42,7 @@
 
         /* ========== HEADER ========== */
         .site-header { background: #fff; border-bottom: 1px solid #f5f5f5; padding: 12px 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
-        .site-header .sh-inner { max-width: 1630px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+        .site-header .sh-inner { max-width: 1440px; margin: 0 auto; padding: 0 5%; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
         .header-logo { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
         .header-logo img { height: 28px; width: auto; }
         .header-logo-text { font-size: 16px; font-weight: 700; color: var(--headerbg); line-height: 1.2; }
@@ -53,14 +53,14 @@
 
         /* ========== BREADCRUMB ========== */
         .breadcrumb-bar { background: #f8f9fb; border-bottom: 1px solid #eee; padding: 12px 0; }
-        .breadcrumb-bar .bc-inner { max-width: 1630px; margin: 0 auto; padding: 0 24px; font-size: 14px; color: #666; }
+        .breadcrumb-bar .bc-inner { max-width: 1440px; margin: 0 auto; padding: 0 5%; font-size: 14px; color: #666; }
         .breadcrumb-bar a { color: var(--linktextcolor); font-weight: 500; }
         .breadcrumb-bar a:hover { color: var(--accent); }
         .breadcrumb-bar span { color: #999; margin: 0 6px; }
 
         /* ========== VDP LAYOUT ========== */
         .vdp-main { padding: 30px 0 60px; background: rgb(40 40 40 / 5%); min-height: 80vh; }
-        .vdp-main .vdp-container { max-width: 1400px; margin: 0 auto; padding: 0 24px; }
+        .vdp-main .vdp-container { max-width: 1440px; margin: 0 auto; padding: 0 5%; }
         .vdp-layout { display: flex; gap: 30px; align-items: flex-start; }
         .vdp-left { width: 65%; min-width: 0; }
         .vdp-right { width: 35%; position: sticky; top: 90px; }
@@ -94,7 +94,7 @@
         .price-row .val.msrp { text-decoration: line-through; color: #999; }
         .price-row .val.discount { color: var(--accent); }
         .price-row .val.final { color: var(--savingsgreen); font-size: 22px; }
-        .savings-banner { background: linear-gradient(135deg, var(--secondarycolor), var(--accent)); color: #fff; text-align: center; padding: 14px; border-radius: 0; margin: 16px 0; font-size: 15px; font-weight: 700; }
+        .savings-banner { background: linear-gradient(135deg, #002C5F, #001B3D); color: #fff; text-align: center; padding: 14px; border-radius: 0; margin: 16px 0; font-size: 15px; font-weight: 700; }
 
         /* ========== BUTTONS ========== */
         .btn-glass { background: transparent; border: 2px solid #FFFFFF; border-radius: 0; color: #fff; padding: 14px 32px; font-size: 14px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; transition: all 0.3s ease; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; font-family: inherit; text-align: center; }
@@ -120,7 +120,7 @@
 
         /* ========== FOOTER ========== */
         .site-footer { background: var(--footerbg); color: #ccc; padding: 48px 0 0; }
-        .site-footer .ft-inner { max-width: 1630px; margin: 0 auto; padding: 0 24px; }
+        .site-footer .ft-inner { max-width: 1440px; margin: 0 auto; padding: 0 5%; }
         .footer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.2); }
         .footer-col h4 { font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: #fff; margin: 0 0 16px; }
         .footer-col ul { list-style: none; padding: 0; margin: 0; }

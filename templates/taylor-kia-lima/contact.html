@@ -7,9 +7,9 @@
     <meta name="description" content="Contact Taylor Kia of Lima at 2100 N Cable Rd, Lima, OH 45805. Sales: (567) 712-6604 | Service: (567) 708-1279. Hours, directions, and online contact form. Serving Wapakoneta, St. Marys, Delphos." />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        :root { --kia-dark: #05141F; --kia-red: #BB162B; --kia-red-hover: #9E1224; --kia-white: #FFFFFF; --kia-gray-50: #f7f8fa; --kia-gray-100: #eef0f3; --kia-gray-200: #dde0e6; --kia-gray-400: #8b919a; --kia-gray-600: #555b66; --kia-gray-800: #1a1d24; }
+        :root { --kia-dark: #05141F; --kia-red: #BB162B; --kia-red-hover: #9E1224; --kia-white: #FFFFFF; --kia-gray-50: #F0F1F1; --kia-gray-100: #EBECED; --kia-gray-200: #dde0e6; --kia-gray-400: #8b919a; --kia-gray-600: #555b66; --kia-gray-800: #1a1d24; }
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Inter', 'Kia Signature Fixed', sans-serif; color: #05141F; background: #EBECED; line-height: 1.6; -webkit-font-smoothing: antialiased; }
         a { text-decoration: none; color: inherit; }
@@ -27,16 +27,16 @@
         .top-bar-address a:hover { text-decoration: underline; }
 
         /* ========== HEADER ========== */
-        .site-header { background: #fff; border-bottom: 1px solid #f0f0f0; padding: 12px 0; position: sticky; top: 0; z-index: 100; }
+        .site-header { background: #05141F; border-bottom: none; padding: 12px 0; position: sticky; top: 0; z-index: 100; }
         .site-header .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
         .header-logo { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
         .kia-logo-svg { height: 32px; width: auto; }
-        .dealer-name { font-size: 14px; font-weight: 700; color: var(--kia-dark); line-height: 1.2; white-space: nowrap; }
-        .dealer-name small { display: block; font-size: 11px; font-weight: 500; color: var(--kia-gray-400); text-transform: uppercase; letter-spacing: 0.5px; }
+        .dealer-name { font-size: 14px; font-weight: 700; color: #FFFFFF; line-height: 1.2; white-space: nowrap; }
+        .dealer-name small { display: block; font-size: 11px; font-weight: 500; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.5px; }
         .header-nav { display: flex; align-items: center; gap: 4px; }
-        .header-nav a { color: var(--kia-dark); font-size: 14px; font-weight: 600; padding: 8px 14px; border-radius: 0; transition: background 0.2s, color 0.2s; }
-        .header-nav a:hover { background: rgba(187,22,44,0.06); color: var(--kia-red); }
-        .header-nav a.active { background: rgba(187,22,44,0.08); color: var(--kia-red); }
+        .header-nav a { color: #FFFFFF; font-size: 12px; font-weight: 700; padding: 8px 14px; border-radius: 0; transition: background 0.2s, color 0.2s; }
+        .header-nav a:hover { opacity: 0.7; background: none; }
+        .header-nav a.active { opacity: 0.85; background: none; }
 
         /* ========== BREADCRUMBS ========== */
         .breadcrumbs { background: var(--kia-gray-50); padding: 12px 0; border-bottom: 1px solid var(--kia-gray-100); font-size: 13px; }
@@ -61,9 +61,9 @@
 
         .info-cards { display: flex; flex-direction: column; gap: 16px; }
         .info-card { background: var(--kia-gray-50); border: 1px solid var(--kia-gray-100); border-radius: 0; padding: 24px; display: flex; align-items: flex-start; gap: 16px; transition: all 0.3s; }
-        .info-card:hover { border-color: var(--kia-red); }
-        .info-card-icon { width: 48px; height: 48px; background: rgba(187,22,44,0.08); border-radius: 0; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-        .info-card-icon svg { width: 24px; height: 24px; fill: var(--kia-red); }
+        .info-card:hover { border-color: var(--kia-gray-200); }
+        .info-card-icon { width: 48px; height: 48px; background: rgba(5,20,31,0.08); border-radius: 0; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .info-card-icon svg { width: 24px; height: 24px; fill: #05141F; }
         .info-card-text h3 { font-size: 16px; font-weight: 700; color: var(--kia-gray-800); margin-bottom: 4px; }
         .info-card-text p, .info-card-text a { font-size: 14px; color: var(--kia-gray-600); line-height: 1.6; }
         .info-card-text a:hover { color: var(--kia-red); }
@@ -73,8 +73,8 @@
         .hours-section h3 { font-size: 20px; font-weight: 800; color: var(--kia-dark); margin-bottom: 16px; }
         .hours-tabs { display: flex; gap: 8px; margin-bottom: 16px; }
         .hours-tab { padding: 8px 20px; border: 1px solid var(--kia-gray-200); border-radius: 0; font-size: 13px; font-weight: 600; cursor: pointer; transition: all 0.2s; background: #fff; color: var(--kia-gray-600); }
-        .hours-tab.active { background: var(--kia-red); color: #fff; border-color: var(--kia-red); }
-        .hours-tab:hover:not(.active) { border-color: var(--kia-red); color: var(--kia-red); }
+        .hours-tab.active { background: #05141F; color: #fff; border-color: #05141F; }
+        .hours-tab:hover:not(.active) { border-color: #05141F; color: #05141F; }
         .hours-table { width: 100%; border-collapse: collapse; }
         .hours-table td { padding: 10px 0; font-size: 14px; border-bottom: 1px solid var(--kia-gray-100); }
         .hours-table td:first-child { font-weight: 600; color: var(--kia-gray-800); }
@@ -93,7 +93,7 @@
         .form-field select { cursor: pointer; }
         .form-field textarea { resize: vertical; min-height: 100px; }
         .form-field-full { margin-bottom: 12px; }
-        .form-submit-btn { width: 100%; padding: 16px; background: #05141F; border: 2px solid #05141F; color: var(--kia-white); font-family: inherit; font-size: 15px; font-weight: 600; letter-spacing: 0.3px; border-radius: 0; cursor: pointer; transition: all 0.3s ease; margin-top: 4px; }
+        .form-submit-btn { width: 100%; padding: 16px; background: #05141F; border: 2px solid #05141F; color: var(--kia-white); font-family: inherit; font-size: 14px; font-weight: 600; letter-spacing: 0.5px; border-radius: 0; cursor: pointer; transition: all 0.3s ease; margin-top: 4px; }
         .form-submit-btn:hover { background: #FFFFFF; color: #05141F; }
 
         /* ========== DIRECTIONS ========== */
@@ -102,12 +102,12 @@
         .section-title { text-align: center; margin-bottom: 40px; }
         .section-title h2 { font-size: 32px; font-weight: 800; color: var(--kia-gray-800); }
         .section-title p { font-size: 16px; color: var(--kia-gray-600); margin-top: 8px; }
-        .section-title .bar { width: 60px; height: 4px; background: var(--kia-red); margin: 16px auto 0; border-radius: 2px; }
+        .section-title .bar { width: 60px; height: 4px; background: #05141F; margin: 16px auto 0; border-radius: 0; }
         .directions-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-        .direction-card { background: var(--kia-white); border: 1px solid var(--kia-gray-200); border-radius: 0; padding: 28px; text-align: center; transition: all 0.3s; }
-        .direction-card:hover { border-color: var(--kia-red); }
+        .direction-card { background: #F0F1F1; border: 1px solid var(--kia-gray-200); border-radius: 0; padding: 28px; text-align: center; transition: all 0.3s; }
+        .direction-card:hover { border-color: var(--kia-gray-200); }
         .direction-card h3 { font-size: 18px; font-weight: 700; color: var(--kia-dark); margin-bottom: 8px; }
-        .direction-card .distance { font-size: 14px; font-weight: 600; color: var(--kia-red); margin-bottom: 8px; }
+        .direction-card .distance { font-size: 14px; font-weight: 600; color: #05141F; margin-bottom: 8px; }
         .direction-card p { font-size: 13px; color: var(--kia-gray-600); line-height: 1.6; }
 
         /* ========== FOOTER ========== */
@@ -142,7 +142,7 @@
 
     <!-- ==================== HEADER ==================== -->
     <header class="site-header"><div class="container">
-        <a href="/demo/taylor-kia-lima" class="header-logo"><img class="kia-logo-svg" src="/assets/logos/kia-black.svg" alt="Kia" style="height:32px;width:auto;"><div class="dealer-name">Taylor Kia<small>Lima</small></div></a>
+        <a href="/demo/taylor-kia-lima" class="header-logo"><img class="kia-logo-svg" src="/assets/logos/kia-white.svg" alt="Kia" style="height:32px;width:auto;"><div class="dealer-name">Taylor Kia<small>Lima</small></div></a>
         <nav class="header-nav"><a href="/demo/taylor-kia-lima/inventory">Inventory</a><a href="/demo/taylor-kia-lima/service">Service</a><a href="/demo/taylor-kia-lima/financing">Financing</a><a href="/demo/taylor-kia-lima/contact" class="active">Contact</a></nav>
     </div></header>
 

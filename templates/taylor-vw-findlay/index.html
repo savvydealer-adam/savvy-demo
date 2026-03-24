@@ -88,7 +88,7 @@
 
     /* ========== HEADER ========== */
     .site-header {
-      background: #fff;
+      background: #001E50;
       border-bottom: 1px solid #f0f0f0;
       padding: 12px 0;
       position: sticky;
@@ -117,12 +117,13 @@
     .vw-logo-img {
       height: 36px;
       width: auto;
+      filter: brightness(0) invert(1);
     }
 
     .header-brand-text {
       font-size: 16px;
       font-weight: 700;
-      color: #001E50;
+      color: #FFFFFF;
       line-height: 1.2;
     }
 
@@ -130,7 +131,7 @@
       display: block;
       font-size: 11px;
       font-weight: 500;
-      color: #666;
+      color: rgba(255,255,255,0.7);
       letter-spacing: 0.3px;
     }
 
@@ -141,17 +142,16 @@
     }
 
     .header-nav a {
-      color: #001E50;
+      color: #FFFFFF;
       font-size: 14px;
-      font-weight: 500;
+      font-weight: 700;
       padding: 8px 14px;
-      border-radius: 6px;
-      transition: background 0.2s, color 0.2s;
+      border-radius: 0;
+      transition: opacity 0.2s;
     }
 
     .header-nav a:hover {
-      background: #f0f4fb;
-      color: #001E50;
+      opacity: 0.8;
     }
 
     /* ========== VW PILL BUTTONS ========== */
@@ -351,7 +351,7 @@
 
     /* ========== MODEL LINEUP ========== */
     .model-lineup {
-      padding: 64px 0 72px;
+      padding: 72px 0;
       background: #f5f5f5;
     }
 
@@ -415,12 +415,17 @@
       align-items: center;
       justify-content: center;
       height: 180px;
+      overflow: hidden;
     }
 
     .model-card-image img {
       max-width: 100%;
       max-height: 140px;
       object-fit: contain;
+      transition: transform 2.2s cubic-bezier(0.14, 1.12, 0.67, 0.99);
+    }
+    .model-card:hover .model-card-image img {
+      transform: scale(1.03);
     }
 
     .model-card-info {
@@ -451,7 +456,7 @@
 
     /* ========== WHY SECTION ========== */
     .why-section {
-      padding: 64px 0;
+      padding: 72px 0;
       background: #fff;
     }
 
@@ -505,7 +510,7 @@
 
     /* ========== EV SECTION ========== */
     .ev-section {
-      padding: 64px 0;
+      padding: 72px 0;
       background: #001E50;
       color: #fff;
     }
@@ -579,7 +584,7 @@
 
     /* ========== GOOGLE REVIEWS ========== */
     .reviews-section {
-      padding: 64px 0;
+      padding: 72px 0;
       background: #f5f5f5;
     }
 
@@ -721,7 +726,7 @@
     /* ========== FOOTER ========== */
     .site-footer {
       background: #001E50;
-      color: #ccc;
+      color: #FFFFFF;
       padding: 48px 0 0;
     }
 
@@ -757,13 +762,14 @@
     }
 
     .footer-col a {
-      color: rgba(255,255,255,0.6);
+      color: #FFFFFF;
+      opacity: 0.8;
       font-size: 14px;
-      transition: color 0.2s;
+      transition: opacity 0.2s;
     }
 
     .footer-col a:hover {
-      color: #fff;
+      opacity: 1;
     }
 
     .footer-bottom {

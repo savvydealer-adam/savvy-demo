@@ -23,7 +23,7 @@
             --blackcolor: #000000;
             --whitecolor: #fff;
             --greycolor: #8A8A8A;
-            --savingsgreen: #30770f;
+            --savingsgreen: #111111;
             --copper: #B87333;
             --teal-top: rgb(54, 98, 108);
             --teal-bottom: rgb(31, 78, 84);
@@ -83,7 +83,7 @@
         /* Filter Panel */
         .filter-panel { width: 21%; align-self: flex-start; background: #fff; border: 1px solid rgba(0,0,0,0.08); box-shadow: none; border-radius: 0; padding: 24px 20px; position: sticky; top: 80px; }
         .filter-panel .card-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid #eee; }
-        .filter-panel .cardtitle { font-size: 22px; font-weight: 600; margin: 0; font-family: var(--bodyfont); letter-spacing: 1px; }
+        .filter-panel .cardtitle { font-size: 22px; font-weight: 500; margin: 0; font-family: var(--bodyfont); letter-spacing: 1px; }
         .filter-panel .share-link { font-size: 13px; color: var(--linktextcolor); display: flex; align-items: center; gap: 6px; }
         .filter-panel .share-link svg { width: 14px; height: 14px; fill: var(--linktextcolor); }
 
@@ -94,26 +94,26 @@
         .searchform-main .search-btn svg { width: 16px; height: 16px; fill: #fff; }
 
         .reset-btn { margin-bottom: 16px; }
-        .reset-btn a { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 10px 16px; background: var(--secondarycolor); color: #fff; border: 1px solid var(--secondarycolor); border-radius: 0; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; transition: var(--transition); }
+        .reset-btn a { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 10px 16px; background: var(--secondarycolor); color: #fff; border: 1px solid var(--secondarycolor); border-radius: 0; font-size: 13px; font-weight: 500; text-transform: uppercase; letter-spacing: 2px; transition: var(--transition); }
         .reset-btn a:hover { background: transparent; color: var(--secondarycolor); }
         .reset-btn a svg { width: 14px; height: 14px; fill: currentColor; }
 
         .filter-item { border-bottom: 1px solid #eee; padding: 12px 0; }
-        .filter-item .title { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; cursor: pointer; display: flex; align-items: center; justify-content: space-between; color: #111111; }
+        .filter-item .title { font-size: 13px; font-weight: 500; text-transform: uppercase; letter-spacing: 2px; cursor: pointer; display: flex; align-items: center; justify-content: space-between; color: #111111; }
         .filter-item .title::after { content: ""; width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 5px solid var(--bodycolor); transition: transform 0.3s; }
         .filter-item.open .title::after { transform: rotate(180deg); }
         .filter-item .accordion-content { padding-top: 8px; }
         .filter-item .accordion-content ul { list-style: none; padding: 0; margin: 0; }
         .filter-item .accordion-content li { display: flex; align-items: center; justify-content: space-between; padding: 6px 0; font-size: 14px; cursor: pointer; transition: color 0.2s; color: #555; }
         .filter-item .accordion-content li:hover { color: var(--accent); }
-        .filter-item .accordion-content li.active { color: var(--accent); font-weight: 600; }
-        .filter-item .badge { background: #f0f0f0; color: var(--greycolor); font-size: 12px; padding: 2px 8px; border-radius: 0; font-weight: 600; }
+        .filter-item .accordion-content li.active { color: var(--accent); font-weight: 500; }
+        .filter-item .badge { background: #f0f0f0; color: var(--greycolor); font-size: 12px; padding: 2px 8px; border-radius: 0; font-weight: 500; }
 
         /* ---- Results Area ---- */
         .filter-result-wrapper { width: calc(79% - 30px); margin: 0 0 0 30px; }
 
         .inventory-detail { background: #fff; border: 1px solid rgba(0,0,0,0.08); box-shadow: none; border-radius: 0; padding: 16px 24px; margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
-        .inventory-detail .count { font-size: 20px; font-weight: 600; letter-spacing: 0.5px; }
+        .inventory-detail .count { font-size: 20px; font-weight: 500; letter-spacing: 0.5px; }
         .inventory-detail .sort-by { display: flex; align-items: center; gap: 8px; font-size: 14px; }
         .inventory-detail .sort-by select { padding: 8px 12px; border: 1px solid #ddd; border-radius: 0; font-family: inherit; font-size: 14px; cursor: pointer; }
         .filter-buttons { display: flex; gap: 8px; }
@@ -122,13 +122,13 @@
         .filter-buttons div:hover svg, .filter-buttons div.active svg { fill: #fff; }
         .filter-buttons svg { width: 18px; height: 18px; fill: #666; display: block; }
 
-        .mobile-filter-btn { display: none; align-items: center; justify-content: center; gap: 8px; padding: 12px 20px; background: #111111; color: #fff; border: none; border-radius: 0; font-family: inherit; font-size: 14px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; margin-bottom: 16px; width: 100%; }
+        .mobile-filter-btn { display: none; align-items: center; justify-content: center; gap: 8px; padding: 12px 20px; background: #111111; color: #fff; border: none; border-radius: 0; font-family: inherit; font-size: 14px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; margin-bottom: 16px; width: 100%; }
         .mobile-filter-btn svg { width: 16px; height: 16px; fill: #fff; }
 
         /* ---- Vehicle Cards ---- */
         .list-wrapper { display: flex; flex-wrap: wrap; gap: 20px; }
         .list-item { width: calc(25% - 15px); background: #fff; border: 1px solid rgba(0,0,0,0.08); box-shadow: none; border-radius: 0; overflow: hidden; transition: box-shadow 0.3s; }
-        .list-item:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+        .list-item:hover { box-shadow: none; border-color: rgba(0,0,0,0.15); }
         .list-item-inner { display: flex; flex-direction: column; height: 100%; }
         .list-item-inner > div { width: 100%; }
 
@@ -136,13 +136,13 @@
         .list-item .image-block img { width: 100%; aspect-ratio: 4/3; object-fit: contain; border-radius: 0; transition: transform 0.4s; padding: 12px; }
         .list-item:hover .image-block img { transform: scale(1.03); }
 
-        .watchlist-icon { position: absolute; bottom: 10px; right: 10px; width: 32px; height: 32px; background: rgba(255,255,255,0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: var(--transition); }
+        .watchlist-icon { position: absolute; bottom: 10px; right: 10px; width: 32px; height: 32px; background: rgba(255,255,255,0.9); border-radius: 0; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: var(--transition); }
         .watchlist-icon:hover { background: var(--accent); }
         .watchlist-icon:hover svg { fill: #fff; }
         .watchlist-icon svg { width: 16px; height: 16px; fill: #999; }
 
         .list-item-detail { padding: 15px 15px 0; }
-        .vehicleCardTitle { color: var(--linktextcolor); font-size: 16px; font-weight: 600; line-height: 1.3; letter-spacing: 0.3px; }
+        .vehicleCardTitle { color: var(--linktextcolor); font-size: 16px; font-weight: 500; line-height: 1.3; letter-spacing: 0.3px; }
         .vehicleCardTitle:hover { text-decoration: underline; }
         .details-wrapper { font-size: 13px; }
         .details-wrapper .details { display: flex; justify-content: space-between; padding: 3px 0; }
@@ -154,11 +154,11 @@
         .mobile-apr-price-wrapper { padding: 10px 12px; background: #fafafa; border: 1px solid #eee; border-radius: 0; margin-top: 10px; }
         .mobile-apr-price-wrapper .price-display { display: flex; align-items: center; justify-content: space-between; }
         .yousave-price { text-align: left; }
-        .yousave-price .amount { font-size: 15px; font-weight: 700; color: var(--savingsgreen); }
-        .yousave-price .save-label { font-size: 10px; color: var(--linktextcolor); text-transform: uppercase; font-weight: 600; display: block; letter-spacing: 1px; }
+        .yousave-price .amount { font-size: 15px; font-weight: 500; color: #111111; }
+        .yousave-price .save-label { font-size: 10px; color: var(--linktextcolor); text-transform: uppercase; font-weight: 500; display: block; letter-spacing: 1px; }
         .mobile-price { text-align: right; }
-        .mobile-price .price { font-size: 20px; font-weight: 600; color: var(--bodycolor); }
-        .mobile-price .price-label { font-size: 10px; color: var(--linktextcolor); text-transform: uppercase; font-weight: 600; display: block; letter-spacing: 1px; }
+        .mobile-price .price { font-size: 20px; font-weight: 500; color: var(--bodycolor); }
+        .mobile-price .price-label { font-size: 10px; color: var(--linktextcolor); text-transform: uppercase; font-weight: 500; display: block; letter-spacing: 1px; }
 
         .price-toggle { padding: 6px 0; margin-top: 6px; cursor: pointer; font-size: 13px; color: var(--linktextcolor); display: flex; align-items: center; justify-content: center; gap: 4px; user-select: none; }
         .price-toggle:hover { color: var(--bodycolor); }
@@ -171,8 +171,8 @@
         .price-breakup .label { color: #999; }
         .price-breakup .msrp { text-decoration: line-through; color: #999; }
         .price-breakup .msrp::before { content: "$"; }
-        .price-breakup .dealersavingsprice { color: var(--savingsgreen); font-weight: 600; }
-        .price-breakup .finalprice { color: #30770f; font-weight: 600; }
+        .price-breakup .dealersavingsprice { color: #111111; font-weight: 500; }
+        .price-breakup .finalprice { color: #111111; font-weight: 500; }
         .price-breakup .border-top-dash { border-top: 1px dashed #ddd; margin-top: 4px; padding-top: 6px; }
 
         .card-actions { margin-top: auto; display: flex; flex-direction: column; gap: 6px; padding-top: 8px; }

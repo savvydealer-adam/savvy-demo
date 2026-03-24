@@ -18,7 +18,7 @@
             --secondarycolor: #001E50;
             --accentcolor: #00B0F0;
             --linktextcolor: #001E50;
-            --headingcolor: #212529;
+            --headingcolor: #001E50;
             --blackcolor: #000000;
             --whitecolor: #fff;
             --greycolor: #808080;
@@ -44,15 +44,15 @@
         .top-bar-address a:hover { text-decoration: underline; }
 
         /* ========== HEADER ========== */
-        .site-header { background: #fff; border-bottom: 1px solid #f0f0f0; padding: 12px 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+        .site-header { background: #001E50; border-bottom: 1px solid #f0f0f0; padding: 12px 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
         .site-header .sh-inner { max-width: 1630px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
         .header-brand { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
-        .vw-logo-img { height: 36px; width: auto; }
-        .header-brand-text { font-size: 15px; font-weight: 700; color: #001E50; line-height: 1.2; }
-        .header-brand-text small { display: block; font-size: 11px; font-weight: 500; color: #666; }
+        .vw-logo-img { height: 36px; width: auto; filter: brightness(0) invert(1); }
+        .header-brand-text { font-size: 15px; font-weight: 700; color: #FFFFFF; line-height: 1.2; }
+        .header-brand-text small { display: block; font-size: 11px; font-weight: 500; color: rgba(255,255,255,0.7); }
         .header-nav { display: flex; align-items: center; gap: 4px; }
-        .header-nav a { color: #001E50; font-size: 14px; font-weight: 500; padding: 6px 12px; border-radius: 4px; transition: background 0.2s, color 0.2s; }
-        .header-nav a:hover { background: #f0f4fb; color: var(--headerbg); }
+        .header-nav a { color: #FFFFFF; font-size: 14px; font-weight: 700; padding: 6px 12px; border-radius: 0; transition: opacity 0.2s; }
+        .header-nav a:hover { opacity: 0.8; }
 
         /* ========== BREADCRUMB ========== */
         .breadcrumb-bar { background: #f8f9fb; border-bottom: 1px solid #eee; padding: 12px 0; }
@@ -140,14 +140,14 @@
         .dealer-card-row a:hover { text-decoration: underline; }
 
         /* ========== FOOTER ========== */
-        .site-footer { background: var(--footerbg); color: #ccc; padding: 48px 0 0; }
+        .site-footer { background: var(--footerbg); color: #FFFFFF; padding: 48px 0 0; }
         .site-footer .ft-inner { max-width: 1630px; margin: 0 auto; padding: 0 24px; }
         .footer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.1); }
         .footer-col h4 { font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: #fff; margin: 0 0 16px; }
         .footer-col ul { list-style: none; padding: 0; margin: 0; }
         .footer-col li { margin-bottom: 10px; }
-        .footer-col a { color: rgba(255,255,255,0.6); font-size: 14px; transition: color 0.2s; }
-        .footer-col a:hover { color: #fff; }
+        .footer-col a { color: #FFFFFF; opacity: 0.8; font-size: 14px; transition: opacity 0.2s; }
+        .footer-col a:hover { opacity: 1; }
         .footer-bottom { padding: 20px 24px; text-align: center; font-size: 13px; color: rgba(255,255,255,0.4); }
         .footer-bottom a { color: #00B0F0; font-weight: 500; }
         .footer-bottom a:hover { text-decoration: underline; }

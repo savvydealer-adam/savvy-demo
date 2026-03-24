@@ -19,7 +19,7 @@
             --secondarycolor: #001E50;
             --accentcolor: #00B0F0;
             --linktextcolor: #001E50;
-            --headingcolor: #212529;
+            --headingcolor: #001E50;
             --blackcolor: #000000;
             --whitecolor: #fff;
             --greycolor: #808080;
@@ -78,7 +78,7 @@
 
         /* ========== HEADER ========== */
         .site-header {
-            background: #fff;
+            background: #001E50;
             border-bottom: 1px solid #f0f0f0;
             padding: 12px 0;
             position: sticky;
@@ -101,18 +101,18 @@
             gap: 12px;
             flex-shrink: 0;
         }
-        .vw-logo-img { height: 36px; width: auto; }
+        .vw-logo-img { height: 36px; width: auto; filter: brightness(0) invert(1); }
         .header-brand-text {
             font-size: 15px;
             font-weight: 700;
-            color: #001E50;
+            color: #FFFFFF;
             line-height: 1.2;
         }
         .header-brand-text small {
             display: block;
             font-size: 11px;
             font-weight: 500;
-            color: #666;
+            color: rgba(255,255,255,0.7);
         }
         .header-nav {
             display: flex;
@@ -120,20 +120,18 @@
             gap: 4px;
         }
         .header-nav a {
-            color: #001E50;
+            color: #FFFFFF;
             font-size: 14px;
-            font-weight: 500;
+            font-weight: 700;
             padding: 6px 12px;
-            border-radius: 4px;
-            transition: background 0.2s, color 0.2s;
+            border-radius: 0;
+            transition: opacity 0.2s;
         }
         .header-nav a:hover {
-            background: #f0f4fb;
-            color: var(--headerbg);
+            opacity: 0.8;
         }
         .header-nav a.active {
-            background: #f0f4fb;
-            color: var(--headerbg);
+            opacity: 0.8;
             font-weight: 700;
         }
 
@@ -190,7 +188,7 @@
         .filter-buttons svg { width: 18px; height: 18px; fill: #666; display: block; }
 
         /* Mobile filter button */
-        .mobile-filter-btn { display: none; align-items: center; justify-content: center; gap: 8px; padding: 12px 20px; background: var(--secondarycolor); color: #fff; border: none; border-radius: 8px; font-family: inherit; font-size: 14px; font-weight: 700; cursor: pointer; margin-bottom: 16px; width: 100%; }
+        .mobile-filter-btn { display: none; align-items: center; justify-content: center; gap: 8px; padding: 12px 20px; background: var(--secondarycolor); color: #fff; border: none; border-radius: 100px; font-family: inherit; font-size: 14px; font-weight: 700; cursor: pointer; margin-bottom: 16px; width: 100%; }
         .mobile-filter-btn svg { width: 16px; height: 16px; fill: #fff; }
 
         /* __ Vehicle Cards (Grid View) __ */
@@ -261,7 +259,7 @@
         .pagination-wrapper { padding: 24px 0; display: flex; justify-content: center; }
         .pagination { display: flex; list-style: none; padding: 0; margin: 0; gap: 4px; }
         .pagination li { cursor: pointer; }
-        .pagination li span { display: block; padding: 8px 14px; border: 1px solid #ddd; border-radius: 6px; font-size: 14px; font-weight: 600; color: #666; transition: var(--transition); }
+        .pagination li span { display: block; padding: 8px 14px; border: 1px solid #ddd; border-radius: 100px; font-size: 14px; font-weight: 600; color: #666; transition: var(--transition); }
         .pagination li:hover span { border-color: var(--secondarycolor); color: var(--secondarycolor); }
         .pagination li.active span { background: var(--secondarycolor); color: #fff; border-color: var(--secondarycolor); }
         .pagination li.disabled span { color: #ccc; cursor: default; }
@@ -270,7 +268,7 @@
         /* ========== FOOTER ========== */
         .site-footer {
             background: var(--footerbg);
-            color: #ccc;
+            color: #FFFFFF;
             padding: 48px 0 0;
         }
         .site-footer .ft-inner {
@@ -295,8 +293,8 @@
         }
         .footer-col ul { list-style: none; padding: 0; margin: 0; }
         .footer-col li { margin-bottom: 10px; }
-        .footer-col a { color: rgba(255,255,255,0.6); font-size: 14px; transition: color 0.2s; }
-        .footer-col a:hover { color: #fff; }
+        .footer-col a { color: #FFFFFF; opacity: 0.8; font-size: 14px; transition: opacity 0.2s; }
+        .footer-col a:hover { opacity: 1; }
         .footer-bottom {
             padding: 20px 24px;
             text-align: center;

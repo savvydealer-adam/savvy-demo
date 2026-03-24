@@ -21,7 +21,7 @@
             --gray-100: #EEEEEE;
             --gray-400: #999;
             --gray-600: #666;
-            --green: #4CAF50;
+            --green: #0D0D0D;
         }
 
         body {
@@ -104,30 +104,78 @@
             transition: all 0.4s ease;
             text-align: center;
         }
-        .btn-gold, .btn-glass-gold {
-            background: transparent; border: 1px solid #0D0D0D; border-radius: 0; color: #0D0D0D;
-            border: 1px solid rgba(255,255,255,0.3); border-radius: 0; color: #FFFFFF;
+        .cta-button-outline {
+            background: transparent;
+            border: 1px solid #FFFFFF;
+            border-radius: 0;
+            color: #FFFFFF;
+            padding: 12px 28px;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 500;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            cursor: pointer;
+            transition: all 0.2s ease;
         }
-        .btn-gold:hover, .btn-glass-gold:hover {
-            background: #0D0D0D; color: #fff; border-color: #0D0D0D;
-            box-shadow: 0 12px 40px rgba(255,255,255,0.08); transform: translateY(-2px);
+        .cta-button-outline:hover {
+            background: #FFFFFF;
+            color: #000000;
         }
         .btn-dark, .btn-glass {
-            background: rgba(255,255,255,0.08); 
+            background: rgba(255,255,255,0.08);
             border: 1px solid rgba(255,255,255,0.2); border-radius: 0; color: #fff;
         }
         .btn-dark:hover, .btn-glass:hover {
             background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.4);
             box-shadow: 0 12px 40px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.08); transform: translateY(-2px);
         }
-        .btn-outline-dark {
-            background: transparent; border: 1px solid #0D0D0D; border-radius: 0; color: #0D0D0D;
-            border: 1px solid rgba(255,255,255,0.2); border-radius: 0; color: var(--black);
+        .cta-button-outline-dark {
+            background: transparent;
+            border: 1px solid #000000;
+            border-radius: 0;
+            color: #000000;
+            padding: 12px 28px;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 500;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            cursor: pointer;
+            transition: all 0.2s ease;
         }
-        .btn-outline-dark:hover {
-            background: #0D0D0D; color: #fff; border-color: #0D0D0D;
-            color: var(--accent-on-dark); box-shadow: 0 12px 40px rgba(0,0,0,0.1); transform: translateY(-2px);
+        .cta-button-outline-dark:hover {
+            background: #000000;
+            color: #FFFFFF;
         }
+        /* CTA: text link with arrow */
+        .cta-link {
+            color: #FFFFFF;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 500;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: none;
+            background: none;
+            padding: 12px 0;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+        .cta-link:hover { opacity: 0.8; }
+        .cta-link .arrow {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            transition: transform 0.2s ease;
+        }
+        .cta-link:hover .arrow { transform: translateX(4px); }
+        .cta-link-dark { color: #0D0D0D; }
+        .cta-link-dark:hover { opacity: 0.7; }
 
         /* ========== BREADCRUMB ========== */
         .breadcrumb {
@@ -562,9 +610,9 @@
             </div>
 
             <div class="vdp-actions">
-                <a href="#" class="btn btn-gold">Schedule Test Drive</a>
+                <a href="#" class="btn cta-button-outline-dark">Schedule Test Drive</a>
                 <a href="#" class="btn btn-dark">Get Taylor Price</a>
-                <a href="/demo/taylor-cadillac/financing" class="btn btn-outline-dark">Estimate Payments</a>
+                <a href="/demo/taylor-cadillac/financing" class="btn cta-button-outline-dark">Estimate Payments</a>
             </div>
 
             <div class="vdp-contact-card">
