@@ -3,6 +3,7 @@ import { type Server } from "http";
 import { storage } from "./storage";
 import path from "path";
 import fs from "fs";
+import express from "express";
 
 const TEMPLATES_DIR = path.resolve(process.cwd(), "templates");
 
@@ -10,6 +11,9 @@ export async function registerRoutes(
   httpServer: Server,
   app: Express
 ): Promise<Server> {
+
+  // Serve logo and shared assets from templates/assets/
+  app.use("/assets/logos", express.static(path.join(TEMPLATES_DIR, "assets", "logos")));
 
   // GET /api/templates - list available templates
   app.get("/api/templates", async (_req, res) => {
