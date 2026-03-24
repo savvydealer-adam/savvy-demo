@@ -209,8 +209,13 @@
 
     /* ========== HERO ========== */
     .hero {
-      background: linear-gradient(135deg, #0D1B2E 0%, var(--navy) 40%, var(--navy-light) 100%);
-      padding: 100px 0 90px;
+      background: linear-gradient(rgba(27,42,74,0.65), rgba(17,29,53,0.85)), url('/assets/taylor-group/hero-banner.jpg');
+      background-size: cover;
+      background-position: center;
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
       color: #fff;
       position: relative;
@@ -224,7 +229,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: radial-gradient(ellipse at 50% 0%, rgba(200,169,81,0.12) 0%, transparent 65%);
+      background: radial-gradient(ellipse at 50% 30%, rgba(200,169,81,0.1) 0%, transparent 60%);
       pointer-events: none;
     }
 
@@ -234,12 +239,12 @@
       bottom: 0;
       left: 0;
       right: 0;
-      height: 4px;
+      height: 5px;
       background: linear-gradient(90deg, var(--gold), var(--gold-light), var(--gold));
     }
 
     .hero .container {
-      max-width: 900px;
+      max-width: 960px;
       margin: 0 auto;
       padding: 0 24px;
       position: relative;
@@ -249,23 +254,25 @@
     .hero-badge {
       display: inline-block;
       background: rgba(200,169,81,0.15);
-      border: 1px solid rgba(200,169,81,0.3);
-      color: var(--gold);
+      border: 1px solid rgba(200,169,81,0.4);
+      color: var(--gold-light);
       font-size: 12px;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 2px;
-      padding: 8px 20px;
+      letter-spacing: 2.5px;
+      padding: 10px 24px;
       border-radius: 30px;
-      margin-bottom: 28px;
+      margin-bottom: 32px;
+      backdrop-filter: blur(8px);
     }
 
     .hero h1 {
-      font-size: 52px;
+      font-size: 60px;
       font-weight: 900;
-      line-height: 1.1;
-      margin-bottom: 20px;
-      letter-spacing: -1px;
+      line-height: 1.05;
+      margin-bottom: 24px;
+      letter-spacing: -1.5px;
+      text-shadow: 0 2px 20px rgba(0,0,0,0.3);
     }
 
     .hero h1 span {
@@ -273,19 +280,20 @@
     }
 
     .hero p {
-      font-size: 19px;
-      color: rgba(255,255,255,0.75);
-      max-width: 650px;
-      margin: 0 auto 24px;
+      font-size: 20px;
+      color: rgba(255,255,255,0.8);
+      max-width: 660px;
+      margin: 0 auto 20px;
       line-height: 1.6;
     }
 
     .hero-tagline {
-      font-size: 15px;
+      font-size: 16px;
       font-weight: 600;
-      color: var(--gold);
-      letter-spacing: 1px;
-      margin-bottom: 40px;
+      color: var(--gold-light);
+      letter-spacing: 1.5px;
+      margin-bottom: 44px;
+      text-transform: uppercase;
     }
 
     .hero-ctas {
@@ -299,7 +307,7 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 14px 32px;
+      padding: 16px 36px;
       font-size: 15px;
       font-weight: 700;
       border-radius: 8px;
@@ -319,17 +327,21 @@
     .btn-gold:hover {
       background: var(--gold-dark);
       border-color: var(--gold-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(200,169,81,0.4);
     }
 
     .btn-outline-white {
-      background: transparent;
+      background: rgba(255,255,255,0.08);
       color: #fff;
       border-color: rgba(255,255,255,0.4);
+      backdrop-filter: blur(4px);
     }
 
     .btn-outline-white:hover {
-      background: rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.15);
       border-color: #fff;
+      transform: translateY(-2px);
     }
 
     .btn-navy {
@@ -341,6 +353,8 @@
     .btn-navy:hover {
       background: var(--navy-dark);
       border-color: var(--navy-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(27,42,74,0.3);
     }
 
     .btn-outline-navy {
@@ -361,15 +375,28 @@
 
     /* ========== STATS BAR ========== */
     .stats-bar {
-      background: var(--white);
+      background: var(--navy-dark);
       padding: 0;
-      margin-top: -48px;
       position: relative;
       z-index: 2;
+      overflow: hidden;
+    }
+
+    .stats-bar::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('/assets/taylor-group/vehicle-showcase.png') no-repeat center right;
+      background-size: 400px auto;
+      opacity: 0.04;
+      pointer-events: none;
     }
 
     .stats-bar .container {
-      max-width: 1000px;
+      max-width: 1100px;
       margin: 0 auto;
       padding: 0 24px;
     }
@@ -377,16 +404,14 @@
     .stats-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      background: var(--white);
-      border-radius: 14px;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.1);
       overflow: hidden;
     }
 
     .stat-item {
       text-align: center;
-      padding: 32px 20px;
-      border-right: 1px solid var(--gray-200);
+      padding: 48px 20px;
+      border-right: 1px solid rgba(255,255,255,0.08);
+      position: relative;
     }
 
     .stat-item:last-child {
@@ -394,11 +419,12 @@
     }
 
     .stat-number {
-      font-size: 36px;
+      font-size: 52px;
       font-weight: 900;
-      color: var(--navy);
+      color: var(--white);
       line-height: 1;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
+      letter-spacing: -1px;
     }
 
     .stat-number span {
@@ -408,14 +434,84 @@
     .stat-label {
       font-size: 13px;
       font-weight: 600;
-      color: var(--gray-600);
+      color: rgba(255,255,255,0.5);
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 2px;
+    }
+
+    /* ========== CTA CARDS ========== */
+    .cta-cards-section {
+      padding: 90px 0;
+      background: var(--white);
+    }
+
+    .cta-cards-section .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .cta-cards-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+
+    .cta-image-card {
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+      min-height: 320px;
+      display: flex;
+      align-items: flex-end;
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    .cta-image-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.15);
+    }
+
+    .cta-image-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(17,29,53,0.9) 0%, rgba(17,29,53,0.3) 50%, transparent 100%);
+    }
+
+    .cta-image-card-content {
+      position: relative;
+      z-index: 1;
+      padding: 36px;
+      width: 100%;
+    }
+
+    .cta-image-card-content h3 {
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 8px;
+      letter-spacing: -0.3px;
+    }
+
+    .cta-image-card-content p {
+      font-size: 15px;
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    .cta-image-card-content .btn {
+      padding: 12px 28px;
+      font-size: 14px;
     }
 
     /* ========== BRAND SELECTOR ========== */
     .brands-section {
-      padding: 100px 0 80px;
+      padding: 100px 0 90px;
       background: var(--light-gray);
     }
 
@@ -427,21 +523,21 @@
 
     .section-header {
       text-align: center;
-      margin-bottom: 48px;
+      margin-bottom: 56px;
     }
 
     .section-header h2 {
-      font-size: 34px;
+      font-size: 38px;
       font-weight: 800;
       color: var(--navy);
-      margin-bottom: 10px;
+      margin-bottom: 12px;
       letter-spacing: -0.5px;
     }
 
     .section-header p {
-      font-size: 16px;
+      font-size: 17px;
       color: var(--gray-600);
-      max-width: 560px;
+      max-width: 580px;
       margin: 0 auto;
     }
 
@@ -450,7 +546,7 @@
       width: 60px;
       height: 3px;
       background: var(--gold);
-      margin: 16px auto 0;
+      margin: 18px auto 0;
       border-radius: 2px;
     }
 
@@ -462,28 +558,46 @@
 
     .brand-card {
       background: var(--white);
-      border-radius: 14px;
-      padding: 40px 24px;
+      border-radius: 16px;
+      padding: 44px 24px 36px;
       text-align: center;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
-      transition: transform 0.25s, box-shadow 0.25s;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+      transition: transform 0.3s, box-shadow 0.3s;
       border: 2px solid transparent;
       display: block;
       cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .brand-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--gold);
+      opacity: 0;
+      transition: opacity 0.3s;
     }
 
     .brand-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 36px rgba(27,42,74,0.12);
+      transform: translateY(-8px);
+      box-shadow: 0 16px 40px rgba(27,42,74,0.12);
       border-color: var(--gold);
     }
 
+    .brand-card:hover::before {
+      opacity: 1;
+    }
+
     .brand-card-logo {
-      height: 60px;
+      height: 70px;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
       font-size: 32px;
       font-weight: 900;
       color: var(--navy);
@@ -491,7 +605,7 @@
     }
 
     .brand-card-name {
-      font-size: 18px;
+      font-size: 20px;
       font-weight: 700;
       color: var(--navy);
       margin-bottom: 6px;
@@ -500,15 +614,126 @@
     .brand-card-count {
       font-size: 13px;
       font-weight: 600;
+      color: var(--gray-600);
+      margin-bottom: 18px;
+    }
+
+    .brand-card-cta {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 700;
       color: var(--gold-dark);
       text-transform: uppercase;
-      letter-spacing: 0.5px;
+      letter-spacing: 1px;
+      transition: color 0.2s;
+    }
+
+    .brand-card:hover .brand-card-cta {
+      color: var(--navy);
+    }
+
+    /* ========== LOCALLY OWNED SECTION ========== */
+    .locally-owned-section {
+      padding: 100px 0;
+      background: var(--white);
+      overflow: hidden;
+    }
+
+    .locally-owned-section .container {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .locally-owned-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+
+    .locally-owned-image {
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+      position: relative;
+    }
+
+    .locally-owned-image img {
+      display: block;
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+    }
+
+    .locally-owned-image::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: var(--gold);
+    }
+
+    .locally-owned-content h2 {
+      font-size: 42px;
+      font-weight: 900;
+      color: var(--navy);
+      margin-bottom: 8px;
+      letter-spacing: -1px;
+      line-height: 1.1;
+    }
+
+    .locally-owned-content .gold-line {
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: var(--gold);
+      margin-bottom: 28px;
+      border-radius: 2px;
+    }
+
+    .locally-owned-content p {
+      font-size: 17px;
+      color: var(--gray-600);
+      margin-bottom: 18px;
+      line-height: 1.7;
+    }
+
+    .locally-owned-content p strong {
+      color: var(--navy);
+    }
+
+    .locally-owned-content .highlight-stat {
+      display: inline-flex;
+      align-items: center;
+      gap: 16px;
+      background: var(--light-gray);
+      border-left: 4px solid var(--gold);
+      padding: 20px 24px;
+      border-radius: 0 12px 12px 0;
+      margin: 12px 0 28px;
+    }
+
+    .highlight-stat .stat-num {
+      font-size: 40px;
+      font-weight: 900;
+      color: var(--gold);
+      line-height: 1;
+    }
+
+    .highlight-stat .stat-text {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--navy);
+      line-height: 1.4;
     }
 
     /* ========== DEALERSHIP DIRECTORY ========== */
     .directory-section {
-      padding: 80px 0;
-      background: var(--white);
+      padding: 100px 0;
+      background: var(--light-gray);
     }
 
     .directory-section .container {
@@ -526,14 +751,14 @@
     .dealer-card {
       background: var(--white);
       border: 1px solid var(--gray-200);
-      border-radius: 12px;
+      border-radius: 14px;
       padding: 32px 28px;
-      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+      transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
     }
 
     .dealer-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.08);
       border-color: var(--gold);
     }
 
@@ -605,8 +830,8 @@
 
     /* ========== ABOUT SECTION ========== */
     .about-section {
-      padding: 80px 0;
-      background: var(--light-gray);
+      padding: 100px 0;
+      background: var(--white);
     }
 
     .about-section .container {
@@ -623,7 +848,7 @@
     }
 
     .about-content h2 {
-      font-size: 34px;
+      font-size: 38px;
       font-weight: 800;
       color: var(--navy);
       margin-bottom: 8px;
@@ -657,16 +882,21 @@
     }
 
     .about-value-card {
-      background: var(--white);
-      border-radius: 12px;
+      background: var(--light-gray);
+      border-radius: 14px;
       padding: 28px 24px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .about-value-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
     }
 
     .about-value-icon {
       width: 48px;
       height: 48px;
-      background: rgba(200,169,81,0.12);
+      background: rgba(200,169,81,0.15);
       border-radius: 10px;
       display: flex;
       align-items: center;
@@ -696,20 +926,36 @@
 
     /* ========== COMMUNITY SECTION ========== */
     .community-section {
-      padding: 80px 0;
+      padding: 100px 0;
       background: var(--navy);
       color: var(--white);
       text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .community-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(ellipse at 30% 50%, rgba(200,169,81,0.08) 0%, transparent 50%),
+                  radial-gradient(ellipse at 70% 50%, rgba(200,169,81,0.06) 0%, transparent 50%);
+      pointer-events: none;
     }
 
     .community-section .container {
       max-width: 800px;
       margin: 0 auto;
       padding: 0 24px;
+      position: relative;
+      z-index: 1;
     }
 
     .community-section h2 {
-      font-size: 34px;
+      font-size: 38px;
       font-weight: 800;
       margin-bottom: 8px;
       letter-spacing: -0.5px;
@@ -724,26 +970,72 @@
       width: 60px;
       height: 3px;
       background: var(--gold);
-      margin: 16px auto 24px;
+      margin: 16px auto 28px;
       border-radius: 2px;
     }
 
     .community-section p {
-      font-size: 16px;
+      font-size: 17px;
       color: rgba(255,255,255,0.75);
       line-height: 1.7;
       margin-bottom: 16px;
     }
 
     .community-section .btn {
-      margin-top: 16px;
+      margin-top: 20px;
+    }
+
+    /* ========== VEHICLE SHOWCASE BANNER ========== */
+    .vehicle-showcase {
+      padding: 80px 0;
+      background: var(--light-gray);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .vehicle-showcase .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      gap: 48px;
+    }
+
+    .vehicle-showcase-content {
+      flex: 1;
+    }
+
+    .vehicle-showcase-content h2 {
+      font-size: 34px;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+    }
+
+    .vehicle-showcase-content p {
+      font-size: 16px;
+      color: var(--gray-600);
+      margin-bottom: 24px;
+      line-height: 1.7;
+    }
+
+    .vehicle-showcase-image {
+      flex: 0 0 380px;
+    }
+
+    .vehicle-showcase-image img {
+      width: 100%;
+      height: auto;
+      filter: drop-shadow(0 20px 40px rgba(0,0,0,0.12));
     }
 
     /* ========== FOOTER ========== */
     .site-footer {
       background: #0D1520;
       color: #ccc;
-      padding: 56px 0 0;
+      padding: 64px 0 0;
     }
 
     .site-footer .container {
@@ -841,6 +1133,18 @@
       text-decoration: underline;
     }
 
+    /* ========== SCROLL ANIMATIONS ========== */
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    }
+
+    .fade-in-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
     /* ========== RESPONSIVE ========== */
     @media (max-width: 1100px) {
       .brand-grid {
@@ -854,6 +1158,16 @@
       .footer-brand {
         grid-column: 1 / -1;
       }
+
+      .vehicle-showcase .container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .vehicle-showcase-image {
+        flex: 0 0 auto;
+        max-width: 400px;
+      }
     }
 
     @media (max-width: 1023px) {
@@ -862,7 +1176,11 @@
       }
 
       .hero h1 {
-        font-size: 38px;
+        font-size: 44px;
+      }
+
+      .hero {
+        min-height: 65vh;
       }
 
       .dealer-grid {
@@ -872,6 +1190,15 @@
       .about-grid {
         grid-template-columns: 1fr;
         gap: 40px;
+      }
+
+      .locally-owned-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .locally-owned-image img {
+        height: 360px;
       }
 
       .stats-grid {
@@ -884,7 +1211,7 @@
 
       .stat-item:nth-child(1),
       .stat-item:nth-child(2) {
-        border-bottom: 1px solid var(--gray-200);
+        border-bottom: 1px solid rgba(255,255,255,0.08);
       }
     }
 
@@ -897,8 +1224,20 @@
         grid-template-columns: 1fr;
       }
 
+      .cta-cards-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-image-card {
+        min-height: 280px;
+      }
+
       .footer-grid {
         grid-template-columns: repeat(2, 1fr);
+      }
+
+      .locally-owned-content h2 {
+        font-size: 32px;
       }
     }
 
@@ -915,36 +1254,34 @@
       }
 
       .hero {
-        padding: 72px 0 64px;
+        min-height: 70vh;
+        padding: 80px 0;
       }
 
       .hero h1 {
-        font-size: 30px;
+        font-size: 34px;
+        letter-spacing: -0.5px;
       }
 
       .hero p {
-        font-size: 16px;
+        font-size: 17px;
       }
 
       .hero-badge {
         font-size: 11px;
-        padding: 6px 16px;
+        padding: 8px 18px;
       }
 
-      .stats-bar {
-        margin-top: -32px;
+      .stat-number {
+        font-size: 36px;
       }
 
       .stats-grid {
         grid-template-columns: 1fr 1fr;
       }
 
-      .stat-number {
-        font-size: 28px;
-      }
-
       .stat-item {
-        padding: 24px 16px;
+        padding: 32px 16px;
       }
 
       .brand-grid {
@@ -961,12 +1298,12 @@
       }
 
       .section-header h2 {
-        font-size: 26px;
+        font-size: 28px;
       }
 
       .about-content h2,
       .community-section h2 {
-        font-size: 26px;
+        font-size: 28px;
       }
 
       .footer-grid {
@@ -976,7 +1313,8 @@
 
       .about-content .gold-line,
       .section-header .gold-line,
-      .community-section .gold-line {
+      .community-section .gold-line,
+      .locally-owned-content .gold-line {
         margin-left: auto;
         margin-right: auto;
       }
@@ -984,8 +1322,22 @@
       .brands-section,
       .directory-section,
       .about-section,
-      .community-section {
-        padding: 56px 0;
+      .community-section,
+      .locally-owned-section,
+      .vehicle-showcase {
+        padding: 64px 0;
+      }
+
+      .cta-cards-section {
+        padding: 64px 0;
+      }
+
+      .locally-owned-image img {
+        height: 280px;
+      }
+
+      .highlight-stat .stat-num {
+        font-size: 32px;
       }
     }
   </style>
@@ -1064,6 +1416,28 @@
     </div>
   </section>
 
+  <!-- ==================== CTA IMAGE CARDS ==================== -->
+  <section class="cta-cards-section">
+    <div class="container">
+      <div class="cta-cards-grid">
+        <a href="/demo/taylor-auto/finance" class="cta-image-card fade-in-up" style="background-image: url('/assets/taylor-group/pre-approved.jpg');">
+          <div class="cta-image-card-content">
+            <h3>Get Pre-Approved</h3>
+            <p>Quick, easy financing with rates as low as 0% APR. Get your approval in minutes -- not hours.</p>
+            <span class="btn btn-gold btn-sm">Apply Now</span>
+          </div>
+        </a>
+        <a href="/demo/taylor-auto/inventory" class="cta-image-card fade-in-up" style="background-image: url('/assets/taylor-group/shop-online.jpg');">
+          <div class="cta-image-card-content">
+            <h3>Shop Online</h3>
+            <p>Browse our full inventory from the comfort of home. Over 1,000 new and pre-owned vehicles available.</p>
+            <span class="btn btn-gold btn-sm">Start Shopping</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- ==================== BRAND SELECTOR ==================== -->
   <section class="brands-section" id="brands">
     <div class="container">
@@ -1073,41 +1447,68 @@
         <span class="gold-line"></span>
       </div>
       <div class="brand-grid">
-        <a href="/demo/taylor-cadillac" class="brand-card">
+        <a href="/demo/taylor-cadillac" class="brand-card fade-in-up">
           <div class="brand-card-logo">
-            <img src="/assets/logos/cadillac-crest.svg" alt="Cadillac" style="height:50px;width:auto;">
+            <img src="/assets/logos/cadillac-crest.svg" alt="Cadillac" style="height:55px;width:auto;">
           </div>
           <div class="brand-card-name">Cadillac</div>
           <div class="brand-card-count">1 Location &middot; Toledo</div>
+          <div class="brand-card-cta">Explore Cadillac &rarr;</div>
         </a>
-        <a href="/demo/taylor-genesis" class="brand-card">
+        <a href="/demo/taylor-genesis" class="brand-card fade-in-up">
           <div class="brand-card-logo">
-            <img src="/assets/logos/genesis-logo.png" alt="Genesis" style="height:40px;width:auto;">
+            <img src="/assets/logos/genesis-logo.png" alt="Genesis" style="height:45px;width:auto;">
           </div>
           <div class="brand-card-name">Genesis</div>
           <div class="brand-card-count">1 Location &middot; Perrysburg</div>
+          <div class="brand-card-cta">Explore Genesis &rarr;</div>
         </a>
-        <a href="/demo/taylor-hyundai-toledo" class="brand-card">
+        <a href="/demo/taylor-hyundai-toledo" class="brand-card fade-in-up">
           <div class="brand-card-logo">
-            <img src="/assets/logos/hyundai.svg" alt="Hyundai" style="height:40px;width:auto;">
+            <img src="/assets/logos/hyundai.svg" alt="Hyundai" style="height:45px;width:auto;">
           </div>
           <div class="brand-card-name">Hyundai</div>
           <div class="brand-card-count">3 Locations</div>
+          <div class="brand-card-cta">Explore Hyundai &rarr;</div>
         </a>
-        <a href="/demo/taylor-kia-toledo" class="brand-card">
+        <a href="/demo/taylor-kia-toledo" class="brand-card fade-in-up">
           <div class="brand-card-logo">
             <img src="/assets/logos/kia-black.svg" alt="Kia" style="height:36px;width:auto;">
           </div>
           <div class="brand-card-name">Kia</div>
           <div class="brand-card-count">3 Locations</div>
+          <div class="brand-card-cta">Explore Kia &rarr;</div>
         </a>
-        <a href="/demo/taylor-vw-findlay" class="brand-card">
+        <a href="/demo/taylor-vw-findlay" class="brand-card fade-in-up">
           <div class="brand-card-logo">
-            <img src="/assets/logos/vw-dark.png" alt="Volkswagen" style="height:40px;width:auto;">
+            <img src="/assets/logos/vw-dark.png" alt="Volkswagen" style="height:45px;width:auto;">
           </div>
           <div class="brand-card-name">Volkswagen</div>
           <div class="brand-card-count">1 Location &middot; Findlay</div>
+          <div class="brand-card-cta">Explore VW &rarr;</div>
         </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== LOCALLY OWNED SECTION ==================== -->
+  <section class="locally-owned-section">
+    <div class="container">
+      <div class="locally-owned-grid">
+        <div class="locally-owned-image fade-in-up">
+          <img src="/assets/taylor-group/locally-owned.jpg" alt="Taylor Automotive Family - Locally Owned Since 1979">
+        </div>
+        <div class="locally-owned-content fade-in-up">
+          <h2>Family Owned Since 1979</h2>
+          <span class="gold-line"></span>
+          <p>What started as a single dealership in Toledo has grown into <strong>Northwest Ohio's most trusted automotive family</strong>. Three generations of Taylors have built their name on a simple promise: treat every customer the way you'd want to be treated.</p>
+          <p>That commitment to integrity, community, and genuine care is why families keep coming back -- generation after generation.</p>
+          <div class="highlight-stat">
+            <div class="stat-num">45+</div>
+            <div class="stat-text">Years serving<br>Northwest Ohio</div>
+          </div>
+          <a href="/demo/taylor-auto/about" class="btn btn-navy">Our Story</a>
+        </div>
       </div>
     </div>
   </section>
@@ -1123,7 +1524,7 @@
       <div class="dealer-grid">
 
         <!-- Taylor Cadillac -->
-        <div class="dealer-card">
+        <div class="dealer-card fade-in-up">
           <div class="dealer-card-top">
             <div class="dealer-card-name">Taylor Cadillac</div>
             <span class="dealer-card-badge">Cadillac</span>
@@ -1142,7 +1543,7 @@
         </div>
 
         <!-- Taylor Genesis -->
-        <div class="dealer-card">
+        <div class="dealer-card fade-in-up">
           <div class="dealer-card-top">
             <div class="dealer-card-name">Taylor Genesis of Perrysburg</div>
             <span class="dealer-card-badge">Genesis</span>
@@ -1161,7 +1562,7 @@
         </div>
 
         <!-- Taylor Hyundai Toledo -->
-        <div class="dealer-card">
+        <div class="dealer-card fade-in-up">
           <div class="dealer-card-top">
             <div class="dealer-card-name">Taylor Hyundai of Toledo</div>
             <span class="dealer-card-badge">Hyundai</span>
@@ -1180,7 +1581,7 @@
         </div>
 
         <!-- Taylor Hyundai Perrysburg -->
-        <div class="dealer-card">
+        <div class="dealer-card fade-in-up">
           <div class="dealer-card-top">
             <div class="dealer-card-name">Taylor Hyundai of Perrysburg</div>
             <span class="dealer-card-badge">Hyundai</span>
@@ -1199,7 +1600,7 @@
         </div>
 
         <!-- Taylor Hyundai Findlay -->
-        <div class="dealer-card">
+        <div class="dealer-card fade-in-up">
           <div class="dealer-card-top">
             <div class="dealer-card-name">Taylor Hyundai of Findlay</div>
             <span class="dealer-card-badge">Hyundai</span>
@@ -1218,7 +1619,7 @@
         </div>
 
         <!-- Taylor Kia Toledo -->
-        <div class="dealer-card">
+        <div class="dealer-card fade-in-up">
           <div class="dealer-card-top">
             <div class="dealer-card-name">Taylor Kia of Toledo</div>
             <span class="dealer-card-badge">Kia</span>
@@ -1237,7 +1638,7 @@
         </div>
 
         <!-- Taylor Kia Findlay -->
-        <div class="dealer-card">
+        <div class="dealer-card fade-in-up">
           <div class="dealer-card-top">
             <div class="dealer-card-name">Taylor Kia of Findlay</div>
             <span class="dealer-card-badge">Kia</span>
@@ -1256,7 +1657,7 @@
         </div>
 
         <!-- Taylor Kia Lima -->
-        <div class="dealer-card">
+        <div class="dealer-card fade-in-up">
           <div class="dealer-card-top">
             <div class="dealer-card-name">Taylor Kia of Lima</div>
             <span class="dealer-card-badge">Kia</span>
@@ -1275,7 +1676,7 @@
         </div>
 
         <!-- Taylor VW Findlay -->
-        <div class="dealer-card">
+        <div class="dealer-card fade-in-up">
           <div class="dealer-card-top">
             <div class="dealer-card-name">Taylor Volkswagen of Findlay</div>
             <span class="dealer-card-badge">Volkswagen</span>
@@ -1301,7 +1702,7 @@
   <section class="about-section" id="about">
     <div class="container">
       <div class="about-grid">
-        <div class="about-content">
+        <div class="about-content fade-in-up">
           <h2>The Taylor Story</h2>
           <span class="gold-line"></span>
           <p>In 1979, <strong>Steve Taylor Sr.</strong> opened his first dealership in Toledo, Ohio with a simple belief: treat every customer like family. That single store has grown into <strong>Northwest Ohio's largest dealer group</strong> -- nine dealerships representing five world-class brands.</p>
@@ -1309,7 +1710,7 @@
           <p>From the luxury of Cadillac and Genesis to the reliability of Hyundai, Kia, and Volkswagen, we have a vehicle and a team ready to serve you.</p>
           <a href="/demo/taylor-auto/about" class="btn btn-navy" style="margin-top: 12px;">Learn More About Us</a>
         </div>
-        <div class="about-values">
+        <div class="about-values fade-in-up">
           <div class="about-value-card">
             <div class="about-value-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
@@ -1339,6 +1740,20 @@
             <p>Recognized by manufacturers for sales excellence and customer satisfaction.</p>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== VEHICLE SHOWCASE BANNER ==================== -->
+  <section class="vehicle-showcase">
+    <div class="container">
+      <div class="vehicle-showcase-content fade-in-up">
+        <h2>Find Your Perfect Vehicle</h2>
+        <p>With five brands under one family, you have access to everything from luxury sedans and SUVs to efficient commuters and family haulers. Explore our full inventory across all nine locations.</p>
+        <a href="/demo/taylor-auto/inventory" class="btn btn-gold">Browse All Inventory</a>
+      </div>
+      <div class="vehicle-showcase-image fade-in-up">
+        <img src="/assets/taylor-group/vehicle-showcase.png" alt="Browse Taylor Automotive vehicles">
       </div>
     </div>
   </section>
@@ -1403,6 +1818,26 @@
       </div>
     </div>
   </footer>
+
+  <!-- ==================== SCROLL ANIMATION ==================== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var targets = document.querySelectorAll('.fade-in-up');
+      if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+        targets.forEach(function(el) { observer.observe(el); });
+      } else {
+        targets.forEach(function(el) { el.classList.add('visible'); });
+      }
+    });
+  </script>
 
 </body>
 </html>
