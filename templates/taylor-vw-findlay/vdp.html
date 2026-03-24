@@ -14,7 +14,7 @@
             --bodyfont: 'VW Head', 'Inter', sans-serif;
             --headerbg: #001E50;
             --footerbg: #001E50;
-            --bodycolor: #19183C;
+            --bodycolor: #000E26;
             --secondarycolor: #001E50;
             --accentcolor: #00B0F0;
             --linktextcolor: #001E50;
@@ -69,7 +69,7 @@
         .vdp-right { width: 35%; position: sticky; top: 90px; }
 
         /* ========== GALLERY ========== */
-        .gallery-card { background: #fff; border: 1px solid rgba(36,39,44,.1); box-shadow: 0 6px 10px rgba(0,0,0,.05); border-radius: 12px; overflow: hidden; margin-bottom: 24px; }
+        .gallery-card { background: #fff; border: 1px solid #C2CACF; border-radius: 8px; overflow: hidden; margin-bottom: 24px; }
         .gallery-main { background: #f4f4f4; position: relative; display: flex; align-items: center; justify-content: center; min-height: 400px; padding: 40px; }
         .gallery-main img { max-width: 100%; max-height: 360px; object-fit: contain; }
         .gallery-counter { position: absolute; bottom: 12px; left: 12px; background: rgba(0,0,0,0.6); color: #fff; font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 20px; }
@@ -79,8 +79,8 @@
         .gallery-thumb img { width: 100%; height: 100%; object-fit: contain; padding: 4px; }
 
         /* ========== VEHICLE DETAILS CARD ========== */
-        .details-card { background: #fff; border: 1px solid rgba(36,39,44,.1); box-shadow: 0 6px 10px rgba(0,0,0,.05); border-radius: 12px; padding: 28px; margin-bottom: 24px; }
-        .details-card h2 { font-size: 20px; font-weight: 700; color: var(--headingcolor); margin: 0 0 20px; padding-bottom: 14px; border-bottom: 1px solid #eee; }
+        .details-card { background: #fff; border: 1px solid #C2CACF; border-radius: 8px; padding: 28px; margin-bottom: 24px; }
+        .details-card h2 { font-size: clamp(1.13rem, 2vw, 1.5rem); font-weight: 400; color: var(--headingcolor); margin: 0 0 20px; padding-bottom: 14px; border-bottom: 1px solid #DFE4E8; }
         .details-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
         .detail-item { display: flex; align-items: flex-start; gap: 12px; }
         .detail-icon { width: 36px; height: 36px; background: #f0f4fb; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
@@ -89,14 +89,14 @@
         .detail-text .detail-value { font-size: 15px; font-weight: 700; color: var(--headingcolor); line-height: 1.3; }
 
         /* ========== DESCRIPTION ========== */
-        .description-card { background: #fff; border: 1px solid rgba(36,39,44,.1); box-shadow: 0 6px 10px rgba(0,0,0,.05); border-radius: 12px; padding: 28px; margin-bottom: 24px; }
-        .description-card h2 { font-size: 20px; font-weight: 700; color: var(--headingcolor); margin: 0 0 16px; padding-bottom: 14px; border-bottom: 1px solid #eee; }
+        .description-card { background: #fff; border: 1px solid #C2CACF; border-radius: 8px; padding: 28px; margin-bottom: 24px; }
+        .description-card h2 { font-size: clamp(1.13rem, 2vw, 1.5rem); font-weight: 400; color: var(--headingcolor); margin: 0 0 16px; padding-bottom: 14px; border-bottom: 1px solid #DFE4E8; }
         .description-card p { font-size: 15px; color: #555; line-height: 1.7; margin: 0; }
 
         /* ========== FEATURES ========== */
-        .features-card { background: #fff; border: 1px solid rgba(36,39,44,.1); box-shadow: 0 6px 10px rgba(0,0,0,.05); border-radius: 12px; overflow: hidden; margin-bottom: 24px; }
+        .features-card { background: #fff; border: 1px solid #C2CACF; border-radius: 8px; overflow: hidden; margin-bottom: 24px; }
         .features-header { padding: 20px 28px; border-bottom: 1px solid #eee; display: flex; align-items: center; justify-content: space-between; cursor: pointer; user-select: none; }
-        .features-header h2 { font-size: 20px; font-weight: 700; color: var(--headingcolor); margin: 0; }
+        .features-header h2 { font-size: clamp(1.13rem, 2vw, 1.5rem); font-weight: 400; color: var(--headingcolor); margin: 0; }
         .features-toggle-icon { width: 24px; height: 24px; transition: transform 0.3s; }
         .features-toggle-icon svg { width: 24px; height: 24px; fill: #666; }
         .features-header.open .features-toggle-icon { transform: rotate(180deg); }
@@ -107,7 +107,7 @@
         .feature-item svg { width: 16px; height: 16px; fill: var(--savingsgreen); flex-shrink: 0; }
 
         /* ========== PRICE SIDEBAR ========== */
-        .price-card { background: #fff; border: 1px solid rgba(36,39,44,.1); box-shadow: 0 6px 10px rgba(0,0,0,.05); border-radius: 12px; padding: 28px; margin-bottom: 20px; }
+        .price-card { background: #fff; border: 1px solid #C2CACF; border-radius: 8px; padding: 28px; margin-bottom: 20px; }
         .price-card-title { font-size: 22px; font-weight: 700; color: var(--headingcolor); margin: 0 0 4px; line-height: 1.3; }
         .price-card-subtitle { font-size: 13px; color: var(--greycolor); margin-bottom: 20px; }
         .price-card-subtitle span { display: inline-block; margin-right: 16px; }
@@ -124,13 +124,15 @@
         /* CTA Buttons -- Glass Style */
         .vdp-cta-stack { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
         .vdp-btn { display: flex; align-items: center; justify-content: center; padding: 14px 20px; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; font-family: var(--bodyfont); text-align: center; }
-        .vdp-btn-primary { background: rgba(0,30,80,0.9); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(0,30,80,0.3); border-radius: 14px; color: #fff; transition: all 0.3s ease; }
-        .vdp-btn-primary:hover { background: rgba(0,30,80,1); box-shadow: 0 8px 32px rgba(0,30,80,0.3), inset 0 1px 0 rgba(255,255,255,0.15); transform: translateY(-2px); color: #fff; }
-        .vdp-btn-outline { background: rgba(0,30,80,0.06); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(0,30,80,0.12); border-radius: 14px; color: #001E50; transition: all 0.3s ease; }
-        .vdp-btn-outline:hover { background: rgba(0,30,80,0.12); border-color: rgba(0,30,80,0.2); transform: translateY(-2px); color: #001E50; }
+        .vdp-btn-primary { background: #001E50; border: none; border-radius: 100px; color: #fff; transition: background-color 0.3s cubic-bezier(0.14, 1.12, 0.67, 0.99); }
+        .vdp-btn-primary:hover { background: #0040C5; color: #fff; }
+        .vdp-btn-primary:focus { outline: 3px solid #00B0F0; outline-offset: 2px; }
+        .vdp-btn-outline { background: transparent; border: 2px solid #001E50; border-radius: 100px; color: #001E50; transition: all 0.3s cubic-bezier(0.14, 1.12, 0.67, 0.99); }
+        .vdp-btn-outline:hover { background: #001E50; color: #FFFFFF; }
+        .vdp-btn-outline:focus { outline: 3px solid #00B0F0; outline-offset: 2px; }
 
         /* Dealer Info Card */
-        .dealer-card { background: #fff; border: 1px solid rgba(36,39,44,.1); box-shadow: 0 6px 10px rgba(0,0,0,.05); border-radius: 12px; padding: 24px; }
+        .dealer-card { background: #fff; border: 1px solid #C2CACF; border-radius: 8px; padding: 24px; }
         .dealer-card h3 { font-size: 16px; font-weight: 700; color: var(--headingcolor); margin: 0 0 12px; }
         .dealer-card-row { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; font-size: 14px; color: #555; }
         .dealer-card-row svg { width: 18px; height: 18px; fill: var(--secondarycolor); flex-shrink: 0; }

@@ -12,8 +12,9 @@
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
         :root {
-            --gold: #C4A265;
-            --black: #1A1A1A;
+            --accent: #0D0D0D;
+            --accent-on-dark: #FFFFFF;
+            --black: #000000;
             --dark: #0D0D0D;
             --white: #FFFFFF;
             --gray-50: #F5F5F5;
@@ -39,7 +40,7 @@
             color: #fff;
             padding: 10px 0;
             font-size: 13px;
-            border-bottom: 1px solid rgba(196,162,101,0.2);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
         }
         .top-bar .container {
             max-width: 1280px; margin: 0 auto; padding: 0 24px;
@@ -47,16 +48,16 @@
         }
         .top-bar-phones { display: flex; gap: 24px; flex-wrap: wrap; }
         .top-bar-phones a { color: #fff; font-weight: 500; transition: color 0.3s; letter-spacing: 0.5px; }
-        .top-bar-phones a:hover { color: var(--gold); }
-        .top-bar-phones span { color: var(--gold); margin-right: 6px; font-weight: 400; text-transform: uppercase; font-size: 10px; letter-spacing: 1.5px; }
+        .top-bar-phones a:hover { color: var(--accent-on-dark); }
+        .top-bar-phones span { color: var(--accent-on-dark); margin-right: 6px; font-weight: 400; text-transform: uppercase; font-size: 10px; letter-spacing: 1.5px; }
         .top-bar-address { color: rgba(255,255,255,0.7); letter-spacing: 0.5px; }
         .top-bar-address a { color: rgba(255,255,255,0.7); transition: color 0.3s; }
-        .top-bar-address a:hover { color: var(--gold); }
+        .top-bar-address a:hover { color: var(--accent-on-dark); }
 
         /* ========== HEADER ========== */
         .site-header {
             background: var(--black); padding: 18px 0; position: sticky; top: 0; z-index: 100;
-            border-bottom: 1px solid rgba(196,162,101,0.15);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
         }
         .site-header .container {
             max-width: 1280px; margin: 0 auto; padding: 0 24px;
@@ -65,11 +66,11 @@
         .header-brand { display: flex; align-items: center; gap: 14px; flex-shrink: 0; color: #fff; }
         .header-crest { width: 36px; height: 36px; }
         .header-dealer-name { font-size: 18px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: #fff; }
-        .header-dealer-name small { display: block; font-size: 10px; font-weight: 400; letter-spacing: 2px; color: var(--gold); margin-top: 2px; }
+        .header-dealer-name small { display: block; font-size: 10px; font-weight: 400; letter-spacing: 2px; color: var(--accent-on-dark); margin-top: 2px; }
         .header-nav { display: flex; align-items: center; gap: 4px; }
-        .header-nav a { color: rgba(255,255,255,0.75); font-size: 13px; font-weight: 500; padding: 10px 16px; letter-spacing: 1.5px; text-transform: uppercase; transition: color 0.3s, background 0.3s; border-radius: 2px; }
-        .header-nav a:hover { color: var(--gold); background: rgba(196,162,101,0.08); }
-        .header-nav a.active { color: var(--gold); background: rgba(196,162,101,0.1); }
+        .header-nav a { color: rgba(255,255,255,0.75); font-size: 13px; font-weight: 500; padding: 10px 16px; letter-spacing: 1.5px; text-transform: uppercase; transition: color 0.3s, background 0.3s; border-radius: 0; }
+        .header-nav a:hover { color: var(--accent-on-dark); background: rgba(255,255,255,0.06); }
+        .header-nav a.active { color: var(--accent-on-dark); background: rgba(255,255,255,0.08); }
 
         /* ========== GLASS BUTTONS ========== */
         .btn {
@@ -78,28 +79,28 @@
             cursor: pointer; transition: all 0.4s ease; text-align: center;
         }
         .btn-gold, .btn-glass-gold {
-            background: rgba(196,162,101,0.15); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(196,162,101,0.4); border-radius: 14px; color: #C4A265;
+            background: transparent; border: 1px solid #0D0D0D; border-radius: 0; color: #0D0D0D;
+            border: 1px solid rgba(255,255,255,0.3); border-radius: 0; color: #FFFFFF;
         }
         .btn-gold:hover, .btn-glass-gold:hover {
-            background: rgba(196,162,101,0.25); color: #fff;
-            box-shadow: 0 12px 40px rgba(196,162,101,0.2); transform: translateY(-2px);
+            background: #0D0D0D; color: #fff; border-color: #0D0D0D;
+            box-shadow: 0 12px 40px rgba(255,255,255,0.08); transform: translateY(-2px);
         }
         .btn-outline, .btn-glass {
-            background: rgba(255,255,255,0.08); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(196,162,101,0.3); border-radius: 14px; color: #fff;
+            background: transparent; border: 1px solid #FFFFFF; border-radius: 0; color: #fff;
+            border: 1px solid rgba(255,255,255,0.2); border-radius: 0; color: #fff;
         }
         .btn-outline:hover, .btn-glass:hover {
-            background: rgba(196,162,101,0.15); border-color: rgba(196,162,101,0.5);
-            box-shadow: 0 12px 40px rgba(0,0,0,0.2), inset 0 1px 0 rgba(196,162,101,0.2); transform: translateY(-2px);
+            background: #FFFFFF; color: #000; border-color: #FFFFFF;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.08); transform: translateY(-2px);
         }
         .btn-outline-dark {
-            background: rgba(255,255,255,0.08); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(196,162,101,0.3); border-radius: 14px; color: var(--black);
+            background: transparent; border: 1px solid #0D0D0D; border-radius: 0; color: #0D0D0D;
+            border: 1px solid rgba(255,255,255,0.2); border-radius: 0; color: var(--black);
         }
         .btn-outline-dark:hover {
-            background: rgba(196,162,101,0.15); border-color: rgba(196,162,101,0.5);
-            color: var(--gold); box-shadow: 0 12px 40px rgba(0,0,0,0.1); transform: translateY(-2px);
+            background: #0D0D0D; color: #fff; border-color: #0D0D0D;
+            color: var(--accent-on-dark); box-shadow: 0 12px 40px rgba(0,0,0,0.1); transform: translateY(-2px);
         }
 
         /* ========== HERO ========== */
@@ -113,17 +114,17 @@
         }
         .service-hero::before {
             content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-            background: radial-gradient(ellipse at 50% 30%, rgba(196,162,101,0.06) 0%, transparent 70%); pointer-events: none;
+            background: radial-gradient(ellipse at 50% 30%, transparent 0%, transparent 70%); pointer-events: none;
         }
         .service-hero::after {
             content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
-            width: 200px; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            width: 200px; height: 1px; background: linear-gradient(90deg, transparent, var(--accent-on-dark), transparent);
         }
         .service-hero-inner {
             max-width: 800px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; text-align: center;
         }
         .service-hero-inner .eyebrow {
-            font-size: 11px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 20px;
+            font-size: 11px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: var(--accent-on-dark); margin-bottom: 20px;
         }
         .service-hero-inner h1 {
             font-size: 48px; font-weight: 300; color: var(--white); line-height: 1.15; margin-bottom: 16px; letter-spacing: 2px; text-transform: uppercase;
@@ -143,10 +144,10 @@
             max-width: 1280px; margin: 0 auto; padding: 0 24px;
         }
         .section-header { text-align: center; margin-bottom: 60px; }
-        .section-header .eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+        .section-header .eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
         .section-header h2 { font-size: 36px; font-weight: 300; color: var(--black); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px; }
         .section-header p { font-size: 15px; color: #888; letter-spacing: 0.3px; }
-        .section-divider { width: 60px; height: 1px; background: var(--gold); margin: 16px auto 0; }
+        .section-divider { width: 60px; height: 1px; background: var(--accent); margin: 16px auto 0; }
 
         .service-grid {
             display: grid;
@@ -165,16 +166,16 @@
             box-shadow: 0 12px 36px rgba(0,0,0,0.08);
         }
         .service-card-icon {
-            width: 64px; height: 64px; border: 1px solid rgba(196,162,101,0.3); border-radius: 50%;
+            width: 64px; height: 64px; border: 1px solid rgba(255,255,255,0.2); border-radius: 0;
             display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;
         }
-        .service-card-icon svg { width: 28px; height: 28px; stroke: var(--gold); fill: none; }
+        .service-card-icon svg { width: 28px; height: 28px; stroke: var(--accent); fill: none; }
         .service-card h3 {
             font-size: 16px; font-weight: 600; color: var(--black); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px;
         }
         .service-card p { font-size: 14px; color: var(--gray-600); line-height: 1.6; margin-bottom: 20px; }
         .service-card .card-link {
-            font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); transition: color 0.3s;
+            font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--accent-on-dark); transition: color 0.3s;
         }
         .service-card .card-link:hover { color: var(--black); }
 
@@ -186,7 +187,7 @@
         }
         .specials-section::before {
             content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
-            width: 200px; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            width: 200px; height: 1px; background: linear-gradient(90deg, transparent, var(--accent-on-dark), transparent);
         }
         .specials-section .container {
             max-width: 1280px; margin: 0 auto; padding: 0 24px;
@@ -198,14 +199,14 @@
             margin-top: 60px;
         }
         .special-card {
-            border: 1px solid rgba(196,162,101,0.15);
+            border: 1px solid rgba(255,255,255,0.1);
             padding: 36px 28px;
             text-align: center;
             transition: border-color 0.3s;
         }
-        .special-card:hover { border-color: rgba(196,162,101,0.4); }
+        .special-card:hover { border-color: rgba(255,255,255,0.3); }
         .special-card .price {
-            font-size: 42px; font-weight: 300; color: var(--gold); letter-spacing: 1px; margin-bottom: 4px;
+            font-size: 42px; font-weight: 300; color: var(--accent-on-dark); letter-spacing: 1px; margin-bottom: 4px;
         }
         .special-card .price sup { font-size: 20px; vertical-align: top; margin-top: 8px; display: inline-block; }
         .special-card h3 {
@@ -213,10 +214,10 @@
         }
         .special-card p { font-size: 13px; color: rgba(255,255,255,0.4); line-height: 1.6; margin-bottom: 20px; }
         .special-card .card-link {
-            font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--gold);
-            border-bottom: 1px solid rgba(196,162,101,0.3); padding-bottom: 2px; transition: border-color 0.3s;
+            font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--accent-on-dark);
+            border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 2px; transition: border-color 0.3s;
         }
-        .special-card .card-link:hover { border-color: var(--gold); }
+        .special-card .card-link:hover { border-color: var(--accent-on-dark); }
 
         /* ========== EXPERIENCE ========== */
         .experience-section {
@@ -237,7 +238,7 @@
             padding: 28px 16px;
         }
         .experience-item .number {
-            font-size: 48px; font-weight: 300; color: var(--gold); letter-spacing: 2px; margin-bottom: 16px; line-height: 1;
+            font-size: 48px; font-weight: 300; color: var(--accent-on-dark); letter-spacing: 2px; margin-bottom: 16px; line-height: 1;
         }
         .experience-item h3 {
             font-size: 13px; font-weight: 600; color: var(--black); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px;
@@ -285,7 +286,7 @@
         .form-group input:focus,
         .form-group select:focus,
         .form-group textarea:focus {
-            border-color: var(--gold);
+            border-color: var(--accent-on-dark);
         }
         .form-group textarea { resize: vertical; min-height: 120px; }
         .form-submit { margin-top: 24px; }
@@ -294,21 +295,21 @@
         /* ========== FOOTER ========== */
         .site-footer {
             background: var(--dark); color: #aaa; padding: 64px 0 0;
-            border-top: 1px solid rgba(196,162,101,0.15);
+            border-top: 1px solid rgba(255,255,255,0.1);
         }
         .site-footer .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
         .footer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,0.08); }
-        .footer-col h4 { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--gold); margin-bottom: 20px; }
+        .footer-col h4 { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--accent-on-dark); margin-bottom: 20px; }
         .footer-col ul { list-style: none; }
         .footer-col li { margin-bottom: 12px; }
         .footer-col a { color: rgba(255,255,255,0.45); font-size: 14px; transition: color 0.3s; letter-spacing: 0.3px; }
-        .footer-col a:hover { color: var(--gold); }
+        .footer-col a:hover { color: var(--accent-on-dark); }
         .footer-bottom { padding: 24px 0; text-align: center; font-size: 12px; color: rgba(255,255,255,0.3); letter-spacing: 0.5px; }
-        .footer-bottom a { color: var(--gold); font-weight: 500; }
+        .footer-bottom a { color: var(--accent-on-dark); font-weight: 500; }
         .footer-bottom a:hover { text-decoration: underline; }
         .footer-family { margin-top: 8px; font-size: 11px; color: rgba(255,255,255,0.2); letter-spacing: 1px; }
         .footer-family a { color: rgba(255,255,255,0.35); }
-        .footer-family a:hover { color: var(--gold); }
+        .footer-family a:hover { color: var(--accent-on-dark); }
 
         /* ========== RESPONSIVE ========== */
         @media (max-width: 1023px) {
@@ -370,7 +371,7 @@
         <h1>The Care Your <strong>Cadillac Deserves</strong></h1>
         <p>Factory-trained technicians. Genuine GM parts. A premium service experience from arrival to departure.</p>
         <div class="hero-ctas">
-            <a href="#schedule" class="btn btn-gold">Schedule Service</a>
+            <a href="#schedule" class="btn btn-outline">Schedule Service</a>
             <a href="tel:4198428800" class="btn btn-outline">Call Service Center</a>
         </div>
     </div>
@@ -457,7 +458,7 @@
 <section class="specials-section" id="specials">
     <div class="container">
         <div class="section-header">
-            <div class="eyebrow" style="color:var(--gold);">Limited Time</div>
+            <div class="eyebrow" style="color:var(--accent);">Limited Time</div>
             <h2 style="color:#fff;">Service Offers</h2>
             <p style="color:rgba(255,255,255,0.4);">Take advantage of our current service specials.</p>
             <div class="section-divider"></div>

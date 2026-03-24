@@ -45,11 +45,11 @@
 
     .section-label {
       font-family: var(--font-body);
-      font-size: 11px;
+      font-size: 0.75rem;
       font-weight: 500;
       text-transform: uppercase;
       letter-spacing: 6px;
-      color: var(--genesis-copper);
+      color: rgba(255,255,255,0.4);
       margin-bottom: 16px;
     }
 
@@ -65,7 +65,7 @@
     .divider {
       width: 60px;
       height: 1px;
-      background: var(--genesis-copper);
+      background: rgba(255,255,255,0.3);
       margin: 24px 0;
     }
 
@@ -104,7 +104,7 @@
       font-size: 12px;
     }
 
-    .top-bar-phones a:hover { color: var(--genesis-copper); }
+    .top-bar-phones a:hover { color: #FFFFFF; }
 
     .top-bar-phones span {
       color: rgba(255,255,255,0.4);
@@ -124,7 +124,7 @@
       transition: color 0.3s;
     }
 
-    .top-bar-address a:hover { color: var(--genesis-copper); }
+    .top-bar-address a:hover { color: #FFFFFF; }
 
     /* ========== HEADER ========== */
     .site-header {
@@ -183,12 +183,12 @@
     }
 
     .header-nav a:hover {
-      color: var(--genesis-copper);
+      color: #FFFFFF;
     }
 
     /* ========== HERO ========== */
     .hero {
-      background: linear-gradient(rgba(17,17,17,0.78), rgba(17,17,17,0.88)), url('https://s7d1.scene7.com/is/image/hyundai/2026-gv80suv-35t-pst-awd-storrgreenmatte-smokeygreenvanillabeige-profiledrvr-studio-1');
+      background: linear-gradient(180deg, rgb(54, 98, 108) 0%, rgb(31, 78, 84) 100%);
       background-size: cover;
       background-position: center;
       padding: 120px 0 140px;
@@ -204,7 +204,8 @@
       content: '';
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: radial-gradient(ellipse at 50% 30%, rgba(184,115,51,0.06) 0%, transparent 60%);
+      background: url('https://s7d1.scene7.com/is/image/hyundai/2026-gv80suv-35t-pst-awd-storrgreenmatte-smokeygreenvanillabeige-profiledrvr-studio-1') center/cover no-repeat;
+      opacity: 0.25;
       pointer-events: none;
     }
 
@@ -213,7 +214,7 @@
       position: absolute;
       bottom: 0; left: 0; right: 0;
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(184,115,51,0.3), transparent);
+      background: rgba(255,255,255,0.08);
     }
 
     .hero .container {
@@ -224,11 +225,11 @@
 
     .hero-label {
       font-family: var(--font-body);
-      font-size: 11px;
-      font-weight: 400;
+      font-size: 0.75rem;
+      font-weight: 500;
       text-transform: uppercase;
-      letter-spacing: 8px;
-      color: var(--genesis-copper);
+      letter-spacing: 6px;
+      color: rgba(255,255,255,0.6);
       margin-bottom: 32px;
       opacity: 0;
       animation: fadeUp 1s 0.2s forwards;
@@ -273,93 +274,115 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* ========== GLASS BUTTONS ========== */
+    /* ========== BUTTONS (per Genesis guide: solid, no glassmorphism) ========== */
     .btn, .btn-glass {
       display: inline-block;
-      background: rgba(255,255,255,0.05);
-      backdrop-filter: blur(24px);
-      -webkit-backdrop-filter: blur(24px);
-      border: 1px solid rgba(184,115,51,0.25);
+      background: transparent;
+      border: 1px solid #FFFFFF;
       border-radius: 0;
-      color: #fff;
-      padding: 18px 40px;
+      color: #FFFFFF;
+      padding: 16px 40px;
       font-family: var(--font-body);
-      font-size: 12px;
-      font-weight: 400;
+      font-size: 0.8rem;
+      font-weight: 500;
       letter-spacing: 3px;
       text-transform: uppercase;
       cursor: pointer;
-      transition: all 0.5s ease;
+      transition: all 0.3s ease;
+      text-decoration: none;
     }
 
     .btn:hover, .btn-glass:hover {
-      background: rgba(184,115,51,0.12);
-      border-color: rgba(184,115,51,0.45);
-      box-shadow: 0 16px 48px rgba(0,0,0,0.3);
-      transform: translateY(-2px);
+      background: #FFFFFF;
+      color: #000000;
     }
 
-    .btn-primary, .btn-glass-copper {
-      background: rgba(184,115,51,0.12);
-      backdrop-filter: blur(24px);
-      -webkit-backdrop-filter: blur(24px);
-      border: 1px solid rgba(184,115,51,0.4);
+    /* Primary: white filled on dark, black filled on light */
+    .btn-primary {
+      background: #FFFFFF;
+      color: #000000;
+      border: 1px solid #FFFFFF;
       border-radius: 0;
-      color: #B87333;
-      padding: 18px 40px;
-      font-size: 12px;
-      font-weight: 400;
+      padding: 16px 40px;
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      font-weight: 500;
       letter-spacing: 3px;
       text-transform: uppercase;
-      transition: all 0.5s ease;
+      transition: all 0.3s ease;
     }
 
-    .btn-primary:hover, .btn-glass-copper:hover {
-      background: rgba(184,115,51,0.25);
-      color: #fff;
-      transform: translateY(-2px);
+    .btn-primary:hover {
+      background: transparent;
+      color: #FFFFFF;
     }
 
+    /* Secondary: white outlined on dark */
     .btn-outline {
-      background: rgba(255,255,255,0.05);
-      backdrop-filter: blur(24px);
-      -webkit-backdrop-filter: blur(24px);
-      border: 1px solid rgba(184,115,51,0.25);
+      background: transparent;
+      border: 1px solid #FFFFFF;
       border-radius: 0;
-      color: #fff;
-      padding: 18px 40px;
-      font-size: 12px;
-      font-weight: 400;
+      color: #FFFFFF;
+      padding: 16px 40px;
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      font-weight: 500;
       letter-spacing: 3px;
       text-transform: uppercase;
-      transition: all 0.5s ease;
+      transition: all 0.3s ease;
     }
 
     .btn-outline:hover {
-      background: rgba(184,115,51,0.12);
-      border-color: rgba(184,115,51,0.45);
-      box-shadow: 0 16px 48px rgba(0,0,0,0.3);
-      transform: translateY(-2px);
+      background: #FFFFFF;
+      color: #000000;
     }
 
-    /* ========== MODEL SHOWCASE ========== */
+    /* Dark section buttons for light backgrounds */
+    .btn-primary--dark {
+      background: #000000;
+      color: #FFFFFF;
+      border: 1px solid #000000;
+      border-radius: 0;
+      padding: 16px 40px;
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+      display: inline-block;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .btn-primary--dark:hover {
+      background: transparent;
+      color: #000000;
+    }
+
+    /* ========== MODEL SHOWCASE (white/light section) ========== */
     .model-showcase {
       padding: 120px 0;
-      background: var(--genesis-dark2);
+      background: #FFFFFF;
+      color: #111111;
       position: relative;
-    }
-
-    .model-showcase::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
     }
 
     .model-showcase .section-header {
       text-align: center;
       margin-bottom: 72px;
+    }
+
+    .model-showcase .section-label {
+      color: #8A8A8A;
+    }
+
+    .model-showcase .section-title {
+      color: #111111;
+    }
+
+    .model-showcase .divider {
+      background: #111111;
     }
 
     .model-grid {
@@ -371,7 +394,7 @@
     .model-card {
       position: relative;
       overflow: hidden;
-      background: var(--genesis-black);
+      background: #F5F5F5;
       display: block;
       aspect-ratio: 3/2;
       cursor: pointer;
@@ -416,11 +439,11 @@
 
     .model-card-type {
       font-family: var(--font-body);
-      font-size: 11px;
-      font-weight: 400;
-      letter-spacing: 3px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 6px;
       text-transform: uppercase;
-      color: var(--genesis-copper);
+      color: rgba(255,255,255,0.6);
     }
 
     .model-card-arrow {
@@ -439,10 +462,10 @@
       transform: translateX(0);
     }
 
-    /* ========== EXPERIENCE SECTION ========== */
+    /* ========== EXPERIENCE SECTION (dark teal) ========== */
     .experience {
       padding: 120px 0;
-      background: var(--genesis-black);
+      background: linear-gradient(180deg, rgb(54, 98, 108) 0%, rgb(31, 78, 84) 100%);
       position: relative;
     }
 
@@ -470,18 +493,18 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 1px;
-      background: rgba(255,255,255,0.06);
+      background: rgba(255,255,255,0.1);
     }
 
     .experience-card {
-      background: var(--genesis-black);
+      background: rgba(255,255,255,0.05);
       padding: 56px 40px;
       text-align: center;
       transition: background 0.4s;
     }
 
     .experience-card:hover {
-      background: var(--genesis-dark2);
+      background: rgba(255,255,255,0.1);
     }
 
     .experience-icon {
@@ -494,7 +517,7 @@
     .experience-icon svg {
       width: 100%;
       height: 100%;
-      stroke: var(--genesis-copper);
+      stroke: #FFFFFF;
       fill: none;
       stroke-width: 1;
     }
@@ -516,20 +539,13 @@
       line-height: 1.7;
     }
 
-    /* ========== GENESIS AT YOUR DOOR ========== */
+    /* ========== GENESIS AT YOUR DOOR (light section) ========== */
     .at-your-door {
       padding: 100px 0;
-      background: var(--genesis-dark2);
+      background: #FFFFFF;
+      color: #111111;
       position: relative;
       overflow: hidden;
-    }
-
-    .at-your-door::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(184,115,51,0.2), transparent);
     }
 
     .ayd-inner {
@@ -539,25 +555,33 @@
       align-items: center;
     }
 
-    .ayd-content .section-label { margin-bottom: 12px; }
+    .ayd-content .section-label {
+      margin-bottom: 12px;
+      color: #8A8A8A;
+    }
 
     .ayd-content .section-title {
       font-size: 40px;
       margin-bottom: 24px;
+      color: #111111;
+    }
+
+    .ayd-content .divider {
+      background: #111111;
     }
 
     .ayd-content p {
       font-family: var(--font-body);
       font-size: 15px;
       font-weight: 300;
-      color: rgba(255,255,255,0.5);
+      color: #555555;
       line-height: 1.8;
       margin-bottom: 40px;
     }
 
     .ayd-image {
       aspect-ratio: 4/3;
-      background: var(--genesis-black);
+      background: #F5F5F5;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -569,13 +593,6 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-    }
-
-    .ayd-image::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      border: 1px solid rgba(184,115,51,0.15);
     }
 
     /* ========== FOOTER ========== */
@@ -618,19 +635,23 @@
     }
 
     .footer-brand .footer-group a {
-      color: var(--genesis-copper);
-      transition: opacity 0.3s;
+      color: rgba(255,255,255,0.5);
+      transition: color 0.3s;
+    }
+
+    .footer-brand .footer-group a:hover {
+      color: #FFFFFF;
     }
 
     .footer-brand .footer-group a:hover { opacity: 0.7; }
 
     .footer-col h4 {
       font-family: var(--font-body);
-      font-size: 10px;
+      font-size: 0.75rem;
       font-weight: 500;
       text-transform: uppercase;
-      letter-spacing: 4px;
-      color: var(--genesis-copper);
+      letter-spacing: 6px;
+      color: #FFFFFF;
       margin-bottom: 24px;
     }
 
@@ -657,12 +678,12 @@
     }
 
     .footer-bottom a {
-      color: var(--genesis-copper);
+      color: rgba(255,255,255,0.5);
       font-weight: 400;
-      transition: opacity 0.3s;
+      transition: color 0.3s;
     }
 
-    .footer-bottom a:hover { opacity: 0.7; }
+    .footer-bottom a:hover { color: #FFFFFF; }
 
     .footer-cities {
       margin-top: 8px;
@@ -842,7 +863,7 @@
             <div class="model-card-name">G70</div>
             <div class="model-card-type">Sport Sedan</div>
           </div>
-          <svg class="model-card-arrow" viewBox="0 0 24 24" fill="none" stroke="#B87333" stroke-width="1"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          <svg class="model-card-arrow" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
 
         <a href="/demo/taylor-genesis/inventory?model=G80" class="model-card">
@@ -853,7 +874,7 @@
             <div class="model-card-name">G80</div>
             <div class="model-card-type">Luxury Sedan</div>
           </div>
-          <svg class="model-card-arrow" viewBox="0 0 24 24" fill="none" stroke="#B87333" stroke-width="1"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          <svg class="model-card-arrow" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
 
         <a href="/demo/taylor-genesis/inventory?model=G90" class="model-card">
@@ -864,7 +885,7 @@
             <div class="model-card-name">G90</div>
             <div class="model-card-type">Flagship Sedan</div>
           </div>
-          <svg class="model-card-arrow" viewBox="0 0 24 24" fill="none" stroke="#B87333" stroke-width="1"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          <svg class="model-card-arrow" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
 
         <a href="/demo/taylor-genesis/inventory?model=GV60" class="model-card">
@@ -875,7 +896,7 @@
             <div class="model-card-name">GV60</div>
             <div class="model-card-type">Electric Crossover</div>
           </div>
-          <svg class="model-card-arrow" viewBox="0 0 24 24" fill="none" stroke="#B87333" stroke-width="1"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          <svg class="model-card-arrow" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
 
         <a href="/demo/taylor-genesis/inventory?model=GV70" class="model-card">
@@ -886,7 +907,7 @@
             <div class="model-card-name">GV70</div>
             <div class="model-card-type">Luxury SUV</div>
           </div>
-          <svg class="model-card-arrow" viewBox="0 0 24 24" fill="none" stroke="#B87333" stroke-width="1"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          <svg class="model-card-arrow" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
 
         <a href="/demo/taylor-genesis/inventory?model=GV80" class="model-card">
@@ -897,7 +918,7 @@
             <div class="model-card-name">GV80</div>
             <div class="model-card-type">Flagship SUV</div>
           </div>
-          <svg class="model-card-arrow" viewBox="0 0 24 24" fill="none" stroke="#B87333" stroke-width="1"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          <svg class="model-card-arrow" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
 
         <a href="/demo/taylor-genesis/inventory?model=GV80+Coupe" class="model-card">
@@ -908,7 +929,7 @@
             <div class="model-card-name">GV80 Coupe</div>
             <div class="model-card-type">Luxury Coupe SUV</div>
           </div>
-          <svg class="model-card-arrow" viewBox="0 0 24 24" fill="none" stroke="#B87333" stroke-width="1"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          <svg class="model-card-arrow" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
 
         <a href="/demo/taylor-genesis/inventory?model=Electrified+GV70" class="model-card">
@@ -919,7 +940,7 @@
             <div class="model-card-name">Electrified GV70</div>
             <div class="model-card-type">Electric SUV</div>
           </div>
-          <svg class="model-card-arrow" viewBox="0 0 24 24" fill="none" stroke="#B87333" stroke-width="1"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          <svg class="model-card-arrow" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
 
         <a href="/demo/taylor-genesis/inventory?model=Electrified+G80" class="model-card">
@@ -930,7 +951,7 @@
             <div class="model-card-name">Electrified G80</div>
             <div class="model-card-type">Electric Sedan</div>
           </div>
-          <svg class="model-card-arrow" viewBox="0 0 24 24" fill="none" stroke="#B87333" stroke-width="1"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          <svg class="model-card-arrow" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
       </div>
     </div>
@@ -1023,7 +1044,7 @@
           <h2 class="section-title">Genesis at Your Door</h2>
           <div class="divider"></div>
           <p>The luxury experience should never require compromise. With Genesis at Your Door, we bring the entire purchase experience to you -- from test drives to final delivery. No showroom visit required.</p>
-          <a href="/demo/taylor-genesis/contact" class="btn btn-primary">Schedule Your Experience</a>
+          <a href="/demo/taylor-genesis/contact" class="btn btn-primary--dark">Schedule Your Experience</a>
         </div>
         <div class="ayd-image">
           <img src="https://s7d1.scene7.com/is/image/hyundai/2026-gv80suv-35t-pst-awd-storrgreenmatte-smokeygreenvanillabeige-profiledrvr-studio-1:16-9?wid=800&hei=600&fmt=webp" alt="Genesis At Your Door Service" loading="lazy">

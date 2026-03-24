@@ -15,12 +15,25 @@
       box-sizing: border-box;
     }
 
+    :root {
+      --bg-primary: #FFFFFF;
+      --bg-secondary: #F5F5F5;
+      --text-primary: #0D0D0D;
+      --text-secondary: #71747D;
+      --border-color: #E0E0E0;
+      --bg-dark: #000000;
+      --bg-dark-secondary: #1E1C1D;
+      --text-on-dark: #FFFFFF;
+      --text-on-dark-secondary: #A0A0A0;
+      --font-primary: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
     body {
-      font-family: 'DM Sans', sans-serif;
-      color: #333;
+      font-family: var(--font-primary);
+      color: var(--text-primary);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
-      background: #FFFFFF;
+      background: var(--bg-primary);
     }
 
     a {
@@ -39,11 +52,11 @@
       color: #fff;
       padding: 10px 0;
       font-size: 13px;
-      border-bottom: 1px solid rgba(196,162,101,0.2);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
     }
 
     .top-bar .container {
-      max-width: 1280px;
+      max-width: 1400px;
       margin: 0 auto;
       padding: 0 24px;
       display: flex;
@@ -67,11 +80,11 @@
     }
 
     .top-bar-phones a:hover {
-      color: #C4A265;
+      color: rgba(255,255,255,0.7);
     }
 
     .top-bar-phones span {
-      color: #C4A265;
+      color: rgba(255,255,255,0.5);
       margin-right: 6px;
       font-weight: 400;
       text-transform: uppercase;
@@ -90,21 +103,21 @@
     }
 
     .top-bar-address a:hover {
-      color: #C4A265;
+      color: #fff;
     }
 
     /* ========== HEADER ========== */
     .site-header {
-      background: #1A1A1A;
+      background: var(--bg-dark);
       padding: 18px 0;
       position: sticky;
       top: 0;
       z-index: 100;
-      border-bottom: 1px solid rgba(196,162,101,0.15);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
     }
 
     .site-header .container {
-      max-width: 1280px;
+      max-width: 1400px;
       margin: 0 auto;
       padding: 0 24px;
       display: flex;
@@ -138,7 +151,7 @@
       font-size: 10px;
       font-weight: 400;
       letter-spacing: 2px;
-      color: #C4A265;
+      color: rgba(255,255,255,0.5);
       margin-top: 2px;
     }
 
@@ -155,18 +168,17 @@
       padding: 10px 16px;
       letter-spacing: 1.5px;
       text-transform: uppercase;
-      transition: color 0.3s, background 0.3s;
-      border-radius: 2px;
+      transition: color 0.3s;
+      border-radius: 0;
     }
 
     .header-nav a:hover {
-      color: #C4A265;
-      background: rgba(196,162,101,0.08);
+      color: #FFFFFF;
     }
 
-    /* ========== HERO ========== */
+    /* ========== HERO (DARK - vehicle spotlight) ========== */
     .hero {
-      background: linear-gradient(rgba(26,26,26,0.80), rgba(26,26,26,0.88)), url('https://www.cadillac.com/content/dam/cadillac/na/us/english/index/vehicles/2026/suvs/escalade-mcm/gallery/my25-escalade-gallery-exterior-grid-front.jpg?imwidth=1920');
+      background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), url('https://www.cadillac.com/content/dam/cadillac/na/us/english/index/vehicles/2026/suvs/escalade-mcm/gallery/my25-escalade-gallery-exterior-grid-front.jpg?imwidth=1920');
       background-size: cover;
       background-position: center;
       padding: 120px 0 100px;
@@ -174,28 +186,6 @@
       color: #fff;
       position: relative;
       overflow: hidden;
-    }
-
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: radial-gradient(ellipse at 50% 30%, rgba(196,162,101,0.08) 0%, transparent 70%);
-      pointer-events: none;
-    }
-
-    .hero::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 200px;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, #C4A265, transparent);
     }
 
     .hero .container {
@@ -211,7 +201,7 @@
       font-weight: 500;
       letter-spacing: 4px;
       text-transform: uppercase;
-      color: #C4A265;
+      color: rgba(255,255,255,0.6);
       margin-bottom: 24px;
     }
 
@@ -240,78 +230,107 @@
 
     .hero-ctas {
       display: flex;
-      gap: 16px;
+      gap: 24px;
       justify-content: center;
       flex-wrap: wrap;
+      align-items: center;
     }
 
-    .btn {
+    /* CTA: text link with arrow (primary) */
+    .cta-link {
+      color: #FFFFFF;
+      font-family: var(--font-primary);
+      font-weight: 500;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: none;
+      background: none;
+      padding: 12px 0;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+
+    .cta-link:hover {
+      opacity: 0.8;
+    }
+
+    .cta-link .arrow {
       display: inline-block;
-      padding: 16px 36px;
-      font-size: 12px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s;
-      font-family: inherit;
-      border: 1px solid transparent;
-      text-align: center;
-      letter-spacing: 2px;
-      text-transform: uppercase;
+      width: 20px;
+      height: 20px;
+      transition: transform 0.2s ease;
     }
 
-    .btn-gold, .btn-glass-gold {
-      background: rgba(196,162,101,0.15);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border: 1px solid rgba(196,162,101,0.4);
-      border-radius: 14px;
-      color: #C4A265;
-      padding: 16px 36px;
-      font-size: 14px;
+    .cta-link:hover .arrow {
+      transform: translateX(4px);
+    }
+
+    /* CTA on light backgrounds */
+    .cta-link-dark {
+      color: var(--text-primary);
+    }
+
+    .cta-link-dark:hover {
+      opacity: 0.7;
+    }
+
+    /* CTA: outlined button (secondary) */
+    .cta-button-outline {
+      color: #FFFFFF;
+      background: transparent;
+      border: 1px solid #FFFFFF;
+      padding: 12px 28px;
+      font-family: var(--font-primary);
       font-weight: 500;
-      letter-spacing: 1.5px;
+      font-size: 13px;
       text-transform: uppercase;
-      transition: all 0.4s ease;
-    }
-
-    .btn-gold:hover, .btn-glass-gold:hover {
-      background: rgba(196,162,101,0.25);
-      color: #fff;
-      box-shadow: 0 12px 40px rgba(196,162,101,0.2);
-      transform: translateY(-2px);
-    }
-
-    .btn-outline, .btn-glass {
-      background: rgba(255,255,255,0.08);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border: 1px solid rgba(196,162,101,0.3);
-      border-radius: 14px;
-      color: #fff;
-      padding: 16px 36px;
-      font-size: 14px;
-      font-weight: 500;
       letter-spacing: 1.5px;
-      text-transform: uppercase;
-      transition: all 0.4s ease;
+      border-radius: 0;
       cursor: pointer;
+      transition: background 0.2s ease, color 0.2s ease;
+      display: inline-block;
     }
 
-    .btn-outline:hover, .btn-glass:hover {
-      background: rgba(196,162,101,0.15);
-      border-color: rgba(196,162,101,0.5);
-      box-shadow: 0 12px 40px rgba(0,0,0,0.2), inset 0 1px 0 rgba(196,162,101,0.2);
-      transform: translateY(-2px);
+    .cta-button-outline:hover {
+      background: #FFFFFF;
+      color: #000000;
     }
 
-    /* ========== MODEL LINEUP ========== */
+    /* CTA: outlined button on light backgrounds */
+    .cta-button-outline-dark {
+      color: var(--text-primary);
+      background: transparent;
+      border: 1px solid var(--text-primary);
+      padding: 12px 28px;
+      font-family: var(--font-primary);
+      font-weight: 500;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      border-radius: 0;
+      cursor: pointer;
+      transition: background 0.2s ease, color 0.2s ease;
+      display: inline-block;
+    }
+
+    .cta-button-outline-dark:hover {
+      background: var(--text-primary);
+      color: #FFFFFF;
+    }
+
+    /* ========== MODEL LINEUP (LIGHT) ========== */
     .model-lineup {
       padding: 100px 0;
-      background: #F5F5F5;
+      background: var(--bg-primary);
     }
 
     .model-lineup .container {
-      max-width: 1280px;
+      max-width: 1400px;
       margin: 0 auto;
       padding: 0 24px;
     }
@@ -326,14 +345,14 @@
       font-weight: 600;
       letter-spacing: 4px;
       text-transform: uppercase;
-      color: #C4A265;
+      color: var(--text-secondary);
       margin-bottom: 12px;
     }
 
     .section-header h2 {
       font-size: 36px;
       font-weight: 300;
-      color: #1A1A1A;
+      color: var(--text-primary);
       letter-spacing: 3px;
       text-transform: uppercase;
       margin-bottom: 12px;
@@ -341,14 +360,14 @@
 
     .section-header p {
       font-size: 15px;
-      color: #888;
+      color: var(--text-secondary);
       letter-spacing: 0.3px;
     }
 
     .section-divider {
       width: 60px;
       height: 1px;
-      background: #C4A265;
+      background: var(--text-primary);
       margin: 16px auto 0;
     }
 
@@ -365,7 +384,8 @@
       text-decoration: none;
       color: inherit;
       display: block;
-      border: 1px solid rgba(0,0,0,0.06);
+      border: 1px solid var(--border-color);
+      border-radius: 0;
     }
 
     .model-card:hover {
@@ -374,7 +394,7 @@
     }
 
     .model-card-image {
-      background: #1A1A1A;
+      background: var(--bg-secondary);
       padding: 24px;
       display: flex;
       align-items: center;
@@ -382,16 +402,6 @@
       height: 200px;
       position: relative;
       overflow: hidden;
-    }
-
-    .model-card-image::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(196,162,101,0.3), transparent);
     }
 
     .model-card-image img {
@@ -416,46 +426,35 @@
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 2px;
-      color: #C4A265;
+      color: var(--text-secondary);
       margin-bottom: 4px;
     }
 
     .model-card-name {
       font-size: 17px;
       font-weight: 600;
-      color: #1A1A1A;
+      color: var(--text-primary);
       letter-spacing: 1px;
       text-transform: uppercase;
     }
 
     .model-card-starting {
       font-size: 12px;
-      color: #999;
+      color: var(--text-secondary);
       margin-top: 6px;
       letter-spacing: 0.5px;
     }
 
-    /* ========== EXPERIENCE SECTION ========== */
+    /* ========== EXPERIENCE SECTION (DARK - vehicle showcase area) ========== */
     .experience-section {
       padding: 100px 0;
-      background: #1A1A1A;
+      background: var(--bg-dark);
       color: #fff;
       position: relative;
     }
 
-    .experience-section::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 200px;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, #C4A265, transparent);
-    }
-
     .experience-section .container {
-      max-width: 1280px;
+      max-width: 1400px;
       margin: 0 auto;
       padding: 0 24px;
     }
@@ -470,19 +469,20 @@
     .experience-card {
       text-align: center;
       padding: 32px 20px;
-      border: 1px solid rgba(196,162,101,0.1);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 0;
       transition: border-color 0.3s;
     }
 
     .experience-card:hover {
-      border-color: rgba(196,162,101,0.3);
+      border-color: rgba(255,255,255,0.3);
     }
 
     .experience-icon {
       width: 64px;
       height: 64px;
-      border: 1px solid rgba(196,162,101,0.3);
-      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 0;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -492,7 +492,7 @@
     .experience-icon svg {
       width: 26px;
       height: 26px;
-      stroke: #C4A265;
+      stroke: #FFFFFF;
       fill: none;
     }
 
@@ -511,27 +511,13 @@
       line-height: 1.6;
     }
 
-    /* ========== CTA BANNER ========== */
+    /* ========== CTA BANNER (LIGHT) ========== */
     .cta-banner {
       padding: 80px 0;
-      background: linear-gradient(135deg, #0D0D0D 0%, #1A1A1A 100%);
+      background: var(--bg-secondary);
       text-align: center;
       position: relative;
     }
-
-    .cta-banner::before,
-    .cta-banner::after {
-      content: '';
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 200px;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, #C4A265, transparent);
-    }
-
-    .cta-banner::before { top: 0; }
-    .cta-banner::after { bottom: 0; }
 
     .cta-banner .container {
       max-width: 700px;
@@ -542,7 +528,7 @@
     .cta-banner h2 {
       font-size: 32px;
       font-weight: 300;
-      color: #fff;
+      color: var(--text-primary);
       letter-spacing: 2px;
       text-transform: uppercase;
       margin-bottom: 16px;
@@ -550,28 +536,114 @@
 
     .cta-banner p {
       font-size: 15px;
-      color: rgba(255,255,255,0.5);
+      color: var(--text-secondary);
       margin-bottom: 36px;
       letter-spacing: 0.3px;
     }
 
     .cta-banner .hero-ctas {
       display: flex;
-      gap: 16px;
+      gap: 24px;
       justify-content: center;
       flex-wrap: wrap;
+      align-items: center;
     }
 
-    /* ========== FOOTER ========== */
+    /* ========== REVIEWS (LIGHT) ========== */
+    .reviews-section {
+      padding: 100px 0;
+      background: var(--bg-primary);
+    }
+
+    .reviews-section .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .reviews-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin-top: 20px;
+    }
+
+    .reviews-grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+      margin-top: 32px;
+    }
+
+    .review-card {
+      background: #fff;
+      border: 1px solid var(--border-color);
+      padding: 36px 32px;
+      border-radius: 0;
+    }
+
+    .review-stars {
+      display: flex;
+      gap: 3px;
+      margin-bottom: 16px;
+    }
+
+    .review-stars span {
+      color: var(--text-primary);
+      font-size: 18px;
+    }
+
+    .review-stars span.dim {
+      color: #ccc;
+    }
+
+    .review-card p {
+      font-size: 15px;
+      color: #555;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .review-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .review-avatar {
+      width: 40px;
+      height: 40px;
+      background: var(--text-primary);
+      border-radius: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FFFFFF;
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    .review-name {
+      font-weight: 600;
+      color: var(--text-primary);
+      font-size: 14px;
+    }
+
+    .review-vehicle {
+      font-size: 12px;
+      color: var(--text-secondary);
+    }
+
+    /* ========== FOOTER (DARK) ========== */
     .site-footer {
-      background: #0D0D0D;
+      background: var(--bg-dark-secondary);
       color: #aaa;
       padding: 64px 0 0;
-      border-top: 1px solid rgba(196,162,101,0.15);
+      border-top: 1px solid rgba(255,255,255,0.08);
     }
 
     .site-footer .container {
-      max-width: 1280px;
+      max-width: 1400px;
       margin: 0 auto;
       padding: 0 24px;
     }
@@ -589,7 +661,7 @@
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 2px;
-      color: #C4A265;
+      color: #FFFFFF;
       margin-bottom: 20px;
     }
 
@@ -609,7 +681,7 @@
     }
 
     .footer-col a:hover {
-      color: #C4A265;
+      color: #FFFFFF;
     }
 
     .footer-bottom {
@@ -621,12 +693,13 @@
     }
 
     .footer-bottom a {
-      color: #C4A265;
+      color: rgba(255,255,255,0.5);
       font-weight: 500;
     }
 
     .footer-bottom a:hover {
       text-decoration: underline;
+      color: #FFFFFF;
     }
 
     .footer-family {
@@ -641,7 +714,7 @@
     }
 
     .footer-family a:hover {
-      color: #C4A265;
+      color: #FFFFFF;
     }
 
     /* ========== RESPONSIVE ========== */
@@ -669,6 +742,14 @@
 
       .footer-grid {
         grid-template-columns: repeat(2, 1fr);
+      }
+
+      .reviews-grid-3 {
+        grid-template-columns: 1fr;
+      }
+
+      .reviews-grid-2 {
+        grid-template-columns: 1fr;
       }
     }
 
@@ -805,7 +886,7 @@
     </div>
   </header>
 
-  <!-- ==================== HERO ==================== -->
+  <!-- ==================== HERO (Dark - vehicle spotlight) ==================== -->
   <section class="hero">
     <div class="container">
       <div class="hero-eyebrow">The New Standard of Luxury</div>
@@ -815,13 +896,13 @@
       </h1>
       <p>Discover the complete Cadillac lineup at Taylor Cadillac. From the all-electric LYRIQ to the legendary Escalade, experience luxury redefined in Toledo.</p>
       <div class="hero-ctas">
-        <a href="/demo/taylor-cadillac/inventory" class="btn btn-gold">Explore Inventory</a>
-        <a href="/demo/taylor-cadillac/service" class="btn btn-outline">Schedule Service</a>
+        <a href="/demo/taylor-cadillac/inventory" class="cta-link">Explore Inventory <svg class="arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="10" x2="16" y2="10"/><polyline points="11 5 16 10 11 15"/></svg></a>
+        <a href="/demo/taylor-cadillac/service" class="cta-button-outline">Schedule Service</a>
       </div>
     </div>
   </section>
 
-  <!-- ==================== MODEL LINEUP ==================== -->
+  <!-- ==================== MODEL LINEUP (Light) ==================== -->
   <section class="model-lineup">
     <div class="container">
       <div class="section-header">
@@ -923,14 +1004,14 @@
     </div>
   </section>
 
-  <!-- ==================== THE TAYLOR CADILLAC EXPERIENCE ==================== -->
+  <!-- ==================== THE TAYLOR CADILLAC EXPERIENCE (Dark) ==================== -->
   <section class="experience-section">
     <div class="container">
       <div class="section-header">
-        <div class="eyebrow">Why Taylor Cadillac</div>
+        <div class="eyebrow" style="color:rgba(255,255,255,0.5);">Why Taylor Cadillac</div>
         <h2 style="color:#fff;">The Taylor Experience</h2>
         <p style="color:rgba(255,255,255,0.45);">Luxury isn't just what you drive. It's how you're treated.</p>
-        <div class="section-divider"></div>
+        <div class="section-divider" style="background:rgba(255,255,255,0.3);"></div>
       </div>
       <div class="experience-grid">
         <div class="experience-card">
@@ -975,78 +1056,78 @@
     </div>
   </section>
 
-  <!-- ==================== CTA BANNER ==================== -->
+  <!-- ==================== CTA BANNER (Light) ==================== -->
   <section class="cta-banner">
     <div class="container">
       <h2>Begin Your Cadillac Journey</h2>
       <p>Schedule a private showing or explore our full inventory online. The Cadillac experience awaits.</p>
       <div class="hero-ctas">
-        <a href="/demo/taylor-cadillac/inventory" class="btn btn-gold">View Inventory</a>
-        <a href="/demo/taylor-cadillac/contact" class="btn btn-outline">Contact Us</a>
+        <a href="/demo/taylor-cadillac/inventory" class="cta-link-dark cta-link">View Inventory <svg class="arrow" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="10" x2="16" y2="10"/><polyline points="11 5 16 10 11 15"/></svg></a>
+        <a href="/demo/taylor-cadillac/contact" class="cta-button-outline-dark">Contact Us</a>
       </div>
     </div>
   </section>
 
-  <!-- ==================== GOOGLE REVIEWS ==================== -->
-  <section class="reviews-section" style="padding:100px 0;background:#F5F5F5;">
-    <div class="container" style="max-width:1280px;margin:0 auto;padding:0 24px;">
+  <!-- ==================== GOOGLE REVIEWS (Light) ==================== -->
+  <section class="reviews-section">
+    <div class="container">
       <div class="section-header">
         <div class="eyebrow">Client Testimonials</div>
         <h2>What Our Clients Say</h2>
         <p>Rated 4.8 out of 5 stars on Google Reviews</p>
         <div class="section-divider"></div>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:20px;">
-        <div style="background:#fff;border:1px solid rgba(0,0,0,0.06);padding:36px 32px;position:relative;">
-          <div style="display:flex;gap:3px;margin-bottom:16px;">
-            <span style="color:#C4A265;font-size:18px;">&#9733;</span><span style="color:#C4A265;font-size:18px;">&#9733;</span><span style="color:#C4A265;font-size:18px;">&#9733;</span><span style="color:#C4A265;font-size:18px;">&#9733;</span><span style="color:#C4A265;font-size:18px;">&#9733;</span>
+      <div class="reviews-grid-3">
+        <div class="review-card">
+          <div class="review-stars">
+            <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
           </div>
-          <p style="font-size:15px;color:#555;line-height:1.7;margin-bottom:20px;">"Purchased my Escalade from Taylor Cadillac and the experience was absolutely first-class. The team made everything seamless from test drive to delivery. The white-glove treatment is real."</p>
-          <div style="display:flex;align-items:center;gap:12px;">
-            <div style="width:40px;height:40px;background:#1A1A1A;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#C4A265;font-weight:700;font-size:15px;">M</div>
-            <div><div style="font-weight:600;color:#1A1A1A;font-size:14px;">Michael R.</div><div style="font-size:12px;color:#999;">2025 Escalade Premium Luxury</div></div>
-          </div>
-        </div>
-        <div style="background:#fff;border:1px solid rgba(0,0,0,0.06);padding:36px 32px;position:relative;">
-          <div style="display:flex;gap:3px;margin-bottom:16px;">
-            <span style="color:#C4A265;font-size:18px;">&#9733;</span><span style="color:#C4A265;font-size:18px;">&#9733;</span><span style="color:#C4A265;font-size:18px;">&#9733;</span><span style="color:#C4A265;font-size:18px;">&#9733;</span><span style="color:#C4A265;font-size:18px;">&#9733;</span>
-          </div>
-          <p style="font-size:15px;color:#555;line-height:1.7;margin-bottom:20px;">"We love our LYRIQ! The technology is incredible and the range has been better than expected. Taylor Cadillac walked us through every feature during delivery. Outstanding dealership."</p>
-          <div style="display:flex;align-items:center;gap:12px;">
-            <div style="width:40px;height:40px;background:#1A1A1A;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#C4A265;font-weight:700;font-size:15px;">S</div>
-            <div><div style="font-weight:600;color:#1A1A1A;font-size:14px;">Sarah & David K.</div><div style="font-size:12px;color:#999;">2025 LYRIQ Sport</div></div>
+          <p>"Purchased my Escalade from Taylor Cadillac and the experience was absolutely first-class. The team made everything seamless from test drive to delivery. The white-glove treatment is real."</p>
+          <div class="review-author">
+            <div class="review-avatar">M</div>
+            <div><div class="review-name">Michael R.</div><div class="review-vehicle">2025 Escalade Premium Luxury</div></div>
           </div>
         </div>
-        <div style="background:#fff;border:1px solid rgba(0,0,0,0.06);padding:36px 32px;position:relative;">
-          <div style="display:flex;gap:3px;margin-bottom:16px;">
-            <span style="color:#C4A265;font-size:18px;">&#9733;</span><span style="color:#C4A265;font-size:18px;">&#9733;</span><span style="color:#C4A265;font-size:18px;">&#9733;</span><span style="color:#C4A265;font-size:18px;">&#9733;</span><span style="color:#C4A265;font-size:18px;">&#9733;</span>
+        <div class="review-card">
+          <div class="review-stars">
+            <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
           </div>
-          <p style="font-size:15px;color:#555;line-height:1.7;margin-bottom:20px;">"Third vehicle I've purchased from Taylor. Their service department is unmatched -- always professional, always on time. My CT5-V Blackwing gets the expert care it deserves."</p>
-          <div style="display:flex;align-items:center;gap:12px;">
-            <div style="width:40px;height:40px;background:#1A1A1A;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#C4A265;font-weight:700;font-size:15px;">J</div>
-            <div><div style="font-weight:600;color:#1A1A1A;font-size:14px;">James T.</div><div style="font-size:12px;color:#999;">2025 CT5-V Blackwing</div></div>
+          <p>"We love our LYRIQ! The technology is incredible and the range has been better than expected. Taylor Cadillac walked us through every feature during delivery. Outstanding dealership."</p>
+          <div class="review-author">
+            <div class="review-avatar">S</div>
+            <div><div class="review-name">Sarah & David K.</div><div class="review-vehicle">2025 LYRIQ Sport</div></div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">
+            <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+          </div>
+          <p>"Third vehicle I've purchased from Taylor. Their service department is unmatched -- always professional, always on time. My CT5-V Blackwing gets the expert care it deserves."</p>
+          <div class="review-author">
+            <div class="review-avatar">J</div>
+            <div><div class="review-name">James T.</div><div class="review-vehicle">2025 CT5-V Blackwing</div></div>
           </div>
         </div>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:32px;margin-top:32px;">
-        <div style="background:#fff;border:1px solid rgba(0,0,0,0.06);padding:36px 32px;position:relative;">
-          <div style="display:flex;gap:3px;margin-bottom:16px;">
-            <span style="color:#C4A265;font-size:18px;">&#9733;</span><span style="color:#C4A265;font-size:18px;">&#9733;</span><span style="color:#C4A265;font-size:18px;">&#9733;</span><span style="color:#C4A265;font-size:18px;">&#9733;</span><span style="color:#C4A265;font-size:18px;">&#9733;</span>
+      <div class="reviews-grid-2">
+        <div class="review-card">
+          <div class="review-stars">
+            <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
           </div>
-          <p style="font-size:15px;color:#555;line-height:1.7;margin-bottom:20px;">"The financing team at Taylor Cadillac found us an incredible lease deal on our XT5. No pressure, no games -- just honest pricing and genuine luxury service. Highly recommend to anyone in northwest Ohio."</p>
-          <div style="display:flex;align-items:center;gap:12px;">
-            <div style="width:40px;height:40px;background:#1A1A1A;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#C4A265;font-weight:700;font-size:15px;">L</div>
-            <div><div style="font-weight:600;color:#1A1A1A;font-size:14px;">Linda P.</div><div style="font-size:12px;color:#999;">2025 XT5 Premium Luxury</div></div>
+          <p>"The financing team at Taylor Cadillac found us an incredible lease deal on our XT5. No pressure, no games -- just honest pricing and genuine luxury service. Highly recommend to anyone in northwest Ohio."</p>
+          <div class="review-author">
+            <div class="review-avatar">L</div>
+            <div><div class="review-name">Linda P.</div><div class="review-vehicle">2025 XT5 Premium Luxury</div></div>
           </div>
         </div>
-        <div style="background:#fff;border:1px solid rgba(0,0,0,0.06);padding:36px 32px;position:relative;">
-          <div style="display:flex;gap:3px;margin-bottom:16px;">
-            <span style="color:#C4A265;font-size:18px;">&#9733;</span><span style="color:#C4A265;font-size:18px;">&#9733;</span><span style="color:#C4A265;font-size:18px;">&#9733;</span><span style="color:#C4A265;font-size:18px;">&#9733;</span><span style="color:rgba(196,162,101,0.3);font-size:18px;">&#9733;</span>
+        <div class="review-card">
+          <div class="review-stars">
+            <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span class="dim">&#9733;</span>
           </div>
-          <p style="font-size:15px;color:#555;line-height:1.7;margin-bottom:20px;">"Came in for routine service on my Escalade ESV and was treated like royalty. Complimentary loaner, premium waiting lounge, and my vehicle was returned spotless. This is what luxury service should be."</p>
-          <div style="display:flex;align-items:center;gap:12px;">
-            <div style="width:40px;height:40px;background:#1A1A1A;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#C4A265;font-weight:700;font-size:15px;">R</div>
-            <div><div style="font-weight:600;color:#1A1A1A;font-size:14px;">Robert W.</div><div style="font-size:12px;color:#999;">Service Department</div></div>
+          <p>"Came in for routine service on my Escalade ESV and was treated like royalty. Complimentary loaner, premium waiting lounge, and my vehicle was returned spotless. This is what luxury service should be."</p>
+          <div class="review-author">
+            <div class="review-avatar">R</div>
+            <div><div class="review-name">Robert W.</div><div class="review-vehicle">Service Department</div></div>
           </div>
         </div>
       </div>

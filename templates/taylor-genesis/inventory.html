@@ -62,12 +62,12 @@
     }
 
     .top-bar-phones a { color: rgba(255,255,255,0.7); font-weight: 400; transition: color 0.3s; font-size: 12px; }
-    .top-bar-phones a:hover { color: var(--genesis-copper); }
+    .top-bar-phones a:hover { color: #FFFFFF; }
     .top-bar-phones span { color: rgba(255,255,255,0.4); text-transform: uppercase; font-size: 10px; letter-spacing: 2px; margin-right: 6px; }
 
     .top-bar-address { color: rgba(255,255,255,0.5); font-size: 12px; }
     .top-bar-address a { color: rgba(255,255,255,0.5); transition: color 0.3s; }
-    .top-bar-address a:hover { color: var(--genesis-copper); }
+    .top-bar-address a:hover { color: #FFFFFF; }
 
     /* ========== HEADER ========== */
     .site-header {
@@ -119,16 +119,14 @@
       transition: color 0.3s;
     }
 
-    .header-nav a:hover { color: var(--genesis-copper); }
-    .header-nav a.active { color: var(--genesis-copper); }
+    .header-nav a:hover { color: #FFFFFF; }
+    .header-nav a.active { color: #FFFFFF; }
 
     /* ========== PAGE HERO ========== */
     .page-hero {
       padding: 60px 0;
       text-align: center;
-      background: linear-gradient(rgba(17,17,17,0.78), rgba(17,17,17,0.88)), url('https://s7d1.scene7.com/is/image/hyundai/2026-gv80suv-35t-pst-awd-storrgreenmatte-smokeygreenvanillabeige-profiledrvr-studio-1');
-      background-size: cover;
-      background-position: center;
+      background: linear-gradient(180deg, rgb(54, 98, 108) 0%, rgb(31, 78, 84) 100%);
       position: relative;
     }
 
@@ -137,7 +135,7 @@
       position: absolute;
       bottom: 0; left: 0; right: 0;
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(184,115,51,0.3), transparent);
+      background: rgba(255,255,255,0.08);
     }
 
     .page-hero .container {
@@ -148,11 +146,11 @@
 
     .page-hero-label {
       font-family: var(--font-body);
-      font-size: 11px;
+      font-size: 0.75rem;
       font-weight: 500;
       text-transform: uppercase;
       letter-spacing: 6px;
-      color: var(--genesis-copper);
+      color: rgba(255,255,255,0.6);
       margin-bottom: 16px;
     }
 
@@ -164,7 +162,7 @@
       color: var(--genesis-white);
     }
 
-    /* ========== SRP LAYOUT ========== */
+    /* ========== SRP LAYOUT (light) ========== */
     .srp-layout {
       max-width: 1400px;
       margin: 0 auto;
@@ -172,12 +170,13 @@
       display: grid;
       grid-template-columns: 280px 1fr;
       gap: 40px;
+      background: #F5F5F5;
     }
 
-    /* ========== FILTER PANEL ========== */
+    /* ========== FILTER PANEL (light) ========== */
     .filter-panel {
-      background: var(--genesis-dark2);
-      border: 1px solid rgba(255,255,255,0.06);
+      background: #F5F5F5;
+      border: 1px solid rgba(0,0,0,0.08);
       padding: 32px 24px;
       height: fit-content;
       position: sticky;
@@ -186,18 +185,18 @@
 
     .filter-panel h3 {
       font-family: var(--font-body);
-      font-size: 10px;
+      font-size: 0.75rem;
       font-weight: 500;
       text-transform: uppercase;
-      letter-spacing: 4px;
-      color: var(--genesis-copper);
+      letter-spacing: 6px;
+      color: #8A8A8A;
       margin-bottom: 28px;
     }
 
     .filter-group {
       margin-bottom: 28px;
       padding-bottom: 28px;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
+      border-bottom: 1px solid rgba(0,0,0,0.06);
     }
 
     .filter-group:last-child {
@@ -208,11 +207,11 @@
 
     .filter-group label {
       display: block;
-      font-size: 10px;
+      font-size: 0.75rem;
       font-weight: 500;
       text-transform: uppercase;
       letter-spacing: 3px;
-      color: rgba(255,255,255,0.5);
+      color: #8A8A8A;
       margin-bottom: 12px;
     }
 
@@ -220,9 +219,9 @@
     .filter-group input {
       width: 100%;
       padding: 10px 14px;
-      background: var(--genesis-black);
-      border: 1px solid rgba(255,255,255,0.1);
-      color: var(--genesis-white);
+      background: #FFFFFF;
+      border: 1px solid rgba(0,0,0,0.15);
+      color: #111111;
       font-family: var(--font-body);
       font-size: 13px;
       outline: none;
@@ -232,12 +231,12 @@
 
     .filter-group select:focus,
     .filter-group input:focus {
-      border-color: var(--genesis-copper);
+      border-color: #111111;
     }
 
     .filter-group select option {
-      background: var(--genesis-black);
-      color: var(--genesis-white);
+      background: #FFFFFF;
+      color: #111111;
     }
 
     .filter-price-row {
@@ -249,26 +248,23 @@
     .filter-btn {
       width: 100%;
       padding: 14px;
-      background: rgba(184,115,51,0.12);
-      backdrop-filter: blur(24px);
-      -webkit-backdrop-filter: blur(24px);
-      color: #B87333;
-      border: 1px solid rgba(184,115,51,0.4);
+      background: #000000;
+      color: #FFFFFF;
+      border: 1px solid #000000;
       border-radius: 0;
       font-family: var(--font-body);
-      font-size: 12px;
-      font-weight: 400;
+      font-size: 0.8rem;
+      font-weight: 500;
       letter-spacing: 3px;
       text-transform: uppercase;
       cursor: pointer;
-      transition: all 0.5s ease;
+      transition: all 0.3s ease;
       margin-top: 8px;
     }
 
     .filter-btn:hover {
-      background: rgba(184,115,51,0.25);
-      color: #fff;
-      transform: translateY(-2px);
+      background: transparent;
+      color: #000000;
     }
 
     /* ========== RESULTS HEADER ========== */
@@ -278,25 +274,25 @@
       align-items: center;
       margin-bottom: 32px;
       padding-bottom: 20px;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
+      border-bottom: 1px solid rgba(0,0,0,0.08);
     }
 
     .results-count {
       font-size: 13px;
       font-weight: 300;
-      color: rgba(255,255,255,0.5);
+      color: #8A8A8A;
       letter-spacing: 1px;
     }
 
     .results-count strong {
-      color: var(--genesis-white);
+      color: #111111;
       font-weight: 500;
     }
 
     .results-sort select {
-      background: var(--genesis-dark2);
-      border: 1px solid rgba(255,255,255,0.1);
-      color: rgba(255,255,255,0.7);
+      background: #FFFFFF;
+      border: 1px solid rgba(0,0,0,0.15);
+      color: #111111;
       font-family: var(--font-body);
       font-size: 12px;
       padding: 8px 14px;
@@ -313,14 +309,16 @@
     }
 
     .vehicle-card {
-      background: var(--genesis-dark2);
+      background: #FFFFFF;
       display: block;
-      transition: background 0.3s;
+      transition: box-shadow 0.3s;
       overflow: hidden;
+      border: 1px solid rgba(0,0,0,0.06);
+      color: #111111;
     }
 
     .vehicle-card:hover {
-      background: #222222;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.08);
     }
 
     .vehicle-card-image {
@@ -345,8 +343,8 @@
       position: absolute;
       top: 16px;
       left: 16px;
-      background: var(--genesis-copper);
-      color: var(--genesis-black);
+      background: #111111;
+      color: #FFFFFF;
       font-size: 9px;
       font-weight: 600;
       letter-spacing: 2px;
@@ -359,11 +357,11 @@
     }
 
     .vehicle-card-year {
-      font-size: 10px;
+      font-size: 0.75rem;
       font-weight: 500;
       text-transform: uppercase;
-      letter-spacing: 3px;
-      color: var(--genesis-copper);
+      letter-spacing: 6px;
+      color: #8A8A8A;
       margin-bottom: 6px;
     }
 
@@ -372,14 +370,14 @@
       font-size: 22px;
       font-weight: 400;
       letter-spacing: 1px;
-      color: var(--genesis-white);
+      color: #111111;
       margin-bottom: 8px;
     }
 
     .vehicle-card-trim {
       font-size: 12px;
       font-weight: 300;
-      color: rgba(255,255,255,0.4);
+      color: #8A8A8A;
       letter-spacing: 0.5px;
       margin-bottom: 16px;
     }
@@ -389,12 +387,12 @@
       gap: 16px;
       margin-bottom: 16px;
       padding-bottom: 16px;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
+      border-bottom: 1px solid rgba(0,0,0,0.08);
     }
 
     .vehicle-card-spec {
       font-size: 11px;
-      color: rgba(255,255,255,0.4);
+      color: #8A8A8A;
       letter-spacing: 0.5px;
     }
 
@@ -408,23 +406,23 @@
       font-family: var(--font-display);
       font-size: 28px;
       font-weight: 400;
-      color: var(--genesis-white);
+      color: #111111;
       letter-spacing: 1px;
     }
 
     .vehicle-card-msrp {
       font-size: 11px;
-      color: rgba(255,255,255,0.3);
+      color: #8A8A8A;
       letter-spacing: 1px;
       text-transform: uppercase;
     }
 
     .vehicle-card-cta {
-      font-size: 10px;
+      font-size: 0.75rem;
       font-weight: 500;
       letter-spacing: 3px;
       text-transform: uppercase;
-      color: var(--genesis-copper);
+      color: #111111;
       transition: opacity 0.3s;
     }
 
@@ -475,16 +473,16 @@
       color: rgba(255,255,255,0.3);
     }
 
-    .footer-brand .footer-group a { color: var(--genesis-copper); transition: opacity 0.3s; }
-    .footer-brand .footer-group a:hover { opacity: 0.7; }
+    .footer-brand .footer-group a { color: rgba(255,255,255,0.5); transition: color 0.3s; }
+    .footer-brand .footer-group a:hover { color: #FFFFFF; }
 
     .footer-col h4 {
       font-family: var(--font-body);
-      font-size: 10px;
+      font-size: 0.75rem;
       font-weight: 500;
       text-transform: uppercase;
-      letter-spacing: 4px;
-      color: var(--genesis-copper);
+      letter-spacing: 6px;
+      color: #FFFFFF;
       margin-bottom: 24px;
     }
 
@@ -508,8 +506,8 @@
       color: rgba(255,255,255,0.25);
     }
 
-    .footer-bottom a { color: var(--genesis-copper); font-weight: 400; transition: opacity 0.3s; }
-    .footer-bottom a:hover { opacity: 0.7; }
+    .footer-bottom a { color: rgba(255,255,255,0.5); font-weight: 400; transition: color 0.3s; }
+    .footer-bottom a:hover { color: #FFFFFF; }
 
     .footer-cities {
       margin-top: 8px;

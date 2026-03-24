@@ -34,11 +34,11 @@
     .top-bar .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
     .top-bar-phones { display: flex; gap: 28px; flex-wrap: wrap; }
     .top-bar-phones a { color: rgba(255,255,255,0.7); font-weight: 400; transition: color 0.3s; font-size: 12px; }
-    .top-bar-phones a:hover { color: var(--genesis-copper); }
+    .top-bar-phones a:hover { color: #FFFFFF; }
     .top-bar-phones span { color: rgba(255,255,255,0.4); text-transform: uppercase; font-size: 10px; letter-spacing: 2px; margin-right: 6px; }
     .top-bar-address { color: rgba(255,255,255,0.5); font-size: 12px; }
     .top-bar-address a { color: rgba(255,255,255,0.5); transition: color 0.3s; }
-    .top-bar-address a:hover { color: var(--genesis-copper); }
+    .top-bar-address a:hover { color: #FFFFFF; }
 
     /* ========== HEADER ========== */
     .site-header { background: var(--genesis-black); padding: 20px 0; position: sticky; top: 0; z-index: 100; border-bottom: 1px solid rgba(255,255,255,0.06); }
@@ -48,16 +48,14 @@
     .header-logo-text { font-family: var(--font-body); font-size: 16px; font-weight: 500; letter-spacing: 10px; text-transform: uppercase; color: var(--genesis-white); }
     .header-nav { display: flex; align-items: center; gap: 4px; }
     .header-nav a { color: rgba(255,255,255,0.7); font-size: 12px; font-weight: 400; padding: 8px 16px; letter-spacing: 2px; text-transform: uppercase; transition: color 0.3s; }
-    .header-nav a:hover { color: var(--genesis-copper); }
-    .header-nav a.active { color: var(--genesis-copper); }
+    .header-nav a:hover { color: #FFFFFF; }
+    .header-nav a.active { color: #FFFFFF; }
 
     /* ========== PAGE HERO ========== */
     .page-hero {
       padding: 100px 0 80px;
       text-align: center;
-      background: linear-gradient(rgba(17,17,17,0.78), rgba(17,17,17,0.88)), url('https://s7d1.scene7.com/is/image/hyundai/2026-gv80suv-35t-pst-awd-storrgreenmatte-smokeygreenvanillabeige-profiledrvr-studio-1');
-      background-size: cover;
-      background-position: center;
+      background: linear-gradient(180deg, rgb(54, 98, 108) 0%, rgb(31, 78, 84) 100%);
       position: relative;
     }
 
@@ -66,16 +64,16 @@
       position: absolute;
       bottom: 0; left: 0; right: 0;
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(184,115,51,0.3), transparent);
+      background: rgba(255,255,255,0.08);
     }
 
     .page-hero-label {
       font-family: var(--font-body);
-      font-size: 11px;
+      font-size: 0.75rem;
       font-weight: 500;
       text-transform: uppercase;
       letter-spacing: 6px;
-      color: var(--genesis-copper);
+      color: rgba(255,255,255,0.6);
       margin-bottom: 16px;
     }
 
@@ -97,10 +95,11 @@
       line-height: 1.8;
     }
 
-    /* ========== FINANCE OPTIONS ========== */
+    /* ========== FINANCE OPTIONS (light section) ========== */
     .finance-options {
       padding: 100px 0;
-      background: var(--genesis-dark2);
+      background: #FFFFFF;
+      color: #111111;
     }
 
     .finance-options .section-header {
@@ -110,11 +109,11 @@
 
     .section-label {
       font-family: var(--font-body);
-      font-size: 11px;
+      font-size: 0.75rem;
       font-weight: 500;
       text-transform: uppercase;
       letter-spacing: 6px;
-      color: var(--genesis-copper);
+      color: #8A8A8A;
       margin-bottom: 16px;
     }
 
@@ -123,13 +122,13 @@
       font-size: 48px;
       font-weight: 300;
       letter-spacing: 4px;
-      color: var(--genesis-white);
+      color: #111111;
     }
 
     .divider-center {
       width: 60px;
       height: 1px;
-      background: var(--genesis-copper);
+      background: #111111;
       margin: 24px auto;
     }
 
@@ -137,17 +136,17 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 1px;
-      background: rgba(255,255,255,0.06);
+      background: rgba(0,0,0,0.06);
     }
 
     .finance-card {
-      background: var(--genesis-dark2);
+      background: #F5F5F5;
       padding: 56px 40px;
       text-align: center;
       transition: background 0.4s;
     }
 
-    .finance-card:hover { background: #1f1f1f; }
+    .finance-card:hover { background: #ECECEC; }
 
     .finance-card-icon {
       width: 48px;
@@ -158,7 +157,7 @@
     .finance-card-icon svg {
       width: 100%;
       height: 100%;
-      stroke: var(--genesis-copper);
+      stroke: #111111;
       fill: none;
       stroke-width: 1;
     }
@@ -168,34 +167,38 @@
       font-size: 22px;
       font-weight: 400;
       letter-spacing: 2px;
-      color: var(--genesis-white);
+      color: #111111;
       margin-bottom: 12px;
     }
 
     .finance-card p {
       font-size: 13px;
       font-weight: 300;
-      color: rgba(255,255,255,0.4);
+      color: #555555;
       line-height: 1.7;
     }
 
-    /* ========== RATE DISPLAY ========== */
+    /* ========== RATE DISPLAY (dark teal) ========== */
     .rate-section {
       padding: 100px 0;
-      background: var(--genesis-black);
+      background: linear-gradient(180deg, rgb(54, 98, 108) 0%, rgb(31, 78, 84) 100%);
     }
+
+    .rate-section .section-label { color: rgba(255,255,255,0.5); }
+    .rate-section .section-title { color: #FFFFFF; }
+    .rate-section .divider-center { background: rgba(255,255,255,0.3); }
 
     .rate-inner {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 1px;
-      background: rgba(255,255,255,0.06);
+      background: rgba(255,255,255,0.1);
       max-width: 900px;
       margin: 0 auto;
     }
 
     .rate-card {
-      background: var(--genesis-black);
+      background: rgba(255,255,255,0.05);
       padding: 56px 48px;
       text-align: center;
     }
@@ -222,7 +225,7 @@
       font-family: var(--font-display);
       font-size: 20px;
       font-weight: 300;
-      color: var(--genesis-copper);
+      color: rgba(255,255,255,0.6);
     }
 
     .rate-card-note {
@@ -233,10 +236,11 @@
       line-height: 1.6;
     }
 
-    /* ========== CALCULATOR ========== */
+    /* ========== CALCULATOR (light section) ========== */
     .calculator-section {
       padding: 100px 0;
-      background: var(--genesis-dark2);
+      background: #FFFFFF;
+      color: #111111;
     }
 
     .calculator-inner {
@@ -252,8 +256,11 @@
       font-size: 40px;
       font-weight: 300;
       letter-spacing: 3px;
-      color: var(--genesis-white);
+      color: #111111;
     }
+
+    .calculator-inner .section-label { color: #8A8A8A; }
+    .calculator-inner .divider-center { background: #111111; }
 
     .calc-form { text-align: left; }
 
@@ -266,11 +273,11 @@
 
     .form-group label {
       display: block;
-      font-size: 10px;
+      font-size: 0.75rem;
       font-weight: 500;
       text-transform: uppercase;
       letter-spacing: 3px;
-      color: rgba(255,255,255,0.4);
+      color: #8A8A8A;
       margin-bottom: 8px;
     }
 
@@ -278,9 +285,9 @@
     .form-group select {
       width: 100%;
       padding: 14px 16px;
-      background: var(--genesis-black);
-      border: 1px solid rgba(255,255,255,0.1);
-      color: var(--genesis-white);
+      background: #FFFFFF;
+      border: 1px solid rgba(0,0,0,0.15);
+      color: #111111;
       font-family: var(--font-body);
       font-size: 14px;
       outline: none;
@@ -289,26 +296,26 @@
     }
 
     .form-group input:focus,
-    .form-group select:focus { border-color: var(--genesis-copper); }
+    .form-group select:focus { border-color: #111111; }
 
-    .form-group input::placeholder { color: rgba(255,255,255,0.25); }
+    .form-group input::placeholder { color: #AAAAAA; }
 
-    .form-group select option { background: var(--genesis-black); color: var(--genesis-white); }
+    .form-group select option { background: #FFFFFF; color: #111111; }
 
     .calc-result {
       margin-top: 40px;
       padding: 40px;
-      background: var(--genesis-black);
-      border: 1px solid rgba(184,115,51,0.2);
+      background: #F5F5F5;
+      border: 1px solid rgba(0,0,0,0.1);
       text-align: center;
     }
 
     .calc-result-label {
-      font-size: 10px;
+      font-size: 0.75rem;
       font-weight: 500;
       text-transform: uppercase;
-      letter-spacing: 4px;
-      color: rgba(255,255,255,0.4);
+      letter-spacing: 6px;
+      color: #8A8A8A;
       margin-bottom: 12px;
     }
 
@@ -316,55 +323,58 @@
       font-family: var(--font-display);
       font-size: 48px;
       font-weight: 300;
-      color: var(--genesis-white);
+      color: #111111;
       letter-spacing: 2px;
     }
 
     .calc-result-note {
       font-size: 12px;
       font-weight: 300;
-      color: rgba(255,255,255,0.3);
+      color: #8A8A8A;
       margin-top: 12px;
     }
 
     .btn, .btn-glass {
       display: inline-block;
-      padding: 18px 40px;
+      padding: 16px 40px;
       font-family: var(--font-body);
-      font-size: 12px;
-      font-weight: 400;
+      font-size: 0.8rem;
+      font-weight: 500;
       letter-spacing: 3px;
       text-transform: uppercase;
       cursor: pointer;
-      transition: all 0.5s ease;
-      border: 1px solid rgba(184,115,51,0.25);
+      transition: all 0.3s ease;
+      border: 1px solid #000000;
       border-radius: 0;
       text-align: center;
-      background: rgba(255,255,255,0.05);
-      backdrop-filter: blur(24px);
-      -webkit-backdrop-filter: blur(24px);
-      color: #fff;
+      background: transparent;
+      color: #000000;
     }
 
     .btn:hover, .btn-glass:hover {
-      background: rgba(184,115,51,0.12); border-color: rgba(184,115,51,0.45);
-      box-shadow: 0 16px 48px rgba(0,0,0,0.3); transform: translateY(-2px);
+      background: #000000;
+      color: #FFFFFF;
     }
 
-    .btn-primary, .btn-glass-copper {
-      background: rgba(184,115,51,0.12); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
-      border: 1px solid rgba(184,115,51,0.4); border-radius: 0; color: #B87333;
+    .btn-primary {
+      background: #000000;
+      border: 1px solid #000000;
+      border-radius: 0;
+      color: #FFFFFF;
     }
-    .btn-primary:hover, .btn-glass-copper:hover {
-      background: rgba(184,115,51,0.25); color: #fff; transform: translateY(-2px);
+    .btn-primary:hover {
+      background: transparent;
+      color: #000000;
     }
     .btn-outline {
-      background: rgba(255,255,255,0.05); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
-      border: 1px solid rgba(184,115,51,0.25); border-radius: 0; color: #fff;
+      background: transparent;
+      border: 1px solid #000000;
+      border-radius: 0;
+      color: #000000;
     }
     .btn-outline:hover {
-      background: rgba(184,115,51,0.12); border-color: rgba(184,115,51,0.45);
-      box-shadow: 0 16px 48px rgba(0,0,0,0.3); transform: translateY(-2px);
+      background: #000000;
+      color: #FFFFFF;
     }
 
     .calc-submit {
@@ -372,12 +382,15 @@
       margin-top: 32px;
     }
 
-    /* ========== APPLICATION SECTION ========== */
+    /* ========== APPLICATION SECTION (dark teal) ========== */
     .apply-section {
       padding: 100px 0;
-      background: var(--genesis-black);
+      background: linear-gradient(180deg, rgb(31, 78, 84) 0%, rgb(54, 98, 108) 100%);
       text-align: center;
     }
+
+    .apply-section .section-label { color: rgba(255,255,255,0.5); }
+    .apply-section .divider-center { background: rgba(255,255,255,0.3); }
 
     .apply-section .section-header { margin-bottom: 48px; }
 
@@ -386,7 +399,7 @@
       font-size: 40px;
       font-weight: 300;
       letter-spacing: 3px;
-      color: var(--genesis-white);
+      color: #FFFFFF;
       margin-bottom: 16px;
     }
 
@@ -405,14 +418,39 @@
       text-align: left;
     }
 
+    .apply-form .form-group label { color: rgba(255,255,255,0.5); }
+    .apply-form .form-group input,
+    .apply-form .form-group select,
+    .apply-form .form-group textarea {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(255,255,255,0.15);
+      color: #FFFFFF;
+    }
+    .apply-form .form-group input:focus,
+    .apply-form .form-group select:focus,
+    .apply-form .form-group textarea:focus { border-color: #FFFFFF; }
+    .apply-form .form-group input::placeholder,
+    .apply-form .form-group textarea::placeholder { color: rgba(255,255,255,0.3); }
+    .apply-form .form-group select option { background: rgb(31, 78, 84); color: #FFFFFF; }
+
+    .apply-section .btn-primary {
+      background: #FFFFFF;
+      border-color: #FFFFFF;
+      color: #000000;
+    }
+    .apply-section .btn-primary:hover {
+      background: transparent;
+      color: #FFFFFF;
+    }
+
     .form-full { margin-bottom: 16px; }
 
     .form-group textarea {
       width: 100%;
       padding: 14px 16px;
-      background: var(--genesis-black);
-      border: 1px solid rgba(255,255,255,0.1);
-      color: var(--genesis-white);
+      background: #FFFFFF;
+      border: 1px solid rgba(0,0,0,0.15);
+      color: #111111;
       font-family: var(--font-body);
       font-size: 14px;
       outline: none;
@@ -421,8 +459,8 @@
       min-height: 100px;
     }
 
-    .form-group textarea:focus { border-color: var(--genesis-copper); }
-    .form-group textarea::placeholder { color: rgba(255,255,255,0.25); }
+    .form-group textarea:focus { border-color: #111111; }
+    .form-group textarea::placeholder { color: #AAAAAA; }
 
     .apply-submit {
       text-align: center;
@@ -439,10 +477,11 @@
       text-align: center;
     }
 
-    /* ========== TRADE VALUE ========== */
+    /* ========== TRADE VALUE (light) ========== */
     .trade-section {
       padding: 80px 0;
-      background: var(--genesis-dark2);
+      background: #F5F5F5;
+      color: #111111;
     }
 
     .trade-inner {
@@ -452,42 +491,38 @@
       align-items: center;
     }
 
-    .trade-content .section-label { margin-bottom: 12px; }
+    .trade-content .section-label {
+      margin-bottom: 12px;
+      color: #8A8A8A;
+    }
 
     .trade-content h2 {
       font-family: var(--font-display);
       font-size: 40px;
       font-weight: 300;
       letter-spacing: 3px;
-      color: var(--genesis-white);
+      color: #111111;
       margin-bottom: 12px;
     }
 
-    .divider { width: 60px; height: 1px; background: var(--genesis-copper); margin: 24px 0; }
+    .divider { width: 60px; height: 1px; background: #111111; margin: 24px 0; }
 
     .trade-content p {
       font-size: 15px;
       font-weight: 300;
-      color: rgba(255,255,255,0.5);
+      color: #555555;
       line-height: 1.8;
       margin-bottom: 32px;
     }
 
     .trade-image {
       aspect-ratio: 4/3;
-      background: var(--genesis-black);
+      background: #FFFFFF;
       overflow: hidden;
       position: relative;
     }
 
     .trade-image img { width: 100%; height: 100%; object-fit: cover; }
-
-    .trade-image::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      border: 1px solid rgba(184,115,51,0.12);
-    }
 
     /* ========== FOOTER ========== */
     .site-footer { background: var(--genesis-dark3); color: rgba(255,255,255,0.5); padding: 80px 0 0; border-top: 1px solid rgba(255,255,255,0.06); }
@@ -495,16 +530,16 @@
     .footer-brand .footer-logo-text { font-family: var(--font-body); font-size: 14px; font-weight: 500; letter-spacing: 8px; text-transform: uppercase; color: var(--genesis-white); margin-bottom: 20px; }
     .footer-brand p { font-size: 14px; line-height: 1.8; color: rgba(255,255,255,0.4); margin-bottom: 24px; }
     .footer-brand .footer-group { font-size: 12px; letter-spacing: 1px; color: rgba(255,255,255,0.3); }
-    .footer-brand .footer-group a { color: var(--genesis-copper); transition: opacity 0.3s; }
-    .footer-brand .footer-group a:hover { opacity: 0.7; }
-    .footer-col h4 { font-family: var(--font-body); font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: 4px; color: var(--genesis-copper); margin-bottom: 24px; }
+    .footer-brand .footer-group a { color: rgba(255,255,255,0.5); transition: color 0.3s; }
+    .footer-brand .footer-group a:hover { color: #FFFFFF; }
+    .footer-col h4 { font-family: var(--font-body); font-size: 0.75rem; font-weight: 500; text-transform: uppercase; letter-spacing: 6px; color: #FFFFFF; margin-bottom: 24px; }
     .footer-col ul { list-style: none; }
     .footer-col li { margin-bottom: 14px; }
     .footer-col a { color: rgba(255,255,255,0.4); font-size: 13px; font-weight: 300; letter-spacing: 0.5px; transition: color 0.3s; }
     .footer-col a:hover { color: var(--genesis-white); }
     .footer-bottom { padding: 28px 0; text-align: center; font-size: 12px; color: rgba(255,255,255,0.25); }
-    .footer-bottom a { color: var(--genesis-copper); font-weight: 400; transition: opacity 0.3s; }
-    .footer-bottom a:hover { opacity: 0.7; }
+    .footer-bottom a { color: rgba(255,255,255,0.5); font-weight: 400; transition: color 0.3s; }
+    .footer-bottom a:hover { color: #FFFFFF; }
     .footer-cities { margin-top: 8px; font-size: 11px; color: rgba(255,255,255,0.2); }
 
     /* ========== RESPONSIVE ========== */

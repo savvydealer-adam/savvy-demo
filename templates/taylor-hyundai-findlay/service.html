@@ -10,8 +10,8 @@
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         :root {
-            --primary: #00287A;
-            --primary-dark: #001d5c;
+            --primary: #002C5F;
+            --primary-dark: #001B3D;
             --accent: #00AAD2;
             --white: #ffffff;
             --gray-50: #f8f9fa;
@@ -44,10 +44,10 @@
         .header-logo img { height: 28px; width: auto; }
         .header-logo-text { font-size: 16px; font-weight: 700; color: var(--primary); line-height: 1.2; }
         .header-logo-text small { font-size: 11px; font-weight: 500; color: var(--gray-600); display: block; }
-        .header-nav { display: flex; align-items: center; gap: 6px; }
-        .header-nav a { color: #333; font-size: 14px; font-weight: 500; padding: 6px 12px; border-radius: 4px; transition: background 0.2s, color 0.2s; }
-        .header-nav a:hover { background: #e8f4f8; color: var(--accent); }
-        .header-nav a.active { background: var(--accent); color: #fff; }
+        .header-nav { display: flex; align-items: center; gap: 32px; }
+        .header-nav a { color: #002C5F; font-size: 14px; font-weight: 600; padding: 8px 0; text-transform: uppercase; letter-spacing: 0.04em; border-bottom: 2px solid transparent; transition: border-color 0.2s ease; }
+        .header-nav a:hover { border-bottom-color: #00AAD2; color: #002C5F; }
+        .header-nav a.active { border-bottom-color: #00AAD2; color: #002C5F; }
 
         /* ========== BREADCRUMB ========== */
         .breadcrumb-bar { background: #f8f9fb; border-bottom: 1px solid #eee; padding: 12px 0; }
@@ -57,34 +57,33 @@
         .breadcrumb-bar span { color: #999; margin: 0 6px; }
 
         /* ========== BUTTONS ========== */
-        .btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; font-size: 14px; font-weight: 700; font-family: inherit; letter-spacing: 0.5px; border: 2px solid transparent; border-radius: 6px; cursor: pointer; transition: all 0.3s; text-align: center; }
-        .btn-primary { background: var(--accent); color: var(--white); border-color: var(--accent); }
-        .btn-primary:hover { background: #0095b8; border-color: #0095b8; }
+        .btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; font-size: 14px; font-weight: 700; font-family: inherit; letter-spacing: 0.5px; border: 2px solid transparent; border-radius: 0; cursor: pointer; transition: all 0.3s; text-align: center; }
+        .btn-primary { background: #002C5F; color: #FFFFFF; border-color: #002C5F; text-transform: uppercase; letter-spacing: 0.05em; }
+        .btn-primary:hover { background: #001B3D; border-color: #001B3D; }
         .btn-outline { background: transparent; color: var(--white); border-color: rgba(255,255,255,0.4); }
         .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.1); }
 
-        /* ========== GLASS BUTTONS ========== */
-        .btn-glass { background: rgba(255,255,255,0.12); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.2); border-radius: 14px; color: #fff; padding: 14px 32px; font-size: 15px; font-weight: 600; letter-spacing: 0.3px; transition: all 0.3s ease; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; font-family: inherit; text-align: center; }
-        .btn-glass:hover { background: rgba(255,255,255,0.22); border-color: rgba(255,255,255,0.35); box-shadow: 0 8px 32px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.1); transform: translateY(-2px); }
-        .btn-glass-primary { background: rgba(0,40,122,0.9); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(0,40,122,0.3); border-radius: 14px; color: #fff; padding: 14px 32px; font-size: 15px; font-weight: 600; transition: all 0.3s ease; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; font-family: inherit; text-align: center; }
-        .btn-glass-primary:hover { background: rgba(0,40,122,1); box-shadow: 0 8px 32px rgba(0,40,122,0.3), inset 0 1px 0 rgba(255,255,255,0.15); transform: translateY(-2px); }
+        /* ========== BUTTONS ========== */
+        .btn-glass { background: transparent; border: 2px solid #FFFFFF; border-radius: 0; color: #fff; padding: 14px 32px; font-size: 14px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; transition: all 0.3s ease; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; font-family: inherit; text-align: center; }
+        .btn-glass:hover { background: rgba(255,255,255,0.1); border-color: #FFFFFF; box-shadow: none; transform: translateY(-2px); }
+        .btn-glass-primary { background: #002C5F; border: 2px solid #002C5F; border-radius: 0; color: #fff; padding: 14px 32px; font-size: 14px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; transition: all 0.3s ease; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; font-family: inherit; text-align: center; }
+        .btn-glass-primary:hover { background: #001B3D; box-shadow: none; transform: translateY(-2px); }
 
         /* ========== HERO ========== */
-        .service-hero { position: relative; background: linear-gradient(rgba(0,40,122,0.82), rgba(0,40,122,0.90)), url('https://www.hyundaicanada.com/-/media/hyundai/showroom/2025/ioniq-5/exterior_gallery/expanded/desktop_xl/img_001.jpg'); background-size: cover; background-position: center; overflow: hidden; padding: 72px 0 80px; }
-        .service-hero::before { content: ''; position: absolute; top: -50%; right: -20%; width: 80%; height: 200%; background: radial-gradient(ellipse, rgba(0,170,210,0.2) 0%, transparent 70%); pointer-events: none; }
-        .service-hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: var(--accent); }
-        .service-hero-inner { max-width: 1280px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; text-align: center; }
+        .service-hero { position: relative; background: url('https://www.hyundaicanada.com/-/media/hyundai/showroom/2025/ioniq-5/exterior_gallery/expanded/desktop_xl/img_001.jpg'); background-size: cover; background-position: center; overflow: hidden; padding: 72px 0 80px; }
+        .service-hero::before { content: ''; position: absolute; inset: 0; z-index: 1; background: linear-gradient(to right, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.3) 40%, rgba(0,0,0,0.0) 70%); pointer-events: none; }
+        .service-hero-inner { max-width: 1280px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 2; text-align: left; }
         .service-hero-inner h2 { font-size: 48px; font-weight: 700; color: var(--white); line-height: 1.1; margin-bottom: 12px; letter-spacing: -0.5px; }
         .service-hero-inner h2 em { font-style: normal; color: var(--accent); }
-        .service-hero-inner p { font-size: 18px; color: rgba(255,255,255,0.7); margin-bottom: 32px; max-width: 580px; margin-left: auto; margin-right: auto; }
-        .hero-ctas { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+        .service-hero-inner p { font-size: 18px; color: rgba(255,255,255,0.7); margin-bottom: 32px; max-width: 580px;  }
+        .hero-ctas { display: flex; gap: 16px; justify-content: flex-start; flex-wrap: wrap; }
 
         /* ========== FEATURES STRIP ========== */
         .features-strip { background: var(--gray-50); border-bottom: 1px solid var(--gray-200); padding: 48px 0; }
         .features-strip-inner { max-width: 1280px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
-        .feature-card { text-align: center; padding: 32px 24px; background: var(--white); border-radius: 12px; border: 1px solid var(--gray-200); transition: all 0.3s; }
-        .feature-card:hover { border-color: var(--accent); box-shadow: 0 8px 24px rgba(0,0,0,0.08); transform: translateY(-2px); }
-        .feature-icon { width: 64px; height: 64px; background: var(--accent); border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; }
+        .feature-card { text-align: center; padding: 32px 24px; background: var(--white); border-radius: 0; border: 1px solid var(--gray-200); transition: all 0.3s; }
+        .feature-card:hover { border-color: #00AAD2; box-shadow: 0 8px 24px rgba(0,44,95,0.12); transform: translateY(-2px); }
+        .feature-icon { width: 64px; height: 64px; background: #002C5F; border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; }
         .feature-icon svg { width: 28px; height: 28px; fill: var(--white); }
         .feature-card h3 { font-size: 18px; font-weight: 700; color: var(--gray-800); margin-bottom: 8px; }
         .feature-card p { font-size: 14px; color: var(--gray-600); line-height: 1.6; }
@@ -96,39 +95,38 @@
         .schedule-info h2 em { font-style: normal; color: var(--accent); }
         .schedule-info > p { font-size: 16px; color: var(--gray-600); line-height: 1.7; margin-bottom: 28px; }
         .contact-detail { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 20px; }
-        .contact-detail-icon { width: 42px; height: 42px; background: var(--gray-50); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; border: 1px solid var(--gray-200); }
+        .contact-detail-icon { width: 42px; height: 42px; background: var(--gray-50); border-radius: 0; display: flex; align-items: center; justify-content: center; flex-shrink: 0; border: 1px solid var(--gray-200); }
         .contact-detail-icon svg { width: 20px; height: 20px; fill: var(--accent); }
         .contact-detail-text h4 { font-size: 14px; font-weight: 700; color: var(--gray-800); margin-bottom: 2px; }
         .contact-detail-text p, .contact-detail-text a { font-size: 14px; color: var(--gray-600); line-height: 1.5; }
         .contact-detail-text a:hover { color: var(--accent); }
-        .schedule-form-card { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: 16px; padding: 40px; }
+        .schedule-form-card { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: 0; padding: 40px; }
         .schedule-form-card h3 { font-size: 22px; font-weight: 700; color: var(--gray-800); margin-bottom: 6px; }
         .schedule-form-card > p { font-size: 14px; color: var(--gray-600); margin-bottom: 24px; }
         .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
-        .form-field input, .form-field select, .form-field textarea { width: 100%; padding: 14px 16px; border: 1px solid var(--gray-200); border-radius: 8px; font-family: inherit; font-size: 14px; color: var(--gray-800); outline: none; transition: border-color 0.2s; background: var(--white); }
+        .form-field input, .form-field select, .form-field textarea { width: 100%; padding: 14px 16px; border: 1px solid var(--gray-200); border-radius: 0; font-family: inherit; font-size: 14px; color: var(--gray-800); outline: none; transition: border-color 0.2s; background: var(--white); }
         .form-field input::placeholder, .form-field textarea::placeholder { color: #aaa; }
-        .form-field input:focus, .form-field select:focus, .form-field textarea:focus { border-color: var(--accent); }
+        .form-field input:focus, .form-field select:focus, .form-field textarea:focus { border-color: #00AAD2; }
         .form-field select { cursor: pointer; }
         .form-field textarea { resize: vertical; min-height: 80px; }
         .form-field-full { margin-bottom: 12px; }
-        .form-submit-btn { width: 100%; padding: 16px; background: var(--accent); color: var(--white); font-family: inherit; font-size: 15px; font-weight: 700; letter-spacing: 0.5px; border: none; border-radius: 8px; cursor: pointer; transition: background 0.3s; margin-top: 4px; }
-        .form-submit-btn:hover { background: #0095b8; }
+        .form-submit-btn { width: 100%; padding: 16px; background: #002C5F; color: var(--white); font-family: inherit; font-size: 15px; font-weight: 700; letter-spacing: 0.5px; border: none; border-radius: 0; cursor: pointer; transition: background 0.3s; margin-top: 4px; }
+        .form-submit-btn:hover { background: #001B3D; }
 
         /* ========== SERVICES GRID ========== */
         .section-title { text-align: center; margin-bottom: 48px; }
         .section-title h2 { font-size: 36px; font-weight: 700; color: var(--gray-800); letter-spacing: -0.5px; }
         .section-title p { font-size: 16px; color: var(--gray-600); margin-top: 8px; }
-        .section-title .bar { width: 60px; height: 4px; background: var(--accent); margin: 16px auto 0; }
         .services-section { padding: 72px 0; background: var(--gray-50); border-top: 1px solid var(--gray-200); }
         .services-section-inner { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
         .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-        .service-card { background: var(--white); border: 1px solid var(--gray-200); border-radius: 12px; padding: 32px 28px; transition: all 0.3s; }
-        .service-card:hover { border-color: var(--accent); box-shadow: 0 8px 24px rgba(0,0,0,0.08); transform: translateY(-2px); }
-        .service-card-icon { width: 48px; height: 48px; background: rgba(0,170,210,0.08); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 18px; }
+        .service-card { background: var(--white); border: 1px solid var(--gray-200); border-radius: 0; padding: 32px 28px; transition: all 0.3s; }
+        .service-card:hover { border-color: #00AAD2; box-shadow: 0 8px 24px rgba(0,44,95,0.12); transform: translateY(-2px); }
+        .service-card-icon { width: 48px; height: 48px; background: rgba(0,170,210,0.08); border-radius: 0; display: flex; align-items: center; justify-content: center; margin-bottom: 18px; }
         .service-card-icon svg { width: 24px; height: 24px; fill: var(--accent); }
         .service-card h3 { font-size: 18px; font-weight: 700; color: var(--gray-800); margin-bottom: 8px; }
         .service-card p { font-size: 14px; color: var(--gray-600); line-height: 1.6; margin-bottom: 16px; }
-        .service-price { display: inline-block; font-size: 14px; font-weight: 700; color: var(--accent); background: rgba(0,170,210,0.06); padding: 6px 14px; border-radius: 20px; }
+        .service-price { display: inline-block; font-size: 14px; font-weight: 700; color: var(--accent); background: rgba(0,170,210,0.06); padding: 6px 14px; border-radius: 0; }
 
         /* ========== SEO CONTENT ========== */
         .seo-content { background: var(--white); padding: 64px 24px; border-top: 1px solid var(--gray-200); }
@@ -140,18 +138,18 @@
         .seo-content-inner a:hover { text-decoration: underline; }
 
         /* ========== FOOTER ========== */
-        .site-footer { background: #1a1a1a; color: #ccc; padding: 48px 0 0; }
+        .site-footer { background: #002C5F; color: #FFFFFF; padding: 48px 0 0; }
         .site-footer .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
-        .footer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; padding-bottom: 40px; border-bottom: 1px solid #333; }
+        .footer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.2); }
         .footer-col h4 { font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: #fff; margin-bottom: 16px; }
         .footer-col ul { list-style: none; }
         .footer-col li { margin-bottom: 10px; }
-        .footer-col a { color: #aaa; font-size: 14px; transition: color 0.2s; }
+        .footer-col a { color: rgba(255,255,255,0.7); font-size: 14px; transition: color 0.2s; }
         .footer-col a:hover { color: #fff; }
-        .footer-cross-links { padding: 20px 0; border-bottom: 1px solid #333; text-align: center; font-size: 13px; color: #888; }
+        .footer-cross-links { padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,0.2); text-align: center; font-size: 13px; color: rgba(255,255,255,0.5); }
         .footer-cross-links a { color: #00AAD2; font-weight: 500; }
         .footer-cross-links a:hover { text-decoration: underline; }
-        .footer-bottom { padding: 20px 0; text-align: center; font-size: 13px; color: #777; }
+        .footer-bottom { padding: 20px 0; text-align: center; font-size: 13px; color: rgba(255,255,255,0.5); }
         .footer-bottom a { color: #00AAD2; font-weight: 500; }
         .footer-bottom a:hover { text-decoration: underline; }
 
@@ -274,7 +272,7 @@
                             <select><option value="">Preferred Time</option><option>Morning (7:30-10AM)</option><option>Midday (10AM-1PM)</option><option>Afternoon (1PM-4PM)</option><option>Late (4PM-6PM)</option></select>
                         </div>
                     </div>
-                    <div class="form-field-full"><textarea placeholder="Describe the service needed..." style="width:100%; padding:14px 16px; border:1px solid var(--gray-200); border-radius:8px; font-family:inherit; font-size:14px; min-height:80px; resize:vertical; outline:none;"></textarea></div>
+                    <div class="form-field-full"><textarea placeholder="Describe the service needed..." style="width:100%; padding:14px 16px; border:1px solid var(--gray-200); border-radius:0; font-family:inherit; font-size:14px; min-height:80px; resize:vertical; outline:none;"></textarea></div>
                     <button type="submit" class="form-submit-btn">Schedule Appointment</button>
                 </form>
             </div>

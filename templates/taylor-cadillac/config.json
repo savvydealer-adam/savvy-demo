@@ -10,9 +10,9 @@
   "address": "6100 West Central Ave, Toledo, OH 43615",
   "oem": ["Cadillac"],
   "colors": {
-    "primary": "#1A1A1A",
-    "secondary": "#C4A265",
-    "accent": "#C4A265"
+    "primary": "#000000",
+    "secondary": "#FFFFFF",
+    "accent": "#0D0D0D"
   },
   "tier": "luxury",
   "group": "Taylor Automotive Family",
