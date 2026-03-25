@@ -1,0 +1,28 @@
+{
+  "name": "Thayer Chrysler Dodge Jeep Ram",
+  "slug": "thayer-cdjr",
+  "location": "Bowling Green, OH",
+  "phone": {
+    "sales": "(419) 601-6090",
+    "service": "(419) 601-6202",
+    "parts": "(419) 601-6973",
+    "main": "(419) 352-5151"
+  },
+  "address": "1303 N Main St, Bowling Green, OH 43402",
+  "oem": ["Chrysler", "Dodge", "Jeep", "Ram"],
+  "colors": {
+    "primary": "#3363ba",
+    "secondary": "#252525",
+    "accent": "#ED1C24"
+  },
+  "hours": {
+    "sales": "Mon 8-9, Tue-Wed 8-6, Thu 8-9, Fri 8-6, Sat 8-4, Sun Closed",
+    "service": "Mon-Fri 8-5, Sat 8-12, Sun Closed"
+  },
+  "group": {
+    "name": "Thayer Family Dealerships",
+    "url": "/demo/thayer-auto"
+  },
+  "pages": ["index", "inventory", "vdp", "service", "financing", "contact"],
+  "featured": true
+}

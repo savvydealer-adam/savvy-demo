@@ -1,0 +1,25 @@
+{
+  "name": "Thayer Toyota",
+  "slug": "thayer-toyota",
+  "brand": "Toyota",
+  "address": "1225 N Main St, Bowling Green, OH 43402",
+  "phones": {
+    "sales": "(419) 257-6025",
+    "service": "(419) 257-6089",
+    "parts": "(419) 257-6080"
+  },
+  "hours": {
+    "sales": "Mon 8:30-9, Tue-Wed 8:30-6, Thu 8:30-9, Fri 8:30-6, Sat 9-4, Sun Closed",
+    "service": "Mon-Fri 8-5:30, Sat 8-2, Sun Closed"
+  },
+  "colors": {
+    "primary": "#000000",
+    "accent": "#EB0A1E",
+    "white": "#FFFFFF",
+    "footer": "#000000"
+  },
+  "pages": ["index", "inventory", "vdp", "service", "financing", "contact"],
+  "featured": true,
+  "group": "Thayer Family Dealerships",
+  "groupUrl": "/demo/thayer-auto"
+}

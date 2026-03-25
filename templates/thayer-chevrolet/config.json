@@ -1,0 +1,25 @@
+{
+  "name": "Thayer Chevrolet",
+  "slug": "thayer-chevrolet",
+  "brand": "Chevrolet",
+  "address": "1225 N Main St, Bowling Green, OH 43402",
+  "phones": {
+    "sales": "(888) 972-0448",
+    "service": "(866) 240-1105",
+    "parts": "(866) 584-7703"
+  },
+  "hours": {
+    "sales": "Mon 9-9, Tue-Wed 9-6, Thu 9-9, Fri 9-6, Sat 9-4, Sun Closed",
+    "service": "Mon-Wed,Fri 7:30-6, Thu 7:30-8, Sat 8-2, Sun Closed"
+  },
+  "colors": {
+    "primary": "#333333",
+    "accent": "#D4AF37",
+    "interactive": "#0066CC",
+    "white": "#FFFFFF"
+  },
+  "pages": ["index", "inventory", "vdp", "service", "financing", "contact"],
+  "featured": true,
+  "group": "Thayer Family Dealerships",
+  "groupUrl": "/demo/thayer-auto"
+}

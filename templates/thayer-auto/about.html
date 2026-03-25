@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Thayer Family Dealerships | Bowling Green, OH</title>
+  <meta name="description" content="Learn about Thayer Family Dealerships, Bowling Green, Ohio's trusted auto group since 1935. Founded by Ralph Thayer, 6 dealerships, 8 brands, ~200 employees. #ThinkThayer">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --navy: #1B2A4A;
+      --navy-dark: #111D35;
+      --navy-light: #243756;
+      --gold: #C8A951;
+      --gold-dark: #B0923D;
+      --gold-light: #D4BB6E;
+      --white: #FFFFFF;
+      --light-gray: #F8F9FB;
+      --gray-100: #F0F1F3;
+      --gray-200: #E2E5E8;
+      --gray-400: #9CA3AF;
+      --gray-600: #6B7280;
+      --gray-800: #1F2937;
+    }
+
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: #333; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; height: auto; }
+
+    /* ========== TOP BAR ========== */
+    .top-bar { background: var(--navy-dark); color: #fff; padding: 10px 0; font-size: 13px; border-bottom: 1px solid rgba(200,169,81,0.3); }
+    .top-bar .container { max-width: 1320px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+    .top-bar-left { display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,0.8); font-weight: 500; }
+    .top-bar-left svg { width: 14px; height: 14px; color: var(--gold); flex-shrink: 0; }
+    .top-bar-right { display: flex; gap: 20px; align-items: center; }
+    .top-bar-right a { color: rgba(255,255,255,0.8); transition: color 0.2s; font-weight: 500; }
+    .top-bar-right a:hover { color: var(--gold); }
+
+    /* ========== HEADER ========== */
+    .site-header { background: var(--white); border-bottom: 1px solid var(--gray-200); padding: 14px 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+    .site-header .container { max-width: 1320px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .header-logo { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+    .header-logo-icon { width: 44px; height: 44px; background: var(--navy); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 900; color: var(--gold); letter-spacing: -1px; }
+    .header-logo-text { line-height: 1.15; }
+    .header-logo-text .brand-name { font-size: 18px; font-weight: 800; color: var(--navy); letter-spacing: -0.3px; }
+    .header-logo-text .brand-sub { font-size: 11px; font-weight: 600; color: var(--gold-dark); text-transform: uppercase; letter-spacing: 1.5px; }
+    .header-nav { display: flex; align-items: center; gap: 4px; }
+    .header-nav a { color: var(--gray-800); font-size: 14px; font-weight: 600; padding: 8px 14px; border-radius: 6px; transition: background 0.2s, color 0.2s; }
+    .header-nav a:hover { background: var(--light-gray); color: var(--navy); }
+    .header-nav a.active { background: var(--navy); color: var(--white); }
+
+    /* ========== MOBILE MENU ========== */
+    .mobile-menu-btn { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+    .mobile-menu-btn svg { width: 28px; height: 28px; color: var(--navy); }
+    .mobile-nav { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: var(--white); z-index: 200; padding: 24px; flex-direction: column; }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px; }
+    .mobile-nav-close { background: none; border: none; cursor: pointer; padding: 8px; }
+    .mobile-nav-close svg { width: 28px; height: 28px; color: var(--navy); }
+    .mobile-nav-links { display: flex; flex-direction: column; gap: 4px; }
+    .mobile-nav-links a { font-size: 18px; font-weight: 600; color: var(--navy); padding: 14px 16px; border-radius: 8px; transition: background 0.2s; }
+    .mobile-nav-links a:hover, .mobile-nav-links a.active { background: var(--light-gray); }
+    .mobile-nav-links a.active { color: var(--gold-dark); }
+    .mobile-nav-phone { margin-top: auto; text-align: center; padding: 20px; background: var(--navy); border-radius: 12px; color: var(--white); font-size: 18px; font-weight: 700; }
+
+    /* ========== BUTTONS ========== */
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 16px 36px; font-size: 15px; font-weight: 700; border-radius: 8px; cursor: pointer; transition: all 0.25s; font-family: inherit; border: 2px solid transparent; text-align: center; }
+    .btn-gold { background: var(--gold); color: var(--navy-dark); border-color: var(--gold); }
+    .btn-gold:hover { background: var(--gold-dark); border-color: var(--gold-dark); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(200,169,81,0.4); }
+    .btn-navy { background: var(--navy); color: var(--white); border-color: var(--navy); }
+    .btn-navy:hover { background: var(--navy-dark); border-color: var(--navy-dark); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(27,42,74,0.3); }
+    .btn-outline-navy { background: transparent; color: var(--navy); border-color: var(--navy); }
+    .btn-outline-navy:hover { background: var(--navy); color: var(--white); }
+
+    /* ========== PAGE HERO ========== */
+    .page-hero {
+      background: linear-gradient(rgba(27,42,74,0.75), rgba(17,29,53,0.9)),
+                  url('https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+      padding: 100px 0 80px;
+      text-align: center;
+      color: #fff;
+      position: relative;
+    }
+
+    .page-hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light), var(--gold));
+    }
+
+    .page-hero .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .page-hero h1 {
+      font-size: 48px;
+      font-weight: 900;
+      margin-bottom: 16px;
+      letter-spacing: -1px;
+    }
+
+    .page-hero h1 span { color: var(--gold); }
+
+    .page-hero p {
+      font-size: 18px;
+      color: rgba(255,255,255,0.8);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* ========== HISTORY SECTION ========== */
+    .history-section {
+      padding: 100px 0;
+      background: var(--white);
+    }
+
+    .history-section .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .history-section h2 {
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
+    }
+
+    .history-section .gold-line {
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: var(--gold);
+      margin-bottom: 32px;
+      border-radius: 2px;
+    }
+
+    .history-section p {
+      font-size: 17px;
+      color: var(--gray-600);
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .history-section p strong { color: var(--navy); }
+
+    /* ========== TIMELINE ========== */
+    .timeline-section {
+      padding: 100px 0;
+      background: var(--light-gray);
+    }
+
+    .timeline-section .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    .section-header h2 {
+      font-size: 38px;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+    }
+
+    .section-header p {
+      font-size: 17px;
+      color: var(--gray-600);
+      max-width: 580px;
+      margin: 0 auto;
+    }
+
+    .section-header .gold-line {
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: var(--gold);
+      margin: 18px auto 0;
+      border-radius: 2px;
+    }
+
+    .timeline {
+      position: relative;
+      padding-left: 48px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 18px;
+      width: 3px;
+      background: var(--gray-200);
+      border-radius: 2px;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 48px;
+    }
+
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: -39px;
+      top: 4px;
+      width: 16px;
+      height: 16px;
+      background: var(--gold);
+      border-radius: 50%;
+      border: 3px solid var(--white);
+      box-shadow: 0 0 0 3px var(--gold);
+    }
+
+    .timeline-year {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--gold-dark);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 6px;
+    }
+
+    .timeline-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .timeline-desc {
+      font-size: 15px;
+      color: var(--gray-600);
+      line-height: 1.6;
+    }
+
+    /* ========== VALUES SECTION ========== */
+    .values-section {
+      padding: 100px 0;
+      background: var(--white);
+    }
+
+    .values-section .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .value-card {
+      text-align: center;
+      padding: 40px 28px;
+      background: var(--light-gray);
+      border-radius: 16px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .value-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+    }
+
+    .value-icon {
+      width: 64px;
+      height: 64px;
+      background: rgba(200,169,81,0.15);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+    }
+
+    .value-icon svg {
+      width: 28px;
+      height: 28px;
+      color: var(--gold);
+    }
+
+    .value-card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+
+    .value-card p {
+      font-size: 15px;
+      color: var(--gray-600);
+      line-height: 1.6;
+    }
+
+    /* ========== STATS ========== */
+    .stats-section {
+      padding: 80px 0;
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .stats-section .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 48px;
+      font-weight: 900;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .stat-label {
+      font-size: 14px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.6);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    /* ========== FOOTER ========== */
+    .site-footer { background: #0D1520; color: #ccc; padding: 64px 0 0; }
+    .site-footer .container { max-width: 1320px; margin: 0 auto; padding: 0 24px; }
+    .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 36px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .footer-brand { padding-right: 24px; }
+    .footer-brand-name { font-size: 20px; font-weight: 800; color: var(--white); margin-bottom: 4px; }
+    .footer-brand-sub { font-size: 11px; font-weight: 600; color: var(--gold); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 16px; }
+    .footer-brand p { font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1.6; margin-bottom: 16px; }
+    .footer-brand a { color: var(--gold); font-weight: 600; font-size: 14px; transition: color 0.2s; }
+    .footer-brand a:hover { color: var(--gold-light); }
+    .footer-col h4 { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--white); margin-bottom: 16px; }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 10px; }
+    .footer-col a { color: rgba(255,255,255,0.6); font-size: 14px; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--gold); }
+    .footer-bottom { padding: 24px 0; text-align: center; font-size: 13px; color: rgba(255,255,255,0.4); }
+    .footer-bottom a { color: var(--gold); font-weight: 600; }
+    .footer-bottom a:hover { text-decoration: underline; }
+
+    /* ========== ANIMATIONS ========== */
+    .fade-in-up { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease-out, transform 0.7s ease-out; }
+    .fade-in-up.visible { opacity: 1; transform: translateY(0); }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 1023px) {
+      .header-nav { display: none; }
+      .mobile-menu-btn { display: block; }
+      .values-grid { grid-template-columns: 1fr 1fr; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+    }
+
+    @media (max-width: 768px) {
+      .footer-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 640px) {
+      .top-bar .container { flex-direction: column; text-align: center; gap: 4px; }
+      .page-hero h1 { font-size: 34px; }
+      .page-hero { padding: 80px 0 60px; }
+      .history-section, .timeline-section, .values-section { padding: 64px 0; }
+      .history-section h2 { font-size: 28px; }
+      .section-header h2 { font-size: 28px; }
+      .values-grid { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+      .footer-grid { grid-template-columns: 1fr; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== TOP BAR ==================== -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Serving Bowling Green, Findlay, Toledo &amp; Northwest Ohio
+      </div>
+      <div class="top-bar-right">
+        <a href="tel:4193535751">Main: (419) 353-5751</a>
+        <a href="/demo/thayer-auto/contact">All Locations</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="site-header">
+    <div class="container">
+      <a href="/demo/thayer-auto" class="header-logo">
+        <div class="header-logo-icon">TF</div>
+        <div class="header-logo-text">
+          <div class="brand-name">Thayer Family</div>
+          <div class="brand-sub">Dealerships</div>
+        </div>
+      </a>
+      <nav class="header-nav">
+        <a href="/demo/thayer-auto">Home</a>
+        <a href="/demo/thayer-auto/inventory">Inventory</a>
+        <a href="/demo/thayer-auto/service">Service</a>
+        <a href="/demo/thayer-auto/financing">Financing</a>
+        <a href="/demo/thayer-auto/about" class="active">About</a>
+        <a href="/demo/thayer-auto/contact">Locations</a>
+      </nav>
+      <button class="mobile-menu-btn" onclick="document.getElementById('mobileNav').classList.add('open')" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==================== MOBILE NAV ==================== -->
+  <div class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-header">
+      <a href="/demo/thayer-auto" class="header-logo">
+        <div class="header-logo-icon">TF</div>
+        <div class="header-logo-text">
+          <div class="brand-name">Thayer Family</div>
+          <div class="brand-sub">Dealerships</div>
+        </div>
+      </a>
+      <button class="mobile-nav-close" onclick="document.getElementById('mobileNav').classList.remove('open')" aria-label="Close menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="/demo/thayer-auto">Home</a>
+      <a href="/demo/thayer-auto/inventory">Inventory</a>
+      <a href="/demo/thayer-auto/service">Service</a>
+      <a href="/demo/thayer-auto/financing">Financing</a>
+      <a href="/demo/thayer-auto/about" class="active">About Us</a>
+      <a href="/demo/thayer-auto/contact">Locations</a>
+    </div>
+    <a href="tel:4193535751" class="mobile-nav-phone">(419) 353-5751</a>
+  </div>
+
+  <!-- ==================== PAGE HERO ==================== -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>About <span>Thayer Family</span> Dealerships</h1>
+      <p>90+ years of family values, community commitment, and automotive excellence in Bowling Green, Ohio.</p>
+    </div>
+  </section>
+
+  <!-- ==================== HISTORY SECTION ==================== -->
+  <section class="history-section">
+    <div class="container fade-in-up">
+      <h2>Our Heritage</h2>
+      <span class="gold-line"></span>
+      <p>In 1935, <strong>Ralph Thayer</strong> opened a single-brand dealership on Main Street in Bowling Green, Ohio. His philosophy was simple: sell good cars at fair prices, treat people right, and give back to the community that supports you.</p>
+      <p>That founding philosophy has guided the Thayer family through nearly a century of growth. What started as one small dealership has grown into <strong>six dealerships representing eight of the world's most popular automotive brands</strong> -- Chevrolet, Toyota, Honda, Ford, Nissan, Chrysler, Dodge, Jeep, and Ram.</p>
+      <p>Through economic booms and busts, through the evolution from muscle cars to hybrids, the Thayer family has remained committed to Bowling Green. Today, with approximately <strong>200 team members</strong> and over <strong>3,600 vehicles in stock</strong>, Thayer Family Dealerships is one of the region's largest and most trusted auto groups.</p>
+      <p>The third and fourth generations of the Thayer family continue to uphold Ralph's original promise: <strong>#ThinkThayer</strong> isn't just a tagline -- it's a commitment to earning your trust, one customer at a time.</p>
+    </div>
+  </section>
+
+  <!-- ==================== TIMELINE ==================== -->
+  <section class="timeline-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our Journey</h2>
+        <p>Key milestones in the Thayer Family Dealerships story</p>
+        <span class="gold-line"></span>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item fade-in-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">1935</div>
+          <div class="timeline-title">Ralph Thayer Opens First Dealership</div>
+          <div class="timeline-desc">Ralph Thayer establishes a dealership on Main Street in Bowling Green, Ohio, beginning a family tradition of automotive excellence.</div>
+        </div>
+        <div class="timeline-item fade-in-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">1960s</div>
+          <div class="timeline-title">Second Generation Takes the Wheel</div>
+          <div class="timeline-desc">The next generation of Thayers joins the business, expanding operations and adding new brand partnerships to serve a growing customer base.</div>
+        </div>
+        <div class="timeline-item fade-in-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">1980s</div>
+          <div class="timeline-title">Import Brands Join the Family</div>
+          <div class="timeline-desc">Thayer adds Toyota, Honda, and Nissan franchises, giving customers access to the world's most popular import brands right in Bowling Green.</div>
+        </div>
+        <div class="timeline-item fade-in-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">2000s</div>
+          <div class="timeline-title">Six Dealerships, Eight Brands</div>
+          <div class="timeline-desc">With the addition of Ford and CDJR, Thayer Family Dealerships reaches its current roster of six stores representing eight brands, with over 3,600 vehicles in inventory.</div>
+        </div>
+        <div class="timeline-item fade-in-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">Today</div>
+          <div class="timeline-title">90+ Years and Still Growing</div>
+          <div class="timeline-desc">The Thayer family continues to invest in facilities, people, and technology to deliver a world-class buying and service experience for Northwest Ohio.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== STATS ==================== -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid fade-in-up">
+        <div>
+          <div class="stat-number">90+</div>
+          <div class="stat-label">Years in Business</div>
+        </div>
+        <div>
+          <div class="stat-number">~200</div>
+          <div class="stat-label">Team Members</div>
+        </div>
+        <div>
+          <div class="stat-number">3,000+</div>
+          <div class="stat-label">Vehicles Sold/Year</div>
+        </div>
+        <div>
+          <div class="stat-number">3,600+</div>
+          <div class="stat-label">Vehicles in Stock</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== VALUES ==================== -->
+  <section class="values-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our Values</h2>
+        <p>The principles that have guided the Thayer family for over 90 years</p>
+        <span class="gold-line"></span>
+      </div>
+      <div class="values-grid">
+        <div class="value-card fade-in-up">
+          <div class="value-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <h3>Family First</h3>
+          <p>We treat every customer, employee, and partner like family. That's been the Thayer way since 1935.</p>
+        </div>
+        <div class="value-card fade-in-up">
+          <div class="value-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Integrity Always</h3>
+          <p>Transparent pricing, honest service, and no-pressure sales. We earn trust the old-fashioned way.</p>
+        </div>
+        <div class="value-card fade-in-up">
+          <div class="value-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Community Roots</h3>
+          <p>We're proud to call Bowling Green home and actively support BGSU, local schools, youth programs, and civic organizations.</p>
+        </div>
+        <div class="value-card fade-in-up">
+          <div class="value-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+          </div>
+          <h3>Excellence</h3>
+          <p>From our showrooms to our service bays, we hold ourselves to the highest standards in everything we do.</p>
+        </div>
+        <div class="value-card fade-in-up">
+          <div class="value-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <h3>Innovation</h3>
+          <p>We embrace new technology and processes to make your buying and service experience faster, easier, and better.</p>
+        </div>
+        <div class="value-card fade-in-up">
+          <div class="value-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+          </div>
+          <h3>Longevity</h3>
+          <p>90+ years in business means we'll be here for you today, tomorrow, and for generations to come.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand-name">Thayer Family Dealerships</div>
+          <div class="footer-brand-sub">Since 1935</div>
+          <p>Bowling Green, Ohio's premier dealer group. Eight brands, six dealerships, and a family commitment to excellence that spans over 90 years. #ThinkThayer</p>
+          <a href="tel:4193535751">(419) 353-5751</a>
+        </div>
+        <div class="footer-col">
+          <h4>Domestic Brands</h4>
+          <ul>
+            <li><a href="/demo/thayer-chevrolet">Thayer Chevrolet</a></li>
+            <li><a href="/demo/thayer-ford">Thayer Ford</a></li>
+            <li><a href="/demo/thayer-cdjr">Thayer CDJR</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Import Brands</h4>
+          <ul>
+            <li><a href="/demo/thayer-toyota">Thayer Toyota</a></li>
+            <li><a href="/demo/thayer-honda">Thayer Honda</a></li>
+            <li><a href="/demo/thayer-nissan">Thayer Nissan</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/demo/thayer-auto/inventory">Browse Inventory</a></li>
+            <li><a href="/demo/thayer-auto/service">Service Center</a></li>
+            <li><a href="/demo/thayer-auto/financing">Financing</a></li>
+            <li><a href="/demo/thayer-auto/about">About Us</a></li>
+            <li><a href="/demo/thayer-auto/contact">All Locations</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Thayer Family Dealerships &mdash; 1225 N Main St, Bowling Green, OH 43402 &nbsp;&bull;&nbsp; &copy; 2026 All Rights Reserved &nbsp;&bull;&nbsp; Powered by <a href="https://www.savvydealer.com" target="_blank" rel="noopener">SavvyDealer</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var targets = document.querySelectorAll('.fade-in-up');
+      if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+          });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+        targets.forEach(function(el) { observer.observe(el); });
+      } else {
+        targets.forEach(function(el) { el.classList.add('visible'); });
+      }
+      var mobileLinks = document.querySelectorAll('.mobile-nav-links a');
+      mobileLinks.forEach(function(link) { link.addEventListener('click', function() { document.getElementById('mobileNav').classList.remove('open'); }); });
+    });
+  </script>
+
+</body>
+</html>

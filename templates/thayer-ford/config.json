@@ -1,0 +1,24 @@
+{
+  "name": "Thayer Ford",
+  "slug": "thayer-ford",
+  "brand": "Ford",
+  "address": "18039 N Dixie Hwy, Bowling Green, OH 43402",
+  "phones": {
+    "sales": "(419) 353-5271",
+    "tollFree": "(888) 440-5271"
+  },
+  "hours": {
+    "sales": "Mon 8:30-9, Tue-Wed 8:30-6, Thu 8:30-9, Fri 8:30-6, Sat 9-4, Sun Closed",
+    "service": "Mon-Fri 8-6, Sat 9-3, Sun Closed"
+  },
+  "colors": {
+    "primary": "#00095B",
+    "accent": "#1700F4",
+    "actionBlue": "#0276B3",
+    "white": "#FFFFFF"
+  },
+  "pages": ["index", "inventory", "vdp", "service", "financing", "contact"],
+  "featured": true,
+  "group": "Thayer Family Dealerships",
+  "groupUrl": "/demo/thayer-auto"
+}

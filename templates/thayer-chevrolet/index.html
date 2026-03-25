@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thayer Chevrolet | New Chevrolet Dealer | Bowling Green, OH</title>
+  <meta name="description" content="Shop new and pre-owned Chevrolet vehicles at Thayer Chevrolet. Browse Silverado, Equinox, Tahoe, Trax, Colorado, Traverse, Blazer, Corvette and more. Serving Bowling Green, Findlay, Toledo, and northwest Ohio.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --chevy-gold: #D4AF37;
+      --chevy-gold-hover: #B8941F;
+      --chevy-dark: #333333;
+      --chevy-charcoal: #262626;
+      --chevy-title: #1A1A1A;
+      --chevy-body: #333333;
+      --chevy-muted: #666666;
+      --chevy-disabled: #999999;
+      --chevy-blue: #0066CC;
+      --chevy-blue-hover: #0052A3;
+      --chevy-price: #2E7D32;
+      --chevy-white: #FFFFFF;
+      --chevy-section-bg: #F5F5F5;
+      --chevy-border: #DDDDDD;
+      --chevy-border-light: #E5E5E5;
+      --chevy-footer-bg: #222222;
+      --chevy-footer-link: #808080;
+      --chevy-font: 'Barlow', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      --chevy-radius-btn: 5px;
+      --chevy-radius-card: 8px;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: var(--chevy-font);
+      color: var(--chevy-body);
+      background-color: var(--chevy-white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; height: auto; }
+
+    /* ========== TOP BAR ========== */
+    .top-bar {
+      background: var(--chevy-dark);
+      color: #fff;
+      padding: 8px 0;
+      font-size: 13px;
+    }
+    .top-bar .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .top-bar-phones {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .top-bar-phones a {
+      color: #fff;
+      font-weight: 500;
+      transition: opacity 0.2s;
+    }
+    .top-bar-phones a:hover { opacity: 0.85; }
+    .top-bar-phones span {
+      color: rgba(255,255,255,0.6);
+      margin-right: 4px;
+      font-weight: 400;
+    }
+    .top-bar-address { color: rgba(255,255,255,0.85); }
+    .top-bar-address a { color: #fff; }
+    .top-bar-address a:hover { text-decoration: underline; }
+
+    /* ========== HEADER ========== */
+    .site-header {
+      background: var(--chevy-dark);
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .header-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+    .header-logo img {
+      height: 40px;
+      width: auto;
+    }
+    .dealer-name {
+      font-size: 15px;
+      font-weight: 700;
+      color: #FFFFFF;
+      line-height: 1.2;
+      white-space: nowrap;
+    }
+    .dealer-name small {
+      display: block;
+      font-size: 11px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.6);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .header-nav a {
+      color: #FFFFFF;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 8px 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      transition: opacity 0.2s;
+    }
+    .header-nav a:hover { opacity: 0.7; }
+
+    /* Hamburger */
+    .mobile-menu-btn { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+    .mobile-menu-btn span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: 0.3s; }
+    .mobile-nav { display: none; background: var(--chevy-dark); padding: 0 24px 16px; }
+    .mobile-nav a { display: block; color: #fff; font-size: 14px; font-weight: 500; padding: 10px 0; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .mobile-nav a:hover { opacity: 0.7; }
+
+    /* ========== HERO ========== */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 70vh;
+      min-height: 450px;
+      max-height: 760px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .hero__background {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+    .hero__overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.5) 100%);
+      z-index: 1;
+    }
+    .hero__content {
+      position: relative;
+      z-index: 2;
+      color: #FFFFFF;
+      max-width: 800px;
+      padding: 40px 24px;
+    }
+    .hero__title {
+      font-size: 42px;
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: 0.5px;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    .hero__subtitle {
+      font-size: 18px;
+      font-weight: 400;
+      margin-bottom: 24px;
+      opacity: 0.9;
+    }
+    .hero-ctas {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ========== BUTTONS ========== */
+    .chevy-btn-primary {
+      display: inline-block;
+      background-color: var(--chevy-blue);
+      color: #FFFFFF;
+      font-family: var(--chevy-font);
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 12px 28px;
+      border: none;
+      border-radius: var(--chevy-radius-btn);
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .chevy-btn-primary:hover { background-color: var(--chevy-blue-hover); }
+
+    .chevy-btn-secondary {
+      display: inline-block;
+      background-color: transparent;
+      color: #FFFFFF;
+      font-family: var(--chevy-font);
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 10px 28px;
+      border: 2px solid #FFFFFF;
+      border-radius: var(--chevy-radius-btn);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .chevy-btn-secondary:hover { background-color: #FFFFFF; color: #000000; }
+
+    .chevy-btn-outline {
+      display: inline-block;
+      background-color: transparent;
+      color: var(--chevy-dark);
+      font-family: var(--chevy-font);
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 10px 28px;
+      border: 2px solid var(--chevy-dark);
+      border-radius: var(--chevy-radius-btn);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .chevy-btn-outline:hover { background-color: var(--chevy-dark); color: #FFFFFF; }
+
+    .chevy-btn-white {
+      display: inline-block;
+      background-color: #FFFFFF;
+      color: #000000;
+      font-family: var(--chevy-font);
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 12px 28px;
+      border: none;
+      border-radius: var(--chevy-radius-btn);
+      cursor: pointer;
+      transition: opacity 0.2s ease;
+    }
+    .chevy-btn-white:hover { opacity: 0.85; }
+
+    /* ========== MODEL LINEUP ========== */
+    .model-lineup {
+      padding: 72px 0 80px;
+      background: var(--chevy-section-bg);
+    }
+    .model-lineup .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .section-header {
+      text-align: center;
+      margin-bottom: 44px;
+    }
+    .section-header h2 {
+      font-size: 30px;
+      font-weight: 700;
+      color: var(--chevy-title);
+      margin-bottom: 8px;
+    }
+    .section-header p {
+      font-size: 16px;
+      color: var(--chevy-muted);
+    }
+    .model-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .model-card {
+      background: var(--chevy-white);
+      border-radius: var(--chevy-radius-card);
+      border: 1px solid var(--chevy-border);
+      overflow: hidden;
+      transition: box-shadow 0.3s ease;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .model-card:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .model-card-image {
+      background: #f4f4f4;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 160px;
+    }
+    .model-card-image img {
+      max-width: 100%;
+      max-height: 120px;
+      object-fit: contain;
+    }
+    .model-card-info {
+      padding: 14px 16px;
+      text-align: center;
+    }
+    .model-card-year {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--chevy-muted);
+      margin-bottom: 2px;
+    }
+    .model-card-name {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--chevy-title);
+    }
+    .model-card-starting {
+      font-size: 12px;
+      color: var(--chevy-disabled);
+      margin-top: 4px;
+    }
+
+    /* ========== WHY SECTION ========== */
+    .why-section {
+      padding: 72px 0;
+      background: var(--chevy-white);
+    }
+    .why-section .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      margin-top: 44px;
+    }
+    .why-card {
+      text-align: center;
+      padding: 28px 16px;
+      border-radius: var(--chevy-radius-card);
+      border: 1px solid var(--chevy-border);
+      transition: box-shadow 0.3s ease;
+    }
+    .why-card:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .why-icon {
+      width: 64px;
+      height: 64px;
+      background: var(--chevy-section-bg);
+      border-radius: var(--chevy-radius-card);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+    }
+    .why-icon svg {
+      width: 28px;
+      height: 28px;
+      fill: var(--chevy-dark);
+    }
+    .why-card h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--chevy-title);
+      margin-bottom: 8px;
+    }
+    .why-card p {
+      font-size: 14px;
+      color: var(--chevy-muted);
+      line-height: 1.6;
+    }
+
+    /* ========== REVIEWS SECTION ========== */
+    .reviews-section { padding: 72px 0; background: var(--chevy-section-bg); }
+    .reviews-section .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+    .google-rating { display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 16px; }
+    .rating-score { font-size: 28px; font-weight: 800; color: var(--chevy-title); }
+    .rating-stars { display: flex; gap: 2px; }
+    .rating-count { font-size: 14px; color: var(--chevy-disabled); }
+    .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .review-card { background: var(--chevy-white); border-radius: var(--chevy-radius-card); padding: 24px; border: 1px solid var(--chevy-border); transition: box-shadow 0.3s; }
+    .review-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    .review-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+    .reviewer-avatar { width: 40px; height: 40px; background: var(--chevy-dark); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 700; flex-shrink: 0; }
+    .reviewer-info { flex: 1; }
+    .reviewer-name { font-size: 14px; font-weight: 700; color: var(--chevy-title); }
+    .review-date { font-size: 12px; color: var(--chevy-disabled); }
+    .review-stars { display: flex; gap: 2px; margin-bottom: 10px; }
+    .review-text { font-size: 14px; color: var(--chevy-muted); line-height: 1.65; }
+
+    /* ========== CTA BANNER ========== */
+    .cta-banner {
+      background: var(--chevy-dark);
+      padding: 56px 0;
+      text-align: center;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-banner::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--chevy-gold);
+    }
+    .cta-banner .container {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 1;
+    }
+    .cta-banner h2 {
+      font-size: 30px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .cta-banner p {
+      font-size: 16px;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 28px;
+    }
+
+    /* ========== FOOTER ========== */
+    .site-footer {
+      background: var(--chevy-footer-bg);
+      color: #CCCCCC;
+      padding: 48px 0 0;
+    }
+    .site-footer .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .footer-col h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 8px; }
+    .footer-col a {
+      color: var(--chevy-footer-link);
+      font-size: 13px;
+      transition: color 0.2s;
+    }
+    .footer-col a:hover { color: #FFFFFF; }
+    .footer-family {
+      text-align: center;
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      font-size: 14px;
+      color: #888;
+    }
+    .footer-family a {
+      color: var(--chevy-gold);
+      font-weight: 600;
+    }
+    .footer-family a:hover { text-decoration: underline; }
+    .footer-bottom {
+      padding: 20px 0;
+      text-align: center;
+      font-size: 13px;
+      color: #666666;
+    }
+    .footer-bottom a {
+      color: var(--chevy-gold);
+      font-weight: 500;
+    }
+    .footer-bottom a:hover { text-decoration: underline; }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 1023px) {
+      .header-nav { display: none; }
+      .mobile-menu-btn { display: block; }
+      .hero__title { font-size: 34px; }
+      .model-grid { grid-template-columns: repeat(3, 1fr); }
+      .why-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+      .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .model-grid { grid-template-columns: repeat(2, 1fr); }
+      .why-grid { grid-template-columns: 1fr; }
+      .reviews-grid { grid-template-columns: 1fr; }
+      .section-header h2 { font-size: 26px; }
+      .cta-banner h2 { font-size: 24px; }
+    }
+    @media (max-width: 640px) {
+      .top-bar .container { flex-direction: column; text-align: center; gap: 4px; }
+      .top-bar-phones { justify-content: center; }
+      .site-header .container { flex-wrap: wrap; justify-content: center; gap: 12px; }
+      .hero { min-height: 400px; }
+      .hero__title { font-size: 28px; }
+      .hero__subtitle { font-size: 14px; }
+      .model-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== JSON-LD STRUCTURED DATA ==================== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoDealer",
+    "name": "Thayer Chevrolet",
+    "description": "New and pre-owned Chevrolet vehicles in Bowling Green, OH. Serving Findlay, Toledo, Lima, and northwest Ohio.",
+    "url": "https://demo.savvydealer.com/demo/thayer-chevrolet",
+    "telephone": "(888) 972-0448",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1225 N Main St",
+      "addressLocality": "Bowling Green",
+      "addressRegion": "OH",
+      "postalCode": "43402",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "41.3839",
+      "longitude": "-83.6513"
+    },
+    "brand": {
+      "@type": "Brand",
+      "name": "Chevrolet"
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "09:00", "closes": "21:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday"], "opens": "09:00", "closes": "18:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday", "opens": "09:00", "closes": "21:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "09:00", "closes": "18:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "16:00" }
+    ],
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "Thayer Family Dealerships"
+    }
+  }
+  </script>
+
+  <!-- ==================== TOP BAR ==================== -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-phones">
+        <a href="tel:8889720448"><span>Sales:</span> (888) 972-0448</a>
+        <a href="tel:8662401105"><span>Service:</span> (866) 240-1105</a>
+        <a href="tel:8665847703"><span>Parts:</span> (866) 584-7703</a>
+      </div>
+      <div class="top-bar-address">
+        <a href="https://maps.google.com/?q=1225+N+Main+St+Bowling+Green+OH+43402" target="_blank" rel="noopener">1225 N Main St, Bowling Green, OH 43402</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="site-header">
+    <div class="container">
+      <a href="/demo/thayer-chevrolet" class="header-logo">
+        <img src="https://di-shared-assets.dealerinspire.com/public/logos/chevrolet/chevrolet-dark-desktop-logo.png" alt="Chevrolet" style="height:40px;width:auto;">
+        <div class="dealer-name">Thayer Chevrolet<small>Bowling Green, OH</small></div>
+      </a>
+      <nav class="header-nav">
+        <a href="/demo/thayer-chevrolet/inventory">New</a>
+        <a href="/demo/thayer-chevrolet/inventory?type=used">Pre-Owned</a>
+        <a href="/demo/thayer-chevrolet/service">Service</a>
+        <a href="/demo/thayer-chevrolet/financing">Finance</a>
+        <a href="/demo/thayer-chevrolet/contact">Contact</a>
+      </nav>
+      <button class="mobile-menu-btn" onclick="document.getElementById('mobileNav').style.display=document.getElementById('mobileNav').style.display==='block'?'none':'block'" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="/demo/thayer-chevrolet/inventory">New Vehicles</a>
+      <a href="/demo/thayer-chevrolet/inventory?type=used">Pre-Owned</a>
+      <a href="/demo/thayer-chevrolet/service">Service</a>
+      <a href="/demo/thayer-chevrolet/financing">Finance</a>
+      <a href="/demo/thayer-chevrolet/contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero">
+    <img class="hero__background" src="https://www.chevrolet.com/content/dam/chevrolet/na/us/english/index/shopping-tools/media/2025-chevrolet-silverado-1500-702x395.jpg" alt="2025 Chevrolet Silverado 1500">
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <h1>Find New Roads</h1>
+      <p class="hero__subtitle">Discover the full Chevrolet lineup at Thayer Chevrolet in Bowling Green. From the legendary Silverado to the all-new Equinox EV, find the vehicle that fits your life.</p>
+      <div class="hero-ctas">
+        <a href="/demo/thayer-chevrolet/inventory" class="chevy-btn-primary">Browse Inventory</a>
+        <a href="/demo/thayer-chevrolet/financing" class="chevy-btn-secondary">Get Pre-Qualified</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== MODEL LINEUP ==================== -->
+  <section class="model-lineup">
+    <div class="container">
+      <div class="section-header">
+        <h2>The 2025 Chevrolet Lineup</h2>
+        <p>American confidence, advanced technology, and legendary capability</p>
+      </div>
+
+      <div class="model-grid">
+        <a href="/demo/thayer-chevrolet/inventory?model=Silverado" class="model-card">
+          <div class="model-card-image">
+            <img src="https://www.chevrolet.com/content/dam/chevrolet/na/us/english/index/shopping-tools/media/2025-chevrolet-silverado-1500-702x395.jpg" alt="2025 Chevrolet Silverado" loading="lazy">
+          </div>
+          <div class="model-card-info">
+            <div class="model-card-year">2025 Chevrolet</div>
+            <div class="model-card-name">Silverado</div>
+            <div class="model-card-starting">Starting at $38,255</div>
+          </div>
+        </a>
+
+        <a href="/demo/thayer-chevrolet/inventory?model=Equinox" class="model-card">
+          <div class="model-card-image">
+            <img src="https://www.chevrolet.com/content/dam/chevrolet/na/us/english/index/shopping-tools/media/2025-chevrolet-equinox-702x395.jpg" alt="2025 Chevrolet Equinox" loading="lazy">
+          </div>
+          <div class="model-card-info">
+            <div class="model-card-year">2025 Chevrolet</div>
+            <div class="model-card-name">Equinox</div>
+            <div class="model-card-starting">Starting at $30,295</div>
+          </div>
+        </a>
+
+        <a href="/demo/thayer-chevrolet/inventory?model=Tahoe" class="model-card">
+          <div class="model-card-image">
+            <img src="https://www.chevrolet.com/content/dam/chevrolet/na/us/english/index/shopping-tools/media/2025-chevrolet-tahoe-702x395.jpg" alt="2025 Chevrolet Tahoe" loading="lazy">
+          </div>
+          <div class="model-card-info">
+            <div class="model-card-year">2025 Chevrolet</div>
+            <div class="model-card-name">Tahoe</div>
+            <div class="model-card-starting">Starting at $58,795</div>
+          </div>
+        </a>
+
+        <a href="/demo/thayer-chevrolet/inventory?model=Trax" class="model-card">
+          <div class="model-card-image">
+            <img src="https://www.chevrolet.com/content/dam/chevrolet/na/us/english/index/shopping-tools/media/2025-chevrolet-trax-702x395.jpg" alt="2025 Chevrolet Trax" loading="lazy">
+          </div>
+          <div class="model-card-info">
+            <div class="model-card-year">2025 Chevrolet</div>
+            <div class="model-card-name">Trax</div>
+            <div class="model-card-starting">Starting at $21,495</div>
+          </div>
+        </a>
+
+        <a href="/demo/thayer-chevrolet/inventory?model=Colorado" class="model-card">
+          <div class="model-card-image">
+            <img src="https://www.chevrolet.com/content/dam/chevrolet/na/us/english/index/shopping-tools/media/2025-chevrolet-colorado-702x395.jpg" alt="2025 Chevrolet Colorado" loading="lazy">
+          </div>
+          <div class="model-card-info">
+            <div class="model-card-year">2025 Chevrolet</div>
+            <div class="model-card-name">Colorado</div>
+            <div class="model-card-starting">Starting at $30,695</div>
+          </div>
+        </a>
+
+        <a href="/demo/thayer-chevrolet/inventory?model=Traverse" class="model-card">
+          <div class="model-card-image">
+            <img src="https://www.chevrolet.com/content/dam/chevrolet/na/us/english/index/shopping-tools/media/2025-chevrolet-traverse-702x395.jpg" alt="2025 Chevrolet Traverse" loading="lazy">
+          </div>
+          <div class="model-card-info">
+            <div class="model-card-year">2025 Chevrolet</div>
+            <div class="model-card-name">Traverse</div>
+            <div class="model-card-starting">Starting at $36,495</div>
+          </div>
+        </a>
+
+        <a href="/demo/thayer-chevrolet/inventory?model=Blazer" class="model-card">
+          <div class="model-card-image">
+            <img src="https://www.chevrolet.com/content/dam/chevrolet/na/us/english/index/shopping-tools/media/2025-chevrolet-blazer-ev-702x395.jpg" alt="2025 Chevrolet Blazer" loading="lazy">
+          </div>
+          <div class="model-card-info">
+            <div class="model-card-year">2025 Chevrolet</div>
+            <div class="model-card-name">Blazer EV</div>
+            <div class="model-card-starting">Starting at $44,995</div>
+          </div>
+        </a>
+
+        <a href="/demo/thayer-chevrolet/inventory?model=Corvette" class="model-card">
+          <div class="model-card-image">
+            <img src="https://www.chevrolet.com/content/dam/chevrolet/na/us/english/index/shopping-tools/media/2025-chevrolet-corvette-702x395.jpg" alt="2025 Chevrolet Corvette" loading="lazy">
+          </div>
+          <div class="model-card-info">
+            <div class="model-card-year">2025 Chevrolet</div>
+            <div class="model-card-name">Corvette</div>
+            <div class="model-card-starting">Starting at $65,895</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== WHY THAYER ==================== -->
+  <section class="why-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Why Choose Thayer Chevrolet</h2>
+        <p>Family-owned and committed to Bowling Green for generations</p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          </div>
+          <h3>Family Owned</h3>
+          <p>Thayer Chevrolet is a proud family-owned dealership with deep roots in the Bowling Green community.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+          </div>
+          <h3>Transparent Pricing</h3>
+          <p>No hidden fees, no surprises. Our upfront pricing ensures you get the best deal with complete confidence.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24"><path d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z"/></svg>
+          </div>
+          <h3>Certified Service</h3>
+          <p>Our GM-certified technicians use genuine parts and the latest diagnostic tools to keep your Chevrolet running strong.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+          </div>
+          <h3>Community First</h3>
+          <p>We proudly support Bowling Green State University, local schools, and community organizations across Wood County.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== REVIEWS ==================== -->
+  <section class="reviews-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>What Our Customers Say</h2>
+        <p>Real reviews from real Thayer Chevrolet customers</p>
+      </div>
+      <div class="google-rating">
+        <span class="rating-score">4.7</span>
+        <div class="rating-stars">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="#D4AF37"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="#D4AF37"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="#D4AF37"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="#D4AF37"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="#D4AF37"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <span class="rating-count">Based on 312 reviews</span>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar">M</div>
+            <div class="reviewer-info"><div class="reviewer-name">Mike R.</div><div class="review-date">2 weeks ago</div></div>
+          </div>
+          <div class="review-stars">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#D4AF37"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#D4AF37"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#D4AF37"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#D4AF37"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#D4AF37"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div class="review-text">Bought my Silverado from Thayer and couldn't be happier. The sales team was straightforward, no pressure, and they beat every other quote I got. Will definitely be back.</div>
+        </div>
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar">S</div>
+            <div class="reviewer-info"><div class="reviewer-name">Sarah T.</div><div class="review-date">1 month ago</div></div>
+          </div>
+          <div class="review-stars">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#D4AF37"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#D4AF37"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#D4AF37"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#D4AF37"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#D4AF37"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div class="review-text">The service department is outstanding. They got me in same-day for an oil change and tire rotation. Clean waiting area and the whole thing took less than an hour.</div>
+        </div>
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar">J</div>
+            <div class="reviewer-info"><div class="reviewer-name">James L.</div><div class="review-date">3 weeks ago</div></div>
+          </div>
+          <div class="review-stars">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#D4AF37"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#D4AF37"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#D4AF37"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#D4AF37"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#D4AF37"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div class="review-text">Third vehicle we've purchased from Thayer. My wife just picked up a new Equinox and the financing team found us a rate lower than our credit union. True professionals.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA BANNER ==================== -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Ready to Find Your New Chevrolet?</h2>
+      <p>Visit Thayer Chevrolet in Bowling Green or shop our inventory online. Our team is ready to help you find the perfect vehicle.</p>
+      <a href="/demo/thayer-chevrolet/contact" class="chevy-btn-white">Contact Us Today</a>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Inventory</h4>
+          <ul>
+            <li><a href="/demo/thayer-chevrolet/inventory">New Chevrolet Vehicles</a></li>
+            <li><a href="/demo/thayer-chevrolet/inventory?type=used">Pre-Owned Vehicles</a></li>
+            <li><a href="/demo/thayer-chevrolet/inventory?type=certified">Certified Pre-Owned</a></li>
+            <li><a href="/demo/thayer-chevrolet/inventory?special=true">Current Specials</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Service</h4>
+          <ul>
+            <li><a href="/demo/thayer-chevrolet/service">Schedule Service</a></li>
+            <li><a href="/demo/thayer-chevrolet/service#specials">Service Specials</a></li>
+            <li><a href="/demo/thayer-chevrolet/service#parts">Order Parts</a></li>
+            <li><a href="tel:8662401105">Call Service: (866) 240-1105</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Financing</h4>
+          <ul>
+            <li><a href="/demo/thayer-chevrolet/financing">Apply for Financing</a></li>
+            <li><a href="/demo/thayer-chevrolet/financing#calculator">Payment Calculator</a></li>
+            <li><a href="/demo/thayer-chevrolet/financing#trade">Value Your Trade</a></li>
+            <li><a href="/demo/thayer-chevrolet/financing#credit">Credit Solutions</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>About Us</h4>
+          <ul>
+            <li><a href="/demo/thayer-chevrolet/contact">Contact Us</a></li>
+            <li><a href="/demo/thayer-chevrolet/contact#hours">Hours &amp; Directions</a></li>
+            <li><a href="/demo/thayer-chevrolet/vdp">Vehicle Details</a></li>
+            <li><a href="tel:8889720448">Call Sales: (888) 972-0448</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-family">Part of <a href="/demo/thayer-auto">Thayer Family Dealerships</a></div>
+      <div class="footer-bottom">
+        <p>Thayer Chevrolet &mdash; 1225 N Main St, Bowling Green, OH 43402 &bull; &copy; 2026 All Rights Reserved &bull; Powered by <a href="https://www.savvydealer.com" target="_blank" rel="noopener">SavvyDealer</a></p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

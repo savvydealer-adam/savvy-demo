@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026 Honda CR-V EX-L AWD | Thayer Honda | Bowling Green, OH</title>
+  <meta name="description" content="View the 2026 Honda CR-V EX-L AWD at Thayer Honda in Bowling Green, OH. MSRP $36,500, Dealer Price $35,200. Stock #TH3001. Schedule a test drive today.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --honda-red: #CC0000;
+      --honda-red-hover: #A30000;
+      --honda-blue: #2198DD;
+      --honda-blue-hover: #3CACEC;
+      --honda-teal: #5BC5D2;
+      --honda-white: #FFFFFF;
+      --honda-off-white: #F5F5F5;
+      --honda-border: #DDDDDD;
+      --honda-gray-text: #666666;
+      --honda-dark-text: #333333;
+      --honda-black: #000000;
+      --honda-footer-bg: #231F20;
+      --honda-font: 'Nunito', 'Avenir Next Rounded', 'Avenir', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      --honda-radius: 10px;
+      --honda-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      --honda-shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.12);
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: var(--honda-font);
+      color: var(--honda-dark-text);
+      background-color: var(--honda-white);
+      line-height: 1.6;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; height: auto; }
+
+    /* ========== TOP BAR ========== */
+    .top-bar {
+      background: var(--honda-off-white);
+      color: var(--honda-dark-text);
+      padding: 8px 0;
+      font-size: 13px;
+      border-bottom: 1px solid var(--honda-border);
+    }
+    .top-bar .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .top-bar-phones {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .top-bar-phones a {
+      color: var(--honda-dark-text);
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+    .top-bar-phones a:hover { color: var(--honda-blue); }
+    .top-bar-phones span {
+      color: var(--honda-gray-text);
+      margin-right: 4px;
+      font-weight: 400;
+    }
+    .top-bar-address { color: var(--honda-gray-text); }
+    .top-bar-address a { color: var(--honda-dark-text); }
+    .top-bar-address a:hover { color: var(--honda-blue); }
+
+    /* ========== HEADER (WHITE NAV) ========== */
+    .site-header {
+      background: var(--honda-white);
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    .site-header .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .header-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+    .header-logo img {
+      height: 36px;
+      width: auto;
+    }
+    .dealer-name {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--honda-dark-text);
+      line-height: 1.2;
+      white-space: nowrap;
+    }
+    .dealer-name small {
+      display: block;
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--honda-gray-text);
+      letter-spacing: 0.3px;
+    }
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .header-nav a {
+      color: var(--honda-black);
+      font-size: 14px;
+      font-weight: 500;
+      padding: 8px 14px;
+      border-radius: var(--honda-radius);
+      transition: color 0.2s, background 0.2s;
+    }
+    .header-nav a:hover {
+      color: var(--honda-blue);
+    }
+    .header-nav a.active {
+      color: var(--honda-blue);
+      font-weight: 600;
+    }
+
+    /* Mobile hamburger */
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+    }
+    .mobile-menu-btn span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--honda-dark-text);
+      margin: 5px 0;
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: var(--honda-white);
+      z-index: 200;
+      padding: 80px 24px 24px;
+      flex-direction: column;
+      gap: 0;
+    }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav-close {
+      position: absolute;
+      top: 16px;
+      right: 20px;
+      background: none;
+      border: none;
+      font-size: 28px;
+      cursor: pointer;
+      color: var(--honda-dark-text);
+      padding: 8px;
+    }
+    .mobile-nav a {
+      display: block;
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--honda-dark-text);
+      padding: 16px 0;
+      border-bottom: 1px solid var(--honda-border);
+      transition: color 0.2s;
+    }
+    .mobile-nav a:hover { color: var(--honda-blue); }
+
+    /* ========== BREADCRUMBS ========== */
+    .breadcrumbs {
+      background: var(--honda-off-white);
+      padding: 12px 0;
+      border-bottom: 1px solid var(--honda-border);
+      font-size: 13px;
+    }
+    .breadcrumbs .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .breadcrumbs a {
+      color: var(--honda-blue);
+      font-weight: 500;
+    }
+    .breadcrumbs a:hover { text-decoration: underline; }
+    .breadcrumbs span { color: #999; margin: 0 6px; }
+
+    /* ========== HONDA BRAND BUTTONS ========== */
+    .honda-btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background-color: var(--honda-blue);
+      color: var(--honda-white);
+      font-family: var(--honda-font);
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      text-transform: none;
+      padding: 12px 28px;
+      border: none;
+      border-radius: var(--honda-radius);
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-align: center;
+      width: 100%;
+    }
+    .honda-btn-primary:hover {
+      background-color: var(--honda-blue-hover);
+    }
+    .honda-btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background-color: transparent;
+      color: var(--honda-blue);
+      font-family: var(--honda-font);
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      text-transform: none;
+      padding: 12px 28px;
+      border: 2px solid var(--honda-blue);
+      border-radius: var(--honda-radius);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-align: center;
+      width: 100%;
+    }
+    .honda-btn-secondary:hover {
+      background-color: var(--honda-blue);
+      color: var(--honda-white);
+    }
+
+    /* ========== VDP LAYOUT ========== */
+    .vdp-section {
+      padding: 32px 0 60px;
+      background: var(--honda-off-white);
+    }
+    .vdp-section .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .vdp-layout {
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 32px;
+      align-items: start;
+    }
+
+    /* Gallery */
+    .vdp-gallery {
+      background: var(--honda-white);
+      border-radius: var(--honda-radius);
+      box-shadow: var(--honda-shadow);
+      overflow: hidden;
+    }
+    .gallery-main {
+      position: relative;
+      background: #f4f4f4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      min-height: 400px;
+    }
+    .gallery-main img {
+      max-width: 100%;
+      max-height: 380px;
+      object-fit: contain;
+    }
+    .gallery-badge {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      background: var(--honda-blue);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: var(--honda-radius);
+    }
+    .gallery-counter {
+      position: absolute;
+      bottom: 16px;
+      right: 16px;
+      background: rgba(0,0,0,0.6);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: var(--honda-radius);
+    }
+    .gallery-thumbs {
+      display: flex;
+      gap: 8px;
+      padding: 12px;
+      overflow-x: auto;
+    }
+    .gallery-thumb {
+      width: 80px;
+      height: 60px;
+      border-radius: 6px;
+      overflow: hidden;
+      cursor: pointer;
+      border: 2px solid transparent;
+      flex-shrink: 0;
+      transition: border-color 0.2s;
+    }
+    .gallery-thumb.active {
+      border-color: var(--honda-blue);
+    }
+    .gallery-thumb:hover {
+      border-color: var(--honda-blue);
+    }
+    .gallery-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Sidebar */
+    .vdp-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .vdp-card {
+      background: var(--honda-white);
+      border-radius: var(--honda-radius);
+      box-shadow: var(--honda-shadow);
+      padding: 24px;
+    }
+    .vdp-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--honda-dark-text);
+      line-height: 1.3;
+      margin-bottom: 4px;
+    }
+    .vdp-stock {
+      font-size: 13px;
+      color: var(--honda-gray-text);
+      margin-bottom: 16px;
+    }
+    .vdp-price-block {
+      background: var(--honda-off-white);
+      border-radius: var(--honda-radius);
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+    .vdp-price-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 4px 0;
+      font-size: 14px;
+    }
+    .vdp-price-label { color: var(--honda-gray-text); }
+    .vdp-msrp { text-decoration: line-through; color: #999; }
+    .vdp-discount { color: var(--honda-red); font-weight: 700; }
+    .vdp-final-row {
+      border-top: 2px solid var(--honda-border);
+      margin-top: 8px;
+      padding-top: 10px;
+    }
+    .vdp-final-price {
+      font-size: 28px;
+      font-weight: 700;
+      color: #30770f;
+    }
+    .vdp-ctas {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .vdp-contact-row {
+      display: flex;
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .vdp-contact-link {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 10px;
+      border-radius: var(--honda-radius);
+      border: 1px solid var(--honda-border);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--honda-dark-text);
+      transition: all 0.2s;
+    }
+    .vdp-contact-link:hover {
+      border-color: var(--honda-blue);
+      color: var(--honda-blue);
+    }
+    .vdp-contact-link svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+
+    /* Specs */
+    .specs-title {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--honda-dark-text);
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--honda-border);
+    }
+    .specs-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+    .spec-item {
+      display: flex;
+      flex-direction: column;
+      padding: 10px 0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .spec-label {
+      font-size: 12px;
+      color: var(--honda-gray-text);
+      font-weight: 500;
+    }
+    .spec-value {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--honda-dark-text);
+    }
+
+    /* Features */
+    .features-section {
+      padding: 48px 0;
+      background: var(--honda-white);
+    }
+    .features-section .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .features-section h2 {
+      font-size: 26px;
+      font-weight: 600;
+      color: var(--honda-dark-text);
+      margin-bottom: 24px;
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .feature-card {
+      background: var(--honda-off-white);
+      border-radius: var(--honda-radius);
+      padding: 20px;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+    .feature-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--honda-blue);
+      border-radius: var(--honda-radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .feature-icon svg {
+      width: 22px;
+      height: 22px;
+      fill: none;
+      stroke: #fff;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .feature-text h4 {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--honda-dark-text);
+      margin-bottom: 4px;
+    }
+    .feature-text p {
+      font-size: 13px;
+      color: var(--honda-gray-text);
+      line-height: 1.5;
+    }
+
+    /* Similar vehicles */
+    .similar-section {
+      padding: 48px 0 60px;
+      background: var(--honda-off-white);
+    }
+    .similar-section .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .similar-section h2 {
+      font-size: 26px;
+      font-weight: 600;
+      color: var(--honda-dark-text);
+      margin-bottom: 24px;
+      text-align: center;
+    }
+    .similar-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .similar-card {
+      background: var(--honda-white);
+      border-radius: var(--honda-radius);
+      overflow: hidden;
+      box-shadow: var(--honda-shadow);
+      transition: box-shadow 0.3s, transform 0.3s;
+      text-decoration: none;
+      color: inherit;
+    }
+    .similar-card:hover {
+      box-shadow: var(--honda-shadow-hover);
+      transform: translateY(-2px);
+    }
+    .similar-card-img {
+      background: #f4f4f4;
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 180px;
+    }
+    .similar-card-img img {
+      max-width: 100%;
+      max-height: 150px;
+      object-fit: contain;
+    }
+    .similar-card-info {
+      padding: 16px;
+    }
+    .similar-card-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--honda-dark-text);
+      margin-bottom: 4px;
+    }
+    .similar-card-price {
+      font-size: 14px;
+      color: var(--honda-gray-text);
+    }
+    .similar-card-price strong {
+      color: #30770f;
+      font-size: 18px;
+    }
+    .similar-card-cta {
+      display: block;
+      text-align: center;
+      padding: 10px;
+      margin: 0 16px 16px;
+      background: var(--honda-blue);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: var(--honda-radius);
+      transition: background 0.3s;
+    }
+    .similar-card-cta:hover {
+      background: var(--honda-blue-hover);
+    }
+
+    /* ========== FOOTER ========== */
+    .site-footer {
+      background-color: var(--honda-footer-bg);
+      color: #FFFFFF;
+      padding: 60px 0 0;
+    }
+    .site-footer .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .footer-top {
+      display: flex;
+      align-items: center;
+      margin-bottom: 32px;
+    }
+    .footer-top img {
+      height: 40px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .footer-col h4 {
+      font-size: 14px;
+      font-weight: 600;
+      color: #FFFFFF;
+      margin-bottom: 16px;
+      text-transform: none;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 8px; }
+    .footer-col a {
+      color: #CCCCCC;
+      font-size: 13px;
+      font-weight: 400;
+      transition: color 0.2s;
+    }
+    .footer-col a:hover { color: #FFFFFF; }
+    .footer-family {
+      text-align: center;
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      font-size: 14px;
+      color: #888;
+    }
+    .footer-family a { color: var(--honda-blue); font-weight: 600; }
+    .footer-family a:hover { text-decoration: underline; }
+    .footer-locations {
+      text-align: center;
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      font-size: 13px;
+      color: #777;
+    }
+    .footer-locations a {
+      color: #aaa;
+      font-weight: 500;
+      margin: 0 8px;
+    }
+    .footer-locations a:hover { color: #fff; }
+    .footer-bottom {
+      padding: 20px 0;
+      text-align: center;
+      font-size: 13px;
+      color: #666;
+    }
+    .footer-bottom a { color: var(--honda-blue); font-weight: 500; }
+    .footer-bottom a:hover { text-decoration: underline; }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 1023px) {
+      .header-nav { display: none; }
+      .mobile-menu-btn { display: block; }
+      .vdp-layout { grid-template-columns: 1fr; }
+      .features-grid { grid-template-columns: repeat(2, 1fr); }
+      .similar-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      .features-grid { grid-template-columns: 1fr; }
+      .similar-grid { grid-template-columns: 1fr; }
+      .specs-grid { grid-template-columns: 1fr; }
+      .gallery-main { min-height: 260px; }
+      .footer-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 640px) {
+      .top-bar .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 4px;
+      }
+      .top-bar-phones { justify-content: center; }
+      .site-header .container {
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .vdp-contact-row { flex-direction: column; }
+      .footer-grid { grid-template-columns: 1fr; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== TOP BAR ==================== -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-phones">
+        <a href="tel:4194195003"><span>Sales:</span> (419) 419-5003</a>
+        <a href="tel:4193542222"><span>Main:</span> (419) 354-2222</a>
+      </div>
+      <div class="top-bar-address">
+        <a href="https://maps.google.com/?q=1255+N+Main+St+Bowling+Green+OH+43402" target="_blank" rel="noopener">
+          1255 N Main St, Bowling Green, OH 43402
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="site-header">
+    <div class="container">
+      <a href="/demo/thayer-honda" class="header-logo">
+        <img src="https://di-shared-assets.dealerinspire.com/public/logos/honda/honda-dark-desktop-logo.png" alt="Honda">
+        <div class="dealer-name">
+          Thayer Honda
+          <small>Bowling Green, OH</small>
+        </div>
+      </a>
+      <nav class="header-nav">
+        <a href="/demo/thayer-honda">Home</a>
+        <a href="/demo/thayer-honda/inventory" class="active">Inventory</a>
+        <a href="/demo/thayer-honda/service">Service</a>
+        <a href="/demo/thayer-honda/financing">Financing</a>
+        <a href="/demo/thayer-honda/contact">Contact</a>
+      </nav>
+      <button class="mobile-menu-btn" onclick="document.getElementById('mobileNav').classList.add('open')">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav" id="mobileNav">
+    <button class="mobile-nav-close" onclick="document.getElementById('mobileNav').classList.remove('open')">&times;</button>
+    <a href="/demo/thayer-honda">Home</a>
+    <a href="/demo/thayer-honda/inventory">Inventory</a>
+    <a href="/demo/thayer-honda/service">Service</a>
+    <a href="/demo/thayer-honda/financing">Financing</a>
+    <a href="/demo/thayer-honda/contact">Contact</a>
+  </div>
+
+  <!-- ==================== BREADCRUMBS ==================== -->
+  <div class="breadcrumbs">
+    <div class="container">
+      <a href="/demo/thayer-honda">Home</a> <span>/</span> <a href="/demo/thayer-honda/inventory">Inventory</a> <span>/</span> <strong>2026 Honda CR-V EX-L AWD</strong>
+    </div>
+  </div>
+
+  <!-- ==================== VDP ==================== -->
+  <section class="vdp-section">
+    <div class="container">
+      <div class="vdp-layout">
+
+        <!-- Gallery -->
+        <div class="vdp-gallery">
+          <div class="gallery-main">
+            <span class="gallery-badge">New arrival</span>
+            <img id="mainImage" src="https://automobiles.honda.com/-/media/Honda-Models/cr-v/2025/overview/exterior-gallery/non-hybrid/my25_crv_exterior_gallery_desktop_01.jpg" alt="2026 Honda CR-V EX-L AWD">
+            <span class="gallery-counter">1 / 5</span>
+          </div>
+          <div class="gallery-thumbs">
+            <div class="gallery-thumb active" onclick="changeImage(this, 'https://automobiles.honda.com/-/media/Honda-Models/cr-v/2025/overview/exterior-gallery/non-hybrid/my25_crv_exterior_gallery_desktop_01.jpg', 1)">
+              <img src="https://automobiles.honda.com/-/media/Honda-Models/cr-v/2025/overview/exterior-gallery/non-hybrid/my25_crv_exterior_gallery_desktop_01.jpg" alt="Front 3/4 view">
+            </div>
+            <div class="gallery-thumb" onclick="changeImage(this, 'https://automobiles.honda.com/-/media/Honda-Models/cr-v/2025/overview/exterior-gallery/non-hybrid/my25_crv_exterior_gallery_desktop_02.jpg', 2)">
+              <img src="https://automobiles.honda.com/-/media/Honda-Models/cr-v/2025/overview/exterior-gallery/non-hybrid/my25_crv_exterior_gallery_desktop_02.jpg" alt="Side view">
+            </div>
+            <div class="gallery-thumb" onclick="changeImage(this, 'https://automobiles.honda.com/-/media/Honda-Models/cr-v/2025/overview/exterior-gallery/non-hybrid/my25_crv_exterior_gallery_desktop_03.jpg', 3)">
+              <img src="https://automobiles.honda.com/-/media/Honda-Models/cr-v/2025/overview/exterior-gallery/non-hybrid/my25_crv_exterior_gallery_desktop_03.jpg" alt="Rear 3/4 view">
+            </div>
+            <div class="gallery-thumb" onclick="changeImage(this, 'https://automobiles.honda.com/-/media/Honda-Models/cr-v/2025/interior-gallery/my25_crv_interior_gallery_desktop_01.jpg', 4)">
+              <img src="https://automobiles.honda.com/-/media/Honda-Models/cr-v/2025/interior-gallery/my25_crv_interior_gallery_desktop_01.jpg" alt="Interior dashboard">
+            </div>
+            <div class="gallery-thumb" onclick="changeImage(this, 'https://automobiles.honda.com/-/media/Honda-Models/cr-v/2025/interior-gallery/my25_crv_interior_gallery_desktop_02.jpg', 5)">
+              <img src="https://automobiles.honda.com/-/media/Honda-Models/cr-v/2025/interior-gallery/my25_crv_interior_gallery_desktop_02.jpg" alt="Interior seats">
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="vdp-sidebar">
+
+          <!-- Title & pricing card -->
+          <div class="vdp-card">
+            <h1 class="vdp-title">2026 Honda CR-V EX-L AWD</h1>
+            <div class="vdp-stock">Stock #TH3001 | Platinum White Pearl | 1.5L Turbo I-4</div>
+
+            <div class="vdp-price-block">
+              <div class="vdp-price-row">
+                <span class="vdp-price-label">MSRP</span>
+                <span class="vdp-msrp">$36,500</span>
+              </div>
+              <div class="vdp-price-row">
+                <span class="vdp-price-label">Dealer discount</span>
+                <span class="vdp-discount">-$1,300</span>
+              </div>
+              <div class="vdp-price-row vdp-final-row">
+                <span class="vdp-price-label" style="font-weight:600;">Dealer price</span>
+                <span class="vdp-final-price">$35,200</span>
+              </div>
+            </div>
+
+            <div class="vdp-ctas">
+              <a href="/demo/thayer-honda/contact" class="honda-btn-primary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                Check availability
+              </a>
+              <a href="/demo/thayer-honda/financing" class="honda-btn-secondary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                Get pre-qualified
+              </a>
+              <a href="/demo/thayer-honda/contact" class="honda-btn-secondary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Schedule test drive
+              </a>
+            </div>
+
+            <div class="vdp-contact-row">
+              <a href="tel:4194195003" class="vdp-contact-link">
+                <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                Call sales
+              </a>
+              <a href="/demo/thayer-honda/contact" class="vdp-contact-link">
+                <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                Email us
+              </a>
+            </div>
+          </div>
+
+          <!-- Specifications card -->
+          <div class="vdp-card">
+            <div class="specs-title">Vehicle specifications</div>
+            <div class="specs-grid">
+              <div class="spec-item">
+                <span class="spec-label">Year</span>
+                <span class="spec-value">2026</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Make</span>
+                <span class="spec-value">Honda</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Model</span>
+                <span class="spec-value">CR-V</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Trim</span>
+                <span class="spec-value">EX-L</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Drivetrain</span>
+                <span class="spec-value">AWD</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Engine</span>
+                <span class="spec-value">1.5L Turbo I-4</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Transmission</span>
+                <span class="spec-value">CVT automatic</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Exterior color</span>
+                <span class="spec-value">Platinum White Pearl</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Interior color</span>
+                <span class="spec-value">Black leather</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Fuel economy</span>
+                <span class="spec-value">28 city / 34 hwy</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Mileage</span>
+                <span class="spec-value">12 mi</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">VIN</span>
+                <span class="spec-value">7FARS6H7...3001</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== KEY FEATURES ==================== -->
+  <section class="features-section">
+    <div class="container">
+      <h2>Key features</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <div class="feature-text">
+            <h4>Honda Sensing suite</h4>
+            <p>Adaptive cruise control, collision mitigation braking, lane keeping assist, and road departure mitigation come standard.</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <div class="feature-text">
+            <h4>9-inch touchscreen</h4>
+            <p>Wireless Apple CarPlay and Android Auto integration with a responsive, high-resolution display.</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
+          </div>
+          <div class="feature-text">
+            <h4>Real time AWD</h4>
+            <p>Intelligent all-wheel drive system that automatically distributes torque for confident handling in all conditions.</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0112 2a8 8 0 018 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="feature-text">
+            <h4>Leather-trimmed interior</h4>
+            <p>Premium leather seating surfaces with heated front seats, 12-way power driver seat, and 4-way power passenger seat.</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+          </div>
+          <div class="feature-text">
+            <h4>Hands-free power tailgate</h4>
+            <p>Open the tailgate with a simple wave of your foot under the rear bumper -- perfect when your hands are full.</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <div class="feature-text">
+            <h4>Bose premium audio</h4>
+            <p>12-speaker Bose premium sound system with subwoofer for an immersive listening experience on every drive.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SIMILAR VEHICLES ==================== -->
+  <section class="similar-section">
+    <div class="container">
+      <h2>Similar vehicles you may like</h2>
+      <div class="similar-grid">
+        <a href="/demo/thayer-honda/vdp" class="similar-card">
+          <div class="similar-card-img">
+            <img src="https://automobiles.honda.com/-/media/Honda-Models/cr-v/2025/overview/exterior-gallery/non-hybrid/my25_crv_exterior_gallery_desktop_01.jpg" alt="2025 Honda CR-V EX-L" loading="lazy">
+          </div>
+          <div class="similar-card-info">
+            <div class="similar-card-title">2025 Honda CR-V EX-L AWD</div>
+            <div class="similar-card-price">MSRP $36,700 | Dealer price <strong>$35,500</strong></div>
+          </div>
+          <span class="similar-card-cta">View details</span>
+        </a>
+        <a href="/demo/thayer-honda/vdp" class="similar-card">
+          <div class="similar-card-img">
+            <img src="https://automobiles.honda.com/-/media/Honda-Models/cr-v/2025/overview/exterior-gallery/non-hybrid/my25_crv_exterior_gallery_desktop_01.jpg" alt="2026 Honda CR-V Sport Hybrid" loading="lazy">
+          </div>
+          <div class="similar-card-info">
+            <div class="similar-card-title">2026 Honda CR-V Sport Hybrid AWD</div>
+            <div class="similar-card-price">MSRP $38,400 | Dealer price <strong>$37,900</strong></div>
+          </div>
+          <span class="similar-card-cta">View details</span>
+        </a>
+        <a href="/demo/thayer-honda/vdp" class="similar-card">
+          <div class="similar-card-img">
+            <img src="https://automobiles.honda.com/-/media/Honda-Models/cr-v/2025/overview/exterior-gallery/non-hybrid/my25_crv_exterior_gallery_desktop_01.jpg" alt="2026 Honda CR-V EX" loading="lazy">
+          </div>
+          <div class="similar-card-info">
+            <div class="similar-card-title">2026 Honda CR-V EX AWD</div>
+            <div class="similar-card-price">MSRP $34,150 | Dealer price <strong>$33,550</strong></div>
+          </div>
+          <span class="similar-card-cta">View details</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <img src="https://di-shared-assets.dealerinspire.com/public/logos/honda/honda-light-desktop-logo.png" alt="Honda">
+      </div>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Inventory</h4>
+          <ul>
+            <li><a href="/demo/thayer-honda/inventory">New Honda vehicles</a></li>
+            <li><a href="/demo/thayer-honda/inventory?type=used">Pre-owned vehicles</a></li>
+            <li><a href="/demo/thayer-honda/inventory?type=certified">Certified pre-owned</a></li>
+            <li><a href="/demo/thayer-honda/inventory?special=true">Current specials</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="/demo/thayer-honda/service">Schedule service</a></li>
+            <li><a href="/demo/thayer-honda/service">Oil change</a></li>
+            <li><a href="/demo/thayer-honda/service">Brake service</a></li>
+            <li><a href="/demo/thayer-honda/service">Tire center</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <ul>
+            <li><a href="/demo/thayer-honda/financing">Apply for financing</a></li>
+            <li><a href="/demo/thayer-honda/financing">Payment calculator</a></li>
+            <li><a href="/demo/thayer-honda/financing">Trade-in value</a></li>
+            <li><a href="/demo/thayer-honda/financing">Credit pre-qualification</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Dealership</h4>
+          <ul>
+            <li><a href="/demo/thayer-honda/contact">Contact us</a></li>
+            <li><a href="/demo/thayer-honda/contact">Hours &amp; directions</a></li>
+            <li><a href="tel:4194195003">Call (419) 419-5003</a></li>
+            <li><a href="/demo/thayer-auto">Thayer Family Dealerships</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-family">
+        Part of the <a href="/demo/thayer-auto">Thayer Family Dealerships</a> -- Bowling Green, OH
+      </div>
+      <div class="footer-locations">
+        <a href="/demo/thayer-chevrolet">Thayer Chevrolet</a>
+        <a href="/demo/thayer-toyota">Thayer Toyota</a>
+        <a href="/demo/thayer-honda">Thayer Honda</a>
+        <a href="/demo/thayer-ford">Thayer Ford</a>
+        <a href="/demo/thayer-nissan">Thayer Nissan</a>
+        <a href="/demo/thayer-cdjr">Thayer CDJR</a>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Thayer Honda. All rights reserved. | Powered by <a href="https://www.savvydealer.com" target="_blank" rel="noopener">SavvyDealer</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function changeImage(thumb, src, num) {
+      document.getElementById('mainImage').src = src;
+      document.querySelector('.gallery-counter').textContent = num + ' / 5';
+      document.querySelectorAll('.gallery-thumb').forEach(function(t) { t.classList.remove('active'); });
+      thumb.classList.add('active');
+    }
+  </script>
+
+</body>
+</html>

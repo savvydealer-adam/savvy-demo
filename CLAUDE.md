@@ -23,6 +23,7 @@ Demo dealership website gallery showcasing SavvyDealer website templates. Each t
 | Cadillac | `brand-guides/cadillac.md` | Cadillac luxury brand identity, colors, logo |
 | Genesis | `brand-guides/genesis.md` | Genesis ultra-luxury brand identity, colors, logo |
 | Volkswagen | `brand-guides/volkswagen.md` | VW brand identity, colors, logo, fonts |
+| Ford | `brand-guides/ford.md` | Ford brand identity, FordMotion font, colors, logo, nav/button styles |
 | SRP Template | `brand-guides/srp-template.md` | Standard SRP/inventory page layout for ALL demos |
 
 **SRP pages MUST follow `srp-template.md`.** This is the approved layout — do not deviate from the card structure, filter panel, or grid layout.

@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Financing | Thayer Toyota | Bowling Green, OH</title>
+  <meta name="description" content="Get pre-qualified for Toyota financing at Thayer Toyota in Bowling Green, OH. Competitive rates through Toyota Financial Services. Apply online today.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --toyota-red: #EB0A1E;
+      --toyota-red-hover: #C80818;
+      --toyota-black: #000000;
+      --toyota-white: #FFFFFF;
+      --toyota-gray: #58595B;
+      --toyota-body-bg: #FFFFFF;
+      --toyota-section-bg: #F8F8F8;
+      --toyota-card-bg: #F6F6F6;
+      --toyota-border: #EBEBEB;
+      --toyota-shadow: #D2D2D2;
+      --toyota-muted: #C0C0C0;
+      --toyota-font: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      --toyota-radius: 8px;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: var(--toyota-font);
+      font-size: 14px;
+      color: var(--toyota-black);
+      background-color: var(--toyota-body-bg);
+      line-height: 1.57;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; height: auto; }
+
+    /* ========== TOP BAR ========== */
+    .top-bar {
+      background: var(--toyota-black);
+      color: #fff;
+      padding: 8px 0;
+      font-size: 13px;
+    }
+    .top-bar .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .top-bar-phones {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .top-bar-phones a {
+      color: #fff;
+      font-weight: 500;
+      transition: opacity 0.2s;
+    }
+    .top-bar-phones a:hover { opacity: 0.85; }
+    .top-bar-phones span {
+      color: rgba(255,255,255,0.6);
+      margin-right: 4px;
+      font-weight: 400;
+    }
+    .top-bar-address { color: rgba(255,255,255,0.85); }
+    .top-bar-address a { color: #fff; }
+    .top-bar-address a:hover { text-decoration: underline; }
+
+    /* ========== HEADER ========== */
+    .site-header {
+      background: var(--toyota-black);
+      padding: 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      height: 80px;
+      display: flex;
+      align-items: center;
+    }
+    .site-header .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      width: 100%;
+    }
+    .header-logo {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-shrink: 0;
+    }
+    .toyota-logo { height: 36px; width: auto; }
+    .dealer-name {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--toyota-white);
+      line-height: 1.2;
+      white-space: nowrap;
+    }
+    .dealer-name small {
+      display: block;
+      font-size: 11px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.6);
+      letter-spacing: 0.5px;
+    }
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .header-nav a {
+      color: var(--toyota-white);
+      font-size: 14px;
+      font-weight: 500;
+      padding: 8px 14px;
+      transition: opacity 0.2s;
+    }
+    .header-nav a:hover { opacity: 0.7; }
+    .header-nav a.active { opacity: 0.85; }
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: #fff;
+      margin: 5px 0;
+      transition: all 0.3s;
+    }
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 80px;
+      left: 0;
+      right: 0;
+      background: var(--toyota-black);
+      padding: 16px 24px;
+      z-index: 99;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      color: #fff;
+      font-size: 16px;
+      font-weight: 500;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    /* ========== HERO ========== */
+    .finance-hero {
+      background: var(--toyota-black);
+      padding: 64px 0;
+      text-align: center;
+      color: var(--toyota-white);
+    }
+    .finance-hero .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .finance-hero h1 {
+      font-size: 42px;
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+    .finance-hero p {
+      font-size: 16px;
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 28px;
+    }
+    .toyota-btn-primary-dark {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: var(--toyota-white);
+      color: var(--toyota-black);
+      font-family: var(--toyota-font);
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-decoration: none;
+      padding: 14px 32px;
+      border: 2px solid var(--toyota-white);
+      border-radius: var(--toyota-radius);
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+    }
+    .toyota-btn-primary-dark:hover { opacity: 0.8; }
+
+    .toyota-btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background-color: var(--toyota-black);
+      color: var(--toyota-white);
+      font-family: var(--toyota-font);
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-decoration: none;
+      padding: 14px 32px;
+      border: 2px solid var(--toyota-black);
+      border-radius: var(--toyota-radius);
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+    }
+    .toyota-btn-primary:hover { opacity: 0.8; }
+
+    .toyota-btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background-color: transparent;
+      color: var(--toyota-black);
+      font-family: var(--toyota-font);
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-decoration: none;
+      padding: 14px 32px;
+      border: 2px solid var(--toyota-black);
+      border-radius: var(--toyota-radius);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .toyota-btn-secondary:hover {
+      background-color: var(--toyota-black);
+      color: var(--toyota-white);
+    }
+
+    /* ========== ADVANTAGES ========== */
+    .advantages-section {
+      padding: 72px 0;
+      background: var(--toyota-section-bg);
+    }
+    .advantages-section .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .section-header {
+      text-align: center;
+      margin-bottom: 44px;
+    }
+    .section-header h2 {
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--toyota-black);
+      margin-bottom: 8px;
+    }
+    .section-header p {
+      font-size: 16px;
+      color: var(--toyota-gray);
+    }
+    .advantages-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .advantage-card {
+      background: var(--toyota-white);
+      border-radius: var(--toyota-radius);
+      padding: 32px 20px;
+      text-align: center;
+      box-shadow: 1px 1px 6px 1px var(--toyota-shadow);
+      transition: box-shadow 0.3s ease;
+    }
+    .advantage-card:hover {
+      box-shadow: 2px 2px 12px 2px var(--toyota-muted);
+    }
+    .advantage-icon {
+      width: 64px;
+      height: 64px;
+      background: var(--toyota-section-bg);
+      border-radius: var(--toyota-radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+    }
+    .advantage-icon svg {
+      width: 28px;
+      height: 28px;
+      color: var(--toyota-black);
+    }
+    .advantage-card h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--toyota-black);
+      margin-bottom: 8px;
+    }
+    .advantage-card p {
+      font-size: 14px;
+      color: var(--toyota-gray);
+      line-height: 1.6;
+    }
+
+    /* ========== PRE-QUAL FORM ========== */
+    .prequal-section {
+      padding: 72px 0;
+      background: var(--toyota-body-bg);
+    }
+    .prequal-section .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .form-card {
+      background: var(--toyota-white);
+      border-radius: var(--toyota-radius);
+      box-shadow: 1px 1px 6px 1px var(--toyota-shadow);
+      padding: 36px 32px;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+    .form-group.full { grid-column: span 2; }
+    .form-group label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--toyota-black);
+      margin-bottom: 6px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      padding: 12px 14px;
+      border: 1px solid var(--toyota-border);
+      border-radius: var(--toyota-radius);
+      font-family: var(--toyota-font);
+      font-size: 14px;
+      color: var(--toyota-black);
+      transition: border-color 0.2s;
+      outline: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--toyota-black);
+    }
+    .form-group textarea { resize: vertical; min-height: 80px; }
+    .form-actions {
+      margin-top: 24px;
+      display: flex;
+      gap: 12px;
+    }
+    .form-note {
+      margin-top: 16px;
+      font-size: 12px;
+      color: var(--toyota-gray);
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    /* ========== TFS SECTION ========== */
+    .tfs-section {
+      padding: 60px 0;
+      background: var(--toyota-section-bg);
+    }
+    .tfs-section .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 24px;
+      text-align: center;
+    }
+    .tfs-logo {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--toyota-gray);
+      margin-bottom: 16px;
+    }
+    .tfs-section h2 {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--toyota-black);
+      margin-bottom: 12px;
+    }
+    .tfs-section p {
+      font-size: 15px;
+      color: var(--toyota-gray);
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+
+    /* ========== FAQ ========== */
+    .faq-section {
+      padding: 72px 0;
+      background: var(--toyota-body-bg);
+    }
+    .faq-section .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .faq-item {
+      border-bottom: 1px solid var(--toyota-border);
+      padding: 20px 0;
+    }
+    .faq-item:first-child { border-top: 1px solid var(--toyota-border); }
+    .faq-question {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--toyota-black);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .faq-question::after {
+      content: "+";
+      font-size: 22px;
+      font-weight: 300;
+      color: var(--toyota-gray);
+      flex-shrink: 0;
+      transition: transform 0.3s;
+    }
+    .faq-item.open .faq-question::after {
+      content: "-";
+    }
+    .faq-answer {
+      display: none;
+      padding-top: 12px;
+      font-size: 14px;
+      color: var(--toyota-gray);
+      line-height: 1.7;
+    }
+    .faq-item.open .faq-answer { display: block; }
+
+    /* ========== CTA BANNER ========== */
+    .cta-banner {
+      background: var(--toyota-black);
+      padding: 56px 0;
+      text-align: center;
+      color: #fff;
+    }
+    .cta-banner .container {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .cta-banner h2 {
+      font-size: 30px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .cta-banner p {
+      font-size: 16px;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 28px;
+    }
+    .toyota-btn-secondary-dark {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: transparent;
+      color: var(--toyota-white);
+      font-family: var(--toyota-font);
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-decoration: none;
+      padding: 14px 32px;
+      border: 2px solid var(--toyota-white);
+      border-radius: var(--toyota-radius);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .toyota-btn-secondary-dark:hover {
+      background-color: var(--toyota-white);
+      color: var(--toyota-black);
+    }
+
+    /* ========== FOOTER ========== */
+    .site-footer {
+      background: var(--toyota-black);
+      color: #ccc;
+      padding: 60px 0 0;
+    }
+    .site-footer .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .footer-col h4 {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 10px; }
+    .footer-col a {
+      color: rgba(255,255,255,0.7);
+      font-size: 12px;
+      transition: color 0.2s;
+    }
+    .footer-col a:hover { color: #fff; }
+    .footer-family {
+      text-align: center;
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      font-size: 14px;
+      color: #888;
+    }
+    .footer-family a { color: var(--toyota-red); font-weight: 600; }
+    .footer-family a:hover { text-decoration: underline; }
+    .footer-divider {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.15);
+      margin: 0;
+    }
+    .footer-bottom {
+      padding: 20px 0;
+      text-align: center;
+      font-size: 11px;
+      color: var(--toyota-gray);
+    }
+    .footer-bottom a {
+      color: var(--toyota-red);
+      font-weight: 500;
+    }
+    .footer-bottom a:hover { text-decoration: underline; }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 1023px) {
+      .header-nav { display: none; }
+      .hamburger { display: block; }
+      .advantages-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      .finance-hero h1 { font-size: 32px; }
+      .advantages-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .form-group.full { grid-column: span 1; }
+      .section-header h2 { font-size: 26px; }
+      .cta-banner h2 { font-size: 24px; }
+      .footer-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 640px) {
+      .top-bar .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 4px;
+      }
+      .top-bar-phones { justify-content: center; }
+      .site-header .container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+      }
+      .finance-hero h1 { font-size: 28px; }
+      .finance-hero { padding: 48px 0; }
+      .footer-grid { grid-template-columns: 1fr; text-align: center; }
+      .form-actions { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== TOP BAR ==================== -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-phones">
+        <a href="tel:4192576025"><span>Sales:</span> (419) 257-6025</a>
+        <a href="tel:4192576089"><span>Service:</span> (419) 257-6089</a>
+        <a href="tel:4192576080"><span>Parts:</span> (419) 257-6080</a>
+      </div>
+      <div class="top-bar-address">
+        <a href="https://maps.google.com/?q=1225+N+Main+St+Bowling+Green+OH+43402" target="_blank" rel="noopener">
+          1225 N Main St, Bowling Green, OH 43402
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="site-header">
+    <div class="container">
+      <a href="/demo/thayer-toyota" class="header-logo">
+        <img class="toyota-logo" src="https://www.toyota.com/content/dam/toyota/sales-event/rsg_logo_eng_horiz_line_white_600w.svg" alt="Toyota">
+        <div class="dealer-name">Thayer Toyota<small>Bowling Green, OH</small></div>
+      </a>
+      <nav class="header-nav">
+        <a href="/demo/thayer-toyota/inventory">Inventory</a>
+        <a href="/demo/thayer-toyota/service">Service</a>
+        <a href="/demo/thayer-toyota/financing" class="active">Financing</a>
+        <a href="/demo/thayer-toyota/contact">Contact</a>
+      </nav>
+      <button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open');" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <a href="/demo/thayer-toyota/inventory">Inventory</a>
+    <a href="/demo/thayer-toyota/service">Service</a>
+    <a href="/demo/thayer-toyota/financing">Financing</a>
+    <a href="/demo/thayer-toyota/contact">Contact</a>
+  </div>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="finance-hero">
+    <div class="container">
+      <h1>Toyota Financing Made Simple</h1>
+      <p>Competitive rates, flexible terms, and a finance team dedicated to finding the right payment for your budget. Get pre-qualified in minutes.</p>
+      <a href="#apply" class="toyota-btn-primary-dark">Get Pre-Qualified</a>
+    </div>
+  </section>
+
+  <!-- ==================== ADVANTAGES ==================== -->
+  <section class="advantages-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Finance with confidence</h2>
+        <p>Why thousands of buyers choose Thayer Toyota financing</p>
+      </div>
+      <div class="advantages-grid">
+        <div class="advantage-card">
+          <div class="advantage-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3>Competitive rates</h3>
+          <p>Access to Toyota Financial Services and a network of lending partners to secure the best rate for your credit profile.</p>
+        </div>
+        <div class="advantage-card">
+          <div class="advantage-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <h3>Flexible terms</h3>
+          <p>Choose from a range of loan and lease options with terms from 24 to 72 months tailored to fit your monthly budget.</p>
+        </div>
+        <div class="advantage-card">
+          <div class="advantage-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>All credit welcome</h3>
+          <p>Whether your credit is excellent, average, or needs rebuilding, our finance team works to find solutions for every situation.</p>
+        </div>
+        <div class="advantage-card">
+          <div class="advantage-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <h3>Quick approval</h3>
+          <p>Get a credit decision in minutes, not days. Our streamlined process gets you on the road faster with less paperwork.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PRE-QUAL FORM ==================== -->
+  <section class="prequal-section" id="apply">
+    <div class="container">
+      <div class="section-header">
+        <h2>Get pre-qualified</h2>
+        <p>No impact to your credit score. Find out what you can afford today.</p>
+      </div>
+      <div class="form-card">
+        <form onsubmit="event.preventDefault(); alert('Demo only -- form not submitted.');">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First Name *</label>
+              <input type="text" id="firstName" placeholder="John" required>
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name *</label>
+              <input type="text" id="lastName" placeholder="Smith" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" placeholder="john@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone *</label>
+              <input type="tel" id="phone" placeholder="(419) 555-0100" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group full">
+              <label for="address">Street Address</label>
+              <input type="text" id="address" placeholder="123 Main St">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="city">City</label>
+              <input type="text" id="city" placeholder="Bowling Green">
+            </div>
+            <div class="form-group">
+              <label for="state">State</label>
+              <select id="state">
+                <option value="">Select State</option>
+                <option selected>Ohio</option>
+                <option>Michigan</option>
+                <option>Indiana</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="employment">Employment Status</label>
+              <select id="employment">
+                <option value="">Select</option>
+                <option>Employed</option>
+                <option>Self-Employed</option>
+                <option>Retired</option>
+                <option>Student</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="income">Annual Income</label>
+              <select id="income">
+                <option value="">Select Range</option>
+                <option>Under $30,000</option>
+                <option>$30,000 - $50,000</option>
+                <option>$50,000 - $75,000</option>
+                <option>$75,000 - $100,000</option>
+                <option>$100,000+</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group full">
+              <label for="vehicle">Vehicle of Interest</label>
+              <input type="text" id="vehicle" placeholder="e.g. 2026 Camry XSE">
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="toyota-btn-primary" style="flex:1;">Submit Application</button>
+            <a href="tel:4192576025" class="toyota-btn-secondary" style="flex:1;">Call Finance</a>
+          </div>
+        </form>
+        <div class="form-note">
+          Your information is secure and encrypted. Pre-qualification does not affect your credit score. By submitting, you agree to be contacted by Thayer Toyota regarding financing options.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TFS SECTION ==================== -->
+  <section class="tfs-section">
+    <div class="container">
+      <div class="tfs-logo">Toyota Financial Services</div>
+      <h2>Backed by Toyota Financial Services</h2>
+      <p>As an authorized Toyota dealer, Thayer Toyota offers financing through Toyota Financial Services (TFS) -- one of the largest auto lenders in the country. TFS provides competitive rates on new and certified pre-owned Toyota vehicles, with special promotional rates available throughout the year.</p>
+      <p>Toyota Financial Services also offers Toyota lease options, GAP coverage, and extended warranty protection plans to give you complete peace of mind.</p>
+    </div>
+  </section>
+
+  <!-- ==================== FAQ ========== -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Frequently asked questions</h2>
+        <p>Common questions about financing at Thayer Toyota</p>
+      </div>
+
+      <div class="faq-item open">
+        <div class="faq-question" onclick="this.parentElement.classList.toggle('open');">
+          What credit score do I need to get approved?
+        </div>
+        <div class="faq-answer">
+          We work with customers across the full credit spectrum. While higher credit scores typically qualify for the best rates, our finance team has access to multiple lenders who specialize in every credit situation. Even if you have been turned down elsewhere, we encourage you to apply.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="this.parentElement.classList.toggle('open');">
+          Does pre-qualification affect my credit score?
+        </div>
+        <div class="faq-answer">
+          No. Our pre-qualification form uses a soft inquiry that does not impact your credit score. A hard inquiry only occurs when you choose to move forward with a formal credit application at the dealership.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="this.parentElement.classList.toggle('open');">
+          Can I trade in my current vehicle?
+        </div>
+        <div class="faq-answer">
+          Absolutely. We accept trade-ins of all makes and models, regardless of condition. Your trade-in value can be applied directly to your down payment, reducing your monthly payments. Bring your vehicle in for a free appraisal.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="this.parentElement.classList.toggle('open');">
+          What is the difference between leasing and buying?
+        </div>
+        <div class="faq-answer">
+          Leasing offers lower monthly payments and allows you to drive a new vehicle every 2-3 years, but you do not own the vehicle at the end of the term. Buying (financing) typically has higher monthly payments, but once the loan is paid off, you own the vehicle outright. Our finance team can help you determine which option best fits your lifestyle and budget.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="this.parentElement.classList.toggle('open');">
+          How long does the financing process take?
+        </div>
+        <div class="faq-answer">
+          Most customers complete the entire financing process in under an hour at the dealership. If you submit a pre-qualification online, you will receive a response within one business day, and the in-store paperwork typically takes 30-45 minutes.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA BANNER ==================== -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Ready to get started?</h2>
+      <p>Browse our inventory and find the perfect Toyota, then let our finance team handle the rest.</p>
+      <a href="/demo/thayer-toyota/inventory" class="toyota-btn-secondary-dark">Browse Inventory</a>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Inventory</h4>
+          <ul>
+            <li><a href="/demo/thayer-toyota/inventory">New Toyota vehicles</a></li>
+            <li><a href="/demo/thayer-toyota/inventory?type=used">Pre-owned vehicles</a></li>
+            <li><a href="/demo/thayer-toyota/inventory?type=certified">Certified pre-owned</a></li>
+            <li><a href="/demo/thayer-toyota/inventory?special=true">Current specials</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Service</h4>
+          <ul>
+            <li><a href="/demo/thayer-toyota/service">Schedule service</a></li>
+            <li><a href="/demo/thayer-toyota/service#specials">Service specials</a></li>
+            <li><a href="/demo/thayer-toyota/service#parts">Order parts</a></li>
+            <li><a href="tel:4192576089">Call service: (419) 257-6089</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Financing</h4>
+          <ul>
+            <li><a href="/demo/thayer-toyota/financing">Apply for financing</a></li>
+            <li><a href="/demo/thayer-toyota/financing#calculator">Payment calculator</a></li>
+            <li><a href="/demo/thayer-toyota/financing#trade">Value your trade</a></li>
+            <li><a href="/demo/thayer-toyota/financing#credit">Credit solutions</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>About us</h4>
+          <ul>
+            <li><a href="/demo/thayer-toyota/contact">Contact us</a></li>
+            <li><a href="/demo/thayer-toyota/contact#hours">Hours &amp; directions</a></li>
+            <li><a href="tel:4192576025">Call sales: (419) 257-6025</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-family">Part of the <a href="/demo/thayer-auto">Thayer Family Dealerships</a></div>
+      <hr class="footer-divider">
+      <div class="footer-bottom">
+        <p>Thayer Toyota &mdash; 1225 N Main St, Bowling Green, OH 43402 &bull; &copy; 2026 All Rights Reserved &bull; Powered by <a href="https://www.savvydealer.com" target="_blank" rel="noopener">SavvyDealer</a></p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

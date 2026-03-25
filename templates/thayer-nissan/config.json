@@ -1,0 +1,22 @@
+{
+  "name": "Thayer Nissan",
+  "slug": "thayer-nissan",
+  "brand": "Nissan",
+  "address": "18039 N Dixie Hwy, Bowling Green, OH 43402",
+  "phones": {
+    "sales": "(419) 353-5271"
+  },
+  "hours": {
+    "sales": "Mon 8:30-9, Tue-Wed 8:30-6, Thu 8:30-9, Fri 8:30-6, Sat 9-4, Sun Closed",
+    "service": "Mon-Fri 8-6, Sat 9-3, Sun Closed"
+  },
+  "colors": {
+    "primary": "#000000",
+    "accent": "#C3002F",
+    "white": "#FFFFFF"
+  },
+  "pages": ["index", "inventory", "vdp", "service", "financing", "contact"],
+  "featured": true,
+  "group": "Thayer Family Dealerships",
+  "groupUrl": "/demo/thayer-auto"
+}

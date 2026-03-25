@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Center | Thayer Nissan | Bowling Green, OH</title>
+  <meta name="description" content="Schedule service at Thayer Nissan in Bowling Green, OH. Nissan Certified Technicians, genuine OEM parts, express service available. Mon-Fri 8-6, Sat 9-3.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --nissan-red: #C3002F;
+      --nissan-red-hover: #C51733;
+      --nissan-black: #000000;
+      --nissan-white: #FFFFFF;
+      --nissan-dark-gray: #363636;
+      --nissan-medium-gray: #58595B;
+      --nissan-silver: #C0C0C0;
+      --nissan-muted: #939598;
+      --nissan-border: #EFEFEF;
+      --nissan-section-bg: #F5F5F5;
+      --nissan-section-bg-alt: #EFEFEF;
+      --nissan-font: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: var(--nissan-font);
+      color: var(--nissan-black);
+      background-color: var(--nissan-white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; height: auto; }
+
+    /* ========== TOP BAR ========== */
+    .top-bar {
+      background: var(--nissan-black);
+      color: #fff;
+      padding: 8px 0;
+      font-size: 13px;
+    }
+    .top-bar .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .top-bar-phones { display: flex; gap: 20px; flex-wrap: wrap; }
+    .top-bar-phones a { color: #fff; font-weight: 500; transition: opacity 0.2s; }
+    .top-bar-phones a:hover { opacity: 0.85; }
+    .top-bar-phones span { color: rgba(255,255,255,0.6); margin-right: 4px; font-weight: 400; }
+    .top-bar-address { color: rgba(255,255,255,0.85); }
+    .top-bar-address a { color: #fff; }
+    .top-bar-address a:hover { text-decoration: underline; }
+
+    /* ========== HEADER / NAV ========== */
+    .site-header {
+      background: var(--nissan-white);
+      border-bottom: 1px solid var(--nissan-border);
+      padding: 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      height: 70px;
+      display: flex;
+      align-items: center;
+    }
+    .site-header .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      height: 100%;
+    }
+    .header-logo {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-shrink: 0;
+    }
+    .nissan-logo { height: 40px; width: auto; }
+    .dealer-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--nissan-black);
+      line-height: 1.2;
+      white-space: nowrap;
+    }
+    .dealer-name small {
+      display: block;
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--nissan-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      height: 100%;
+    }
+    .header-nav a {
+      color: var(--nissan-silver);
+      font-size: 14px;
+      font-weight: 700;
+      padding: 0 18px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      border-bottom: 4px solid transparent;
+      transition: all 0.2s ease;
+    }
+    .header-nav a:hover {
+      color: var(--nissan-dark-gray);
+    }
+    .header-nav a.active {
+      color: var(--nissan-dark-gray);
+      border-bottom: 4px solid var(--nissan-red);
+    }
+
+    /* Hamburger */
+    .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--nissan-black); margin: 5px 0; transition: all 0.3s; }
+
+    /* Mobile Nav */
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      top: 0; left: -280px;
+      width: 280px; height: 100%;
+      background: var(--nissan-white);
+      z-index: 200;
+      box-shadow: 2px 0 20px rgba(0,0,0,0.15);
+      transition: left 0.2s ease;
+      padding: 24px;
+    }
+    .mobile-nav.open { left: 0; }
+    .mobile-nav-close {
+      background: none; border: none; font-size: 28px; cursor: pointer; position: absolute; top: 16px; right: 16px; color: var(--nissan-black);
+    }
+    .mobile-nav a {
+      display: block;
+      padding: 14px 0;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--nissan-dark-gray);
+      border-bottom: 1px solid var(--nissan-border);
+    }
+    .mobile-nav a:hover { color: var(--nissan-red); }
+    .mobile-overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.4);
+      z-index: 199;
+    }
+    .mobile-overlay.open { display: block; }
+
+    /* ========== BUTTONS ========== */
+    .nissan-btn-primary {
+      display: inline-block;
+      background-color: var(--nissan-red);
+      color: var(--nissan-white);
+      font-family: var(--nissan-font);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 14px 32px;
+      border: none;
+      border-radius: 0;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .nissan-btn-primary:hover { background-color: var(--nissan-red-hover); }
+
+    .nissan-btn-secondary {
+      display: inline-block;
+      background-color: var(--nissan-black);
+      color: var(--nissan-white);
+      font-family: var(--nissan-font);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 14px 32px;
+      border: none;
+      border-radius: 0;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .nissan-btn-secondary:hover { background-color: var(--nissan-dark-gray); }
+
+    .nissan-btn-outline {
+      display: inline-block;
+      background-color: transparent;
+      color: var(--nissan-black);
+      font-family: var(--nissan-font);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 12px 30px;
+      border: 2px solid var(--nissan-black);
+      border-radius: 0;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .nissan-btn-outline:hover { background-color: var(--nissan-black); color: var(--nissan-white); }
+
+    .nissan-btn-outline-dark {
+      display: inline-block;
+      background-color: transparent;
+      color: var(--nissan-white);
+      font-family: var(--nissan-font);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 12px 30px;
+      border: 2px solid var(--nissan-white);
+      border-radius: 0;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .nissan-btn-outline-dark:hover { background-color: var(--nissan-white); color: var(--nissan-black); }
+
+    /* ========== HERO ========== */
+    .hero {
+      position: relative;
+      width: 100%;
+      min-height: 50vh;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      padding: 80px 60px;
+      background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 40%, transparent 70%),
+                  url('https://www.nissanusa.com/content/dam/Nissan/us/experience/service/service-hero.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      color: var(--nissan-white);
+      max-width: 600px;
+    }
+    .hero h1 {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+    .hero p {
+      font-size: 18px;
+      font-weight: 400;
+      margin-bottom: 24px;
+      opacity: 0.9;
+      line-height: 1.4;
+    }
+    .hero-ctas {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    /* ========== SECTION HEADER ========== */
+    .section-header {
+      text-align: center;
+      margin-bottom: 44px;
+    }
+    .section-header h2 {
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--nissan-black);
+      margin-bottom: 8px;
+    }
+    .section-header p {
+      font-size: 16px;
+      color: var(--nissan-medium-gray);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .section-header .bar {
+      width: 60px;
+      height: 4px;
+      background: var(--nissan-red);
+      margin: 16px auto 0;
+    }
+
+    /* ========== SERVICE FEATURES ========== */
+    .service-features {
+      padding: 72px 0 80px;
+      background: var(--nissan-section-bg-alt);
+    }
+    .service-features .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+    .feature-card {
+      background: var(--nissan-white);
+      border: 1px solid var(--nissan-border);
+      border-radius: 0;
+      padding: 40px 28px;
+      text-align: center;
+      transition: box-shadow 0.3s;
+    }
+    .feature-card:hover {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    }
+    .feature-icon {
+      width: 72px;
+      height: 72px;
+      background: var(--nissan-black);
+      border-radius: 0;
+      margin: 0 auto 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .feature-icon svg { width: 32px; height: 32px; fill: var(--nissan-white); }
+    .feature-card h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--nissan-black);
+      margin-bottom: 12px;
+    }
+    .feature-card p {
+      font-size: 14px;
+      color: var(--nissan-medium-gray);
+      line-height: 1.7;
+    }
+
+    /* ========== SERVICE FORM SECTION ========== */
+    .schedule-section {
+      padding: 72px 0 80px;
+      background: var(--nissan-white);
+    }
+    .schedule-section .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .schedule-grid {
+      display: grid;
+      grid-template-columns: 1fr 400px;
+      gap: 48px;
+      align-items: start;
+    }
+
+    /* Form */
+    .schedule-form {
+      background: var(--nissan-section-bg);
+      border: 1px solid var(--nissan-border);
+      border-radius: 0;
+      padding: 40px;
+    }
+    .schedule-form h3 {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--nissan-black);
+      margin-bottom: 24px;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+    .form-group.full {
+      grid-column: 1 / -1;
+    }
+    .form-group label {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--nissan-dark-gray);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      font-family: var(--nissan-font);
+      font-size: 14px;
+      padding: 12px 16px;
+      border: 1px solid var(--nissan-border);
+      border-radius: 0;
+      background: var(--nissan-white);
+      color: var(--nissan-black);
+      transition: border-color 0.2s;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--nissan-red);
+    }
+    .form-group textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+    .form-submit {
+      margin-top: 8px;
+    }
+
+    /* Hours sidebar */
+    .hours-sidebar {
+      position: sticky;
+      top: 90px;
+    }
+    .hours-card {
+      border: 1px solid var(--nissan-border);
+      border-radius: 0;
+      padding: 32px 28px;
+      margin-bottom: 24px;
+    }
+    .hours-card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--nissan-black);
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--nissan-red);
+    }
+    .hours-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--nissan-border);
+      font-size: 14px;
+    }
+    .hours-row:last-child { border-bottom: none; }
+    .hours-day {
+      font-weight: 600;
+      color: var(--nissan-dark-gray);
+    }
+    .hours-time {
+      color: var(--nissan-medium-gray);
+    }
+    .hours-time.closed {
+      color: var(--nissan-red);
+      font-weight: 600;
+    }
+    .contact-card {
+      border: 1px solid var(--nissan-border);
+      border-radius: 0;
+      padding: 28px;
+      text-align: center;
+    }
+    .contact-card p {
+      font-size: 14px;
+      color: var(--nissan-medium-gray);
+      margin-bottom: 16px;
+    }
+    .contact-card a.phone-link {
+      display: block;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--nissan-black);
+      margin-bottom: 16px;
+    }
+    .contact-card a.phone-link:hover { color: var(--nissan-red); }
+
+    /* ========== SERVICE SPECIALS ========== */
+    .specials-section {
+      padding: 72px 0 80px;
+      background: var(--nissan-section-bg-alt);
+    }
+    .specials-section .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .specials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .special-card {
+      background: var(--nissan-white);
+      border: 1px solid var(--nissan-border);
+      border-radius: 0;
+      padding: 32px 28px;
+      text-align: center;
+      transition: box-shadow 0.3s;
+    }
+    .special-card:hover {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    }
+    .special-price {
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--nissan-red);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .special-card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--nissan-black);
+      margin-bottom: 8px;
+    }
+    .special-card p {
+      font-size: 14px;
+      color: var(--nissan-medium-gray);
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+    .special-disclaimer {
+      font-size: 11px;
+      color: var(--nissan-muted);
+    }
+
+    /* ========== CTA BANNER ========== */
+    .cta-banner {
+      background: var(--nissan-black);
+      color: var(--nissan-white);
+      padding: 60px 0;
+      text-align: center;
+    }
+    .cta-banner .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .cta-banner h2 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .cta-banner p {
+      font-size: 16px;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 28px;
+    }
+    .cta-banner-btns {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ========== FOOTER ========== */
+    .site-footer {
+      background: var(--nissan-black);
+      color: var(--nissan-white);
+      padding: 60px 0 0;
+    }
+    .site-footer .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .footer-logo {
+      height: 30px;
+      margin-bottom: 32px;
+      filter: brightness(0) invert(1);
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(255,255,255,0.15);
+    }
+    .footer-col h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--nissan-white);
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 8px; }
+    .footer-col a {
+      color: rgba(255,255,255,0.7);
+      font-size: 13px;
+      font-weight: 400;
+      transition: color 0.2s ease;
+    }
+    .footer-col a:hover { color: var(--nissan-white); }
+    .footer-family {
+      text-align: center;
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.15);
+      font-size: 14px;
+      color: rgba(255,255,255,0.5);
+    }
+    .footer-family a { color: var(--nissan-red); font-weight: 600; }
+    .footer-family a:hover { text-decoration: underline; }
+    .footer-locations {
+      text-align: center;
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.15);
+      font-size: 13px;
+      color: rgba(255,255,255,0.4);
+    }
+    .footer-locations a { color: rgba(255,255,255,0.6); font-weight: 500; margin: 0 8px; }
+    .footer-locations a:hover { color: var(--nissan-white); }
+    .footer-bottom {
+      padding: 20px 0;
+      text-align: center;
+      font-size: 12px;
+      color: var(--nissan-muted);
+    }
+    .footer-bottom a { color: var(--nissan-red); font-weight: 500; }
+    .footer-bottom a:hover { text-decoration: underline; }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 991px) {
+      .header-nav { display: none; }
+      .hamburger { display: block; }
+      .mobile-nav { display: block; }
+      .schedule-grid { grid-template-columns: 1fr; }
+      .hours-sidebar { position: static; }
+    }
+    @media (max-width: 768px) {
+      .hero { min-height: 40vh; padding: 60px 24px; }
+      .hero h1 { font-size: 32px; }
+      .hero p { font-size: 16px; }
+      .features-grid { grid-template-columns: 1fr; }
+      .specials-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .top-bar .container { flex-direction: column; text-align: center; gap: 4px; }
+      .top-bar-phones { justify-content: center; }
+      .site-header .container { padding: 0 16px; }
+      .hero h1 { font-size: 27px; }
+      .footer-grid { grid-template-columns: 1fr; text-align: center; }
+      .cta-banner h2 { font-size: 24px; }
+      .schedule-form { padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== TOP BAR ==================== -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-phones">
+        <a href="tel:4193535271"><span>Sales:</span> (419) 353-5271</a>
+      </div>
+      <div class="top-bar-address">
+        <a href="https://maps.google.com/?q=18039+N+Dixie+Hwy+Bowling+Green+OH+43402" target="_blank" rel="noopener">18039 N Dixie Hwy, Bowling Green, OH 43402</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="site-header">
+    <div class="container">
+      <a href="/demo/thayer-nissan" class="header-logo">
+        <img class="nissan-logo" src="https://upload.wikimedia.org/wikipedia/commons/2/23/Nissan_2020_logo.svg" alt="Nissan">
+        <div class="dealer-name">Thayer Nissan<small>Bowling Green, OH</small></div>
+      </a>
+      <nav class="header-nav">
+        <a href="/demo/thayer-nissan">Home</a>
+        <a href="/demo/thayer-nissan/inventory">Inventory</a>
+        <a href="/demo/thayer-nissan/service" class="active">Service</a>
+        <a href="/demo/thayer-nissan/financing">Financing</a>
+        <a href="/demo/thayer-nissan/contact">Contact</a>
+      </nav>
+      <button class="hamburger" onclick="document.querySelector('.mobile-nav').classList.add('open');document.querySelector('.mobile-overlay').classList.add('open');" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-overlay" onclick="document.querySelector('.mobile-nav').classList.remove('open');this.classList.remove('open');"></div>
+  <nav class="mobile-nav">
+    <button class="mobile-nav-close" onclick="this.parentElement.classList.remove('open');document.querySelector('.mobile-overlay').classList.remove('open');">&times;</button>
+    <div style="margin-top:48px;">
+      <a href="/demo/thayer-nissan">Home</a>
+      <a href="/demo/thayer-nissan/inventory">Inventory</a>
+      <a href="/demo/thayer-nissan/service">Service</a>
+      <a href="/demo/thayer-nissan/financing">Financing</a>
+      <a href="/demo/thayer-nissan/contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Nissan Service Center</h1>
+      <p>Factory-trained technicians, genuine Nissan parts, and state-of-the-art equipment. Trust the experts at Thayer Nissan to keep your vehicle performing at its best.</p>
+      <div class="hero-ctas">
+        <a href="#schedule" class="nissan-btn-primary">Schedule Service</a>
+        <a href="tel:4193535271" class="nissan-btn-outline-dark">Call Service</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SERVICE FEATURES ==================== -->
+  <section class="service-features">
+    <div class="container">
+      <div class="section-header">
+        <h2>Why Service at Thayer Nissan</h2>
+        <p>Your vehicle deserves the best care from people who know it inside and out</p>
+        <div class="bar"></div>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          </div>
+          <h3>Nissan Certified Technicians</h3>
+          <p>Our factory-trained and certified technicians undergo continuous education to stay current with the latest Nissan technology and repair procedures. They know your vehicle better than anyone.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M19.15 3.55l-1.27-1.11C17.34 1.97 16.62 1.75 16 2.13l-1.39.8c-.42.24-.89.37-1.36.37H10.75c-.47 0-.94-.13-1.36-.37L8 2.13c-.62-.38-1.34-.16-1.88.31L4.85 3.55C4.31 4.01 4 4.66 4 5.35V8h16V5.35c0-.69-.31-1.34-.85-1.8zM4 10v7c0 1.1.9 2 2 2h1v3h2v-3h6v3h2v-3h1c1.1 0 2-.9 2-2v-7H4zm6 6H6v-2h4v2zm8 0h-4v-2h4v2z"/></svg>
+          </div>
+          <h3>Genuine Nissan Parts</h3>
+          <p>We use only genuine Nissan OEM parts designed specifically for your vehicle. This ensures perfect fit, optimal performance, and maintains your factory warranty coverage.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
+          </div>
+          <h3>Express Service</h3>
+          <p>Short on time? Our Express Service handles oil changes, tire rotations, brake inspections, and multi-point checks quickly so you can get back on the road without a long wait.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SERVICE SPECIALS ==================== -->
+  <section class="specials-section" id="specials">
+    <div class="container">
+      <div class="section-header">
+        <h2>Service Specials</h2>
+        <p>Take advantage of our current offers on maintenance and repairs</p>
+        <div class="bar"></div>
+      </div>
+      <div class="specials-grid">
+        <div class="special-card">
+          <div class="special-price">$49<sup style="font-size:18px">.95</sup></div>
+          <h3>Conventional Oil Change</h3>
+          <p>Includes up to 5 quarts of conventional oil, genuine Nissan oil filter, and multi-point vehicle inspection.</p>
+          <div class="special-disclaimer">*Synthetic oil additional. Tax and shop supplies extra.</div>
+        </div>
+        <div class="special-card">
+          <div class="special-price">$99<sup style="font-size:18px">.95</sup></div>
+          <h3>Brake Pad Replacement</h3>
+          <p>Front or rear brake pad replacement with genuine Nissan brake pads. Includes rotor inspection and brake fluid check.</p>
+          <div class="special-disclaimer">*Per axle. Resurfacing additional if needed.</div>
+        </div>
+        <div class="special-card">
+          <div class="special-price">FREE</div>
+          <h3>Multi-Point Inspection</h3>
+          <p>Comprehensive vehicle inspection covering brakes, tires, fluids, battery, belts, and more. No appointment needed.</p>
+          <div class="special-disclaimer">*Available with any service visit.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SCHEDULE FORM ==================== -->
+  <section class="schedule-section" id="schedule">
+    <div class="container">
+      <div class="schedule-grid">
+
+        <div class="schedule-form">
+          <h3>Schedule Your Service Appointment</h3>
+          <form onsubmit="event.preventDefault(); alert('This is a demo. In production, this form would submit your service request.');">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="you@email.com" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="year">Vehicle Year</label>
+                <input type="text" id="year" name="year" placeholder="e.g. 2024">
+              </div>
+              <div class="form-group">
+                <label for="model">Vehicle Model</label>
+                <select id="model" name="model">
+                  <option value="">Select Model</option>
+                  <option>Altima</option>
+                  <option>Ariya</option>
+                  <option>Frontier</option>
+                  <option>Kicks</option>
+                  <option>Murano</option>
+                  <option>Pathfinder</option>
+                  <option>Rogue</option>
+                  <option>Sentra</option>
+                  <option>Titan</option>
+                  <option>Versa</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="serviceType">Service Needed</label>
+                <select id="serviceType" name="serviceType">
+                  <option value="">Select Service</option>
+                  <option>Oil Change</option>
+                  <option>Tire Rotation</option>
+                  <option>Brake Service</option>
+                  <option>Battery Replacement</option>
+                  <option>Transmission Service</option>
+                  <option>A/C Service</option>
+                  <option>Multi-Point Inspection</option>
+                  <option>Recall Service</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="prefDate">Preferred Date</label>
+                <input type="date" id="prefDate" name="prefDate">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group full">
+                <label for="comments">Additional Comments</label>
+                <textarea id="comments" name="comments" placeholder="Describe any symptoms or additional services needed..."></textarea>
+              </div>
+            </div>
+            <div class="form-submit">
+              <button type="submit" class="nissan-btn-primary" style="width:100%;">SCHEDULE APPOINTMENT</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="hours-sidebar">
+          <div class="hours-card">
+            <h3>Service Hours</h3>
+            <div class="hours-row">
+              <span class="hours-day">Monday</span>
+              <span class="hours-time">8:00 AM - 6:00 PM</span>
+            </div>
+            <div class="hours-row">
+              <span class="hours-day">Tuesday</span>
+              <span class="hours-time">8:00 AM - 6:00 PM</span>
+            </div>
+            <div class="hours-row">
+              <span class="hours-day">Wednesday</span>
+              <span class="hours-time">8:00 AM - 6:00 PM</span>
+            </div>
+            <div class="hours-row">
+              <span class="hours-day">Thursday</span>
+              <span class="hours-time">8:00 AM - 6:00 PM</span>
+            </div>
+            <div class="hours-row">
+              <span class="hours-day">Friday</span>
+              <span class="hours-time">8:00 AM - 6:00 PM</span>
+            </div>
+            <div class="hours-row">
+              <span class="hours-day">Saturday</span>
+              <span class="hours-time">9:00 AM - 3:00 PM</span>
+            </div>
+            <div class="hours-row">
+              <span class="hours-day">Sunday</span>
+              <span class="hours-time closed">Closed</span>
+            </div>
+          </div>
+          <div class="contact-card">
+            <p>Need immediate assistance?</p>
+            <a href="tel:4193535271" class="phone-link">(419) 353-5271</a>
+            <a href="/demo/thayer-nissan/contact" class="nissan-btn-outline" style="width:100%;text-align:center;">Get Directions</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA BANNER ==================== -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Keep Your Nissan Running Strong</h2>
+      <p>Regular maintenance is key to longevity. Schedule your next service appointment today.</p>
+      <div class="cta-banner-btns">
+        <a href="#schedule" class="nissan-btn-primary">Schedule Now</a>
+        <a href="/demo/thayer-nissan/inventory" class="nissan-btn-outline-dark">Browse Inventory</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <img class="footer-logo" src="https://upload.wikimedia.org/wikipedia/commons/2/23/Nissan_2020_logo.svg" alt="Nissan">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Inventory</h4>
+          <ul>
+            <li><a href="/demo/thayer-nissan/inventory">New Nissan Vehicles</a></li>
+            <li><a href="/demo/thayer-nissan/inventory?type=used">Pre-Owned Vehicles</a></li>
+            <li><a href="/demo/thayer-nissan/inventory?type=certified">Certified Pre-Owned</a></li>
+            <li><a href="/demo/thayer-nissan/inventory?special=true">Current Specials</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Service</h4>
+          <ul>
+            <li><a href="/demo/thayer-nissan/service">Schedule Service</a></li>
+            <li><a href="/demo/thayer-nissan/service#specials">Service Specials</a></li>
+            <li><a href="/demo/thayer-nissan/service#parts">Order Parts</a></li>
+            <li><a href="tel:4193535271">Call: (419) 353-5271</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Financing</h4>
+          <ul>
+            <li><a href="/demo/thayer-nissan/financing">Apply for Financing</a></li>
+            <li><a href="/demo/thayer-nissan/financing#calculator">Payment Calculator</a></li>
+            <li><a href="/demo/thayer-nissan/financing#trade">Value Your Trade</a></li>
+            <li><a href="/demo/thayer-nissan/financing#credit">Credit Solutions</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>About Us</h4>
+          <ul>
+            <li><a href="/demo/thayer-nissan/contact">Contact Us</a></li>
+            <li><a href="/demo/thayer-nissan/contact#hours">Hours &amp; Directions</a></li>
+            <li><a href="/demo/thayer-nissan/vdp">Vehicle Details</a></li>
+            <li><a href="tel:4193535271">Call Sales: (419) 353-5271</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-family">Part of the <a href="/demo/thayer-auto">Thayer Family Dealerships</a></div>
+      <div class="footer-locations">Also visit: <a href="/demo/thayer-chevrolet">Thayer Chevrolet</a> | <a href="/demo/thayer-toyota">Thayer Toyota</a> | <a href="/demo/thayer-honda">Thayer Honda</a> | <a href="/demo/thayer-ford">Thayer Ford</a> | <a href="/demo/thayer-cdjr">Thayer CDJR</a></div>
+      <div class="footer-bottom">
+        <p>Thayer Nissan &mdash; 18039 N Dixie Hwy, Bowling Green, OH 43402 &bull; &copy; 2026 All Rights Reserved &bull; Powered by <a href="https://www.savvydealer.com" target="_blank" rel="noopener">SavvyDealer</a></p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

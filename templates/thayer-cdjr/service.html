@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Center | Thayer Chrysler Dodge Jeep Ram</title>
+  <meta name="description" content="Schedule service at Thayer CDJR in Bowling Green, OH. Factory-trained technicians, genuine Mopar parts, and Express Lane oil changes. Mon-Fri 8-5, Sat 8-12.">
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      color: #333;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* ========== TOP BAR ========== */
+    .top-bar {
+      background: #3363ba;
+      color: #fff;
+      padding: 8px 0;
+      font-size: 13px;
+    }
+
+    .top-bar .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .top-bar-phones {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .top-bar-phones a {
+      color: #fff;
+      font-weight: 500;
+      transition: opacity 0.2s;
+    }
+
+    .top-bar-phones a:hover {
+      opacity: 0.85;
+    }
+
+    .top-bar-phones span {
+      color: rgba(255,255,255,0.7);
+      margin-right: 4px;
+      font-weight: 400;
+    }
+
+    .top-bar-address {
+      color: rgba(255,255,255,0.9);
+    }
+
+    .top-bar-address a {
+      color: #fff;
+    }
+
+    .top-bar-address a:hover {
+      text-decoration: underline;
+    }
+
+    /* ========== HEADER ========== */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid #f5f5f5;
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    }
+
+    .site-header .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .header-oem-logos {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-shrink: 0;
+    }
+
+    .header-oem-logos img {
+      max-height: 30px;
+      width: auto;
+      display: block;
+    }
+
+    .header-dealer-name {
+      flex-shrink: 0;
+      font-size: 18px;
+      font-weight: 700;
+      color: #1a1a1a;
+      letter-spacing: -0.3px;
+    }
+
+    .header-dealer-name a {
+      color: #1a1a1a;
+    }
+
+    .header-dealer-name .group-link {
+      display: block;
+      font-size: 11px;
+      font-weight: 500;
+      color: #3363ba;
+      letter-spacing: 0;
+    }
+
+    .header-dealer-name .group-link:hover {
+      text-decoration: underline;
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .header-nav a {
+      color: #333;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 4px;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .header-nav a:hover {
+      background: #f0f4fb;
+      color: #3363ba;
+    }
+
+    .header-nav a.active {
+      background: #f0f4fb;
+      color: #3363ba;
+      font-weight: 700;
+    }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: #19183C;
+      margin: 5px 0;
+      transition: all 0.3s ease;
+      border-radius: 2px;
+    }
+
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 200;
+    }
+
+    .mobile-nav.open {
+      display: block;
+    }
+
+    .mobile-nav-panel {
+      background: #fff;
+      width: 280px;
+      height: 100%;
+      padding: 24px;
+      box-shadow: 4px 0 20px rgba(0,0,0,0.15);
+      overflow-y: auto;
+    }
+
+    .mobile-nav-close {
+      background: none;
+      border: none;
+      font-size: 28px;
+      cursor: pointer;
+      color: #333;
+      margin-bottom: 20px;
+      line-height: 1;
+    }
+
+    .mobile-nav-panel a {
+      display: block;
+      padding: 12px 0;
+      font-size: 16px;
+      font-weight: 600;
+      color: #333;
+      border-bottom: 1px solid #f0f0f0;
+      transition: color 0.2s;
+    }
+
+    .mobile-nav-panel a:hover {
+      color: #3363ba;
+    }
+
+    /* ========== HERO ========== */
+    .hero {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);
+      padding: 72px 0 64px;
+      text-align: center;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(ellipse at 50% 0%, rgba(51,99,186,0.25) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 {
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      letter-spacing: -0.5px;
+    }
+
+    .hero p {
+      font-size: 17px;
+      color: rgba(255,255,255,0.8);
+      max-width: 600px;
+      margin: 0 auto 32px;
+      line-height: 1.6;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 28px;
+      font-size: 15px;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: inherit;
+      border: 2px solid transparent;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: #3363ba;
+      color: #fff;
+      border-color: #3363ba;
+    }
+
+    .btn-primary:hover {
+      background: #2a53a0;
+      border-color: #2a53a0;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #fff;
+      border-color: rgba(255,255,255,0.5);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: #fff;
+    }
+
+    .btn-outline-dark {
+      background: transparent;
+      color: #333;
+      border-color: #ddd;
+    }
+
+    .btn-outline-dark:hover {
+      border-color: #3363ba;
+      color: #3363ba;
+    }
+
+    /* ========== SECTION COMMON ========== */
+    .section-header {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    .section-header h2 {
+      font-size: 30px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 8px;
+    }
+
+    .section-header p {
+      font-size: 16px;
+      color: #666;
+    }
+
+    /* ========== SERVICE FEATURES ========== */
+    .service-features {
+      padding: 64px 0 72px;
+      background: #f8f9fb;
+    }
+
+    .service-features .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .feature-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .feature-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 36px 28px;
+      text-align: center;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    }
+
+    .feature-icon {
+      width: 72px;
+      height: 72px;
+      background: #f0f4fb;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+    }
+
+    .feature-icon svg {
+      width: 32px;
+      height: 32px;
+      color: #3363ba;
+    }
+
+    .feature-card h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 10px;
+    }
+
+    .feature-card p {
+      font-size: 15px;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    /* ========== SERVICE SPECIALS ========== */
+    .service-specials {
+      padding: 64px 0;
+      background: #fff;
+    }
+
+    .service-specials .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .specials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .special-card {
+      border: 2px solid #eee;
+      border-radius: 10px;
+      padding: 28px 24px;
+      text-align: center;
+      transition: border-color 0.2s;
+    }
+
+    .special-card:hover {
+      border-color: #3363ba;
+    }
+
+    .special-price {
+      font-size: 36px;
+      font-weight: 700;
+      color: #3363ba;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .special-name {
+      font-size: 18px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 8px;
+    }
+
+    .special-desc {
+      font-size: 14px;
+      color: #666;
+      line-height: 1.5;
+    }
+
+    /* ========== SCHEDULE FORM ========== */
+    .schedule-section {
+      padding: 64px 0 72px;
+      background: #f8f9fb;
+    }
+
+    .schedule-section .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .schedule-layout {
+      display: grid;
+      grid-template-columns: 1fr 400px;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .schedule-form {
+      background: #fff;
+      border-radius: 10px;
+      padding: 36px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+    }
+
+    .schedule-form h3 {
+      font-size: 22px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 24px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group.full {
+      grid-column: 1 / -1;
+    }
+
+    .form-group label {
+      font-size: 13px;
+      font-weight: 600;
+      color: #555;
+      margin-bottom: 6px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      padding: 12px 14px;
+      font-size: 15px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-family: inherit;
+      color: #333;
+      transition: border-color 0.2s;
+      background: #fff;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #3363ba;
+      box-shadow: 0 0 0 3px rgba(51,99,186,0.1);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .form-submit {
+      margin-top: 8px;
+    }
+
+    .form-submit .btn {
+      width: 100%;
+    }
+
+    /* Service Hours Sidebar */
+    .service-info-sidebar {
+      position: sticky;
+      top: 100px;
+    }
+
+    .info-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 28px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+      margin-bottom: 20px;
+    }
+
+    .info-card h4 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #f0f4fb;
+    }
+
+    .hours-table {
+      width: 100%;
+    }
+
+    .hours-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      font-size: 14px;
+    }
+
+    .hours-row + .hours-row {
+      border-top: 1px solid #f5f5f5;
+    }
+
+    .hours-day {
+      color: #555;
+    }
+
+    .hours-time {
+      font-weight: 600;
+      color: #1a1a1a;
+    }
+
+    .hours-time.closed {
+      color: #999;
+    }
+
+    .info-card .phone-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 0;
+      font-size: 15px;
+      color: #333;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+
+    .info-card .phone-link:hover {
+      color: #3363ba;
+    }
+
+    .info-card .phone-link svg {
+      width: 20px;
+      height: 20px;
+      color: #3363ba;
+      flex-shrink: 0;
+    }
+
+    .info-card .phone-label {
+      font-size: 12px;
+      font-weight: 400;
+      color: #999;
+      display: block;
+    }
+
+    /* ========== FOOTER ========== */
+    .site-footer {
+      background: #252525;
+      color: #ccc;
+      padding: 48px 0 0;
+    }
+
+    .site-footer .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid #3a3a3a;
+    }
+
+    .footer-col h4 {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col li {
+      margin-bottom: 10px;
+    }
+
+    .footer-col a {
+      color: #aaa;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: #fff;
+    }
+
+    .footer-bottom {
+      padding: 20px 0;
+      text-align: center;
+      font-size: 13px;
+      color: #777;
+    }
+
+    .footer-bottom a {
+      color: #3363ba;
+      font-weight: 500;
+    }
+
+    .footer-bottom a:hover {
+      text-decoration: underline;
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 1023px) {
+      .header-nav {
+        display: none;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .feature-cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .specials-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .schedule-layout {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .service-info-sidebar {
+        position: static;
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .top-bar .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 4px;
+      }
+
+      .top-bar-phones {
+        justify-content: center;
+      }
+
+      .site-header .container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+      }
+
+      .header-oem-logos {
+        order: 2;
+        gap: 10px;
+      }
+
+      .header-oem-logos img {
+        max-height: 22px;
+      }
+
+      .header-dealer-name {
+        order: 1;
+      }
+
+      .hero h1 {
+        font-size: 26px;
+      }
+
+      .hero p {
+        font-size: 15px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== TOP BAR ==================== -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-phones">
+        <a href="tel:4196016090"><span>Sales:</span> (419) 601-6090</a>
+        <a href="tel:4196016202"><span>Service:</span> (419) 601-6202</a>
+        <a href="tel:4196016973"><span>Parts:</span> (419) 601-6973</a>
+      </div>
+      <div class="top-bar-address">
+        <a href="https://maps.google.com/?q=1303+N+Main+St+Bowling+Green+OH+43402" target="_blank" rel="noopener">
+          1303 N Main St, Bowling Green, OH 43402
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-oem-logos">
+        <img src="https://di-shared-assets.dealerinspire.com/public/logos/chrysler/chrysler-dark-large-no-space-desktop-logo.png" alt="Chrysler" loading="lazy">
+        <img src="https://di-shared-assets.dealerinspire.com/public/logos/dodge/dodge-dark-large-no-space-desktop-logo.png" alt="Dodge" loading="lazy">
+        <img src="https://di-shared-assets.dealerinspire.com/public/logos/jeep/jeep-dark-large-no-space-desktop-logo.png" alt="Jeep" loading="lazy">
+        <img src="https://di-shared-assets.dealerinspire.com/public/logos/ram/ram-dark-large-no-space-desktop-logo.png" alt="Ram" loading="lazy">
+      </div>
+      <div class="header-dealer-name">
+        <a href="/demo/thayer-cdjr">Thayer CDJR</a>
+        <a href="/demo/thayer-auto" class="group-link">Thayer Family Dealerships</a>
+      </div>
+      <nav class="header-nav">
+        <a href="/demo/thayer-cdjr/inventory?type=new">New</a>
+        <a href="/demo/thayer-cdjr/inventory?type=used">Pre-Owned</a>
+        <a href="/demo/thayer-cdjr/service" class="active">Service</a>
+        <a href="/demo/thayer-cdjr/financing">Financing</a>
+        <a href="/demo/thayer-cdjr/contact">Contact</a>
+      </nav>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==================== MOBILE NAV ==================== -->
+  <div class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-panel">
+      <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">&times;</button>
+      <a href="/demo/thayer-cdjr">Home</a>
+      <a href="/demo/thayer-cdjr/inventory?type=new">New Vehicles</a>
+      <a href="/demo/thayer-cdjr/inventory?type=used">Pre-Owned</a>
+      <a href="/demo/thayer-cdjr/service">Service</a>
+      <a href="/demo/thayer-cdjr/financing">Financing</a>
+      <a href="/demo/thayer-cdjr/contact">Contact</a>
+      <a href="/demo/thayer-auto">Thayer Family Dealerships</a>
+    </div>
+  </div>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero">
+    <div class="container">
+      <h1>Certified Service Center</h1>
+      <p>Factory-trained technicians and genuine Mopar&reg; parts. Keep your Chrysler, Dodge, Jeep&reg;, or Ram running at peak performance.</p>
+      <div class="hero-ctas">
+        <a href="#schedule" class="btn btn-primary">Schedule Service</a>
+        <a href="tel:4196016202" class="btn btn-outline">Call Service: (419) 601-6202</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SERVICE FEATURES ==================== -->
+  <section class="service-features">
+    <div class="container">
+      <div class="section-header">
+        <h2>Why Service at Thayer CDJR</h2>
+        <p>Your vehicle deserves expert care from people who know it best</p>
+      </div>
+      <div class="feature-cards">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <h3>Express Lane</h3>
+          <p>No appointment needed for oil changes, tire rotations, and basic maintenance. Get in and out quickly with our Express Lane service &mdash; no waiting around.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+          </div>
+          <h3>Genuine Mopar&reg; Parts</h3>
+          <p>We use only factory-authorized Mopar&reg; parts and fluids designed specifically for your vehicle. No aftermarket substitutes &mdash; ever.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+            </svg>
+          </div>
+          <h3>Certified Technicians</h3>
+          <p>Our team is factory-trained and certified on every Chrysler, Dodge, Jeep&reg;, and Ram model. They know your vehicle inside and out.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SERVICE SPECIALS ==================== -->
+  <section class="service-specials" id="specials">
+    <div class="container">
+      <div class="section-header">
+        <h2>Service Specials</h2>
+        <p>Save on the maintenance your vehicle needs</p>
+      </div>
+      <div class="specials-grid">
+        <div class="special-card">
+          <div class="special-price">$49<sup style="font-size:18px">.95</sup></div>
+          <div class="special-name">Conventional Oil Change</div>
+          <div class="special-desc">Up to 5 quarts conventional oil, new filter, multi-point inspection, and tire pressure check.</div>
+        </div>
+        <div class="special-card">
+          <div class="special-price">$79<sup style="font-size:18px">.95</sup></div>
+          <div class="special-name">Synthetic Oil Change</div>
+          <div class="special-desc">Up to 5 quarts full synthetic oil, premium filter, multi-point inspection, and tire rotation.</div>
+        </div>
+        <div class="special-card">
+          <div class="special-price">$29<sup style="font-size:18px">.95</sup></div>
+          <div class="special-name">Tire Rotation &amp; Balance</div>
+          <div class="special-desc">4-tire rotation, balance, and inspection. Extend the life of your tires and improve ride quality.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SCHEDULE SERVICE ==================== -->
+  <section class="schedule-section" id="schedule">
+    <div class="container">
+      <div class="section-header">
+        <h2>Schedule Your Appointment</h2>
+        <p>Fill out the form below and our service team will confirm your appointment</p>
+      </div>
+      <div class="schedule-layout">
+        <div class="schedule-form">
+          <h3>Service Appointment</h3>
+          <form onsubmit="event.preventDefault(); alert('Demo only -- form not submitted.');">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" placeholder="John" required>
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" placeholder="Smith" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="john@example.com" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" placeholder="(419) 555-0123" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="year">Vehicle Year</label>
+                <input type="text" id="year" placeholder="2024">
+              </div>
+              <div class="form-group">
+                <label for="makeModel">Make &amp; Model</label>
+                <input type="text" id="makeModel" placeholder="Jeep Grand Cherokee">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="serviceType">Service Needed</label>
+                <select id="serviceType">
+                  <option value="">Select service type...</option>
+                  <option>Oil Change</option>
+                  <option>Tire Rotation / Balance</option>
+                  <option>Brake Inspection / Repair</option>
+                  <option>Engine Diagnostics</option>
+                  <option>Transmission Service</option>
+                  <option>Alignment</option>
+                  <option>Battery Service</option>
+                  <option>Recall / Warranty Work</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="prefDate">Preferred Date</label>
+                <input type="date" id="prefDate">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group full">
+                <label for="comments">Additional Comments</label>
+                <textarea id="comments" placeholder="Describe any symptoms, warning lights, or specific concerns..."></textarea>
+              </div>
+            </div>
+            <div class="form-submit">
+              <button type="submit" class="btn btn-primary">Request Appointment</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="service-info-sidebar">
+          <div class="info-card">
+            <h4>Service Department Hours</h4>
+            <div class="hours-table">
+              <div class="hours-row">
+                <span class="hours-day">Monday</span>
+                <span class="hours-time">8:00 AM - 5:00 PM</span>
+              </div>
+              <div class="hours-row">
+                <span class="hours-day">Tuesday</span>
+                <span class="hours-time">8:00 AM - 5:00 PM</span>
+              </div>
+              <div class="hours-row">
+                <span class="hours-day">Wednesday</span>
+                <span class="hours-time">8:00 AM - 5:00 PM</span>
+              </div>
+              <div class="hours-row">
+                <span class="hours-day">Thursday</span>
+                <span class="hours-time">8:00 AM - 5:00 PM</span>
+              </div>
+              <div class="hours-row">
+                <span class="hours-day">Friday</span>
+                <span class="hours-time">8:00 AM - 5:00 PM</span>
+              </div>
+              <div class="hours-row">
+                <span class="hours-day">Saturday</span>
+                <span class="hours-time">8:00 AM - 12:00 PM</span>
+              </div>
+              <div class="hours-row">
+                <span class="hours-day">Sunday</span>
+                <span class="hours-time closed">Closed</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h4>Contact Service</h4>
+            <a href="tel:4196016202" class="phone-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+              <div>
+                <span class="phone-label">Service Department</span>
+                (419) 601-6202
+              </div>
+            </a>
+            <a href="tel:4196016973" class="phone-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+              <div>
+                <span class="phone-label">Parts Department</span>
+                (419) 601-6973
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Inventory</h4>
+          <ul>
+            <li><a href="/demo/thayer-cdjr/inventory?type=new">New Vehicles</a></li>
+            <li><a href="/demo/thayer-cdjr/inventory?type=used">Pre-Owned Vehicles</a></li>
+            <li><a href="/demo/thayer-cdjr/inventory?type=certified">Certified Pre-Owned</a></li>
+            <li><a href="/demo/thayer-cdjr/inventory?special=true">Current Specials</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Service</h4>
+          <ul>
+            <li><a href="/demo/thayer-cdjr/service">Schedule Service</a></li>
+            <li><a href="/demo/thayer-cdjr/service#specials">Service Specials</a></li>
+            <li><a href="tel:4196016973">Order Parts: (419) 601-6973</a></li>
+            <li><a href="tel:4196016202">Call Service: (419) 601-6202</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Financing</h4>
+          <ul>
+            <li><a href="/demo/thayer-cdjr/financing">Apply for Financing</a></li>
+            <li><a href="/demo/thayer-cdjr/financing#calculator">Payment Calculator</a></li>
+            <li><a href="/demo/thayer-cdjr/financing#trade">Value Your Trade</a></li>
+            <li><a href="/demo/thayer-cdjr/financing#credit">Credit Solutions</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>About Us</h4>
+          <ul>
+            <li><a href="/demo/thayer-cdjr/contact">Contact Us</a></li>
+            <li><a href="/demo/thayer-auto">Thayer Family Dealerships</a></li>
+            <li><a href="https://maps.google.com/?q=1303+N+Main+St+Bowling+Green+OH+43402" target="_blank" rel="noopener">Hours &amp; Directions</a></li>
+            <li><a href="tel:4196016090">Call Sales: (419) 601-6090</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Thayer Chrysler Dodge Jeep Ram &mdash; 1303 N Main St, Bowling Green, OH 43402 &nbsp;&bull;&nbsp; &copy; 2026 All Rights Reserved &nbsp;&bull;&nbsp; Powered by <a href="https://www.savvydealer.com" target="_blank" rel="noopener">SavvyDealer</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== JAVASCRIPT ==================== -->
+  <script>
+    (function() {
+      // Mobile hamburger menu
+      var hamburgerBtn = document.getElementById('hamburgerBtn');
+      var mobileNav = document.getElementById('mobileNav');
+      var mobileNavClose = document.getElementById('mobileNavClose');
+
+      hamburgerBtn.addEventListener('click', function() {
+        this.classList.toggle('active');
+        mobileNav.classList.toggle('open');
+      });
+
+      mobileNavClose.addEventListener('click', function() {
+        hamburgerBtn.classList.remove('active');
+        mobileNav.classList.remove('open');
+      });
+
+      mobileNav.addEventListener('click', function(e) {
+        if (e.target === mobileNav) {
+          hamburgerBtn.classList.remove('active');
+          mobileNav.classList.remove('open');
+        }
+      });
+
+      var mobileLinks = mobileNav.querySelectorAll('a');
+      mobileLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+          hamburgerBtn.classList.remove('active');
+          mobileNav.classList.remove('open');
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thayer Nissan | New Nissan Dealer | Bowling Green, OH</title>
+  <meta name="description" content="Shop new and pre-owned Nissan vehicles at Thayer Nissan. Browse Altima, Rogue, Pathfinder, Frontier, Sentra, Kicks, Ariya, Murano and more. Serving Bowling Green, Toledo, Findlay, and Perrysburg, OH.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --nissan-red: #C3002F;
+      --nissan-red-hover: #C51733;
+      --nissan-black: #000000;
+      --nissan-white: #FFFFFF;
+      --nissan-dark-gray: #363636;
+      --nissan-medium-gray: #58595B;
+      --nissan-silver: #C0C0C0;
+      --nissan-muted: #939598;
+      --nissan-border: #EFEFEF;
+      --nissan-section-bg: #F5F5F5;
+      --nissan-section-bg-alt: #EFEFEF;
+      --nissan-font: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: var(--nissan-font);
+      color: var(--nissan-black);
+      background-color: var(--nissan-white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; height: auto; }
+
+    /* ========== TOP BAR ========== */
+    .top-bar {
+      background: var(--nissan-black);
+      color: #fff;
+      padding: 8px 0;
+      font-size: 13px;
+    }
+    .top-bar .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .top-bar-phones { display: flex; gap: 20px; flex-wrap: wrap; }
+    .top-bar-phones a { color: #fff; font-weight: 500; transition: opacity 0.2s; }
+    .top-bar-phones a:hover { opacity: 0.85; }
+    .top-bar-phones span { color: rgba(255,255,255,0.6); margin-right: 4px; font-weight: 400; }
+    .top-bar-address { color: rgba(255,255,255,0.85); }
+    .top-bar-address a { color: #fff; }
+    .top-bar-address a:hover { text-decoration: underline; }
+
+    /* ========== HEADER / NAV ========== */
+    .site-header {
+      background: var(--nissan-white);
+      border-bottom: 1px solid var(--nissan-border);
+      padding: 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      height: 70px;
+      display: flex;
+      align-items: center;
+    }
+    .site-header .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      height: 100%;
+    }
+    .header-logo {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-shrink: 0;
+    }
+    .nissan-logo { height: 40px; width: auto; }
+    .dealer-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--nissan-black);
+      line-height: 1.2;
+      white-space: nowrap;
+    }
+    .dealer-name small {
+      display: block;
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--nissan-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      height: 100%;
+    }
+    .header-nav a {
+      color: var(--nissan-silver);
+      font-size: 14px;
+      font-weight: 700;
+      padding: 0 18px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      border-bottom: 4px solid transparent;
+      transition: all 0.2s ease;
+    }
+    .header-nav a:hover {
+      color: var(--nissan-dark-gray);
+    }
+    .header-nav a.active {
+      color: var(--nissan-dark-gray);
+      border-bottom: 4px solid var(--nissan-red);
+    }
+
+    /* Hamburger */
+    .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--nissan-black); margin: 5px 0; transition: all 0.3s; }
+
+    /* Mobile Nav */
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      top: 0; left: -280px;
+      width: 280px; height: 100%;
+      background: var(--nissan-white);
+      z-index: 200;
+      box-shadow: 2px 0 20px rgba(0,0,0,0.15);
+      transition: left 0.2s ease;
+      padding: 24px;
+    }
+    .mobile-nav.open { left: 0; }
+    .mobile-nav-close {
+      background: none; border: none; font-size: 28px; cursor: pointer; position: absolute; top: 16px; right: 16px; color: var(--nissan-black);
+    }
+    .mobile-nav a {
+      display: block;
+      padding: 14px 0;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--nissan-dark-gray);
+      border-bottom: 1px solid var(--nissan-border);
+    }
+    .mobile-nav a:hover { color: var(--nissan-red); }
+    .mobile-overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.4);
+      z-index: 199;
+    }
+    .mobile-overlay.open { display: block; }
+
+    /* ========== HERO ========== */
+    .hero {
+      position: relative;
+      width: 100%;
+      min-height: 85vh;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      padding: 80px 60px;
+      background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 30%, transparent 60%),
+                  url('https://www.nissanusa.com/content/dam/Nissan/us/vehicles/rogue/2025/overview/2025-nissan-rogue-hero-large.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      color: var(--nissan-white);
+      max-width: 600px;
+    }
+    .hero h1 {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+    .hero p {
+      font-size: 18px;
+      font-weight: 400;
+      margin-bottom: 24px;
+      opacity: 0.9;
+      line-height: 1.4;
+    }
+    .hero-ctas {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    /* ========== BUTTONS ========== */
+    .nissan-btn-primary {
+      display: inline-block;
+      background-color: var(--nissan-red);
+      color: var(--nissan-white);
+      font-family: var(--nissan-font);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 14px 32px;
+      border: none;
+      border-radius: 0;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .nissan-btn-primary:hover { background-color: var(--nissan-red-hover); }
+
+    .nissan-btn-outline-dark {
+      display: inline-block;
+      background-color: transparent;
+      color: var(--nissan-white);
+      font-family: var(--nissan-font);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 12px 30px;
+      border: 2px solid var(--nissan-white);
+      border-radius: 0;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .nissan-btn-outline-dark:hover { background-color: var(--nissan-white); color: var(--nissan-black); }
+
+    .nissan-btn-secondary {
+      display: inline-block;
+      background-color: var(--nissan-black);
+      color: var(--nissan-white);
+      font-family: var(--nissan-font);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 14px 32px;
+      border: none;
+      border-radius: 0;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .nissan-btn-secondary:hover { background-color: var(--nissan-dark-gray); }
+
+    .nissan-btn-outline {
+      display: inline-block;
+      background-color: transparent;
+      color: var(--nissan-black);
+      font-family: var(--nissan-font);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 12px 30px;
+      border: 2px solid var(--nissan-black);
+      border-radius: 0;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .nissan-btn-outline:hover { background-color: var(--nissan-black); color: var(--nissan-white); }
+
+    /* ========== MODEL LINEUP ========== */
+    .model-lineup {
+      padding: 72px 0 80px;
+      background: var(--nissan-section-bg-alt);
+    }
+    .model-lineup .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .section-header {
+      text-align: center;
+      margin-bottom: 44px;
+    }
+    .section-header h2 {
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--nissan-black);
+      margin-bottom: 8px;
+    }
+    .section-header p {
+      font-size: 16px;
+      color: var(--nissan-medium-gray);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .section-header .bar {
+      width: 60px;
+      height: 4px;
+      background: var(--nissan-red);
+      margin: 16px auto 0;
+    }
+
+    .model-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .model-card {
+      background: var(--nissan-white);
+      border: 1px solid var(--nissan-border);
+      border-radius: 0;
+      overflow: hidden;
+      transition: box-shadow 0.3s ease;
+      text-align: center;
+    }
+    .model-card:hover {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    }
+    .model-card-image {
+      background: var(--nissan-section-bg);
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 180px;
+    }
+    .model-card-image img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      max-height: 140px;
+    }
+    .model-card-body {
+      padding: 20px 24px;
+    }
+    .model-card-body h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--nissan-black);
+      margin-bottom: 4px;
+    }
+    .model-card-body .price {
+      font-size: 14px;
+      color: var(--nissan-medium-gray);
+      margin-bottom: 12px;
+    }
+    .model-card-body .model-link {
+      color: var(--nissan-red);
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      transition: color 0.2s;
+    }
+    .model-card-body .model-link:hover {
+      color: var(--nissan-red-hover);
+      text-decoration: underline;
+    }
+
+    /* ========== WHY THAYER NISSAN ========== */
+    .why-section {
+      padding: 72px 0;
+      background: var(--nissan-white);
+    }
+    .why-section .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+    .why-card {
+      text-align: center;
+      padding: 40px 28px;
+      border: 1px solid var(--nissan-border);
+      border-radius: 0;
+      transition: box-shadow 0.3s;
+    }
+    .why-card:hover {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    }
+    .why-icon {
+      width: 64px;
+      height: 64px;
+      background: var(--nissan-black);
+      border-radius: 0;
+      margin: 0 auto 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .why-icon svg { width: 28px; height: 28px; fill: var(--nissan-white); }
+    .why-card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--nissan-black);
+      margin-bottom: 8px;
+    }
+    .why-card p {
+      font-size: 14px;
+      color: var(--nissan-medium-gray);
+      line-height: 1.6;
+    }
+
+    /* ========== CTA BANNER ========== */
+    .cta-banner {
+      background: var(--nissan-black);
+      color: var(--nissan-white);
+      padding: 60px 0;
+      text-align: center;
+    }
+    .cta-banner .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .cta-banner h2 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .cta-banner p {
+      font-size: 16px;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 28px;
+    }
+    .cta-banner-btns {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ========== FOOTER ========== */
+    .site-footer {
+      background: var(--nissan-black);
+      color: var(--nissan-white);
+      padding: 60px 0 0;
+    }
+    .site-footer .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .footer-logo {
+      height: 30px;
+      margin-bottom: 32px;
+      filter: brightness(0) invert(1);
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(255,255,255,0.15);
+    }
+    .footer-col h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--nissan-white);
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 8px; }
+    .footer-col a {
+      color: rgba(255,255,255,0.7);
+      font-size: 13px;
+      font-weight: 400;
+      transition: color 0.2s ease;
+    }
+    .footer-col a:hover { color: var(--nissan-white); }
+    .footer-family {
+      text-align: center;
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.15);
+      font-size: 14px;
+      color: rgba(255,255,255,0.5);
+    }
+    .footer-family a { color: var(--nissan-red); font-weight: 600; }
+    .footer-family a:hover { text-decoration: underline; }
+    .footer-locations {
+      text-align: center;
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.15);
+      font-size: 13px;
+      color: rgba(255,255,255,0.4);
+    }
+    .footer-locations a { color: rgba(255,255,255,0.6); font-weight: 500; margin: 0 8px; }
+    .footer-locations a:hover { color: var(--nissan-white); }
+    .footer-bottom {
+      padding: 20px 0;
+      text-align: center;
+      font-size: 12px;
+      color: var(--nissan-muted);
+    }
+    .footer-bottom a { color: var(--nissan-red); font-weight: 500; }
+    .footer-bottom a:hover { text-decoration: underline; }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 1023px) {
+      .model-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 991px) {
+      .header-nav { display: none; }
+      .hamburger { display: block; }
+      .mobile-nav { display: block; }
+    }
+    @media (max-width: 768px) {
+      .hero { min-height: 60vh; padding: 60px 24px; }
+      .hero h1 { font-size: 32px; }
+      .hero p { font-size: 16px; }
+      .why-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: repeat(2, 1fr); }
+      .model-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .top-bar .container { flex-direction: column; text-align: center; gap: 4px; }
+      .top-bar-phones { justify-content: center; }
+      .site-header .container { padding: 0 16px; }
+      .hero h1 { font-size: 27px; }
+      .model-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; text-align: center; }
+      .cta-banner h2 { font-size: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== TOP BAR ==================== -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-phones">
+        <a href="tel:4193535271"><span>Sales:</span> (419) 353-5271</a>
+      </div>
+      <div class="top-bar-address">
+        <a href="https://maps.google.com/?q=18039+N+Dixie+Hwy+Bowling+Green+OH+43402" target="_blank" rel="noopener">18039 N Dixie Hwy, Bowling Green, OH 43402</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="site-header">
+    <div class="container">
+      <a href="/demo/thayer-nissan" class="header-logo">
+        <img class="nissan-logo" src="https://upload.wikimedia.org/wikipedia/commons/2/23/Nissan_2020_logo.svg" alt="Nissan">
+        <div class="dealer-name">Thayer Nissan<small>Bowling Green, OH</small></div>
+      </a>
+      <nav class="header-nav">
+        <a href="/demo/thayer-nissan" class="active">Home</a>
+        <a href="/demo/thayer-nissan/inventory">Inventory</a>
+        <a href="/demo/thayer-nissan/service">Service</a>
+        <a href="/demo/thayer-nissan/financing">Financing</a>
+        <a href="/demo/thayer-nissan/contact">Contact</a>
+      </nav>
+      <button class="hamburger" onclick="document.querySelector('.mobile-nav').classList.add('open');document.querySelector('.mobile-overlay').classList.add('open');" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-overlay" onclick="document.querySelector('.mobile-nav').classList.remove('open');this.classList.remove('open');"></div>
+  <nav class="mobile-nav">
+    <button class="mobile-nav-close" onclick="this.parentElement.classList.remove('open');document.querySelector('.mobile-overlay').classList.remove('open');">&times;</button>
+    <div style="margin-top:48px;">
+      <a href="/demo/thayer-nissan">Home</a>
+      <a href="/demo/thayer-nissan/inventory">Inventory</a>
+      <a href="/demo/thayer-nissan/service">Service</a>
+      <a href="/demo/thayer-nissan/financing">Financing</a>
+      <a href="/demo/thayer-nissan/contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Innovation That Excites</h1>
+      <p>Explore the complete Nissan lineup at Thayer Nissan in Bowling Green. From the all-electric Ariya to the rugged Frontier, find your next vehicle today.</p>
+      <div class="hero-ctas">
+        <a href="/demo/thayer-nissan/inventory" class="nissan-btn-primary">View Inventory</a>
+        <a href="/demo/thayer-nissan/contact" class="nissan-btn-outline-dark">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== MODEL LINEUP ========== -->
+  <section class="model-lineup">
+    <div class="container">
+      <div class="section-header">
+        <h2>Explore the Nissan Lineup</h2>
+        <p>Find the perfect Nissan for your lifestyle. Sedans, SUVs, trucks, and EVs.</p>
+        <div class="bar"></div>
+      </div>
+      <div class="model-grid">
+
+        <div class="model-card">
+          <div class="model-card-image">
+            <img src="https://www.nissanusa.com/content/dam/Nissan/us/vehicles/altima/2025/overview/2025-nissan-altima-silver-background.png" alt="2025 Nissan Altima">
+          </div>
+          <div class="model-card-body">
+            <h3>Altima</h3>
+            <div class="price">Starting at $28,140*</div>
+            <a href="/demo/thayer-nissan/inventory" class="model-link">Explore &rarr;</a>
+          </div>
+        </div>
+
+        <div class="model-card">
+          <div class="model-card-image">
+            <img src="https://www.nissanusa.com/content/dam/Nissan/us/vehicles/rogue/2025/overview/2025-nissan-rogue-background.png" alt="2025 Nissan Rogue">
+          </div>
+          <div class="model-card-body">
+            <h3>Rogue</h3>
+            <div class="price">Starting at $30,990*</div>
+            <a href="/demo/thayer-nissan/inventory" class="model-link">Explore &rarr;</a>
+          </div>
+        </div>
+
+        <div class="model-card">
+          <div class="model-card-image">
+            <img src="https://www.nissanusa.com/content/dam/Nissan/us/vehicles/pathfinder/2025/overview/2025-nissan-pathfinder-background.png" alt="2025 Nissan Pathfinder">
+          </div>
+          <div class="model-card-body">
+            <h3>Pathfinder</h3>
+            <div class="price">Starting at $36,830*</div>
+            <a href="/demo/thayer-nissan/inventory" class="model-link">Explore &rarr;</a>
+          </div>
+        </div>
+
+        <div class="model-card">
+          <div class="model-card-image">
+            <img src="https://www.nissanusa.com/content/dam/Nissan/us/vehicles/frontier/2025/overview/2025-nissan-frontier-background.png" alt="2025 Nissan Frontier">
+          </div>
+          <div class="model-card-body">
+            <h3>Frontier</h3>
+            <div class="price">Starting at $31,710*</div>
+            <a href="/demo/thayer-nissan/inventory" class="model-link">Explore &rarr;</a>
+          </div>
+        </div>
+
+        <div class="model-card">
+          <div class="model-card-image">
+            <img src="https://www.nissanusa.com/content/dam/Nissan/us/vehicles/sentra/2025/overview/2025-nissan-sentra-background.png" alt="2025 Nissan Sentra">
+          </div>
+          <div class="model-card-body">
+            <h3>Sentra</h3>
+            <div class="price">Starting at $22,360*</div>
+            <a href="/demo/thayer-nissan/inventory" class="model-link">Explore &rarr;</a>
+          </div>
+        </div>
+
+        <div class="model-card">
+          <div class="model-card-image">
+            <img src="https://www.nissanusa.com/content/dam/Nissan/us/vehicles/kicks/2025/overview/2025-nissan-kicks-background.png" alt="2025 Nissan Kicks">
+          </div>
+          <div class="model-card-body">
+            <h3>Kicks</h3>
+            <div class="price">Starting at $22,440*</div>
+            <a href="/demo/thayer-nissan/inventory" class="model-link">Explore &rarr;</a>
+          </div>
+        </div>
+
+        <div class="model-card">
+          <div class="model-card-image">
+            <img src="https://www.nissanusa.com/content/dam/Nissan/us/vehicles/ariya/2025/overview/2025-nissan-ariya-background.png" alt="2025 Nissan Ariya">
+          </div>
+          <div class="model-card-body">
+            <h3>Ariya</h3>
+            <div class="price">Starting at $39,590*</div>
+            <a href="/demo/thayer-nissan/inventory" class="model-link">Explore &rarr;</a>
+          </div>
+        </div>
+
+        <div class="model-card">
+          <div class="model-card-image">
+            <img src="https://www.nissanusa.com/content/dam/Nissan/us/vehicles/murano/2025/overview/2025-nissan-murano-background.png" alt="2025 Nissan Murano">
+          </div>
+          <div class="model-card-body">
+            <h3>Murano</h3>
+            <div class="price">Starting at $39,560*</div>
+            <a href="/demo/thayer-nissan/inventory" class="model-link">Explore &rarr;</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== WHY THAYER NISSAN ==================== -->
+  <section class="why-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Why Thayer Nissan</h2>
+        <p>A family dealership committed to your complete satisfaction</p>
+        <div class="bar"></div>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          </div>
+          <h3>Certified Technicians</h3>
+          <p>Nissan-trained service professionals using genuine OEM parts to keep your vehicle running at peak performance.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+          </div>
+          <h3>Transparent Pricing</h3>
+          <p>No hidden fees, no gimmicks. Our upfront pricing ensures you know exactly what you are paying from the start.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          </div>
+          <h3>Family Owned</h3>
+          <p>Part of the Thayer Family Dealerships, proudly serving Bowling Green and northwest Ohio for decades.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA BANNER ==================== -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Ready to Find Your Nissan?</h2>
+      <p>Browse our inventory online or visit us in Bowling Green to take a test drive today.</p>
+      <div class="cta-banner-btns">
+        <a href="/demo/thayer-nissan/inventory" class="nissan-btn-primary">Browse Inventory</a>
+        <a href="/demo/thayer-nissan/financing" class="nissan-btn-outline-dark">Get Pre-Qualified</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <img class="footer-logo" src="https://upload.wikimedia.org/wikipedia/commons/2/23/Nissan_2020_logo.svg" alt="Nissan">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Inventory</h4>
+          <ul>
+            <li><a href="/demo/thayer-nissan/inventory">New Nissan Vehicles</a></li>
+            <li><a href="/demo/thayer-nissan/inventory?type=used">Pre-Owned Vehicles</a></li>
+            <li><a href="/demo/thayer-nissan/inventory?type=certified">Certified Pre-Owned</a></li>
+            <li><a href="/demo/thayer-nissan/inventory?special=true">Current Specials</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Service</h4>
+          <ul>
+            <li><a href="/demo/thayer-nissan/service">Schedule Service</a></li>
+            <li><a href="/demo/thayer-nissan/service#specials">Service Specials</a></li>
+            <li><a href="/demo/thayer-nissan/service#parts">Order Parts</a></li>
+            <li><a href="tel:4193535271">Call: (419) 353-5271</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Financing</h4>
+          <ul>
+            <li><a href="/demo/thayer-nissan/financing">Apply for Financing</a></li>
+            <li><a href="/demo/thayer-nissan/financing#calculator">Payment Calculator</a></li>
+            <li><a href="/demo/thayer-nissan/financing#trade">Value Your Trade</a></li>
+            <li><a href="/demo/thayer-nissan/financing#credit">Credit Solutions</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>About Us</h4>
+          <ul>
+            <li><a href="/demo/thayer-nissan/contact">Contact Us</a></li>
+            <li><a href="/demo/thayer-nissan/contact#hours">Hours &amp; Directions</a></li>
+            <li><a href="/demo/thayer-nissan/vdp">Vehicle Details</a></li>
+            <li><a href="tel:4193535271">Call Sales: (419) 353-5271</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-family">Part of the <a href="/demo/thayer-auto">Thayer Family Dealerships</a></div>
+      <div class="footer-locations">Also visit: <a href="/demo/thayer-chevrolet">Thayer Chevrolet</a> | <a href="/demo/thayer-toyota">Thayer Toyota</a> | <a href="/demo/thayer-honda">Thayer Honda</a> | <a href="/demo/thayer-ford">Thayer Ford</a> | <a href="/demo/thayer-cdjr">Thayer CDJR</a></div>
+      <div class="footer-bottom">
+        <p>Thayer Nissan &mdash; 18039 N Dixie Hwy, Bowling Green, OH 43402 &bull; &copy; 2026 All Rights Reserved &bull; Powered by <a href="https://www.savvydealer.com" target="_blank" rel="noopener">SavvyDealer</a></p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

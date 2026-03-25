@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Financing | Thayer Honda | Bowling Green, OH</title>
+  <meta name="description" content="Get pre-qualified for Honda financing at Thayer Honda in Bowling Green, OH. Competitive rates, flexible terms, Honda Financial Services, and all credit situations welcome.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --honda-red: #CC0000;
+      --honda-red-hover: #A30000;
+      --honda-blue: #2198DD;
+      --honda-blue-hover: #3CACEC;
+      --honda-teal: #5BC5D2;
+      --honda-white: #FFFFFF;
+      --honda-off-white: #F5F5F5;
+      --honda-border: #DDDDDD;
+      --honda-gray-text: #666666;
+      --honda-dark-text: #333333;
+      --honda-black: #000000;
+      --honda-footer-bg: #231F20;
+      --honda-font: 'Nunito', 'Avenir Next Rounded', 'Avenir', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      --honda-radius: 10px;
+      --honda-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      --honda-shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.12);
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: var(--honda-font);
+      color: var(--honda-dark-text);
+      background-color: var(--honda-white);
+      line-height: 1.6;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; height: auto; }
+
+    /* ========== TOP BAR ========== */
+    .top-bar {
+      background: var(--honda-off-white);
+      color: var(--honda-dark-text);
+      padding: 8px 0;
+      font-size: 13px;
+      border-bottom: 1px solid var(--honda-border);
+    }
+    .top-bar .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .top-bar-phones { display: flex; gap: 20px; flex-wrap: wrap; }
+    .top-bar-phones a { color: var(--honda-dark-text); font-weight: 600; transition: color 0.2s; }
+    .top-bar-phones a:hover { color: var(--honda-blue); }
+    .top-bar-phones span { color: var(--honda-gray-text); margin-right: 4px; font-weight: 400; }
+    .top-bar-address { color: var(--honda-gray-text); }
+    .top-bar-address a { color: var(--honda-dark-text); }
+    .top-bar-address a:hover { color: var(--honda-blue); }
+
+    /* ========== HEADER (WHITE NAV) ========== */
+    .site-header {
+      background: var(--honda-white);
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    .site-header .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .header-logo { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+    .header-logo img { height: 36px; width: auto; }
+    .dealer-name { font-size: 16px; font-weight: 700; color: var(--honda-dark-text); line-height: 1.2; white-space: nowrap; }
+    .dealer-name small { display: block; font-size: 11px; font-weight: 500; color: var(--honda-gray-text); letter-spacing: 0.3px; }
+    .header-nav { display: flex; align-items: center; gap: 4px; }
+    .header-nav a { color: var(--honda-black); font-size: 14px; font-weight: 500; padding: 8px 14px; border-radius: var(--honda-radius); transition: color 0.2s, background 0.2s; }
+    .header-nav a:hover { color: var(--honda-blue); }
+    .header-nav a.active { color: var(--honda-blue); font-weight: 600; }
+
+    /* Mobile hamburger */
+    .mobile-menu-btn { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+    .mobile-menu-btn span { display: block; width: 24px; height: 2px; background: var(--honda-dark-text); margin: 5px 0; border-radius: 2px; transition: all 0.3s; }
+    .mobile-nav { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: var(--honda-white); z-index: 200; padding: 80px 24px 24px; flex-direction: column; gap: 0; }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav-close { position: absolute; top: 16px; right: 20px; background: none; border: none; font-size: 28px; cursor: pointer; color: var(--honda-dark-text); padding: 8px; }
+    .mobile-nav a { display: block; font-size: 18px; font-weight: 600; color: var(--honda-dark-text); padding: 16px 0; border-bottom: 1px solid var(--honda-border); transition: color 0.2s; }
+    .mobile-nav a:hover { color: var(--honda-blue); }
+
+    /* ========== HONDA BRAND BUTTONS ========== */
+    .honda-btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background-color: var(--honda-blue);
+      color: var(--honda-white);
+      font-family: var(--honda-font);
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      text-transform: none;
+      padding: 12px 28px;
+      border: none;
+      border-radius: var(--honda-radius);
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-align: center;
+    }
+    .honda-btn-primary:hover { background-color: var(--honda-blue-hover); }
+    .honda-btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background-color: transparent;
+      color: var(--honda-blue);
+      font-family: var(--honda-font);
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      text-transform: none;
+      padding: 12px 28px;
+      border: 2px solid var(--honda-blue);
+      border-radius: var(--honda-radius);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+    .honda-btn-secondary:hover { background-color: var(--honda-blue); color: var(--honda-white); }
+
+    /* ========== HERO ========== */
+    .finance-hero {
+      background: linear-gradient(135deg, #e8f4fd 0%, #f0f9ff 50%, #fafafa 100%);
+      padding: 64px 0;
+      text-align: center;
+    }
+    .finance-hero .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .finance-hero-icon {
+      width: 72px;
+      height: 72px;
+      background: var(--honda-blue);
+      border-radius: var(--honda-radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+    }
+    .finance-hero-icon svg {
+      width: 36px;
+      height: 36px;
+      fill: none;
+      stroke: #fff;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .finance-hero h1 {
+      font-size: 38px;
+      font-weight: 600;
+      color: var(--honda-dark-text);
+      margin-bottom: 12px;
+      letter-spacing: -0.025em;
+    }
+    .finance-hero p {
+      font-size: 16px;
+      color: var(--honda-gray-text);
+      margin-bottom: 28px;
+      line-height: 1.7;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .finance-hero-ctas {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ========== ADVANTAGES ========== */
+    .advantages-section {
+      padding: 72px 0;
+      background: var(--honda-white);
+    }
+    .advantages-section .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .section-header {
+      text-align: center;
+      margin-bottom: 44px;
+    }
+    .section-header h2 {
+      font-size: 32px;
+      font-weight: 600;
+      color: var(--honda-dark-text);
+      margin-bottom: 8px;
+      letter-spacing: -0.025em;
+    }
+    .section-header p {
+      font-size: 16px;
+      color: var(--honda-gray-text);
+    }
+    .advantages-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .advantage-card {
+      background: var(--honda-off-white);
+      border-radius: var(--honda-radius);
+      padding: 28px 20px;
+      text-align: center;
+      box-shadow: var(--honda-shadow);
+      transition: box-shadow 0.3s, transform 0.3s;
+    }
+    .advantage-card:hover {
+      box-shadow: var(--honda-shadow-hover);
+      transform: translateY(-2px);
+    }
+    .advantage-icon {
+      width: 56px;
+      height: 56px;
+      background: var(--honda-blue);
+      border-radius: var(--honda-radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 14px;
+    }
+    .advantage-icon svg {
+      width: 26px;
+      height: 26px;
+      fill: none;
+      stroke: #fff;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .advantage-card h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--honda-dark-text);
+      margin-bottom: 6px;
+    }
+    .advantage-card p {
+      font-size: 13px;
+      color: var(--honda-gray-text);
+      line-height: 1.6;
+    }
+
+    /* ========== PRE-QUAL FORM ========== */
+    .prequal-section {
+      padding: 72px 0;
+      background: var(--honda-off-white);
+    }
+    .prequal-section .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .form-card {
+      background: var(--honda-white);
+      border-radius: var(--honda-radius);
+      padding: 36px;
+      box-shadow: var(--honda-shadow);
+    }
+    .form-card h2 {
+      font-size: 26px;
+      font-weight: 600;
+      color: var(--honda-dark-text);
+      margin-bottom: 8px;
+      text-align: center;
+    }
+    .form-card > p {
+      font-size: 14px;
+      color: var(--honda-gray-text);
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    .form-row.full { grid-template-columns: 1fr; }
+    .form-group { display: flex; flex-direction: column; }
+    .form-group label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--honda-dark-text);
+      margin-bottom: 6px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      padding: 10px 14px;
+      border: 1px solid var(--honda-border);
+      border-radius: var(--honda-radius);
+      font-family: var(--honda-font);
+      font-size: 14px;
+      color: var(--honda-dark-text);
+      background: var(--honda-white);
+      transition: border-color 0.2s;
+      outline: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--honda-blue);
+    }
+    .form-group textarea { resize: vertical; min-height: 80px; }
+    .form-submit {
+      text-align: center;
+      margin-top: 24px;
+    }
+    .form-submit button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: var(--honda-blue);
+      color: var(--honda-white);
+      font-family: var(--honda-font);
+      font-size: 15px;
+      font-weight: 600;
+      padding: 14px 40px;
+      border: none;
+      border-radius: var(--honda-radius);
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .form-submit button:hover { background-color: var(--honda-blue-hover); }
+    .form-disclaimer {
+      text-align: center;
+      font-size: 12px;
+      color: var(--honda-gray-text);
+      margin-top: 16px;
+      line-height: 1.5;
+    }
+
+    /* ========== HONDA FINANCIAL ========== */
+    .hfs-section {
+      padding: 72px 0;
+      background: var(--honda-white);
+    }
+    .hfs-section .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .hfs-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .hfs-content h2 {
+      font-size: 30px;
+      font-weight: 600;
+      color: var(--honda-dark-text);
+      margin-bottom: 16px;
+      letter-spacing: -0.025em;
+    }
+    .hfs-content p {
+      font-size: 15px;
+      color: var(--honda-gray-text);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+    .hfs-features {
+      list-style: none;
+      margin-bottom: 24px;
+    }
+    .hfs-features li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 0;
+      font-size: 14px;
+      color: var(--honda-dark-text);
+    }
+    .hfs-features li svg {
+      width: 20px;
+      height: 20px;
+      fill: none;
+      stroke: var(--honda-blue);
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      flex-shrink: 0;
+    }
+    .hfs-visual {
+      background: var(--honda-off-white);
+      border-radius: var(--honda-radius);
+      padding: 40px;
+      text-align: center;
+      box-shadow: var(--honda-shadow);
+    }
+    .hfs-logo-placeholder {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--honda-dark-text);
+      margin-bottom: 8px;
+    }
+    .hfs-logo-sub {
+      font-size: 14px;
+      color: var(--honda-gray-text);
+      margin-bottom: 24px;
+    }
+    .hfs-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .hfs-stat {
+      text-align: center;
+    }
+    .hfs-stat-value {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--honda-blue);
+    }
+    .hfs-stat-label {
+      font-size: 12px;
+      color: var(--honda-gray-text);
+      font-weight: 500;
+    }
+
+    /* ========== FAQ ========== */
+    .faq-section {
+      padding: 72px 0;
+      background: var(--honda-off-white);
+    }
+    .faq-section .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .faq-list {
+      margin-top: 32px;
+    }
+    .faq-item {
+      background: var(--honda-white);
+      border-radius: var(--honda-radius);
+      margin-bottom: 12px;
+      box-shadow: var(--honda-shadow);
+      overflow: hidden;
+    }
+    .faq-question {
+      padding: 18px 24px;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--honda-dark-text);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: color 0.2s;
+    }
+    .faq-question:hover { color: var(--honda-blue); }
+    .faq-question svg {
+      width: 18px;
+      height: 18px;
+      fill: none;
+      stroke: var(--honda-gray-text);
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transition: transform 0.3s;
+      flex-shrink: 0;
+    }
+    .faq-item.open .faq-question svg { transform: rotate(180deg); }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    .faq-item.open .faq-answer { max-height: 300px; }
+    .faq-answer-inner {
+      padding: 0 24px 18px;
+      font-size: 14px;
+      color: var(--honda-gray-text);
+      line-height: 1.65;
+    }
+
+    /* ========== CTA BANNER ========== */
+    .cta-banner {
+      background: var(--honda-blue);
+      padding: 56px 0;
+      text-align: center;
+      color: #fff;
+    }
+    .cta-banner .container {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .cta-banner h2 {
+      font-size: 30px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      letter-spacing: -0.025em;
+    }
+    .cta-banner p {
+      font-size: 16px;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 28px;
+    }
+    .cta-banner-btns {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .honda-btn-white {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--honda-white);
+      color: var(--honda-dark-text);
+      font-family: var(--honda-font);
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      padding: 14px 36px;
+      border: none;
+      border-radius: var(--honda-radius);
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-align: center;
+    }
+    .honda-btn-white:hover { background: var(--honda-off-white); }
+    .honda-btn-outline-white {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: #FFFFFF;
+      font-family: var(--honda-font);
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      padding: 12px 28px;
+      border: 2px solid #FFFFFF;
+      border-radius: var(--honda-radius);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+    .honda-btn-outline-white:hover { background: #FFFFFF; color: var(--honda-dark-text); }
+
+    /* ========== FOOTER ========== */
+    .site-footer {
+      background-color: var(--honda-footer-bg);
+      color: #FFFFFF;
+      padding: 60px 0 0;
+    }
+    .site-footer .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .footer-top { display: flex; align-items: center; margin-bottom: 32px; }
+    .footer-top img { height: 40px; }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .footer-col h4 { font-size: 14px; font-weight: 600; color: #FFFFFF; margin-bottom: 16px; text-transform: none; }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 8px; }
+    .footer-col a { color: #CCCCCC; font-size: 13px; font-weight: 400; transition: color 0.2s; }
+    .footer-col a:hover { color: #FFFFFF; }
+    .footer-family { text-align: center; padding: 20px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.15); font-size: 14px; color: #888; }
+    .footer-family a { color: var(--honda-blue); font-weight: 600; }
+    .footer-family a:hover { text-decoration: underline; }
+    .footer-locations { text-align: center; padding: 16px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.15); font-size: 13px; color: #777; }
+    .footer-locations a { color: #aaa; font-weight: 500; margin: 0 8px; }
+    .footer-locations a:hover { color: #fff; }
+    .footer-bottom { padding: 20px 0; text-align: center; font-size: 13px; color: #666; }
+    .footer-bottom a { color: var(--honda-blue); font-weight: 500; }
+    .footer-bottom a:hover { text-decoration: underline; }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 1023px) {
+      .header-nav { display: none; }
+      .mobile-menu-btn { display: block; }
+      .advantages-grid { grid-template-columns: repeat(2, 1fr); }
+      .hfs-layout { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      .advantages-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .finance-hero h1 { font-size: 28px; }
+      .section-header h2 { font-size: 26px; }
+      .hfs-stats { grid-template-columns: 1fr; gap: 12px; }
+      .footer-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 640px) {
+      .top-bar .container { flex-direction: column; text-align: center; gap: 4px; }
+      .top-bar-phones { justify-content: center; }
+      .site-header .container { flex-wrap: wrap; justify-content: space-between; }
+      .form-card { padding: 24px 20px; }
+      .footer-grid { grid-template-columns: 1fr; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== TOP BAR ==================== -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-phones">
+        <a href="tel:4194195003"><span>Sales:</span> (419) 419-5003</a>
+        <a href="tel:4193542222"><span>Main:</span> (419) 354-2222</a>
+      </div>
+      <div class="top-bar-address">
+        <a href="https://maps.google.com/?q=1255+N+Main+St+Bowling+Green+OH+43402" target="_blank" rel="noopener">
+          1255 N Main St, Bowling Green, OH 43402
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="site-header">
+    <div class="container">
+      <a href="/demo/thayer-honda" class="header-logo">
+        <img src="https://di-shared-assets.dealerinspire.com/public/logos/honda/honda-dark-desktop-logo.png" alt="Honda">
+        <div class="dealer-name">
+          Thayer Honda
+          <small>Bowling Green, OH</small>
+        </div>
+      </a>
+      <nav class="header-nav">
+        <a href="/demo/thayer-honda">Home</a>
+        <a href="/demo/thayer-honda/inventory">Inventory</a>
+        <a href="/demo/thayer-honda/service">Service</a>
+        <a href="/demo/thayer-honda/financing" class="active">Financing</a>
+        <a href="/demo/thayer-honda/contact">Contact</a>
+      </nav>
+      <button class="mobile-menu-btn" onclick="document.getElementById('mobileNav').classList.add('open')">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav" id="mobileNav">
+    <button class="mobile-nav-close" onclick="document.getElementById('mobileNav').classList.remove('open')">&times;</button>
+    <a href="/demo/thayer-honda">Home</a>
+    <a href="/demo/thayer-honda/inventory">Inventory</a>
+    <a href="/demo/thayer-honda/service">Service</a>
+    <a href="/demo/thayer-honda/financing">Financing</a>
+    <a href="/demo/thayer-honda/contact">Contact</a>
+  </div>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="finance-hero">
+    <div class="container">
+      <div class="finance-hero-icon">
+        <svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+      </div>
+      <h1>Financing made simple</h1>
+      <p>Get pre-qualified in minutes with no impact to your credit score. Competitive rates, flexible terms, and a finance team that works for you -- not against you.</p>
+      <div class="finance-hero-ctas">
+        <a href="#prequal" class="honda-btn-primary">Get pre-qualified</a>
+        <a href="/demo/thayer-honda/inventory" class="honda-btn-secondary">Browse inventory</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ADVANTAGES ========== -->
+  <section class="advantages-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>The Thayer financing advantage</h2>
+        <p>A better way to finance your next Honda</p>
+      </div>
+      <div class="advantages-grid">
+        <div class="advantage-card">
+          <div class="advantage-icon">
+            <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <h3>No credit impact</h3>
+          <p>Pre-qualification uses a soft credit pull that does not affect your credit score.</p>
+        </div>
+        <div class="advantage-card">
+          <div class="advantage-icon">
+            <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+          </div>
+          <h3>Competitive rates</h3>
+          <p>We partner with multiple lenders to find the lowest rate available for your situation.</p>
+        </div>
+        <div class="advantage-card">
+          <div class="advantage-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0112 2a8 8 0 018 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h3>All credit welcome</h3>
+          <p>First-time buyers, rebuilding credit, or excellent history -- we work with every situation.</p>
+        </div>
+        <div class="advantage-card">
+          <div class="advantage-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <h3>Quick decisions</h3>
+          <p>Most applications receive a decision within minutes, not days. Get approved and drive today.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PRE-QUAL FORM ==================== -->
+  <section class="prequal-section" id="prequal">
+    <div class="container">
+      <div class="form-card">
+        <h2>Get pre-qualified today</h2>
+        <p>Fill out the form below and our finance team will reach out with your options. No obligation, no pressure.</p>
+        <form onsubmit="event.preventDefault(); alert('Thank you! Your pre-qualification request has been submitted. Our finance team will contact you shortly with your options.');">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First name</label>
+              <input type="text" id="firstName" name="firstName" placeholder="John" required>
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last name</label>
+              <input type="text" id="lastName" name="lastName" placeholder="Smith" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" id="email" name="email" placeholder="john@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone number</label>
+              <input type="tel" id="phone" name="phone" placeholder="(419) 555-0100" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="vehicleInterest">Vehicle of interest</label>
+              <select id="vehicleInterest" name="vehicleInterest">
+                <option value="">Select a model...</option>
+                <option value="crv">Honda CR-V</option>
+                <option value="civic">Honda Civic</option>
+                <option value="accord">Honda Accord</option>
+                <option value="hrv">Honda HR-V</option>
+                <option value="pilot">Honda Pilot</option>
+                <option value="passport">Honda Passport</option>
+                <option value="odyssey">Honda Odyssey</option>
+                <option value="ridgeline">Honda Ridgeline</option>
+                <option value="other">Other / Not sure</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="creditRange">Estimated credit score</label>
+              <select id="creditRange" name="creditRange">
+                <option value="">Select range...</option>
+                <option value="excellent">Excellent (720+)</option>
+                <option value="good">Good (660-719)</option>
+                <option value="fair">Fair (600-659)</option>
+                <option value="rebuilding">Rebuilding (below 600)</option>
+                <option value="unsure">Not sure</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="downPayment">Estimated down payment</label>
+              <select id="downPayment" name="downPayment">
+                <option value="">Select amount...</option>
+                <option value="0">$0</option>
+                <option value="1000">$1,000 - $2,999</option>
+                <option value="3000">$3,000 - $4,999</option>
+                <option value="5000">$5,000 - $9,999</option>
+                <option value="10000">$10,000+</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="tradeIn">Trade-in vehicle?</label>
+              <select id="tradeIn" name="tradeIn">
+                <option value="no">No trade-in</option>
+                <option value="yes">Yes, I have a trade-in</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row full">
+            <div class="form-group">
+              <label for="comments">Additional comments</label>
+              <textarea id="comments" name="comments" placeholder="Any additional information about your situation or preferences..."></textarea>
+            </div>
+          </div>
+          <div class="form-submit">
+            <button type="submit">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Submit pre-qualification
+            </button>
+          </div>
+          <div class="form-disclaimer">
+            By submitting, you authorize Thayer Honda to contact you about financing options.<br>
+            Pre-qualification uses a soft credit inquiry and does not affect your credit score.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== HONDA FINANCIAL SERVICES ========== -->
+  <section class="hfs-section">
+    <div class="container">
+      <div class="hfs-layout">
+        <div class="hfs-content">
+          <h2>Honda Financial Services</h2>
+          <p>As an authorized Honda dealer, we offer direct access to Honda Financial Services -- the manufacturer's own financing arm. This means exclusive rates, special promotions, and tailored lease programs designed specifically for Honda vehicles.</p>
+          <ul class="hfs-features">
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Special APR offers on select new Honda models
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Flexible lease terms from 24 to 48 months
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Graduate and military appreciation programs
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Online account management and autopay
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              GAP coverage and protection plans
+            </li>
+          </ul>
+          <a href="#prequal" class="honda-btn-primary" style="width:auto;">Get started today</a>
+        </div>
+        <div class="hfs-visual">
+          <div class="hfs-logo-placeholder">Honda Financial Services</div>
+          <div class="hfs-logo-sub">Official Honda financing partner</div>
+          <div class="hfs-stats">
+            <div class="hfs-stat">
+              <div class="hfs-stat-value">1.9%</div>
+              <div class="hfs-stat-label">APR as low as*</div>
+            </div>
+            <div class="hfs-stat">
+              <div class="hfs-stat-value">72</div>
+              <div class="hfs-stat-label">Month terms available</div>
+            </div>
+            <div class="hfs-stat">
+              <div class="hfs-stat-value">$0</div>
+              <div class="hfs-stat-label">Down payment options</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FAQ ==================== -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Frequently asked questions</h2>
+        <p>Common questions about financing at Thayer Honda</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item open">
+          <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            What credit score do I need to get approved?
+            <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">We work with all credit situations, from excellent to rebuilding. There is no minimum score required to apply. Our finance team partners with multiple lenders to find the best option for your unique situation. The pre-qualification process uses a soft pull that will not affect your credit score.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            How long does pre-qualification take?
+            <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Most pre-qualification decisions come back within minutes. Once you submit your information, our finance team reviews it and reaches out with your options. The entire process from application to decision is typically completed the same day.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            Can I trade in my current vehicle?
+            <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Absolutely. We accept trade-ins of all makes and models. Your trade-in value can be applied directly to your down payment, reducing your monthly payment. We offer competitive appraisals and can evaluate your vehicle right at the dealership.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            What is the difference between financing and leasing?
+            <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Financing means you are purchasing the vehicle and building equity with each payment. Once paid off, you own it outright. Leasing means you are paying to use the vehicle for a set term (typically 24-48 months) with lower monthly payments, then return or purchase it at the end. Our team can help you decide which option works best for your needs and budget.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            Do you offer special programs for first-time buyers?
+            <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Yes. Honda Financial Services offers programs specifically designed for first-time buyers, recent college graduates, and military personnel. These programs may include reduced rates and special terms. Ask our finance team about eligibility when you apply.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA BANNER ==================== -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Ready to get started?</h2>
+      <p>Get pre-qualified in minutes or contact our finance team directly. No pressure, no obligation.</p>
+      <div class="cta-banner-btns">
+        <a href="#prequal" class="honda-btn-white">Get pre-qualified</a>
+        <a href="/demo/thayer-honda/contact" class="honda-btn-outline-white">Contact finance team</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <img src="https://di-shared-assets.dealerinspire.com/public/logos/honda/honda-light-desktop-logo.png" alt="Honda">
+      </div>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Inventory</h4>
+          <ul>
+            <li><a href="/demo/thayer-honda/inventory">New Honda vehicles</a></li>
+            <li><a href="/demo/thayer-honda/inventory?type=used">Pre-owned vehicles</a></li>
+            <li><a href="/demo/thayer-honda/inventory?type=certified">Certified pre-owned</a></li>
+            <li><a href="/demo/thayer-honda/inventory?special=true">Current specials</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="/demo/thayer-honda/service">Schedule service</a></li>
+            <li><a href="/demo/thayer-honda/service">Oil change</a></li>
+            <li><a href="/demo/thayer-honda/service">Brake service</a></li>
+            <li><a href="/demo/thayer-honda/service">Tire center</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <ul>
+            <li><a href="/demo/thayer-honda/financing">Apply for financing</a></li>
+            <li><a href="/demo/thayer-honda/financing">Payment calculator</a></li>
+            <li><a href="/demo/thayer-honda/financing">Trade-in value</a></li>
+            <li><a href="/demo/thayer-honda/financing">Credit pre-qualification</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Dealership</h4>
+          <ul>
+            <li><a href="/demo/thayer-honda/contact">Contact us</a></li>
+            <li><a href="/demo/thayer-honda/contact">Hours &amp; directions</a></li>
+            <li><a href="tel:4194195003">Call (419) 419-5003</a></li>
+            <li><a href="/demo/thayer-auto">Thayer Family Dealerships</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-family">
+        Part of the <a href="/demo/thayer-auto">Thayer Family Dealerships</a> -- Bowling Green, OH
+      </div>
+      <div class="footer-locations">
+        <a href="/demo/thayer-chevrolet">Thayer Chevrolet</a>
+        <a href="/demo/thayer-toyota">Thayer Toyota</a>
+        <a href="/demo/thayer-honda">Thayer Honda</a>
+        <a href="/demo/thayer-ford">Thayer Ford</a>
+        <a href="/demo/thayer-nissan">Thayer Nissan</a>
+        <a href="/demo/thayer-cdjr">Thayer CDJR</a>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Thayer Honda. All rights reserved. | Powered by <a href="https://www.savvydealer.com" target="_blank" rel="noopener">SavvyDealer</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // FAQ accordion - first item is open by default
+    // Toggle is handled via onclick on .faq-question elements
+  </script>
+
+</body>
+</html>

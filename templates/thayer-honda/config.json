@@ -1,0 +1,24 @@
+{
+  "name": "Thayer Honda",
+  "slug": "thayer-honda",
+  "brand": "Honda",
+  "address": "1255 N Main St, Bowling Green, OH 43402",
+  "phones": {
+    "sales": "(419) 419-5003",
+    "main": "(419) 354-2222"
+  },
+  "hours": {
+    "sales": "Mon 8:30-9, Tue-Wed 8:30-6, Thu 8:30-9, Fri 8:30-6, Sat 9-4, Sun Closed",
+    "service": "Mon,Wed,Fri 7:30-5:30, Tue,Thu 7:30-8, Sat 8-2, Sun Closed"
+  },
+  "colors": {
+    "primary": "#2198DD",
+    "accent": "#CC0000",
+    "white": "#FFFFFF",
+    "footer": "#231F20"
+  },
+  "pages": ["index", "inventory", "vdp", "service", "financing", "contact"],
+  "featured": true,
+  "group": "Thayer Family Dealerships",
+  "groupUrl": "/demo/thayer-auto"
+}

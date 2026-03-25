@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thayer Toyota | New Toyota Dealer | Bowling Green, OH</title>
+  <meta name="description" content="Shop new and pre-owned Toyota vehicles at Thayer Toyota in Bowling Green, OH. Browse Camry, RAV4, Tacoma, Highlander, 4Runner, Tundra, Corolla, Prius and more. Serving Findlay, Toledo, and northwest Ohio.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --toyota-red: #EB0A1E;
+      --toyota-red-hover: #C80818;
+      --toyota-black: #000000;
+      --toyota-white: #FFFFFF;
+      --toyota-gray: #58595B;
+      --toyota-body-bg: #FFFFFF;
+      --toyota-section-bg: #F8F8F8;
+      --toyota-card-bg: #F6F6F6;
+      --toyota-border: #EBEBEB;
+      --toyota-shadow: #D2D2D2;
+      --toyota-muted: #C0C0C0;
+      --toyota-font: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      --toyota-radius: 8px;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: var(--toyota-font);
+      font-size: 14px;
+      color: var(--toyota-black);
+      background-color: var(--toyota-body-bg);
+      line-height: 1.57;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; height: auto; }
+
+    /* ========== TOP BAR ========== */
+    .top-bar {
+      background: var(--toyota-black);
+      color: #fff;
+      padding: 8px 0;
+      font-size: 13px;
+    }
+    .top-bar .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .top-bar-phones {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .top-bar-phones a {
+      color: #fff;
+      font-weight: 500;
+      transition: opacity 0.2s;
+    }
+    .top-bar-phones a:hover { opacity: 0.85; }
+    .top-bar-phones span {
+      color: rgba(255,255,255,0.6);
+      margin-right: 4px;
+      font-weight: 400;
+    }
+    .top-bar-address { color: rgba(255,255,255,0.85); }
+    .top-bar-address a { color: #fff; }
+    .top-bar-address a:hover { text-decoration: underline; }
+
+    /* ========== HEADER ========== */
+    .site-header {
+      background: var(--toyota-black);
+      padding: 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      height: 80px;
+      display: flex;
+      align-items: center;
+    }
+    .site-header .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      width: 100%;
+    }
+    .header-logo {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-shrink: 0;
+    }
+    .toyota-logo { height: 36px; width: auto; }
+    .dealer-name {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--toyota-white);
+      line-height: 1.2;
+      white-space: nowrap;
+    }
+    .dealer-name small {
+      display: block;
+      font-size: 11px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.6);
+      letter-spacing: 0.5px;
+    }
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .header-nav a {
+      color: var(--toyota-white);
+      font-size: 14px;
+      font-weight: 500;
+      padding: 8px 14px;
+      transition: opacity 0.2s;
+    }
+    .header-nav a:hover { opacity: 0.7; }
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: #fff;
+      margin: 5px 0;
+      transition: all 0.3s;
+    }
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 80px;
+      left: 0;
+      right: 0;
+      background: var(--toyota-black);
+      padding: 16px 24px;
+      z-index: 99;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      color: #fff;
+      font-size: 16px;
+      font-weight: 500;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    /* ========== HERO ========== */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 85vh;
+      min-height: 500px;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 40px;
+    }
+    .hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.2) 35%, transparent 65%);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      color: var(--toyota-white);
+      max-width: 700px;
+    }
+    .hero h1 {
+      font-size: 52px;
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: 0;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+    .hero p {
+      font-size: 16px;
+      font-weight: 400;
+      margin-bottom: 28px;
+      opacity: 0.9;
+    }
+    .hero-ctas {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ========== TOYOTA BRAND BUTTONS ========== */
+    .toyota-btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: var(--toyota-black);
+      color: var(--toyota-white);
+      font-family: var(--toyota-font);
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-decoration: none;
+      padding: 14px 32px;
+      border: 2px solid var(--toyota-black);
+      border-radius: var(--toyota-radius);
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+    }
+    .toyota-btn-primary:hover { opacity: 0.8; }
+
+    .toyota-btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: transparent;
+      color: var(--toyota-black);
+      font-family: var(--toyota-font);
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-decoration: none;
+      padding: 14px 32px;
+      border: 2px solid var(--toyota-black);
+      border-radius: var(--toyota-radius);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .toyota-btn-secondary:hover {
+      background-color: var(--toyota-black);
+      color: var(--toyota-white);
+    }
+
+    .toyota-btn-primary-dark {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: var(--toyota-white);
+      color: var(--toyota-black);
+      font-family: var(--toyota-font);
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-decoration: none;
+      padding: 14px 32px;
+      border: 2px solid var(--toyota-white);
+      border-radius: var(--toyota-radius);
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+    }
+    .toyota-btn-primary-dark:hover { opacity: 0.8; }
+
+    .toyota-btn-secondary-dark {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: transparent;
+      color: var(--toyota-white);
+      font-family: var(--toyota-font);
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-decoration: none;
+      padding: 14px 32px;
+      border: 2px solid var(--toyota-white);
+      border-radius: var(--toyota-radius);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .toyota-btn-secondary-dark:hover {
+      background-color: var(--toyota-white);
+      color: var(--toyota-black);
+    }
+
+    /* ========== MODEL LINEUP ========== */
+    .model-lineup {
+      padding: 72px 0 80px;
+      background: var(--toyota-section-bg);
+    }
+    .model-lineup .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .section-header {
+      text-align: center;
+      margin-bottom: 44px;
+    }
+    .section-header h2 {
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--toyota-black);
+      margin-bottom: 8px;
+    }
+    .section-header p {
+      font-size: 16px;
+      color: var(--toyota-gray);
+    }
+    .model-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .model-card {
+      background: var(--toyota-white);
+      border-radius: var(--toyota-radius);
+      overflow: hidden;
+      box-shadow: 1px 1px 6px 1px var(--toyota-shadow);
+      transition: box-shadow 0.3s ease;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .model-card:hover {
+      box-shadow: 2px 2px 12px 2px var(--toyota-muted);
+    }
+    .model-card-image {
+      background: #f4f4f4;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 170px;
+    }
+    .model-card-image img {
+      max-width: 100%;
+      max-height: 130px;
+      object-fit: contain;
+    }
+    .model-card-info {
+      padding: 16px 18px;
+      text-align: center;
+    }
+    .model-card-year {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--toyota-gray);
+      margin-bottom: 2px;
+    }
+    .model-card-name {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--toyota-black);
+    }
+    .model-card-starting {
+      font-size: 12px;
+      color: var(--toyota-gray);
+      margin-top: 4px;
+    }
+
+    /* ========== WHY SECTION ========== */
+    .why-section {
+      padding: 72px 0;
+      background: var(--toyota-body-bg);
+    }
+    .why-section .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-top: 44px;
+    }
+    .why-card {
+      text-align: center;
+      padding: 32px 20px;
+      background: var(--toyota-white);
+      border-radius: var(--toyota-radius);
+      box-shadow: 1px 1px 6px 1px var(--toyota-shadow);
+      transition: box-shadow 0.3s ease;
+    }
+    .why-card:hover {
+      box-shadow: 2px 2px 12px 2px var(--toyota-muted);
+    }
+    .why-icon {
+      width: 64px;
+      height: 64px;
+      background: var(--toyota-section-bg);
+      border-radius: var(--toyota-radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+    }
+    .why-icon svg {
+      width: 28px;
+      height: 28px;
+      color: var(--toyota-black);
+    }
+    .why-card h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--toyota-black);
+      margin-bottom: 8px;
+    }
+    .why-card p {
+      font-size: 14px;
+      color: var(--toyota-gray);
+      line-height: 1.6;
+    }
+
+    /* ========== CTA BANNER ========== */
+    .cta-banner {
+      background: var(--toyota-black);
+      padding: 56px 0;
+      text-align: center;
+      color: #fff;
+    }
+    .cta-banner .container {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .cta-banner h2 {
+      font-size: 30px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .cta-banner p {
+      font-size: 16px;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 28px;
+    }
+
+    /* ========== REVIEWS ========== */
+    .reviews-section { padding: 72px 0; background: var(--toyota-section-bg); }
+    .reviews-section .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+    .google-rating { display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 16px; }
+    .rating-score { font-size: 28px; font-weight: 800; color: var(--toyota-black); }
+    .rating-stars { display: flex; gap: 2px; }
+    .rating-count { font-size: 14px; color: var(--toyota-gray); }
+    .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .review-card { background: var(--toyota-white); border-radius: var(--toyota-radius); padding: 24px; box-shadow: 1px 1px 6px 1px var(--toyota-shadow); transition: box-shadow 0.3s; }
+    .review-card:hover { box-shadow: 2px 2px 12px 2px var(--toyota-muted); }
+    .review-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+    .reviewer-avatar { width: 40px; height: 40px; background: var(--toyota-black); color: #fff; border-radius: var(--toyota-radius); display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 700; flex-shrink: 0; }
+    .reviewer-info { flex: 1; }
+    .reviewer-name { font-size: 14px; font-weight: 700; color: var(--toyota-black); }
+    .review-date { font-size: 12px; color: var(--toyota-gray); }
+    .review-stars { display: flex; gap: 2px; margin-bottom: 10px; }
+    .review-text { font-size: 14px; color: var(--toyota-gray); line-height: 1.65; }
+
+    /* ========== FOOTER ========== */
+    .site-footer {
+      background: var(--toyota-black);
+      color: #ccc;
+      padding: 60px 0 0;
+    }
+    .site-footer .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .footer-col h4 {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 10px; }
+    .footer-col a {
+      color: rgba(255,255,255,0.7);
+      font-size: 12px;
+      transition: color 0.2s;
+    }
+    .footer-col a:hover { color: #fff; }
+    .footer-family {
+      text-align: center;
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      font-size: 14px;
+      color: #888;
+    }
+    .footer-family a { color: var(--toyota-red); font-weight: 600; }
+    .footer-family a:hover { text-decoration: underline; }
+    .footer-divider {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.15);
+      margin: 0;
+    }
+    .footer-bottom {
+      padding: 20px 0;
+      text-align: center;
+      font-size: 11px;
+      color: var(--toyota-gray);
+    }
+    .footer-bottom a {
+      color: var(--toyota-red);
+      font-weight: 500;
+    }
+    .footer-bottom a:hover { text-decoration: underline; }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 1023px) {
+      .header-nav { display: none; }
+      .hamburger { display: block; }
+      .hero h1 { font-size: 38px; }
+      .model-grid { grid-template-columns: repeat(3, 1fr); }
+      .why-grid { grid-template-columns: repeat(2, 1fr); }
+      .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      .model-grid { grid-template-columns: repeat(2, 1fr); }
+      .why-grid { grid-template-columns: 1fr; }
+      .reviews-grid { grid-template-columns: 1fr; }
+      .section-header h2 { font-size: 26px; }
+      .cta-banner h2 { font-size: 24px; }
+    }
+
+    @media (max-width: 640px) {
+      .top-bar .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 4px;
+      }
+      .top-bar-phones { justify-content: center; }
+      .site-header .container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+      }
+      .hero { padding: 40px 24px; min-height: 400px; }
+      .hero h1 { font-size: 30px; }
+      .hero p { font-size: 14px; }
+      .model-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== JSON-LD STRUCTURED DATA ==================== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoDealer",
+    "name": "Thayer Toyota",
+    "description": "New and pre-owned Toyota vehicles in Bowling Green, OH. Serving Findlay, Toledo, Perrysburg, and northwest Ohio.",
+    "url": "https://demo.savvydealer.com/demo/thayer-toyota",
+    "telephone": "(419) 257-6025",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1225 N Main St",
+      "addressLocality": "Bowling Green",
+      "addressRegion": "OH",
+      "postalCode": "43402",
+      "addressCountry": "US"
+    },
+    "brand": {
+      "@type": "Brand",
+      "name": "Toyota"
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "08:30", "closes": "21:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday"], "opens": "08:30", "closes": "18:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday", "opens": "08:30", "closes": "21:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "08:30", "closes": "18:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "16:00" }
+    ],
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "Thayer Family Dealerships"
+    }
+  }
+  </script>
+
+  <!-- ==================== TOP BAR ==================== -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-phones">
+        <a href="tel:4192576025"><span>Sales:</span> (419) 257-6025</a>
+        <a href="tel:4192576089"><span>Service:</span> (419) 257-6089</a>
+        <a href="tel:4192576080"><span>Parts:</span> (419) 257-6080</a>
+      </div>
+      <div class="top-bar-address">
+        <a href="https://maps.google.com/?q=1225+N+Main+St+Bowling+Green+OH+43402" target="_blank" rel="noopener">
+          1225 N Main St, Bowling Green, OH 43402
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="site-header">
+    <div class="container">
+      <a href="/demo/thayer-toyota" class="header-logo">
+        <img class="toyota-logo" src="https://www.toyota.com/content/dam/toyota/sales-event/rsg_logo_eng_horiz_line_white_600w.svg" alt="Toyota">
+        <div class="dealer-name">Thayer Toyota<small>Bowling Green, OH</small></div>
+      </a>
+      <nav class="header-nav">
+        <a href="/demo/thayer-toyota/inventory">Inventory</a>
+        <a href="/demo/thayer-toyota/service">Service</a>
+        <a href="/demo/thayer-toyota/financing">Financing</a>
+        <a href="/demo/thayer-toyota/contact">Contact</a>
+      </nav>
+      <button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open');" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <a href="/demo/thayer-toyota/inventory">Inventory</a>
+    <a href="/demo/thayer-toyota/service">Service</a>
+    <a href="/demo/thayer-toyota/financing">Financing</a>
+    <a href="/demo/thayer-toyota/contact">Contact</a>
+  </div>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero">
+    <img class="hero-bg" src="https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/max/2025/4runner/8664/6x3/36/1.png?wid=1920&hei=960&fmt=webp" alt="2025 Toyota 4Runner">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>LET'S GO PLACES</h1>
+      <p>Discover the complete Toyota lineup at Thayer Toyota. Reliability, innovation, and adventure start here in Bowling Green, OH.</p>
+      <div class="hero-ctas">
+        <a href="/demo/thayer-toyota/inventory" class="toyota-btn-primary-dark">Browse inventory</a>
+        <a href="/demo/thayer-toyota/financing" class="toyota-btn-secondary-dark">Get pre-qualified</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== MODEL LINEUP ==================== -->
+  <section class="model-lineup">
+    <div class="container">
+      <div class="section-header">
+        <h2>Explore the Toyota lineup</h2>
+        <p>From fuel-efficient sedans to trail-ready SUVs and trucks</p>
+      </div>
+      <div class="model-grid">
+        <a href="/demo/thayer-toyota/inventory" class="model-card">
+          <div class="model-card-image">
+            <img src="https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/max/2025/camry/8X50/6x3/36/1.png?wid=480&hei=240&fmt=webp" alt="2025 Toyota Camry">
+          </div>
+          <div class="model-card-info">
+            <div class="model-card-year">2025</div>
+            <div class="model-card-name">Camry</div>
+            <div class="model-card-starting">Starting at $29,495*</div>
+          </div>
+        </a>
+        <a href="/demo/thayer-toyota/inventory" class="model-card">
+          <div class="model-card-image">
+            <img src="https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/max/2025/rav4/4430/6x3/36/1.png?wid=480&hei=240&fmt=webp" alt="2025 Toyota RAV4">
+          </div>
+          <div class="model-card-info">
+            <div class="model-card-year">2025</div>
+            <div class="model-card-name">RAV4</div>
+            <div class="model-card-starting">Starting at $31,825*</div>
+          </div>
+        </a>
+        <a href="/demo/thayer-toyota/inventory" class="model-card">
+          <div class="model-card-image">
+            <img src="https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/max/2025/tacoma/7594/6x3/36/1.png?wid=480&hei=240&fmt=webp" alt="2025 Toyota Tacoma">
+          </div>
+          <div class="model-card-info">
+            <div class="model-card-year">2025</div>
+            <div class="model-card-name">Tacoma</div>
+            <div class="model-card-starting">Starting at $31,500*</div>
+          </div>
+        </a>
+        <a href="/demo/thayer-toyota/inventory" class="model-card">
+          <div class="model-card-image">
+            <img src="https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/max/2025/highlander/6946/6x3/36/1.png?wid=480&hei=240&fmt=webp" alt="2025 Toyota Highlander">
+          </div>
+          <div class="model-card-info">
+            <div class="model-card-year">2025</div>
+            <div class="model-card-name">Highlander</div>
+            <div class="model-card-starting">Starting at $40,370*</div>
+          </div>
+        </a>
+        <a href="/demo/thayer-toyota/inventory" class="model-card">
+          <div class="model-card-image">
+            <img src="https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/max/2025/4runner/8664/6x3/36/1.png?wid=480&hei=240&fmt=webp" alt="2025 Toyota 4Runner">
+          </div>
+          <div class="model-card-info">
+            <div class="model-card-year">2025</div>
+            <div class="model-card-name">4Runner</div>
+            <div class="model-card-starting">Starting at $41,755*</div>
+          </div>
+        </a>
+        <a href="/demo/thayer-toyota/inventory" class="model-card">
+          <div class="model-card-image">
+            <img src="https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/max/2025/tundra/8272/6x3/36/1.png?wid=480&hei=240&fmt=webp" alt="2025 Toyota Tundra">
+          </div>
+          <div class="model-card-info">
+            <div class="model-card-year">2025</div>
+            <div class="model-card-name">Tundra</div>
+            <div class="model-card-starting">Starting at $40,090*</div>
+          </div>
+        </a>
+        <a href="/demo/thayer-toyota/inventory" class="model-card">
+          <div class="model-card-image">
+            <img src="https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/max/2025/corolla/1852/6x3/36/1.png?wid=480&hei=240&fmt=webp" alt="2025 Toyota Corolla">
+          </div>
+          <div class="model-card-info">
+            <div class="model-card-year">2025</div>
+            <div class="model-card-name">Corolla</div>
+            <div class="model-card-starting">Starting at $22,900*</div>
+          </div>
+        </a>
+        <a href="/demo/thayer-toyota/inventory" class="model-card">
+          <div class="model-card-image">
+            <img src="https://tmna.aemassets.toyota.com/is/image/toyota/toyota/jellies/max/2025/prius/1235/6x3/36/1.png?wid=480&hei=240&fmt=webp" alt="2025 Toyota Prius">
+          </div>
+          <div class="model-card-info">
+            <div class="model-card-year">2025</div>
+            <div class="model-card-name">Prius</div>
+            <div class="model-card-starting">Starting at $29,645*</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== WHY THAYER ==================== -->
+  <section class="why-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Why choose Thayer Toyota</h2>
+        <p>Bowling Green's trusted Toyota dealer for over 50 years</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Family owned</h3>
+          <p>The Thayer family has been serving Bowling Green and northwest Ohio for decades with honest, transparent service.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <h3>Certified service</h3>
+          <p>Factory-trained Toyota technicians using genuine OEM parts to keep your vehicle running at its best.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v4M12 19v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M1 12h4M19 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+          </div>
+          <h3>Competitive pricing</h3>
+          <p>Transparent pricing with no hidden fees. We work to earn your business with fair deals every time.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Community focused</h3>
+          <p>Proud supporters of Bowling Green State University, local schools, and community organizations throughout Wood County.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== REVIEWS ==================== -->
+  <section class="reviews-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>What our customers say</h2>
+        <p>Real reviews from real Toyota owners</p>
+      </div>
+      <div class="google-rating">
+        <span class="rating-score">4.7</span>
+        <div class="rating-stars">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="#F4B400"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="#F4B400"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="#F4B400"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="#F4B400"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="#D2D2D2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <span class="rating-count">based on 312 reviews</span>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar">M</div>
+            <div class="reviewer-info"><div class="reviewer-name">Mike R.</div><div class="review-date">2 weeks ago</div></div>
+          </div>
+          <div class="review-stars">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#F4B400"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#F4B400"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#F4B400"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#F4B400"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#F4B400"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div class="review-text">Bought a 2025 Tacoma TRD Off-Road. Best experience I've had at a dealership. No pressure, fair price, and they had exactly what I wanted. Will definitely recommend Thayer to friends.</div>
+        </div>
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar">S</div>
+            <div class="reviewer-info"><div class="reviewer-name">Sarah K.</div><div class="review-date">1 month ago</div></div>
+          </div>
+          <div class="review-stars">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#F4B400"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#F4B400"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#F4B400"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#F4B400"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#F4B400"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div class="review-text">The service department at Thayer is top notch. Got my RAV4 in for routine maintenance and they had it done in under an hour. Fair pricing and the waiting area is comfortable.</div>
+        </div>
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar">J</div>
+            <div class="reviewer-info"><div class="reviewer-name">James T.</div><div class="review-date">3 weeks ago</div></div>
+          </div>
+          <div class="review-stars">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#F4B400"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#F4B400"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#F4B400"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#F4B400"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#D2D2D2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div class="review-text">Leased a Highlander for my family. The finance team worked with us to find a payment that fit our budget. The whole process was smooth from start to finish. Great small-town dealership feel.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA BANNER ==================== -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Ready to find your Toyota?</h2>
+      <p>Browse our full inventory or schedule a test drive at Thayer Toyota in Bowling Green.</p>
+      <a href="/demo/thayer-toyota/inventory" class="toyota-btn-secondary-dark">View all inventory</a>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Inventory</h4>
+          <ul>
+            <li><a href="/demo/thayer-toyota/inventory">New Toyota vehicles</a></li>
+            <li><a href="/demo/thayer-toyota/inventory?type=used">Pre-owned vehicles</a></li>
+            <li><a href="/demo/thayer-toyota/inventory?type=certified">Certified pre-owned</a></li>
+            <li><a href="/demo/thayer-toyota/inventory?special=true">Current specials</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Service</h4>
+          <ul>
+            <li><a href="/demo/thayer-toyota/service">Schedule service</a></li>
+            <li><a href="/demo/thayer-toyota/service#specials">Service specials</a></li>
+            <li><a href="/demo/thayer-toyota/service#parts">Order parts</a></li>
+            <li><a href="tel:4192576089">Call service: (419) 257-6089</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Financing</h4>
+          <ul>
+            <li><a href="/demo/thayer-toyota/financing">Apply for financing</a></li>
+            <li><a href="/demo/thayer-toyota/financing#calculator">Payment calculator</a></li>
+            <li><a href="/demo/thayer-toyota/financing#trade">Value your trade</a></li>
+            <li><a href="/demo/thayer-toyota/financing#credit">Credit solutions</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>About us</h4>
+          <ul>
+            <li><a href="/demo/thayer-toyota/contact">Contact us</a></li>
+            <li><a href="/demo/thayer-toyota/contact#hours">Hours &amp; directions</a></li>
+            <li><a href="tel:4192576025">Call sales: (419) 257-6025</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-family">Part of the <a href="/demo/thayer-auto">Thayer Family Dealerships</a></div>
+      <hr class="footer-divider">
+      <div class="footer-bottom">
+        <p>Thayer Toyota &mdash; 1225 N Main St, Bowling Green, OH 43402 &bull; &copy; 2026 All Rights Reserved &bull; Powered by <a href="https://www.savvydealer.com" target="_blank" rel="noopener">SavvyDealer</a></p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "Thayer Family Dealerships",
+  "slug": "thayer-auto",
+  "location": "Bowling Green, Ohio",
+  "phone": {
+    "main": "419-353-5751"
+  },
+  "address": "1225 N Main St, Bowling Green, OH 43402",
+  "oem": ["Chevrolet", "Toyota", "Honda", "Ford", "Nissan", "Chrysler", "Dodge", "Jeep", "Ram"],
+  "colors": {
+    "primary": "#1B2A4A",
+    "secondary": "#C8A951",
+    "accent": "#FFFFFF"
+  },
+  "dealerships": [
+    {"name": "Thayer Chevrolet", "slug": "thayer-chevrolet", "brand": "Chevrolet", "address": "1225 N Main St, Bowling Green, OH 43402"},
+    {"name": "Thayer Toyota", "slug": "thayer-toyota", "brand": "Toyota", "address": "1225 N Main St, Bowling Green, OH 43402"},
+    {"name": "Thayer Honda", "slug": "thayer-honda", "brand": "Honda", "address": "1255 N Main St, Bowling Green, OH 43402"},
+    {"name": "Thayer Ford", "slug": "thayer-ford", "brand": "Ford", "address": "18039 N Dixie Hwy, Bowling Green, OH 43402"},
+    {"name": "Thayer Nissan", "slug": "thayer-nissan", "brand": "Nissan", "address": "18039 N Dixie Hwy, Bowling Green, OH 43402"},
+    {"name": "Thayer CDJR", "slug": "thayer-cdjr", "brand": "Chrysler/Dodge/Jeep/Ram", "address": "1303 N Main St, Bowling Green, OH 43402"}
+  ]
+}

@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Center | Thayer Honda | Bowling Green, OH</title>
+  <meta name="description" content="Schedule Honda service at Thayer Honda in Bowling Green, OH. Factory-trained technicians, genuine Honda parts, oil changes, brake service, tire center, and more. Open Mon-Sat.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --honda-red: #CC0000;
+      --honda-red-hover: #A30000;
+      --honda-blue: #2198DD;
+      --honda-blue-hover: #3CACEC;
+      --honda-teal: #5BC5D2;
+      --honda-white: #FFFFFF;
+      --honda-off-white: #F5F5F5;
+      --honda-border: #DDDDDD;
+      --honda-gray-text: #666666;
+      --honda-dark-text: #333333;
+      --honda-black: #000000;
+      --honda-footer-bg: #231F20;
+      --honda-font: 'Nunito', 'Avenir Next Rounded', 'Avenir', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      --honda-radius: 10px;
+      --honda-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      --honda-shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.12);
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: var(--honda-font);
+      color: var(--honda-dark-text);
+      background-color: var(--honda-white);
+      line-height: 1.6;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; height: auto; }
+
+    /* ========== TOP BAR ========== */
+    .top-bar {
+      background: var(--honda-off-white);
+      color: var(--honda-dark-text);
+      padding: 8px 0;
+      font-size: 13px;
+      border-bottom: 1px solid var(--honda-border);
+    }
+    .top-bar .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .top-bar-phones { display: flex; gap: 20px; flex-wrap: wrap; }
+    .top-bar-phones a { color: var(--honda-dark-text); font-weight: 600; transition: color 0.2s; }
+    .top-bar-phones a:hover { color: var(--honda-blue); }
+    .top-bar-phones span { color: var(--honda-gray-text); margin-right: 4px; font-weight: 400; }
+    .top-bar-address { color: var(--honda-gray-text); }
+    .top-bar-address a { color: var(--honda-dark-text); }
+    .top-bar-address a:hover { color: var(--honda-blue); }
+
+    /* ========== HEADER (WHITE NAV) ========== */
+    .site-header {
+      background: var(--honda-white);
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    .site-header .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .header-logo { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+    .header-logo img { height: 36px; width: auto; }
+    .dealer-name { font-size: 16px; font-weight: 700; color: var(--honda-dark-text); line-height: 1.2; white-space: nowrap; }
+    .dealer-name small { display: block; font-size: 11px; font-weight: 500; color: var(--honda-gray-text); letter-spacing: 0.3px; }
+    .header-nav { display: flex; align-items: center; gap: 4px; }
+    .header-nav a { color: var(--honda-black); font-size: 14px; font-weight: 500; padding: 8px 14px; border-radius: var(--honda-radius); transition: color 0.2s, background 0.2s; }
+    .header-nav a:hover { color: var(--honda-blue); }
+    .header-nav a.active { color: var(--honda-blue); font-weight: 600; }
+
+    /* Mobile hamburger */
+    .mobile-menu-btn { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+    .mobile-menu-btn span { display: block; width: 24px; height: 2px; background: var(--honda-dark-text); margin: 5px 0; border-radius: 2px; transition: all 0.3s; }
+    .mobile-nav { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: var(--honda-white); z-index: 200; padding: 80px 24px 24px; flex-direction: column; gap: 0; }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav-close { position: absolute; top: 16px; right: 20px; background: none; border: none; font-size: 28px; cursor: pointer; color: var(--honda-dark-text); padding: 8px; }
+    .mobile-nav a { display: block; font-size: 18px; font-weight: 600; color: var(--honda-dark-text); padding: 16px 0; border-bottom: 1px solid var(--honda-border); transition: color 0.2s; }
+    .mobile-nav a:hover { color: var(--honda-blue); }
+
+    /* ========== HONDA BRAND BUTTONS ========== */
+    .honda-btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background-color: var(--honda-blue);
+      color: var(--honda-white);
+      font-family: var(--honda-font);
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      text-transform: none;
+      padding: 12px 28px;
+      border: none;
+      border-radius: var(--honda-radius);
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-align: center;
+    }
+    .honda-btn-primary:hover { background-color: var(--honda-blue-hover); }
+    .honda-btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background-color: transparent;
+      color: var(--honda-blue);
+      font-family: var(--honda-font);
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      text-transform: none;
+      padding: 12px 28px;
+      border: 2px solid var(--honda-blue);
+      border-radius: var(--honda-radius);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+    .honda-btn-secondary:hover { background-color: var(--honda-blue); color: var(--honda-white); }
+    .honda-btn-white {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--honda-white);
+      color: var(--honda-dark-text);
+      font-family: var(--honda-font);
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      padding: 14px 36px;
+      border: none;
+      border-radius: var(--honda-radius);
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-align: center;
+    }
+    .honda-btn-white:hover { background: var(--honda-off-white); }
+
+    /* ========== HERO ========== */
+    .service-hero {
+      background: linear-gradient(135deg, #e8f4fd 0%, #f0f9ff 50%, #fafafa 100%);
+      padding: 64px 0;
+      text-align: center;
+    }
+    .service-hero .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .service-hero-icon {
+      width: 72px;
+      height: 72px;
+      background: var(--honda-blue);
+      border-radius: var(--honda-radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+    }
+    .service-hero-icon svg {
+      width: 36px;
+      height: 36px;
+      fill: none;
+      stroke: #fff;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .service-hero h1 {
+      font-size: 38px;
+      font-weight: 600;
+      color: var(--honda-dark-text);
+      margin-bottom: 12px;
+      letter-spacing: -0.025em;
+    }
+    .service-hero p {
+      font-size: 16px;
+      color: var(--honda-gray-text);
+      margin-bottom: 28px;
+      line-height: 1.7;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .service-hero-ctas {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ========== FEATURE CARDS ========== */
+    .features-section {
+      padding: 72px 0;
+      background: var(--honda-white);
+    }
+    .features-section .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .section-header {
+      text-align: center;
+      margin-bottom: 44px;
+    }
+    .section-header h2 {
+      font-size: 32px;
+      font-weight: 600;
+      color: var(--honda-dark-text);
+      margin-bottom: 8px;
+      letter-spacing: -0.025em;
+    }
+    .section-header p {
+      font-size: 16px;
+      color: var(--honda-gray-text);
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .feature-card {
+      background: var(--honda-off-white);
+      border-radius: var(--honda-radius);
+      padding: 32px 24px;
+      text-align: center;
+      box-shadow: var(--honda-shadow);
+      transition: box-shadow 0.3s, transform 0.3s;
+    }
+    .feature-card:hover {
+      box-shadow: var(--honda-shadow-hover);
+      transform: translateY(-2px);
+    }
+    .feature-icon {
+      width: 64px;
+      height: 64px;
+      background: var(--honda-blue);
+      border-radius: var(--honda-radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+    }
+    .feature-icon svg {
+      width: 28px;
+      height: 28px;
+      fill: none;
+      stroke: #fff;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .feature-card h3 {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--honda-dark-text);
+      margin-bottom: 8px;
+    }
+    .feature-card p {
+      font-size: 14px;
+      color: var(--honda-gray-text);
+      line-height: 1.65;
+    }
+
+    /* ========== SERVICE LIST ========== */
+    .service-list-section {
+      padding: 72px 0;
+      background: var(--honda-off-white);
+    }
+    .service-list-section .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-top: 44px;
+    }
+    .service-item {
+      background: var(--honda-white);
+      border-radius: var(--honda-radius);
+      padding: 24px;
+      box-shadow: var(--honda-shadow);
+      transition: box-shadow 0.3s, transform 0.3s;
+      text-align: center;
+    }
+    .service-item:hover {
+      box-shadow: var(--honda-shadow-hover);
+      transform: translateY(-2px);
+    }
+    .service-item-icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(33, 152, 221, 0.1);
+      border-radius: var(--honda-radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 12px;
+    }
+    .service-item-icon svg {
+      width: 24px;
+      height: 24px;
+      fill: none;
+      stroke: var(--honda-blue);
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .service-item h4 {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--honda-dark-text);
+      margin-bottom: 6px;
+    }
+    .service-item p {
+      font-size: 13px;
+      color: var(--honda-gray-text);
+      line-height: 1.5;
+    }
+
+    /* ========== SCHEDULE FORM ========== */
+    .schedule-section {
+      padding: 72px 0;
+      background: var(--honda-white);
+    }
+    .schedule-section .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .form-card {
+      background: var(--honda-off-white);
+      border-radius: var(--honda-radius);
+      padding: 36px;
+      box-shadow: var(--honda-shadow);
+    }
+    .form-card h2 {
+      font-size: 26px;
+      font-weight: 600;
+      color: var(--honda-dark-text);
+      margin-bottom: 8px;
+      text-align: center;
+    }
+    .form-card > p {
+      font-size: 14px;
+      color: var(--honda-gray-text);
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    .form-row.full { grid-template-columns: 1fr; }
+    .form-group { display: flex; flex-direction: column; }
+    .form-group label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--honda-dark-text);
+      margin-bottom: 6px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      padding: 10px 14px;
+      border: 1px solid var(--honda-border);
+      border-radius: var(--honda-radius);
+      font-family: var(--honda-font);
+      font-size: 14px;
+      color: var(--honda-dark-text);
+      background: var(--honda-white);
+      transition: border-color 0.2s;
+      outline: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--honda-blue);
+    }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    .form-submit {
+      text-align: center;
+      margin-top: 24px;
+    }
+    .form-submit button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: var(--honda-blue);
+      color: var(--honda-white);
+      font-family: var(--honda-font);
+      font-size: 15px;
+      font-weight: 600;
+      padding: 14px 40px;
+      border: none;
+      border-radius: var(--honda-radius);
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .form-submit button:hover { background-color: var(--honda-blue-hover); }
+
+    /* ========== HOURS & INFO ========== */
+    .hours-section {
+      padding: 72px 0;
+      background: var(--honda-off-white);
+    }
+    .hours-section .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .hours-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-top: 44px;
+    }
+    .hours-card {
+      background: var(--honda-white);
+      border-radius: var(--honda-radius);
+      padding: 28px;
+      box-shadow: var(--honda-shadow);
+    }
+    .hours-card h3 {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--honda-dark-text);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--honda-blue);
+    }
+    .hours-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .hours-table tr { border-bottom: 1px solid #f0f0f0; }
+    .hours-table tr:last-child { border-bottom: none; }
+    .hours-table td {
+      padding: 10px 0;
+      font-size: 14px;
+    }
+    .hours-table td:first-child {
+      font-weight: 600;
+      color: var(--honda-dark-text);
+    }
+    .hours-table td:last-child {
+      text-align: right;
+      color: var(--honda-gray-text);
+    }
+    .hours-table .closed {
+      color: var(--honda-red);
+      font-weight: 600;
+    }
+    .info-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      margin-bottom: 16px;
+    }
+    .info-icon {
+      width: 40px;
+      height: 40px;
+      background: rgba(33, 152, 221, 0.1);
+      border-radius: var(--honda-radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .info-icon svg {
+      width: 20px;
+      height: 20px;
+      fill: none;
+      stroke: var(--honda-blue);
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .info-text { font-size: 14px; color: var(--honda-dark-text); }
+    .info-text strong { display: block; margin-bottom: 2px; }
+    .info-text a { color: var(--honda-blue); }
+    .info-text a:hover { text-decoration: underline; }
+
+    /* ========== CTA BANNER ========== */
+    .cta-banner {
+      background: var(--honda-blue);
+      padding: 56px 0;
+      text-align: center;
+      color: #fff;
+    }
+    .cta-banner .container {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .cta-banner h2 {
+      font-size: 30px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      letter-spacing: -0.025em;
+    }
+    .cta-banner p {
+      font-size: 16px;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 28px;
+    }
+    .cta-banner-btns {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ========== FOOTER ========== */
+    .site-footer {
+      background-color: var(--honda-footer-bg);
+      color: #FFFFFF;
+      padding: 60px 0 0;
+    }
+    .site-footer .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .footer-top { display: flex; align-items: center; margin-bottom: 32px; }
+    .footer-top img { height: 40px; }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .footer-col h4 { font-size: 14px; font-weight: 600; color: #FFFFFF; margin-bottom: 16px; text-transform: none; }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 8px; }
+    .footer-col a { color: #CCCCCC; font-size: 13px; font-weight: 400; transition: color 0.2s; }
+    .footer-col a:hover { color: #FFFFFF; }
+    .footer-family { text-align: center; padding: 20px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.15); font-size: 14px; color: #888; }
+    .footer-family a { color: var(--honda-blue); font-weight: 600; }
+    .footer-family a:hover { text-decoration: underline; }
+    .footer-locations { text-align: center; padding: 16px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.15); font-size: 13px; color: #777; }
+    .footer-locations a { color: #aaa; font-weight: 500; margin: 0 8px; }
+    .footer-locations a:hover { color: #fff; }
+    .footer-bottom { padding: 20px 0; text-align: center; font-size: 13px; color: #666; }
+    .footer-bottom a { color: var(--honda-blue); font-weight: 500; }
+    .footer-bottom a:hover { text-decoration: underline; }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 1023px) {
+      .header-nav { display: none; }
+      .mobile-menu-btn { display: block; }
+      .service-grid { grid-template-columns: repeat(2, 1fr); }
+      .features-grid { grid-template-columns: repeat(2, 1fr); }
+      .hours-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      .features-grid { grid-template-columns: 1fr; }
+      .service-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .service-hero h1 { font-size: 28px; }
+      .section-header h2 { font-size: 26px; }
+      .footer-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 640px) {
+      .top-bar .container { flex-direction: column; text-align: center; gap: 4px; }
+      .top-bar-phones { justify-content: center; }
+      .site-header .container { flex-wrap: wrap; justify-content: space-between; }
+      .form-card { padding: 24px 20px; }
+      .footer-grid { grid-template-columns: 1fr; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== TOP BAR ==================== -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-phones">
+        <a href="tel:4194195003"><span>Sales:</span> (419) 419-5003</a>
+        <a href="tel:4193542222"><span>Main:</span> (419) 354-2222</a>
+      </div>
+      <div class="top-bar-address">
+        <a href="https://maps.google.com/?q=1255+N+Main+St+Bowling+Green+OH+43402" target="_blank" rel="noopener">
+          1255 N Main St, Bowling Green, OH 43402
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="site-header">
+    <div class="container">
+      <a href="/demo/thayer-honda" class="header-logo">
+        <img src="https://di-shared-assets.dealerinspire.com/public/logos/honda/honda-dark-desktop-logo.png" alt="Honda">
+        <div class="dealer-name">
+          Thayer Honda
+          <small>Bowling Green, OH</small>
+        </div>
+      </a>
+      <nav class="header-nav">
+        <a href="/demo/thayer-honda">Home</a>
+        <a href="/demo/thayer-honda/inventory">Inventory</a>
+        <a href="/demo/thayer-honda/service" class="active">Service</a>
+        <a href="/demo/thayer-honda/financing">Financing</a>
+        <a href="/demo/thayer-honda/contact">Contact</a>
+      </nav>
+      <button class="mobile-menu-btn" onclick="document.getElementById('mobileNav').classList.add('open')">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav" id="mobileNav">
+    <button class="mobile-nav-close" onclick="document.getElementById('mobileNav').classList.remove('open')">&times;</button>
+    <a href="/demo/thayer-honda">Home</a>
+    <a href="/demo/thayer-honda/inventory">Inventory</a>
+    <a href="/demo/thayer-honda/service">Service</a>
+    <a href="/demo/thayer-honda/financing">Financing</a>
+    <a href="/demo/thayer-honda/contact">Contact</a>
+  </div>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="service-hero">
+    <div class="container">
+      <div class="service-hero-icon">
+        <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+      </div>
+      <h1>Honda service center</h1>
+      <p>Factory-trained technicians and genuine Honda parts keep your vehicle running at its best. Convenient scheduling and transparent pricing at every visit.</p>
+      <div class="service-hero-ctas">
+        <a href="#schedule" class="honda-btn-primary">Schedule service</a>
+        <a href="tel:4193542222" class="honda-btn-secondary">Call service: (419) 354-2222</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FEATURE CARDS ==================== -->
+  <section class="features-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Why service at Thayer Honda</h2>
+        <p>Expert care you can trust, every time</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <h3>Certified Honda technicians</h3>
+          <p>Our technicians undergo rigorous Honda factory training and certification. They know your vehicle inside and out, ensuring every repair meets Honda standards.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3>Genuine Honda parts</h3>
+          <p>We use only genuine Honda parts and fluids designed specifically for your vehicle. Aftermarket shortcuts never happen here -- only OEM quality.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <h3>Convenient scheduling</h3>
+          <p>Book your service appointment online anytime. We offer flexible hours including early mornings and Saturdays to fit your busy schedule.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== OUR SERVICES ========== -->
+  <section class="service-list-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our services</h2>
+        <p>Comprehensive care for your Honda from bumper to bumper</p>
+      </div>
+      <div class="service-grid">
+        <div class="service-item">
+          <div class="service-item-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <h4>Oil change</h4>
+          <p>Synthetic and conventional oil changes with multi-point inspection included.</p>
+        </div>
+        <div class="service-item">
+          <div class="service-item-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+          <h4>Brake service</h4>
+          <p>Brake pad replacement, rotor resurfacing, and brake fluid service.</p>
+        </div>
+        <div class="service-item">
+          <div class="service-item-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+          </div>
+          <h4>Tire center</h4>
+          <p>Tire rotation, balancing, alignment, and new tire sales from top brands.</p>
+        </div>
+        <div class="service-item">
+          <div class="service-item-icon">
+            <svg viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2"/><line x1="6" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="18" y2="12"/></svg>
+          </div>
+          <h4>Battery service</h4>
+          <p>Battery testing, replacement, and terminal cleaning to keep you starting strong.</p>
+        </div>
+        <div class="service-item">
+          <div class="service-item-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2v4"/><path d="M12 18v4"/><path d="M4.93 4.93l2.83 2.83"/><path d="M16.24 16.24l2.83 2.83"/><path d="M2 12h4"/><path d="M18 12h4"/><path d="M4.93 19.07l2.83-2.83"/><path d="M16.24 7.76l2.83-2.83"/></svg>
+          </div>
+          <h4>AC and heating</h4>
+          <p>Climate system diagnosis, refrigerant recharge, and heater core repair.</p>
+        </div>
+        <div class="service-item">
+          <div class="service-item-icon">
+            <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <h4>Engine diagnostics</h4>
+          <p>Check engine light diagnosis, computerized testing, and engine repair.</p>
+        </div>
+        <div class="service-item">
+          <div class="service-item-icon">
+            <svg viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+          </div>
+          <h4>Transmission service</h4>
+          <p>Transmission fluid exchange, filter replacement, and inspection.</p>
+        </div>
+        <div class="service-item">
+          <div class="service-item-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0112 2a8 8 0 018 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h4>Multi-point inspection</h4>
+          <p>Comprehensive vehicle health check covering all major systems and components.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SCHEDULE FORM ==================== -->
+  <section class="schedule-section" id="schedule">
+    <div class="container">
+      <div class="form-card">
+        <h2>Schedule your service</h2>
+        <p>Fill out the form below and our service team will confirm your appointment.</p>
+        <form onsubmit="event.preventDefault(); alert('Thank you! Your service appointment request has been submitted. Our team will confirm your appointment shortly.');">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First name</label>
+              <input type="text" id="firstName" name="firstName" placeholder="John" required>
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last name</label>
+              <input type="text" id="lastName" name="lastName" placeholder="Smith" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" id="email" name="email" placeholder="john@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone number</label>
+              <input type="tel" id="phone" name="phone" placeholder="(419) 555-0100">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="vehicle">Vehicle (year, make, model)</label>
+              <input type="text" id="vehicle" name="vehicle" placeholder="2024 Honda CR-V" required>
+            </div>
+            <div class="form-group">
+              <label for="serviceType">Service type</label>
+              <select id="serviceType" name="serviceType" required>
+                <option value="">Select a service...</option>
+                <option value="oil-change">Oil change</option>
+                <option value="brake-service">Brake service</option>
+                <option value="tire-rotation">Tire rotation / alignment</option>
+                <option value="battery">Battery service</option>
+                <option value="ac-heating">AC / heating</option>
+                <option value="engine-diagnostic">Engine diagnostic</option>
+                <option value="transmission">Transmission service</option>
+                <option value="inspection">Multi-point inspection</option>
+                <option value="recall">Recall / warranty work</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="preferredDate">Preferred date</label>
+              <input type="date" id="preferredDate" name="preferredDate" required>
+            </div>
+            <div class="form-group">
+              <label for="preferredTime">Preferred time</label>
+              <select id="preferredTime" name="preferredTime">
+                <option value="">Select a time...</option>
+                <option value="7:30">7:30 AM</option>
+                <option value="8:00">8:00 AM</option>
+                <option value="8:30">8:30 AM</option>
+                <option value="9:00">9:00 AM</option>
+                <option value="9:30">9:30 AM</option>
+                <option value="10:00">10:00 AM</option>
+                <option value="10:30">10:30 AM</option>
+                <option value="11:00">11:00 AM</option>
+                <option value="11:30">11:30 AM</option>
+                <option value="12:00">12:00 PM</option>
+                <option value="13:00">1:00 PM</option>
+                <option value="14:00">2:00 PM</option>
+                <option value="15:00">3:00 PM</option>
+                <option value="16:00">4:00 PM</option>
+                <option value="17:00">5:00 PM</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row full">
+            <div class="form-group">
+              <label for="comments">Additional comments</label>
+              <textarea id="comments" name="comments" placeholder="Describe any symptoms or concerns..."></textarea>
+            </div>
+          </div>
+          <div class="form-submit">
+            <button type="submit">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Submit appointment request
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== HOURS & INFO ========== -->
+  <section class="hours-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Service hours and information</h2>
+        <p>Convenient hours to keep your schedule on track</p>
+      </div>
+      <div class="hours-grid">
+        <div class="hours-card">
+          <h3>Service department hours</h3>
+          <table class="hours-table">
+            <tr><td>Monday</td><td>7:30 AM - 5:30 PM</td></tr>
+            <tr><td>Tuesday</td><td>7:30 AM - 8:00 PM</td></tr>
+            <tr><td>Wednesday</td><td>7:30 AM - 5:30 PM</td></tr>
+            <tr><td>Thursday</td><td>7:30 AM - 8:00 PM</td></tr>
+            <tr><td>Friday</td><td>7:30 AM - 5:30 PM</td></tr>
+            <tr><td>Saturday</td><td>8:00 AM - 2:00 PM</td></tr>
+            <tr><td>Sunday</td><td class="closed">Closed</td></tr>
+          </table>
+        </div>
+        <div class="hours-card">
+          <h3>Service center details</h3>
+          <div class="info-item">
+            <div class="info-icon">
+              <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="info-text">
+              <strong>Location</strong>
+              <a href="https://maps.google.com/?q=1255+N+Main+St+Bowling+Green+OH+43402" target="_blank" rel="noopener">1255 N Main St, Bowling Green, OH 43402</a>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">
+              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <div class="info-text">
+              <strong>Service phone</strong>
+              <a href="tel:4193542222">(419) 354-2222</a>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">
+              <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <div class="info-text">
+              <strong>What to expect</strong>
+              Complimentary multi-point inspection with every service visit. Comfortable waiting area with Wi-Fi and refreshments.
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">
+              <svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+            </div>
+            <div class="info-text">
+              <strong>Accepted payment</strong>
+              All major credit cards, cash, check, Honda Financial Services
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA BANNER ==================== -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Keep your Honda running like new</h2>
+      <p>Schedule your next service appointment today or browse our current service specials.</p>
+      <div class="cta-banner-btns">
+        <a href="#schedule" class="honda-btn-white">Schedule service</a>
+        <a href="/demo/thayer-honda/contact" class="honda-btn-white" style="background:transparent;color:#fff;border:2px solid #fff;">Contact us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <img src="https://di-shared-assets.dealerinspire.com/public/logos/honda/honda-light-desktop-logo.png" alt="Honda">
+      </div>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Inventory</h4>
+          <ul>
+            <li><a href="/demo/thayer-honda/inventory">New Honda vehicles</a></li>
+            <li><a href="/demo/thayer-honda/inventory?type=used">Pre-owned vehicles</a></li>
+            <li><a href="/demo/thayer-honda/inventory?type=certified">Certified pre-owned</a></li>
+            <li><a href="/demo/thayer-honda/inventory?special=true">Current specials</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="/demo/thayer-honda/service">Schedule service</a></li>
+            <li><a href="/demo/thayer-honda/service">Oil change</a></li>
+            <li><a href="/demo/thayer-honda/service">Brake service</a></li>
+            <li><a href="/demo/thayer-honda/service">Tire center</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Finance</h4>
+          <ul>
+            <li><a href="/demo/thayer-honda/financing">Apply for financing</a></li>
+            <li><a href="/demo/thayer-honda/financing">Payment calculator</a></li>
+            <li><a href="/demo/thayer-honda/financing">Trade-in value</a></li>
+            <li><a href="/demo/thayer-honda/financing">Credit pre-qualification</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Dealership</h4>
+          <ul>
+            <li><a href="/demo/thayer-honda/contact">Contact us</a></li>
+            <li><a href="/demo/thayer-honda/contact">Hours &amp; directions</a></li>
+            <li><a href="tel:4194195003">Call (419) 419-5003</a></li>
+            <li><a href="/demo/thayer-auto">Thayer Family Dealerships</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-family">
+        Part of the <a href="/demo/thayer-auto">Thayer Family Dealerships</a> -- Bowling Green, OH
+      </div>
+      <div class="footer-locations">
+        <a href="/demo/thayer-chevrolet">Thayer Chevrolet</a>
+        <a href="/demo/thayer-toyota">Thayer Toyota</a>
+        <a href="/demo/thayer-honda">Thayer Honda</a>
+        <a href="/demo/thayer-ford">Thayer Ford</a>
+        <a href="/demo/thayer-nissan">Thayer Nissan</a>
+        <a href="/demo/thayer-cdjr">Thayer CDJR</a>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Thayer Honda. All rights reserved. | Powered by <a href="https://www.savvydealer.com" target="_blank" rel="noopener">SavvyDealer</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
